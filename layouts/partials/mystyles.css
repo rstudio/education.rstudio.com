@@ -1,0 +1,37 @@
+body {
+	background-color: {{ .Param "colors.background" }};
+	color: {{ .Param "colors.text" }}
+}
+
+a {
+  color: {{ .Param "colors.link" }};
+}
+
+a:hover {
+  color: {{ .Param "colors.link_hover" }};
+}
+
+#rStudioFooter.band {
+  background-color: {{ .Param "colors.footer_primary" }};
+  color: {{ .Param "colors.footer_text" }};
+}
+
+#rStudioHeader {
+  background-color: {{ .Param "colors.footer_primary" }};
+  color: {{ .Param "colors.footer_text" }};
+}
+
+#homeContent .band.first {
+  background-color: {{ .Param "colors.home_section_odd" }}
+}
+
+#homeContent .band.second {
+  background-color: {{ .Param "colors.home_section_even" }}
+}
+
+#homeContent .band.third {
+  background-color: {{ .Param "colors.home_section_odd" }}
+}
+
+
+
