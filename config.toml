@@ -45,14 +45,21 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     MathJaxVersion = "2.7.1"
 
 [params.colors]
-    text = "blue"
+    text = "#1a1917" # black
     # Links
-    link = "red"
-    link_hover = "pink"
+    link = "#1a9a9d"
+    link_hover = "#1a9a9d"
     # Footer
-    footer_primary = "orange"
-    footer_text = "blue"
+    footer_primary = "#767381" # same as tidyverse.org
+    footer_text = "#e3eef8" # same as tidyverse.org
     # Backgrounds
-    background = "#efede8"
-    home_section_odd = "#efede8"
-    home_section_even = "#efede8"
+    background = "white"
+    home_section_odd = "white"
+    home_section_even = "#f0eee9"
+    # Menu
+    menu_primary = "#519199" # green
+    menu_text = "#fff"
+    menu_text_active = "white"
+    menu_title = "#fff"
+    menu_title_active = "#84d6d3"
+    menu_box_active = "white"

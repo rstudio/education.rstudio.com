@@ -3,6 +3,8 @@ body {
 	color: {{ .Param "colors.text" }}
 }
 
+/* Links */
+
 a {
   color: {{ .Param "colors.link" }};
 }
@@ -11,15 +13,7 @@ a:hover {
   color: {{ .Param "colors.link_hover" }};
 }
 
-#rStudioFooter.band {
-  background-color: {{ .Param "colors.footer_primary" }};
-  color: {{ .Param "colors.footer_text" }};
-}
-
-#rStudioHeader {
-  background-color: {{ .Param "colors.footer_primary" }};
-  color: {{ .Param "colors.footer_text" }};
-}
+/* Landing page content bands */
 
 #homeContent .band.first {
   background-color: {{ .Param "colors.home_section_odd" }}
@@ -33,5 +27,42 @@ a:hover {
   background-color: {{ .Param "colors.home_section_odd" }}
 }
 
+/* Top navigation bar menu */
 
+#rStudioHeader {
+  background-color: {{ .Param "colors.menu_primary" }};
+  color: {{ .Param "colors.menu_text" }};
+}
 
+#rStudioHeader .productName {
+  color: {{ .Param "colors.menu_title" }}
+}
+
+#rStudioHeader .productName:hover {
+  color: {{ .Param "colors.menu_title_active" }}
+}
+
+#rStudioHeader #menu .menuItem.a {
+  background-color: #75aadb;
+  color: {{ .Param "colors.menu_text" }};
+}
+
+#rStudioHeader #menu .menuItem:hover {
+  background-color: "none";
+  color: {{ .Param "colors.menu_text_active" }};
+}
+
+#rStudioHeader #menu .menuItem.current {
+  background-color: {{ .Param "colors.menu_box_active" }};
+  color: {{ .Param "colors.menu_primary" }};
+}
+
+/* Footer */
+
+#rStudioFooter.band {
+  background-color: {{ .Param "colors.footer_primary" }};
+}
+
+#rStudioFooter .bandContent #copyright {
+  color: {{ .Param "colors.footer_text" }};
+}
