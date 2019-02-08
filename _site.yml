@@ -1,0 +1,27 @@
+name: "our website"
+title: "Education"
+favicon: images/favicon.png
+description: |
+  RStudio Education
+base_url: https://education.rstudio.com
+repository_url: https://github.com/rstudio/education.rstudio.com
+creative_commons: CC BY
+twitter:
+  site: "@rstudio"
+output_dir: "_site"
+navbar:
+  logo:
+    image: images/RStudio-Logo-White.png
+    href: https://www.rstudio.com
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "News"
+      href: news.html
+    - text: "About"
+      href: about.html
+    - icon: fab fa-github
+      href: https://github.com/rstudio-education
+output:
+  radix::radix_article:
+    css: education.css

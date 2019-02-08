@@ -1,0 +1,61 @@
+---
+title: "RStudio Education"
+site: radix::radix_website
+description: |
+  For learners and educators in the <i class="fab fa-r-project" color="#4c83b6"></i> community
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Radix at:
+# https://rstudio.github.io/radix/website.html
+
+```
+
+I can type plain markdown here
+
+<div class = l-gutter>
+  <i class = "fab fa-github"></i> gutter
+</div>
+
+This should keep going.
+
+<div class = l-left>
+  <i class = "fab fa-github"></i> left
+</div>
+
+<div class = l-gutter>
+```{r}
+xfun::embed_files(here::here("static", 
+                             "test.R"), 
+                  name = "test.R")
+```
+</div>
+
+
+<div class="base-grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div grid-column = 6>t</div>
+</div>
+
+<div class="base-grid">  
+  <div class = "button-one"><i class = "fas fa-apple-alt"></i>learn (goes to tracks)
+  </div>
+  <div class = "button-two"><i class = "fas fa-laptop-code"></i>how-to (goes to recipes)</div>
+  <div class = "button-three"><a href = "https://community.rstudio.com/"><i class="fas fa-book"></i><br>Reference Docs</a></div>
+  <div class = "button-four"><a href = "https://community.rstudio.com/"><i class="fas fa-bullhorn"></i><br>News & Events</a></div>
+  <div class = "button-five"><a href = "https://community.rstudio.com/"><i class="fas fa-hands-helping"></i><br>Contribute</a></div>
+  <div class = "button-six"><a href = "https://community.rstudio.com/"><i class="far fa-question-circle"></i><br>Ask for help</a></div>
+</div>
+
+learn (goes to tracks)
+how-to (recipes)
+reference docs
+ask ?
+teach
+events/news
+contribute
+about us
