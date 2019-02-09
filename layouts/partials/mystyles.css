@@ -48,7 +48,7 @@ a:hover {
 }
 
 #rStudioHeader #menu .menuItem:hover {
-  background-color: "none";
+  background-color: {{ .Param "colors.menu_box_hover" }};
   color: {{ .Param "colors.menu_text_active" }};
 }
 
