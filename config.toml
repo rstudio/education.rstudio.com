@@ -8,6 +8,8 @@ description = "An opinionated collection of R packages designed for data science
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
+
+
 [permalinks]
     articles = "articles/:year/:month/:slug/"
 
@@ -64,3 +66,11 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     menu_title_active = "#deef03"
     menu_box_hover = "#7db3ba"
     menu_box_active = "white"
+
+[params.homepage]
+    band1_tagline = "Education @ RStudio"
+    band1_blurb = "Our mission is to equip everyone, regardless of means, to participate in a global economy that rewards data literacy."
+    band2_tagline = "Learn the tidyverse"
+    band2_blurb = "See how the tidyverse makes data science faster, easier and more fun with 'R for Data Science'. Read it [online](http://r4ds.had.co.nz/), buy [the book](http://amzn.to/2aHLAQ1) or try another [resource](/learn/) from the community."
+    band3_tagline = "Need help?"
+    band3_blurb = "First learn how to make a [reprex](/help/#reprex) then [share it](/help/#where-to-ask) with others."
