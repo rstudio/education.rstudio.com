@@ -8,6 +8,8 @@ description = "An opinionated collection of R packages designed for data science
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
+
+
 [permalinks]
     articles = "articles/:year/:month/:slug/"
 
