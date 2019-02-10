@@ -13,9 +13,16 @@
         <a href="http://tibble.tidyverse.org/"><img src="images/hex-tibble.png" alt="tibble hex sticker" class="r2 c2"></a>
       </div>
       <div class="blurb">
-        <div class="tagline">{{ .Param "homepage.band1_tagline"  | markdownify }}</div>
+        <div class="tagline">
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_one.md" }}{{ .Title }}{{ end }}
+          {{ end }}
+          </div>
         <div>
-          {{ .Param "homepage.band1_blurb" | markdownify }}
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_one.md" }}{{ .Content | markdownify }}
+          {{ end }}
+          {{ end }}
         </div>
       </div>
     </div> <!-- bandContent -->
@@ -24,9 +31,16 @@
   <div class="band second">
     <div class="bandContent">
       <div class="blurb">
-        <div class="tagline">{{ .Param "homepage.band2_tagline" | markdownify }}</div>
+        <div class="tagline">
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_two.md" }}{{ .Title }}{{ end }}
+          {{ end }}
+        </div>
         <div>
-          {{ .Param "homepage.band2_blurb" | markdownify }}
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_two.md" }}{{ .Content | markdownify }}
+          {{ end }}
+          {{ end }}
         </div>
         <a href="http://amzn.to/2aHLAQ1"><img class="bookCover" src="images/cover.png" alt=""></a>
       </div>
@@ -42,9 +56,16 @@
     <div class="bandContent">
       <div class="hideOnMobile"><img class="bee1" src="images/bee1.jpg" alt=""></div>
       <div class="blurb">
-        <div class="tagline">{{ .Param "homepage.band3_tagline" | markdownify }}</div>
+        <div class="tagline">
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_three.md" }}{{ .Title }}{{ end }}
+          {{ end }}
+          </div>
         <div>
-          {{ .Param "homepage.band3_blurb" | markdownify }}
+          {{ with .Site.GetPage "/home" }}
+          {{ with .GetPage "band_three.md" }}{{ .Content | markdownify }}
+          {{ end }}
+          {{ end }}
         </div>
       </div>
     </div> <!-- bandContent -->
