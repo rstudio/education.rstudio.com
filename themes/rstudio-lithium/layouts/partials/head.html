@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="{{ "tidyverse-site.css" | relLangURL }}">
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+{{ end }}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,6 +37,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" href="{{ "images/favicons/browserconfig.xml" | relURL }}" >
 
+
 <!--jquery-->
 <script type="text/javascript" src="{{ "js/jquery-1.11.0.min.js" | relURL }}"></script>
 <script type="text/javascript" src="{{ "js/site.js" | relURL }}"></script>
@@ -40,9 +46,14 @@
 {{- end }}
 {{- partial "head_highlightjs" . -}}
 
-<link rel="stylesheet" href="{{ "css/tidyverse-site.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "css/tweaks.css" | relURL }}" />
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
 {{ if hasPrefix .URL "/articles" -}}
 <link rel="alternate" type="application/atom+xml" title="Blog" href="/articles/index.xml" />
 {{- end }}
+
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
+<link rel="stylesheet" href="{{ "css/main-site.css" | relURL }}" media="all">
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ . | relURL }}">
+{{ end }}
+{{ partial "head_custom" . }}

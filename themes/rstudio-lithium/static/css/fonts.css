@@ -1,22 +1,48 @@
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather'), local('Merriweather-Regular'),
-       url('../fonts/merriweather-v13-latin-regular.woff2') format('woff2'),
-       url('../fonts/merriweather-v13-latin-regular.woff') format('woff');
-}
+/* lato-regular - latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
+  src: url('../fonts/lato-v14-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Lato Regular'), local('Lato-Regular'),
-       url('../fonts/lato-v11-latin-regular.woff2') format('woff2'),
-       url('../fonts/lato-v11-latin-regular.woff') format('woff');
+       url('../fonts/lato-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lato-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lato-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lato-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lato-v14-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
 }
-body {
-  font-family: 'Merriweather', serif;
+
+/* pt-mono-regular - latin */
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-mono-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('PT Mono'), local('PTMono-Regular'),
+       url('../fonts/pt-mono-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/pt-mono-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-mono-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/pt-mono-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/pt-mono-v6-latin-regular.svg#PTMono') format('svg'); /* Legacy iOS */
 }
+
 h1, h2, h3, h4, h5, h6, .nav, .article-duration, .archive-item-link, .footer {
   font-family: 'Lato', sans-serif;
 }
+
+#rStudioHeader .productName {
+  font-family: "PT Mono", Courier, monospace;
+  font-weight: normal;
+  font-size: 40px;
+  color: inherit;
+  white-space: nowrap;
+  -webkit-transition-property: font-size;
+  -moz-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+

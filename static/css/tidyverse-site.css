@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro);/* Default image path, reset in `_overrides-<appname>.scss` - see Connect */
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro);/* Default image path, reset in `_overrides-<appname>.scss` - see Connect */
 /* colors */
 /* timing */
 /* sizes */
@@ -293,7 +293,7 @@ a {
   align-items: flex-end; }
 
 #rStudioHeader .productName {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-weight: normal;
   font-size: 40px;
   color: inherit;
@@ -305,10 +305,12 @@ a {
   -webkit-transition-duration: 0.25s;
   -moz-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
-  transition-duration: 0.25s; }
-  #rStudioHeader .productName:hover {
-    text-decoration: none;
-    color: #42709b; }
+  transition-duration: 0.25s;
+}
+
+#rStudioHeader .productName:hover {
+  text-decoration: none;
+  color: #42709b; }
 
 #rStudioHeader .rStudio {
   margin-top: 10px;
@@ -343,9 +345,7 @@ a {
   #rStudioHeader .innards {
     align-items: flex-start; } }
 
-#rStudioHeader .productName {
-  font-family: "Source Code Pro", monospace; }
-  #rStudioHeader .productName:hover {
+#rStudioHeader .productName:hover {
     color: #fdeba4; }
 
 #rStudioHeader #menu {
@@ -906,7 +906,7 @@ ol {
   list-style: decimal outside none; }
 
 pre, code {
-  font-family: "Source Code Pro", monospace;
+  font-family: "PT Mono", monospace;
   background-color: #f8f8f8;
   font-size: 14px; }
 
