@@ -78,7 +78,7 @@ table {
     display: none !important; } }
 
 body, button, input, textarea {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 15px;
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
@@ -293,7 +293,6 @@ a {
   align-items: flex-end; }
 
 #rStudioHeader .productName {
-  font-family: "PT Mono", Courier, monospace;
   font-weight: normal;
   font-size: 40px;
   color: inherit;
