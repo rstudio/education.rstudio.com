@@ -2,6 +2,11 @@ description = "The tidyverse is an integrated collection of R packages designed 
 
 custom_css = ["css/article-image.css", "css/tweaks.css"]
 
+[footer]
+    github_url = "https://github.com/rstudio-education"
+    twitter_url = "https://twitter.com/hashtag/rstats"
+    support = "Proudly supported by"
+
 # options for highlight.js (version, additional languages, and theme)
 highlightjsVersion = "9.11.0"
 highlightjsCDN = "//cdn.bootcss.com"
