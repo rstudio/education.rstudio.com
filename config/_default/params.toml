@@ -20,6 +20,10 @@ MathJaxVersion = "2.7.1"
     twitter_url = "https://twitter.com/hashtag/rstats"
     support = "Proudly supported by"
 
+# customize your site colors
+# these colors get applied by layouts/partials/custom-site.css
+# then, the layouts/partials/head_includes.html uses that partial
+# the partial head_includes.html is called in the partial header.html everywhere!
 [colors]
     text = "#1a1917" # black
     # Links
