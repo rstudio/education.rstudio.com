@@ -852,6 +852,15 @@ table.contentListing {
   .package-section .packages .package .package-info {
     margin: 20px 0 0 210px; }
 
+/* CSS for centering images in blog posts */
+
+.article-content img {
+    max-width: 640px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 767px) {
   .package-section .package-section-info {
     margin-bottom: 20px; }
@@ -1186,3 +1195,15 @@ em {
       left: 125px; }
     .hexBadges img.r1.c2, .hexBadges img.r3.c2, .hexBadges img.r5.c2 {
       left: 187px; } }
+
+/* some tweaks added later*/
+code {
+  margin: 0;
+  padding: 1px 2px;
+  border: none;
+  color: inherit;
+}
+
+pre {
+  padding: 0.25em 0.5em;
+}
