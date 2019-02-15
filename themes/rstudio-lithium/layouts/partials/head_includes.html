@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ "css/fonts.css" | relLangURL }}">
 <link rel="stylesheet" href="{{ "css/main-site.css" | relLangURL }}">
 <style type="text/css">
-    {{ partial "mystyles.css" . | safeCSS }}
+    {{ partial "custom-site.css" . | safeCSS }}
 </style>
 {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
