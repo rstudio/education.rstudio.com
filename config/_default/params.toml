@@ -1,11 +1,6 @@
 description = "The tidyverse is an integrated collection of R packages designed to make data science fast, fluid, and fun."
-
 custom_css = ["css/article-image.css", "css/tweaks.css"]
-
-[footer]
-    github_url = "https://github.com/rstudio-education"
-    twitter_url = "https://twitter.com/hashtag/rstats"
-    support = "Proudly supported by"
+mainSections = ["news", "events"]
 
 # options for highlight.js (version, additional languages, and theme)
 highlightjsVersion = "9.11.0"
@@ -15,6 +10,11 @@ highlightjsTheme = "github"
 
 MathJaxCDN = "//cdn.bootcss.com"
 MathJaxVersion = "2.7.1"
+
+[footer]
+    github_url = "https://github.com/rstudio-education"
+    twitter_url = "https://twitter.com/hashtag/rstats"
+    support = "Proudly supported by"
 
 [colors]
     text = "#1a1917" # black

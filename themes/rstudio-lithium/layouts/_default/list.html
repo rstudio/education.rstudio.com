@@ -4,9 +4,8 @@
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
-        <div class="sectionTitle">Recent Articles</div>
 
-        {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
+        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         <div>{{ range $paginator.Pages }}
           <div class="listItem">
             <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url(/articles/{{ .Param "slug"}}-sq.jpg);"></a>
