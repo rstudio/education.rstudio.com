@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-    {{ partial "head.html" . }}
-        <style type="text/css">
-            {{ partial "mystyles.css" . | safeCSS }}
-        </style>
-  </head>
+
+<!--this loads all stylesheets, metadata tags, favicons, and jquery -->
+{{ partial "head_includes.html" . }}
+
   <body>
     <div id="appTidyverseSite" {{ if ne .URL "/" }}class="shrinkHeader alwaysShrinkHeader"{{ end }}>
       <div id="main">
