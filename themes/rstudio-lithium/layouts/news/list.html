@@ -4,6 +4,7 @@
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
+        <div class="sectionTitle">{{ .Title }}</div>
 
         {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         <div>{{ range $paginator.Pages }}
@@ -33,24 +34,10 @@
       {{ template "_internal/pagination.html" . }}
       </div>
 
-      <div class="column25">
-        <div class="section">
-          <div class="sectionTitle">Categories</div>
-          {{ range $key, $value := .Site.Taxonomies.categories }}
-          <div class="articleCategory {{ replace (lower $key) " " "" }}">
-            <a href="{{ (print "/categories/" $key | urlize) | relURL }}">{{ $key }}</a>
-          </div>
-          {{ end }}
-        </div>
+{{ partial "sidebar.html" . }}
 
-        <div class="section">
-          <div class="sectionTitle">Upcoming events</div>
-          {{ partial "events" . }}
-        </div>
-      </div>
     </div>
   </div>  <!-- bandContent -->
 </div> <!-- band -->
 
 {{ end }}
-

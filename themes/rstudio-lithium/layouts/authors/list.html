@@ -4,14 +4,15 @@
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
+        <h1 class="article-title">Meet the Team</h1>
 
-        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        {{ $paginator := .Paginate (where .Data.Pages "Section" "==" "authors") }}
         <div>{{ range $paginator.Pages }}
           <div class="listItem">
-            <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url(/articles/{{ .Param "slug"}}-sq.jpg);"></a>
+            <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url({{ .Param "photo"}}); border-radius: 50%;"></a>
             <div class="itemDetails">
               <div class="itemHeader">
-                <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+                <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></div>
                 <div class="itemTag">
                   {{- range .Params.categories -}}
                   <a href="{{ relURL (print "/categories/" . | urlize) }}">{{ . }}</a>
@@ -19,12 +20,9 @@
                 </div>
               </div>
               <div class="itemMeta">
-                <div class="author">{{ .Params.author }}</div>
-                <div class="itemDescription">{{ default .Description | markdownify }}
-                  <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
-                </div>
-                <div class="itemDate">
-                  <div class="created">{{ .Date.Format "2006/01/02" }}</div>
+                  <div class="itemDescription">{{ default .Description | markdownify }}
+                  {{ with .Params.social.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>{{ end }}  {{ with .Params.social.github }}<a href="https://github.com/{{ . }}" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>{{ end }}  {{ with .Params.social.website }}<a href="{{ . }}" target="_blank"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>{{  end }}
+                <a class="readMore" href="{{ .RelPermalink }}">Read more about {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}...</a>
                 </div>
               </div>
             </div>

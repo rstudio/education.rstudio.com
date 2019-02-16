@@ -1,0 +1,80 @@
+{{ define "main" }}
+
+<!-- page -->
+<div id="homeContent" class="pushFooter">
+
+<!-- band_one.md populates this section -->
+{{ with .Site.GetPage "/home/band_one.md" }}
+  <div class="band first">
+    <div class="bandContent">
+
+<!-- hexes on the left -->
+      <div class="hexBadges">
+        <a href="https://{{ .Params.col0.row1 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col0.row1 }}.png" alt="{{ .Params.col0.row1 }} hex sticker" class="r1 c0"></a>
+        <a href="https://{{ .Params.col0.row2 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col0.row2 }}.png" alt="{{ .Params.col0.row1 }} hex sticker" class="r2 c0"></a>
+        <a href="https://{{ .Params.col0.row3 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col0.row3 }}.png" alt="readr hex sticker" class="r3 c0"></a>
+        <a href="https://{{ .Params.col2.row2 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col2.row2 }}.png" alt="{{ .Params.col2.row2 }} hex sticker" class="r2 c2"></a>
+        <a href="https://{{ .Params.col2.row3 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col2.row3 }}.png" alt="{{ .Params.col2.row3 }} hex sticker" class="r3 c2"></a>
+        <a href="https://{{ .Params.col2.row4 }}.tidyverse.org/"><img src="images/hex-{{ .Params.col2.row4 }}.png" alt="{{ .Params.col2.row4 }} hex sticker" class="r4 c2" /></a>
+      </div>
+
+<!-- text on the right -->
+      <div class="blurb">
+        <div class="tagline">
+          {{ .Title }}
+          </div>
+        <div>
+          {{ .Content | markdownify }}
+        </div>
+      </div>
+
+    </div> <!-- bandContent -->
+  </div>  <!-- band -->
+{{ end }}
+
+<!-- band_two.md populates this section -->
+{{ with .Site.GetPage "/home/band_two.md" }}
+
+  <div class="band second">
+    <div class="bandContent">
+      <div class="blurb">
+        <div class="tagline">
+          {{ .Title }}
+        </div>
+        <div>
+          {{ .Content | markdownify }}
+        </div>
+        <a href="http://amzn.to/2aHLAQ1"><img class="bookCover" src="images/cover.png" alt=""></a>
+      </div>
+      <div class="blurb">
+        <div class="tagline small"></div>
+        {{ partial "events" . }}
+      </div>
+    </div> <!-- bandContent -->
+  </div> <!-- band -->
+
+{{ end }}
+
+<!-- band_three.md populates this section -->
+
+{{ with .Site.GetPage "/home/band_three.md" }}
+
+  <div class="band third">
+    <div class="bandContent">
+      <div class="hideOnMobile"><img class="bee1" src="images/bee1.jpg" alt=""></div>
+      <div class="blurb">
+        <div class="tagline">
+          {{ .Title }}
+          </div>
+        <div>
+          {{.Content | markdownify }}
+        </div>
+      </div>
+    </div> <!-- bandContent -->
+  </div> <!-- band -->
+</div> <!-- homeContent -->
+{{ end }}
+
+{{ end }}
+
+

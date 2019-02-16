@@ -852,6 +852,15 @@ table.contentListing {
   .package-section .packages .package .package-info {
     margin: 20px 0 0 210px; }
 
+/* CSS for centering images in blog posts */
+
+.article-content img {
+    max-width: 640px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 767px) {
   .package-section .package-section-info {
     margin-bottom: 20px; }
@@ -1186,3 +1195,83 @@ em {
       left: 125px; }
     .hexBadges img.r1.c2, .hexBadges img.r3.c2, .hexBadges img.r5.c2 {
       left: 187px; } }
+
+/* some tweaks added later*/
+code {
+  margin: 0;
+  padding: 1px 2px;
+  border: none;
+  color: inherit;
+}
+
+pre {
+  padding: 0.25em 0.5em;
+}
+
+
+/*************************************************
+ *  Tables
+ **************************************************/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-weight: inherit
+}table thead{
+}table thead th{
+font-weight: inherit;
+}
+
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: .87rem;
+  max-width: 70%;
+}
+
+table thead{
+  font-weight: 600;
+  background-color: #dfe3eb;
+  text-transform: uppercase;
+  color: #5c677e;
+}
+
+table thead tr{
+}
+
+table thead tr th{
+  padding: 15px 13px;
+}
+
+table thead tr th:last-child{
+  padding: 15px 0;
+}
+
+table tbody{
+}
+
+table tbody tr{
+}
+
+table tbody tr:nth-child(even){
+  background-color: #f7faff;
+}
+
+table tbody tr:last-of-type{
+  border-bottom: 1px solid #edf1f8;
+}
+
+table tbody tr td{
+  padding: 15px;
+}
+
+table tbody tr td:last-child{
+  padding: 15px 0;
+
+table, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+

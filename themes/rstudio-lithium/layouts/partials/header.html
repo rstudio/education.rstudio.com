@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-    {{ partial "head.html" . }}
-  </head>
+
+<!--this loads all stylesheets, metadata tags, favicons, and jquery -->
+{{ partial "head_includes.html" . }}
+
   <body>
     <div id="appTidyverseSite" {{ if ne .URL "/" }}class="shrinkHeader alwaysShrinkHeader"{{ end }}>
       <div id="main">
@@ -11,7 +12,7 @@
           <div class="band">
             <div class="innards bandContent">
               <div>
-                <a class="productName" href="/">Tidyverse</a>
+                <a class="productName" href="{{ "/" | relLangURL }}">{{- .Site.Title -}}</a>
               </div>
               {{ partial "nav.html" . }}
             </div>
