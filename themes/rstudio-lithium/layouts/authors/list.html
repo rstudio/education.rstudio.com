@@ -20,10 +20,8 @@
                 </div>
               </div>
               <div class="itemMeta">
-                <div class="itemDescription">{{ default .Description | markdownify }}
-                {{ with .Params.twitter }}<div class="itemLink"><a href="https://twitter.com/{{ . }}" target="_blank">@{{ . }}</a></div>{{ end }}
-                {{ with .Params.github }}<div class="itemLink"><a href="https://github.com/{{ . }}" target="_blank">{{ . }}</a></div>{{ end }}
-                {{ with .Params.website }}<div class="itemLink"><a href="{{ . }}" target="_blank">{{ . }}</a></div>{{  end }}
+                  <div class="itemDescription">{{ default .Description | markdownify }}
+                  {{ with .Params.social.twitter }}<a href="https://twitter.com/{{ . }}" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>{{ end }}  {{ with .Params.social.github }}<a href="https://github.com/{{ . }}" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>{{ end }}  {{ with .Params.social.website }}<a href="{{ . }}" target="_blank"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>{{  end }}
                 <a class="readMore" href="{{ .RelPermalink }}">Read more about {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}...</a>
                 </div>
               </div>
