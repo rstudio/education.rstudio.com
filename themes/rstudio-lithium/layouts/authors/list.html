@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<h1>{{ .Params.name }}</h1>
+<img src="{{ .Params.photo }}" alt=""/>
+
+<h2>Bio</h2>
+{{ .Content }}
+{{ with .Params.twitter }}
+  <p>
+    <a href="https://twitter.com/{{ substr . 1 }}">
+      Follow {{ $.Params.name }} on Twitter
+    </a>
+  </p>
+{{ end }}
+
+<h2>Articles</h2>
+<ul>
+{{ range .Data.Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+
+{{ end }}

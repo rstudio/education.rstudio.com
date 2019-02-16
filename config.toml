@@ -9,4 +9,9 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 
 [permalinks]
-    articles = "articles/:year/:month/:slug/"
+  articles = "articles/:year/:month/:slug/"
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
