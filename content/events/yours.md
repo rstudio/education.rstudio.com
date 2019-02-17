@@ -1,13 +1,15 @@
 ---
-title: "So you think you can knit"
-date: "2022-04-06T00:00:00"
-date_start: "2022-04-06T00:00:00"
-date_end: "2022-04-06T00:00:00"
-abstract: ""
+title: "your event"
+date: "2025-01-15T00:00:00"
+date_start: "2025-01-15T00:00:00"
+date_end: "2025-01-18T00:00:00"
+abstract: "this"
 abstract_short: ""
-event: "OHSU BioData Club"
-event_url: "https://biodata-club.github.io"
-location: "Oregon Health & Science University, Portland, Oregon"
+event_url: "https://www.rstudio.com/conference/"
+location: "Austin, TX"
+educators:
+  - Greg Wilson
+  - Garrett Grolemund
 ---
 
-Why not showing up on Netlify?
+

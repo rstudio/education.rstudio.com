@@ -1,13 +1,12 @@
 ---
-title: "Take a Sad Plot & Make It Better"
-date: "2021-04-06T00:00:00"
-date_start: "2021-04-06T00:00:00"
-date_end: "2021-04-06T00:00:00"
-abstract: "Join us on April 6 for a walk-through of how to take a sad plot and make it better by Alison Hill."
+title: "my event"
+date: "2020-01-15T00:00:00"
+date_start: "2020-01-15T00:00:00"
+date_end: "2020-01-18T00:00:00"
+abstract: "this"
 abstract_short: ""
-event: "OHSU BioData Club"
-event_url: "https://biodata-club.github.io"
-location: "Oregon Health & Science University, Portland, Oregon"
+event_url: "https://www.rstudio.com/conference/"
+location: "Austin, TX"
 educators:
   - Greg Wilson
   - Garrett Grolemund
