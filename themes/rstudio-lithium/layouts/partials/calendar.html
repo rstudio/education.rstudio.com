@@ -9,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-      {{ range where .Data.Pages "Section" "==" "events" }}
+      {{ range where $.Site.RegularPages "Section" "events" }}
       <tr>
         <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
         <td>{{ .Params.event | markdownify }}</td>
