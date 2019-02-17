@@ -1,5 +1,5 @@
 ---
-title: "rstudio::conf 2020"
+title: "Building Tidy Tools"
 date: "2019-02-15"
 date_start: "2020-01-27"
 date_end: "2020-01-30"
