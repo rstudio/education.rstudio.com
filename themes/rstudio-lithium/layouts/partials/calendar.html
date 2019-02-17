@@ -16,12 +16,10 @@
         <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
         <td>{{ .Params.event | markdownify }}</td>
         <td>{{ .Params.location | markdownify }}</td>
-        <td>{{  delimit .Params.educators ", "  }}</td>
+        <td>{{ with .Params.educators }}{{ delimit . ", " }}{{ end }}</td>
         <td>{{ .Title | markdownify }}</td>
+      </tr>
           {{ end }}
         {{ end }}
-      </tr>
     </tbody>
   </table>
-
-
