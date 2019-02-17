@@ -11,9 +11,9 @@
     <tbody>
       {{ range where $.Site.RegularPages "Section" "events" }}
       <tr>
-        <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
-        <td>{{ .Params.event | markdownify }}</td>
-        <td>{{ .Params.location | markdownify }}</td>
+        <td><a href="{{ $.Params.event_url }}">{{ .Title | markdownify }}</a></td>
+        <td>{{ with .Params.event }}{{ . | markdownify }}{{ end }}</td>
+        <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.educators }}{{ delimit . ", " }}{{ end }}</td>
         <td>{{ .Title | markdownify }}</td>
       </tr>
