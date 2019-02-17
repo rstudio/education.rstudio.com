@@ -1,0 +1,27 @@
+<table>
+    <thead>
+    <tr>
+    <th>Event</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Team Member(s)</th>
+    <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+      <!-- critical that this goes before the next table row!-->
+        {{ range where .Pages.ByDate "Section" "events" }}
+          {{ if ge .Date.Unix now.Unix }}
+      <tr>
+        <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
+        <td>{{ .Params.event | markdownify }}</td>
+        <td>{{ .Params.location | markdownify }}</td>
+        <td>{{  delimit .Params.educators ", "  }}</td>
+        <td>{{ .Title | markdownify }}</td>
+          {{ end }}
+        {{ end }}
+      </tr>
+    </tbody>
+  </table>
+
+
