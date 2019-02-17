@@ -1,6 +1,5 @@
 ---
 title: "Education @ RStudio"
-affiliatelink: "http://www.my-book-link.here"
 col0:
   row1: "dplyr"
   row2: "ggplot2"
