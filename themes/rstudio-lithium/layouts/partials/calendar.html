@@ -9,9 +9,6 @@
     </tr>
     </thead>
     <tbody>
-      <!-- critical that this goes before the next table row!-->
-        {{ range where .Pages.ByDate "Section" "events" }}
-          {{ if ge .Date.Unix now.Unix }}
       <tr>
         <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
         <td>{{ .Params.event | markdownify }}</td>
@@ -19,7 +16,5 @@
         <td>{{ with .Params.educators }}{{ delimit . ", " }}{{ end }}</td>
         <td>{{ .Title | markdownify }}</td>
       </tr>
-          {{ end }}
-        {{ end }}
     </tbody>
   </table>
