@@ -1,15 +1,18 @@
 ---
 title: "rstudio::conf 2020"
-date: "2019-01-15T00:00:00"
-date_start: "2019-01-15T00:00:00"
-date_end: "2015-01-18T00:00:00"
-abstract: "this"
-abstract_short: ""
+date: "2019-02-15"
+date_start: "2020-01-27"
+date_end: "2020-01-30"
+description: >
+  The conference for all things R and RStudio.
 event_url: "https://www.rstudio.com/conference/"
-location: "Austin, TX"
+location: "San Francisco, CA"
 educators:
-  - Greg Wilson
-  - Garrett Grolemund
+  - Mine
+  - Garrett
+  - Greg
+  - Carl
+  - Alison
 ---
 
-a total copy why is only 2019 showing up?
+rstudio::conf 2020 covers all things RStudio, including workshops to teach you the tidyverse, and talks to show you the latest and greatest features.

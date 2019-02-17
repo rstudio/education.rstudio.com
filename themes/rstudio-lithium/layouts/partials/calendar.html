@@ -2,21 +2,26 @@
     <thead>
     <tr>
     <th>Event</th>
-    <th>Date</th>
+    <th>Date(s)</th>
+    <th>Description</th>
     <th>Location</th>
     <th>Team Member(s)</th>
-    <th>Description</th>
     </tr>
     </thead>
     <tbody>
       {{ range where $.Site.RegularPages "Section" "events" }}
+        {{ if ge (time .Params.date_start).Unix now.Unix }}
+          {{ $d_start := (time .Params.date_start).Format ("January 2") }}
+          {{ $d_last := (time .Params.date_end).Format ("January 2, 2006") }}
       <tr>
-        <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
-        <td>{{ with .Params.event }}{{ . | markdownify }}{{ end }}</td>
+        <td><a href="{{ .URL }}">{{ .Title | markdownify }}</a></td>
+        <td>{{ $d_start }}{{if ne $d_start $d_last}} -<br>
+                          {{ $d_last }}{{ end }}</td>
+        <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.educators }}{{ delimit . ", " }}{{ end }}</td>
-        <td>{{ .Title | markdownify }}</td>
       </tr>
+        {{ end }}
       {{ end }}
     </tbody>
   </table>
