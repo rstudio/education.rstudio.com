@@ -7,6 +7,8 @@ description = "An opinionated collection of R packages designed for data science
 #googleAnalytics = "UA-115082821-1"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+# important! Do not use the below option
+#disableKinds = ["taxonomyTerm"]
 
 [permalinks]
   articles = "articles/:year/:month/:slug/"
