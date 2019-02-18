@@ -1,13 +1,22 @@
+# Title of your site
+title = "Education"
+
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/"
+
+# Name the theme folder in `themes/`.
 theme = "rstudio-lithium"
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
 relativeurls = false
 languageCode = "en-us"
-title = "Education"
 description = "An opinionated collection of R packages designed for data science."
-#googleAnalytics = "UA-115082821-1"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-# important! Do not use the below option
+# important! Do not add/uncomment the below option
 #disableKinds = ["taxonomyTerm"]
 
 [permalinks]
