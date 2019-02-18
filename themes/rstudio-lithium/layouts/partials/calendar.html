@@ -19,7 +19,14 @@
                           {{ $d_last }}{{ end }}</td>
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
-        <td>{{ with .Params.educators }}{{ delimit . ", " }}{{ end }}</td>
+        <td>{{- range .Params.educators }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+              <a href="{{ .Permalink }}">
+                {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}
+              </a>
+            {{ end }}
+            {{ end }}
+        </td>
       </tr>
         {{ end }}
       {{ end }}

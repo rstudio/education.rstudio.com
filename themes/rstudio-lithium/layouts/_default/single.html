@@ -21,7 +21,15 @@
 
       <div class="article-content">
       {{ .Content }}
+
+      {{- range .Params.authors }}
+        {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+
+        <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+      {{ end }}
+      {{ end }}
       </div>
+
 
       {{ partial "disqus.html" .}}
 
