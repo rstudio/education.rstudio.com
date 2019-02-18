@@ -17,3 +17,11 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
   author = "authors"
   tag = "tags"
   category = "categories"
+
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
+[blackfriday]
+  hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
+	angledQuotes = false
+	latexDashes = true
+  extensions = ["backslashLineBreak"]
