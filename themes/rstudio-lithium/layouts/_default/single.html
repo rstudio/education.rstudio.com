@@ -12,10 +12,7 @@
 
       {{ $slug := .Param "slug" }}
       <div class="article-header">
-        {{ with $banner }}
-            {{ $scaled := .Fill "1000x125 smart" }}
-            <div class="photo"><img src="{{ $scaled.RelPermalink }}"></div>
-        {{ end }}
+        {{ with $banner }}<div class="photo" style="background-image: url('{{ .RelPermalink }}');">{{ end }}</div>
         {{ with $.Params.photo }}<div class="photoCredit">Photo by <a href="{{ .url }}">{{ .author }}</a></div>
       </div>
       {{ end }}
