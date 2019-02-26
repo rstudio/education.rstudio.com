@@ -9,7 +9,11 @@
         {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
         <div>{{ range $paginator.Pages }}
           <div class="listItem">
-            <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url(/articles/{{ .Param "slug"}}-sq.jpg);"></a>
+             {{ $card := (.Resources.ByType "image").GetMatch "*sq.jpg*" }}
+             {{ $post := . }}
+             {{ with $card }}
+              <a class="itemImage project" href="{{ $post.RelPermalink }}" style="background-image: url('{{ .RelPermalink }}');"></a>
+              {{ end }}
             <div class="itemDetails">
               <div class="itemHeader">
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
