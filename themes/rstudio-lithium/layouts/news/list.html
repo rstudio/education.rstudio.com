@@ -25,7 +25,7 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
-                {{ with .Params.authors }}
+                {{ with (union .Params.authors .Params.author) }}
                       {{ $author_count := (len .) }}
                       <strong>Author{{ if gt $author_count 1 }}s{{ end }}:</strong>
                       {{ range $index, $val := . }}
