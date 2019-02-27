@@ -22,7 +22,7 @@ preserveTaxonomyNames = true
 #disableKinds = ["taxonomyTerm"]
 
 [permalinks]
-  news = "news/:year/:month/:slug/"
+  articles = "news/:year/:month/:slug/"
 
 [taxonomies]
   author = "authors"
