@@ -7,6 +7,7 @@ social:
   website: "https://carlhowe.com"
 description: Director of Educaton
 categories: [workshops, talks]
+team: true
 ---
 
 Bio goes here

@@ -7,6 +7,7 @@ social:
   website: ""
 description: Data Scientist and Master Instructor 
 categories: [cheetsheats, workshops, books]
+team: true
 ---
 
 Bio goes here

@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+
+
 <div class="band padForHeader pushFooter">
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
@@ -8,6 +10,7 @@
 
         {{ $paginator := .Paginate (where .Data.Pages "Section" "==" "authors") }}
         <div>{{ range $paginator.Pages }}
+        {{ if .Params.team }}
           <div class="listItem">
             <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url({{ .Param "photo"}}); border-radius: 50%;"></a>
             <div class="itemDetails">
@@ -29,11 +32,12 @@
               </div>
             </div>
           </div>
-        {{ end }}</div>
+        {{ end }}{{ end }}</div>
       {{ template "_internal/pagination.html" . }}
       </div>
     </div>
   </div>  <!-- bandContent -->
 </div> <!-- band -->
+
 
 {{ end }}
