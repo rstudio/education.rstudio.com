@@ -1,6 +1,7 @@
 ---
 title: stringr 1.4.0
-authors: [Alison, Mara]
+authors: [Alison, Mara Averick, mine]
+slug: stringr-1-4-0
 date: '2019-02-21'
 description: >
     stringr 1.4.0 is now on CRAN!
