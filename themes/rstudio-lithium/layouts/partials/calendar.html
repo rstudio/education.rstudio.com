@@ -11,12 +11,9 @@
     <tbody>
       {{ range where $.Site.RegularPages "Section" "events" }}
         {{ if ge (time .Params.date_start).Unix now.Unix }}
-          {{ $d_start := (time .Params.date_start).Format ("January 2") }}
-          {{ $d_last := (time .Params.date_end).Format ("January 2, 2006") }}
       <tr>
         <td><a href="{{ .URL }}">{{ .Title | markdownify }}</a></td>
-        <td>{{ $d_start }}{{if ne $d_start $d_last}} -<br>
-                          {{ $d_last }}{{ end }}</td>
+        <td>{{ partial "pretty_date_ranges" . }}</td>
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
         <td>{{- range .Params.educators }}

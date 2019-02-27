@@ -1,0 +1,11 @@
+{{ $d_start := (time .Params.date_start).Format ("January 2") }}
+{{ $d_last := (time .Params.date_end).Format ("January 2, 2006") }}
+
+{{ $d_start }}
+  {{ if ne $d_start $d_last }}-
+    {{ if eq (time .Params.date_start).Month (time .Params.date_end).Month }}
+      {{ (time .Params.date_end).Format ("2, 2006") }}
+    {{ else }}
+      {{ $d_last }}
+    {{ end }}
+  {{ end }}
