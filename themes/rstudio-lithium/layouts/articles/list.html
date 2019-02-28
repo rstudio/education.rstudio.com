@@ -8,7 +8,7 @@
         <div class="sectionTitle">{{ .Title }}</div>
 
         {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-        <div>{{ range where $paginator.Pages ".Params.announce" "!=" "false" }}
+        <div>{{ range where $paginator.Pages ".Params.announce" "!=" false }}
               {{ $post := . }}
           <div class="listItem">
              {{ $card := (.Resources.ByType "image").GetMatch "*sq.jpg*" }}
