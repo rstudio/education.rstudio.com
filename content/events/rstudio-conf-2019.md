@@ -1,7 +1,6 @@
 ---
 title: "rstudio::conf 2019"
 date: "2019-01-15"
-date_start: "2019-01-15"
 date_end: "2019-01-16"
 description: >
   The conference for all things R and RStudio.
