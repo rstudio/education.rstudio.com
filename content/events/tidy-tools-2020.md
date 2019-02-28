@@ -1,17 +1,13 @@
 ---
 title: "Building Tidy Tools"
-date: "2020-01-27"
-date_end: "2020-01-30"
+date: "2019-05-01"
+date_end: "2019-05-02"
 description: >
-  The conference for all things R and RStudio.
+  This workshop, taught by [Hadley Wickham](http://hadley.nz/), is for people who have experience programming in R and want to learn how to tackle larger scale problems. 
 event_url: "https://www.rstudio.com/conference/"
-location: "San Francisco, CA"
+location: "Sydney, Australia"
 educators:
-  - Mine
-  - Garrett
-  - Greg
-  - Carl
-  - Alison
+  - Hadley Wickham
 ---
 
-rstudio::conf 2020 covers all things RStudio, including workshops to teach you the tidyverse, and talks to show you the latest and greatest features.
+The class is taught by Hadley Wickham, Chief Scientist at RStudio.
