@@ -2,6 +2,7 @@
 title: "rstudio::conf 2020"
 date: "2020-01-27"
 date_end: "2020-01-30"
+publishDate: "2019-02-27"
 description: >
   The conference for all things R and RStudio.
 event_url: "https://www.rstudio.com/conference/"
