@@ -1107,8 +1107,6 @@ em {
   .event:nth-child(3) {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg); }
-  .event:nth-child(n+4) {
-    display: none; }
   .event.meetup {
     background-image: url(images/tidy-event-back-meetup.svg); }
   .event.conf {

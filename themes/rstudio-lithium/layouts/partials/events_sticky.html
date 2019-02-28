@@ -1,4 +1,4 @@
-{{ range $index, $value := sort (where $.Site.RegularPages "Section" "events") ".Date" }}
+{{ range $index, $value := first 3 (sort (where $.Site.RegularPages "Section" "events") ".Date") }}
   {{ if ge (time .Date).Unix now.Unix }}
 
 <div class="event">
