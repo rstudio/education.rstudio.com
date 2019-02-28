@@ -9,8 +9,8 @@
     </tr>
     </thead>
     <tbody>
-      {{ range where $.Site.RegularPages "Section" "events" }}
-        {{ if ge (time .Params.date_start).Unix now.Unix }}
+      {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
+        {{ if ge (time .Date).Unix now.Unix }}
       <tr>
         <td><a href="{{ .URL }}">{{ .Title | markdownify }}</a></td>
         <td>{{ partial "pretty_date_ranges" . }}</td>

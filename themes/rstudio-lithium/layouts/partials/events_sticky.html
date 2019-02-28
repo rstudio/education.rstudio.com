@@ -1,5 +1,5 @@
-{{ range $index, $value := where $.Site.RegularPages "Section" "events" }}
-  {{ if ge (time .Params.date_start).Unix now.Unix }}
+{{ range $index, $value := sort (where $.Site.RegularPages "Section" "events") ".Date" }}
+  {{ if ge (time .Date).Unix now.Unix }}
 
 <div class="event">
   <div class="eventTitle"><a href="{{ .URL }}">{{ .Title }}</a></div>
