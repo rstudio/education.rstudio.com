@@ -66,3 +66,13 @@ a:hover {
 #rStudioFooter .bandContent #copyright {
   color: {{ .Param "colors.footer_text" }};
 }
+
+/* Tables */
+
+table tbody tr:nth-child(even){
+  background-color: {{ .Param "colors.table_row_even" }};
+}
+
+table tbody tr:nth-child(odd){
+  background-color: {{ .Param "colors.table_row_odd" }};
+}

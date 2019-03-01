@@ -45,3 +45,7 @@ MathJaxVersion = "2.7.1"
     menu_title_active = "#deef03"
     menu_box_hover = "#7db3ba"
     menu_box_active = "white"
+    # Tables
+    header_background = "#dfe3eb"
+    table_row_even = "#f7faff"
+    table_row_odd = "#fff"
