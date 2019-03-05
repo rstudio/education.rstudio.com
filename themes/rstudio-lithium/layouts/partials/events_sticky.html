@@ -1,13 +1,10 @@
-{{ range $index, $value := where $.Site.RegularPages "Section" "events" }}
-  {{ if ge (time .Params.date_start).Unix now.Unix }}
-     {{ $d_start := (time .Params.date_start).Format ("January 2") }}
-     {{ $d_last := (time .Params.date_end).Format ("January 2, 2006") }}
+{{ range $index, $value := first 3 (sort (where $.Site.RegularPages "Section" "events") ".Date") }}
+  {{ if ge (time .Date).Unix now.Unix }}
 
 <div class="event">
   <div class="eventTitle"><a href="{{ .URL }}">{{ .Title }}</a></div>
   <div class="eventLocation">{{ with .Params.location }}{{ . | markdownify }}{{ end }}</div>
-  <div class="eventDate">{{ $d_start }}{{if ne $d_start $d_last}} -
-                          {{ $d_last }}{{ end }}</div>
+  <div class="eventDate">{{ partial "pretty_date_ranges" . }}</div>
   <div class="eventDetails">{{ with .Params.description }}{{ . | markdownify }}{{ end }}</div>
 </div>
 

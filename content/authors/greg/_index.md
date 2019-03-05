@@ -7,6 +7,7 @@ social:
   website: "http://third-bit.com/"
 description: Data Scientist and Professional Educator
 categories: [workshops, talks, books]
+team: true
 ---
 
 Bio goes here

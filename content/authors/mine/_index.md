@@ -7,6 +7,7 @@ social:
   website: "http://mine-cr.com/"
 description: Data Scientist and Professional Educator
 categories: [workshops, books]
+team: true
 ---
 
 Bio goes here

@@ -7,6 +7,7 @@ social:
   website: "https://alison.rbind.io/"
 description: Data Scientist and Professional Educator 
 categories: [workshops, books]
+team: true
 ---
 
 Bio goes here

@@ -16,11 +16,13 @@ languageCode = "en-us"
 description = "An opinionated collection of R packages designed for data science."
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+# below is critical for non-authors to show up in article listing
+preserveTaxonomyNames = true
 # important! Do not add/uncomment the below option
 #disableKinds = ["taxonomyTerm"]
 
 [permalinks]
-  articles = "articles/:year/:month/:slug/"
+  articles = "news/:year/:month/:slug/"
 
 [taxonomies]
   author = "authors"
