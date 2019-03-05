@@ -1,6 +1,6 @@
 ---
 title: haven 2.1.0
-author: [Mara Averick]
+authors: [Mara Averick]
 slug: haven-2-1-0
 date: '2019-02-19'
 description: > 
