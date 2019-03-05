@@ -10,4 +10,4 @@ categories: [workshops, books]
 team: true
 ---
 
-Bio goes here
+likes :kissing_cat:, will :airplane:
