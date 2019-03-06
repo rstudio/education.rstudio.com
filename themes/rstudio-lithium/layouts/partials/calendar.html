@@ -17,7 +17,7 @@
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
         <td>{{- range .Params.educators }}
-            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "members/%s" (urlize .)) }}
               <a href="{{ .Permalink }}">
                 {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}
               </a>
