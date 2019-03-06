@@ -27,18 +27,8 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
-                {{ with (union .Params.authors .Params.author) }}
-                      {{ $author_count := (len .) }}
-                      <strong>Author{{ if gt $author_count 1 }}s{{ end }}:</strong>
-                      {{ range $index, $val := . }}
-                        {{ $author := $val | title }}
-                            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-                            <a href="{{ .Permalink }}">{{ .Params.name }}</a>{{ if eq (add $index 1) $author_count }}{{ else }}, {{ end }}
-                            {{ else }}
-                                {{ $author }}{{ if eq (add $index 1) $author_count }}{{ else }}, {{ end }}
-                      {{ end }}
-                      {{ end }}
-                {{ end }}
+                <!-- based on author field being used in YAML frontmatter -->
+                {{ partial "pretty_author_names" . }}
                 </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
