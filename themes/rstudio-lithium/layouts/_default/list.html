@@ -20,10 +20,9 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
-                    {{- range .Params.authors }}
-                    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-                    <a href="{{ .Permalink }}">{{ .Params.name }}</a>
-                    {{ end }}
+                    {{ $show_authors := $.Site.Params.articles.authors_list | default true }}
+                    {{ if $show_authors }}
+                    {{- partial "pretty_author_names" . }}
                     {{ end }}
                 </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}

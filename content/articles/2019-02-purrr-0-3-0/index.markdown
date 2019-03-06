@@ -1,6 +1,6 @@
 ---
 title: 'purrr 0.3.0'
-author: [Lionel Henry]
+author: Lionel Henry, Jenny Bryan, Hadley Wickham, Greg
 slug: purrr-0-3-0
 date: '2019-02-06'
 description: >
@@ -208,14 +208,14 @@ Another rate limiting function is `slowly()`. While `insistently()` loops by its
 f <- function(...) print(Sys.time())
 
 walk(1:3, f)
-#> [1] "2019-02-26 22:33:19 PST"
-#> [1] "2019-02-26 22:33:19 PST"
-#> [1] "2019-02-26 22:33:19 PST"
+#> [1] "2019-03-06 12:50:03 PST"
+#> [1] "2019-03-06 12:50:03 PST"
+#> [1] "2019-03-06 12:50:03 PST"
 
 walk(1:3, slowly(f))
-#> [1] "2019-02-26 22:33:19 PST"
-#> [1] "2019-02-26 22:33:20 PST"
-#> [1] "2019-02-26 22:33:21 PST"
+#> [1] "2019-03-06 12:50:03 PST"
+#> [1] "2019-03-06 12:50:04 PST"
+#> [1] "2019-03-06 12:50:05 PST"
 ```
 
 `slowly()` uses a constant rate by default while `insistently()` uses a backoff rate. The rate limiting can be configured with optional jitter via `rate_backoff()` and `rate_delay()`, which implement exponential backoff rate and constant rate respectively.
@@ -225,9 +225,9 @@ walk(1:3, slowly(f))
 
 ```r
 walk(1:3, slowly(f, rate_backoff(2, max_times = Inf)))
-#> [1] "2019-02-26 22:33:21 PST"
-#> [1] "2019-02-26 22:33:23 PST"
-#> [1] "2019-02-26 22:33:25 PST"
+#> [1] "2019-03-06 12:50:05 PST"
+#> [1] "2019-03-06 12:50:07 PST"
+#> [1] "2019-03-06 12:50:10 PST"
 ```
 
 ## Map and reduce improvements

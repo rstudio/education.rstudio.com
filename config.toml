@@ -18,14 +18,14 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 # below is critical for non-authors to show up in article listing
 preserveTaxonomyNames = true
-# important! Do not add/uncomment the below option
-#disableKinds = ["taxonomyTerm"]
+# uncomment the next line to disable listing authors
+# disableKinds = ["taxonomyTerm"]
 
 [permalinks]
   articles = "news/:year/:month/:slug/"
 
 [taxonomies]
-  author = "authors"
+  member = "members"
   tag = "tags"
   category = "categories"
 

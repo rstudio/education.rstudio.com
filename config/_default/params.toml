@@ -16,6 +16,12 @@ highlightjsTheme = "github"
 MathJaxCDN = "//cdn.bootcss.com"
 MathJaxVersion = "2.7.1"
 
+# leave blank in quotes for the default = true
+# to turn off, set = false (no quotes)
+[articles]
+    authors_list = "" # default is true
+    authors_single = "" # default is true
+
 [footer]
     github_url = "https://github.com/rstudio-education"
     twitter_url = "https://twitter.com/hashtag/rstats"

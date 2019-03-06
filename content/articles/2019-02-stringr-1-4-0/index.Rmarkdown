@@ -1,6 +1,6 @@
 ---
 title: stringr 1.4.0
-authors: [Alison, Mara Averick, mine]
+author: [mine, mara Averick, Alison]
 slug: stringr-1-4-0
 date: '2019-02-21'
 description: >

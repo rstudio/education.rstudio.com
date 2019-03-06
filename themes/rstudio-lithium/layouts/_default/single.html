@@ -24,11 +24,11 @@
       <div class="article-content">
       {{ .Content }}
 
-      {{- range .Params.authors }}
-        {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-
-        <a href="{{ .Permalink }}">{{ .Params.name }}</a>
-      {{ end }}
+      {{ $show_authors := $.Site.Params.articles.authors_single | default true }}
+      {{ if $show_authors }}
+      <hr>
+      <strong>By:</strong>
+      {{ partial "pretty_author_names" . }}
       {{ end }}
       </div>
 
