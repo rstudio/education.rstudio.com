@@ -20,11 +20,7 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
-                    {{- range .Params.authors }}
-                    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-                    <a href="{{ .Permalink }}">{{ .Params.name }}</a>
-                    {{ end }}
-                    {{ end }}
+                    {{- partial "pretty_author_names" . }}
                 </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
