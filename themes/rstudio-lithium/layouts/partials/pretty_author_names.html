@@ -14,7 +14,6 @@
                         <!-- if nice list to start with, now create nicer list -->
                         {{ with $authors_list }}
                             {{ $author_count := (len .) }}
-                            <strong>Author{{ if gt $author_count 1 }}s{{ end }}:</strong>
                             {{ range $index, $val := . }}
                               {{ $author := $val | title }}
                               <!-- this pulls matching taxonomyTerm -->
