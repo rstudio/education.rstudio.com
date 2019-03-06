@@ -20,7 +20,10 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
+                    {{ $show_authors := $.Site.Params.articles.authors_list | default true }}
+                    {{ if $show_authors }}
                     {{- partial "pretty_author_names" . }}
+                    {{ end }}
                 </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
