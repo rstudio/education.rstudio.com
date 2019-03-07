@@ -18,9 +18,11 @@ MathJaxVersion = "2.7.1"
 
 # leave blank in quotes for the default = true
 # to turn off, set = false (no quotes)
-[articles]
-    authors_list = "" # default is true
-    authors_single = "" # default is true
+[authors]
+    show_list = "" # on list page, default is true
+    show_single = "" # on single pages, default is true
+    show_latest = "" # on bio, default is true
+    label_latest = "" # on bio, default is "Latest"
 
 [footer]
     github_url = "https://github.com/rstudio-education"

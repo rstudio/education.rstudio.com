@@ -28,7 +28,7 @@
               <div class="itemMeta">
                 <div class="author">
                 <!-- based on author field being used in YAML frontmatter -->
-                {{ $show_authors := $.Site.Params.articles.authors_list | default true }}
+                {{ $show_authors := $.Site.Params.authors.show_list | default true }}
                 {{ if $show_authors }}
                 {{ partial "pretty_author_names" . }}
                 {{ end }}
