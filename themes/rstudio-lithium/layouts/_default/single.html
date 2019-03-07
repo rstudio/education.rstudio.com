@@ -24,7 +24,7 @@
       <div class="article-content">
       {{ .Content }}
 
-      {{ $show_authors := $.Site.Params.articles.authors_single | default true }}
+      {{ $show_authors := $.Site.Params.authors.show_single | default true }}
       {{ if $show_authors }}
       <hr>
       <strong>By:</strong>
