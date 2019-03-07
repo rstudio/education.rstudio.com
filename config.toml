@@ -25,7 +25,7 @@ preserveTaxonomyNames = true
   articles = "news/:year/:month/:slug/"
 
 [taxonomies]
-  member = "members"
+  author = "author"
   tag = "tags"
   category = "categories"
 

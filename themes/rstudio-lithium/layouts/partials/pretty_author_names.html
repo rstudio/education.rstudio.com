@@ -1,5 +1,6 @@
                 <!-- based on author field being used in YAML frontmatter -->
                       <!-- this sequence takes the author field and smartly deals with it! -->
+                      {{ $taxo := "author" }}
                       {{ $authors :=  slice }}
                       {{ $authors_list :=  slice }}
                       {{ with .Params.author }}
@@ -17,7 +18,7 @@
                             {{ range $index, $val := . }}
                               {{ $author := $val | title }}
                               <!-- this pulls matching taxonomyTerm -->
-                              {{- with $.Site.GetPage (printf "members/%s" (urlize .)) }}
+                              {{- with $.Site.GetPage (printf "%s/%s" $taxo (urlize .)) }}
                                   <a href="{{ .Permalink }}">{{ .Params.name }}</a>{{ if eq (add $index 1) $author_count }}{{ else if eq 2 $author_count }} & {{ else if and (eq (add $index 2) $author_count) }}, & {{ else }}, {{ end }}
                               {{ else }}
                                   {{ $author }}{{ if eq (add $index 1) $author_count }}{{ else if eq 2 $author_count }} & {{ else if eq (add $index 2) $author_count }}, & {{ else }}, {{ end }}

@@ -9,6 +9,7 @@
     </tr>
     </thead>
     <tbody>
+      {{ $taxo := "author" }}
       {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
         {{ if ge (time .Date).Unix now.Unix }}
       <tr>
@@ -17,7 +18,7 @@
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
         <td>{{- range .Params.educators }}
-            {{- with $.Site.GetPage "taxonomyTerm" (printf "members/%s" (urlize .)) }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "%s/%s" $taxo (urlize .)) }}
               <a href="{{ .Permalink }}">
                 {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}
               </a>
