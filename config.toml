@@ -26,7 +26,6 @@ preserveTaxonomyNames = true
 
 [taxonomies]
   author = "author"
-  tag = "tags"
   category = "categories"
 
 # Configure BlackFriday Markdown rendering.

@@ -6,7 +6,7 @@ date: '2019-02-21'
 description: >
     stringr 1.4.0 is now on CRAN!
 categories:
-  - package
+  - learn
 photo:
   url: https://unsplash.com/photos/o-d37kiKqqc
   author: Maranda Vandergriff

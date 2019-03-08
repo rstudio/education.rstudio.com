@@ -1,16 +1,23 @@
 {{ define "main" }}
 
+
 <div class="band padForHeader pushFooter">
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
+        <div class="sectionTitle">{{ .Title }}</div>
 
-        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+        {{ $paginator := .Paginate (where .Pages ".Params.announce" "!=" false) }}
         <div>{{ range $paginator.Pages }}
+              {{ $post := . }}
           <div class="listItem">
-            <a class="itemImage project" href="{{ .RelPermalink }}" style="background-image: url(/articles/{{ .Param "slug"}}-sq.jpg);"></a>
+             {{ $card := (.Resources.ByType "image").GetMatch "*sq.jpg*" }}
+             {{ with $card }}
+              <a class="itemImage project" href="{{ $post.RelPermalink }}" style="background-image: url('{{ .RelPermalink }}');"></a>
+              {{ end }}
             <div class="itemDetails">
               <div class="itemHeader">
+
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
                 <div class="itemTag">
                   {{- range .Params.categories -}}
@@ -20,10 +27,11 @@
               </div>
               <div class="itemMeta">
                 <div class="author">
-                    {{ $show_authors := $.Site.Params.articles.authors_list | default true }}
-                    {{ if $show_authors }}
-                    {{- partial "pretty_author_names" . }}
-                    {{ end }}
+                <!-- based on author field being used in YAML frontmatter -->
+                {{ $show_authors := $.Site.Params.articles.authors_list | default true }}
+                {{ if $show_authors }}
+                {{ partial "pretty_author_names" . }}
+                {{ end }}
                 </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
@@ -38,24 +46,9 @@
       {{ template "_internal/pagination.html" . }}
       </div>
 
-      <div class="column25">
-        <div class="section">
-          <div class="sectionTitle">Categories</div>
-          {{ range $key, $value := .Site.Taxonomies.categories }}
-          <div class="articleCategory {{ replace (lower $key) " " "" }}">
-            <a href="{{ (print "/categories/" $key | urlize) | relURL }}">{{ $key }}</a>
-          </div>
-          {{ end }}
-        </div>
-
-        <div class="section">
-          <div class="sectionTitle">Upcoming events</div>
-          {{ partial "events_sticky" . }}
-        </div>
-      </div>
+      {{ partial "sidebar" . }}
     </div>
   </div>  <!-- bandContent -->
 </div> <!-- band -->
 
 {{ end }}
-

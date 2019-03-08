@@ -6,7 +6,6 @@ social:
   twitter: "StatGarrett"
   website: ""
 description: Data Scientist and Master Instructor 
-categories: [cheetsheats, workshops, books]
 team: true
 ---
 
