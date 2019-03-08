@@ -6,7 +6,6 @@ social:
   twitter: "cdhowe"
   website: "https://carlhowe.com"
 description: Director of Educaton
-categories: [workshops, talks]
 team: true
 ---
 

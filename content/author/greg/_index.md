@@ -6,7 +6,6 @@ social:
   twitter: "gvwilson"
   website: "http://third-bit.com/"
 description: Data Scientist and Professional Educator
-categories: [workshops, talks, books]
 team: true
 ---
 
