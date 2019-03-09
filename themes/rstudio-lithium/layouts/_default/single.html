@@ -17,7 +17,7 @@
       </div>
       {{ end }}
 
-      {{ if eq .Section "post" }}
+      {{ if eq .Section "articles" }}
       <span class="article-date">{{ .Date.Format "2006/01/02" }}</span>
       {{ end }}
 
@@ -26,9 +26,9 @@
 
       {{ $show_authors := $.Site.Params.authors.show_single | default true }}
       {{ if $show_authors }}
-      <hr>
-      <strong>By:</strong>
-      {{ partial "pretty_author_names" . }}
+        <hr>
+        <strong>By:</strong>
+        {{ partial "pretty_author_names" . }}
       {{ end }}
       </div>
 
