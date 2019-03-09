@@ -11,7 +11,7 @@
     <tbody>
       {{ $taxo := "author" }}
       {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
-        {{ if ge (time .Date).Unix now.Unix }}
+      {{ if ge (time .Date).Unix now.Unix }}
       <tr>
         <td><a href="{{ .URL }}">{{ .Title | markdownify }}</a></td>
         <td>{{ partial "pretty_date_ranges" . }}</td>
