@@ -5,7 +5,7 @@
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
-        <div class="sectionTitle">{{ .Title }}</div>
+        <div class="sectionTitle">{{ with .Site.GetPage "section" "articles" }}{{ .Title }}{{ end }}: {{ .Title | title | humanize }}</div>
 
         {{ $paginator := .Paginate (where .Pages ".Params.announce" "!=" false) }}
         <div>{{ range $paginator.Pages }}
