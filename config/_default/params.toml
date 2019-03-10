@@ -24,6 +24,11 @@ MathJaxVersion = "2.7.1"
     show_latest = "" # on bio, default is true
     label_latest = "" # on bio, default is "Latest"
 
+# leave blank in quotes for the default = true
+# to turn off, set = false (no quotes)
+[events]
+    link_archive = "" # default is true
+
 [footer]
     github_url = "https://github.com/rstudio-education"
     twitter_url = "https://twitter.com/hashtag/rstats"
