@@ -1,8 +1,13 @@
 {{ define "main" }}
 
+{{ $taxo := "author" }}
+
 <div class="band padForHeader pushFooter">
   <center>
   <h1>{{ .Title }}</h1>
+  {{ range (where $.Site.RegularPages "Section" "events").GroupByDate "2006" }}
+  {{ if le .Key (now.Format "2006") }}
+  <h3>{{ .Key }}</h3>
   <table>
     <thead>
     <tr>
@@ -14,9 +19,8 @@
     </tr>
     </thead>
     <tbody>
-      {{ $taxo := "author" }}
-      {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
-      {{ if lt (time .Date).Unix now.Unix }}
+      {{ range sort .Pages ".Date" }}
+        {{ if lt (time .Date).Unix now.Unix }}
       <tr>
         <td><a href="{{ .URL }}">{{ .Title | markdownify }}</a></td>
         <td>{{ partial "pretty_date_ranges" . }}</td>
@@ -31,10 +35,13 @@
             {{ end }}
         </td>
       </tr>
-        {{ end }}
+      {{ end }}
       {{ end }}
     </tbody>
   </table>
+  <br><br>
+  {{ end }}
+  {{ end }}
 
   </center>
 </div> <!-- band -->
