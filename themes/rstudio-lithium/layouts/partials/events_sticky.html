@@ -1,5 +1,5 @@
-{{ range $index, $value := first 3 (sort (where $.Site.RegularPages "Section" "events") ".Date") }}
-  {{ if ge (time .Date).Unix now.Unix }}
+{{ $pages := first 2 (where (where (where $.Site.RegularPages "Section" "events") "Type" "!=" "event-archive") "Date" "ge" now).ByDate }}
+{{ range $pages }}
 
 <div class="event">
   <div class="eventTitle"><a href="{{ .URL }}">{{ .Title }}</a></div>
@@ -8,5 +8,4 @@
   <div class="eventDetails">{{ with .Params.description }}{{ . | markdownify }}{{ end }}</div>
 </div>
 
-{{ end }}
 {{ end }}
