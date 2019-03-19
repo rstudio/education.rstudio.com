@@ -6,7 +6,7 @@ title = "Education"
 baseurl = "/"
 
 # Name the theme folder in `themes/`.
-theme = "rstudio-lithium"
+theme = "hugo-tourmaline"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
