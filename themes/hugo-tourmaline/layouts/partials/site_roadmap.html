@@ -1,0 +1,36 @@
+<!-- adapted from: https://github.com/gohugoio/hugoDocs/blob/714d3ca91cc5e77e1e81a87af2fa12466c6e8806/themes/gohugoioTheme/layouts/partials/home-page-sections/features-icons.html -->
+
+<div class="w-90-l center">
+  {{ if .Params.personas }}
+    <div class=" flex-ns flex-wrap justify-center center mw9">
+      {{ $personas := .Params.personas }}
+      {{ range $i, $e := $personas  }}
+        {{ $personas_count := $e | len }}
+
+        <div class="w-100{{ if and (eq $i $personas_count) (ne (modBool $personas_count 2) true) }} w-70-ns {{ else }} w-50-ns {{ end }}ph5-l pv5-l nested-copy-line-height">
+          <!-- NOTE:  "if eq $i $personas_count" makes the last item a bit wider for balance. If we use an even number of items, we'll want to remove this -->
+          <div class="flex-l flex-wrap justify-between">
+            <div class="flex-auto w-100 w-10-ns pt5">
+              {{ with .fa_icon }}
+                <div><i class="fa {{ . }} fa-3x" aria-hidden="true" class="h3 " alt="icon depicting {{ $e.heading }}"></i></div>
+              {{ end }}
+            </div>
+
+            <div class="flex-auto tc tl-ns w-100 w-80-ns">
+              <h3 class="lh-title gray o-80 f4 f5-ns mb2 fw8 bmt1 mt0-l">
+                 {{ .heading | markdownify}}
+              </h3>
+              <div class="db v-mid w-100 gray measure-wide mb5 mb0-l">
+                <p class="f3 primary-color mt0 mb2">{{.tagline | markdownify }}</p>
+                <div class="lh-copy">
+                  {{ .copy | markdownify }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
