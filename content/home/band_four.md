@@ -10,12 +10,12 @@ personas:
     tagline: Learn to program and develop packages with R.
     copy: Packages are the fundamental units of reproducible R code. We offer workshops on programming and package development, as well as free online books for you to teach yourself. 
     
-  - heading: Shiny
+  - heading: Interactive Applications
     fa_icon: fa-star
-    tagline: Learn to turn analyses written in R into interactive web applications.
+    tagline: Learn to use Shiny to turn analyses written in R into interactive web applications.
     copy: Take a fresh, interactive approach to telling your data story with Shiny. With Shiny, you can let users interact with your data and your analysis. 
     
-  - heading: R Markdown
+  - heading: Communicate Data Science
     fa_icon: fa-magic
     tagline: Learn to create dynamic analysis documents and communicate results.
     copy: We have R packages and learning materials to show you how you can turn your analyses into high quality documents, reports, presentations, websites, books, blogs, and dashboards. 
@@ -23,7 +23,7 @@ personas:
   - heading: Start here
     fa_icon: fa-map-signs
     tagline: Learn R on your own.
-    copy: If you are not sure where to start, try following our learning pathways using recommended resources that you can trust.
+    copy: If you are not sure where to start, try following our learning pathways using recommended resources that you can trust. (Pull this out- replace with "Professional Products")
     
   - heading: Teach
     fa_icon: fa-lightbulb-o
