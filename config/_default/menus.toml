@@ -2,22 +2,14 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-    name = "Packages"
-    url = "/packages/"
-    weight = 1
-[[main]]
     name = "News"
     url = "/news/"
+    weight = 1
+[[main]]
+    name = "Events"
+    url = "/events/"
     weight = 2
 [[main]]
-    name = "Learn"
-    url = "/learn/"
+    name = "Team"
+    url = "/author/"
     weight = 3
-[[main]]
-    name = "Help"
-    url = "/help/"
-    weight = 4
-[[main]]
-    name = "Contribute"
-    url = "/contribute/"
-    weight = 5
