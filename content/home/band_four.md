@@ -5,7 +5,7 @@ personas:
     tagline: Learn to analyze, visualize, and model data with R.
     copy: See how tools from the tidyverse, an opinionated collection of R packages designed for data science, make it faster, easier, and more fun to work with data in R.
 
-  - heading: R Programming
+  - heading: Program in R
     fa_icon: fa-code
     tagline: Learn to program and develop packages with R.
     copy: Packages are the fundamental units of reproducible R code. We offer workshops on programming and package development, as well as free online books for you to teach yourself. 
