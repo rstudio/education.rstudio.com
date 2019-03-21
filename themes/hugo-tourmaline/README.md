@@ -1,4 +1,4 @@
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2f8f1ca8-27e3-4781-8493-aace97152622/deploy-status)](https://app.netlify.com/sites/tourmaline/deploys) [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 
 # hugo-tourmaline
 
