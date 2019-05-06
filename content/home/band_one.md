@@ -10,4 +10,9 @@ col2:
   row4: "rmarkdown"
 ---
 
-Our mission is to equip everyone, regardless of means, to participate in a global economy that rewards data literacy.
+# We all want to learn
+No one is born a data scientist. Every person who works with R today was once a complete beginner. No matter how much you know about the R ecosystem already, you'll always have more to learn.
+
+At RStudio, we know that everyone is at a different stage in learning the vast ecosystem of R, ranging from rank beginner to seasoned data scientists to professional educators. Choose a starting point below or browse our list of resources to guide your own learning curriculum. Alternatively check out our latest education video below.
+
+[Watch "What Every Data Scientist Should Know About Education" >](https://resources.rstudio.com/webinars/what-every-data-scientist-should-know-about-education-greg-wilson)
