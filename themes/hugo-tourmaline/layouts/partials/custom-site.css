@@ -54,7 +54,7 @@ a:hover {
 
 #rStudioHeader #menu .menuItem.current {
   background-color: {{ .Param "colors.menu_box_active" }};
-  color: {{ .Param "colors.menu_primary" }};
+  color: {{ .Param "colors.menu_text_active" }};
 }
 
 /* Footer */
