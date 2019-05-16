@@ -2,7 +2,7 @@ description = "The tidyverse is an integrated collection of R packages designed 
 
 # Link custom CSS and JS assets
 #   (relative to /static/css and /static/js respectively)
-custom_css = [""]
+custom_css = ["edu.css", "fonts.css"]
 
 # Define "news" as both articles and events
 mainSections = ["articles", "events"]
@@ -31,7 +31,6 @@ MathJaxVersion = "2.7.1"
 
 [footer]
     github_url = "https://github.com/rstudio-education"
-    twitter_url = "https://twitter.com/hashtag/rstats"
     support = "Proudly supported by"
 
 # customize your site colors
@@ -51,13 +50,13 @@ MathJaxVersion = "2.7.1"
     home_section_odd = "white"
     home_section_even = "#f0eee9"
     # Menu
-    menu_primary = "#519199"
-    menu_text = "#fff"
-    menu_text_active = "#fff"
+    menu_primary = "#fff"
+    menu_text = "#404040"
+    menu_text_active = "#4D8DC9"
     menu_title = "#fff"
     menu_title_active = "#deef03"
-    menu_box_hover = "#7db3ba"
-    menu_box_active = "white"
+    menu_box_hover = "#fff"
+    menu_box_active = "#fff"
     # Tables
     header_background = "#dfe3eb"
     table_row_even = "#f7faff"
