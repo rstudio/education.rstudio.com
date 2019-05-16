@@ -1,0 +1,35 @@
+body, button, input, textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased; }
+
+#homeContent .band .blurb {
+    font-weight: 300;
+    display: inline-block;
+    min-height: 160px;
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 48%; }
+
+#homeContent .band .blurb .tagline {
+      font-size: 36px;
+      margin-bottom: 16px; }
+
+#homeContent .band .blurb .tagline.small {
+        margin-top: 62px;
+        line-height: 30px;
+        font-size: 24px; }
+
+#homeContent .band.first {
+    height: 690px;
+    background-color: #f5f4f2;
+}
+
+#homeContent .band.first .bandContent {
+      padding-top: 220px;
+      height: 100%;
+      background-image: url(../images/The-evolution-of-flower-power-by-Desiree-De-Leon.png);
+      background-repeat: no-repeat;
+      background-size: 500px 243px;
+      background-position: 5% 55%;}
