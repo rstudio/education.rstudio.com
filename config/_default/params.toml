@@ -47,7 +47,7 @@ MathJaxVersion = "2.7.1"
 # then, the layouts/partials/head_includes.html uses that partial
 # the partial head_includes.html is called in the partial header.html everywhere!
 [colors]
-    text = "#1a1917" # black
+    text = "#404040"
     # Links
     link = "#4D8DC9" # rstudio blue
     link_hover = "#4D8DC9" # rstudio blue
@@ -61,8 +61,9 @@ MathJaxVersion = "2.7.1"
     # Menu
     menu_primary = "#fff"
     menu_text = "#404040"
-    menu_text_active = "#4D8DC9"  # rstudio blue
-    menu_text_current = "#519199"
+    menu_text_active = "#4D8DC9" # rstudio blue
+    menu_text_current = "#4D8DC9" # rstudio blue
+    menu_decorate_current = "underline"
     menu_title = "#fff"
     menu_title_active = "#deef03"
     menu_box_hover = "#fff"
