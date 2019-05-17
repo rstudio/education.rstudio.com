@@ -33,3 +33,8 @@ body, button, input, textarea {
       background-repeat: no-repeat;
       background-size: 500px 243px;
       background-position: 5% 55%;}
+
+#homeContent .band.first {
+    height: 690px;
+    background-color: #f5f4f2;
+}
