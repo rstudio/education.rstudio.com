@@ -2,6 +2,7 @@
 title: Learn
 ---
 
+
 # Finding Your Way To R
 After more than 25 years of development, the R ecosystem can seem overwhelming to newcomers. Whether you are just beginning R or have many years of data science experience, R offers a plethora of choice. Yet, when RStudio asks students about their biggest challenges in learning R, respondents overwhelmingly answer that survey question with another question: where should they begin?
 
