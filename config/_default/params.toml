@@ -2,7 +2,7 @@ description = "The tidyverse is an integrated collection of R packages designed 
 
 # Link custom CSS and JS assets
 #   (relative to /static/css and /static/js respectively)
-custom_css = [""]
+custom_css = ["edu.css", "fonts.css"]
 
 # Define "news" as both articles and events
 mainSections = ["articles", "events"]
@@ -15,6 +15,19 @@ highlightjsTheme = "github"
 
 MathJaxCDN = "//cdn.bootcss.com"
 MathJaxVersion = "2.7.1"
+
+# Logo file relative to static/images/
+# to appear in upper navbar
+[logo]
+    url = "Color/RStudio-Education.jpg"
+    width = 220.85
+    height = 40
+    alt = "RStudio Education"
+
+[footer]
+    github_url = "https://github.com/rstudio-education"
+    twitter_url = "https://twitter.com/hashtag/rstats"
+    support = "Proudly supported by"
 
 # leave blank in quotes for the default = true
 # to turn off, set = false (no quotes)
@@ -29,20 +42,15 @@ MathJaxVersion = "2.7.1"
 [events]
     link_archive = "" # default is true
 
-[footer]
-    github_url = "https://github.com/rstudio-education"
-    twitter_url = "https://twitter.com/hashtag/rstats"
-    support = "Proudly supported by"
-
 # customize your site colors
 # these colors get applied by layouts/partials/custom-site.css
 # then, the layouts/partials/head_includes.html uses that partial
 # the partial head_includes.html is called in the partial header.html everywhere!
 [colors]
-    text = "#1a1917" # black
+    text = "#404040"
     # Links
-    link = "#1a9a9d"
-    link_hover = "#1a9a9d"
+    link = "#4D8DC9" # rstudio blue
+    link_hover = "#4D8DC9" # rstudio blue
     # Footer
     footer_primary = "#767381" # same as tidyverse.org
     footer_text = "#e3eef8" # same as tidyverse.org
@@ -51,13 +59,15 @@ MathJaxVersion = "2.7.1"
     home_section_odd = "white"
     home_section_even = "#f0eee9"
     # Menu
-    menu_primary = "#519199"
-    menu_text = "#fff"
-    menu_text_active = "#fff"
+    menu_primary = "#fff"
+    menu_text = "#404040"
+    menu_text_active = "#4D8DC9" # rstudio blue
+    menu_text_current = "#4D8DC9" # rstudio blue
+    menu_decorate_current = "underline"
     menu_title = "#fff"
     menu_title_active = "#deef03"
-    menu_box_hover = "#7db3ba"
-    menu_box_active = "white"
+    menu_box_hover = "#fff"
+    menu_box_active = "#fff"
     # Tables
     header_background = "#dfe3eb"
     table_row_even = "#f7faff"
