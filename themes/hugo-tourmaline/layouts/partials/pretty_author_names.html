@@ -4,11 +4,11 @@
                       {{ $authors :=  slice }}
                       {{ $authors_list :=  slice }}
                       {{ with .Params.author }}
-                          <!-- checks if the value is list type -->
                           {{ if in (printf "%T" . ) "[]" }}
+                          <!-- checks if the value is list type -->
                             {{ $authors_list = . }}
-                          <!-- else single value -->
                           {{ else }}
+                          <!-- else single value -->
                             {{ $authors = $authors | append . }}
                           {{ end }}
 

@@ -2,7 +2,7 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-    name = "News & Events"
+    name = "Latest"
     url = "/news/"
     weight = 1
 [[main]]
@@ -14,10 +14,6 @@
     url = "/teach/"
     weight = 3
 [[main]]
-    name = "Partner"
-    url = "/partner/"
+    name = "Explore"
+    url = "/resources/"
     weight = 4
-[[main]]
-    name = "Community"
-    url = "https://community.rstudio.com/"
-    weight = 5

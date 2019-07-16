@@ -1280,3 +1280,19 @@ table, tbody, tfoot, thead, tr, th, td {
   border: 0;
 }
 
+/* from hugo-lithium theme */
+.nav-logo {
+  float: left;
+  margin-top: -10px;
+  transition: transform 150ms ease-out;
+}
+
+.nav-logo:hover {
+  transform: scale(1.02);
+}
+
+.nav-logo img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+}

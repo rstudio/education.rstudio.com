@@ -1,9 +1,9 @@
 ---
 personas:
-  - heading: For beginners (Nang Newbie)
+  - heading: For learners (Nang Newbie)
     fa_icon: fa-bar-chart-o
     tagline: Choose your learning path
-    copy: Most beginning R learners struggle to find a starting point. RStudio recommends that you first ask yourself a few questions that will help you choose among self-taught, online, and in-person learning paths. <p>[Learn more about how to get started >](get-started)</p>
+    copy: Most beginning R learners struggle to find a starting point. RStudio recommends that you first ask yourself a few questions that will help you choose among self-taught, online, and in-person learning paths. <p>[Learn more about how to get started >](learn)</p>
 
   - heading: For students of R (Beatrix Browser)
     fa_icon: fa-code
