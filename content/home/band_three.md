@@ -2,6 +2,6 @@
 title: "Need help?"
 ---
 
-First learn how to make a [reprex](/help/#reprex) then [share it](/help/#where-to-ask) with others.
+The RStudio Community is always ready to help with your questions. If your question is about some feature of R itself, please learn how to make a [reproduceable example (called a reprex)](/help/#reprex) and then [share it](/help/#where-to-ask) with others.
 
    

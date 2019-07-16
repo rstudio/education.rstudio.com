@@ -1,6 +1,9 @@
 ---
-title: "Learn the tidyverse"
+title: "Our latest video"
 ---
 
-See how the tidyverse makes data science faster, easier and more fun with "R for Data Science". Read it [online](http://r4ds.had.co.nz/), buy [the book](http://amzn.to/2aHLAQ1) or try another [resource](/learn/) from the community.
+Check out our latest education video below (concept is that this will always be some recent webinar or video).
+
+[Watch "What Every Data Scientist Should Know About Education" >](https://resources.rstudio.com/webinars/what-every-data-scientist-should-know-about-education-greg-wilson)
+
    
