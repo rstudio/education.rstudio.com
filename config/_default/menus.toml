@@ -14,6 +14,6 @@
     url = "/teach/"
     weight = 3
 [[main]]
-    name = "Explore"
-    url = "/resources/"
+    name = "Partner"
+    url = "/partner/"
     weight = 4

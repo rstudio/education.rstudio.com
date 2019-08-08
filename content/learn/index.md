@@ -3,22 +3,34 @@ title: Learn
 ---
 
 
+![](../images/forest-path.png)
+
+\
+
 # Finding Your Way To R
+
+
+
 After more than 25 years of development, the R ecosystem can seem overwhelming to newcomers. Whether you are just beginning R or have many years of data science experience, R offers a plethora of choice. Yet, when RStudio asks students about their biggest challenges in learning R, respondents overwhelmingly answer that survey question with another question: where should they begin?
 
 - *Say something about emphasis on data science, not computer science, and being able to do things right away with data.*
 
-Most journeys begin with a map. Here's ours:
+Most journeys begin with a map. Here's ours: we have created three tracks to help learners navigate the R ecosystem. These tracks are not meant to be exhaustive, but instead are designed to help you become productive in the minimum amount of time, based on your experience level. The three tracks are:
 
-![Learning Track Map](/images/learn-map.png)
+1. [**Beginners:**](#beginner) Get started with the Tidyverse and R Markdown
+1. [**Intermediates:**](#intermediate) Expand Your R Skills, and 
+1. [**Experts:**](#expert) Go Deep.
 
-RStudio has created three tracks to help learners navigate the R ecosystem. These tracks are not meant to be exhaustive, but instead are designed to help you become productive in the minimum amount of time, based on your experience level. The three tracks are:
 
-* Beginners: Get started with the Tidyverse and R Markdown
-* Intermediates: Expand Your R Skills, and 
-* Experts: Go Deep.
+## Beginners: Get Started With The Tidyverse And R Markdown {#beginner}
 
-## Beginners: Get Started With The Tidyverse And R Markdown 
+\
+\
+
+![](../images/beginner.png)
+
+\
+\
 
 No one starting point will serve all beginners, but here are 5 ways to begin learning R.
 
@@ -32,7 +44,15 @@ No one starting point will serve all beginners, but here are 5 ways to begin lea
 
 - __Learn about some power tools for development.__ RStudio offers 6 videos called the [RStudio Essentials Series](https://resources.rstudio.com) that help you learn how to program and manage R projects using RStudio's tools including the RStudio Integrated Development Environment (IDE). These videos will also help you learn good development practices that make collaboration within a team safe and easy.
 
-## Intermediates: Expand Your R Skills
+## Intermediates: Expand Your R Skills {#intermediate}
+
+\
+\
+
+![](../images/sail.jpg)
+
+\
+\
 
 Once you've gotten started learning R, you can expand your skills by exploring many of the specialized capabilities of R. Here are 5 of the most common areas that people who already have some experience in R find particularly rewarding to learn.
 
@@ -46,14 +66,25 @@ Once you've gotten started learning R, you can expand your skills by exploring m
 
 - __Explore other specialized packages.__ R attracts data scientists because of its more than 13,000 packages that address nearly every use case. If you're interested in genomics, you'll want to spend some time learning the [*bioconductor* collection of packages](https://bioconductor.org/). If you're working with Big Data on Spark clusters, check out [`sparklyr`](https://sparklyr.rstudio.com). If you want to dive into finance, you'll probably want to start with [`quantmod`](http://www.quantmod.com). To find out what packages you should explore, we recommend some of the topic-based package catalogs such as [Awesome R](https://awesome-r.com/) or the [CRAN task views](https://cran.r-project.org/web/views/).
 
-## Experts: Go Deep
+
+## Experts: Go Deep {#expert}
+
+\
+\
+
+![](../images/scuba.png)
+
+\
+\
+
+
 Even once you are an expert at R code development, learning some topics in depth will both help you develop better code and share it more effectively with others.
 
 - __Dive into the foundations of R.__ Most R users are not programmers, and therefore much of their R code is not as readable, fast, or efficient as it could be. Hadley Wickham's book, *Advanced R* (available in [electronic form](http://adv-r.had.co.nz) and [an O'Reilly paperback from Amazon](http://amzn.com/1466586966?tag=devtools-20) forms), unlocks many of the secrets behind how R works the way it does, and gives you new strategies for solving diverse problems.
 
 - __Learn how to extend R.__ While its content sometime overlaps with Hadley's *Advanced R*, the R Core Team offers *Writing R Extensions* ([electronic version](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)) on CRAN. This book is particularly useful if you wish to add your own C and C++ routines to R, but also has unique information on debugging, the R API, and runtime profiling that is difficult to find anywhere else.
 
-- __Build your own packages.__ R packages allow you to share your functions with other R programmers in a modular and easy-to-integrate way. The above-mentioned *Writing R Extensions* documents how to write packages, but you may find Hadley Wickham's *R Packages* book ([electronic edition here](http://r-pkgs.had.co.nz/package.html) and [an O'Reilly papaerback from Amazon here](https://www.amazon.com/dp/1491910593/ref=cm_sw_su_dp?tag=r-pkgs-20) a bit easier to read and more step-by-step. If you want your R code to reach the widest possible population of developers, you'll want to know how to build packages.
+- __Build your own packages.__ R packages allow you to share your functions with other R programmers in a modular and easy-to-integrate way. The above-mentioned *Writing R Extensions* documents how to write packages, but you may find Hadley Wickham's *R Packages* book ([electronic edition here](http://r-pkgs.had.co.nz/package.html) and [an O'Reilly paperback from Amazon here](https://www.amazon.com/dp/1491910593/ref=cm_sw_su_dp?tag=r-pkgs-20) a bit easier to read and more step-by-step. If you want your R code to reach the widest possible population of developers, you'll want to know how to build packages.
 
 - __Use Python in your analyses.__ Anyone who insists you must choose between R and Python for doing data science is creating a false choice. R offers an easy way to incorporate Python code in the [`reticulate` package](https://rstudio.github.io/reticulate). Sean Lopp's webinar, [*R, RStudio 1.2 & Python—a love story*](https://resources.rstudio.com/webinars/r-rstudio-1-2-amp-python-a-love-story-sean-lopp), demonstrates how easily developers can integrate Python code into their R workflows and walks through the development of a reticulated Shiny app.
 

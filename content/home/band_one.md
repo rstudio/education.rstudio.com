@@ -1,6 +1,6 @@
 ---
 title: "We all want to learn."
-background-image: "images/The-evolution-of-flower-power-by-Desiree-De-Leon.png"
+background-image: "images/flowers.png"
 background-color: "#f5f4f2"
 ---
 
