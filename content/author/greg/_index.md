@@ -9,4 +9,8 @@ description: Data Scientist and Professional Educator
 team: true
 ---
 
-Bio goes here
+Greg Wilson has worked for 35 years in both industry and academia,
+and is the author or editor of several books on computing and two for children.
+He has a PhD in Computer Science from the University of Edinburgh,
+and is best known as the co-founder of [Software Carpentry](http://carpentries.org),
+a non-profit organization that teaches basic computing skills to researchers.
