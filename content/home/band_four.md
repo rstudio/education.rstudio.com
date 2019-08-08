@@ -1,32 +1,32 @@
 ---
 personas:
-  - heading: Data Science
+  - heading: For learners (Nang Newbie)
     fa_icon: fa-bar-chart-o
-    tagline: Learn to analyze, visualize, and model data with R.
-    copy: See how tools from the tidyverse, an opinionated collection of R packages designed for data science, make it faster, easier, and more fun to work with data in R.
+    tagline: Choose your learning path
+    copy: Most beginning R learners struggle to find a starting point. RStudio recommends that you first ask yourself a few questions that will help you choose among self-taught, online, and in-person learning paths. <p>[Learn more about how to get started >](learn)</p>
 
-  - heading: Program in R
+  - heading: For students of R (Beatrix Browser)
     fa_icon: fa-code
-    tagline: Learn to program and develop packages with R.
-    copy: Packages are the fundamental units of reproducible R code. We offer workshops on programming and package development, as well as free online books for you to teach yourself. 
+    tagline: Expand your knowledge
+    copy: If you already know R, you know that's just the beginning. As of May 2019, CRAN has more than 14,000 R packages available. While RStudio can't guide you through all of them, we can recommend how you can expand your knowledge using popular packages such as the tidyverse and Shiny.  <p>[Learn how to expand your knowledge >](expand-your-knowledge)</p>
     
-  - heading: Interactive Applications
+  - heading: For teachers (Anya Academic)
     fa_icon: fa-star
-    tagline: Learn to use Shiny to turn analyses written in R into interactive web applications.
-    copy: Take a fresh, interactive approach to telling your data story with Shiny. With Shiny, you can let users interact with your data and your analysis. 
+    tagline: Find resources for teaching with R
+    copy: Finding the right mix of course materials, examples, and data sets to teach data science is hard. In the process of writing R packages and books, RStudio's data scientists have created open source teaching materials you can adapt and use in your courses. <p>[Learn more about teaching resources >](teaching-resources)</p>
     
-  - heading: Communicate Data Science
+  - heading: For RStudio product customers
     fa_icon: fa-magic
-    tagline: Learn to create dynamic analysis documents and communicate results.
-    copy: We have R packages and learning materials to show you how you can turn your analyses into high quality documents, reports, presentations, websites, books, blogs, and dashboards. 
+    tagline: Put RStudio Professional tools into production.
+    copy: Organizations with data science teams frequently choose RStudio Professional tools to collaborate on development and put data science into production. RStudio's support resources can help you get your software installed quickly and integrated into your data science workflows. <p>[Learn to use and manage RStudio Pro tools >](rstudio-pro-tools)</p>
     
-  - heading: Start here
-    fa_icon: fa-map-signs
-    tagline: Learn R on your own.
-    copy: If you are not sure where to start, try following our learning pathways using recommended resources that you can trust. (Pull this out- replace with "Professional Products")
-    
-  - heading: Teach
+  - heading: For commercial instructors
     fa_icon: fa-lightbulb-o
-    tagline: Learn how to teach others to use R.
-    copy: Want to learn how to teach R to other people in your company or community? We have workshops and a teacher certification training program, plus teaching materials designed and licensed for reuse.
+    tagline: Get certified to teach RStudio technologies
+    copy: Want to take your R teaching to the next level? RStudio Certified instructors apply modern evidence-based teaching practices to teach data science using R and RStudio’s products. Your certification also helps you rise above the crowd when organizations are looking for instructors to train their staff.<p>[Learn more about certification programs >](get-certified)</p>
+    
+  - heading: For anyone
+    fa_icon: fa-map-signs
+    tagline: Browse community learning resources
+    copy: RStudio is a part of a world-wide community of data scientists, developers, users and educators, many of whom create amazing resources for learning. If you are looking for broader educational horizons to explore, you'll find good starting points here.<p>[Explore more learning resources >](explore-community-resources)</p>
 ---
