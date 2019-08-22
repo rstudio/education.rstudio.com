@@ -40,4 +40,8 @@ At the [RStudio Education GitHub Organization](https://github.com/rstudio-educat
 
 ## Instructor training and certification
 
-In 2019, RStudio has launched an instructor training and certification program that aims to help people apply modern evidence-based teaching practices to teach data science using R and RStudio’s products, and to help people who need such training find the trainers they need. Find out more about the program and the application process [here](https://blog.rstudio.com/2019/02/28/rstudio-instructor-training/).
+In 2019, RStudio has launched an instructor training and certification program that aims to help people apply modern evidence-based teaching practices to teach data science using R and RStudio’s products, and to help people who need such training find the trainers they need.
+
+- Meet our Certified Trainers and find out more about the program and the application process [here](https://rstudio-trainers.netlify.com/).
+- Access our Instructor Training Materials [here](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY).
+- And find out more about the first step of lesson design, developing learner personas [here](/personas/).
