@@ -27,7 +27,10 @@ MathJaxVersion = "2.7.1"
 [footer]
     github_url = "https://github.com/rstudio-education"
     twitter_url = "https://twitter.com/hashtag/rstats"
-    support = "Proudly supported by"
+    # Enter a copyright notice to display in the site footer.
+    # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
+    copyright = "&copy; [RStudio Inc.](https://www.rstudio.com/), {year}"
+    support = "Proudly supported by " # leave empty to remove support statement + RStudio logo
 
 # leave blank in quotes for the default = true
 # to turn off, set = false (no quotes)
@@ -64,8 +67,8 @@ MathJaxVersion = "2.7.1"
     menu_text_active = "#fff"
     menu_text_current = "#519199"
     menu_decorate_current = "none"
-    menu_title = "#fff"
-    menu_title_active = "#deef03"
+    menu_title = "#fff" # product name
+    menu_title_active = "#deef03" # hover product name
     menu_box_hover = "#7db3ba"
     menu_box_active = "white"
     # Tables
