@@ -921,7 +921,7 @@ pre, code {
 
 pre {
   padding: 10px;
-  line-height: 2em;
+  line-height: 1.5em;
   margin-bottom: 1em;
   word-wrap: normal;
   word-break: normal;
@@ -930,7 +930,7 @@ pre {
 
 /* this styles the code inside chunks */
 pre code {
-    font-size: .8rem;
+    font-size: .9rem;
     display: inline;
     padding: 0;
     margin: 0;
