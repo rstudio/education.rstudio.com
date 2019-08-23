@@ -3,7 +3,7 @@ title: Learn
 ---
 
 
-![](../images/forest-path.png)
+![](../images/forest.jpg)
 
 \
 
@@ -27,7 +27,7 @@ Most journeys begin with a map. Here's ours: we have created three tracks to hel
 \
 \
 
-![](../images/beginner.png)
+![](../images/beginner.jpg)
 
 \
 \
@@ -72,7 +72,7 @@ Once you've gotten started learning R, you can expand your skills by exploring m
 \
 \
 
-![](../images/scuba.png)
+![](../images/scuba.jpg)
 
 \
 \
