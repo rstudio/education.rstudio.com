@@ -25,7 +25,7 @@
       {{ .Content }}
 
       {{ $show_authors := $.Site.Params.authors.show_single | default true }}
-      {{ if $show_authors }}
+      {{ if and ($show_authors) (eq .Section "articles") }}
         <hr>
         <strong>By:</strong>
         {{ partial "pretty_author_names" . }}
