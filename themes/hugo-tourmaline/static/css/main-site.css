@@ -293,6 +293,7 @@ a {
   align-items: flex-end; }
 
 #rStudioHeader .productName {
+  font-family: "Source Code Pro", monospace;
   font-weight: normal;
   font-size: 40px;
   color: inherit;
@@ -309,7 +310,7 @@ a {
 
 #rStudioHeader .productName:hover {
   text-decoration: none;
-  color: #42709b; }
+}
 
 #rStudioHeader .rStudio {
   margin-top: 10px;
@@ -914,7 +915,7 @@ ol {
   list-style: decimal outside none; }
 
 pre, code {
-  font-family: "PT Mono", monospace;
+  font-family: "Source Code Pro", monospace;
   background-color: #f8f8f8;
   font-size: 14px; }
 
@@ -926,15 +927,21 @@ pre {
   word-break: normal;
   border-radius: 3px;
   border: 1px solid #e4e4e4; }
-  pre code {
+
+/* this styles the code inside chunks */
+pre code {
+    font-size: .8rem;
     display: inline;
     padding: 0;
     margin: 0;
     background-color: inherit;
     border-radius: 0;
-    border: none; }
+    border: none; 
+}
 
+/* this styles the inline code */
 code {
+  font-size: .9em;
   color: #606060;
   display: inline-block;
   margin: 1px 5px;
