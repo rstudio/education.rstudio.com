@@ -2,7 +2,7 @@
 title: ""
 ---
 
-<img src="../images/toothpicks.png" style="width:25%">
+<img src="../images/toothpicks.jpg" style="width:25%">
 
 
 \
