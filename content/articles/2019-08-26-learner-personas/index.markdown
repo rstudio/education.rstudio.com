@@ -1,16 +1,28 @@
 ---
 title: Learner Personas
-author: Greg Wilson
+author: [Greg]
 date: '2019-08-26'
 slug: learner-personas
+description: >
+    Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
 categories:
   - other
 tags: []
+photo:
+  url: https://desiree.rbind.io/
+  author: Desirée De Leon
 ---
 
 A [*learner persona*](http://teachtogether.tech/en/process/#s:process-personas) is a short description of a typical learner
 that helps instructors figure out who they're trying to teach
 and communicate that understanding to each other and to learners.
+
+<div class="figure">
+<a href="https://desiree.rbind.io/" target="_blank"><img src="personas-wd.jpg" alt="Art by Desirée De Leon" width="140%" /></a>
+<p class="caption">Figure 1: Art by Desirée De Leon</p>
+</div>
+
+
 Like the personas used in user experience design,
 each one includes:
 
