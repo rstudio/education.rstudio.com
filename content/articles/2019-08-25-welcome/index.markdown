@@ -25,14 +25,14 @@ Hello and welcome to the 🆕 RStudio Education website! We hope to make [educat
 In addition to [beautiful original drawings](#about-the-art), this site includes four main sections:
 
 
-+ **Latest**. This is the *new* RStudio Education Team's blog. Here, we'll post announcements for events, books, and other resources as they come up, as well as general R education-related content that we are excited about sharing.
++ [**Latest**.](/latest) This is the *new* RStudio Education Team's blog. Here, we'll post announcements for events, books, and other resources as they come up, as well as general R education-related content that we are excited about sharing.
 
-+ **Learn**. Our advice for how learners can expand their knowledge about R and popular packages from RStudio like `tidyverse` and Shiny. You'll find three learning pathways that detail what to learn and where to start for [beginners](learn/#beginner), [intermediates](learn/#intermediates), and [experts](learn/#experts). This page may change as new resources become available and grab our attention! So rest assured, it is kept up-to-date.
++ [**Learn**.](/learn) Our advice for how learners can expand their knowledge about R and popular packages from RStudio like `tidyverse` and Shiny. You'll find three learning pathways that detail what to learn and where to start for [beginners](/learn/#beginner), [intermediates](/learn/#intermediate), and [experts](/learn/#expert). This page may change as new resources become available and grab our attention! So rest assured, it is kept up-to-date.
 
-+ **Teach**: Read how to use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
++ [**Teach**.](/teach) Read how to use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
 
++ [**Certify**.](https://rstd.io/trainers) This section will take you to an external site where you can find out about [RStudio's instructor training and certification program](https://rstd.io/trainers).
 
-+ This blog! Expect to see regular updates on what’s happening in the tidyverse. This includes package updates, in person events, and integrative case studies that show you how to use multiple packages from the tidyverse to solve real problems.
 
 # About the team
 
