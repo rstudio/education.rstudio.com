@@ -1,10 +1,10 @@
 # Navigation Bar Links
 #   The weight parameter defines the order that the links will appear in.
 
-#[[main]]
-#    name = "Latest"
-#    url = "/news/"
-#    weight = 1
+[[main]]
+    name = "Latest"
+    url = "/news/"
+    weight = 1
 [[main]]
     name = "Learn"
     url = "/learn/"
