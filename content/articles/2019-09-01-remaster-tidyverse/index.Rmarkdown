@@ -4,7 +4,7 @@ author: [Garrett]
 date: '2019-09-01'
 slug: welcome
 description: >
-    Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
+    Looking for teaching material for intro to #rstats and the #tidyverse? I've made mine easier to reuse. Please help yourself!
 categories: []
 tags: []
 photo:
@@ -36,7 +36,7 @@ Both courses are ready to teach as is—I've taught them several times in this f
 I've developed an efficient way to deliver the course that I encourage you to try:
 
 1. When scheduling a venue, _ensure_ that the classroom has power strips for the students and wireless internet.
-1. About a week ahead of the class, email the students the [workshop set up instructions](/Welcome-To-The-Tidyverse). These remind students to bring a laptop and a power cord, tell students how to download the free software that we will use in class, and ask students to create a free RStudio Cloud account. I do not tell students this unless they are having severe installation bugs, but we won't use these local copies during the workshop. They are only backups in case the classroom wireless network fails. I generally do not have students download slides, etc. ahead of time.
+1. About a week ahead of the class, email the students the [workshop set up instructions](https://github.com/rstudio-education/remaster-the-tidyverse/blob/master/Welcome-To-The-Tidyverse/install-instructions.md). These remind students to bring a laptop and a power cord, tell students how to download the free software that we will use in class, and ask students to create a free RStudio Cloud account. I do not tell students this unless they are having severe installation bugs, but we won't use these local copies during the workshop. They are only backups in case the classroom wireless network fails. I generally do not have students download slides, etc. ahead of time.
 1. Set up an [rstudio.cloud](https://rstudio.cloud/learn/guide) project for the students to use on the day of class. Pre-install all of the packages that students will use and upload all of the course materials to the project directory. Be sure to open and knit one of the student exercises to prompt RStudio Cloud to also install all of the packages related to kniting R Markdown documents.
 1. Under the settings (gear) icon, click Access and then make the project viewable by everyone.
 1. Copy the project URL and paste it over the analagous URL in the 01-Introduction slide decks.
@@ -47,7 +47,7 @@ On the day of the course:
 1. Demonstrate what will happen when they do. It will take ~35 seconds for everyone's project to open.
 1. Have students immediately click "Save a Permanent Copy" at the top of their project.
 
-At this point, each student will have an indentical instance of R and RStudio to run their exercises in. They will also have access to all of the course materials, which are included in the project. You can show students how to download these materials to their project locally (if they wish) when prompted by the slides. Students will have access to their permanent copies of the RStudio Cloud project, and the work they did therein, forever. Like most things **RStudio Cloud no longer supports support Internet Explorer.**
+At this point, each student will have an indentical instance of R and RStudio to run their exercises in. They will also have access to all of the course materials, which are included in the project. You can show students how to download these materials to their project locally (if they wish) when prompted by the slides. Students will have access to their permanent copies of the RStudio Cloud project, and the work they did therein, forever. Like most things **RStudio Cloud no longer supports Internet Explorer.**
 
 Click the links below to see example RStudio Cloud projects for recent versions of each of the workshops:
 
@@ -64,7 +64,7 @@ A small number of students will not be able to log on to the internet without he
 
 # Other tips
 
-1. I usually play a [looping slide show](/Welcome-To-The-Tidyverse/keynotes/00-Preclass-Loop) before class. It can let students know they are in the right place, remind them to connect to the wireless, or do some useful pre-teaching. It's a bit like arriving early to the movies—but with fewer trivia questions.
+1. I usually play a [looping slide show](https://github.com/rstudio-education/remaster-the-tidyverse/blob/master/Welcome-To-The-Tidyverse/keynotes/00-Preclass-loop.key) before class. It can let students know they are in the right place, remind them to connect to the wireless, or do some useful pre-teaching. It's a bit like arriving early to the movies—but with fewer trivia questions.
 1. Don't neglect the beginning warm up activity where students talk to each other. A lively discussion at the start of the day will set the tone for the rest of the day. I notice that students are much more engaged, much more talkative, and ask more questions if I begin the day with some sort of free-for-all. In short, it makes class more fun to teach. If you find yourself starting the second day in the middle of an unfinished unit, be sure to insert a warm up meet and re-greet discussion at the start of class—or don't and see what I'm talking about.
 1. The timers end with a beep. If it is audible, it will help you regain student attention at the end of an exercise, especially if the exercise involves discussion.
 1. Slides are cheap, so I use a lot of them. Don't feel like you need to dwell on each slide—there's no time for that.
