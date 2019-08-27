@@ -377,7 +377,9 @@ a {
       background-color: #f8f8f8; }
     #rStudioHeader #menu .menuItem.current {
       background-color: #75aadb;
-      color: #fff; }
+      color: #fff; 
+      text-decoration: none !important;
+    }
     #rStudioHeader #menu .menuItem.gitHub {
       width: 20px;
       height: 26px;
