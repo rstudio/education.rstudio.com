@@ -1,12 +1,18 @@
 ---
 title: Upcoming Instructor Training Events
-author: Greg Wilson
-date: '2019-08-26'
+author: [Greg]
+date: '2019-08-27'
 slug: upcoming-instructor-training-events
+description: >
+    RStudio's instructor training and certification program will be running two upcoming online classes in September 2019. We hope you'll consider joining us.
 categories:
-  - other
+  - partner
+  - events
 tags:
   - instructor training
+photo:
+  url: https://unsplash.com/photos/VRO3zV6v_pE
+  author: Josh Howard
 ---
 
 Over two dozen people are now certified instructors and listed in our [trainers' directory](https://rstd.io/trainers), and more are in the pipeline.

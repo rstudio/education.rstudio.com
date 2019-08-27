@@ -6,7 +6,7 @@ slug: learner-personas
 description: >
     How can instructors tell if they're teaching what their audience actually needs to know? Learner personas can help.
 categories:
-  - other
+  - teach
 tags: []
 photo:
   url: https://unsplash.com/photos/hXXjwXVyUVo

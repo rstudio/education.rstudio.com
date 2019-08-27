@@ -5,7 +5,9 @@ date: '2019-09-01'
 slug: welcome
 description: >
     Looking for teaching material for intro to #rstats and the #tidyverse? I've made mine easier to reuse. Please help yourself!
-categories: []
+categories: 
+  - teach
+  - learn
 tags: []
 photo:
   url: https://unsplash.com/photos/Y0Aync7Axbk
