@@ -2,7 +2,7 @@
 title: Remaster the Tidyverse
 author: [Garrett]
 date: '2019-09-01'
-slug: welcome
+slug: remaster-tidyverse
 description: >
     Looking for teaching material for intro to #rstats and the #tidyverse? I've made mine easier to reuse. Please help yourself!
 categories: 
