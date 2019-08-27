@@ -30,7 +30,7 @@ Most journeys begin with a map. Here's ours: we have created three tracks to hel
 \
 \
 
-No one starting point will serve all beginners, but here are 5 ways to begin learning R.
+No one starting point will serve all beginners, but here are 6 ways to begin learning R.
 
 - __Spend an hour with [*A Gentle Introduction to Tidy Statistics In R*](https://resources.rstudio.com/webinars/a-gentle-introduction-to-tidy-statistics-in-r).__ If you are coming to R from a traditional point-and-click statistics package such as SPSS or SAS, RStudio's Thomas Mock has created a free video webinar titled [A Gentle Introduction to Tidy Statistics In R](https://resources.rstudio.com/webinars/a-gentle-introduction-to-tidy-statistics-in-r). This one-hour introduction covers how to get started quickly with the basics of research statistics in R, providing an emphasis on reading data into R, exploratory data analysis with the `tidyverse`, statistical testing with ANOVAs, and finally producing a publication-ready plot in `ggplot2`. Plus, you'll find a host of other RStudio webinars and videos to explore via the topic menus on the left side of that page.
 
