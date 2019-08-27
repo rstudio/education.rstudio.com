@@ -20,13 +20,6 @@ RStudio's mission:
 > "Equip everyone, regardless of means, to participate in a global economy that rewards data literacy."
 
 
-<div class="figure">
-<a href="https://desiree.rbind.io/" target="_blank"><img src="welcome.jpg" alt="Art by Desirée De Leon" width="564" /></a>
-<p class="caption">Figure 1: Art by Desirée De Leon</p>
-</div>
-
-
-
 Our site includes four main sections:
 
 
@@ -38,6 +31,15 @@ Our site includes four main sections:
 
 + [**Certify**.](https://rstd.io/trainers) This section will take you to an external site where you can find out about [RStudio's instructor training and certification program](https://rstd.io/trainers).
 
+So, welcome &mdash; we are happy you found us!
+
+<div class="figure">
+<a href="https://desiree.rbind.io/" target="_blank"><img src="welcome.jpg" alt="Art by Desirée De Leon" width="564" /></a>
+<p class="caption">Figure 1: Art by Desirée De Leon</p>
+</div>
+
+
+
 
 # About the team
 
@@ -48,16 +50,35 @@ Our site includes four main sections:
 
 Who are we? We are members of RStudio's Education team. We are a small team of data scientists and professional educators. Our team is fully remote, spanning from Scotland to Oregon state. Meet each of us [here](/author/).
 
-Our team members attend and present at workshops around the world. You can find out who will be where by checking our [upcoming events calendar](/events/). If you'll be there too, please come say hi and introduce yourself! Our team loves to talk about all things data science and education, and we'd love to meet you in person.
+Our team members attend and present at workshops around the world. You can find out who will be where by checking our [upcoming events calendar](/events/). If you'll be at the same event too, please come say hi and introduce yourself! Our team loves to talk about all things data science and education, and we'd love to meet you in person.
 
 You can also follow our work at the [RStudio Education GitHub Organization](https://github.com/rstudio-education/). All of our work [there](https://github.com/rstudio-education/), including training materials and workshops, is openly-licensed and freely-available for reuse. 
 
 To find out more about the Education team's goal of adding the next million new R users to our community, you can watch this [rstudio::conf 2019 talk](https://resources.rstudio.com/rstudio-conf-2019/the-next-million-r-users) from RStudio's Director of Education, [Carl Howe](/authors/carl/).
 
+# About the artist
+
+This site features beautiful original tiny drawings by [Desirée De Leon](https://desiree.rbind.io/), a former [RStudio intern](https://blog.rstudio.com/2019/03/25/summer-interns-2019/), neuroscientist, data scientist, and Atlanta-based illustrator. See more of Desirée's tiny drawings on her [instagram <i class="fab fa-instagram"></i>](https://www.instagram.com/dcossyle/) and [twitter <i class="fab fa-twitter"></i>](https://twitter.com/dcossyle), and check out her [website](http://desiree.rbind.io/) for more art and her data science blog. 
+
+<div class="figure">
+<a href="https://tinystats.github.io/teacups-giraffes-and-statistics" target="_blank"><img src="giraffe_forest_social.jpg" alt="Art by Desirée De Leon" width="782" /></a>
+<p class="caption">Figure 3: Art by Desirée De Leon</p>
+</div>
+
+And don't miss [_Teacups, Giraffes, and Statistics_](https://tinystats.github.io/teacups-giraffes-and-statistics) created by [Desirée](https://desiree.rbind.io/) and co-author Hasse Walum: a series of illustrated online modules to teach statistics and R coding. Set in a playful narrative about fictional miniature giraffes; created entirely in [R Markdown](https://rmarkdown.rstudio.com/). 
+
 # About the art
 
-This site features beautiful original tiny drawings by [Desirée De Leon](https://desiree.rbind.io/), a former [RStudio intern](https://blog.rstudio.com/2019/03/25/summer-interns-2019/). See more of Desirée's tiny drawings on her [instagram <i class="fab fa-instagram"></i>](https://www.instagram.com/dcossyle/) and [twitter <i class="fab fa-twitter"></i>](https://twitter.com/dcossyle), and check out her [website](http://desiree.rbind.io/) for more art and her data science blog. TODO: Add license info here
+The original art featured on this site is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). 
+<center>
+<i class="fab fa-creative-commons fa-lg"></i>
+<i class="fab fa-creative-commons-by fa-lg"></i>
+<i class="fab fa-creative-commons-nc fa-lg"></i>
+<i class="fab fa-creative-commons-nd fa-lg"></i>
+</center>
+
+You can find a human-readable summary of the license [here](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
 # About the site
 
-The site is made with blogdown and the source code is available on GitHub. If you spot any small mistakes please feel empowered to create a PR and fix them!
+The site is made with [blogdown](https://bookdown.org/yihui/blogdown/) and the source code is available on [GitHub](https://github.com/rstudio/education.rstudio.com). If you spot a typo or other error, please feel empowered to create an [issue](https://help.github.com/en/articles/creating-an-issue) or a [pull request](https://help.github.com/en/articles/about-pull-requests)!
