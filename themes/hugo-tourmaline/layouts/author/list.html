@@ -19,7 +19,7 @@
               </div>
             </div>
           </div>
-          {{ .Content | markdownify | emojify }}
+          <p>{{ .Content | markdownify | emojify }}</p>
 
 {{ $show_articles := $.Site.Params.authors.show_latest | default true }}
 {{ if $show_articles }}
