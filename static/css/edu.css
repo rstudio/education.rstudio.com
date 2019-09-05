@@ -42,3 +42,7 @@ body, button, input, textarea {
   padding-bottom: 2em;
   border-bottom: .5em solid #dae8f6;
 }
+
+.sectionTitle {
+  padding-top: 1em;
+}
