@@ -1,19 +1,23 @@
 ---
 title: Welcome!
 author: [Alison]
-date: '2019-08-25'
+date: '2019-09-06'
 slug: welcome
 description: >
     Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
 categories: []
 tags: []
 photo:
-  url: https://unsplash.com/photos/2enBTsIVhUU
-  author: Estée Janssens
+  url: https://github.com/dcossyleon/art
+  author: Desirée De Leon
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align='center')
+```
 
 
-Hello and welcome to the RStudio Education website! `r emo::ji("tada")` We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools, including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/), and [enterprise-ready professional software](https://www.rstudio.com/products/). 
+
+Hello and welcome to the RStudio Education website! `r emo::ji("tada")` We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools (including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/)) or our [enterprise-ready professional software](https://www.rstudio.com/products/). 
 
 RStudio's mission:
 
@@ -42,13 +46,14 @@ knitr::include_graphics("welcome.jpg")
 
 # About the team
 
-```{r echo=FALSE, fig.cap="Art by Desirée De Leon", fig.link="https://desiree.rbind.io/"}
-knitr::include_graphics("hi.jpg")
-```
 
 Who are we? We are members of RStudio's Education team. We are a small team of data scientists and professional educators. Our team is fully remote, spanning from Scotland to Oregon state. Meet each of us [here](/author/).
 
 Our team members attend and present at workshops around the world. You can find out who will be where by checking our [upcoming events calendar](/events/). If you'll be at the same event too, please come say hi and introduce yourself! Our team loves to talk about all things data science and education, and we'd love to meet you in person.
+
+```{r echo=FALSE, fig.cap="Art by Desirée De Leon", fig.link="https://desiree.rbind.io/"}
+knitr::include_graphics("hi.jpg")
+```
 
 You can also follow our work at the [RStudio Education GitHub Organization](https://github.com/rstudio-education/). All of our work [there](https://github.com/rstudio-education/), including training materials and workshops, is openly-licensed and freely-available for reuse. 
 

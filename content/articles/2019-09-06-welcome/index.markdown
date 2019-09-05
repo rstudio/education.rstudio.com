@@ -1,19 +1,21 @@
 ---
 title: Welcome!
 author: [Alison]
-date: '2019-08-25'
+date: '2019-09-06'
 slug: welcome
 description: >
     Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
 categories: []
 tags: []
 photo:
-  url: https://unsplash.com/photos/2enBTsIVhUU
-  author: Estée Janssens
+  url: https://github.com/dcossyleon/art
+  author: Desirée De Leon
 ---
 
 
-Hello and welcome to the RStudio Education website! 🎉 We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools, including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/), and [enterprise-ready professional software](https://www.rstudio.com/products/). 
+
+
+Hello and welcome to the RStudio Education website! 🎉 We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools (including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/)) or our [enterprise-ready professional software](https://www.rstudio.com/products/). 
 
 RStudio's mission:
 
@@ -33,7 +35,7 @@ Our site includes four main sections:
 
 So, welcome &mdash; we are happy you found us!
 
-<div class="figure">
+<div class="figure" style="text-align: center">
 <a href="https://desiree.rbind.io/" target="_blank"><img src="welcome.jpg" alt="Art by Desirée De Leon" width="564" /></a>
 <p class="caption">Figure 1: Art by Desirée De Leon</p>
 </div>
@@ -43,14 +45,15 @@ So, welcome &mdash; we are happy you found us!
 
 # About the team
 
-<div class="figure">
-<a href="https://desiree.rbind.io/" target="_blank"><img src="hi.jpg" alt="Art by Desirée De Leon" width="385" /></a>
-<p class="caption">Figure 2: Art by Desirée De Leon</p>
-</div>
 
 Who are we? We are members of RStudio's Education team. We are a small team of data scientists and professional educators. Our team is fully remote, spanning from Scotland to Oregon state. Meet each of us [here](/author/).
 
 Our team members attend and present at workshops around the world. You can find out who will be where by checking our [upcoming events calendar](/events/). If you'll be at the same event too, please come say hi and introduce yourself! Our team loves to talk about all things data science and education, and we'd love to meet you in person.
+
+<div class="figure" style="text-align: center">
+<a href="https://desiree.rbind.io/" target="_blank"><img src="hi.jpg" alt="Art by Desirée De Leon" width="385" /></a>
+<p class="caption">Figure 2: Art by Desirée De Leon</p>
+</div>
 
 You can also follow our work at the [RStudio Education GitHub Organization](https://github.com/rstudio-education/). All of our work [there](https://github.com/rstudio-education/), including training materials and workshops, is openly-licensed and freely-available for reuse. 
 
@@ -60,7 +63,7 @@ To find out more about the Education team's goal of adding the next million new 
 
 This site features beautiful original tiny drawings by [Desirée De Leon](https://desiree.rbind.io/), a former [RStudio intern](https://blog.rstudio.com/2019/03/25/summer-interns-2019/), neuroscientist, data scientist, and Atlanta-based illustrator. See more of Desirée's tiny drawings on her [instagram <i class="fab fa-instagram"></i>](https://www.instagram.com/dcossyle/) and [twitter <i class="fab fa-twitter"></i>](https://twitter.com/dcossyle), and check out her [website](http://desiree.rbind.io/) for more art and her data science blog. 
 
-<div class="figure">
+<div class="figure" style="text-align: center">
 <a href="https://tinystats.github.io/teacups-giraffes-and-statistics" target="_blank"><img src="giraffe_forest_social.jpg" alt="Art by Desirée De Leon" width="782" /></a>
 <p class="caption">Figure 3: Art by Desirée De Leon</p>
 </div>
