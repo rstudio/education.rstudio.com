@@ -46,13 +46,3 @@ body, button, input, textarea {
 .sectionTitle {
   padding-top: 1em;
 }
-
-ul, ol {
-	line-height: 1.6em;
-	padding-left: 2em;
-	margin-bottom: 0em;
-}
-
-li.last-item {
-  margin-bottom: 1em;
-}
