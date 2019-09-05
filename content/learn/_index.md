@@ -2,9 +2,7 @@
 title: Learn
 ---
 
-![](../../images/forest.jpg)
-
-\
+<img src="/images/forest.jpg" alt="find your learning path">
 
 # Finding Your Way To R
 

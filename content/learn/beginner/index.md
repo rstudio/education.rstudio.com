@@ -1,16 +1,12 @@
 ---
 title: Beginners
 description: >
-    Get started with the Tidyverse and R Markdown
+    _**Get started with the Tidyverse and R Markdown.**_ No one starting point will serve all beginners, but here are 6 ways to begin learning R.
 weight: 1
 ---
 
-\
-\
 <img src="/images/beginner.jpg" alt="beginners">
 
-\
-\
 
 No one starting point will serve all beginners, but here are 6 ways to begin learning R.
 
@@ -24,4 +20,4 @@ No one starting point will serve all beginners, but here are 6 ways to begin lea
 
 - __Learn about some power tools for development.__ RStudio offers 6 videos called the [RStudio Essentials Series](https://resources.rstudio.com) that help you learn how to program and manage R projects using RStudio's tools including the RStudio Integrated Development Environment (IDE). These videos will also help you learn good development practices that make collaboration within a team safe and easy.
 
-- __Join the R community.__ The R community is a special one; useRs of all ranks welcome and support new beginners as well as each other. Joining the [online RStudio Community](https://community.rstudio.com/) and following the [R Weekly newsletter](https://rweekly.org/) are two great places to start. You may be able to find a local [meet-up group](https://www.meetup.com/topics/r-project-for-statistical-computing/) to join; if you are a member of an underrepresented gender minority, you may also be able to find a [local R-Ladies chapter](https://www.meetup.com/pro/rladies) (there is also an [R-Ladies remote chapter](https://twitter.us18.list-manage.com/subscribe?u=2ea47051e532678beaba00ee9&id=0d53e23281)). Finally, consider joining us at the next [rstudio::conf](https://www.rstudio.com/conference/)- a conference about all things R and RStudio. Watch our videos from the [last conference](https://resources.rstudio.com/rstudio-conf-2019) to get a sense of what it is like. RStudio also offers two days of optional in-person training days before the conference, which are a great way to set aside time to learn from the experts.
+- __Join the R community.__ The R community is a special one; useRs of all ranks welcome and support new beginners as well as each other. Joining the [online RStudio Community](https://community.rstudio.com/) and following the [R Weekly newsletter](https://rweekly.org/) are two great places to start. You may be able to find a local [meet-up group](https://www.meetup.com/topics/r-project-for-statistical-computing/) to join; if you are a member of an underrepresented gender minority, you may also be able to find a [local R-Ladies chapter](https://www.meetup.com/pro/rladies) (there is also an [R-Ladies remote chapter](https://twitter.us18.list-manage.com/subscribe?u=2ea47051e532678beaba00ee9&id=0d53e23281)). Finally, consider joining us at the next [rstudio::conf](https://www.rstudio.com/conference/)- a conference about all things R and RStudio. Watch our videos from the [last conference](https://resources.rstudio.com/rstudio-conf-2019) to get a sense of what it is like; sign up for a workshop to set aside time to learn from the experts.

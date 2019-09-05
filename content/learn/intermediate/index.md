@@ -1,7 +1,7 @@
 ---
 title: Intermediates
 description: >
-    Expand your R Skills
+    _**Expand your R Skills.**_ Here are some common areas that people who already have some experience in R find particularly rewarding to learn.
 weight: 2
 ---
 

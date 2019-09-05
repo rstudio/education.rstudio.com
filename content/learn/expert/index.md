@@ -1,17 +1,11 @@
 ---
 title: Experts
 description: >
-    Go deep
+    _**Go deep.**_ Learning some topics in depth will both help you develop better code and share it more effectively with others.
 weight: 3
 ---
 
-
-\
-\
 <img src="/images/scuba.jpg" alt="scuba diver">
-
-\
-\
 
 
 Even once you are an expert at R code development, learning some topics in depth will both help you develop better code and share it more effectively with others.

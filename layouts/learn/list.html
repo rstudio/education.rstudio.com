@@ -5,12 +5,11 @@
   <div class="bandContent">
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
-        <div class="sectionTitle">{{ .Title }}</div>
-        {{ .Content }}
+        <p>{{ .Content }}</p>
         <div>{{ range .Pages.ByWeight }}
               {{ $post := . }}
           <div class="listItem">
-             {{ $card := (.Resources.ByType "image").GetMatch "*sq.jpg*" }}
+             {{ $card := (.Resources.ByType "image").GetMatch "*thumbnail*" }}
              {{ with $card }}
               <a class="itemImage project" href="{{ $post.RelPermalink }}" style="background-image: url('{{ .RelPermalink }}');"></a>
               {{ end }}
@@ -18,20 +17,8 @@
               <div class="itemHeader">
 
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-                <div class="itemTag">
-                  {{- range .Params.categories -}}
-                  <a href="{{ relURL (print "/categories/" . | urlize) }}">{{ . }}</a>
-                  {{ end -}}
-                </div>
               </div>
               <div class="itemMeta">
-                <div class="author">
-                <!-- based on author field being used in YAML frontmatter -->
-                {{ $show_authors := $.Site.Params.authors.show_list | default true }}
-                {{ if $show_authors }}
-                {{ partial "pretty_author_names" . }}
-                {{ end }}
-                </div>
                 <div class="itemDescription">{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
                 </div>
@@ -42,7 +29,7 @@
       {{ template "_internal/pagination.html" . }}
       </div>
 
-{{ partial "sidebar.html" . }}
+{{ partial "learn_sidebar.html" . }}
 
     </div>
   </div>  <!-- bandContent -->
