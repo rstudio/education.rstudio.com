@@ -37,3 +37,8 @@ body, button, input, textarea {
     height: 690px;
     background-color: #f5f4f2;
 }
+
+.article-content {
+  padding-bottom: 2em;
+  border-bottom: .5em solid #dae8f6;
+}
