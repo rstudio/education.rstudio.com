@@ -1,0 +1,14 @@
+      <div class="column25">
+
+        <div class="section">
+          <div class="sectionTitle"><i class="fas fa-map"></i>&nbsp;Quick reference</div>
+          {{ range .Pages.ByWeight }}
+          <div class="articleCategory"><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></div>
+          {{ end }}
+          </div>
+
+        <div class="section">
+          <div class="sectionTitle"><a href="{{ "/events/" | relURL }}">Upcoming events</a></div>
+          {{ partial "events_sticky" . }}
+        </div>
+      </div>
