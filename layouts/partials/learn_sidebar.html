@@ -1,7 +1,7 @@
       <div class="column25">
 
         <div class="section">
-          <div class="sectionTitle"><i class="fas fa-map"></i>&nbsp;Quick reference</div>
+          <div class="sectionTitle"><i class="fas fa-map"></i>&nbsp;Pick a path</div>
           {{ range .Pages.ByWeight }}
           <div class="articleCategory"><a href="{{ .Permalink }}"><strong>{{ .Params.title | humanize | title }}:</strong> {{ .Params.Subtitle }}</a></div>
           {{ end }}
