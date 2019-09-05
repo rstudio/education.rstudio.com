@@ -24,7 +24,16 @@
       <div class="article-content">
       {{ .Content }}
       </div>
-      {{if .PrevInSection }}<p><i class="fas fa-hand-point-right"></i>&nbsp;&nbsp;Ready for more? Check out our learning pathway for <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>.</p>{{end}}
+      {{if .PrevInSection }}
+      <p><i class="fas fa-hand-point-right"></i>&nbsp;&nbsp;Ready for more? Check out our learning pathway for <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>.</p>
+      {{end}}
+      {{if not .PrevInSection }}
+        {{ with .Site.GetPage "section" "articles" }}
+        <p><a href="{{ .Permalink }}">
+            <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Where to next? Try reading our latest...</a>
+        </p>
+        {{ end }}
+      {{end}}
 
 
       {{ partial "disqus.html" .}}
