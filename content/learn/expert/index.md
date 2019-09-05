@@ -1,5 +1,6 @@
 ---
 title: Experts
+subtitle: Go deep
 description: >
     _**Go deep.**_ Learning some topics in depth will both help you develop better code and share it more effectively with others.
 weight: 3

@@ -3,7 +3,7 @@
         <div class="section">
           <div class="sectionTitle"><i class="fas fa-map"></i>&nbsp;Quick reference</div>
           {{ range .Pages.ByWeight }}
-          <div class="articleCategory"><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></div>
+          <div class="articleCategory"><a href="{{ .Permalink }}"><strong>{{ .Params.title | humanize | title }}:</strong> {{ .Params.Subtitle }}</a></div>
           {{ end }}
           </div>
 

@@ -1,5 +1,6 @@
 ---
 title: Beginners
+subtitle: Get started
 description: >
     _**Get started with the Tidyverse and R Markdown.**_ No one starting point will serve all beginners, but here are 6 ways to begin learning R.
 weight: 1
