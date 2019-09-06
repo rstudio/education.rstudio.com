@@ -15,15 +15,18 @@ photo:
   author: Josh Howard
 ---
 
-Over two dozen people are now certified instructors and listed in our [trainers' directory](https://rstd.io/trainers), and more are in the pipeline.
-The first step in joining them is to take part in one of our upcoming online classes:
-
--   Sept 16-17 for people in Europe, the Middle East, and Africa
--   Sept 25-26 for people in the Americas
+Over two dozen people are now certified instructors and listed in our [trainers' directory](https://rstd.io/trainers),
+and more are in the pipeline.
+If you would like to join them,
+the first step is to take part in one of our upcoming training classes.
+Both the Sept 16-17 class (for people in Europe, the Middle East, and Africa)
+and the Sept 25-26 (for people in the Americas) are now full,
+but more will be scheduled in November,
+and we still have some space in the class that will be run at [rstudio::conf 2020][conf] in January.
 
 The course runs 4 hours each day (i.e., two back-to-back half-days);
 the materials are [available online][slides],
-and we are also offering the course at [rstudio::conf 2020][conf] in January.
+and a book-length version is [also available][t3].
 After completing the course,
 participants must do one exam on teaching
 and one each on the technical topics (tidyverse and/or Shiny).
@@ -40,3 +43,4 @@ For more about RStudio's instructor training program, please see:
 [conf]: https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/summary
 [form]: https://docs.google.com/forms/d/e/1FAIpQLSdnybZ-Zs64QE1h7bk67uRs1UCUi1Tibi3noefyStrTHplSDA/viewform
 [slides]: https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY
+[t3]: http://teachtogether.tech
