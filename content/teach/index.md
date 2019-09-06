@@ -2,7 +2,7 @@
 title: ""
 ---
 
-<img src="../images/toothpicks.jpg" style="width:25%">
+<img src="/images/toothpicks.jpg" alt="for teachers">
 
 
 \
@@ -24,8 +24,8 @@ R's popularity has risen in parallel with the dramatic increase in demand for da
 
 - **Get a complete [data science course in a box](https://datasciencebox.org).** [Data Science in a Box](https://datasciencebox.org) contains the complete materials for teaching a semester-long introductory data science course. The "box" contains materials for an undergraduate level introductory data science course, such as slide decks, homework assignments, guided labs, sample exams, a final project assignment, as well as materials for instructors such as pedagogical tips, information on computing infrastructure, technology stack, and course logistics. The [website](https://datasciencebox.org) exposes the source materials that live in a [GitHub repository](https://github.com/rstudio-education/datascience-box) and use datasets from the [dsbox package](https://github.com/rstudio-education/dsbox).
 
-- **Teach with [STAT 545](https://github.com/rstudio-education/stat545-reboot).** 
-Stat545 is a course in data wrangling, analysis, and exploration in R with RStudio. Although the course was designed as a graduate-level, semester-long introduction to data science by [Dr. Jennifer (Jenny) Bryan](https://jennybryan.org/), it has been a valuable resource to self-directed learners and to other educators as a source of inspiration. The education team at RStudio has recently refreshed the course materials into an online book.
+- **Teach with [STAT 545](https://stat545-book.netlify.com/).**
+Stat545 is a course in data wrangling, analysis, and exploration in R with RStudio. Although the course was designed as a graduate-level, semester-long introduction to data science by [Dr. Jennifer (Jenny) Bryan](https://jennybryan.org/), the free online materials Jenny developed have been a valuable resource for self-directed learners and other educators. The education team at RStudio has recently refreshed the course materials into an online book.
 
 - **Use [_R for Data Science_](https://r4ds.had.co.nz/) in the classroom.** Many educators use the free online book [R for Data Science](https://r4ds.had.co.nz/) as a course textbook. There is also an [R for Data Science Instructor's Guide](https://github.com/rstudio-education/r4ds-instructors), which contains notes for people teaching [R for Data Science](https://r4ds.had.co.nz/) with each chapter's learning objectives and key points. The "unofficial" [R4DS Solutions Manual](https://jrnold.github.io/r4ds-exercise-solutions/), a community resource developed by and for educators, is also helpful if you want to use R4DS in the classroom.
 
