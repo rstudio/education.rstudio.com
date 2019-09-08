@@ -46,3 +46,11 @@ body, button, input, textarea {
 .sectionTitle {
   padding-top: 1em;
 }
+
+.references {
+  color: #787878;
+}
+
+details {
+  color: #787878;
+}
