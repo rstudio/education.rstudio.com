@@ -54,3 +54,25 @@ body, button, input, textarea {
 details {
   color: #787878;
 }
+
+.mw-1200 {
+  max-width: 1200px;
+}
+
+.btn-primary {
+    background-color: #4D8DC9;
+    color: #ffffff;
+    border: 1px solid #4D8DC9;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 2px;
+} 
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: transparent;
+    border: 1px solid #4D8DC9;
+    color: #4D8DC9;
+    transition: background-color .15s ease-in-out;
+    text-decoration: none;
+} 
+

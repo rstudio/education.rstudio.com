@@ -160,9 +160,9 @@ a {
   height: auto;
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.98);
-  -moz-box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.07);
   -webkit-transition-property: left;
   -moz-transition-property: left;
   -o-transition-property: left;
