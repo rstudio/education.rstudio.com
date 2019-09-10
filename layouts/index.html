@@ -1,101 +1,85 @@
 {{ define "main" }}
-
 <!-- page -->
 <div id="homeContent" class="pushFooter">
-
-<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-
-<!-- band_one.md populates this section -->
-{{ with .Site.GetPage "/home/band_one.md" }}
-
-<article class="vh-25 dt w-100" style="background-color: #f5f4f2">
-<div class="cf-ns mw9 center ph3-ns pv5">
-  <div class="cf ph2-ns">
-    <div class="fl-ns mw-4 w-40-ns pv6 v-top">
-      <img src="images/flowers.png">
-    </div>
-    <div class="fl-ns mw-6 w-60-ns tl f4 fw3 pl5 v-mid">
-        <h1 class="lh-title">{{ .Title }}</h1>
-        <div class="lh-solid">{{ .Content | markdownify }}</div>
-    </div>
-  </div>
-</div>
-</article>
-
-{{ end }}
-
-<div class="flex items-center justify-center pa3">
-    <div class="dt-ns dt--fixed-ns w-100">
-      <div>
-        <img src="images/beginner-sq.jpg"></img>
-      </div>
-      <div class="pa4 dtc-ns v-top">
-        <div>
-          <h3 class="f6 fw7 mt0 mb4 bb bw1 tl">
-						FOR BEGINNERS
-					</h3>
-          <p class="f4 fw4 mt0 mb3">Choose your learning path</p>
-          <p class="f5 measure lh-copy mb4">
-Most beginning R learners struggle to find a starting point. RStudio recommends that you first ask yourself a few questions that will help you choose among self-taught, online, and in-person learning paths.          </p>
-        <a href="/learn/beginner/" class="no-underline f6 tc db w-100 pv3 bg-animate bg-blue hover-bg-dark-blue white br2">TAKE ME THERE</a>
-
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <!-- band_one.md populates this section -->
+  {{ with .Site.GetPage "/home/band_one.md" }}
+  <article class="vh-25 dt w-100" style="background-color: #f5f4f2">
+    <div class="cf-ns mw-1200 center pv5">
+      <div class="cf">
+        <div class="fl-ns mw-4 w-100 w-40-ns pt5 pt6-ns v-top">
+          <img class="w-80 w-90-ns" src="images/flowers2.png">
+        </div>
+        <div class="fl-ns mw-6 w-60-ns tl f4 fw3 pl4 pr4 pt0 pl5-ns v-lid">
+          <h1 class="lh-title pt1 pt6-ns mt0 mt3-ns">{{ .Title }}</h1>
+          <div class="lh-solid fw4">{{ .Content | markdownify }}</div>
         </div>
       </div>
     </div>
-</div>
-
-
-			<div class="center flex-ns justify-between ph3 pv4 w-90">
-				<div class="w-third-ns ph4 mb0 mw-33">
-					<img src="images/forest-526.jpg" style="float: center" width="100%">
-					<h3 class="pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
-						For learners
-					</h3>
-					<p class="f4 fw4 mt0 mb2 tl">
-						Expand your knowledge
-					</p>
-					<p class="f5 fw4 lh-copy tl mb0">
-						Dive deeper into our popular packages like tidyverse and Shiny, as well as professional products like RStudio Team.
-					</p>
-					<h3 class="f6 fw6 mb6 tl ttu">
-						<a href = "/learn">Learn more</a>
-					</h3>
-				</div>
-				<div class="w-third-ns ph4 mb0 mw-33">
-					<img src="images/toothpicks-526.jpg" style="float: center" width="100%">
-					<h3 class="pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
-						For teachers
-					</h3>
-					<p class="f4 fw4 mt0 mb2 tl">
-						Explore our resources
-					</p>
-					<p class="f5 fw4 lh-copy tl mb0">
-						Use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
-					</p>
-					<h3 class="f6 fw6 mb6 tl ttu">
-						<a href = "/teach">Learn more</a>
-					</h3>
-				</div>
-				<div class="w-third-ns ph4 mb0 mw-33">
-					<img class="mb0" src="images/globe-526.jpg" style="float: center" width="100%">
-					<h3 class="pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
-						For partners
-					</h3>
-					<p class="f4 fw4 mt0 mb2 tl">
-						Train others
-					</p>
-					<p class="f5 fw4 lh-copy tl mb0">
-            Find out about RStudio's instructor training and certification program, or find a certified instructor to work with.
-					</p>
-					<h3 class="f6 fw6 mb6 tl ttu">
-						<a href = "https://rstd.io/trainers" target="_blank">Learn more</a>
-					</h3>
-				</div>
-			</div>
-
-
-</div> <!-- homeContent -->
-
-{{ end }}
-
-
+  </article>
+  {{ end }}
+  <div class="cf-ns mw-1200 center left-ns pv0 pt5-ns pl4 pr4 pl5-ns">
+    <div class="cf">
+      <div class="fl-ns w-40-ns v-top">
+        <img class="w-60 w-90-ns" src="images/beginner-sq.jpg">
+      </div>
+      <div class="fl-ns mw-6 w-60-ns tl f4 fw3 pl4 pr4 pt0 v-lid">
+        <h3 class="pb2 pt0 pt4-ns f6 fw7 mt0 mb4 bb bw1 tl">
+        FOR BEGINNERS
+        </h3>
+        <p class="f4 fw4 mt0 mb3">Choose your learning path</p>
+        <p class="f5 lh-copy mb4 fw4">
+        Most beginning R learners struggle to find a starting point. RStudio recommends that you first ask yourself a few questions that will help you choose among self-taught, online, and in-person learning paths.          </p>
+        <a href="/learn/beginner/" class="no-underline f6 tc db w-70 pv3 bg-animate btn-primary">TAKE ME THERE</a>
+      </div>
+    </div>
+  </div>
+  <div class="flex-ns center mw-1200 mb6">
+    <div class="w-100 w-33-ns pt3 ph4 mb0">
+      <img src="images/forest-526.jpg" style="float: center" width="60%">
+      <h3 class="pb2 pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
+      For learners
+      </h3>
+      <p class="f4 fw4 mt0 mb2 tl">
+        Expand your knowledge
+      </p>
+      <p class="f5 fw4 lh-copy tl mb0">
+        Dive deeper into our popular packages like tidyverse and Shiny, as well as professional products like RStudio Team.
+      </p>
+      <h3 class="f6 fw6 tl ttu">
+      <a href = "/learn">Learn more</a>
+      </h3>
+    </div>
+    <div class="w-100 w-33-ns pt3 ph4 mb0">
+      <img src="images/toothpicks-526.jpg" style="float: center" width="60%">
+      <h3 class="pb2 pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
+      For teachers
+      </h3>
+      <p class="f4 fw4 mt0 mb2 tl">
+        Explore our resources
+      </p>
+      <p class="f5 fw4 lh-copy tl mb0">
+        Use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
+      </p>
+      <h3 class="f6 fw6 tl ttu">
+      <a href = "/teach">Learn more</a>
+      </h3>
+    </div>
+    <div class="w-100 w-33-ns pt3 ph4 mb0">
+      <img class="mb0" src="images/globe-526.jpg" style="float: center" width="60%">
+      <h3 class="pb2 pt4 f5 fw6 mt0 mb4 bb bw1 tl ttu">
+      For partners
+      </h3>
+      <p class="f4 fw4 mt0 mb2 tl">
+        Train others
+      </p>
+      <p class="f5 fw4 lh-copy tl mb0">
+        Find out about RStudio's instructor training and certification program, or find a certified instructor to work with.
+      </p>
+      <h3 class="f6 fw6 tl ttu">
+      <a href = "https://rstd.io/trainers" target="_blank">Learn more</a>
+      </h3>
+    </div>
+  </div>
+  </div> <!-- homeContent -->
+  {{ end }}
