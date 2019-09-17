@@ -14,14 +14,7 @@ nocite: |
 knitr::write_bib(c("reprex", "ggplot2", "shiny", "flexdashboard", "tidymodels", "parsnip", "sparklyr", "quantmod"), "packages.bib") 
 ```
 
-
-\
-\
-
 <img src="/images/sail.jpg" alt="intermediates">
-
-\
-\
 
 Once you've gotten started learning R, you can expand your skills by exploring many of the specialized capabilities of R. Here are 6 of the most common areas that people who already have some experience in R find particularly rewarding to learn.
 
