@@ -40,7 +40,7 @@ body, button, input, textarea {
 
 .article-content {
   padding-bottom: 2em;
-  border-bottom: .5em solid #dae8f6;
+  /*border-bottom: .5em solid #dae8f6;*/
 }
 
 .sectionTitle {
@@ -66,7 +66,7 @@ details {
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 2px;
-} 
+}
 
 .btn-primary:hover, .btn-primary:active {
     background-color: transparent;
@@ -74,5 +74,5 @@ details {
     color: #4D8DC9;
     transition: background-color .15s ease-in-out;
     text-decoration: none;
-} 
+}
 
