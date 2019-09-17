@@ -1,10 +1,9 @@
 ---
-title: Learn
+title: Finding Your Way To R
 ---
 
 <img src="/images/forest.jpg" alt="find your learning path">
 
-# Finding Your Way To R {#start-here}
 
 We think R is a great place to start your data science journey because it is an environment designed for data science. R is not just a programming language, but it is also an interactive ecosystem including a runtime, libraries, development environments, and extensions. All these features help you think about problems as a data scientist, while supporting fluent interaction between your brain and the computer.
 
