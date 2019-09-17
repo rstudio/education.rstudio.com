@@ -1,10 +1,10 @@
       <div class="column25">
 
         <div class="section">
-          <div class="sectionTitle"><a href="{{ printf "%s#paths" .Permalink }}"><i class="fas fa-map"></i>&nbsp;Choose your path</a>
+          <div class="sectionTitle"><a href="{{ printf "%s#paths" .Permalink }}">Choose a path</a>
           </div>
           {{ range .Pages.ByWeight }}
-          <div class="articleCategory"><a href="{{ .Permalink }}"><strong>{{ .Params.title | humanize | title }}:</strong> {{ .Params.Subtitle }}</a></div>
+          <div class="articleCategory programming"><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}: {{ .Params.Subtitle }}</a></div>
           {{ end }}
           </div>
 
