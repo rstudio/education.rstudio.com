@@ -16,7 +16,7 @@ photo:
 ---
 
 
-I've been teaching people how to use the Tidyverse since before there was a Tidyverse, usually in one or two day long conference workshops. Each time I teach, I take notes during class and then polish my material afterwards, gradually honing a better and better set of class materials. The approach has worked well—I've gotten great reviews and have even won awards for my teaching. But my course was designed for R users who have never heard of the Tidyverse, and I can't find them anymore. Now I'm updating the material for modern R beginners; and as I go, I'm making the material accessible for _everyone_ to use. Looking for teaching material for an intro to R with the Tidyverse? Please help yourself!
+I've been teaching people how to use the Tidyverse in a course called _Master the Tidyverse_, usually in one or two day long conference workshops. Each time I teach, I take notes during class and then polish my material afterwards, gradually honing a better and better set of class materials. The approach has worked well—I've gotten great reviews and have even won awards for my teaching. But my course was designed for R users who have never heard of the Tidyverse, and I can't find them anymore. Now I'm updating the material for modern R beginners; and as I go, I'm making the material accessible for _everyone_ to use. Looking for teaching material for an intro to R with the Tidyverse? Please help yourself!
 
 # The Content
 
