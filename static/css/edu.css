@@ -40,7 +40,11 @@ body, button, input, textarea {
 
 .article-content {
   padding-bottom: 2em;
-  /*border-bottom: .5em solid #dae8f6;*/
+}
+
+.article-content-learn {
+  padding-bottom: 2em;
+  border-bottom: .5em solid #dae8f6;
 }
 
 .sectionTitle {
