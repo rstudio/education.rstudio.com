@@ -20,7 +20,7 @@ The R community is a special one; useRs of all ranks welcome and support new beg
 
 # Get (and give) help
 
-[RStudio Community](https://community.rstudio.com/) is a warm and welcoming online discussion forum to ask (and answer!) any questions about using R. 
+[RStudio Community](https://community.rstudio.com/) is a warm and welcoming online discussion forum to ask (and answer!) any questions about using R. You'll need to learn how to make a reprex / insert datapasta gif
 
 # Stay up to date
 
