@@ -2,6 +2,8 @@
 
 {{ $page := . }}
 {{ $banner := ($page.Resources.ByType "image").GetMatch "*wd.jpg*" }}
+{{ $nextpage := $page.PrevInSection }}
+
 
 <div class="band padForHeader pushFooter">
   <div class="bandContent">
@@ -42,12 +44,14 @@
 
       <div class="column25">
         <div class="section hideOnMobile">
-          {{ with .Site.GetPage "section" "learn" }}
-          <div class="sectionTitle"><a href="{{ .Permalink }}"><i class="fas fa-map"></i>&nbsp;&nbsp;Back to overview</a></div>
+        <div class="listItem" style='padding-top: 1em;'>
+        {{ with $nextpage }}
+          {{ $thumb := (.Resources.ByType "image").GetMatch "thumb*.jpg" }}
+          {{ with $thumb }}
+            <a class="itemImage project" href="{{ $nextpage.RelPermalink }}" style="background-image: url('{{ .RelPermalink }}');">Next up: {{ $nextpage.Title }}</a>
           {{ end }}
-          {{if .PrevInSection }}
-          <div class="sectionTitle"><a href="{{ .PrevInSection.Permalink }}"><i class="fas fa-map-signs"></i>&nbsp;&nbsp;Next up: {{ .PrevInSection.Title }}</a></div>
-          {{ end }}
+        {{ end }}
+        </div>
         </div>
         <div class="section">
           <div class="sectionTitle"><a href="{{ "/events/" | relURL }}">Upcoming events</a></div>
