@@ -923,9 +923,14 @@ p {
 }
 
 ul, ol {
-  line-height: 2em;
+  line-height: 1.6em;
   padding-left: 2em;
-  margin-bottom: 0em; }
+  margin-bottom: 0em; 
+}
+
+#TableOfContents ul {
+  line-height: 2em;
+}
 
 li.last-item {
   margin-bottom: 1em;
