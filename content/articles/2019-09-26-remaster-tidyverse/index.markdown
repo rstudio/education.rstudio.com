@@ -1,15 +1,15 @@
 ---
-title: Remastering _Master the Tidyverse_
-author: [Garrett]
-date: '2019-09-11'
+title: Remastering 'Master the Tidyverse'
+author:
+  - Garrett
+date: '2019-09-26'
+categories:
+  - learn
+  - teach
 publishDate: '2019-09-04'
 slug: remaster-tidyverse
-description: >
-    Looking for teaching material for intro to #rstats and the #tidyverse? I've made mine easier to reuse. Please help yourself!
-categories: 
-  - teach
-  - learn
-tags: []
+description: |
+  Looking for teaching material for intro to #rstats and the #tidyverse? I've made mine easier to reuse. Please help yourself!
 photo:
   url: https://unsplash.com/photos/Y0Aync7Axbk
   author: Patrick Hendry

@@ -26,8 +26,7 @@
 {{ $query := where .Pages ".IsNode" false }}
 {{ $count := len $query }}
 {{ if $count }}
-    <div>
-      <hr>
+    <div class="latest">
       <h3>{{ $.Site.Params.authors.label_latest | default "Latest" }}</h3>
       <ul>
         {{ range $query }}

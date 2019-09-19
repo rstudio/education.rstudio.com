@@ -1,12 +1,11 @@
 ---
 title: Welcome!
-author: [Alison]
-date: '2019-09-06'
+author:
+  - Alison
+date: '2019-09-24'
 slug: welcome
-description: >
-    Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
-categories: []
-tags: []
+description: |
+  Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
 photo:
   url: https://github.com/dcossyleon/art
   author: Desirée De Leon
