@@ -15,5 +15,5 @@
     weight = 3
 [[main]]
     name = "Certify"
-    url = "https://rstd.io/trainers"
+    url = "/trainers/"
     weight = 4
