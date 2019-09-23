@@ -12,13 +12,14 @@ resources:
   icon: fa-book-open
   icon_pack: fas
   what: |
-    We’ve also authored guides to our tools.
-    Most books are available with free online versions.
+    We have beginner to advanced books to help you use our tools;
+    most have links to free online versions to make it easy.
 
 - url: https://rstudio.cloud/learn/primers
   title: Tutorials
   icon: fa-cloud
   icon_pack: fas
   what: |
-    Hop into RStudio Cloud with built-in tutorials, and no installations.
+    Hop right into RStudio Cloud with built-in tutorials
+    &mdash; no installations, no setup required.
     All cloud accounts are free for personal use.
