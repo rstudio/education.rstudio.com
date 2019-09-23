@@ -15,7 +15,7 @@ knitr::write_bib(c("tidyverse", "ggplot2", "rmarkdown"), "packages.bib")
 ```
 
 
-<img src="/images/beginner.jpg" alt="beginners">
+<img src="mtsalsa-750.jpg" alt="beginners">
 
 
 No one starting point will serve all beginners, but here are 6 ways to begin learning R.

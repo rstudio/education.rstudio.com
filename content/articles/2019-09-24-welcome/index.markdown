@@ -14,7 +14,7 @@ photo:
 
 
 
-Hello and welcome to the RStudio Education website 🎉 We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools (including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/)) or our [enterprise-ready professional software](https://www.rstudio.com/products/). 
+Hello and welcome to the RStudio Education website! We hope to make [education.rstudio.com](/) a community resource for data scientists who want to [learn](/learn/) or [teach](/teach/) with RStudio's open source tools (including our [Integrated Development Environment](https://www.rstudio.com/products/rstudio/) and [R packages](https://www.rstudio.com/products/rpackages/)) or our [enterprise-ready professional software](https://www.rstudio.com/products/). 
 
 RStudio's mission:
 
