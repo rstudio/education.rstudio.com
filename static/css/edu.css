@@ -102,6 +102,15 @@ details {
   background-image: url(images/fa-calendar-alt.svg);
 }
 
+#rStudioFooter .bandContent #logos .footerLogo.community {
+  background-image: url(images/fa-discourse.svg);
+}
+
+#rStudioFooter .bandContent #logos .footerLogo.team {
+  background-image: url(images/fa-users.svg);
+}
+
 #rStudioFooter .bandContent #logos .footerLogo {
   height: 30px;
+  margin: 0 5px;
 }
