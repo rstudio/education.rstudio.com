@@ -1,0 +1,24 @@
+resources:
+- url: https://www.rstudio.com/resources/cheatsheets/
+  title: Cheatsheets
+  icon: fa-thumbtack
+  icon_pack: fas
+  what: |
+    Grab a cheatsheet for your favorite package to help jog your memory
+    for key functions while you work.
+
+- url: https://www.rstudio.com/resources/training/books/
+  title: Books
+  icon: fa-book-open
+  icon_pack: fas
+  what: |
+    We’ve also authored guides to our tools.
+    Most books are available with free online versions.
+
+- url: https://rstudio.cloud/learn/primers
+  title: Tutorials
+  icon: fa-cloud
+  icon_pack: fas
+  what: |
+    Hop into RStudio Cloud with built-in tutorials, and no installations.
+    All cloud accounts are free for personal use.
