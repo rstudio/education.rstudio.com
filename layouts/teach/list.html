@@ -6,7 +6,13 @@
     <div class="full splitColumns withMobileMargins">
       <div class="column75">
         <h1 class="article-title">{{ .Title | markdownify }}</h1>
-        <p>{{ .Content }}</p>
+        <p>
+        {{ $focal := (.Resources.ByType "image").GetMatch "*750.jpg" }}
+          {{ with $focal }}
+            <img src="{{ .RelPermalink }}" class="focal"></i>
+          {{ end }}
+        {{ .Content }}
+        </p>
         <div>{{ range .Pages.ByWeight }}
               {{ $post := . }}
           <div class="listItem">
@@ -14,7 +20,7 @@
              {{ with $card }}
               <a class="itemImage project" href="{{ $post.RelPermalink }}" style="background-image: url('{{ .RelPermalink }}');"></a>
               {{ end }}
-            <div class="itemDetails">
+            <div class="itemDetails" style="align-self: center;">
               <div class="itemHeader">
 
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
@@ -30,8 +36,7 @@
       {{ template "_internal/pagination.html" . }}
       </div>
 
-{{ partial "learn_sidebar.html" . }}
-
+{{ partial "teach_sidebar.html" . }}
     </div>
   </div>  <!-- bandContent -->
 </div> <!-- band -->

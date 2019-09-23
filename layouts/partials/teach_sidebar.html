@@ -1,0 +1,15 @@
+      <div class="column25">
+
+        <div class="section">
+          <div class="sectionTitle"><a href="{{ printf "%s#find" .Permalink }}">Find resources</a>
+          </div>
+          {{ range .Pages.ByWeight }}
+          <div class="articleCategory programming"><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></div>
+          {{ end }}
+          </div>
+
+        <div class="section">
+          <div class="sectionTitle"><a href="{{ "/events/" | relURL }}">Upcoming events</a></div>
+          {{ partial "events_sticky" . }}
+        </div>
+      </div>

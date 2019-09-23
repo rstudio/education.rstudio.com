@@ -42,16 +42,23 @@ body, button, input, textarea {
   padding-bottom: 2em;
 }
 
-.article-content-learn {
+.article-content-learn, .article-content-teach {
   padding-bottom: 2em;
   border-bottom: .5em solid #dae8f6;
 }
 
-.article-content-learn img {
+.article-content-learn img, .article-content-teach img {
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+img.focal {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sectionTitle {
