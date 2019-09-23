@@ -2,7 +2,7 @@
 title: "Learn to teach"
 subtitle: "How to teach (in general)"
 description: >
-    _**How to teach (in general).**_ Arm yourself with resources to help you create and deliver educational content that works, based on what we know about how people learn new things.
+    _**How to teach (in general).**_ Use evidence-based teaching practices to create and deliver educational content that works, based on what we know about how people learn.
 weight: 1
 ---
 

@@ -2,9 +2,11 @@
 title: "Tools for teaching"
 subtitle: "How to set up effective learning environments for teaching R and data science."
 description: >
-    _**How to set up effective learning environments for teaching R and data science.**_ Design an infrastructure and choose packages that can set you and your learners on the happy path.
+    _**How to set up effective learning environments for teaching R and data science.**_ Design a computing infrastructure and choose packages that can set you and your learners on the happy path.
 weight: 3
 ---
+
+Whether you are teaching for the first time or you are a seasoned educator, you know that finding the right tools can make or break any learning experience. As professional data science educators, we offer some opinionated advice about how to choose your computing infrastructure, and which packages are worth your time for adding value to your teaching.
 
 # Computing infrastructure
 
@@ -22,6 +24,6 @@ After you get your tech stack set up, you'll want to think about packages that c
 
 - __Create interactive tutorials with the [learnr package](https://rstudio.github.io/learnr/).__ The [learnr package](https://rstudio.github.io/learnr/) is designed to turn any [R Markdown document](https://rmarkdown.rstudio.com) into an interactive tutorial. The final product can be published all of the same ways that Shiny applications can, including running locally on an end-user’s machine or running on a Shiny Server or hosting service like [shinyapps.io](https://www.shinyapps.io/). All of the [RStudio.cloud Primers](https://rstudio.cloud/learn/primers) are written with learnr &mdash; you can see the source code in this [GitHub repository](https://github.com/rstudio-education/primers).
 
-- __Grade learnr tutorials with the [gradethis package](https://rstudio-education.github.io/gradethis/)__. Once you've created a tutorial, you may want to be able to evaluate learners' solutions, and provide targeted feedback based on their input. This package is being actively developed and refined.
+- __Grade learnr tutorials with the [gradethis package](https://rstudio-education.github.io/gradethis/).__ Once you've created a tutorial, you may want to be able to evaluate learners' solutions, and provide targeted feedback based on their input. This package is being actively developed and refined.
 
-- __Level up your YAML__. If you plan to teach R Markdown *with* R Markdown, you'll want to use the [ymlthis package](https://ymlthis.r-lib.org/). The package allows you to use R functions to create valid YAML headers (with all the right indentations and formatting!). Be sure to use the function [`asis_yaml_output()`](https://ymlthis.r-lib.org/reference/asis_yaml_output.html) so that when you knit your document, the YAML syntax is printed with built-in code highlighting.
+- __Give your teaching materials a place to live.__ Many educators who teach R (or teach with R) have embraced the [bookdown package](https://bookdown.org/yihui/bookdown/), which helps you take a collection of R Markdown documents and knit them together into a polished website that engages learners. You can see some example books by browsing [bookdown.org](https://bookdown.org/). But you don't *have* to write a whole book &mdash; some of the best bookdown examples are from course or workshop notes like Columbia University's [*Exploratory Data Analysis & Visualization* (edav.info)](https://edav.info/), [*R Markdown for Scientists*](https://rmd4sci.njtierney.com/) by [Nick Tierney](https://www.njtierney.com/), and [*What They Forgot to Teach You About R*](https://rstats.wtf/).

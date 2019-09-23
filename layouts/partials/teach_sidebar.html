@@ -1,7 +1,7 @@
       <div class="column25">
 
         <div class="section">
-          <div class="sectionTitle"><a href="{{ printf "%s#find" .Permalink }}">Find resources</a>
+          <div class="sectionTitle"><a href="{{ printf "%s#resources" .Permalink }}">Explore resources</a>
           </div>
           {{ range .Pages.ByWeight }}
           <div class="articleCategory programming"><a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a></div>

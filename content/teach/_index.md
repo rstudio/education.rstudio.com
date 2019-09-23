@@ -14,7 +14,7 @@ Teaching R breaks down into three separable and learnable skills:
 
 The below resources will help you tackle each of these topics independently.
 
-## Find resources {#find}
+## Explore our resources {#resources}
 
 \
 \
