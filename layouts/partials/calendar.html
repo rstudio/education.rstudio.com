@@ -1,14 +1,4 @@
-{{ define "main" }}
-
-{{ $taxo := "author" }}
-
-<div class="band padForHeader pushFooter">
-  <center>
-  <h1>{{ .Title }}</h1>
-  {{ range (where $.Site.RegularPages "Section" "events").GroupByDate "2006" }}
-  {{ if le .Key (now.Format "2006") }}
-  <h3>{{ .Key }}</h3>
-  <table>
+<table>
     <thead>
     <tr>
     <th>Event</th>
@@ -19,10 +9,11 @@
     </tr>
     </thead>
     <tbody>
-      {{ range sort .Pages ".Date" }}
-        {{ if lt (time .Date).Unix now.Unix }}
+      {{ $taxo := "author" }}
+      {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
+      {{ if ge (time .Date).Unix now.Unix }}
       <tr>
-        <td>{{ with .Params.event_url }}<a href="{{ . | safeHTML }}">{{ end }}{{ .Title | markdownify }}</a></td>
+        <td><a href="{{ .Params.event_url | safeHTML }}">{{ .Title | markdownify }}</a></td>
         <td>{{ partial "pretty_date_ranges" . }}</td>
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>{{ with .Params.location }}{{ . | markdownify }}{{ end }}</td>
@@ -35,15 +26,7 @@
             {{ end }}
         </td>
       </tr>
-      {{ end }}
+        {{ end }}
       {{ end }}
     </tbody>
   </table>
-  <br><br>
-  {{ end }}
-  {{ end }}
-
-  </center>
-</div> <!-- band -->
-
-{{ end }}
