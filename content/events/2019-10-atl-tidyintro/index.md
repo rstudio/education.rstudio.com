@@ -5,7 +5,7 @@ date_end: "2019-10-15"
 publishDate: "2019-09-21"
 announce: false
 description: >
-  An introduction to R for data science.
+  This one-day course (offered twice) will teach you a workflow for doing data science with R using the tidyverse set of packages. This workshop is open to anyone &mdash; a full day of learning is only $20.
 event_url: "https://web.cvent.com/event/d99160b2-4b34-4513-a001-58e0e93e13e2/summary"
 location: "Atlanta, GA"
 educators:
