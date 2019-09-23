@@ -11,6 +11,9 @@ location: "Atlanta, GA"
 educators:
   - Hadley
   - Jenny
+photo:
+  url: https://unsplash.com/photos/J-ClkL7wNUs
+  author: Kyle Sudu
 ---
 
 If you have experience programming in R and want to learn how to tackle larger scale problems, this workshop is for you. You'll get the most from it if you're already familiar with functions and are comfortable with R's basic data structures (vectors, matrices, arrays, lists, and data frames), and you will:

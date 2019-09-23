@@ -10,6 +10,9 @@ event_url: "https://web.cvent.com/event/d99160b2-4b34-4513-a001-58e0e93e13e2/sum
 location: "Atlanta, GA"
 educators:
   - Carl
+photo:
+  url: https://unsplash.com/photos/J-ClkL7wNUs
+  author: Kyle Sudu
 ---
 
 Looking for an effective way to learn R? This one-day course will teach you a workflow for doing data science with the R language. It focuses on using R's Tidyverse, which is a core set of R packages that are known for their impressive performance and ease of use. We will focus on doing data science, not programming. Your instructors will include:
