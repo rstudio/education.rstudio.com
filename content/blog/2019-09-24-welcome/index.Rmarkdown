@@ -21,7 +21,7 @@ RStudio's mission is:
 
 > "To equip everyone, regardless of means, to participate in a global economy that rewards data literacy."
 
-Our education team supports this mission broadly by supporting learners and teachers. This site is designed for both!
+Our education team supports this mission broadly by supporting people who want to learn R, and those who want to teach them. This site is designed for both!
 
 # What is on this site?
 
@@ -87,4 +87,4 @@ The site is made with [blogdown](https://bookdown.org/yihui/blogdown/) and the s
 
 # Thank you
 
-In addition to the beautiful art, this site was built with `r emo::ji("sparkles")` CSS magic `r emo::ji("sparkles")` contributed by Robby Shaver, Greg Swinehart, and Desirée De Leon. And special thanks to all the members of the [RStudio education team](/author), including our summer interns, who have contributed all the content here so far, and much more to come. 
+In addition to the beautiful art, this site was built with `r emo::ji("sparkles")` CSS magic `r emo::ji("sparkles")` contributed by Robby Shaver, Greg Swinehart, and Desirée De Leon. Special thanks also to all the members of the [RStudio education team](/author), including our summer interns, who have contributed all the content here so far, and much more to come. And huge thanks to the [#rstats community](https://twitter.com/hashtag/rstats) for being welcoming, supportive, and inclusive to all learners.
