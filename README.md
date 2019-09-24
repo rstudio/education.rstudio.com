@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/32c49824-eb3b-407a-9f76-1aeab95922e6/deploy-status)](https://app.netlify.com/sites/rstudio-education/deploys)
+
 # education.rstudio.com
 
 This repo is the source of <https://education.rstudio.com>, and this readme tells you 
@@ -16,25 +18,25 @@ This repo (and resulting website) is licensed as [CC BY-SA](license.md).
 
 ## Structure
 
-The source of the website is a collection of `.md` and `.Rmd` files stored in 
+The source of the website is a collection of `.md`, `.Rmd`, and `.Rmarkdown` files stored in 
 [`content/`](content/), which are rendered for the site with 
 [blogdown](https://bookdown.org/yihui/blogdown). 
 
-* `content/*.md`: these files generate the top-level pages on the site:
-  packages, learn, help, and contribute. 
+* `content/learn`: these files generate the [learn](https://education.rstudio.com/learn/) section of the site. The file `_index.md` governs the landing page for that section. The subfolders populate the subpages: [beginner](https://education.rstudio.com/learn/beginner), [intermediate](https://education.rstudio.com/learn/intermediate), and [expert](https://education.rstudio.com/learn/expert/). The main text for each of those subpages is located in the file named `index.Rmd`. If you update any text in these `.Rmd` files, it is important to run `blogdown::serve_site()` before committing your changes so that the corresponding `index.html` file gets updated.
+
+* `content/teach`: these files generate the [teach](https://education.rstudio.com/teach/) section of the site. The file `_index.md` governs the landing page for that section. The subfolders populate the subpages: [how-to-teach](https://education.rstudio.com/teach/how-to-teach), [materials](https://education.rstudio.com/teach/materials), and [tools](https://education.rstudio.com/teach/tools). The main text for each of those subpages is located in the file named `index.Rmd`. If you update any text in these `.Rmd` files, it is important to run `blogdown::serve_site()` before committing your changes so that the corresponding `index.html` file gets updated.
   
-* `content/articles/`: these files are for articles and blog posts. New blog entries
-  should be given name `year-month-slug.md`. Unfortunately this data isn't
-  actually used when generating the output file: you'll need to set up 
-  the yaml metadata. More on that below. Posts should be written as either `.Rmarkdown`, or `.md` files (in the event that you do not have any code in your post) 
+* `content/blog/`: these files are for blog posts. Posts should be written as either `.Rmarkdown`, or `.md` files (in the event that you do not have any code in your post). This will be done automatically for you when you use the __"New Post" blogdown add in__; pick the "blog" archetype from the drop-down menu. 
+
     + For `*.md` posts, no `*.html` file should be committed. If you generate one locally during development, delete it once it's no longer useful to you. Keep it out of this repo.
     
-    + For `*.Rmarkdown` posts, you should render the `.md` yourself before submitting the post using `blogdown::serve_site()`. This also provides a way for you to check that the post is rendering on the site the way you intended (see recommended workflow below).      
+    + For `*.Rmarkdown` posts, you should render the `.md` yourself before submitting the post using `blogdown::serve_site()`; no `*.html` file should be committed here either. This also provides a way for you to check that the post is rendering on the site the way you intended (see recommended workflow below).      
+    
     + If your post includes emoji, use the `.Rmarkdown` format, and incorporate emoji using the [emo](https://github.com/hadley/emo) package.  
 
-* `data/events.yaml`: this yaml file contains information about upcoming 
-  events. The site automatically filters out events that have happened,
-  sorts by date, and then shows at most two events.
+* `content/events`: these files are for events. These end up in the table of [upcoming](https://education.rstudio.com/events/) or [past events](https://education.rstudio.com/events/archive/). The two events that are closest in time to the last site update will appear in sticky notes in the sidebar of various pages on the site. Don't worry about removing old events- these are nice to have for us so please leave as is. If you want to add an event, use the __"New Post" blogdown add in__; change the subdirectory to "events" and pick the "events" archetype from the drop-down menu. You must set a  `publishDate` in the YAML, and I recommend to use the current date you are adding the event, as Hugo by default filters out any content with a `date` YAML key in the future.
+
+* `content/author`: these files are for individual team member bios. Each team member has their own folder- the name of the file is very important so please don't change without talking to the team first. If you want to edit your bio, edit the `_index.md` file in your folder. Again, the name of the file is very important here (do not change it to `index.md` for example!). No `*.html` file should be committed here.
 
 ## Previewing changes
 
@@ -56,11 +58,11 @@ blogdown::serve_site()
 
 This will open a preview of the site in your web browser, and it will 
 automatically update whenever you modify one of the input files. For `.Rmd`, 
-this will generate an `.html` file, which you should commit and push to GitHub.
+this will generate an `.html` file, which you should commit and push to GitHub. For `.Rmarkdown`, this will generate an `.md` file, which you should also commit and push to GitHub.
 
 #### Other methods of local preview
 
-You should really preview the site using `blogdown::serve_site()`. But if, accidentally or intentionally, you knit or preview the content using another method (e.g. click the **Preview** button in RStudio for `.[R]md`), make sure you don't commit an `.html` file from an **`.md`** file.
+You should really preview the site using `blogdown::serve_site()`. But if, accidentally or intentionally, you knit or preview the content using another method (e.g. click the **Preview** button in RStudio for `.[R]md`), make sure you don't commit an `.html` file from an **`.md`** file. Delete any of these files before serving site again.
 
 ### In PRs
 
