@@ -24,11 +24,13 @@
 
 
 {{- else -}}
+{{- $images := $.Resources.ByType "image" -}}
+{{- $featured := $images.GetMatch "*feature*" -}}
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://education.rstudio.com/blog/{{ .Params.slug }}-sq.jpg" >
+<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
 <meta property="description" content="{{ .Params.description }}">
 <meta property="og:description" content="{{ .Params.description }}">
 {{- end }}
