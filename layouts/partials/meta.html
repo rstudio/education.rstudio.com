@@ -24,13 +24,11 @@
 
 
 {{- else -}}
-{{- $images := $.Resources.ByType "image" -}}
-{{- $featured := $images.GetMatch "*feature*" -}}
+{{ template "_internal/twitter_cards.html" . }}
 <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
 <meta property="description" content="{{ .Params.description }}">
 <meta property="og:description" content="{{ .Params.description }}">
 {{- end }}
