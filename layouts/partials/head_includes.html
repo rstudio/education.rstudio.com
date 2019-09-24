@@ -32,8 +32,8 @@
 {{- partial "head_highlightjs" . -}}
 
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
-{{ if hasPrefix .URL "/articles" -}}
-<link rel="alternate" type="application/atom+xml" title="Blog" href="/articles/index.xml" />
+{{- if eq .Section "blog" -}}
+<link rel="alternate" type="application/atom+xml" title="Blog" href="/blog/index.xml" />
 {{- end }}
 
 {{ partial "head_custom" . }}
