@@ -9,8 +9,8 @@ twitter_image = "01.rstudio.flowers-sharing.jpg"
 #   (relative to /static/css)
 custom_css = ["edu.css", "edu-fonts.css"]
 
-# Define "news" as both articles and events
-mainSections = ["articles"]
+# Can include more than one content folder as a main section
+mainSections = ["blog"]
 
 # options for highlight.js (version, additional languages, and theme)
 highlightjsVersion = "9.11.0"

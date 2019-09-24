@@ -5,7 +5,7 @@ author:
 date: '2019-09-24'
 slug: welcome
 description: |
-  Welcome to the new RStudio Education website! We are working hard to make this site the place to go to start learning R or to learn something new in R.
+  Welcome to the new RStudio Education website! We are working hard to make this site the place to go for everyone who wants to learn or teach data science with R and RStudio.
 photo:
   url: https://github.com/dcossyleon/art
   author: Desirée De Leon
@@ -15,26 +15,25 @@ knitr::opts_chunk$set(fig.align='center')
 ```
 
 
-
-Hello and welcome to the RStudio Education website! We hope to make [education.rstudio.com](/) a community resource for individuals who want to [learn](/learn/) or [teach](/teach/) data science with R and RStudio. 
+Hello and welcome to the RStudio Education website! We hope to make [education.rstudio.com](/) a community resource for everyone who wants to [learn](/learn/) or [teach](/teach/) data science with R and RStudio.
 
 RStudio's mission is:
 
 > "To equip everyone, regardless of means, to participate in a global economy that rewards data literacy."
 
-RStudio's education team supports that mission with open-source educational materials that we believe will help train the next million R users around the world. 
+Our education team supports this mission broadly by supporting learners and teachers. This site is designed for both!
+
+# What is on this site?
+
+There are four main sections, which you'll always be able to find in the upper navigation bar:
 
 + [**Blog**.](/blog) This is the `r emo::ji("new")` RStudio Education Team's blog. Here, we'll post announcements for events, books, and other resources as they come up, as well as general R education-related content that we are excited about sharing.
 
-# What else is on this site?
++ [**Learn**.](/learn) Our advice for how learners can expand their knowledge about R and popular packages from RStudio like tidyverse and Shiny. You'll find three learning pathways to help you become productive in the minimum amount of time, based on your experience level: [beginner](/learn/beginner), [intermediate](/learn/intermediate), and [expert](/learn/expert). The content and links on these pages may change as new resources become available and grab our attention! So rest assured, this page will be kept up-to-date, but that also means that our recommendations might change too.
 
-We designed our site with three different kinds of users in mind:
++ [**Teach**.](/teach) Our team has trained a lot of learners to use R for data science. Drawing on that experience, we've broken down our collective advice and resources into three separable and learnable skills: how to [teach](/teach/how-to-teach) (in general), how to create [materials](/teach/materials) to teach R and data science, and how to [set up effective learning environments](/teach/tools) for teaching R and data science.
 
-+ [**For learners**.](/learn) Our advice for how learners can expand their knowledge about R and popular packages from RStudio like `tidyverse` and Shiny. You'll find three learning pathways that detail what to learn and where to start for [beginners](/learn/#beginner), [intermediates](/learn/#intermediate), and [experts](/learn/#expert). This page may change as new resources become available and grab our attention! So rest assured, this page will be kept up-to-date, but that also means that our recommendations might change too.
-
-+ [**For teachers**.](/teach) Use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
-
-+ [**Certify**.](https://rstd.io/trainers) This section will take you to an external site where you can find out about [RStudio's instructor training and certification program](https://rstd.io/trainers).
++ [**Certify**.](/trainers) In 2019, we launched an instructor training and certification program that aims to help people apply modern evidence-based teaching practices to teach data science using R and RStudio’s products, and to help people who need such training find the trainers they need. On this [page](/trainers), you can meet our Certified Trainers and find out more about the program and the application process.
 
 So, welcome &mdash; we are happy you found us!
 
@@ -48,7 +47,7 @@ knitr::include_graphics("welcome.jpg")
 # About the team
 
 
-Who are we? We are members of RStudio's Education team. We are a small team of data scientists and professional educators. Our team is fully remote, spanning from Scotland to Oregon state. Meet each of us [here](/author/).
+Who is the RStudio Education team? We are a small team of data scientists and professional educators. Our team is fully remote, spanning from Scotland to Oregon state. Meet each of us [here](/author/).
 
 Our team members attend and present at workshops around the world. You can find out who will be where by checking our [upcoming events calendar](/events/). If you'll be at the same event too, please come say hi and introduce yourself! Our team loves to talk about all things data science and education, and we'd love to meet you in person.
 
@@ -85,3 +84,7 @@ You can find a human-readable summary of the license [here](https://creativecomm
 # About the site
 
 The site is made with [blogdown](https://bookdown.org/yihui/blogdown/) and the source code is available on [GitHub](https://github.com/rstudio/education.rstudio.com). If you spot a typo or other error, please feel empowered to create an [issue](https://help.github.com/en/articles/creating-an-issue) or a [pull request](https://help.github.com/en/articles/about-pull-requests)!
+
+# Thank you
+
+In addition to the beautiful art, this site was built with `r emo::ji("sparkles")` CSS magic `r emo::ji("sparkles")` contributed by Robby Shaver, Greg Swinehart, and Desirée De Leon. And special thanks to all the members of the [RStudio education team](/author), including our summer interns, who have contributed all the content here so far, and much more to come. 

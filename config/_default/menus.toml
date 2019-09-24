@@ -2,8 +2,8 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-    name = "Latest"
-    url = "/news/"
+    name = "Blog"
+    url = "/blog/"
     weight = 1
 [[main]]
     name = "Learn"
