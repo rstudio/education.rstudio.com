@@ -1,8 +1,9 @@
 ---
 title: "Tools for teaching"
 subtitle: "How to set up effective learning environments for teaching R and data science."
+abstract: Set up for teaching and learning.
 description: >
-    _**How to set up effective learning environments for teaching R and data science.**_ Design a computing infrastructure and choose packages that can set you and your learners on the happy path.
+    Design a computing infrastructure and choose packages that can set you and your learners on the happy path.
 weight: 3
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: "Learn to teach"
 subtitle: "How to teach (in general)"
+abstract: How to teach.
 description: >
-    _**How to teach (in general).**_ Use evidence-based teaching practices to create and deliver educational content that works, based on what we know about how people learn.
+    Use evidence-based teaching practices to create and deliver educational content that works.
 weight: 1
 ---
 

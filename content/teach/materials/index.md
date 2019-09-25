@@ -1,8 +1,9 @@
 ---
 title: "Materials for teaching"
 subtitle: "How to create materials to teach R and data science."
+abstract: Create materials to teach R and data science.
 description: >
-    _**How to create materials to teach R and data science.**_ Browse our open educational resources to find teaching materials you are welcome to reuse and remix.
+    Browse our open educational resources to find teaching materials you are welcome to reuse and remix.
 weight: 2
 ---
 
