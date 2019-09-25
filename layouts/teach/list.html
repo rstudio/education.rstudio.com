@@ -7,7 +7,7 @@
       <div class="column75">
         <h1 class="article-title">{{ .Title | markdownify }}</h1>
         <p>
-        {{ $focal := (.Resources.ByType "image").GetMatch "*750.jpg" }}
+        {{ $focal := (.Resources.ByType "image").GetMatch "*feature*" }}
           {{ with $focal }}
             <img src="{{ .RelPermalink }}" class="focal"></i>
           {{ end }}
