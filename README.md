@@ -28,7 +28,7 @@ The source of the website is a collection of `.md`, `.Rmd`, and `.Rmarkdown` fil
   
 * `content/blog/`: these files are for blog posts. Posts should be written as either `.Rmarkdown`, or `.md` files (in the event that you do not have any code in your post). This will be done automatically for you when you use the __"New Post" blogdown add in__; pick the "blog" archetype from the drop-down menu. All blog posts are created as Hugo page bundles, which means that a new folder gets created in `blog/`, and you work on a file in that folder named `index.*`. 
 
-    + You may add any images for your post to the folder for your post bundle. Two very special images are required- one for the banner that goes across the top of your post that must be named `*-wd.jpg`. The other is for the thumbnail for your post on the blog listing page and it must be named `*-sq.jpg`. Hugo will find these images and put them where they need to be, if named correctly and placed inside your post bundle.
+    + You may add any images for your post to the folder for your post bundle. Two very special images are required- one for the banner that goes across the top of your post that must be named `*-wd.jpg`. The other is for the thumbnail for your post on the blog listing page and it have the word `thumbnail` in the file name (so `thumbnail-mtsalsa.jpg` for example). Hugo will find these images and put them where they need to be, if named correctly and placed inside your post bundle.
 
     + For `*.md` posts, no `*.html` file should be committed. If you generate one locally during development, delete it once it's no longer useful to you. Keep it out of this repo.
     
