@@ -8,7 +8,7 @@
   <meta name="og:image" content="{{ . }}" >
 {{- end -}}
 {{ .Hugo.Generator }}
-{{- if or .IsHome (eq .Section "author") (eq .Section "events") -}}
+{{- if or .IsHome (eq .Section "author") (eq .Section "events") (eq .Section "blog") -}}
 <title>{{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Site.Title }}">
 <meta property="og:type" content="website">
