@@ -8,7 +8,7 @@ However, after more than 25 years of development, the R ecosystem can seem overw
 
 Most journeys begin with a map. Here's ours:
 
-<img src="/images/keep-going-750.jpg" alt="map from start to keep going!" class="focal">
+<img src="feature-keep-going-750.jpg" alt="map from start to keep going!" class="focal">
 
 We have created three tracks to help learners navigate the R ecosystem. These tracks are not meant to be exhaustive, but instead are designed to help you become productive in the minimum amount of time, based on your experience level. 
 
