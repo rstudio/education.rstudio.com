@@ -1,5 +1,7 @@
 ---
 title: Teaching A New Generation of R Users
+description: >
+    Use our materials and evidence-based teaching practices to teach data science using R and RStudio's products.
 ---
 
 RStudio's mission is to equip everyone, regardless of means, to participate in a global economy that rewards data literacy. RStudio's education team supports that mission with open-source educational materials that we believe will help train the next million R users around the world. 
