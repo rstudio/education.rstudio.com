@@ -5,7 +5,8 @@ author:
 date: '2019-09-25'
 categories:
   - events
-  - partner
+  - teach
+  - certify
 tags:
   - instructor training
 slug: upcoming-instructor-training-events
