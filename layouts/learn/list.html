@@ -26,7 +26,7 @@
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
               </div>
               <div class="itemMeta">
-                <div class="itemDescription"><strong><em>{{ default .Params.abstract }}</strong></em>{{ default .Description | markdownify }}
+                <div class="itemDescription"><strong><em>{{ default .Params.abstract }}</strong></em>&nbsp;{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
                 </div>
               </div>
