@@ -8,7 +8,7 @@
   <meta name="og:image" content="{{ . }}" >
 {{- end -}}
 {{ .Hugo.Generator }}
-{{- if or .IsHome (eq .Section "learn") (eq .Section "teach") (eq .Section "partner") -}}
+{{- if or .IsHome (eq .Section "author") (eq .Section "events") -}}
 <title>{{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Site.Title }}">
 <meta property="og:type" content="website">
@@ -24,11 +24,6 @@
 
 
 {{- else -}}
+{{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
-<title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary">
-<meta property="description" content="{{ .Params.description }}">
-<meta property="og:description" content="{{ .Params.description }}">
 {{- end }}
