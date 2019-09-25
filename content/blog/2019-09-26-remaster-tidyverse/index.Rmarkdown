@@ -17,7 +17,7 @@ photo:
 
 I've been teaching people how to use the Tidyverse in a course called _Master the Tidyverse_, usually in one or two day long conference workshops. Each time I teach, I take notes during class and then polish my material afterwards, gradually honing a better and better set of class materials. The approach has worked well—I've gotten great reviews and have even won awards for my teaching. But my course was designed for R users who have never heard of the Tidyverse, and I can't find them anymore. Now I'm updating the material for modern R beginners; and as I go, I'm making the material accessible for _everyone_ to use. Looking for teaching material for an intro to R with the Tidyverse? Please help yourself!
 
-# The Content
+# The content
 
 [This github repository](https://github.com/rstudio-education/remaster-the-tidyverse/tree/master) contains editable class materials for two separate one day workshops:
 
@@ -41,6 +41,7 @@ I've developed an efficient way to deliver the course as a workshop that I encou
 
 1. When scheduling a venue, _ensure_ that the classroom has power strips for the students and wireless internet.
 1. About a week ahead of the class, email the students the [workshop set up instructions](https://github.com/rstudio-education/remaster-the-tidyverse/blob/master/Welcome-To-The-Tidyverse/install-instructions.md). These remind students to bring a laptop and a power cord, tell students how to download the free software that we will use in class, and ask students to create a free RStudio Cloud account. I do not tell students this unless they are having severe installation bugs, but _we won't use these local copies during the workshop_. They are only backups in case the classroom wireless network fails. I generally do not have students download slides, etc. ahead of time.
+
 1. Set up an [rstudio.cloud](https://rstudio.cloud/learn/guide) project for the students to use on the day of class. Pre-install all of the packages that students will use and upload all of the course materials to the project directory. Be sure to open and knit one of the student exercises to prompt RStudio Cloud to also install all of the packages related to kniting R Markdown documents (if necessary).
 1. Under the settings (gear) icon, click Access and then make the project viewable by everyone.
 1. Copy the project URL and paste it over the analagous URL in the 01-Introduction slide decks.
@@ -66,13 +67,13 @@ This may be controversial, but I've come to accept that I'm there to teach stude
 
 A small number of students will not be able to log on to the internet without help, but I've found that I or a TA can help these students during one of the many student exercise sections without delaying the whole class.
 
-# Other Tips
+# Other tips
 
 1. I usually play a [looping slide show](https://github.com/rstudio-education/remaster-the-tidyverse/blob/master/Welcome-To-The-Tidyverse/keynotes/00-Preclass-loop.key) before class. It can let students know they are in the right place, remind them to connect to the wireless, or do some useful pre-teaching. It's a bit like arriving early to the movies—but with fewer trivia questions.
 1. Don't neglect the beginning warm up activity where students talk to each other. A lively discussion at the start of the day will set the tone for the rest of the day. I notice that students are much more engaged, much more talkative, and ask more questions if I begin the day with some sort of free-for-all. In short, it makes class more fun to teach. If you find yourself starting the second day in the middle of an unfinished unit, be sure to insert a warm up meet and re-greet discussion at the start of class—or don't and see what I'm talking about.
 1. The timers end with a beep. If it is audible, it will help you regain student attention at the end of an exercise, especially if the exercise involves discussion.
 1. Slides are cheap, so I use a lot of them. Don't feel like you should dwell on each slide—there's no time for that.
-1. Use the Tower of Babel picture in the intro to point out that there are multiple ways to do many things in R—and that's OK. The ones you are teaching happen to work well together as a system because they share a common syntax and intuition. Learning one will help students learn the rest. When a student inevitably asks why not do X another way, don't argue. If the student feels confident doing X the other way, then he or she should; but for today the student should try the new way. He or she might like it, but it is OK if they do not.
+1. Use the Tower of Babel picture in the intro to point out that there are multiple ways to do many things in R &mdash; and that's OK. The ones you are teaching happen to work well together as a system because they share a common syntax and intuition. Learning one will help students learn the rest. When a student inevitably asks why not do X another way, don't argue. If the student feels confident doing X the other way, then he or she should; but for today the student should try the new way. He or she might like it, but it is OK if they do not.
 1. Have fun!
 
 
