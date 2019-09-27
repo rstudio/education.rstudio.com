@@ -1,8 +1,9 @@
 ---
 title: Experts
 subtitle: Go deep
+abstract: Go deep.
 description: >
-    _**Go deep.**_ Learning some topics in depth will both help you develop better code and share it more effectively with others.
+    Learning some topics in depth will both help you develop better code and share it more effectively with others.
 weight: 3
 bibliography: [../books.bib, packages.bib] 
 link-citations: true
@@ -17,7 +18,7 @@ knitr::write_bib(c("tensorflow", "reticulate", "pkgdown", "bookdown", "distill",
 
 Even once you are an expert at R code development, learning some topics in depth will both help you develop better code and share it more effectively with others.
 
-- __Dive into the foundations of R.__ Most R users are not programmers, and therefore much of their R code is not as readable, fast, or efficient as it could be. Hadley Wickham's book, *Advanced R* [-@wickham2014advanced] (available for [free online](https://adv-r.hadley.nz/) and as [an O'Reilly paperback from Amazon](http://amzn.com/1466586966?tag=devtools-20)), unlocks many of the secrets behind how R works the way it does, and gives you new strategies for solving diverse problems.
+- __Dive into the foundations of R.__ Most R users are not programmers, and therefore much of their R code is not as readable, fast, or efficient as it could be. The second edition of Hadley Wickham's book, *Advanced R* [-@wickham2019advanced] (available for [free online](https://adv-r.hadley.nz/) and as [an O'Reilly paperback from Amazon](https://www.amazon.com/dp/0815384572/ref=cm_sw_r_tw_dp_U_x_aJ-IDb98S6FE7)), unlocks many of the secrets behind how R works the way it does, and gives you new strategies for solving diverse problems. You may also want to bookmark [_Advanced R Solutions_](https://advanced-r-solutions.rbind.io/), which provides worked solutions to the exercises in this book.
 
 - __Learn how to extend R.__ While its content sometime overlaps with Hadley's *Advanced R*, the R Core Team offers *Writing R Extensions* ([electronic version](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)) on CRAN. This book is particularly useful if you wish to add your own C and C++ routines to R, but also has unique information on debugging, the R API, and runtime profiling that is difficult to find anywhere else.
 

@@ -7,7 +7,7 @@
       <div class="column75">
         <h1 class="article-title">{{ .Title | markdownify }}</h1>
         <p>
-        {{ $focal := (.Resources.ByType "image").GetMatch "*750.jpg" }}
+        {{ $focal := (.Resources.ByType "image").GetMatch "forest-750.jpg" }}
           {{ with $focal }}
             <img src="{{ .RelPermalink }}" class="focal"></i>
           {{ end }}
@@ -26,7 +26,7 @@
                 <div class="itemTitle"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
               </div>
               <div class="itemMeta">
-                <div class="itemDescription">{{ default .Description | markdownify }}
+                <div class="itemDescription"><strong><em>{{ default .Params.abstract }}</strong></em>&nbsp;{{ default .Description | markdownify }}
                   <a class="readMore" href="{{ .RelPermalink }}">Read more ...</a>
                 </div>
               </div>

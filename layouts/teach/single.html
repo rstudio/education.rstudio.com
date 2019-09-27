@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 {{ $page := . }}
-{{ $banner := ($page.Resources.ByType "image").GetMatch "*wd.jpg*" }}
 {{ $nextpage := $page.PrevInSection }}
 
 
@@ -12,18 +11,7 @@
 
       <h1 class="article-title">{{ .Title }}</h1>
 
-      {{ $slug := .Param "slug" }}
-      <div class="article-header">
-        {{ with $banner }}<div class="photo" style="background-image: url('{{ .RelPermalink }}');">{{ end }}</div>
-        {{ with $.Params.photo }}<div class="photoCredit">Photo by <a href="{{ .url }}">{{ .author }}</a></div>
-      </div>
-      {{ end }}
-
-      {{ if eq .Section "articles" }}
-      <span class="article-date"><i class="fas fa-calendar-day"></i>&nbsp;&nbsp;{{ .Date.Format "2006/01/02" }}</span>
-      {{ end }}
-
-      {{ $focal := (.Resources.ByType "image").GetMatch "*750.jpg" }}
+      {{ $focal := (.Resources.ByType "image").GetMatch "*feature*" }}
           {{ with $focal }}
             <img src="{{ .RelPermalink }}" class="focal"></i>
       {{ end }}
@@ -35,9 +23,8 @@
       <p><i class="fas fa-hand-point-right"></i>&nbsp;&nbsp;Take me to: <a href="{{ .PrevInSection.Permalink }}">{{ lower .PrevInSection.Title }}</a>.</p>
       {{end}}
       {{if not .PrevInSection }}
-        {{ with .Site.GetPage "section" "articles" }}
-        <p><a href="{{ .Permalink }}">
-            <i class="fas fa-hiking"></i>&nbsp;&nbsp;Where to next? Try reading our latest...</a>
+        {{ with .Site.GetPage "section" "blog" }}
+        <p><i class="fas fa-hiking"></i>&nbsp;&nbsp;Where to next? Catch us on our <a href="{{ .Permalink }}">blog...</a>
         </p>
         {{ end }}
       {{end}}

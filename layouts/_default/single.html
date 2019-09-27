@@ -17,12 +17,12 @@
       </div>
       {{ end }}
 
-      {{ if eq .Section "articles" }}
+      {{ if eq .Section "blog" }}
       <span class="article-date"><i class="fas fa-calendar-day fa-fw"></i>&nbsp;{{ .Date.Format "2006/01/02" }}</span>
       {{ end }}
 
       {{ $show_authors := $.Site.Params.authors.show_single | default true }}
-      {{ if and ($show_authors) (eq .Section "articles") }}
+      {{ if and ($show_authors) (eq .Section "blog") }}
         <p>
         <i class="fas fa-user-circle fa-fw"></i>
         {{ partial "pretty_author_names" . }}
