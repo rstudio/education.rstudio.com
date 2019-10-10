@@ -1,21 +1,25 @@
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
         <div id="rStudioFooter" class="band">
           <div class="bandContent">
-            <div id="copyright">
+            <footer class="white-60 pv5 pv1-l ph4">
+              <p class="f5">
+                <a class="link white-60 hover-white pr3" href="/events">Events</a> |
+                <a class="link white-60 hover-white ph3" href="/author">Team</a> |
+                <a class="link white-60 hover-white ph3" href="https://community.rstudio.com/c/teaching">Community</a> |
+                <a class="link white-60 hover-white ph3" href="{{ .Param "footer.github_url" }}">GitHub</a>
+              </p>
+
+              <div id="copyright">
+                <span class="dib mr4 mr5-ns">
               {{ if .Param "footer.copyright" }}
               {{ with .Param "footer.copyright" }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}<br>
               {{ end }}
               {{ if .Param "footer.support" }}
               {{ with .Param "footer.support" }}{{ replace . "{year}" now.Year | markdownify}}{{ end }} <a class="rstudioLogo" href="https://www.rstudio.com/"></a>
               {{ end }}
-            </div>
-            <div id="logos">
-              <a href="/events" class="footerLogo calendar"></a>
-              <a href="/author" class="footerLogo team"></a>
-              <a href="{{ .Param "footer.github_url" }}" class="footerLogo gitHub"></a>
-              <a href="https://community.rstudio.com/c/teaching" class="footerLogo community"></a>
-            </div>
-          </div>
-        </div>
+                </span>
+              </div>
+</footer>
 
       </div>  <!-- main -->
     </div>  <!-- app -->
