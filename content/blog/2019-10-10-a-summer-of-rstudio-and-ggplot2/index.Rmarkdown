@@ -18,7 +18,15 @@ knitr::opts_chunk$set(fig.path = "figs/")
 > This post was written by [Dewey Dunnington](https://fishandwhistle.net/) about his work during his 2019 RStudio internship. Dewey's original post was published on his [blog](https://fishandwhistle.net/post/2019/a-summer-of-rstudio-and-ggplot2/) and is published here with some minor edits with Dewey's consent, as part of our series highlighting the work of RStudio's summer interns.
 
 
-This past summer, [I](https://fishandwhistle.net/) had the incredible opportunity to spend the summer as an [RStudio](https://rstudio.com/) intern working with [Hadley Wickham](http://hadley.nz) on the [ggplot2](https://ggplot2.tidyverse.org/) package. It was a welcome change of pace from writing [articles](https://fishandwhistle.net/project/geoscience/) about mud in lakes, and I'm sad the internship is coming to a close. I had the opportunity to work alongside [a lot of great interns](https://blog.rstudio.com/2019/03/25/summer-interns-2019/) at a [fantastic company](https://rstudio.com/), prepare [tons of issues for tidy-dev-day at UseR!](https://github.com/tidyverse/ggplot2/issues?page=1&q=is%3Aissue+label%3A%22tidy-dev-day+%3Anerd_face%3A%22&utf8=%E2%9C%93), and develop a few humble new features for ggplot2! Here are a few of them:
+This past summer, [I](https://fishandwhistle.net/) had the incredible opportunity to spend the summer as an [RStudio](https://rstudio.com/) intern working with [Hadley Wickham](http://hadley.nz) on the [ggplot2](https://ggplot2.tidyverse.org/) package. It was a welcome change of pace from writing [articles](https://fishandwhistle.net/project/geoscience/) about mud in lakes, and I'm sad the internship is coming to a close. 
+
+```{r echo=FALSE, fig.cap="RStudio summer interns at the Boston office", out.width="50%", fig.align="center"}
+knitr::include_graphics("https://user-images.githubusercontent.com/10995762/66663010-4313f200-ec20-11e9-9cda-5d96b9c5301f.jpg")
+```
+
+
+I had the opportunity to work alongside [a lot of great interns](https://blog.rstudio.com/2019/03/25/summer-interns-2019/) at a [fantastic company](https://rstudio.com/), prepare [tons of issues for tidy-dev-day at UseR!](https://github.com/tidyverse/ggplot2/issues?page=1&q=is%3Aissue+label%3A%22tidy-dev-day+%3Anerd_face%3A%22&utf8=%E2%9C%93), become an [RStudio-certified tidyverse trainer](https://fishandwhistle.net/project/training/), spiff up [my website](https://fishandwhistle.net/) considerably with [blogdown](https://bookdown.org/yihui/blogdown/), and of course develop a few humble new features for ggplot2! Here are a few of them:
+
 
 ```{r}
 library(ggplot2)
