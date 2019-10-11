@@ -11,6 +11,8 @@ photo:
   author: Karl Fredrickson
 ---
 
+> This post was written by [Maya Gans](https://maya.rbind.io/) about her 2019 RStudio internship. Maya also documented her project and progress at <https://maya.rbind.io/tidyblocks/>.
+
 It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript. I was recieving my Masters in Botany and found myself programstinating, a term I just made up for making plots and Shiny Apps from personal data instead of extracting DNA or writing my manuscript.
 
 But programming was only a byproduct of my Master's work and I began to realize if I wanted to identify as a programmer, I needed a more wholistic understanding beyond the packages and functions I needed only for my Masters work.
