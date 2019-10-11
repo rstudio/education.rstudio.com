@@ -6,6 +6,9 @@ slug: my-javascript-internship-at-rstudio
 categories: []
 tags: []
 description: |
+photo:
+  url: https://unsplash.com/photos/TYIzeCiZ_60
+  author: Karl Fredrickson
 ---
 
 It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript. I was recieving my Masters in Botany and found myself programstinating, a term I just made up for making plots and Shiny Apps from personal data instead of extracting DNA or writing my manuscript.
