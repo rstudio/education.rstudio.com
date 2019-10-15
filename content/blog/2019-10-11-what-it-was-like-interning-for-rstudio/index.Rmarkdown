@@ -1,6 +1,6 @@
 ---
 title: What it Was Like Interning for RStudio
-author: Yim Register
+author: [Yim Register]
 date: '2019-10-11'
 slug: what-it-was-like-interning-for-rstudio
 categories: []
