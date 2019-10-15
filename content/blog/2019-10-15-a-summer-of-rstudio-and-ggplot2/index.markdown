@@ -17,7 +17,7 @@ description: |
 > This post was written by [Dewey Dunnington](https://fishandwhistle.net/) about his work during his 2019 RStudio internship. Dewey's original post was published on his [blog](https://fishandwhistle.net/post/2019/a-summer-of-rstudio-and-ggplot2/) and is published here with some minor edits with Dewey's consent, as part of our series highlighting the work of RStudio's summer interns.
 
 
-This past summer, [I](https://fishandwhistle.net/) had the incredible opportunity to spend the summer as an [RStudio](https://rstudio.com/) intern working with [Hadley Wickham](http://hadley.nz) on the [ggplot2](https://ggplot2.tidyverse.org/) package. It was a welcome change of pace from writing [articles](https://fishandwhistle.net/project/geoscience/) about mud in lakes, and I'm sad the internship is coming to a close. 
+This past summer, [I](https://fishandwhistle.net/) had the incredible opportunity to spend the summer as an [RStudio](https://rstudio.com/) intern working with [Hadley Wickham](http://hadley.nz) on the [ggplot2](https://ggplot2.tidyverse.org/) package. It was a welcome change of pace from writing [articles](https://fishandwhistle.net/project/geoscience/) about mud in lakes, and I'm sad the internship is over. 
 
 <div class="figure" style="text-align: center">
 <img src="https://user-images.githubusercontent.com/10995762/66663010-4313f200-ec20-11e9-9cda-5d96b9c5301f.jpg" alt="RStudio summer interns and software engineers meet up at the Boston office" width="50%" />
