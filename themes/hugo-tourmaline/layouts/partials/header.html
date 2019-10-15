@@ -5,7 +5,7 @@
 {{ partial "head_includes.html" . }}
 
   <body>
-    <div id="appTidyverseSite" {{ if ne .URL "/" }}class="shrinkHeader alwaysShrinkHeader"{{ end }}>
+    <div id="appTidyverseSite" {{ if not .IsHome }}class="shrinkHeader alwaysShrinkHeader"{{ end }}>
       <div id="main">
         <!-- rstudio header -->
         <div id="rStudioHeader">
