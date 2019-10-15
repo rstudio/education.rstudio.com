@@ -1,7 +1,7 @@
 ---
 title: Learning R for Software Engineers
-draft: true
-author: Hadley Wickham
+draft: false
+author: [Hadley Wickham]
 date: '2019-10-01'
 slug: r-for-software-engineers
 categories:
