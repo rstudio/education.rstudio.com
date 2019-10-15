@@ -20,8 +20,8 @@ description: |
 This past summer, [I](https://fishandwhistle.net/) had the incredible opportunity to spend the summer as an [RStudio](https://rstudio.com/) intern working with [Hadley Wickham](http://hadley.nz) on the [ggplot2](https://ggplot2.tidyverse.org/) package. It was a welcome change of pace from writing [articles](https://fishandwhistle.net/project/geoscience/) about mud in lakes, and I'm sad the internship is coming to a close. 
 
 <div class="figure" style="text-align: center">
-<img src="https://user-images.githubusercontent.com/10995762/66663010-4313f200-ec20-11e9-9cda-5d96b9c5301f.jpg" alt="RStudio summer interns at the Boston office" width="50%" />
-<p class="caption">Figure 1: RStudio summer interns at the Boston office</p>
+<img src="https://user-images.githubusercontent.com/10995762/66663010-4313f200-ec20-11e9-9cda-5d96b9c5301f.jpg" alt="RStudio summer interns and software engineers meet up at the Boston office" width="50%" />
+<p class="caption">Figure 1: RStudio summer interns and software engineers meet up at the Boston office</p>
 </div>
 
 
