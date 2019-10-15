@@ -7,6 +7,8 @@ slug: a-summer-of-rstudio-and-ggplot2
 photo:
   url: https://unsplash.com/photos/AFp6M-Cj0Kk
   author: kazuend
+description: |
+  This past summer, I had the incredible opportunity to spend the summer as an RStudio intern working with Hadley Wickham on a few new features for the ggplot2 package.
 ---
 
 
