@@ -80,3 +80,5 @@ MathJaxVersion = "2.7.1"
     header_background = "#dfe3eb"
     table_row_even = "#f7faff"
     table_row_odd = "#fff"
+    # Author taxo- latest border
+    latest_border = "#dae8f6"
