@@ -1,6 +1,6 @@
 ---
 title: My JavaScript Internship at RStudio
-author: Maya Gans
+author: [Maya Gans]
 date: '2019-10-10'
 slug: my-javascript-internship-at-rstudio
 categories: []
