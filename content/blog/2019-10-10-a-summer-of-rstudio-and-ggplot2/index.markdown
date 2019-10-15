@@ -1,6 +1,6 @@
 ---
 title: A Summer of RStudio and ggplot2
-author: Dewey Dunnington
+author: [Dewey Dunnington]
 date: '2019-10-10'
 slug: a-summer-of-rstudio-and-ggplot2
 categories: []
