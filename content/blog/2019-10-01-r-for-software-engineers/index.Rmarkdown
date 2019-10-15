@@ -9,8 +9,8 @@ categories:
 description: |
   My recommended path to learning R, geared toward software engineers.
 photo:
-  url: https://unsplash.com/photos/ILzDwp0ZA9Y
-  author: Akhil TV
+  url: https://unsplash.com/photos/CH7JI7pwVcU
+  author: Mega Caesaria
 ---
 
 Work through the first few chapters of [_R for Data Science (R4DS)_](https://r4ds.had.co.nz/) to get a sense of what R
