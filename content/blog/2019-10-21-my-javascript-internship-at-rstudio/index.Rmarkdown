@@ -5,13 +5,13 @@ author:
 date: '2019-10-21'
 slug: my-javascript-internship-at-rstudio
 description: |
-  It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript.
+   This summer I built a blocks based coding language for data transformation and visualization. But interning for RStudio gave me so much more than a project. Here's what I learned.
 photo:
   url: https://unsplash.com/photos/TYIzeCiZ_60
   author: Karl Fredrickson
 ---
 
-> This post was written by [Maya Gans](https://maya.rbind.io/) about her 2019 RStudio internship. Maya also documented her project and progress at <https://maya.rbind.io/tidyblocks/>.
+> This post was written by [Maya Gans](https://maya.rbind.io/) about her 2019 RStudio internship where she built <https://tidyblocks.tech>. Maya also documented her project and progress at <https://maya.rbind.io/tidyblocks/>.
 
 It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript. I was recieving my Masters in Botany and found myself programstinating, a term I just made up for making plots and Shiny Apps from personal data instead of extracting DNA or writing my manuscript.
 
