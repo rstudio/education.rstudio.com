@@ -1,7 +1,7 @@
 ---
 title: A Summer of RStudio and ggplot2
 author:
-  - Dewey Dunnington
+  - '[Dewey Dunnington](https://fishandwhistle.net/)'
 date: '2019-10-15'
 slug: a-summer-of-rstudio-and-ggplot2
 photo:
