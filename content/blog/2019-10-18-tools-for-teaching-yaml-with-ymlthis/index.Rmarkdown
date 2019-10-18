@@ -1,13 +1,14 @@
 ---
 title: Tools for Teaching YAML with ymlthis
-author: ["[Malcolm Barrett](https://malco.io)"]
-date: '2019-10-17'
-slug: tools-for-teaching-yaml-with-ymlthis
-description: |
-  I spent my summer internship at RStudio trying to reckon with the YAML problem: R Markdown is pretty easy to learn, but students often trip over YAML. Here are some tools to help with teaching this tricky subject. 
+author:
+  - '[Malcolm Barrett](https://malco.io)'
+date: '2019-10-18'
 categories:
   - teach
-tags: []
+slug: tools-for-teaching-yaml-with-ymlthis
+description: "I spent my summer internship at RStudio trying to reckon with the YAML
+  problem: R Markdown is pretty easy to learn, but students often trip over YAML.
+  Here are some tools to help with teaching this tricky subject. \n"
 photo:
   url: https://unsplash.com/photos/ZahNAl_Ic3o
   author: Austin Neill
