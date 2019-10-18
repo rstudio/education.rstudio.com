@@ -19,13 +19,13 @@ But programming was only a byproduct of my Master's work and I began to realize 
 
 ![](img1.png)
 
-Enter the [TidyBlocks](tidyblocks.tech) project. I remember in my interview telling Greg Wilson my primary goal for the summer: to know more about JavaScript. When applying, I felt comfortable with the JavaScript version of the first chapter of any R programming book: arrays, lists, strings, and basic operations. I also had created some d3.js visualizations by Frankenstein-ing open source code snippets together. I was reading a lot about coding but hadn't written much. I certainly never started a project from nothing.
+Enter the [TidyBlocks](tidyblocks.tech) project. I remember in my interview telling [Greg Wilson](/author/greg) my primary goal for the summer: to know more about JavaScript. When applying, I felt comfortable with the JavaScript version of the first chapter of any R programming book: arrays, lists, strings, and basic operations. I also had created some d3.js visualizations by Frankenstein-ing open source code snippets together. I was reading a lot about coding but hadn't written much. I certainly never started a project from nothing.
 
 ![](img2.png)
 
-Starting a project in a language you don't know sounds daunting, but TidyBlocks hit the failure sweet spot. Failure is an inevitable part of learning new skills, but trying something too far beyond your current ability can be debilitating. The TidyBlocks project was built on Google's `blockly`, a JavaScript library for building programming editors. I wasn't starting with a completely blank console, I had code to try to understand, and eventually build on. 
+Starting a project in a language you don't know sounds daunting, but TidyBlocks hit the failure sweet spot. Failure is an inevitable part of learning new skills, but trying something too far beyond your current ability can be debilitating. The TidyBlocks project was built on [Google's `blockly`](https://developers.google.com/blockly), a JavaScript library for building programming editors. I wasn't starting with a completely blank console, I had code to try to understand, and eventually build on. 
 
-I spent my first month or so understanding the library, then eventually creating custom blocks to import, transform, and visualize data. I'd go to bed perplexed, and in the morning jump out of bed with a solution. Git allowed me to make code worse before it got better. Eventually I even stopped referring to Happy Git with R. I learned how to work in branches and review code. I no longer questioned my abilities, figuring things out became a matter of when.
+I spent my first month or so understanding the library, then eventually creating custom blocks to import, transform, and visualize data. I'd go to bed perplexed, and in the morning jump out of bed with a solution. Git allowed me to make code worse before it got better. Eventually I even stopped referring to [Happy Git with R](https://happygitwithr.com/). I learned how to work in branches and review code. I no longer questioned my abilities, figuring things out became a matter of when.
 
 ![](img3.png)
 
