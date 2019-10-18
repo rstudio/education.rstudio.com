@@ -1,19 +1,21 @@
 ---
 title: Tools for Teaching YAML with ymlthis
-author: [Malcolm Barrett]
+author: ["[Malcolm Barrett](https://malco.io)"]
 date: '2019-10-17'
 slug: tools-for-teaching-yaml-with-ymlthis
 description: |
-  I spent my summer internship at RStudio trying to reckon with YAML. 
+  I spent my summer internship at RStudio trying to reckon with the YAML problem: R Markdown is pretty easy to learn, but students often trip over YAML. Here are some tools to help with teaching this tricky subject. 
 categories:
   - teach
 tags: []
 photo:
-  url: https://unsplash.com/
-  author: Some photographer
+  url: https://unsplash.com/photos/ZahNAl_Ic3o
+  author: Austin Neill
 ---
 
 ```{r include=FALSE}
+# make sure `yml()` always shows my name, even if rendered on someone else's machine
+options(ymlthis.default_yml = "author: Malcolm Barrett") 
 knitr::opts_chunk$set(comment = "")
 ```
 
@@ -120,3 +122,5 @@ The ymlthis package is still early in its lifecycle, but it can already do a lot
 * [An Introduction to ymlthis](https://ymlthis.r-lib.org/articles/introduction-to-ymlthis.html)
 * [YAML: an Overview](https://ymlthis.r-lib.org/articles/yaml-overview.html)
 * [The YAML Fieldguide](https://ymlthis.r-lib.org/articles/yaml-fieldguide.html)
+
+

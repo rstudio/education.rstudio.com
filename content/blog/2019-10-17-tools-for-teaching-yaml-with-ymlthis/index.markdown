@@ -1,16 +1,16 @@
 ---
 title: Tools for Teaching YAML with ymlthis
-author: [Malcolm Barrett]
+author: ["[Malcolm Barrett](https://malco.io)"]
 date: '2019-10-17'
 slug: tools-for-teaching-yaml-with-ymlthis
 description: |
-  I spent my summer internship at RStudio trying to reckon with YAML. 
+  I spent my summer internship at RStudio trying to reckon with the YAML problem: R Markdown is pretty easy to learn, but students often trip over YAML. Here are some tools to help with teaching this tricky subject. 
 categories:
   - teach
 tags: []
 photo:
-  url: https://unsplash.com/
-  author: Some photographer
+  url: https://unsplash.com/photos/ZahNAl_Ic3o
+  author: Austin Neill
 ---
 
 
@@ -37,7 +37,7 @@ yml() %>%
 
 ```
 ---
-author: Alison
+author: Malcolm Barrett
 date: '`r format(Sys.Date())`'
 output:
   pdf_document: default
@@ -56,7 +56,7 @@ last_yml() %>% # use the most recent `yml` object
 
 ```yaml
 ---
-author: Alison
+author: Malcolm Barrett
 date: '`r format(Sys.Date())`'
 output:
   pdf_document: default
@@ -88,7 +88,7 @@ yml() %>%
 
 ```
 ---
-author: Alison
+author: Malcolm Barrett
 date: '`r format(Sys.Date())`'
 output:
   html_document:
@@ -105,7 +105,7 @@ draw_yml_tree() # draws the most recent YAML by default
 ```
 
 ```
-├── author: Alison
+├── author: Malcolm Barrett
 ├── date: '`r format(Sys.Date())`'
 └── output:
     └── html_document:
@@ -126,7 +126,7 @@ yml() %>%
 ```
 
 ```
-├── author: Alison
+├── author: Malcolm Barrett
 ├── date: '`r format(Sys.Date())`'
 └── output:
     ├── html_document:
@@ -176,3 +176,5 @@ The ymlthis package is still early in its lifecycle, but it can already do a lot
 * [An Introduction to ymlthis](https://ymlthis.r-lib.org/articles/introduction-to-ymlthis.html)
 * [YAML: an Overview](https://ymlthis.r-lib.org/articles/yaml-overview.html)
 * [The YAML Fieldguide](https://ymlthis.r-lib.org/articles/yaml-fieldguide.html)
+
+
