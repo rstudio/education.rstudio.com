@@ -1,12 +1,21 @@
 ---
 title: Tools for Teaching YAML with ymlthis
-author: Malcolm Barrett
+author: [Malcolm Barrett]
 date: '2019-10-17'
 slug: tools-for-teaching-yaml-with-ymlthis
+description: |
+  I spent my summer internship at RStudio trying to reckon with YAML. 
 categories:
   - teach
 tags: []
+photo:
+  url: https://unsplash.com/
+  author: Some photographer
 ---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = "")
+```
 
 R Markdown is one of the most powerful aspects of the R ecosystem, and it’s also surprisingly intuitive. Markdown itself has a simple syntax, and R Markdown handles so many of the tricky details of document creation that the basics will get you a long way. But there’s one area of R Markdown that consistently trips students up: YAML.
 
@@ -72,7 +81,7 @@ yml() %>%
 
 `html_document` and `pdf_document` are both nested under `output`, while the arguments for `html_document` are still connect to that function. This also explains why missing whitespace will often produce the wrong results: if we misspecify the whitespace, we misspecify the structure of the metadata. Let's say we write some YAML that looks like this, where both `toc` and `toc_float` have the wrong indentation:
 
-```{yaml}
+```yaml
 ---
 output:
     html_document:
@@ -83,7 +92,7 @@ toc_float: true
 
 This document won’t render correctly, because the YAML has this underlying structure:
 
-```{r}
+```{r echo=FALSE}
 "output:
     html_document:
     toc: true
