@@ -8,13 +8,13 @@ tags: []
 description: |
 ---
 
-It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript. I was recieving my Masters in Botany and found myself programstinating, a term I just made up for making plots and Shiny Apps from personal data instead of extracting DNA or writing my manuscript.
+It's funny to admit, but I applied for the RStudio internship because I wanted to learn JavaScript. I was receiving my Masters in Botany and found myself programstinating, a term I just made up for making plots and Shiny Apps from personal data instead of extracting DNA or writing my manuscript.
 
-But programming was only a byproduct of my Master's work and I began to realize if I wanted to identify as a programmer, I needed a more wholistic understanding beyond the packages and functions I needed only for my Masters work.
+But programming was only a byproduct of my Master's work and I began to realize if I wanted to identify as a programmer, I needed a more holistic understanding beyond the packages and functions I needed only for my Masters work.
 
 ![](img1.png)
 
-Enter the [TidyBlocks](tidyblocks.tech) project. I remember in my interview telling Greg Wilson my primary goal for the summer: to know more about JavaScript. When applying, I felt comfortable with the JavaScript version of the first chapter of any R programming book: arrays, lists, strings, and basic operations. I also had created some d3.js visualizations by frankenstein-ing open source code snippets together. I was reading a lot about coding but hadn't written much. I certainly never started a project from nothing.
+Enter the [TidyBlocks](tidyblocks.tech) project. I remember in my interview telling Greg Wilson my primary goal for the summer: to know more about JavaScript. When applying, I felt comfortable with the JavaScript version of the first chapter of any R programming book: arrays, lists, strings, and basic operations. I also had created some d3.js visualizations by Frankenstein-ing open source code snippets together. I was reading a lot about coding but hadn't written much. I certainly never started a project from nothing.
 
 ![](img2.png)
 
@@ -29,3 +29,7 @@ A little over halfway through the internship I had a working user interface and 
 A fresh repo with endless possibilities, the code was cleaned up and abstracted. Once functioning, the webpage was overhauled again to use the `react.js` framework, a popular tool for front end web developers.
 
 I could talk about the specifics of the tool I developed, but I think what's more important was that this internship gave me the space to learn tools and concepts I wanted to master by building something I am not only proud of, but know people can benefit from.
+
+Being a self taught programmer can be daunting, so interning for RStudio was the perfect mix of structured learning of core concepts mixed with creative freedom when executing the specifics. In fact, having a mentor who pushed me and believed in me gave me the confidence to apply (and land!) a job where I'll be writing custom JavaScript for Shiny Apps. And the mentorship at RStudio goes well beyond your assigned instructor. I was initially intimidated by the giants who create the packages I use almost daily, but everyone at RStudio is incredibly approachable and excited to chat over virtual coffee (or communicate on Slack solely through emojis and gifs). There's also workshops offered to interact with employees outside of your project -- I learned how to be a TidyVerse instructor with Greg Wilson, and created a [blogdown website with Alison Hill](maya.rbind.io) (which (1) I strongly attribute having a professional web presence to my employment and (2) Alison will forever be my mentor AKA #RMom). I also learned a TON from the other interns in the cohort, some of whom I'm sure I'll be friends with forever.
+
+I wanted to keep this post quantitative, but I'd be remiss if I didn't mention how profoundly this internship changed my life. Not only has this job empowered me to become a professional programmer, but it also gave me an insight into what an inclusive tech company looks like and what constitutes a healthy work life balance. I'm so grateful that I had the opportunity to learn from the people I hold so much respect for. I strongly believe anyone who is motivated and excited to learn would gain immensely from interning with RStudio. As much as I try to remain quantitative, what I've gained is immeasurable. 
