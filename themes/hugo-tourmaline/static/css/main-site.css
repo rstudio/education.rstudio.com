@@ -1321,3 +1321,12 @@ table, tbody, tfoot, thead, tr, th, td {
   max-height: 40px;
   width: auto;
 }
+
+/* Increase spacing around */
+.pr-1 {
+  padding-right: .25rem !important;
+}
+
+.pl-1 {
+  padding-left: .25rem !important;
+}
