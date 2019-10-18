@@ -94,10 +94,6 @@ details {
     text-decoration: none;
 }
 
-.latest {
-  border-top: .5em solid #dae8f6;
-}
-
 #rStudioFooter .bandContent #logos .footerLogo.calendar {
   background-image: url(images/fa-calendar-alt.svg);
 }
