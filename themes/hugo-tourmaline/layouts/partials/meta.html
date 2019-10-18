@@ -7,7 +7,7 @@
 {{- with $og_image -}}
   <meta name="og:image" content="{{ . }}" >
 {{- end -}}
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 
 {{- if .IsHome -}}
 <title>{{ .Site.Title }}</title>

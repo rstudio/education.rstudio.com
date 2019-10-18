@@ -9,6 +9,9 @@ twitter_image = "hex-tidyverse.png"
 #   (relative to /static/css and /static/js respectively)
 custom_css = [""]
 
+# Define base hex url for index page (where the stickers link out to)
+hex_base_url = ".tidyverse.org"
+
 # Define "news" as both articles and events
 mainSections = ["articles", "events"]
 
@@ -80,3 +83,5 @@ MathJaxVersion = "2.7.1"
     header_background = "#dfe3eb"
     table_row_even = "#f7faff"
     table_row_odd = "#fff"
+    # Author taxo- latest border
+    latest_border = "#dae8f6"
