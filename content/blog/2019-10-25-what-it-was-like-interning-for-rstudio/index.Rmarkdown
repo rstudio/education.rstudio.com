@@ -1,16 +1,13 @@
 ---
 title: What it Was Like Interning for RStudio
-author: [Yim Register]
-date: '2019-10-11'
+author:
+  - Yim Register
+date: '2019-10-25'
 slug: what-it-was-like-interning-for-rstudio
-categories: []
-tags: []
 photo:
   url: https://unsplash.com/photos/KLJX9HmdVbw
   author: Danika Perkinson
 ---
-
-*A longer form of this post originally appeared [here][original].*
 
 I spent the summer creating a series of lessons to teach statistics and data science to software engineers
 using software engineering data sources and academic research on software engineering practices.
@@ -22,7 +19,7 @@ you can check out a first draft of the project at [ds4se.tech][ds4se].
 ## The Interview
 
 Over the past few years I have developed a love for R.
-I even pleaded with my Quantitative Methods class to give R a chance,
+I even pleaded with my Quantitative Methods class to give it a chance,
 reminding them that *any* new language can be annoying.
 (It turns out R is, but now I have a more nuanced understanding of why.)
 So when I applied to RStudio it was in hope that I could combine my love of R with my PhD research in general machine learning literacy.
@@ -42,7 +39,7 @@ which gave me time to rapidly learn everything I could about software engineerin
 
 ## The Project
 
-Data Science for Software Engineers (DS4SE) is a series of hour-long RMarkdown lessons (and packaged data)
+"Data Science for Software Engineers" is a set of hour-long RMarkdown lessons (and packaged data)
 that students can use to learn statistics on software engineering problems.
 The problems include "how many repositories are on GitHub and how fast is it growing?"
 and "how bad will your code suffer if you're sleep deprived?",
@@ -51,7 +48,7 @@ to learn about data science and research findings
 using topics they care about.
 
 When the project was first pitched to me
-I had no idea why anyone cared about git repos or Agile development or test suites or whatever.
+I had no idea why anyone cared about Git repos or Agile development or test suites or whatever.
 What I *did* get was teaching statistics in a meaningful and gentle way,
 and when I told software engineers about the project their eyes lit up.
 
@@ -68,12 +65,12 @@ We were reading a paper that mentioned the use of "fuzzers"
 and I felt totally out of my element.
 (Fuzzing is just throwing random data at a program to try to break it
 and make sure you didn't miss any weird edge cases).
-Greg Wilson (my RStudio mentor) sent me lots of resources
+My RStudio mentor sent me lots of resources
 and my PhD advisor [Amy Ko][amy-ko] has a strong background in software engineering and computing education research.
 
 ## Skills
 
-The first day royally sucked,
+The first day sucked,
 in hindsight because I didn't properly advocate for myself.
 My mentor tasked me with the first lesson we wanted to make:
 How many repositories are there on Github?
@@ -111,12 +108,14 @@ Some of the things I picked up include:
 
 I'm back at PhD school now
 working on interventions for developing machine learning literacy using personal data.
-DS4SE still has a long way to go,
+The project has a long way to go,
 but I hope to return to it soon
 to evaluate some of its effectiveness and finish enough of it so that we can begin to circulate it.
 I'll be at [rstudio::conf 2020][conf] both as a volunteer
 (equipped with some gender, accessibility, and sensory guidelines for all)
 and with a quick lightning talk about the project—I hope to see you there.
+
+*A longer form of this post originally appeared [here][original].*
 
 [amy-ko]: https://faculty.washington.edu/ajko/
 [conf]: https://rstudio.com/conference/
