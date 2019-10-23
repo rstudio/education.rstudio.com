@@ -4,6 +4,8 @@ author:
   - Yim Register
 date: '2019-10-25'
 slug: what-it-was-like-interning-for-rstudio
+description: |
+   This summer I...
 photo:
   url: https://unsplash.com/photos/KLJX9HmdVbw
   author: Danika Perkinson
