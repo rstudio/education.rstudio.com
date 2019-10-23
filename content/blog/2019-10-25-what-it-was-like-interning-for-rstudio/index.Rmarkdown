@@ -5,7 +5,7 @@ author:
 date: '2019-10-25'
 slug: what-it-was-like-interning-for-rstudio
 description: |
-   This summer I...
+   I spent the summer creating lessons to teach data science to software engineers. Here's what I learned along the way.
 photo:
   url: https://unsplash.com/photos/KLJX9HmdVbw
   author: Danika Perkinson
