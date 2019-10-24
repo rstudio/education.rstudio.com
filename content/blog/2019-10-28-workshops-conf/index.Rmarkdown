@@ -10,8 +10,8 @@ slug: conf-workshops
 description: |
   blah blah blah
 photo:
-  url: https://unsplash.com/photos/TYIzeCiZ_60
-  author: Karl Fredrickson
+  url: https://unsplash.com/photos/f9TWR57Uujo
+  author: Pedro Lastra
 ---
 
 blah blah blah
