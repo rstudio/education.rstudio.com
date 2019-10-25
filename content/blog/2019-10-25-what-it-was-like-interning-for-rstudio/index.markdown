@@ -3,6 +3,7 @@ title: What it Was Like Interning for RStudio
 author:
   - Yim Register
 date: '2019-10-25'
+publishDate: '2019-10-25'
 slug: what-it-was-like-interning-for-rstudio
 description: |
    I spent the summer creating lessons to teach data science to software engineers. Here's what I learned along the way.
