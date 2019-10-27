@@ -21,6 +21,6 @@ Days, which will feature a whopping 19 2-day workshops!
 Below is a closer look at each of these workshops. We hope that this information 
 can help you decide which one to attend. It's a tough decision!
 
-<iframe src="https://minecr.shinyapps.io/conf-2020-workshops/?showcase=0" width="672" height="100%"></iframe>
+<iframe src="https://minecr.shinyapps.io/conf-2020-workshops/" width=850 height=750"></iframe>
 
 
