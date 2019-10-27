@@ -1,5 +1,5 @@
 ---
-title: Workshops at rstudio::conf(2020L)
+title: Workshops at rstudio::conf(2020)
 author:
   - mine
 date: '2019-10-28'
@@ -8,7 +8,7 @@ categories:
   - events
 slug: conf-workshops
 description: |
-  blah blah blah
+  A closer look at rstudio::conf(2020) workshops
 photo:
   url: https://unsplash.com/photos/f9TWR57Uujo
   author: Pedro Lastra
@@ -22,7 +22,7 @@ Below is a closer look at each of these workshops. We hope that this information
 can help you decide which one to attend. It's a tough decision!
 
 ```{r echo=FALSE}
-knitr::include_app("https://minecr.shinyapps.io/jsm2019-schedule/", height = "100%")
+knitr::include_app("https://minecr.shinyapps.io/conf-2020-workshops/", height = "100%")
 ```
 
 
