@@ -74,7 +74,11 @@ CSS has always been a neglected love of mine. Like a rubix cube that you can’t
 
 I used to be a very timid GitHubber. Working at RStudio, by necessity, ripped the band-aid off of most things Git. A couple weeks in, I was makin’ repos and filing issues like it was my job (and, technically, it was). Today, I am still not a Git guru, but I learned that most people aren’t and that it’s okay to learn things on the job. What’s more important is that I no longer have qualms about digging in others’ repos or creating pull requests-- and that’s the gift that keeps on giving when it comes to learning and growing as an R coder ;)
 
+<center>
+<div style="width: 700px;">
 [![](Tweet.jpg)](https://twitter.com/apreshill/status/1164015060919865344)
+</div>
+</center>
 
 ## What I really appreciated
 
