@@ -53,7 +53,7 @@ On day 1, Alison’s first assignment to me was to learn something new. R Markdo
 
 **I discovered that R packages are not just for functions.**
 
-R packages are as diverse as holiday present boxes, and it turns out you can put almost anything in them. Templates, data, interactive tutorials.
+R packages are as diverse as holiday present boxes, and it turns out you can put almost anything in them. [Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html), [data](https://usethis.r-lib.org/reference/use_data.html), [interactive tutorials](https://bookdown.org/yihui/rmarkdown/learnr.html).
 <img src="Learned.jpg" width="300px" style="display: block; margin: auto;" />
 
 
@@ -99,7 +99,7 @@ Apply! If you love R and you love building and making things, then give it a go.
 
 ## More to come
 
-I've always been interested in the combo of art, education, and tech-- so if you're interested in learning more about what I get up to, then check out [my website](http://desiree.rbind.io), follow me on [twitter](https://twitter.com/dcossyle), or come to rstudio conf where I'll be giving a talk on my and my colleague's R Markdown project about [teacup giraffes](https://tinystats.github.io/teacups-giraffes-and-statistics/)(to teach stats and R). 
+I've always been interested in the combo of art, education, and tech-- so if you're interested in learning more about what I get up to, then check out [my website](http://desiree.rbind.io), follow me on [twitter](https://twitter.com/dcossyle), or come to rstudio conf where I'll be giving a talk on my and my colleague's R Markdown project about [teacup giraffes](https://tinystats.github.io/teacups-giraffes-and-statistics/) (to teach stats and R). 
 
 <img src="more-bye.jpg" width="400px" style="display: block; margin: auto;" />
 
