@@ -95,7 +95,7 @@ I also appreciated how generous RStudio employees were to interns with their tim
 
 Apply! If you love R and you love building and making things, then give it a go. I was worried that my technical R coding skills or analytic chops would not be advanced enough to intern--and I almost let this discourage me from applying. If I’d let that get in the way, I would have never realized how much I wanted the type of work I did this summer to continue to be a part of my career path.
 
-<img src="Apply.jpg" width="600px" style="display: block; margin: auto;" />
+<img src="Apply.jpg" width="400px" style="display: block; margin: auto;" />
 
 ## More to come
 
