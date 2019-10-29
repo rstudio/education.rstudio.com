@@ -74,12 +74,7 @@ CSS has always been a neglected love of mine. Like a rubix cube that you can’t
 
 I used to be a very timid GitHubber. Working at RStudio, by necessity, ripped the band-aid off of most things Git. A couple weeks in, I was makin’ repos and filing issues like it was my job (and, technically, it was). Today, I am still not a Git guru, but I learned that most people aren’t and that it’s okay to learn things on the job. What’s more important is that I no longer have qualms about digging in others’ repos or creating pull requests-- and that’s the gift that keeps on giving when it comes to learning and growing as an R coder ;)
 
-<center>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">😂🤣 Guess when <a href="https://twitter.com/dcossyle?ref_src=twsrc%5Etfw">@dcossyle</a>&#39;s <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a> internship with me started?<a href="https://t.co/QZsuKCe1vh">https://t.co/QZsuKCe1vh</a> <a href="https://t.co/YiduU7afm6">pic.twitter.com/YiduU7afm6</a></p>&mdash; Alison Haunted Hill 🧟
-♀️🏚 (@apreshill) <a href="https://twitter.com/apreshill/status/1164015060919865344?ref_src=twsrc%5Etfw">August 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</center>
-
-
+[![](Tweet.jpg)](https://twitter.com/apreshill/status/1164015060919865344)
 
 ## What I really appreciated
 
