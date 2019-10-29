@@ -24,7 +24,7 @@ In this blog post I’ll share a run down of my experience. If you’re consider
 I worked on a project with [Alison Hill](/author/alison/) called “rstudio4edu”, a bookdown book for educators that bundled tutorials and practical advice about how to wrangle RStudio’s tools (e.g. R Markdown, packages, templates, etc.) to make life in the classroom (virtual or physical) easier.
 
 <img src="book.jpg" width="600px" style="display: block; margin: auto;" />
-I dove deep into the guts of different R Markdown collections and then wrote up cookbooks about how to customize each of these. The goal was to do this in a way that would make it *fun* for folks to read--especially for educators (or anyone, really) who might be comfortable in R but might not have a hardcore technical background that empowers them to sink their teeth into a seemingly grizzly piece of documentation.
+I dove deep into the guts of different R Markdown collections and then wrote up cookbooks about how to customize each of these. The goal was to do this in a way that would make it *fun* for folks to read--especially for educators (or anyone, really) who might be comfortable in R but might not have a hardcore technical background to want to sink their teeth into a seemingly grizzly piece of documentation.
 
 The book is chock-full of step-by-step guides, illustrations, concept maps, and first-rate metaphors. It pairs well with a rainy Saturday, a cozy pair of socks, and some motivation to get that course website done once and for all.
 
@@ -72,7 +72,7 @@ CSS has always been a neglected love of mine. Like a rubix cube that you can’t
 
 **I finally started to feel comfortable using GitHub.**
 
-I used to be a very timid GitHubber. Working at RStudio, by necessity, ripped the band-aid off of most things Git. A couple weeks in, I was makin’ repos and filing issues like it was my job (and, technically, it was). Today, I am still not a Git guru, but I learned that most people aren’t and that it’s okay to learn things on the job. What’s more important is that I no longer have qualms about digging in others’ repos or creating pull requests-- and that’s the gift that keeps on giving when it comes to learning and growing as an R coder ;)
+I used to be a very timid GitHubber. Working at RStudio, by necessity ripped the band-aid off of most things Git. A couple weeks in, I was makin’ repos and filing issues like it was my job (and, technically, it was). Today, I am still not a Git guru, but I learned that most people aren’t and that it’s okay to learn things on the job. What’s more important is that I no longer have qualms about digging in others’ repos or creating pull requests-- and that’s the gift that keeps on giving when it comes to learning and growing as an R coder ;)
 
 <center>
 <div style="width: 700px;">
@@ -82,7 +82,7 @@ I used to be a very timid GitHubber. Working at RStudio, by necessity, ripped th
 
 ## What I really appreciated
 
-The work I did at RStudio integrated all my skills--many of which I hadn’t been using in my PhD world. I got to be creative (making art!), code in R, build websites, and spend thinking about user experience and design. In a single summer, I developed a resource that will be eventually be read by an audience much larger than what my 5 years of PhD work will ever reach (oof, truth hurts). It was so nice to receive encouragement and support to develop skills that would be useful to me even long after my intern work was over (e.g., blogging, writing abstracts, and actually using twitter).  
+The work I did at RStudio integrated all my skills--many of which I hadn’t been using in my PhD world. I got to be creative (making art!), code in R, build websites, and spend thinking about user experience and design. In a single summer, I developed a resource that will eventually be read by an audience much larger than what my 5 years of PhD work will ever reach (oof, truth hurts). It was so nice to receive encouragement and support to develop skills that would be useful to me even long after my intern work was over (e.g., blogging, writing abstracts, and actually using twitter).  
 
 I also appreciated how generous RStudio employees were to interns with their time and skills: Carl Howe gave a mini-workshop on crafting exemplar elevator pitches, Greg Wilson offered up stellar instructor training, and Alison Hill led us through [Summer of Blogdown](https://summer-of-blogdown.netlify.com/), where each intern developed their own personal website.
 
@@ -98,7 +98,7 @@ Apply! If you love R and you love building and making things, then give it a go.
 
 ## More to come
 
-I've always been interested in the combo of art, education, and tech-- so if you're interested in learning more about what I get up to, then check out [my website](http://desiree.rbind.io), follow me on [twitter](https://twitter.com/dcossyle), or come to rstudio conf where I'll be giving a talk on my and my colleague's R Markdown project about [teacup giraffes](https://tinystats.github.io/teacups-giraffes-and-statistics/) (to teach stats and R). 
+I've always been interested in the combo of art, education, and tech-- so if you're interested in learning more about what I've gotten up to, then check out [my website](http://desiree.rbind.io), follow me on [twitter](https://twitter.com/dcossyle), or come to rstudio conf where I'll be giving a talk on my and my colleague's R Markdown project about [teacup giraffes](https://tinystats.github.io/teacups-giraffes-and-statistics/) (to teach stats and R). 
 
 <img src="more-bye.jpg" width="400px" style="display: block; margin: auto;" />
 
