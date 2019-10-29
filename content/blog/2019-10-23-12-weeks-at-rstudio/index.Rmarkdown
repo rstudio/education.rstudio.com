@@ -34,7 +34,7 @@ I dove deep into the guts of different R Markdown collections and then wrote up 
 
 The book is chock-full of step-by-step guides, illustrations, concept maps, and first-rate metaphors. It pairs well with a rainy Saturday, a cozy pair of socks, and some motivation to get that course website done once and for all.
 
-```{r, out.width="600px", fig.align = 'center', echo = FALSE}
+```{r, out.width="500px", fig.align = 'center', echo = FALSE}
 knitr::include_graphics("Cozy.jpg")
 ```
 (It’s still a work in progress, but I’m so excited for it to be shared with y’all soon.)

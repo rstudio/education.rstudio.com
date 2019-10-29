@@ -2,7 +2,7 @@
 title: 12 weeks at RStudio
 author:
   - '[Desirée De Leon](https://desiree.rbind.io/)'
-date: '2019-10-29'
+date: '2019-10-30'
 slug: twelve-weeks
 description: |
    This summer I interned for RStudio’s education team. It was a total departure from my routine as a PhD student, and the perfect brew of the things I enjoy: building stuff, drawing stuff, and teaching stuff.
@@ -28,7 +28,7 @@ I dove deep into the guts of different R Markdown collections and then wrote up 
 
 The book is chock-full of step-by-step guides, illustrations, concept maps, and first-rate metaphors. It pairs well with a rainy Saturday, a cozy pair of socks, and some motivation to get that course website done once and for all.
 
-<img src="Cozy.jpg" width="600px" style="display: block; margin: auto;" />
+<img src="Cozy.jpg" width="500px" style="display: block; margin: auto;" />
 (It’s still a work in progress, but I’m so excited for it to be shared with y’all soon.)
 
 
