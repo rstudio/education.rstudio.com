@@ -1,11 +1,12 @@
 {{ $pages := first 2 (where (where (where $.Site.RegularPages "Section" "events") "Type" "!=" "event-archive") "Date" "ge" now).ByDate }}
 {{ range $pages }}
 
-<div class="event">
+<div class="event{{ if .Params.sold_out }}-full{{ end }}">
   <div class="eventTitle"><a href="{{ .URL }}">{{ .Title }}</a></div>
   <div class="eventLocation">{{ with .Params.location }}{{ . | markdownify }}{{ end }}</div>
   <div class="eventDate">{{ partial "pretty_date_ranges" . }}</div>
-  <div class="eventDetails">{{ with .Params.description }}{{ . | markdownify }}{{ end }}</div>
+  <div class="eventDetails">{{ with .Params.description }}{{ . | markdownify }}
+  {{ if .Params.soldout }}Sorry, this event has filled up!{{ end }}{{ end }}</div>
 </div>
 
 {{ end }}
