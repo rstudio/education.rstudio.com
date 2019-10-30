@@ -4,6 +4,7 @@ date: "2019-12-12"
 date_end: "2019-12-13"
 publishDate: "2019-09-21"
 announce: false
+sold_out: true
 description: >
   This two-day workshop is a gentle introduction to machine learning and to the tidyverse packages that do machine learning. 
 event_url: "https://web.cvent.com/event/505ea09a-1342-4057-8a3a-64fcf331f23b/summary"
