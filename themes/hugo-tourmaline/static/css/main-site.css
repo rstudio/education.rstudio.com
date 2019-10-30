@@ -377,7 +377,7 @@ a {
       background-color: #f8f8f8; }
     #rStudioHeader #menu .menuItem.current {
       background-color: #75aadb;
-      color: #fff; 
+      color: #fff;
       text-decoration: none !important;
     }
     #rStudioHeader #menu .menuItem.gitHub {
@@ -925,7 +925,7 @@ p {
 ul, ol {
   line-height: 1.6em;
   padding-left: 2em;
-  margin-bottom: 0em; 
+  margin-bottom: 0em;
 }
 
 #TableOfContents ul {
@@ -1166,6 +1166,10 @@ em {
   .section .event .eventDetails {
     font-size: 13px;
     line-height: 18px; }
+
+.section .event .full {
+  border-top: 10px solid #E7553C;
+}
 
 .hexBadges {
   position: relative;
