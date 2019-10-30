@@ -9,6 +9,7 @@ description: |
 photo:
   url: https://unsplash.com/photos/z-lh7Mz7wFQ
   author: Cris DiNoto
+tags: [internship]
 ---
 
 
@@ -87,7 +88,7 @@ The work I did at RStudio integrated all my skills--many of which I hadn’t bee
 I also appreciated how generous RStudio employees were to interns with their time and skills: Carl Howe gave a mini-workshop on crafting exemplar elevator pitches, Greg Wilson offered up stellar instructor training, and Alison Hill led us through [Summer of Blogdown](https://summer-of-blogdown.netlify.com/), where each intern developed their own personal website.
 
 
-<img src="Skills.jpg" style="display: block; margin: auto;" />
+<img src="Skills.jpg" width="396" style="display: block; margin: auto;" />
 
 
 ## Advice for prospective interns

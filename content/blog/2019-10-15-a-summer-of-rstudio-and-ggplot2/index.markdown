@@ -9,6 +9,7 @@ photo:
   author: kazuend
 description: |
   This past summer, I had the incredible opportunity to spend the summer as an RStudio intern working with Hadley Wickham on a few new features for the ggplot2 package.
+tags: [internship]
 ---
 
 

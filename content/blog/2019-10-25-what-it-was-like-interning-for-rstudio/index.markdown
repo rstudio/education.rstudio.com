@@ -10,6 +10,7 @@ description: |
 photo:
   url: https://unsplash.com/photos/KLJX9HmdVbw
   author: Danika Perkinson
+tags: [internship]
 ---
 
 I spent the summer creating a series of lessons to teach statistics and data science to software engineers

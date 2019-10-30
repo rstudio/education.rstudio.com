@@ -9,6 +9,7 @@ description: |
 photo:
   url: https://unsplash.com/photos/TYIzeCiZ_60
   author: Karl Fredrickson
+tags: [internship]
 ---
 
 > This post was written by [Maya Gans](https://maya.rbind.io/) about her 2019 RStudio internship where she built <https://tidyblocks.tech>. Maya also documented her project and progress at <https://maya.rbind.io/tidyblocks/>.

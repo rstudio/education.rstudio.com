@@ -9,6 +9,7 @@ description: |
 photo:
   url: https://unsplash.com/photos/z-lh7Mz7wFQ
   author: Cris DiNoto
+tags: [internship]
 ---
 
 ```{r setup, include = FALSE}

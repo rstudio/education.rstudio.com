@@ -12,6 +12,7 @@ description: "I spent my summer internship at RStudio trying to reckon with the 
 photo:
   url: https://unsplash.com/photos/ZahNAl_Ic3o
   author: Austin Neill
+tags: [internship]
 ---
 
 ```{r include=FALSE}
