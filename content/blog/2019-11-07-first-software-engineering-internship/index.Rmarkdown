@@ -35,15 +35,18 @@ On the whole, my daily routine consisted of logging on around 7am, coding for 4 
 
 # What I Did
 
-The big wins for this summer were (1) building a new R package that reduced the size of modeling objects saved to disk, and (2) getting this package onto CRAN. (If this tool might be of any interest, please check out [this overview][model-butcher].) My key takeaway is that I wish I had learned package development earlier. It would have made so much of my research efforts (in grad school) more reproducible, easier to consume, and easier to extend. A lot of the scripts I wrote prior to this internship were single, long-form functions that I simply copy-and-pasted if there were any internal pieces I had to change. Had I developed my research scripts as a *package*, I would have to modularized my code in such a way that each subunit was designed to be *reusable* and *testable*, and thus much more *robust*.
+The big wins for this summer were (1) building a new R package ([butcher](butcher)) that reduced the size of modeling objects saved to disk, and (2) getting this package onto CRAN. (If this tool might be of any interest, please check out [this overview][model-butcher].) My key takeaway is that I wish I had learned package development earlier. It would have made so much of my research efforts (in grad school) more reproducible, easier to consume, and easier to extend. A lot of the scripts I wrote prior to this internship were single, long-form functions that I simply copy-and-pasted if there were any internal pieces I had to change. Had I developed my research scripts as a *package*, I would have to modularized my code in such a way that each subunit was designed to be *reusable* and *testable*, and thus much more *robust*.
 
 I cannot stress the importance of unit testing enough. There is some debate around what the optimal level of testing is relative to each line of code, but the general consensus I received (at least internally) was 80%. And for anyone that's never built a package before, or for anyone like me who still looks up everything up, check out Jenny Bryan's [whole game chapter][whole-game].
 
+<a href="https://tidymodels.github.io/butcher/"><img src="butcher.png" alt="Butcher Hex" width="150" style="padding: 0 15px; float: right;"/></a>
+
 It's possible to get a skeleton package up and running, with version control, under an hour. Other important milestones, prior to submitting to CRAN, were:
+
 
 - Setting up continuous integration
 - Styling and documenting my code
-- Creating an accompanying website with `pkgdown`
+- Creating an accompanying [website](butcher) with `pkgdown` (complete with a hex sticker by [Allison Horst](horst))
 
 Getting the package onto CRAN was incredibly straightforward: the package underwent 3 iterations before it was finally accepted, but the edits were legitimate and minimal. 
 
@@ -60,6 +63,8 @@ I've also learned to live outside my comfort zone. During my internship, I was g
 [summer-blogdown]: https://summer-of-blogdown.netlify.com/
 [schloerke]: http://schloerke.com/
 [model-butcher]: https://jcahoon.netlify.com/post/2019/08/08/model-butcher/
+[butcher]: https://tidymodels.github.io/butcher/
 [whole-game]: https://r-pkgs.org/whole-game.html
 [shiny]: https://mastering-shiny.org/
 [js4ds]: http://js4ds.org/
+[horst]: https://twitter.com/allison_horst
