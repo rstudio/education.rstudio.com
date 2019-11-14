@@ -15,9 +15,9 @@ tags: [internship]
 
 We are pleased to announce that RStudio's summer intern program will run for a third time in 2020. 10 people who are full-time students at accredited institutions of higher education will have the chance to work with an RStudio mentor full-time for 12 weeks starting in May 2020.
 
-The theme of this year's program is learning: six of the interns will create new online lessons (which will be freely available for all to use under a Creative Commons license), while two others will work on supporting tools. An additional two interns will be embedded with RStudio's Quality Assurance team to help extend and automate our testing processes. As in previous years, applicants must be US residents, but two of this year's places will be reserved specifically for undergraduates.
+The theme of this year's program is learning: six of the interns will create new online lessons (which will be freely available for all to use under a Creative Commons license), while two others will work on supporting tools. An additional two interns will be embedded with RStudio's Quality Assurance team to help extend and automate our testing processes. As in previous years, applicants must be US residents, and we hope to have a mix of both graduate and undergraduate students in 2020's cohort.
 
-We will start taking applications at the beginning of January 2020; the final date to apply will be January 17, and we hope to interview and make offers before the end of February. Please keep an eye on this blog for details—we look forward to hearing from you.
+We will start taking applications at the beginning of January 2020; the final date to apply will be January 17, and we hope to interview and make offers starting in February. Please keep an eye on this blog for details—we look forward to hearing from you.
 
 ## Lesson Developer
 
