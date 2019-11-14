@@ -8,8 +8,8 @@ slug: rstudio-internships-2020-preview
 description: |
   RStudio's internship program will run for the third time in 2020.
 photo:
-  url: https://unsplash.com/photos/Zdf3zn5XXtU
-  author: Sammie Vasquez
+  url: https://unsplash.com/photos/ovm_b91yEgY
+  author: Denny Luan
 tags: [internship]
 ---
 
