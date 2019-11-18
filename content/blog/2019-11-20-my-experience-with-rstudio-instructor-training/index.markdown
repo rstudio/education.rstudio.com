@@ -10,6 +10,9 @@ description: |
 photo:
   url: https://unsplash.com/photos/mngnzwHi0yo
   author: Charles Etoroma
+categories: 
+  - teach
+  - certify
 tags: ["instructor training"]
 ---
 
@@ -65,6 +68,6 @@ I thought the training was extremely useful, especially in terms of learning mor
 
 ## For More Info
 
-Please consult the [RStudio Trainer Website](https://education.rstudio.com/trainers/) for info on how to register for the instructor training.
+Please consult the [RStudio Trainer Website](/trainers/) for info on how to register for the instructor training.
 
 > Full Disclosure: my department paid for the training and two of the certification exams. I did the Shiny exam for free with the stipulation that I would provide feedback on the exam itself. This article was originally published [here](http://laderast.github.io/2019/11/15/my-experience-with-rstudio-instructor-training/).
