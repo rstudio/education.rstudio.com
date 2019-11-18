@@ -9,6 +9,15 @@ weight: 2
 
 RStudio offers several resources to make it easier for you to teach R, ranging from semester-long courses to more intense (but much shorter) workshops.
 
+<em>
+All of these materials can be reused and remixed freely under Creative Commons licenses.
+If you do so,
+please include a link to the original in your content saying,
+"Portions of this material are derived from RStudio's '[lesson title]'."
+Only one such link is needed:
+you do not need to link from or to specific slides and do not need to include our logo.
+</em>
+
 # Courses
 
 Most teachers enjoy developing their own instruction materials, but the need for exercises, homework, exams, slides, and other supporting materials make this a big job. Below are some open source materials developed at RStudio and elsewhere that you can freely adapt and use for your R teaching.

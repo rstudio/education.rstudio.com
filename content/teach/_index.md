@@ -16,14 +16,6 @@ Teaching R breaks down into three separable and learnable skills:
 
 The resources below will help you tackle each of these topics independently.
 
-<em>
-All of these materials can be reused and remixed freely under Creative Commons licenses.
-If you do so,
-please include a link to the original in your content saying,
-"Portions of this material are derived from RStudio's '[lesson title]'."
-Only one such link is needed:
-you do not need to link from or to specific slides and do not need to include our logo.
-</em>
 
 ## Explore our resources {#resources}
 
