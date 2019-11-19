@@ -1,16 +1,17 @@
 ---
 title: RStudio Internships 2020 Preview
 author:
-  - "[Greg Wilson](http://third-bit.com)"
-date: '2019-11-18'
-publishDate: '2019-11-18'
+  - '[Greg Wilson](http://third-bit.com)'
+date: '2019-11-21'
+tags:
+  - internship
+publishDate: '2019-11-21'
 slug: rstudio-internships-2020-preview
 description: |
   RStudio's internship program will run for the third time in 2020.
 photo:
   url: https://unsplash.com/photos/ovm_b91yEgY
   author: Denny Luan
-tags: [internship]
 ---
 
 We are pleased to announce that RStudio's summer intern program will run for a third time in 2020. 10 people who are full-time students at accredited institutions of higher education will have the chance to work with an RStudio mentor full-time for 12 weeks starting in May 2020.
