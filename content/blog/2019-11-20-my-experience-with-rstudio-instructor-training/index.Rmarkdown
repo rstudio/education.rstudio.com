@@ -2,8 +2,8 @@
 title: My Experience with RStudio Instructor Training
 author:
  - "[Ted Laderas](http://laderast.github.io/)"
-date: '2019-11-20'
-publishDate: '2019-11-20'
+date: '2019-11-19'
+publishDate: '2019-11-19'
 slug: my-experience-with-rstudio-instructor-training
 description: |
   I recently became a certified RStudio Instructor for both Shiny and the Tidyverse, and thought I would write a little about the experience.
