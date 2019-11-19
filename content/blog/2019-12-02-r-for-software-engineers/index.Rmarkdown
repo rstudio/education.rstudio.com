@@ -1,11 +1,12 @@
 ---
 title: Learning R for Software Engineers
-draft: false
-author: [Hadley Wickham]
-date: '2019-10-01'
-slug: r-for-software-engineers
+author:
+  - Hadley Wickham
+date: '2019-12-02'
 categories:
   - learn
+draft: no
+slug: r-for-software-engineers
 description: |
   My recommended path to learning R, geared toward software engineers.
 photo:
