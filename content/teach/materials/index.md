@@ -9,6 +9,15 @@ weight: 2
 
 RStudio offers several resources to make it easier for you to teach R, ranging from semester-long courses to more intense (but much shorter) workshops.
 
+<em>
+All of these materials can be reused and remixed freely under Creative Commons licenses.
+If you do so,
+please include a link to the original in your content saying,
+"Portions of this material are derived from RStudio's '[lesson title]'."
+Only one such link is needed:
+you do not need to link from or to specific slides and do not need to include our logo.
+</em>
+
 # Courses
 
 Most teachers enjoy developing their own instruction materials, but the need for exercises, homework, exams, slides, and other supporting materials make this a big job. Below are some open source materials developed at RStudio and elsewhere that you can freely adapt and use for your R teaching.
@@ -24,7 +33,7 @@ STAT 545 is a course in data wrangling, analysis, and exploration in R with RStu
 
 Many of you may have taken workshops from the RStudio team, but did you know that all of RStudio's workshop materials are available for you to use in your own workshops? Below are a few of the more popular workshop respositories proven popular with teachers:
   
-- [**Teach the Tidyverse.**](https://github.com/rstudio-education/master-the-tidyverse-instructors) [Master the Tidyverse](https://github.com/rstudio-education/master-the-tidyverse/) is an award-winning two-day introduction to doing data science with the [Tidyverse](https://www.tidyverse.org/). This repository contains instructor materials (Keynote and PowerPoint slides) for teaching this workshop.
+- [**Teach the Tidyverse.**](https://github.com/rstudio-education/remaster-the-tidyverse/blob/master/README.md) [Master the Tidyverse](https://github.com/rstudio-education/remaster-the-tidyverse/) is an award-winning two-day introduction to doing data science with the [Tidyverse](https://www.tidyverse.org/). This repository contains instructor materials (Keynote slides and exercises) for teaching this workshop. You can teach the workshop as is, adapt it to your needs, or divide it into two one day workshops: _Welcome to the Tidyverse_, which covers Exploratory Data Analysis, and _Data Wrangling with the Tidyverse_. See the README for teaching tips.
 
 - [**Teach Shiny.**](https://github.com/rstudio-education/teach-shiny) This workshop is designed for those who want to up their teaching Shiny game, and is particularly aimed at training partners who want to qualify as an RStudio Certified Shiny Instructor and at those who are R and Shiny advocates in their organizations.
 

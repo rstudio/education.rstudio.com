@@ -14,7 +14,8 @@ Teaching R breaks down into three separable and learnable skills:
 1. How to create materials to teach R and data science.
 1. How to set up effective learning environments for teaching R and data science. 
 
-The below resources will help you tackle each of these topics independently.
+The resources below will help you tackle each of these topics independently.
+
 
 ## Explore our resources {#resources}
 
