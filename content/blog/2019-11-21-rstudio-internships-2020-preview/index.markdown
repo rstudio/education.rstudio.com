@@ -2,7 +2,7 @@
 title: RStudio Internships 2020 Preview
 author:
   - '[Greg Wilson](http://third-bit.com)'
-date: '2019-11-21'
+date: '2019-11-25'
 tags:
   - internship
 publishDate: '2019-11-21'
