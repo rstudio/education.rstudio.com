@@ -1,16 +1,16 @@
 ---
 title: This Is Not Like the Others
 author:
- - "[Marly Gotti](https://www.marlycormar.com/)"
-date: '2019-11-28'
-publishDate: '2019-11-28'
+  - '[Marly Gotti](https://www.marlycormar.com/)'
+date: '2019-12-02'
+tags:
+  - internship
 slug: this-is-not-like-the-others
 description: |
   I spent my summer building a new modeling package for R. Here's what I did and what I learned.
 photo:
-  url: https://unsplash.com/photos/mngnzwHi0yo
-  author: Charles Etoroma
-tags: [internship]
+  url: https://unsplash.com/photos/aI3EBLvcyu4
+  author: Matt Nelson
 ---
 
 This summer I had the opportunity of working as an intern for RStudio.
