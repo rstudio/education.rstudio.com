@@ -2,10 +2,13 @@
 title: Ten Quick Tips for Making Your Stuff Findable
 author:
   - sarah
-date: '2019-12-04'
+date: '2019-12-08'
 slug: making-your-stuff-findable
 description: |
   Ten ways to ensure users can actually find your work product.
+photo:
+  url: https://unsplash.com/photos/6jA6eVsRJ6Q
+  author: wonderlane
 ---
 
 As RStudio’s resident Information Architect & Digital Librarian, I get asked a lot how to organize stuff with the goal of making content more findable.  Here are 10 suggestions to make your own work product (whatever it is) findable by yourself & others!
