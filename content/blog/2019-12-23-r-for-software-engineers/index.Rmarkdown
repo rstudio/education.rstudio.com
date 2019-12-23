@@ -2,7 +2,7 @@
 title: Learning R for Software Engineers
 author:
   - Hadley Wickham
-date: '2019-12-02'
+date: '2019-12-23'
 categories:
   - learn
 draft: no
