@@ -1,7 +1,11 @@
 ---
 title: RStudio Internships 2020 Preview
 author:
+<<<<<<< HEAD:content/blog/2019-11-21-rstudio-internships-2020-preview/index.markdown
   - '[Greg Wilson](http://third-bit.com)'
+=======
+  - Greg
+>>>>>>> master:content/blog/2019-11-25-rstudio-internships-2020-preview/index.markdown
 date: '2019-11-25'
 tags:
   - internship
