@@ -1,0 +1,56 @@
+---
+title: Learning R for Software Engineers
+author:
+  - Hadley Wickham
+date: '2019-12-23'
+categories:
+  - learn
+draft: no
+slug: r-for-software-engineers
+description: |
+  My recommended path to learning R, geared toward software engineers.
+photo:
+  url: https://unsplash.com/photos/CH7JI7pwVcU
+  author: Mega Caesaria
+---
+
+A couple of weeks ago, one of the Software Engineers at RStudio asked what I'd recommend for learning R, and the education team thought it might be useful to share more widely on this blog. This is my advice for quickly picking up R if you're already familiar with another programming language.
+
+---
+
+Work through the first few chapters of [_R for Data Science (R4DS)_](https://r4ds.had.co.nz/) to get a sense of what R
+and data analysis feels like:
+
+* [Data visualization](https://r4ds.had.co.nz/data-visualisation.html)
+* [Data transformation](https://r4ds.had.co.nz/transform.html)
+* [Exploratory data analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
+
+Attempt to ignore any feelings about how weird the language is and
+focus on getting a sense of the exploratory process of "playing" with
+data, rapidly asking, and then attempting to answer questions that you
+might have. To make sure you're prepared to work with your own data,
+skim the [vroom docs](https://vroom.r-lib.org), and learn about [tidy
+data](https://r4ds.had.co.nz/tidy-data.html) so you have a sense for
+how to organise your data most effectively (although you may want to
+use the new `pivot_()` function instead of `spread()` and `gather()`:
+<https://tidyr.tidyverse.org/articles/pivot.html>).
+
+By this point, your curiosity about R as a programming language has
+probably grown to an almost unmanageable level, so I'd recommend
+reading about [copy-on-modify](https://adv-r.hadley.nz/names-values.html) 
+and the [lazy evaluation](https://adv-r.hadley.nz/functions.html#lazy-evaluation)
+of function arguments. It's
+probably also worth familiarising yourself with the [basic data
+structures](https://adv-r.hadley.nz/vectors-chap.html) and the basics
+of [subsetting](https://adv-r.hadley.nz/subsetting.html), which are
+particularly important in R.
+
+I'd then pivot back to [_R4DS_](https://r4ds.had.co.nz/), and tactically read the chapters about
+the data types ([strings](https://r4ds.had.co.nz/strings.html), [factors](https://r4ds.had.co.nz/factors.html), [date-times](https://r4ds.had.co.nz/dates-and-times.html), etc.) that you're working
+with. 
+
+If you've mostly worked in object-oriented programming languages, I'd
+recommend reading the chapter on [functionals](https://adv-r.hadley.nz/functionals.html) in [_Advanced R_](https://adv-r.hadley.nz/); if you're
+already familiar with functional programming, just skim the [purrr docs](http://purrr.tidyverse.org/). R uses a style of OOP that's different to most other programming languages, so also read the [intro chaapter](https://adv-r.hadley.nz/oo.html) to get some sense of the differences.
+
+Hopefully, this now gives you a sense for how people use R and some of the things that make it different as a programming language.
