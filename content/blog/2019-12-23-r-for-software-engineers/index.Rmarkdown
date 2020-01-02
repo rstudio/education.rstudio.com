@@ -51,6 +51,6 @@ with.
 
 If you've mostly worked in object-oriented programming languages, I'd
 recommend reading the chapter on [functionals](https://adv-r.hadley.nz/functionals.html) in [_Advanced R_](https://adv-r.hadley.nz/); if you're
-already familiar with functional programming, just skim the [purrr docs](http://purrr.tidyverse.org/). R uses a style of OOP that's different to most other programming languages, so also read the [intro chaapter](https://adv-r.hadley.nz/oo.html) to get some sense of the differences.
+already familiar with functional programming, just skim the [purrr docs](http://purrr.tidyverse.org/). R uses a style of OOP that's different to most other programming languages, so also read the [intro chapter](https://adv-r.hadley.nz/oo.html) to get some sense of the differences.
 
 Hopefully, this now gives you a sense for how people use R and some of the things that make it different as a programming language.
