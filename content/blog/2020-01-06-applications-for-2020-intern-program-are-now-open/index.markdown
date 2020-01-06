@@ -1,7 +1,7 @@
 ---
 title: Applications for 2020 Intern Program are Now Open
 author:
-  - Greg Wilson
+  - greg
 date: '2020-01-06'
 publishDate: '2020-01-05'
 tags:
