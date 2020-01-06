@@ -3,8 +3,9 @@ title: Applications for 2020 Intern Program are Now Open
 author:
   - Greg Wilson
 date: '2020-01-06'
-categories:
-  - intern
+publishDate: '2020-01-05'
+tags:
+  - internship
 draft: yes
 slug: applications-for-2020-intern-program-are-now-open
 description: |
