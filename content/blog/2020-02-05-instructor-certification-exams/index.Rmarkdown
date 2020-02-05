@@ -2,7 +2,7 @@
 title: Instructor Certification Exams
 author:
   - Greg Wilson
-date: '2020-01-20'
+date: '2020-02-05'
 categories:
   - certify
 tags:
@@ -15,6 +15,9 @@ photo:
   url: https://unsplash.com/photos/K3uOmmlQmOo
   author: Angelina Litvin
 ---
+```{r include = FALSE}
+knitr::opts_chunk$set(fig.path = "figs/")
+```
 
 Since RStudio's [instructor training program](https://education.rstudio.com/trainers/) launched last year, more than 65 people have completed the exams needed to become certified. We hope these sample exams will give prospective trainers an idea of what we're looking for; as always, we would be grateful for feedback from the community.
 
@@ -104,6 +107,7 @@ Watch the video embedded below and list feedback you would give the presenter ab
 
 ### Question 1
 
+
 The file [`at_health_facilities.csv`](./at_health_facilities.csv) contains a tidy dataset with four columns:
 -   The ISO3 code of the country that reported data.
 -   The year for which data was reported.
@@ -119,7 +123,7 @@ Please answer the following questions:
 
 ### Question 2
 
-A student has sent you the file [`rmd-country-profile.Rmd`](./rmd-country-profile.Rmd), which is an R Markdown document analyzing the data in [`at_health_facilities.csv`](./at_health_facilities.csv) for Bangladesh. They could not knit the file, and are providing you with the raw `.Rmd` file instead of a rendered file.
+A student has sent you the file [`rmd-country-profile.Rmd`](/blog/2020-01-20-instructor-certification-exams/rmd-country-profile.Rmd), which is an R Markdown document analyzing the data in [`at_health_facilities.csv`](./at_health_facilities.csv) for Bangladesh. They could not knit the file, and are providing you with the raw `.Rmd` file instead of a rendered file.
 
 1.  Go through the file, fixing things that are preventing it from knitting cleanly.
 2.  Change the two lines of bold text to H2-level headers to organize the document, and add a table of contents.
@@ -127,7 +131,7 @@ A student has sent you the file [`rmd-country-profile.Rmd`](./rmd-country-profil
 
 ### Question 3
 
-You have been given a CSV file [`infant_hiv.csv`](./infant_hiv.csv) that is formatted as follows:
+You have been given a CSV file [`infant_hiv.csv`](./infant_hiv.csv)  that is formatted as follows:
 
 <table>
 <tr><th>ISO3</th><th>2009 est</th><th>2009 hi</th><th>2009 lo</th><th>2010 est</th><th>2010 hi</th><th>2010 lo</th></td></tr>
@@ -166,8 +170,29 @@ The plot below shows this data:
 -   The Y coordinate for item *i* is the percentage of ratings for that item that are "positive".
 -   The regression line is created using the 'lm' method.
 
+<!--
 <div align="center">
   <img src="./plot.png" alt="Survey Plot" />
 </div>
+-->
+
+```{r ranking-scatterplot, echo=FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+ranking <- read_csv(here::here("content/blog/2020-01-20-instructor-certification-exams/ranking.csv"))
+
+ranking_counts <- 
+  ranking %>% 
+  count(item, rank, name = "num") %>% 
+  add_count(item, wt = num, name = "denom") %>% 
+  mutate(prop = num / denom) %>% 
+  select(-num, num = denom) %>% 
+  pivot_wider(names_from = rank, values_from = prop,
+              values_fill = list(prop = 0))
+
+ggplot(ranking_counts, aes(x = negative, y = positive)) +
+  geom_point(aes(size = num, alpha = .25)) +
+  geom_smooth(method = "lm")
+```
+
 
 Re-create this plot using the tidyverse and ggplot2, fixing any mistakes you notice along the way.
