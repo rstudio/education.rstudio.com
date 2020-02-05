@@ -1,7 +1,7 @@
 ---
 title: Instructor Certification Exams
 author:
-  - Greg Wilson
+  - greg
 date: '2020-02-05'
 categories:
   - certify
