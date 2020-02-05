@@ -189,8 +189,9 @@ ranking_counts <-
   pivot_wider(names_from = rank, values_from = prop,
               values_fill = list(prop = 0))
 
-ggplot(ranking_counts, aes(x = negative, y = positive)) +
-  geom_point(aes(size = num, alpha = .25)) +
+ggplot(ranking_counts, aes(x = negative, y = positive,
+                           size = num)) +
+  geom_point(aes(alpha = .25)) +
   geom_smooth(method = "lm")
 ```
 
