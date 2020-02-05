@@ -7,7 +7,7 @@ categories:
   - certify
 tags:
   - instructor training
-draft: yes
+draft: false
 slug: instructor-certification-exams
 description: |
   Here are some of the questions we've been using in instructor certification exams.
@@ -178,7 +178,7 @@ The plot below shows this data:
 
 ```{r ranking-scatterplot, echo=FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
-ranking <- read_csv(here::here("content/blog/2020-01-20-instructor-certification-exams/ranking.csv"))
+ranking <- read_csv(here::here("content/blog/2020-02-05-instructor-certification-exams/ranking.csv"))
 
 ranking_counts <- 
   ranking %>% 

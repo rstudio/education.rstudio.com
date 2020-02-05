@@ -7,7 +7,7 @@ categories:
   - certify
 tags:
   - instructor training
-draft: yes
+draft: false
 slug: instructor-certification-exams
 description: |
   Here are some of the questions we've been using in instructor certification exams.
