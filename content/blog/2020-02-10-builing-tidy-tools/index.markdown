@@ -22,11 +22,12 @@ photo:
     * Making a package: by the end of the two days particpants have built from scratch 4-5 packages
     * Passing `check()`
 
-* Live coding vs. Slides
-
 * Themes:
     
     * Workflow
     * Interface
     * Implementation
+
+* Live coding vs. Slides
+
 
