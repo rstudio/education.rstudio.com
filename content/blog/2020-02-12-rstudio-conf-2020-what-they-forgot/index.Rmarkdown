@@ -1,18 +1,24 @@
 ---
 title: What They Forgot to Teach You About R at rstudio::conf 2020
 author:
-  - "[Kara Woo](https://karawoo.com)"
-date: '2020-02-00'
-slug: rstudio-conf-2020-what-they-forgot
-categories: ["learn"]
+  - '[Kara Woo](https://karawoo.com)'
+date: '2020-02-12'
+categories:
+  - learn
 tags:
   - rstudioconf
+slug: rstudio-conf-2020-what-they-forgot
 photo:
   url: https://unsplash.com/photos/okvqMfl78YE
   author: Nielsen Ramon
-description: |
-  Highlights from the What They Forgot to Teach You About R workshop    
+description: 'Highlights from the What They Forgot to Teach You About R workshop    '
 ---
+
+> tl;dr: all workshop materials are available here: <br>
+> <i class="fab fa-github fa-fw"></i> <https://rstd.io/conf20-wtf> <br>
+> `r emo::ji("link")` <https://rstd.io/wtf-2020-rsc> <br>
+> <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+
 
 What did they forget to teach you about R? If you're like many people, your R
 education focused mainly on how to do statistical analyses in R. However, there
@@ -59,7 +65,7 @@ All of the materials from the workshop are available at
 * slides
 * hands-on exercises
 * links to further reading on the [What They Forgot to Teach You About R](https://rstats.wtf/) and [Happy Git and GitHub for the useR](https://happygitwithr.com/) sites
-* the popular Spotify playlist we played during the course
+* the popular [Spotify playlist](https://open.spotify.com/playlist/0OuvqM69DKFK3QPbHIy2kc?si=xonCaP2RTmeOXO3YW7hxhQ) we played during the course
 
 Throughout the workshop our fantastic team of TAs&mdash;Hannah Frick, Myfanwy
 Johnston, Sean Kross, and Theo Roe&mdash;kept things running smoothly by moving
