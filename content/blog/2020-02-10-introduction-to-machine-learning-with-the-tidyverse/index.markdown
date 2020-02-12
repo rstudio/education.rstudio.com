@@ -74,7 +74,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Attaching packages ────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
+## ── Attaching packages ───────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
 ```
 
 ```
@@ -87,7 +87,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Conflicts ───────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+## ── Conflicts ──────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 ## x purrr::discard()    masks scales::discard()
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::lag()        masks stats::lag()
@@ -146,7 +146,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#rtocnmlfhg .gt_table {
+#vtwfkbqonh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -174,7 +174,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* table.border.bottom.color */
 }
 
-#rtocnmlfhg .gt_heading {
+#vtwfkbqonh .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -193,7 +193,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* heading.border.lr.color */
 }
 
-#rtocnmlfhg .gt_title {
+#vtwfkbqonh .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -207,7 +207,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   border-bottom-width: 0;
 }
 
-#rtocnmlfhg .gt_subtitle {
+#vtwfkbqonh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -221,7 +221,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   border-top-width: 0;
 }
 
-#rtocnmlfhg .gt_bottom_border {
+#vtwfkbqonh .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -230,7 +230,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* heading.border.bottom.color */
 }
 
-#rtocnmlfhg .gt_column_spanner {
+#vtwfkbqonh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -238,7 +238,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   padding-bottom: 4px;
 }
 
-#rtocnmlfhg .gt_col_headings {
+#vtwfkbqonh .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -265,7 +265,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* column_labels.border.lr.color */
 }
 
-#rtocnmlfhg .gt_col_heading {
+#vtwfkbqonh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -281,11 +281,11 @@ During the workshop, we presented slides interspersed with timed coding exercise
   overflow-x: hidden;
 }
 
-#rtocnmlfhg .gt_sep_right {
+#vtwfkbqonh .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#rtocnmlfhg .gt_group_heading {
+#vtwfkbqonh .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -324,7 +324,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   vertical-align: middle;
 }
 
-#rtocnmlfhg .gt_empty_group_heading {
+#vtwfkbqonh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -348,20 +348,20 @@ During the workshop, we presented slides interspersed with timed coding exercise
   vertical-align: middle;
 }
 
-#rtocnmlfhg .gt_striped {
+#vtwfkbqonh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#rtocnmlfhg .gt_from_md > :first-child {
+#vtwfkbqonh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rtocnmlfhg .gt_from_md > :last-child {
+#vtwfkbqonh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rtocnmlfhg .gt_row {
+#vtwfkbqonh .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -391,7 +391,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   overflow-x: hidden;
 }
 
-#rtocnmlfhg .gt_stub {
+#vtwfkbqonh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -408,7 +408,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   padding-left: 12px;
 }
 
-#rtocnmlfhg .gt_summary_row {
+#vtwfkbqonh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -422,7 +422,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   padding-right: 5px;
 }
 
-#rtocnmlfhg .gt_first_summary_row {
+#vtwfkbqonh .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -437,7 +437,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* summary_row.border.color */
 }
 
-#rtocnmlfhg .gt_grand_summary_row {
+#vtwfkbqonh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -451,7 +451,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   padding-right: 5px;
 }
 
-#rtocnmlfhg .gt_first_grand_summary_row {
+#vtwfkbqonh .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -466,7 +466,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* grand_summary_row.border.color */
 }
 
-#rtocnmlfhg .gt_table_body {
+#vtwfkbqonh .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -481,7 +481,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* table_body.border.bottom.color */
 }
 
-#rtocnmlfhg .gt_footnotes {
+#vtwfkbqonh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -505,7 +505,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* footnotes.border.lr.color */
 }
 
-#rtocnmlfhg .gt_footnote {
+#vtwfkbqonh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -513,7 +513,7 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* footnotes.padding */
 }
 
-#rtocnmlfhg .gt_sourcenotes {
+#vtwfkbqonh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -537,48 +537,48 @@ During the workshop, we presented slides interspersed with timed coding exercise
   /* source_notes.border.lr.style */
 }
 
-#rtocnmlfhg .gt_sourcenote {
+#vtwfkbqonh .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#rtocnmlfhg .gt_left {
+#vtwfkbqonh .gt_left {
   text-align: left;
 }
 
-#rtocnmlfhg .gt_center {
+#vtwfkbqonh .gt_center {
   text-align: center;
 }
 
-#rtocnmlfhg .gt_right {
+#vtwfkbqonh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rtocnmlfhg .gt_font_normal {
+#vtwfkbqonh .gt_font_normal {
   font-weight: normal;
 }
 
-#rtocnmlfhg .gt_font_bold {
+#vtwfkbqonh .gt_font_bold {
   font-weight: bold;
 }
 
-#rtocnmlfhg .gt_font_italic {
+#vtwfkbqonh .gt_font_italic {
   font-style: italic;
 }
 
-#rtocnmlfhg .gt_super {
+#vtwfkbqonh .gt_super {
   font-size: 65%;
 }
 
-#rtocnmlfhg .gt_footnote_marks {
+#vtwfkbqonh .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="rtocnmlfhg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="vtwfkbqonh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -664,853 +664,6 @@ During the workshop, we presented slides interspersed with timed coding exercise
 </table></div><!--/html_preserve-->
 
 
-```r
-tmf <- read_csv(here::here("content/blog/2020-02-10-introduction-to-machine-learning-with-the-tidyverse/tm-functions.csv")) 
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   session = col_double(),
-##   package = col_character(),
-##   `function` = col_character()
-## )
-```
-
-```r
-tmf %>% 
-  gt() %>% 
-  fmt_markdown(columns = TRUE) 
-```
-
-<!--html_preserve--><style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#uomlabltwu .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  /* table.margin.left */
-  margin-right: auto;
-  /* table.margin.right */
-  color: #333333;
-  font-size: 16px;
-  /* table.font.size */
-  background-color: #FFFFFF;
-  /* table.background.color */
-  width: auto;
-  /* table.width */
-  border-top-style: solid;
-  /* table.border.top.style */
-  border-top-width: 2px;
-  /* table.border.top.width */
-  border-top-color: #A8A8A8;
-  /* table.border.top.color */
-  border-bottom-style: solid;
-  /* table.border.bottom.style */
-  border-bottom-width: 2px;
-  /* table.border.bottom.width */
-  border-bottom-color: #A8A8A8;
-  /* table.border.bottom.color */
-}
-
-#uomlabltwu .gt_heading {
-  background-color: #FFFFFF;
-  /* heading.background.color */
-  border-bottom-color: #FFFFFF;
-  /* table.background.color */
-  border-left-style: hidden;
-  /* heading.border.lr.style */
-  border-left-width: 1px;
-  /* heading.border.lr.width */
-  border-left-color: #D3D3D3;
-  /* heading.border.lr.color */
-  border-right-style: hidden;
-  /* heading.border.lr.style */
-  border-right-width: 1px;
-  /* heading.border.lr.width */
-  border-right-color: #D3D3D3;
-  /* heading.border.lr.color */
-}
-
-#uomlabltwu .gt_title {
-  color: #333333;
-  font-size: 125%;
-  /* heading.title.font.size */
-  font-weight: initial;
-  /* heading.title.font.weight */
-  padding-top: 4px;
-  /* heading.top.padding - not yet used */
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  /* table.background.color */
-  border-bottom-width: 0;
-}
-
-#uomlabltwu .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  /* heading.subtitle.font.size */
-  font-weight: initial;
-  /* heading.subtitle.font.weight */
-  padding-top: 0;
-  padding-bottom: 4px;
-  /* heading.bottom.padding - not yet used */
-  border-top-color: #FFFFFF;
-  /* table.background.color */
-  border-top-width: 0;
-}
-
-#uomlabltwu .gt_bottom_border {
-  border-bottom-style: solid;
-  /* heading.border.bottom.style */
-  border-bottom-width: 2px;
-  /* heading.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* heading.border.bottom.color */
-}
-
-#uomlabltwu .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#uomlabltwu .gt_col_headings {
-  border-top-style: solid;
-  /* column_labels.border.top.style */
-  border-top-width: 2px;
-  /* column_labels.border.top.width */
-  border-top-color: #D3D3D3;
-  /* column_labels.border.top.color */
-  border-bottom-style: solid;
-  /* column_labels.border.bottom.style */
-  border-bottom-width: 2px;
-  /* column_labels.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* column_labels.border.bottom.color */
-  border-left-style: none;
-  /* column_labels.border.lr.style */
-  border-left-width: 1px;
-  /* column_labels.border.lr.width */
-  border-left-color: #D3D3D3;
-  /* column_labels.border.lr.color */
-  border-right-style: none;
-  /* column_labels.border.lr.style */
-  border-right-width: 1px;
-  /* column_labels.border.lr.width */
-  border-right-color: #D3D3D3;
-  /* column_labels.border.lr.color */
-}
-
-#uomlabltwu .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* column_labels.background.color */
-  font-size: 100%;
-  /* column_labels.font.size */
-  font-weight: initial;
-  /* column_labels.font.weight */
-  text-transform: inherit;
-  /* column_labels.text_transform */
-  vertical-align: middle;
-  padding: 5px;
-  margin: 10px;
-  overflow-x: hidden;
-}
-
-#uomlabltwu .gt_sep_right {
-  border-right: 5px solid #FFFFFF;
-}
-
-#uomlabltwu .gt_group_heading {
-  padding: 8px;
-  /* row_group.padding */
-  color: #333333;
-  background-color: #FFFFFF;
-  /* row_group.background.color */
-  font-size: 100%;
-  /* row_group.font.size */
-  font-weight: initial;
-  /* row_group.font.weight */
-  text-transform: inherit;
-  /* row_group.text_transform */
-  border-top-style: solid;
-  /* row_group.border.top.style */
-  border-top-width: 2px;
-  /* row_group.border.top.width */
-  border-top-color: #D3D3D3;
-  /* row_group.border.top.color */
-  border-bottom-style: solid;
-  /* row_group.border.bottom.style */
-  border-bottom-width: 2px;
-  /* row_group.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* row_group.border.bottom.color */
-  border-left-style: none;
-  /* row_group.border.left.style */
-  border-left-width: 1px;
-  /* row_group.border.left.width */
-  border-left-color: #D3D3D3;
-  /* row_group.border.left.color */
-  border-right-style: none;
-  /* row_group.border.right.style */
-  border-right-width: 1px;
-  /* row_group.border.right.width */
-  border-right-color: #D3D3D3;
-  /* row_group.border.right.color */
-  vertical-align: middle;
-}
-
-#uomlabltwu .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  /* row_group.background.color */
-  font-size: 100%;
-  /* row_group.font.size */
-  font-weight: initial;
-  /* row_group.font.weight */
-  border-top-style: solid;
-  /* row_group.border.top.style */
-  border-top-width: 2px;
-  /* row_group.border.top.width */
-  border-top-color: #D3D3D3;
-  /* row_group.border.top.color */
-  border-bottom-style: solid;
-  /* row_group.border.bottom.style */
-  border-bottom-width: 2px;
-  /* row_group.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* row_group.border.bottom.color */
-  vertical-align: middle;
-}
-
-#uomlabltwu .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-  /* row.striping.background_color */
-}
-
-#uomlabltwu .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#uomlabltwu .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#uomlabltwu .gt_row {
-  padding-top: 8px;
-  /* data_row.padding */
-  padding-bottom: 8px;
-  /* data_row.padding */
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  /* table_body.hlines.style */
-  border-top-width: 1px;
-  /* table_body.hlines.width */
-  border-top-color: #D3D3D3;
-  /* table_body.hlines.color */
-  border-left-style: none;
-  /* table_body.vlines.style */
-  border-left-width: 1px;
-  /* table_body.vlines.width */
-  border-left-color: #D3D3D3;
-  /* table_body.vlines.color */
-  border-right-style: none;
-  /* table_body.vlines.style */
-  border-right-width: 1px;
-  /* table_body.vlines.width */
-  border-right-color: #D3D3D3;
-  /* table_body.vlines.color */
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#uomlabltwu .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* stub.background.color */
-  font-weight: initial;
-  /* stub.font.weight */
-  text-transform: inherit;
-  /* stub.text_transform */
-  border-right-style: solid;
-  /* stub.border.style */
-  border-right-width: 2px;
-  /* stub.border.width */
-  border-right-color: #D3D3D3;
-  /* stub.border.color */
-  padding-left: 12px;
-}
-
-#uomlabltwu .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* summary_row.background.color */
-  text-transform: inherit;
-  /* summary_row.text_transform */
-  padding-top: 8px;
-  /* summary_row.padding */
-  padding-bottom: 8px;
-  /* summary_row.padding */
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uomlabltwu .gt_first_summary_row {
-  padding-top: 8px;
-  /* summary_row.padding */
-  padding-bottom: 8px;
-  /* summary_row.padding */
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  /* summary_row.border.style */
-  border-top-width: 2px;
-  /* summary_row.border.width */
-  border-top-color: #D3D3D3;
-  /* summary_row.border.color */
-}
-
-#uomlabltwu .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* grand_summary_row.background.color */
-  text-transform: inherit;
-  /* grand_summary_row.text_transform */
-  padding-top: 8px;
-  /* grand_summary_row.padding */
-  padding-bottom: 8px;
-  /* grand_summary_row.padding */
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#uomlabltwu .gt_first_grand_summary_row {
-  padding-top: 8px;
-  /* grand_summary_row.padding */
-  padding-bottom: 8px;
-  /* grand_summary_row.padding */
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  /* grand_summary_row.border.style */
-  border-top-width: 6px;
-  /* grand_summary_row.border.width */
-  border-top-color: #D3D3D3;
-  /* grand_summary_row.border.color */
-}
-
-#uomlabltwu .gt_table_body {
-  border-top-style: solid;
-  /* table_body.border.top.style */
-  border-top-width: 2px;
-  /* table_body.border.top.width */
-  border-top-color: #D3D3D3;
-  /* table_body.border.top.color */
-  border-bottom-style: solid;
-  /* table_body.border.bottom.style */
-  border-bottom-width: 2px;
-  /* table_body.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* table_body.border.bottom.color */
-}
-
-#uomlabltwu .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* footnotes.background.color */
-  border-bottom-style: none;
-  /* footnotes.border.bottom.style */
-  border-bottom-width: 2px;
-  /* footnotes.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* footnotes.border.bottom.color */
-  border-left-style: none;
-  /* footnotes.border.lr.color */
-  border-left-width: 2px;
-  /* footnotes.border.lr.color */
-  border-left-color: #D3D3D3;
-  /* footnotes.border.lr.color */
-  border-right-style: none;
-  /* footnotes.border.lr.color */
-  border-right-width: 2px;
-  /* footnotes.border.lr.color */
-  border-right-color: #D3D3D3;
-  /* footnotes.border.lr.color */
-}
-
-#uomlabltwu .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  /* footnotes.font.size */
-  padding: 4px;
-  /* footnotes.padding */
-}
-
-#uomlabltwu .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  /* source_notes.background.color */
-  border-bottom-style: none;
-  /* source_notes.border.bottom.style */
-  border-bottom-width: 2px;
-  /* source_notes.border.bottom.width */
-  border-bottom-color: #D3D3D3;
-  /* source_notes.border.bottom.color */
-  border-left-style: none;
-  /* source_notes.border.lr.style */
-  border-left-width: 2px;
-  /* source_notes.border.lr.style */
-  border-left-color: #D3D3D3;
-  /* source_notes.border.lr.style */
-  border-right-style: none;
-  /* source_notes.border.lr.style */
-  border-right-width: 2px;
-  /* source_notes.border.lr.style */
-  border-right-color: #D3D3D3;
-  /* source_notes.border.lr.style */
-}
-
-#uomlabltwu .gt_sourcenote {
-  font-size: 90%;
-  /* source_notes.font.size */
-  padding: 4px;
-  /* source_notes.padding */
-}
-
-#uomlabltwu .gt_left {
-  text-align: left;
-}
-
-#uomlabltwu .gt_center {
-  text-align: center;
-}
-
-#uomlabltwu .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#uomlabltwu .gt_font_normal {
-  font-weight: normal;
-}
-
-#uomlabltwu .gt_font_bold {
-  font-weight: bold;
-}
-
-#uomlabltwu .gt_font_italic {
-  font-style: italic;
-}
-
-#uomlabltwu .gt_super {
-  font-size: 65%;
-}
-
-#uomlabltwu .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="uomlabltwu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">session</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">package</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">function</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>linear_reg()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>decision_tree()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>nearest_neighbor()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>helper</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>fit_data() (reference: parsnip::fit())</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>predict()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>yardstick</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>rmse()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>rsample</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>initial_split()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>rsample</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>training()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>rsample</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>testing()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>helper</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>fit_split() (reference: tune::last_fit())</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>collect_metrics()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>yardstick</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>metric_set()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>1</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tidyr</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>unnest()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>2</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>set_mode(&quot;classification&quot;)</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>2</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>collect_predictions()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>2</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>yardstick</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>conf_mat()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>2</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>yardstick</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>roc_auc()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>2</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>yardstick</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>roc_curve()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>4</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>rand_forest()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>4</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>parsnip</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>set_args()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>4</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>vip</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>vip()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflow()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>add_formula()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>add_model()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>update_formula()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>update_model()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>5</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>pull_workflow_fit()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>6</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>recipes</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>step_*()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>6</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>recipes</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>*_role()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>6</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>add_recipe()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>6</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>recipes</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>all_*() (recipe selectors)</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>6</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>update_recipe()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>7</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>rsample</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>vfold_cv()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>7</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>fit_resamples()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>7</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>collect_metrics(summarize = FALSE)</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>7</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>control_resamples()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune() (for parsnip and recipe objects)</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune_grid()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tidyr</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>expand_grid()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>control_grid()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>show_best()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>select_best()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>autoplot()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>finalize_recipe()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>finalize_workflow()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right gt_striped"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>workflows</p>
-</div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>finalize_model()</p>
-</div></td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_right"><div class='gt_from_md'><p>8</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>tune</p>
-</div></td>
-      <td class="gt_row gt_left"><div class='gt_from_md'><p>last_fit() (previously known as fit_split())</p>
-</div></td>
-    </tr>
-  </tbody>
-  
-  
-</table></div><!--/html_preserve-->
-
-
 ## Instructor Notes
 
 We did a trial run of this workshop in December 2019 in Boston with about 20 participants, which proved one of [Greg Wilson's cardinal rules](https://teachtogether.tech/#the-rules):
@@ -1538,7 +691,7 @@ Actually, the workshop went pretty smooth for a first run, and we received posit
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the "Your Turn" timers ⏲.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the "Your Turn" timers ⏳.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
