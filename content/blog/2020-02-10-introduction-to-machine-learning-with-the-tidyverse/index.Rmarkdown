@@ -8,10 +8,10 @@ author:
   - alison
   - garrett
 photo:
-  url: https://unsplash.com/photos/5Z9bgfRZLLE
-  author: Michael Lee
+  url: https://unsplash.com/photos/2YPSfYQA6Z0
+  author: Brunel Johnson
 description: >
-  Materials from our two-day rstudio::conf(2020) workshop on machine learning with the tidyverse and tidymodels are available. Here is your roadmap to the workshop!
+  Here is your roadmap to our two-day rstudio::conf(2020) workshop on machine learning with the tidyverse and tidymodels.
 ---
 
 
@@ -19,7 +19,9 @@ description: >
 > <i class="fab fa-github"></i> https://rstd.io/conf20-intro-ml <br>
 > `r emo::ji("link")` https://conf20-intro-ml.netlify.com/
 
-At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that work with the tidyverse. [Max Kuhn](https://twitter.com/topepos), the software engineer leading the tidymodels team and the author or maintainer of several R packages for predictive modeling including [caret](https://cran.r-project.org/web/packages/caret/caret.pdf), [Cubist](https://cran.r-project.org/web/packages/Cubist/index.html), [C50](https://cran.r-project.org/web/packages/C50/C50.pdf) and others, has offered an [Applied Machine Learning workshop](https://github.com/tidymodels/aml-training) for several years now, but we have not yet attempted to teach tidymodels to a beginner audience. Until now! `r emo::ji("tada")`
+At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and work together. 
+
+If you have heard or used the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package, tidymodels is its successor. Tidymodels is supported by RStudio, and is led by [Max Kuhn](https://twitter.com/topepos), the author of [caret](https://cran.r-project.org/web/packages/caret/caret.pdf), [Cubist](https://cran.r-project.org/web/packages/Cubist/index.html), [C50](https://cran.r-project.org/web/packages/C50/C50.pdf) and other R packages for predictive modeling. Max has offered an [Applied Machine Learning workshop](https://github.com/tidymodels/aml-training) for several years now, but we have not yet attempted to teach tidymodels to a beginner audience. Until now! `r emo::ji("tada")`
 
 ```{r echo=FALSE, out.width="49%", fig.link="https://github.com/allisonhorst/stats-illustrations", fig.cap="Art by Allison Horst", fig.align='center'}
 knitr::include_graphics("parsnip.png")
@@ -100,6 +102,7 @@ remotes::install_github("tidymodels/modeldata")
 
 During the workshop, we presented slides interspersed with timed coding exercises called "Your Turns". 
 
+<!--
 | session | slides                                 | Exercises + Solutions                   | 
 |---------|----------------------------------------|-----------------------------------------|
 | 00      | [Welcome & Introductions][00-slides]   |                                         |
@@ -111,6 +114,25 @@ During the workshop, we presented slides interspersed with timed coding exercise
 | 06      | [Recipes][06-slides]                   | [Exercises][06-ex], [Solutions][06-sol] |
 | 07      | [Cross-validation][07-slides]          | [Exercises][07-ex], [Solutions][07-sol] |
 | 08      | [Tuning][08-slides]                    | [Exercises][08-ex], [Solutions][08-sol] |
+-->
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+library(gt)
+library(tidyverse)
+tm <- read_csv(here::here("content/blog/2020-02-10-introduction-to-machine-learning-with-the-tidyverse/tm.csv")) %>% 
+  mutate(
+      Slides = paste0("<a href='https://conf20-intro-ml.netlify.com/materials/", slide_url,"'  target='_blank'><tt>", slide_name, "</tt></a>"),
+      Exercises = if_else(!session %in% c(0, 3), paste0("<a href='https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/materials/exercises/", mat_rmd,"'  target='_blank'><tt>", "Exercises", "</tt></a>"), ""),
+      Solutions = if_else(!session %in% c(0, 3), paste0("<a href='https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/materials/solutions/", mat_rmd,"'  target='_blank'><tt>", "Solutions", "</tt></a>"), ""),
+      Materials = if_else(!session %in% c(0, 3), glue::glue('{Exercises}', ', ', '{Solutions}'), ""),
+      session = str_pad(session, 2, pad = "0")
+    )
+tm %>% 
+  select(session, Slides, Materials) %>% 
+  gt() %>% 
+  fmt_markdown(columns = TRUE) 
+```
 
 
 ## Instructor Notes
@@ -127,9 +149,11 @@ Actually, the workshop went pretty smooth for a first run, and we received posit
 
 1. To lay out the red carpet for [ensembling][04-slides] (we worked up to bagging and random forest models), we spent some time working with and interpreting single decision trees, including a ["Guess the Animal" team activity](https://www.atarimagazines.com/v4n12/Animal.html) that helped to loosen everyone up on day 1.
 
-1. A new, but very much welcome, kid on the tidymodels block appeared just before our workshop in December: [workflows](https://tidymodels.github.io/workflows/). For conf, we re-factored our approach to introduce workflows by bundling together formulas and parsnip model specifications *first* (via [`add_formula()`](https://tidymodels.github.io/workflows/reference/add_formula.html) and [`add_model()`](https://tidymodels.github.io/workflows/reference/add_model.html)), *then* introducing [recipes][06-slides] as a way to move beyond formulas and do feature engineering (substiting `add_formula()` with [`add_recipe()`](https://tidymodels.github.io/workflows/reference/add_recipe.html) instead).
+1. A new, but very much welcome, kid on the tidymodels block appeared just before our workshop in December: [workflows](https://tidymodels.github.io/workflows/). For conf, we re-factored our approach to introduce workflows by bundling together formulas and parsnip model specifications *first* (via [`add_formula()`](https://tidymodels.github.io/workflows/reference/add_formula.html) and [`add_model()`](https://tidymodels.github.io/workflows/reference/add_model.html)), *then* introducing [recipes][06-slides] as a way to move beyond formulas and do feature engineering (substituting `add_formula()` with [`add_recipe()`](https://tidymodels.github.io/workflows/reference/add_recipe.html) instead).
 
-1. To accomodate the new and improved content reorganization we envisioned, we hit a few code hiccups. Garrett and I made an executive decision to write some helper functions so that the code **just worked** and we kept the content on track. As an educator, this is typically something I try to avoid if possible, as my goal is to get learners to a place where they can use the package APIs as designed independently. But in this specific case, not using helper functions introduced [*"inessential weirdness"*](https://teachtogether.tech/#s:process-exercises); that is, we would have needed to describe things that were not really necessary to understand, but which were likely to alienate people. In a two-day intro workshop, we did not want to cover the *developer-focused* tidymodels packages, like [hardhat](https://tidymodels.github.io/hardhat/), which we would have needed to get the code working; you can follow a discussion and reprex of the [error here](https://github.com/tidymodels/tune/issues/151). **Bottom-line:** If you are going through these materials on your own, be sure to open up the accompanying exercise files for each slide deck and run the first chunk locally (look out for our helper functions named `fit_data()` and `fit_split()`). These were the earliest fitting functions we used on day 1, before transitioning to [`tune::fit_resamples()`](https://tidymodels.github.io/tune/reference/fit_resamples.html) and [`tune::tune_grid()`](https://tidymodels.github.io/tune/reference/tune_grid.html) on day 2 after introducing [cross-validation][07-slides]. If you want to take the training wheels off and use the base tidymodels unctions, you may run into these same errors, but roughly:
+1. To accomodate the new and improved content reorganization we envisioned, we hit a few code hiccups. Garrett and I made an executive decision to write some helper functions so that the code **just worked** and we kept the content on track. As an educator, this is typically something I try to avoid if possible, as my goal is to guide learners to be able to use the package APIs as designed independently. But debugging this specific error introduced too much [*"inessential weirdness"*](https://teachtogether.tech/#s:process-exercises); that is, we would have needed to describe things that were not really necessary to understand, but which were likely to alienate people (you can follow a discussion and reprex of one [error here](https://github.com/tidymodels/tune/issues/151)). 
+
+    **Bottom-line:** If you are trying to follow these slides on your own,  open the accompanying exercise files for each slide deck and run the first chunk locally (look out for our helper functions named `fit_data()` and `fit_split()`). These were the earliest fitting functions we used on day 1, before transitioning to [`tune::fit_resamples()`](https://tidymodels.github.io/tune/reference/fit_resamples.html) and [`tune::tune_grid()`](https://tidymodels.github.io/tune/reference/tune_grid.html) on day 2 after introducing [cross-validation][07-slides]. If you want to take the training wheels off and use the base tidymodels functions, you may run into similar errors, but roughly:
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 
@@ -138,14 +162,14 @@ Actually, the workshop went pretty smooth for a first run, and we received posit
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also made heavy use of the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1) to create the "Your Turn" timers `r emo::ji("timer")`.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the "Your Turn" timers `r emo::ji("timer")`.
 
-+ **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on the button below `r emo::ji("rocket")`: <br><br>
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rstudio-conf-2020/intro-to-ml-tidy)
++ **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) `r emo::ji("rocket")`
+
 
 ## Thanks
 
-I sincerely enjoyed developing this workshop with [Garrett](https://twitter.com/StatGarrett), getting a chance to work closely with [Max Kuhn](https://twitter.com/topepos) and [Davis Vaughan](https://twitter.com/dvaughan32) of the tidymodels team (now including the inimitable [Julia Silge](https://juliasilge.com/)!), and having the opportunity to introduce a new cohort of R and tidyverse users to [tidymodels](https://github.com/tidymodels). I hope the materials we developed are useful to learners and other teachers too- if they are, [please let me know](https://twitter.com/apreshill), I'd love to hear about it.
+I sincerely enjoyed developing this workshop with [Garrett](https://twitter.com/StatGarrett), getting a chance to work closely with [Max Kuhn](https://twitter.com/topepos) and [Davis Vaughan](https://twitter.com/dvaughan32) of the tidymodels team (now including the inimitable [Julia Silge](https://juliasilge.com/)!), and having the opportunity to introduce a new cohort of R and tidyverse users to [tidymodels](https://github.com/tidymodels). I hope the materials we developed are useful to learners and other educators too- if they are, [please let me know](https://twitter.com/apreshill), I'd love to hear about it.
 
 Happy predictive modeling!
 
