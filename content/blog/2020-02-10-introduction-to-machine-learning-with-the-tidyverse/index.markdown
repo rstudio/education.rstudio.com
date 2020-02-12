@@ -6,7 +6,6 @@ categories: []
 tags: []
 author:
   - alison
-  - garrett
 photo:
   url: https://unsplash.com/photos/2YPSfYQA6Z0
   author: Brunel Johnson
@@ -20,16 +19,16 @@ description: >
 > <i class="fab fa-github"></i> https://rstd.io/conf20-intro-ml <br>
 > 🔗 https://conf20-intro-ml.netlify.com/
 
-At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling.
+At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling (also known as [machine learning](https://sebastianraschka.com/Articles/2014_intro_supervised_learning.html#machine-learning-and-pattern-classification)).
 
-If you have heard or used the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package, tidymodels is its successor. Tidymodels is supported by RStudio, and is led by [Max Kuhn](https://twitter.com/topepos), the author of [caret](https://cran.r-project.org/web/packages/caret/caret.pdf), [Cubist](https://cran.r-project.org/web/packages/Cubist/index.html), [C50](https://cran.r-project.org/web/packages/C50/C50.pdf) and other R packages for predictive modeling. Max has offered an [Applied Machine Learning workshop](https://github.com/tidymodels/aml-training) for several years now, but we have not yet attempted to teach tidymodels to a beginner audience. Until now! 🎉
+If you have heard or used the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package, tidymodels is its successor. The development of tidymodels is supported by [RStudio](https://rstudio.com/), and the team is led by [Max Kuhn](https://twitter.com/topepos), the author of [caret](https://cran.r-project.org/web/packages/caret/caret.pdf), [Cubist](https://cran.r-project.org/web/packages/Cubist/index.html), [C50](https://cran.r-project.org/web/packages/C50/C50.pdf) and other R packages for predictive modeling. Max has offered an [Applied Machine Learning workshop](https://github.com/tidymodels/aml-training) for several years now, but we have not yet attempted to teach tidymodels to a beginner audience. Until now! 🎉
 
 <div class="figure" style="text-align: center">
 <a href="https://github.com/allisonhorst/stats-illustrations" target="_blank"><img src="parsnip.png" alt="Art by Allison Horst" width="49%" /></a>
 <p class="caption">Figure 1: Art by Allison Horst</p>
 </div>
 
-We designed the workshop to provide a gentle introduction to machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning the basic theory and best practices that support machine learning. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it easy to the right thing, and harder to accidentally do the wrong thing. 
+My colleague [Garrett Grolemund](https://twitter.com/statgarrett?lang=en) and I designed the workshop to provide a gentle introduction to supervised machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning the basic theory and best practices that support machine learning. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it easy to the right thing, and harder to accidentally do the wrong thing. 
 
 <div class="figure" style="text-align: center">
 <a href="https://github.com/allisonhorst/stats-illustrations" target="_blank"><img src="recipes.png" alt="Art by Allison Horst" width="49%" /></a>
@@ -38,7 +37,7 @@ We designed the workshop to provide a gentle introduction to machine learning: c
 
 
 
-## Prerequisite knowledge
+## Prerequisite Knowledge
 
 Before workshops for this year's conf were announced, we framed two questions to help potential learners gauge whether this workshop was the right one for them:
 
@@ -136,7 +135,7 @@ remotes::install_github("tidymodels/modeldata")
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏳.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⌛.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
@@ -166,7 +165,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ldhriazcex .gt_table {
+#upfttjnwpw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -194,7 +193,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* table.border.bottom.color */
 }
 
-#ldhriazcex .gt_heading {
+#upfttjnwpw .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -213,7 +212,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* heading.border.lr.color */
 }
 
-#ldhriazcex .gt_title {
+#upfttjnwpw .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -227,7 +226,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#ldhriazcex .gt_subtitle {
+#upfttjnwpw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -241,7 +240,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#ldhriazcex .gt_bottom_border {
+#upfttjnwpw .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -250,7 +249,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* heading.border.bottom.color */
 }
 
-#ldhriazcex .gt_column_spanner {
+#upfttjnwpw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -258,7 +257,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-bottom: 4px;
 }
 
-#ldhriazcex .gt_col_headings {
+#upfttjnwpw .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -285,7 +284,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* column_labels.border.lr.color */
 }
 
-#ldhriazcex .gt_col_heading {
+#upfttjnwpw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -301,11 +300,11 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#ldhriazcex .gt_sep_right {
+#upfttjnwpw .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#ldhriazcex .gt_group_heading {
+#upfttjnwpw .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -344,7 +343,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#ldhriazcex .gt_empty_group_heading {
+#upfttjnwpw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -368,20 +367,20 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#ldhriazcex .gt_striped {
+#upfttjnwpw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#ldhriazcex .gt_from_md > :first-child {
+#upfttjnwpw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ldhriazcex .gt_from_md > :last-child {
+#upfttjnwpw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ldhriazcex .gt_row {
+#upfttjnwpw .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -411,7 +410,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#ldhriazcex .gt_stub {
+#upfttjnwpw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -428,7 +427,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#ldhriazcex .gt_summary_row {
+#upfttjnwpw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -442,7 +441,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#ldhriazcex .gt_first_summary_row {
+#upfttjnwpw .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -457,7 +456,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* summary_row.border.color */
 }
 
-#ldhriazcex .gt_grand_summary_row {
+#upfttjnwpw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -471,7 +470,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#ldhriazcex .gt_first_grand_summary_row {
+#upfttjnwpw .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -486,7 +485,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* grand_summary_row.border.color */
 }
 
-#ldhriazcex .gt_table_body {
+#upfttjnwpw .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -501,7 +500,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* table_body.border.bottom.color */
 }
 
-#ldhriazcex .gt_footnotes {
+#upfttjnwpw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -525,7 +524,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* footnotes.border.lr.color */
 }
 
-#ldhriazcex .gt_footnote {
+#upfttjnwpw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -533,7 +532,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* footnotes.padding */
 }
 
-#ldhriazcex .gt_sourcenotes {
+#upfttjnwpw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -557,48 +556,48 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* source_notes.border.lr.style */
 }
 
-#ldhriazcex .gt_sourcenote {
+#upfttjnwpw .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#ldhriazcex .gt_left {
+#upfttjnwpw .gt_left {
   text-align: left;
 }
 
-#ldhriazcex .gt_center {
+#upfttjnwpw .gt_center {
   text-align: center;
 }
 
-#ldhriazcex .gt_right {
+#upfttjnwpw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ldhriazcex .gt_font_normal {
+#upfttjnwpw .gt_font_normal {
   font-weight: normal;
 }
 
-#ldhriazcex .gt_font_bold {
+#upfttjnwpw .gt_font_bold {
   font-weight: bold;
 }
 
-#ldhriazcex .gt_font_italic {
+#upfttjnwpw .gt_font_italic {
   font-style: italic;
 }
 
-#ldhriazcex .gt_super {
+#upfttjnwpw .gt_super {
   font-size: 65%;
 }
 
-#ldhriazcex .gt_footnote_marks {
+#upfttjnwpw .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="ldhriazcex" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="upfttjnwpw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
