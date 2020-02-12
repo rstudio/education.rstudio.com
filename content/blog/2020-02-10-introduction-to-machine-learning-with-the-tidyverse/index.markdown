@@ -84,7 +84,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Attaching packages ───────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
+## ── Attaching packages ────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
 ```
 
 ```
@@ -97,7 +97,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+## ── Conflicts ───────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 ## x purrr::discard()    masks scales::discard()
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::lag()        masks stats::lag()
@@ -136,7 +136,7 @@ remotes::install_github("tidymodels/modeldata")
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏲.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏳.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
@@ -166,7 +166,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#oxscjfquko .gt_table {
+#ldhriazcex .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -194,7 +194,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* table.border.bottom.color */
 }
 
-#oxscjfquko .gt_heading {
+#ldhriazcex .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -213,7 +213,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* heading.border.lr.color */
 }
 
-#oxscjfquko .gt_title {
+#ldhriazcex .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -227,7 +227,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#oxscjfquko .gt_subtitle {
+#ldhriazcex .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -241,7 +241,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#oxscjfquko .gt_bottom_border {
+#ldhriazcex .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -250,7 +250,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* heading.border.bottom.color */
 }
 
-#oxscjfquko .gt_column_spanner {
+#ldhriazcex .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -258,7 +258,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-bottom: 4px;
 }
 
-#oxscjfquko .gt_col_headings {
+#ldhriazcex .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -285,7 +285,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* column_labels.border.lr.color */
 }
 
-#oxscjfquko .gt_col_heading {
+#ldhriazcex .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -301,11 +301,11 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#oxscjfquko .gt_sep_right {
+#ldhriazcex .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#oxscjfquko .gt_group_heading {
+#ldhriazcex .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -344,7 +344,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#oxscjfquko .gt_empty_group_heading {
+#ldhriazcex .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -368,20 +368,20 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#oxscjfquko .gt_striped {
+#ldhriazcex .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#oxscjfquko .gt_from_md > :first-child {
+#ldhriazcex .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oxscjfquko .gt_from_md > :last-child {
+#ldhriazcex .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oxscjfquko .gt_row {
+#ldhriazcex .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -411,7 +411,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#oxscjfquko .gt_stub {
+#ldhriazcex .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -428,7 +428,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#oxscjfquko .gt_summary_row {
+#ldhriazcex .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -442,7 +442,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#oxscjfquko .gt_first_summary_row {
+#ldhriazcex .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -457,7 +457,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* summary_row.border.color */
 }
 
-#oxscjfquko .gt_grand_summary_row {
+#ldhriazcex .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -471,7 +471,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#oxscjfquko .gt_first_grand_summary_row {
+#ldhriazcex .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -486,7 +486,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* grand_summary_row.border.color */
 }
 
-#oxscjfquko .gt_table_body {
+#ldhriazcex .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -501,7 +501,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* table_body.border.bottom.color */
 }
 
-#oxscjfquko .gt_footnotes {
+#ldhriazcex .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -525,7 +525,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* footnotes.border.lr.color */
 }
 
-#oxscjfquko .gt_footnote {
+#ldhriazcex .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -533,7 +533,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* footnotes.padding */
 }
 
-#oxscjfquko .gt_sourcenotes {
+#ldhriazcex .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -557,48 +557,48 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   /* source_notes.border.lr.style */
 }
 
-#oxscjfquko .gt_sourcenote {
+#ldhriazcex .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#oxscjfquko .gt_left {
+#ldhriazcex .gt_left {
   text-align: left;
 }
 
-#oxscjfquko .gt_center {
+#ldhriazcex .gt_center {
   text-align: center;
 }
 
-#oxscjfquko .gt_right {
+#ldhriazcex .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oxscjfquko .gt_font_normal {
+#ldhriazcex .gt_font_normal {
   font-weight: normal;
 }
 
-#oxscjfquko .gt_font_bold {
+#ldhriazcex .gt_font_bold {
   font-weight: bold;
 }
 
-#oxscjfquko .gt_font_italic {
+#ldhriazcex .gt_font_italic {
   font-style: italic;
 }
 
-#oxscjfquko .gt_super {
+#ldhriazcex .gt_super {
   font-size: 65%;
 }
 
-#oxscjfquko .gt_footnote_marks {
+#ldhriazcex .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="oxscjfquko" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="ldhriazcex" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -709,6 +709,7 @@ Actually, the workshop went pretty smoothly for a first run, and we received pos
     + these things were likely to alienate people (you can follow a discussion and reprex of one [error here](https://github.com/tidymodels/tune/issues/151)). 
 
     **Bottom-line:** If you are trying to follow these slides on your own,  open the accompanying exercise files for each slide deck and run the first chunk locally (look out for our helper functions named `fit_data()` and `fit_split()`). If you want to take the training wheels off and use the base tidymodels functions, you may run into similar errors, but roughly:
+    
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 

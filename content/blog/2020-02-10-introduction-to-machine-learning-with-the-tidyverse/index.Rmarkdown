@@ -179,6 +179,7 @@ Actually, the workshop went pretty smoothly for a first run, and we received pos
     + these things were likely to alienate people (you can follow a discussion and reprex of one [error here](https://github.com/tidymodels/tune/issues/151)). 
 
     **Bottom-line:** If you are trying to follow these slides on your own,  open the accompanying exercise files for each slide deck and run the first chunk locally (look out for our helper functions named `fit_data()` and `fit_split()`). If you want to take the training wheels off and use the base tidymodels functions, you may run into similar errors, but roughly:
+    
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 
