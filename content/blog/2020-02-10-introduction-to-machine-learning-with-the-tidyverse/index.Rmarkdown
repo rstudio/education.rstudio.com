@@ -28,7 +28,7 @@ If you have heard or used the [caret](https://cran.r-project.org/web/packages/ca
 knitr::include_graphics("parsnip.png")
 ```
 
-We designed the workshop to provide a gentle introduction to machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning the basic theory and best practices that support machine learning. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it ieasy to the right thing, and harder to accidentally do the wrong thing. 
+We designed the workshop to provide a gentle introduction to machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning the basic theory and best practices that support machine learning. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it easy to the right thing, and harder to accidentally do the wrong thing. 
 
 ```{r echo=FALSE, out.width="49%", fig.link="https://github.com/allisonhorst/stats-illustrations", fig.cap="Art by Allison Horst", fig.align='center'}
 knitr::include_graphics("recipes.png")
@@ -119,7 +119,7 @@ knitr::include_url("https://conf20-intro-ml.netlify.com/")
 
 ## Materials
 
-The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed coding exercises.
+The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed group activities and independent coding exercises.
 
 <!--
 | session | slides                                 | Exercises + Solutions                   | 
@@ -182,7 +182,7 @@ Actually, the workshop went pretty smoothly for a first run, and we received pos
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 
-1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or needed to edited (i.e., replace or add arguments). On the first run, it became abundantly clear that tidymodels code is verbose and we wore learners out with too much typing; in fact, we wore ourselves out typing. To reduce the cognitive load, we tried our best to adopt a "no code chunk left blank" strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
+1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or "renovations needed" (i.e., replace or add arguments to already written code). On the first run, it became abundantly clear that, because tidymodels code can be verbose, we wore learners out with too much typing. In fact, we wore ourselves out typing. To reduce the cognitive load, we tried our best to adopt a *no-code-chunk-left-blank* strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
 
 ```{r long, fig.align='center', out.width='50%', echo=FALSE, fig.cap='(ref:long)'}
 knitr::include_graphics("long.png")
@@ -197,7 +197,7 @@ In hindsight after teaching this material twice, I would try to make room for a 
 
 I sincerely enjoyed developing this workshop with [Garrett](https://twitter.com/StatGarrett), getting a chance to work closely with [Max Kuhn](https://twitter.com/topepos) and [Davis Vaughan](https://twitter.com/dvaughan32) of the tidymodels team (now including the inimitable [Julia Silge](https://juliasilge.com/)!), and having the opportunity to introduce a new cohort of R and tidyverse users to [tidymodels](https://github.com/tidymodels). I hope the materials we developed are useful to learners and other educators too&mdash;if they are, [please let me know](https://twitter.com/apreshill), I'd love to hear about it.
 
-And most of all- thanks to our Boston and San Francisco workshop participants! You all were a pleasure to model with.
+And most of all&mdash;thanks to our Boston and San Francisco workshop participants! You all were a pleasure to model with.
 
 Happy predictive modeling!
 
@@ -205,7 +205,7 @@ Happy predictive modeling!
 knitr::include_graphics("https://media.giphy.com/media/3ohhwKFBNijG4GJEYw/giphy.gif")
 ```
 
-## People
+### Special thanks
 
 This workshop was made possible by an `r emo::ji("star")` all-star `r emo::ji("star")` TA team- you can find out more about them on our [workshop website](https://conf20-intro-ml.netlify.com/people/).
 
