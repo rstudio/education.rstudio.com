@@ -1,6 +1,7 @@
 ---
 title: 'Workshop wrap-up from rstudio::conf(2020)'
 date: '2020-02-13'
+description: 'rstudio::conf 2020 workshop materials now available'
 slug: conf2020-workshops
 categories: [learn, teach]
 tags: [conf2020]
@@ -11,9 +12,13 @@ photo:
   author: Susie Ho
 ---
 
-We just wrapped up rstudio::conf(2020) in San Francisco, California, which featured 19 (mostly) two-day workshops about topics ranging from R for Excel Users, Javascript for Shiny Users, to Deep Learning with Keras and Tensorflow. With 102 teaching assistants and 1307 workshop attendees, our instructor team 
+In January, we wrapped up [rstudio::conf(2020)](https://rstudio.com/conference/)&mdash;our fourth conference about all things R, RStudio, and data science. This year, the conference was held in San Francisco, California. Before the conference, we offered 19 (mostly) two-day workshops taught by RStudio staff as well as experts throughout the R community. Topics ranged from R for Excel Users, Javascript for Shiny Users, to Deep Learning with Keras and Tensorflow. With a teaching staff of 102 and 1307 workshop attendees, our instructors worked overtime to craft learning experiences that both challenged and empowered learners.
 
-The RStudio Education team designed a workshop buffet with what we hope offered something for everyone this year. Some of our tried and true workshops were offered again, but we also welcomed some new kids on the block, many by popular demand from attendees who weighed in our post-conf surveys in the past. For learners who attended workshops as well as those who could not join us, all workshop materials this year are available [online](https://github.com/rstudio-conf-2020). Even though the materials alone cannot replace the actual workshop experience, we hope that you’ll find them useful. Instructors will be blogging about their workshops as well, so [watch this space](/tags/conf2020) for some repo roadmaps to help you navigate their workshop materials. RStudio also regularly hosts workshops throughout the year so please subscribe to [training updates](https://www.rstudio.com/about/subscription-management/). 
+This year, the RStudio Education team designed a workshop line-up that we hope offered something for everyone. Some of our tried-and-true workshops were offered, but we also welcomed some new kids on the block, many by popular demand from attendees who weighed in on our post-conf surveys in the past. We were excited to work with new instructors from around the world, and to bring our conference attendees a slate of unique R-focused workshops.
+
+For learners who attended workshops as well as those who could not join us, all workshop materials this year are available [online](https://github.com/rstudio-conf-2020) with [CC BY-SA 4.0 licenses](#licensing). Even though the materials alone cannot replace the actual workshop experience, we hope that you’ll find them useful. Instructors will be blogging individually about their workshops as well, so [watch this space](/tags/conf2020) for some repo roadmaps to help you navigate their workshop materials. RStudio also regularly hosts workshops throughout the year so please subscribe to [training updates](https://www.rstudio.com/about/subscription-management/). 
+
+Thanks to all our instructors, teaching assistants, and workshop attendees this year&mdash;we hope to teach and learn together again in 2021 in [Orlando](https://rstd.io/conf)!
 
 ## Links
 
@@ -32,7 +37,7 @@ workshops %>%
 
 ## Licensing
 
-All workshop materials (including but not limited to slides, code, exercises) is
+All workshop materials are
 licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 <center>

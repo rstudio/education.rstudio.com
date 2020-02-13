@@ -1,6 +1,7 @@
 ---
 title: 'Workshop wrap-up from rstudio::conf(2020)'
 date: '2020-02-13'
+description: 'rstudio::conf 2020 workshop materials now available'
 slug: conf2020-workshops
 categories: [learn, teach]
 tags: [conf2020]
@@ -11,9 +12,13 @@ photo:
   author: Susie Ho
 ---
 
-We just wrapped up rstudio::conf(2020) in San Francisco, California, which featured 19 (mostly) two-day workshops about topics ranging from R for Excel Users, Javascript for Shiny Users, to Deep Learning with Keras and Tensorflow. With 102 teaching assistants and 1307 workshop attendees, our instructor team 
+In January, we wrapped up [rstudio::conf(2020)](https://rstudio.com/conference/)&mdash;our fourth conference about all things R, RStudio, and data science. This year, the conference was held in San Francisco, California. Before the conference, we offered 19 (mostly) two-day workshops taught by RStudio staff as well as experts throughout the R community. Topics ranged from R for Excel Users, Javascript for Shiny Users, to Deep Learning with Keras and Tensorflow. With a teaching staff of 102 and 1307 workshop attendees, our instructors worked overtime to craft learning experiences that both challenged and empowered learners.
 
-The RStudio Education team designed a workshop buffet with what we hope offered something for everyone this year. Some of our tried and true workshops were offered again, but we also welcomed some new kids on the block, many by popular demand from attendees who weighed in our post-conf surveys in the past. For learners who attended workshops as well as those who could not join us, all workshop materials this year are available [online](https://github.com/rstudio-conf-2020). Even though the materials alone cannot replace the actual workshop experience, we hope that you’ll find them useful. Instructors will be blogging about their workshops as well, so [watch this space](/tags/conf2020) for some repo roadmaps to help you navigate their workshop materials. RStudio also regularly hosts workshops throughout the year so please subscribe to [training updates](https://www.rstudio.com/about/subscription-management/). 
+This year, the RStudio Education team designed a workshop line-up that we hope offered something for everyone. Some of our tried-and-true workshops were offered, but we also welcomed some new kids on the block, many by popular demand from attendees who weighed in on our post-conf surveys in the past. We were excited to work with new instructors from around the world, and to bring our conference attendees a slate of unique R-focused workshops.
+
+For learners who attended workshops as well as those who could not join us, all workshop materials this year are available [online](https://github.com/rstudio-conf-2020) with [CC BY-SA 4.0 licenses](#licensing). Even though the materials alone cannot replace the actual workshop experience, we hope that you’ll find them useful. Instructors will be blogging individually about their workshops as well, so [watch this space](/tags/conf2020) for some repo roadmaps to help you navigate their workshop materials. RStudio also regularly hosts workshops throughout the year so please subscribe to [training updates](https://www.rstudio.com/about/subscription-management/). 
+
+Thanks to all our instructors, teaching assistants, and workshop attendees this year&mdash;we hope to teach and learn together again in 2021 in [Orlando](https://rstd.io/conf)!
 
 ## Links
 
@@ -21,7 +26,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xbhgzvjxon .gt_table {
+#edgqkabjie .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -38,7 +43,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-bottom-color: #A8A8A8;
 }
 
-#xbhgzvjxon .gt_heading {
+#edgqkabjie .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -49,7 +54,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-right-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_title {
+#edgqkabjie .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -59,7 +64,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-bottom-width: 0;
 }
 
-#xbhgzvjxon .gt_subtitle {
+#edgqkabjie .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -69,13 +74,13 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-top-width: 0;
 }
 
-#xbhgzvjxon .gt_bottom_border {
+#edgqkabjie .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_col_headings {
+#edgqkabjie .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -90,7 +95,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-right-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_col_heading {
+#edgqkabjie .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -104,7 +109,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   overflow-x: hidden;
 }
 
-#xbhgzvjxon .gt_column_spanner {
+#edgqkabjie .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -121,7 +126,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   width: 97%;
 }
 
-#xbhgzvjxon .gt_group_heading {
+#edgqkabjie .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -143,7 +148,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   vertical-align: middle;
 }
 
-#xbhgzvjxon .gt_empty_group_heading {
+#edgqkabjie .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -158,19 +163,19 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   vertical-align: middle;
 }
 
-#xbhgzvjxon .gt_striped {
+#edgqkabjie .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xbhgzvjxon .gt_from_md > :first-child {
+#edgqkabjie .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xbhgzvjxon .gt_from_md > :last-child {
+#edgqkabjie .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xbhgzvjxon .gt_row {
+#edgqkabjie .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -189,7 +194,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   overflow-x: hidden;
 }
 
-#xbhgzvjxon .gt_stub {
+#edgqkabjie .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -200,7 +205,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   padding-left: 12px;
 }
 
-#xbhgzvjxon .gt_summary_row {
+#edgqkabjie .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -210,7 +215,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   padding-right: 5px;
 }
 
-#xbhgzvjxon .gt_first_summary_row {
+#edgqkabjie .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -220,7 +225,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-top-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_grand_summary_row {
+#edgqkabjie .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -230,7 +235,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   padding-right: 5px;
 }
 
-#xbhgzvjxon .gt_first_grand_summary_row {
+#edgqkabjie .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -240,7 +245,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-top-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_table_body {
+#edgqkabjie .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -249,7 +254,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-bottom-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_footnotes {
+#edgqkabjie .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -263,13 +268,13 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-right-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_footnote {
+#edgqkabjie .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xbhgzvjxon .gt_sourcenotes {
+#edgqkabjie .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -283,46 +288,46 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
   border-right-color: #D3D3D3;
 }
 
-#xbhgzvjxon .gt_sourcenote {
+#edgqkabjie .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xbhgzvjxon .gt_left {
+#edgqkabjie .gt_left {
   text-align: left;
 }
 
-#xbhgzvjxon .gt_center {
+#edgqkabjie .gt_center {
   text-align: center;
 }
 
-#xbhgzvjxon .gt_right {
+#edgqkabjie .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xbhgzvjxon .gt_font_normal {
+#edgqkabjie .gt_font_normal {
   font-weight: normal;
 }
 
-#xbhgzvjxon .gt_font_bold {
+#edgqkabjie .gt_font_bold {
   font-weight: bold;
 }
 
-#xbhgzvjxon .gt_font_italic {
+#edgqkabjie .gt_font_italic {
   font-style: italic;
 }
 
-#xbhgzvjxon .gt_super {
+#edgqkabjie .gt_super {
   font-size: 65%;
 }
 
-#xbhgzvjxon .gt_footnote_marks {
+#edgqkabjie .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="xbhgzvjxon" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="edgqkabjie" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -472,7 +477,7 @@ The RStudio Education team designed a workshop buffet with what we hope offered 
 
 ## Licensing
 
-All workshop materials (including but not limited to slides, code, exercises) is
+All workshop materials are
 licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 <center>
