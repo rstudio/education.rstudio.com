@@ -3,7 +3,7 @@ title: Tidy Time Series and Forecasting in R
 author:
   - '[Rob J Hyndman](https://robjhyndman.com/)'
 date: '2020-02-13'
-draft: true
+draft: false
 slug: tidyverts
 description: This is what we covered in the Tidy Time Series workshop at rstudio::conf2020
 photo:
