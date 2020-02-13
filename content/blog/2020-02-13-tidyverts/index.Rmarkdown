@@ -3,8 +3,8 @@ title: Tidy Time Series and Forecasting in R
 author:
   - '[Rob J Hyndman](https://robjhyndman.com/)'
 date: '2020-02-13'
-draft: true
-slug: tidyverts
+slug: conf20-ts
+tags: [conf2020]
 description: This is what we covered in the Tidy Time Series workshop at rstudio::conf2020
 photo:
   url: https://unsplash.com/photos/1C8Zgr-vnfA
@@ -14,6 +14,11 @@ photo:
 ```{r include = FALSE}
 knitr::opts_chunk$set(fig.path = "figs/")
 ```
+
+> tl;dr: all workshop materials are available here: <br>
+> <i class="fab fa-github fa-fw"></i> https://rstd.io/conf20-ts <br>
+> `r emo::ji("book")` [Forecasting: Principles and Practice](https://otexts.com/fpp3/) <br>
+> <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 For the last couple of years I've watched the twitter feed from the Rstudio conference with jealousy --- not just FOMO but KIWMO (Knowing I Was Missing Out). So when I was asked to teach a workshop on Tidy Time Series as part of rstudio::conf2020, I agreed without hesitation. The idea was to teach a workshop using a tidy approach to time series --- something that has only been possible very recently.
 
