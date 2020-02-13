@@ -7,6 +7,7 @@ categories:
   - teach
   - learn
 slug: conf20-tidytext
+tags: [conf2020]
 description: |
   Check out slides and other materials on text mining and modeling using tidy data principles.
 photo:
