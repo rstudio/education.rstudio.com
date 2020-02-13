@@ -2,12 +2,13 @@
 title: What They Forgot to Teach You About R at rstudio::conf 2020
 author:
   - '[Kara Woo](https://karawoo.com)'
-date: '2020-02-12'
+date: '2020-02-13'
 categories:
   - learn
+  - teach
 tags:
-  - rstudioconf
-slug: rstudio-conf-2020-what-they-forgot
+  - conf2020
+slug: conf20-wtf
 photo:
   url: https://unsplash.com/photos/okvqMfl78YE
   author: Nielsen Ramon
