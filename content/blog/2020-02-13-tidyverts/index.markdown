@@ -11,9 +11,7 @@ photo:
   author: Alessandro Venturi
 ---
 
-```{r include = FALSE}
-knitr::opts_chunk$set(fig.path = "figs/")
-```
+
 
 For the last couple of years I've watched the twitter feed from the Rstudio conference with jealousy --- not just FOMO but KIWMO (Knowing I Was Missing Out). So when I was asked to teach a workshop on Tidy Time Series as part of rstudio::conf2020, I agreed without hesitation. The idea was to teach a workshop using a tidy approach to time series --- something that has only been possible very recently.
 
