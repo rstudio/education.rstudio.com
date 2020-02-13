@@ -1,7 +1,7 @@
 ---
 title: 'Workshop wrap-up from rstudio::conf(2020)'
 date: '2020-02-13'
-description: 'rstudio::conf 2020 workshop materials now available'
+description: 'rstudio::conf(2020) workshop materials now available'
 slug: conf2020-workshops
 categories: [learn, teach]
 tags: [conf2020]
@@ -26,7 +26,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#edgqkabjie .gt_table {
+#hghkvoenpg .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -43,7 +43,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-color: #A8A8A8;
 }
 
-#edgqkabjie .gt_heading {
+#hghkvoenpg .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -54,7 +54,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_title {
+#hghkvoenpg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -64,7 +64,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-width: 0;
 }
 
-#edgqkabjie .gt_subtitle {
+#hghkvoenpg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -74,13 +74,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-width: 0;
 }
 
-#edgqkabjie .gt_bottom_border {
+#hghkvoenpg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_col_headings {
+#hghkvoenpg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -95,7 +95,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_col_heading {
+#hghkvoenpg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -109,7 +109,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   overflow-x: hidden;
 }
 
-#edgqkabjie .gt_column_spanner {
+#hghkvoenpg .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -126,7 +126,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   width: 97%;
 }
 
-#edgqkabjie .gt_group_heading {
+#hghkvoenpg .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -148,7 +148,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#edgqkabjie .gt_empty_group_heading {
+#hghkvoenpg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -163,19 +163,19 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#edgqkabjie .gt_striped {
+#hghkvoenpg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#edgqkabjie .gt_from_md > :first-child {
+#hghkvoenpg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#edgqkabjie .gt_from_md > :last-child {
+#hghkvoenpg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#edgqkabjie .gt_row {
+#hghkvoenpg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -194,7 +194,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   overflow-x: hidden;
 }
 
-#edgqkabjie .gt_stub {
+#hghkvoenpg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -205,7 +205,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-left: 12px;
 }
 
-#edgqkabjie .gt_summary_row {
+#hghkvoenpg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -215,7 +215,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#edgqkabjie .gt_first_summary_row {
+#hghkvoenpg .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -225,7 +225,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_grand_summary_row {
+#hghkvoenpg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -235,7 +235,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#edgqkabjie .gt_first_grand_summary_row {
+#hghkvoenpg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -245,7 +245,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_table_body {
+#hghkvoenpg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -254,7 +254,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_footnotes {
+#hghkvoenpg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -268,13 +268,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_footnote {
+#hghkvoenpg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#edgqkabjie .gt_sourcenotes {
+#hghkvoenpg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -288,46 +288,46 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#edgqkabjie .gt_sourcenote {
+#hghkvoenpg .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#edgqkabjie .gt_left {
+#hghkvoenpg .gt_left {
   text-align: left;
 }
 
-#edgqkabjie .gt_center {
+#hghkvoenpg .gt_center {
   text-align: center;
 }
 
-#edgqkabjie .gt_right {
+#hghkvoenpg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#edgqkabjie .gt_font_normal {
+#hghkvoenpg .gt_font_normal {
   font-weight: normal;
 }
 
-#edgqkabjie .gt_font_bold {
+#hghkvoenpg .gt_font_bold {
   font-weight: bold;
 }
 
-#edgqkabjie .gt_font_italic {
+#hghkvoenpg .gt_font_italic {
   font-style: italic;
 }
 
-#edgqkabjie .gt_super {
+#hghkvoenpg .gt_super {
   font-size: 65%;
 }
 
-#edgqkabjie .gt_footnote_marks {
+#hghkvoenpg .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="edgqkabjie" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="hghkvoenpg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -452,7 +452,8 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
     <tr>
       <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-tidytext'>Text Mining with Tidy Data Principles Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-tidytext/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+</div></td>
       <td class="gt_row gt_left"><div class='gt_from_md'><p>Julia Silge</p>
 </div></td>
     </tr>
