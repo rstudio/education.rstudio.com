@@ -135,7 +135,7 @@ remotes::install_github("tidymodels/modeldata")
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏳.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏲.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
@@ -165,7 +165,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ejyyobpfuf .gt_table {
+#auaaheeegh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -182,7 +182,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #A8A8A8;
 }
 
-#ejyyobpfuf .gt_heading {
+#auaaheeegh .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -193,7 +193,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_title {
+#auaaheeegh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -203,7 +203,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#ejyyobpfuf .gt_subtitle {
+#auaaheeegh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -213,13 +213,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#ejyyobpfuf .gt_bottom_border {
+#auaaheeegh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_col_headings {
+#auaaheeegh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +234,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_col_heading {
+#auaaheeegh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -248,7 +248,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#ejyyobpfuf .gt_column_spanner {
+#auaaheeegh .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -265,7 +265,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   width: 97%;
 }
 
-#ejyyobpfuf .gt_group_heading {
+#auaaheeegh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -287,7 +287,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#ejyyobpfuf .gt_empty_group_heading {
+#auaaheeegh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -302,19 +302,19 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#ejyyobpfuf .gt_striped {
+#auaaheeegh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ejyyobpfuf .gt_from_md > :first-child {
+#auaaheeegh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ejyyobpfuf .gt_from_md > :last-child {
+#auaaheeegh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ejyyobpfuf .gt_row {
+#auaaheeegh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -333,7 +333,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#ejyyobpfuf .gt_stub {
+#auaaheeegh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -344,7 +344,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#ejyyobpfuf .gt_summary_row {
+#auaaheeegh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -354,7 +354,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#ejyyobpfuf .gt_first_summary_row {
+#auaaheeegh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +364,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_grand_summary_row {
+#auaaheeegh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -374,7 +374,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#ejyyobpfuf .gt_first_grand_summary_row {
+#auaaheeegh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +384,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_table_body {
+#auaaheeegh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -393,7 +393,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_footnotes {
+#auaaheeegh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -407,13 +407,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_footnote {
+#auaaheeegh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ejyyobpfuf .gt_sourcenotes {
+#auaaheeegh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -427,46 +427,46 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#ejyyobpfuf .gt_sourcenote {
+#auaaheeegh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ejyyobpfuf .gt_left {
+#auaaheeegh .gt_left {
   text-align: left;
 }
 
-#ejyyobpfuf .gt_center {
+#auaaheeegh .gt_center {
   text-align: center;
 }
 
-#ejyyobpfuf .gt_right {
+#auaaheeegh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ejyyobpfuf .gt_font_normal {
+#auaaheeegh .gt_font_normal {
   font-weight: normal;
 }
 
-#ejyyobpfuf .gt_font_bold {
+#auaaheeegh .gt_font_bold {
   font-weight: bold;
 }
 
-#ejyyobpfuf .gt_font_italic {
+#auaaheeegh .gt_font_italic {
   font-style: italic;
 }
 
-#ejyyobpfuf .gt_super {
+#auaaheeegh .gt_super {
   font-size: 65%;
 }
 
-#ejyyobpfuf .gt_footnote_marks {
+#auaaheeegh .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="ejyyobpfuf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="auaaheeegh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
