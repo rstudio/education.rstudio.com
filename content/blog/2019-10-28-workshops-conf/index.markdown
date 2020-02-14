@@ -7,6 +7,7 @@ categories:
   - learn
   - events
 slug: conf-workshops
+tags: [conf2020]
 description: |
   A closer look at rstudio::conf(2020) workshops
 photo:
