@@ -1,23 +1,27 @@
 ---
-title: 'Introduction to Machine Learning with the Tidyverse'
-date: '2020-02-10'
-slug: intro-to-ml-tidy
-categories: []
-tags: []
+title: Introduction to Machine Learning with the Tidyverse
 author:
   - alison
+date: '2020-02-14'
+categories:
+  - teach
+  - learn
+tags:
+  - conf2020
+slug: conf20-intro-ml
 photo:
   url: https://unsplash.com/photos/2YPSfYQA6Z0
   author: Brunel Johnson
-description: >
-  Here is your roadmap to our two-day rstudio::conf(2020) workshop on machine learning with the tidyverse and tidymodels.
+description: Here is your roadmap to our two-day rstudio::conf(2020) introductory workshop on machine
+  learning with the tidyverse and tidymodels.
 ---
 
 
 
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github"></i> https://rstd.io/conf20-intro-ml <br>
-> 🔗 https://conf20-intro-ml.netlify.com/
+> 🔗 https://conf20-intro-ml.netlify.com/ <br>
+> <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling (also known as [machine learning](https://sebastianraschka.com/Articles/2014_intro_supervised_learning.html#machine-learning-and-pattern-classification)).
 
@@ -83,7 +87,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Attaching packages ───────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
+## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────── tidymodels 0.0.3 ──
 ```
 
 ```
@@ -96,7 +100,7 @@ library(tidymodels)
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
+## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────── tidymodels_conflicts() ──
 ## x purrr::discard()    masks scales::discard()
 ## x dplyr::filter()     masks stats::filter()
 ## x dplyr::lag()        masks stats::lag()
@@ -165,7 +169,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#auaaheeegh .gt_table {
+#vmsuoaifqy .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -182,7 +186,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #A8A8A8;
 }
 
-#auaaheeegh .gt_heading {
+#vmsuoaifqy .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -193,7 +197,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_title {
+#vmsuoaifqy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -203,7 +207,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#auaaheeegh .gt_subtitle {
+#vmsuoaifqy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -213,13 +217,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#auaaheeegh .gt_bottom_border {
+#vmsuoaifqy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_col_headings {
+#vmsuoaifqy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +238,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_col_heading {
+#vmsuoaifqy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -248,7 +252,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#auaaheeegh .gt_column_spanner {
+#vmsuoaifqy .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -265,7 +269,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   width: 97%;
 }
 
-#auaaheeegh .gt_group_heading {
+#vmsuoaifqy .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -287,7 +291,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#auaaheeegh .gt_empty_group_heading {
+#vmsuoaifqy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -302,19 +306,19 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#auaaheeegh .gt_striped {
+#vmsuoaifqy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#auaaheeegh .gt_from_md > :first-child {
+#vmsuoaifqy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#auaaheeegh .gt_from_md > :last-child {
+#vmsuoaifqy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#auaaheeegh .gt_row {
+#vmsuoaifqy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -333,7 +337,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#auaaheeegh .gt_stub {
+#vmsuoaifqy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -344,7 +348,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#auaaheeegh .gt_summary_row {
+#vmsuoaifqy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -354,7 +358,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#auaaheeegh .gt_first_summary_row {
+#vmsuoaifqy .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -364,7 +368,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_grand_summary_row {
+#vmsuoaifqy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -374,7 +378,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#auaaheeegh .gt_first_grand_summary_row {
+#vmsuoaifqy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -384,7 +388,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_table_body {
+#vmsuoaifqy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -393,7 +397,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_footnotes {
+#vmsuoaifqy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -407,13 +411,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_footnote {
+#vmsuoaifqy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#auaaheeegh .gt_sourcenotes {
+#vmsuoaifqy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -427,46 +431,46 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#auaaheeegh .gt_sourcenote {
+#vmsuoaifqy .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#auaaheeegh .gt_left {
+#vmsuoaifqy .gt_left {
   text-align: left;
 }
 
-#auaaheeegh .gt_center {
+#vmsuoaifqy .gt_center {
   text-align: center;
 }
 
-#auaaheeegh .gt_right {
+#vmsuoaifqy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#auaaheeegh .gt_font_normal {
+#vmsuoaifqy .gt_font_normal {
   font-weight: normal;
 }
 
-#auaaheeegh .gt_font_bold {
+#vmsuoaifqy .gt_font_bold {
   font-weight: bold;
 }
 
-#auaaheeegh .gt_font_italic {
+#vmsuoaifqy .gt_font_italic {
   font-style: italic;
 }
 
-#auaaheeegh .gt_super {
+#vmsuoaifqy .gt_super {
   font-size: 65%;
 }
 
-#auaaheeegh .gt_footnote_marks {
+#vmsuoaifqy .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="auaaheeegh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="vmsuoaifqy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -581,7 +585,7 @@ Actually, the workshop went pretty smoothly for a first run, and we received pos
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 
-1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or "renovations needed" (i.e., replace or add arguments to already written code). On the first run, it became abundantly clear that, because tidymodels code can be verbose, we wore learners out with too much typing. In fact, we wore ourselves out typing. To reduce the cognitive load, we tried our best to adopt a *no-code-chunk-left-blank* strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
+1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or "fix me" (i.e., replace or add arguments to already written code). On the first run, it became abundantly clear that, because tidymodels code can be verbose, we wore learners out with too much typing. In fact, we wore ourselves out typing. To reduce the typing (and cognitive) load, we tried to adopt a *no-code-chunk-left-blank* strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
 
 <div class="figure" style="text-align: center">
 <img src="long.png" alt="Video from YouTube." width="50%" />

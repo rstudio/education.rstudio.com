@@ -1,23 +1,27 @@
 ---
-title: 'Introduction to Machine Learning with the Tidyverse'
-date: '2020-02-10'
-slug: intro-to-ml-tidy
-categories: []
-tags: []
+title: Introduction to Machine Learning with the Tidyverse
 author:
   - alison
+date: '2020-02-14'
+categories:
+  - teach
+  - learn
+tags:
+  - conf2020
+slug: conf20-intro-ml
 photo:
   url: https://unsplash.com/photos/2YPSfYQA6Z0
   author: Brunel Johnson
-description: >
-  Here is your roadmap to our two-day rstudio::conf(2020) workshop on machine learning with the tidyverse and tidymodels.
+description: Here is your roadmap to our two-day rstudio::conf(2020) introductory workshop on machine
+  learning with the tidyverse and tidymodels.
 ---
 
 (ref:long) Video from [YouTube](https://www.youtube.com/watch?v=DUGN-12HHwQ).
 
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github"></i> https://rstd.io/conf20-intro-ml <br>
-> `r emo::ji("link")` https://conf20-intro-ml.netlify.com/
+> `r emo::ji("link")` https://conf20-intro-ml.netlify.com/ <br>
+> <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling (also known as [machine learning](https://sebastianraschka.com/Articles/2014_intro_supervised_learning.html#machine-learning-and-pattern-classification)).
 
@@ -138,7 +142,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
 library(knitr)
 library(gt)
 library(tidyverse)
-tm <- read_csv(here::here("content/blog/2020-02-10-introduction-to-machine-learning-with-the-tidyverse/tm.csv")) %>% 
+tm <- read_csv(here::here("content/blog/2020-02-14-introduction-to-machine-learning-with-the-tidyverse/tm.csv")) %>% 
   mutate(
       Slides = paste0("<a href='https://conf20-intro-ml.netlify.com/materials/", slide_url,"'  target='_blank'>", slide_name, "</a>"),
       Exercises = if_else(!session %in% c(0, 3), paste0("<a href='https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/materials/exercises/", mat_rmd,"'  target='_blank'>", "Exercises", "</a>"), ""),
@@ -182,7 +186,7 @@ Actually, the workshop went pretty smoothly for a first run, and we received pos
     + `fit_data()` = [`parsnip::fit()`](https://tidymodels.github.io/parsnip/reference/fit.html)
     + `fit_split()` = [`tune::last_fit()`](https://tidymodels.github.io/tune/reference/last_fit.html)
 
-1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or "renovations needed" (i.e., replace or add arguments to already written code). On the first run, it became abundantly clear that, because tidymodels code can be verbose, we wore learners out with too much typing. In fact, we wore ourselves out typing. To reduce the cognitive load, we tried our best to adopt a *no-code-chunk-left-blank* strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
+1. Finally, we re-worked most of our exercises (within R Markdown documents) to provide code templates that were either "fill-in-the-blanks" or "fix me" (i.e., replace or add arguments to already written code). On the first run, it became abundantly clear that, because tidymodels code can be verbose, we wore learners out with too much typing. In fact, we wore ourselves out typing. To reduce the typing (and cognitive) load, we tried to adopt a *no-code-chunk-left-blank* strategy so that learners did not feel like [this](https://www.youtube.com/watch?v=DUGN-12HHwQ) at the end:
 
 ```{r long, fig.align='center', out.width='50%', echo=FALSE, fig.cap='(ref:long)'}
 knitr::include_graphics("long.png")
