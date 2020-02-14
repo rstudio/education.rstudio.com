@@ -73,3 +73,7 @@ Johnston, Sean Kross, and Theo Roe&mdash;kept things running smoothly by moving
 throughout the room and answering learners' questions. Thank you to them, to the
 rest of the RStudio team, and to the workshop participants for making the two
 days such a success!
+
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
