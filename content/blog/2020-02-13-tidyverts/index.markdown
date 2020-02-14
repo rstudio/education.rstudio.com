@@ -4,6 +4,9 @@ author:
   - '[Rob J Hyndman](https://robjhyndman.com/)'
 date: '2020-02-13'
 slug: conf20-ts
+categories:
+  - teach
+  - learn
 tags: [conf2020]
 description: This is what we covered in the Tidy Time Series workshop at rstudio::conf2020
 photo:
