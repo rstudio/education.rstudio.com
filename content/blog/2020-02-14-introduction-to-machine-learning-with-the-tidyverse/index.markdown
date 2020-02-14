@@ -23,7 +23,7 @@ description: Here is your roadmap to our two-day rstudio::conf(2020) introductor
 > 🔗 https://conf20-intro-ml.netlify.com/ <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
-At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling (also known as [machine learning](https://sebastianraschka.com/Articles/2014_intro_supervised_learning.html#machine-learning-and-pattern-classification)).
+At [rstudio::conf(2020)](https://rstd.io/conf) in January, I was lucky to lead a new two-day workshop called "Introduction to Machine Learning with the Tidyverse." This workshop was designed for learners who are comfortable using R and the [tidyverse](https://www.tidyverse.org/), and curious to learn how to use these tools to do machine learning using the modern suite of R packages called [tidymodels](https://github.com/tidymodels). If you just read that last sentence and don't yet know the word "tidymodels" yet, it is a collection of modeling packages that, like the tidyverse, have a consistent API and are designed to work together specifically to support the activities of a human doing predictive modeling (which includes [machine learning](https://sebastianraschka.com/Articles/2014_intro_supervised_learning.html#machine-learning-and-pattern-classification)).
 
 If you have heard or used the [caret](https://cran.r-project.org/web/packages/caret/caret.pdf) package, tidymodels is its successor. The development of tidymodels is supported by [RStudio](https://rstudio.com/), and the team is led by [Max Kuhn](https://twitter.com/topepos), the author of [caret](https://cran.r-project.org/web/packages/caret/caret.pdf), [Cubist](https://cran.r-project.org/web/packages/Cubist/index.html), [C50](https://cran.r-project.org/web/packages/C50/C50.pdf) and other R packages for predictive modeling. Max has offered an [Applied Machine Learning workshop](https://github.com/tidymodels/aml-training) for several years now, but we have not yet attempted to teach tidymodels to a beginner audience. Until now! 🎉
 
@@ -32,7 +32,7 @@ If you have heard or used the [caret](https://cran.r-project.org/web/packages/ca
 <p class="caption">Figure 1: Art by Allison Horst</p>
 </div>
 
-My colleague [Garrett Grolemund](https://twitter.com/statgarrett?lang=en) and I designed the workshop to provide a gentle introduction to supervised machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning the basic theory and best practices that support machine learning. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it easy to the right thing, and harder to accidentally do the wrong thing. 
+My colleague [Garrett Grolemund](https://twitter.com/statgarrett?lang=en) and I designed the workshop to provide a gentle introduction to supervised machine learning: concepts, methods, and code. Attendees learned how to train and assess predictive models with several common machine learning algorithms, as well as how to do feature engineering to improve the predictive accuracy of their models. We focused on learning intuitive explanations of the models and best practices for predictive modeling. Along the way, we introduced several core tidymodels packages including [parsnip][parsnip], [recipes][recipes], [rsample][rsample], and [tune][tune], which provide a grammar for modeling that makes it easy to the right thing, and harder to accidentally do the wrong thing. 
 
 <div class="figure" style="text-align: center">
 <a href="https://github.com/allisonhorst/stats-illustrations" target="_blank"><img src="recipes.png" alt="Art by Allison Horst" width="49%" /></a>
@@ -142,7 +142,7 @@ remotes::install_github("tidymodels/modeldata")
 + **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. The source files all live within the [`site/static/slides`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/tree/master/site/static/slides) folder of the repository. 
 
     + For a xaringan tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). 
-    + I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏲.
+    + I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏳.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
@@ -172,7 +172,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zcodzrvyiw .gt_table {
+#edfynvcvkc .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -189,7 +189,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #A8A8A8;
 }
 
-#zcodzrvyiw .gt_heading {
+#edfynvcvkc .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -200,7 +200,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_title {
+#edfynvcvkc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -210,7 +210,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#zcodzrvyiw .gt_subtitle {
+#edfynvcvkc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -220,13 +220,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#zcodzrvyiw .gt_bottom_border {
+#edfynvcvkc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_col_headings {
+#edfynvcvkc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -241,7 +241,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_col_heading {
+#edfynvcvkc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -255,7 +255,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#zcodzrvyiw .gt_column_spanner {
+#edfynvcvkc .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -272,7 +272,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   width: 97%;
 }
 
-#zcodzrvyiw .gt_group_heading {
+#edfynvcvkc .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -294,7 +294,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#zcodzrvyiw .gt_empty_group_heading {
+#edfynvcvkc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -309,19 +309,19 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#zcodzrvyiw .gt_striped {
+#edfynvcvkc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zcodzrvyiw .gt_from_md > :first-child {
+#edfynvcvkc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zcodzrvyiw .gt_from_md > :last-child {
+#edfynvcvkc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zcodzrvyiw .gt_row {
+#edfynvcvkc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -340,7 +340,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#zcodzrvyiw .gt_stub {
+#edfynvcvkc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -351,7 +351,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#zcodzrvyiw .gt_summary_row {
+#edfynvcvkc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -361,7 +361,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#zcodzrvyiw .gt_first_summary_row {
+#edfynvcvkc .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -371,7 +371,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_grand_summary_row {
+#edfynvcvkc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -381,7 +381,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#zcodzrvyiw .gt_first_grand_summary_row {
+#edfynvcvkc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -391,7 +391,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_table_body {
+#edfynvcvkc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -400,7 +400,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_footnotes {
+#edfynvcvkc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -414,13 +414,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_footnote {
+#edfynvcvkc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zcodzrvyiw .gt_sourcenotes {
+#edfynvcvkc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -434,46 +434,46 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#zcodzrvyiw .gt_sourcenote {
+#edfynvcvkc .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zcodzrvyiw .gt_left {
+#edfynvcvkc .gt_left {
   text-align: left;
 }
 
-#zcodzrvyiw .gt_center {
+#edfynvcvkc .gt_center {
   text-align: center;
 }
 
-#zcodzrvyiw .gt_right {
+#edfynvcvkc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zcodzrvyiw .gt_font_normal {
+#edfynvcvkc .gt_font_normal {
   font-weight: normal;
 }
 
-#zcodzrvyiw .gt_font_bold {
+#edfynvcvkc .gt_font_bold {
   font-weight: bold;
 }
 
-#zcodzrvyiw .gt_font_italic {
+#edfynvcvkc .gt_font_italic {
   font-style: italic;
 }
 
-#zcodzrvyiw .gt_super {
+#edfynvcvkc .gt_super {
   font-size: 65%;
 }
 
-#zcodzrvyiw .gt_footnote_marks {
+#edfynvcvkc .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="zcodzrvyiw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="edfynvcvkc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
