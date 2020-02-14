@@ -39,6 +39,8 @@ I like to use [xaringan](https://github.com/yihui/xaringan) for code-heavy works
 Throughout both days, participants chose their own [text datasets from Project Gutenberg](https://www.gutenberg.org/browse/scores/top) to use during the workshop. There is value in learners being able to have some autonomy in what they spend two long days looking at over and over again, and also in seeing how their results differ from their neighbors'. Seeing our participants engage deeply with learning about text analysis and with each other was a highlight of my conference experience this year!
 
 
-
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
 
 
