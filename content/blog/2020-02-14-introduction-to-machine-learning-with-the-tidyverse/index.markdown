@@ -139,7 +139,10 @@ remotes::install_github("tidymodels/modeldata")
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏲.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. The source files all live within the [`site/static/slides`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/tree/master/site/static/slides) folder of the repository. 
+
+    + For a xaringan tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). 
+    + I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers ⏲.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) 🚀
 
@@ -149,7 +152,7 @@ In the rest of this post, I'll walk you through the materials available through 
 
 ## Materials
 
-The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed group activities and independent coding exercises.
+The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed group activities and independent coding exercises. All of these links are also available on our [website](https://conf20-intro-ml.netlify.com/materials/).
 
 <!--
 | session | slides                                 | Exercises + Solutions                   | 
@@ -169,7 +172,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vmsuoaifqy .gt_table {
+#zcodzrvyiw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -186,7 +189,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #A8A8A8;
 }
 
-#vmsuoaifqy .gt_heading {
+#zcodzrvyiw .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -197,7 +200,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_title {
+#zcodzrvyiw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -207,7 +210,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-width: 0;
 }
 
-#vmsuoaifqy .gt_subtitle {
+#zcodzrvyiw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -217,13 +220,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-width: 0;
 }
 
-#vmsuoaifqy .gt_bottom_border {
+#zcodzrvyiw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_col_headings {
+#zcodzrvyiw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -238,7 +241,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_col_heading {
+#zcodzrvyiw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -252,7 +255,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#vmsuoaifqy .gt_column_spanner {
+#zcodzrvyiw .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -269,7 +272,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   width: 97%;
 }
 
-#vmsuoaifqy .gt_group_heading {
+#zcodzrvyiw .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -291,7 +294,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#vmsuoaifqy .gt_empty_group_heading {
+#zcodzrvyiw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -306,19 +309,19 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   vertical-align: middle;
 }
 
-#vmsuoaifqy .gt_striped {
+#zcodzrvyiw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vmsuoaifqy .gt_from_md > :first-child {
+#zcodzrvyiw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vmsuoaifqy .gt_from_md > :last-child {
+#zcodzrvyiw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vmsuoaifqy .gt_row {
+#zcodzrvyiw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -337,7 +340,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   overflow-x: hidden;
 }
 
-#vmsuoaifqy .gt_stub {
+#zcodzrvyiw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -348,7 +351,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-left: 12px;
 }
 
-#vmsuoaifqy .gt_summary_row {
+#zcodzrvyiw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -358,7 +361,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#vmsuoaifqy .gt_first_summary_row {
+#zcodzrvyiw .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -368,7 +371,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_grand_summary_row {
+#zcodzrvyiw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -378,7 +381,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   padding-right: 5px;
 }
 
-#vmsuoaifqy .gt_first_grand_summary_row {
+#zcodzrvyiw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -388,7 +391,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-top-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_table_body {
+#zcodzrvyiw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -397,7 +400,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-bottom-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_footnotes {
+#zcodzrvyiw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -411,13 +414,13 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_footnote {
+#zcodzrvyiw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vmsuoaifqy .gt_sourcenotes {
+#zcodzrvyiw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -431,46 +434,46 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
   border-right-color: #D3D3D3;
 }
 
-#vmsuoaifqy .gt_sourcenote {
+#zcodzrvyiw .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vmsuoaifqy .gt_left {
+#zcodzrvyiw .gt_left {
   text-align: left;
 }
 
-#vmsuoaifqy .gt_center {
+#zcodzrvyiw .gt_center {
   text-align: center;
 }
 
-#vmsuoaifqy .gt_right {
+#zcodzrvyiw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vmsuoaifqy .gt_font_normal {
+#zcodzrvyiw .gt_font_normal {
   font-weight: normal;
 }
 
-#vmsuoaifqy .gt_font_bold {
+#zcodzrvyiw .gt_font_bold {
   font-weight: bold;
 }
 
-#vmsuoaifqy .gt_font_italic {
+#zcodzrvyiw .gt_font_italic {
   font-style: italic;
 }
 
-#vmsuoaifqy .gt_super {
+#zcodzrvyiw .gt_super {
   font-size: 65%;
 }
 
-#vmsuoaifqy .gt_footnote_marks {
+#zcodzrvyiw .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="vmsuoaifqy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="zcodzrvyiw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -612,6 +615,10 @@ Happy predictive modeling!
 This workshop was made possible by an ⭐ all-star ⭐ TA team- you can find out more about them on our [workshop website](https://conf20-intro-ml.netlify.com/people/).
 
 <a href="https://conf20-intro-ml.netlify.com/people/" target="_blank"><img src="tas.png" width="100%" style="display: block; margin: auto;" /></a>
+
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
 
 [00-slides]: https://conf20-intro-ml.netlify.com/materials/00-welcome/
 

@@ -110,7 +110,10 @@ remotes::install_github("tidymodels/modeldata")
 
 + **RStudio Server Pro:** Our [RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/) workspaces used Amazon compute optimized [`c5.large` instances](https://aws.amazon.com/ec2/instance-types/) with 2 vCPUs and 4 GiB memory for each learner.
 
-+ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. For a tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers `r emo::ji("timer")`.
++ **Slides:** I used the [xaringan package](https://github.com/yihui/xaringan) to build all my slides in R Markdown. The source files all live within the [`site/static/slides`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/tree/master/site/static/slides) folder of the repository. 
+
+    + For a xaringan tutorial, you can see my rstudio::conf(2019) workshop slides [here](https://arm.rbind.io/slides/xaringan.html#1). 
+    + I also highly recommend the [countdown package](https://pkg.garrickadenbuie.com/countdown/#1), which I used to create the exercise timers `r emo::ji("timer")`.
 
 + **Workshop website:** I used the [blogdown R package](https://bookdown.org/yihui/blogdown/) to build the [website](https://conf20-intro-ml.netlify.com), with the [Hugo academic theme](https://themes.gohugo.io/academic/) with a custom CSS designed by [Desirée De Leon](http://desiree.rbind.io/). If you want to re-use my workshop website (you'll need [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/) accounts), click on *Deploy to Netlify* button at the top of my [`README`](https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/README.md) `r emo::ji("rocket")`
 
@@ -122,7 +125,7 @@ knitr::include_url("https://conf20-intro-ml.netlify.com/")
 
 ## Materials
 
-The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed group activities and independent coding exercises.
+The workshop consisted of 8 sessions. In each session, we presented slides interspersed with timed group activities and independent coding exercises. All of these links are also available on our [website](https://conf20-intro-ml.netlify.com/materials/).
 
 <!--
 | session | slides                                 | Exercises + Solutions                   | 
@@ -216,6 +219,10 @@ This workshop was made possible by an `r emo::ji("star")` all-star `r emo::ji("s
 ```{r echo=FALSE, out.width='100%',fig.align='center', fig.link="https://conf20-intro-ml.netlify.com/people/"}
 knitr::include_graphics("tas.png")
 ```
+
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
 
 [00-slides]: https://conf20-intro-ml.netlify.com/materials/00-welcome/
 
