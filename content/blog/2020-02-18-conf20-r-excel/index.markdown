@@ -18,7 +18,7 @@ description: |
 > <i class="fab fa-github"></i> https://github.com/rstudio-conf-2020/r-for-excel <br>
 > 🔗 https://rstd.io/conf20-r-excel <br>
 > 🎨 [Slides](https://docs.google.com/presentation/d/1w9cVzEsdbyZ6vay4UnoTvTWd9t-AO_x06HoVzgAiSFE/edit?usp=sharing) <br>
-> 🌺 Cross posted: <https://openscapes.org> <br>
+> 🌺 Cross-posted: [https://openscapes.org](https://www.openscapes.org/blog/2020/02/18/r-for-excel/) <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 ## Background

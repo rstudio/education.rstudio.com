@@ -18,7 +18,7 @@ description: |
 > <i class="fab fa-github"></i> https://github.com/rstudio-conf-2020/r-for-excel <br>
 > `r emo::ji("link")` https://rstd.io/conf20-r-excel <br>
 > `r emo::ji("art")` [Slides](https://docs.google.com/presentation/d/1w9cVzEsdbyZ6vay4UnoTvTWd9t-AO_x06HoVzgAiSFE/edit?usp=sharing) <br>
-> `r emo::ji("hibiscus")` Cross posted: <https://openscapes.org> <br>
+> `r emo::ji("hibiscus")` Cross-posted: [https://openscapes.org](https://www.openscapes.org/blog/2020/02/18/r-for-excel/) <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 ## Background
