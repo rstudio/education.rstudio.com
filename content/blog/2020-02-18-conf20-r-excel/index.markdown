@@ -27,7 +27,7 @@ We were thrilled to co-teach the R for Excel Users workshop at rstudio::conf(202
 
 
 <div class="figure" style="text-align: center">
-<img src="horst-esm-workflow.png" alt="Art by Allison Horst" width="60%" />
+<img src="r-for-excel-dj.png" alt="Art by Allison Horst" width="60%" />
 <p class="caption">Figure 1: Art by Allison Horst</p>
 </div>
 

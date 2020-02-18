@@ -27,7 +27,7 @@ We were thrilled to co-teach the R for Excel Users workshop at rstudio::conf(202
 
 
 ```{r echo=FALSE, fig.cap= "Art by Allison Horst", fig.align='center', out.width='60%'}
-knitr::include_graphics("horst-esm-workflow.png")
+knitr::include_graphics("r-for-excel-dj.png")
 ```
 
 
