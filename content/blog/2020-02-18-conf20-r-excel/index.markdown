@@ -17,8 +17,8 @@ description: |
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github"></i> https://github.com/rstudio-conf-2020/r-for-excel <br>
 > 🔗 https://rstd.io/conf20-r-excel <br>
-> [Slides](https://docs.google.com/presentation/d/1w9cVzEsdbyZ6vay4UnoTvTWd9t-AO_x06HoVzgAiSFE/edit?usp=sharing) <br>
-> Cross posted: <https://openscapes.org> <br>
+> 🎨 [Slides](https://docs.google.com/presentation/d/1w9cVzEsdbyZ6vay4UnoTvTWd9t-AO_x06HoVzgAiSFE/edit?usp=sharing) <br>
+> 🌺 Cross posted: <https://openscapes.org> <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 ## Background
@@ -96,3 +96,6 @@ We also got feedback that we should change the name of the course because while 
 <p class="caption">Figure 3: photo by Robert Bye with art by Allison Horst</p>
 </div>
 
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
