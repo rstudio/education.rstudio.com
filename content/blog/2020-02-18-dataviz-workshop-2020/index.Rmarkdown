@@ -10,7 +10,7 @@ tags:
   - conf2020
 slug: conf20-dataviz
 description: |
-  Check out slides and other materials on text mining and modeling using tidy data principles.
+  What we covered in our rstudio::conf(2020) workshop on data visualization
 photo:
   url: https://unsplash.com/photos/k0rVudBoB4c
   author: Markus Spiske
