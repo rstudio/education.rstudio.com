@@ -377,7 +377,7 @@ a {
       background-color: #f8f8f8; }
     #rStudioHeader #menu .menuItem.current {
       background-color: #75aadb;
-      color: #fff; 
+      color: #fff;
       text-decoration: none !important;
     }
     #rStudioHeader #menu .menuItem.gitHub {
@@ -925,7 +925,7 @@ p {
 ul, ol {
   line-height: 1.6em;
   padding-left: 2em;
-  margin-bottom: 0em; 
+  margin-bottom: 0em;
 }
 
 #TableOfContents ul {
@@ -944,7 +944,7 @@ ol {
 
 pre, code {
   font-family: "Source Code Pro", monospace;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !important;
   font-size: 14px; }
 
 pre {
