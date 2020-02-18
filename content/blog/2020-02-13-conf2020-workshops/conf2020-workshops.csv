@@ -2,7 +2,7 @@ workshop_title,instructors,short_link,blog_post
 A Practical Introduction to Data Visualization with ggplot2 Workshop,Kieran Healy,https://rstd.io/conf20-dataviz,/blog/2020/02/conf20-dataviz/
 Applied Machine Learning Workshop,Max Kuhn,https://rstd.io/conf20-applied-ml,
 Big Data with R Workshop,"Edgar Ruiz, James Blair",https://rstd.io/conf20-big-data,
-Building Tidy Tools Workshop,"Charlotte Wickham, Hadley Wickham",https://rstd.io/conf20-tidy-tools,
+Building Tidy Tools Workshop,"Charlotte Wickham, Hadley Wickham",https://rstd.io/conf20-tidy-tools,/blog/2020/02/conf20-tidy-tools/
 Deep Learning with Keras and TensorFlow in R Workshop,Bradley Boehmke,https://rstd.io/conf20-dl,
 Designing the Data Science Classroom Workshop,Mine Cetinkaya-Rundel,https://rstd.io/conf20-design-ds-class,
 Introduction to Data Science in the Tidyverse Workshop,"Amelia McNamara, Hadley Wickham",https://rstd.io/conf20-ds-tidy,
