@@ -2,12 +2,13 @@
 title: Data Visiualization Workshop at rstudio::conf(2020)
 author:
   - '[Kieran Healy](https://kieranhealy.org/)'
-date: '2020-02-15'
+date: '2020-02-18'
 categories:
-  - teach
   - learn
+  - teach
+tags:
+  - conf2020
 slug: conf20-dataviz
-tags: [conf2020]
 description: |
   Check out slides and other materials on text mining and modeling using tidy data principles.
 photo:

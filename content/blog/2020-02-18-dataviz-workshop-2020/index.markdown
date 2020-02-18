@@ -2,12 +2,13 @@
 title: Data Visiualization Workshop at rstudio::conf(2020)
 author:
   - '[Kieran Healy](https://kieranhealy.org/)'
-date: '2020-02-15'
+date: '2020-02-18'
 categories:
-  - teach
   - learn
+  - teach
+tags:
+  - conf2020
 slug: conf20-dataviz
-tags: [conf2020]
 description: |
   Check out slides and other materials on text mining and modeling using tidy data principles.
 photo:
@@ -17,7 +18,7 @@ photo:
 
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github fa-fw"></i> https://rstd.io/conf20-dataviz <br>
-> `r emo::ji("book")` [Data Visualization: A Practical Introduction](http://socviz.co) <br>
+> 📖 [Data Visualization: A Practical Introduction](http://socviz.co) <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 
