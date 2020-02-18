@@ -142,7 +142,7 @@ The workshop consisted of 8 sessions. In each session, we presented slides inter
 library(knitr)
 library(gt)
 library(tidyverse)
-tm <- read_csv(here::here("content/blog/2020-02-14-introduction-to-machine-learning-with-the-tidyverse/tm.csv")) %>% 
+tm <- read_csv(here::here("content/blog/2020-02-14-conf20-intro-ml/tm.csv")) %>% 
   mutate(
       Slides = paste0("<a href='https://conf20-intro-ml.netlify.com/materials/", slide_url,"'  target='_blank'>", slide_name, "</a>"),
       Exercises = if_else(!session %in% c(0, 3), paste0("<a href='https://github.com/rstudio-conf-2020/intro-to-ml-tidy/blob/master/materials/exercises/", mat_rmd,"'  target='_blank'>", "Exercises", "</a>"), ""),
