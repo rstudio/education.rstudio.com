@@ -26,7 +26,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tmipviinnw .gt_table {
+#tkwffwodea .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -43,7 +43,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-color: #A8A8A8;
 }
 
-#tmipviinnw .gt_heading {
+#tkwffwodea .gt_heading {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
   border-left-style: hidden;
@@ -54,7 +54,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_title {
+#tkwffwodea .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -64,7 +64,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-width: 0;
 }
 
-#tmipviinnw .gt_subtitle {
+#tkwffwodea .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -74,13 +74,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-width: 0;
 }
 
-#tmipviinnw .gt_bottom_border {
+#tkwffwodea .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_col_headings {
+#tkwffwodea .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -95,7 +95,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_col_heading {
+#tkwffwodea .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -109,7 +109,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   overflow-x: hidden;
 }
 
-#tmipviinnw .gt_column_spanner {
+#tkwffwodea .gt_column_spanner {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -126,7 +126,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   width: 97%;
 }
 
-#tmipviinnw .gt_group_heading {
+#tkwffwodea .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -148,7 +148,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#tmipviinnw .gt_empty_group_heading {
+#tkwffwodea .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -163,19 +163,19 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#tmipviinnw .gt_striped {
+#tkwffwodea .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tmipviinnw .gt_from_md > :first-child {
+#tkwffwodea .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tmipviinnw .gt_from_md > :last-child {
+#tkwffwodea .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tmipviinnw .gt_row {
+#tkwffwodea .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -194,7 +194,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   overflow-x: hidden;
 }
 
-#tmipviinnw .gt_stub {
+#tkwffwodea .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-weight: initial;
@@ -205,7 +205,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-left: 12px;
 }
 
-#tmipviinnw .gt_summary_row {
+#tkwffwodea .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -215,7 +215,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#tmipviinnw .gt_first_summary_row {
+#tkwffwodea .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -225,7 +225,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_grand_summary_row {
+#tkwffwodea .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -235,7 +235,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#tmipviinnw .gt_first_grand_summary_row {
+#tkwffwodea .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -245,7 +245,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_table_body {
+#tkwffwodea .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -254,7 +254,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_footnotes {
+#tkwffwodea .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -268,13 +268,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_footnote {
+#tkwffwodea .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#tmipviinnw .gt_sourcenotes {
+#tkwffwodea .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -288,46 +288,46 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#tmipviinnw .gt_sourcenote {
+#tkwffwodea .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#tmipviinnw .gt_left {
+#tkwffwodea .gt_left {
   text-align: left;
 }
 
-#tmipviinnw .gt_center {
+#tkwffwodea .gt_center {
   text-align: center;
 }
 
-#tmipviinnw .gt_right {
+#tkwffwodea .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tmipviinnw .gt_font_normal {
+#tkwffwodea .gt_font_normal {
   font-weight: normal;
 }
 
-#tmipviinnw .gt_font_bold {
+#tkwffwodea .gt_font_bold {
   font-weight: bold;
 }
 
-#tmipviinnw .gt_font_italic {
+#tkwffwodea .gt_font_italic {
   font-style: italic;
 }
 
-#tmipviinnw .gt_super {
+#tkwffwodea .gt_super {
   font-size: 65%;
 }
 
-#tmipviinnw .gt_footnote_marks {
+#tkwffwodea .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="tmipviinnw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="tkwffwodea" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -420,7 +420,8 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
     <tr>
       <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-r-excel'>R for Excel Users Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-r-excel/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+</div></td>
       <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Julia Lowndes, Allison Horst</p>
 </div></td>
     </tr>
