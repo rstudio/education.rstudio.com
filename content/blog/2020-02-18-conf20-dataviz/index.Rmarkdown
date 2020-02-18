@@ -3,14 +3,11 @@ title: Data Visualization Workshop at rstudio::conf(2020)
 author:
   - '[Kieran Healy](https://kieranhealy.org/)'
 date: '2020-02-18'
-categories:
-  - learn
-  - teach
-tags:
-  - conf2020
+categories: [learn, teach]
+tags: [conf2020]
 slug: conf20-dataviz
 description: |
-  What we covered in our rstudio::conf(2020) workshop on data visualization
+  What we covered in our rstudio::conf(2020) workshop on data visualization.
 photo:
   url: https://unsplash.com/photos/k0rVudBoB4c
   author: Markus Spiske
@@ -18,7 +15,7 @@ photo:
 
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github fa-fw"></i> https://rstd.io/conf20-dataviz <br>
-> 📖 [Data Visualization: A Practical Introduction](http://socviz.co) <br>
+> `r emo::ji("book")` [Data Visualization: A Practical Introduction](http://socviz.co) <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 

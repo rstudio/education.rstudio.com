@@ -3,11 +3,9 @@ title: Text Mining Workshop Materials from rstudio::conf(2020)
 author:
   - '[Julia Silge](https://juliasilge.com/)'
 date: '2020-02-13'
-categories:
-  - teach
-  - learn
-slug: conf20-tidytext
+categories: [learn, teach]
 tags: [conf2020]
+slug: conf20-tidytext
 description: |
   Check out slides and other materials on text mining and modeling using tidy data principles.
 photo:
@@ -17,7 +15,7 @@ photo:
 
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github fa-fw"></i> https://rstd.io/conf20-tidytext <br>
-> 🔗 [bit.ly/silge-rstudioconf-1](http://bit.ly/silge-rstudioconf-1) and [bit.ly/silge-rstudioconf-2](http://bit.ly/silge-rstudioconf-2) <br>
+> `r emo::ji("link")` [bit.ly/silge-rstudioconf-1](http://bit.ly/silge-rstudioconf-1) and [bit.ly/silge-rstudioconf-2](http://bit.ly/silge-rstudioconf-2) <br>
 > <i class="fab fa-creative-commons fa-fw"></i> [License: CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 At rstudio::conf(2020) in January, I had the pleasure of teaching a two-day workshop on text analysis using tidy data principles. With two whole days to dedicate to this topic, we had the opportunity to cover a lot of ground and go into significant detail. On the first day, we focused on **exploratory data analysis for text**, and on the second day, we addressed **modeling for text**, with a bit of both supervised and unsupervised machine learning.
