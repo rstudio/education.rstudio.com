@@ -1,5 +1,5 @@
 ---
-title: Data Visiualization Workshop at rstudio::conf(2020)
+title: Data Visualization Workshop at rstudio::conf(2020)
 author:
   - '[Kieran Healy](https://kieranhealy.org/)'
 date: '2020-02-18'
