@@ -121,3 +121,8 @@ details {
   margin-bottom: 0em;
   margin-top: 0em;
 }
+
+.hline-top {
+  padding-top: 2em;
+  border-top: .5em solid #dae8f6;
+}

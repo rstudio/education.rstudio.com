@@ -16,6 +16,8 @@ photo:
 
 
 
+
+
 > tl;dr: all workshop materials are available here: <br>
 > <i class="fab fa-github fa-fw"></i> https://rstd.io/conf20-ts <br>
 > 📖 [Forecasting: Principles and Practice](https://otexts.com/fpp3/) <br>
@@ -59,3 +61,7 @@ Links to slides for day 2 are given below.
 We alternated between me presenting and lab sessions where participants worked with time series data in R. The [instructions for the lab sessions](https://github.com/rstudio-conf-2020/time-series-forecasting/blob/master/Labs.md) are available on the repo.
 
 R code providing [solutions to the lab exercises](https://github.com/rstudio-conf-2020/time-series-forecasting/blob/master/materials/labs.R) are also available here.
+
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
