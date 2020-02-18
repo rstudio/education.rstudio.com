@@ -48,6 +48,9 @@ One of the benefits of teaching a short course like this is that I get a (someti
 Data visualization is a powerful way to explore your own data and communicate your results to other people. One of the themes of the book, and the workshop, is that it is in most ways a tool like any other. It won't magically render you immune to error or make it impossible for you to fool others, or fool yourself. But once you get a feel for how to work with it, it makes your work easier and better in many ways. The great strength of the approach taken by the grammar of graphics in general and ggplot in particular is that it gives people a powerful "flow of action" to follow. It provides a set of concepts---mappings, geoms, scales, facets, layers, and so on---that let you look at other people's graphics and really see how their component pieces fit together. And it implements those concepts as a series of functions that let you coherently assemble graphics yourself. The goal of the workshop was to bring people to the point where they could comfortably write code that would clearly say what they wanted to see. 
 
 
+<div class="hline-top">
+<i class="fas fa-binoculars"></i>&nbsp;&nbsp;&nbsp;<a href='/blog/2020/02/conf2020-workshops/'><em>Check out materials from the 18 other rstudio::conf(2020) workshops...</em></a>
+</div>
 
 
 
