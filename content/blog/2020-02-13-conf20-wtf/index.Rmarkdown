@@ -3,16 +3,13 @@ title: What They Forgot to Teach You About R at rstudio::conf 2020
 author:
   - '[Kara Woo](https://karawoo.com)'
 date: '2020-02-13'
-categories:
-  - learn
-  - teach
-tags:
-  - conf2020
+categories: [learn, teach]
+tags: [conf2020]
 slug: conf20-wtf
 photo:
   url: https://unsplash.com/photos/okvqMfl78YE
   author: Nielsen Ramon
-description: 'Highlights from the What They Forgot to Teach You About R workshop    '
+description: 'Highlights from the What They Forgot to Teach You About R workshop.'
 ---
 
 > tl;dr: all workshop materials are available here: <br>
