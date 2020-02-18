@@ -23,7 +23,7 @@ at `rstudio::conf(2020)` with my brother Hadley.
 
 > ... those who have embraced the tidyverse and now want to expand it to meet their own needs. 
 
-In practice this means, 
+In practice, this means
 we talk a lot about package development, 
 since packages are the easiest way 
 to develop (and share) a set of
@@ -47,7 +47,7 @@ This piece of advice shows up in the workshop when talking about
 But I feel like it sums up the philosophy of the entire workshop, 
 with perhaps an addendum: 
 
-> "If it hurts, there is probably a usethis or devtools function for it.
+> "If it hurts, there is probably a usethis or devtools function for it.  
 > If it still hurts, do it more often"
 
 In the case of `R CMD check`, 
@@ -75,17 +75,17 @@ in many of the your turn exercises.
 
 Another example of something that can hurt 
 is getting a package started. 
-In this case, usethis and devtools really shine! 
+This is where usethis and devtools really shine! 
 In the first session of the workshop we
 cover `usethis::create_package()`, `usethis::use_r()`, 
 `devtools::load_all()`, `devtools::check()`, `devtools::document()`, `usethis::use_mit_license()` and `devtools::install()`.
 And that's enough to have a fully functioning package 
-before the moring coffee break!
+before the morning coffee break!
 
 It takes about 20mins to create a package from scratch
 using this workflow for the first time, 
 but participants then practice this workflow, 
-adding a few extra steps, thoughout the two days.
+adding a few extra steps, throughout the two days.
 By the end of the workshop 
 they have built 3-5 packages from scratch, 
 and hopefully find it a pain-free experience.
@@ -100,10 +100,10 @@ putting functions in script files
 inside an `R/` folder, 
 along with loading them with `devtools::load_all()`,
 is immediately much more streamlined and less error prone,
-than sourcing functions individually with keyboard shortcuts or `source()`.
+than sourcing functions individually with keyboard shortcuts, or `source()`.
 
 Other payoffs are long term, for example, 
-writing tests adds work up front (although usethis helps a lot with the inital setup)
+writing tests adds work up front (although usethis helps a lot with the initial setup)
 but the long term payoff is huge: 
 a package that is more reliable, 
 easier to maintain, and 
@@ -122,7 +122,7 @@ how to identify areas for improvement in your own packages.
 
 * **Implementation** describes the code inside your package. 
 In the workshop we pick just a couple of topics to delve into,
-that we think are the most useful to know about: 
+those we think are the most useful to know about: 
     
     * Dependencies: how and when to rely on code in other packages
     * Using the tidyverse inside packages: the common problems that you
@@ -142,7 +142,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#euftlqkath .gt_table {
+#cewjrajxid .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -170,7 +170,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* table.border.bottom.color */
 }
 
-#euftlqkath .gt_heading {
+#cewjrajxid .gt_heading {
   background-color: #FFFFFF;
   /* heading.background.color */
   border-bottom-color: #FFFFFF;
@@ -189,7 +189,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* heading.border.lr.color */
 }
 
-#euftlqkath .gt_title {
+#cewjrajxid .gt_title {
   color: #333333;
   font-size: 125%;
   /* heading.title.font.size */
@@ -203,7 +203,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   border-bottom-width: 0;
 }
 
-#euftlqkath .gt_subtitle {
+#cewjrajxid .gt_subtitle {
   color: #333333;
   font-size: 85%;
   /* heading.subtitle.font.size */
@@ -217,7 +217,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   border-top-width: 0;
 }
 
-#euftlqkath .gt_bottom_border {
+#cewjrajxid .gt_bottom_border {
   border-bottom-style: solid;
   /* heading.border.bottom.style */
   border-bottom-width: 2px;
@@ -226,7 +226,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* heading.border.bottom.color */
 }
 
-#euftlqkath .gt_column_spanner {
+#cewjrajxid .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -234,7 +234,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   padding-bottom: 4px;
 }
 
-#euftlqkath .gt_col_headings {
+#cewjrajxid .gt_col_headings {
   border-top-style: solid;
   /* column_labels.border.top.style */
   border-top-width: 2px;
@@ -261,7 +261,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* column_labels.border.lr.color */
 }
 
-#euftlqkath .gt_col_heading {
+#cewjrajxid .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   /* column_labels.background.color */
@@ -277,11 +277,11 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   overflow-x: hidden;
 }
 
-#euftlqkath .gt_sep_right {
+#cewjrajxid .gt_sep_right {
   border-right: 5px solid #FFFFFF;
 }
 
-#euftlqkath .gt_group_heading {
+#cewjrajxid .gt_group_heading {
   padding: 8px;
   /* row_group.padding */
   color: #333333;
@@ -320,7 +320,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   vertical-align: middle;
 }
 
-#euftlqkath .gt_empty_group_heading {
+#cewjrajxid .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -344,20 +344,20 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   vertical-align: middle;
 }
 
-#euftlqkath .gt_striped {
+#cewjrajxid .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
   /* row.striping.background_color */
 }
 
-#euftlqkath .gt_from_md > :first-child {
+#cewjrajxid .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#euftlqkath .gt_from_md > :last-child {
+#cewjrajxid .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#euftlqkath .gt_row {
+#cewjrajxid .gt_row {
   padding-top: 8px;
   /* data_row.padding */
   padding-bottom: 8px;
@@ -387,7 +387,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   overflow-x: hidden;
 }
 
-#euftlqkath .gt_stub {
+#cewjrajxid .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   /* stub.background.color */
@@ -404,7 +404,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   padding-left: 12px;
 }
 
-#euftlqkath .gt_summary_row {
+#cewjrajxid .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* summary_row.background.color */
@@ -418,7 +418,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   padding-right: 5px;
 }
 
-#euftlqkath .gt_first_summary_row {
+#cewjrajxid .gt_first_summary_row {
   padding-top: 8px;
   /* summary_row.padding */
   padding-bottom: 8px;
@@ -433,7 +433,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* summary_row.border.color */
 }
 
-#euftlqkath .gt_grand_summary_row {
+#cewjrajxid .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   /* grand_summary_row.background.color */
@@ -447,7 +447,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   padding-right: 5px;
 }
 
-#euftlqkath .gt_first_grand_summary_row {
+#cewjrajxid .gt_first_grand_summary_row {
   padding-top: 8px;
   /* grand_summary_row.padding */
   padding-bottom: 8px;
@@ -462,7 +462,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* grand_summary_row.border.color */
 }
 
-#euftlqkath .gt_table_body {
+#cewjrajxid .gt_table_body {
   border-top-style: solid;
   /* table_body.border.top.style */
   border-top-width: 2px;
@@ -477,7 +477,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* table_body.border.bottom.color */
 }
 
-#euftlqkath .gt_footnotes {
+#cewjrajxid .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   /* footnotes.background.color */
@@ -501,7 +501,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* footnotes.border.lr.color */
 }
 
-#euftlqkath .gt_footnote {
+#cewjrajxid .gt_footnote {
   margin: 0px;
   font-size: 90%;
   /* footnotes.font.size */
@@ -509,7 +509,7 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* footnotes.padding */
 }
 
-#euftlqkath .gt_sourcenotes {
+#cewjrajxid .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   /* source_notes.background.color */
@@ -533,48 +533,48 @@ except for *Interface* which took up two sessions for a total of 3 hours.
   /* source_notes.border.lr.style */
 }
 
-#euftlqkath .gt_sourcenote {
+#cewjrajxid .gt_sourcenote {
   font-size: 90%;
   /* source_notes.font.size */
   padding: 4px;
   /* source_notes.padding */
 }
 
-#euftlqkath .gt_left {
+#cewjrajxid .gt_left {
   text-align: left;
 }
 
-#euftlqkath .gt_center {
+#cewjrajxid .gt_center {
   text-align: center;
 }
 
-#euftlqkath .gt_right {
+#cewjrajxid .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#euftlqkath .gt_font_normal {
+#cewjrajxid .gt_font_normal {
   font-weight: normal;
 }
 
-#euftlqkath .gt_font_bold {
+#cewjrajxid .gt_font_bold {
   font-weight: bold;
 }
 
-#euftlqkath .gt_font_italic {
+#cewjrajxid .gt_font_italic {
   font-style: italic;
 }
 
-#euftlqkath .gt_super {
+#cewjrajxid .gt_super {
   font-size: 65%;
 }
 
-#euftlqkath .gt_footnote_marks {
+#cewjrajxid .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="euftlqkath" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="cewjrajxid" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -681,7 +681,7 @@ and there is no `6-`... 🤷.
 
 The first three sections have slide decks (created in Apple Keynote), 
 but the other sections have an R Markdown file that acts as a script 
-(in [`script/`](https://github.com/rstudio-conf-2020/build-tidy-tools/tree/master/script)
+(in [`script/`](https://github.com/rstudio-conf-2020/build-tidy-tools/tree/master/script))
  **and** another R Markdown file that records what was actually typed 
 (in [`notes/`](https://github.com/rstudio-conf-2020/build-tidy-tools/tree/master/notes)).
 
@@ -692,7 +692,7 @@ and commit it to GitHub regularly.
 Participants would have their web browser pointing at the notes version on GitHub, 
 refreshing when needed to grab any code required for the "Your Turn" exercises.  
 
-The script approach encorages live coding and 
+The script approach encourages live coding and 
 allows for some digressions if participants raise specific questions.
 From an instructor perspective, 
 it's nice to have a record of both what you planned to teach and 
@@ -717,5 +717,4 @@ our fantastic teaching assistants: Julia Blum, Ingrid Rodriguez and François Mi
 
 These materials have been taught from and developed over a few years.
 A big thank you to everyone that has contributed to them!
-In particular, 
-most credit belongs to Hadley, Jenny Bryan (and ?)
+In particular, lots of credit belongs to Hadley and Jenny Bryan.
