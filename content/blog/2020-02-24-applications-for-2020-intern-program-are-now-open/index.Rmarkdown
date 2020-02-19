@@ -1,0 +1,52 @@
+---
+title: "Applications for 2020 Intern Program Are Now Open"
+author: "greg"
+date: '2020-02-24'
+draft: yes
+photo:
+  author: Grant Durr
+  url: https://unsplash.com/photos/1N7yzqjCLes
+publishDate: '2020-02-24'
+slug: applications-for-2020-intern-program-are-now-open
+tags: internship
+description: |
+  Want to apply to this year's summer intern program? Here's how.
+---
+
+As [we announced last year][preview], RStudio's summer intern program will run for a third time in 2020, and applications are now open. Five people will have the chance to work with an RStudio mentor full-time for 10 weeks starting in May 2020. This year's internships will be divided between our open source and education teams; unlike last year's programs, everyone is welcome to apply, not just full-time students.
+
+The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth), and we will interview and make offers as quickly as possible thereafter.  Applicants must be residents of, and able to accept employment in, the United States, and must be able to work for 10 weeks full-time starting between May 18 and May 29.
+
+<div align="center">
+<a href="https://forms.gle/Hhj5WKYp9rC43TnE7">Apply now!</a>
+</div>
+
+This year's projects will be chosen from:
+
+1.  **Build a portal for people working with spreadsheets in R**.
+    This site would do for spreadsheets what <https://db.rstudio.com/> and <https://environments.rstudio.com/>
+    do for databases and reproducible environments respectively.
+    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
+
+1.  **Make R Markdown-based publishing tools more accessible** to people with visual disabilities.
+    This may include enhancing existing tools,
+    developing new packages to supplement accessibility,
+    and/or adding resources for authors and educators to help them do the right things.
+    Supervisor: [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
+
+1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
+    based on our existing tidymodels workshop materials.
+    Supervisor: [Alison Hill][hill-alison].
+
+1.  **Build interactive [learnr][learnr] tutorials for Python using [reticulate][reticulate].**
+    These would mirror the content of our existing [tidyverse primers][primers].
+    Supervisor: [Alison Hill][hill-alison].
+
+[bryan-jenny]: https://jennybryan.org/
+[cetinkaya-rundel-mine]: https://www2.stat.duke.edu/~mc301/
+[hill-alison]: https://alison.rbind.io/
+[learnr]: https://rstudio.github.io/learnr/
+[preview]: https://education.rstudio.com/blog/2019/11/rstudio-internships-2020-preview/
+[primers]: https://rstudio.cloud/learn/primers
+[reticulate]: https://rstudio.github.io/reticulate/
+[tidymodels]: https://github.com/tidymodels/tidymodels
