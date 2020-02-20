@@ -17,19 +17,19 @@ description: |
 As [we announced last year][preview],
 RStudio's summer intern program will run for a third time in 2020,
 and applications are now open.
-Five people will work with an RStudio mentor full-time for 10 weeks starting in May 2020;
-unlike last year's programs,
-everyone is welcome to apply,
-not just full-time students.
+Five people will work with an RStudio mentor full-time for 10 weeks starting in May 2020.
+Everyone is welcome to apply:
+you do not need to be a a full-time student to be eligible for an internship.
+The compensation rate for these positions is $25/hr,
+assuming 40 hours each week;
+applicants must be residents of,
+and able to accept employment in,
+the United States.
 
 ## How to apply
 
 The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
 and we will interview and make offers as quickly as possible thereafter.
-Applicants must be residents of,
-and able to accept employment in,
-the United States,
-and must be able to work full-time for 10 weeks starting on either May 18 or May 25.
 
 <div align="center">
 <a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
@@ -37,8 +37,8 @@ and must be able to work full-time for 10 weeks starting on either May 18 or May
 
 ## Projects
 
-This year's internships will be divided between our open source and education teams.
-The projects will be selected from:
+This year's internships will be divided between our open source and education teams,
+and the projects will be selected from:
 
 1.  **Build a portal for people working with spreadsheets in R**.
     This site would do for spreadsheets what <https://db.rstudio.com/> and <https://environments.rstudio.com/>
@@ -68,6 +68,10 @@ The projects will be selected from:
     such as variable importance, efficiency, and cost-sensitive models.
     Candidates should understand R packages work and have solid C skills and some experience with modeling.
     Supervisor: [Max Kuhn][kuhn-max].
+
+<div class="hline-top">
+<a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply by Friday, March 6 AOE</a>
+</div>
 
 [broom]: https://broom.tidyverse.org/
 [bryan-jenny]: https://jennybryan.org/
