@@ -22,6 +22,8 @@ unlike last year's programs,
 everyone is welcome to apply,
 not just full-time students.
 
+## How to apply
+
 The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
 and we will interview and make offers as quickly as possible thereafter.
 Applicants must be residents of,
@@ -30,8 +32,10 @@ the United States,
 and must be able to work full-time for 10 weeks starting on either May 18 or May 25.
 
 <div align="center">
-<a href="https://forms.gle/Hhj5WKYp9rC43TnE7">Apply now!</a>
+<a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
 </div>
+
+## Projects
 
 This year's internships will be divided between our open source and education teams.
 The projects will be selected from:
@@ -42,7 +46,7 @@ The projects will be selected from:
     Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
 
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
-    based on our existing tidymodels workshop materials.
+    based on our existing introductory [tidymodels workshop][tidymodels-intro] materials.
     Supervisor: [Alison Hill][hill-alison].
 
 1.  **Build interactive [learnr][learnr] tutorials for Python using [reticulate][reticulate].**
@@ -73,8 +77,9 @@ The projects will be selected from:
 [hill-alison]: https://alison.rbind.io/
 [kuhn-max]: https://resources.rstudio.com/authors/max-kuhn
 [learnr]: https://rstudio.github.io/learnr/
-[preview]: https://education.rstudio.com/blog/2019/11/rstudio-internships-2020-preview/
+[preview]: /blog/2019/11/rstudio-internships-2020-preview/
 [primers]: https://rstudio.cloud/learn/primers
 [reticulate]: https://rstudio.github.io/reticulate/
 [tidymodels]: https://github.com/tidymodels/tidymodels
+[tidymodels-intro]: /blog/2020/02/conf20-intro-ml/
 [wilson-greg]: https://third-bit.com
