@@ -13,15 +13,27 @@ description: |
   Want to apply to this year's summer intern program? Here's how.
 ---
 
-As [we announced last year][preview], RStudio's summer intern program will run for a third time in 2020, and applications are now open. Five people will have the chance to work with an RStudio mentor full-time for 10 weeks starting in May 2020. This year's internships will be divided between our open source and education teams; unlike last year's programs, everyone is welcome to apply, not just full-time students.
+As [we announced last year][preview],
+RStudio's summer intern program will run for a third time in 2020,
+and applications are now open.
+Five people will work with an RStudio mentor full-time for 10 weeks starting in May 2020;
+unlike last year's programs,
+everyone is welcome to apply,
+not just full-time students.
 
-The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth), and we will interview and make offers as quickly as possible thereafter.  Applicants must be residents of, and able to accept employment in, the United States, and must be able to work for 10 weeks full-time starting between May 18 and May 29.
+The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
+and we will interview and make offers as quickly as possible thereafter.
+Applicants must be residents of,
+and able to accept employment in,
+the United States,
+and must be able to work full-time for 10 weeks starting on either May 18 and May 29.
 
 <div align="center">
 <a href="https://forms.gle/Hhj5WKYp9rC43TnE7">Apply now!</a>
 </div>
 
-This year's projects will be chosen from:
+This year's internships will be divided between our open source and education teams.
+The projects will be selected from:
 
 1.  **Build a portal for people working with spreadsheets in R**.
     This site would do for spreadsheets what <https://db.rstudio.com/> and <https://environments.rstudio.com/>
@@ -42,9 +54,29 @@ This year's projects will be chosen from:
     These would mirror the content of our existing [tidyverse primers][primers].
     Supervisor: [Alison Hill][hill-alison].
 
+1.  **[Tidymodels][tidymodels] package support.**
+    This intern will work on the support and development of modeling packages, primarily [broom][broom],
+    which provides a large number of methods to turn models into tidy data frames.
+    The work will include internal refactoring,
+    revisit the testing strategy,
+    and further develop the `augment` method.
+    Candidates should understand R packages, S3 methods, and unit testing.
+    Supervisor: [Max Kuhn][kuhn-max].
+
+1.  **Tree and rule-based models.**
+    The [Cubist][cubist] and [C50][c50] packages contain large amounts of C code to train ensemble models.
+    This intern will improve their sustainability and add new features
+    such as variable importance, efficiency, and cost-sensitive models.
+    Candidates should understand R packages work and have solid C skills and some experience with modeling.
+    Supervisor: [Max Kuhn][kuhn-max].
+
+[broom]: https://broom.tidyverse.org/
 [bryan-jenny]: https://jennybryan.org/
+[c50]: https://topepo.github.io/C5.0/
 [cetinkaya-rundel-mine]: https://www2.stat.duke.edu/~mc301/
+[cubist]: https://topepo.github.io/Cubist/
 [hill-alison]: https://alison.rbind.io/
+[kuhn-max]: https://resources.rstudio.com/authors/max-kuhn
 [learnr]: https://rstudio.github.io/learnr/
 [preview]: https://education.rstudio.com/blog/2019/11/rstudio-internships-2020-preview/
 [primers]: https://rstudio.cloud/learn/primers
