@@ -40,12 +40,6 @@ The projects will be selected from:
     do for databases and reproducible environments respectively.
     Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
 
-1.  **Make R Markdown-based publishing tools more accessible** to people with visual disabilities.
-    This may include enhancing existing tools,
-    developing new packages to supplement accessibility,
-    and/or adding resources for authors and educators to help them do the right things.
-    Supervisor: [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
-
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
     based on our existing tidymodels workshop materials.
     Supervisor: [Alison Hill][hill-alison].
