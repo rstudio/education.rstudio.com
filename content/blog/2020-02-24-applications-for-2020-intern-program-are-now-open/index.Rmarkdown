@@ -46,7 +46,7 @@ The projects will be selected from:
 
 1.  **Build interactive [learnr][learnr] tutorials for Python using [reticulate][reticulate].**
     These would mirror the content of our existing [tidyverse primers][primers].
-    Supervisor: [Alison Hill][hill-alison].
+    Supervisors: [Alison Hill][hill-alison] and [Greg Wilson][wilson-greg].
 
 1.  **[Tidymodels][tidymodels] package support.**
     This intern will work on the support and development of modeling packages, primarily [broom][broom],
@@ -76,3 +76,4 @@ The projects will be selected from:
 [primers]: https://rstudio.cloud/learn/primers
 [reticulate]: https://rstudio.github.io/reticulate/
 [tidymodels]: https://github.com/tidymodels/tidymodels
+[wilson-greg]: https://third-bit.com
