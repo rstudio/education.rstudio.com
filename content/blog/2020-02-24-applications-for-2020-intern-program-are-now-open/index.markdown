@@ -1,38 +1,80 @@
 ---
-title: Applications for 2020 Intern Program are Now Open
-author:
-  - greg
-date: '2020-01-06'
-publishDate: '2020-01-05'
-tags:
-  - internship
+title: "Applications for 2020 Intern Program Are Now Open"
+author: [greg]
+date: '2020-02-20'
+publishdate: '2020-02-24'
 draft: true
+photo:
+  author: Grant Durr
+  url: https://unsplash.com/photos/1N7yzqjCLes
+publishDate: '2020-02-24'
 slug: applications-for-2020-intern-program-are-now-open
+tags: internship
 description: |
   Want to apply to this year's summer intern program? Here's how.
-photo:
-  url: https://unsplash.com/photos/1N7yzqjCLes
-  author: Grant Durr
 ---
 
-As [we announced last year](https://education.rstudio.com/blog/2019/11/rstudio-internships-2020-preview/), RStudio's summer intern program will run for a third time in 2020, and applications are now open. 10 people who are full-time students at accredited institutions of higher education will have the chance to work with an RStudio mentor full-time for 12 weeks starting in May 2020.
+As [we announced last year][preview],
+RStudio's summer intern program will run for a third time in 2020,
+and applications are now open.
+Five people will work with an RStudio mentor full-time for 10 weeks starting in May 2020;
+unlike last year's programs,
+everyone is welcome to apply,
+not just full-time students.
 
-The theme of this year's program is learning: six interns will create new online lessons (which will be freely available for all to use under a Creative Commons license), while two others will work on supporting tools. An additional two interns will be embedded with RStudio's Quality Assurance team to help extend and automate our testing processes.
-
-The closing date for applications is midnight January 26 AOE (Anywhere on Earth), and we will interview and make offers in February. Applicants must be residents of, and able to accept employment in, the United States, and must be able to work for 12 weeks full-time starting between May 25 and June 5. Descriptions of the three positions are given below, and we encourage undergraduates to apply as well as graduate students.
+The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
+and we will interview and make offers as quickly as possible thereafter.
+Applicants must be residents of,
+and able to accept employment in,
+the United States,
+and must be able to work full-time for 10 weeks starting on either May 18 or May 25.
 
 <div align="center">
 <a href="https://forms.gle/Hhj5WKYp9rC43TnE7">Apply now!</a>
 </div>
 
-## Lesson Developer
+This year's internships will be divided between our open source and education teams.
+The projects will be selected from:
 
-Tens of thousands of people have learned basics data science skills from RStudio's cloud-based primers in class and on their own. In this project, you will work with a member of RStudio's education team to develop primers on new topics, such as statistical modeling, Shiny, or publishing with R Markdown. Successful candidates will be comfortable programming in R using the RStudio IDE, familiar with the R Markdown toolchain, and enjoy writing and teaching.
+1.  **Build a portal for people working with spreadsheets in R**.
+    This site would do for spreadsheets what <https://db.rstudio.com/> and <https://environments.rstudio.com/>
+    do for databases and reproducible environments respectively.
+    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
 
-## Learning Tool Developer
+1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
+    based on our existing tidymodels workshop materials.
+    Supervisor: [Alison Hill][hill-alison].
 
-Lesson developers can create interactive exercises that run in the RStudio IDE and give learners feedback on their work using a variety of packages. In this project, you will work with RStudio's developers and education team to extend these packages with new exercise types, add new and better ways to check answers and give feedback. Successful candidates will be fluent in R (including non-standard evaluation and package development) and familiar with either Python or JavaScript.
+1.  **Build interactive [learnr][learnr] tutorials for Python using [reticulate][reticulate].**
+    These would mirror the content of our existing [tidyverse primers][primers].
+    Supervisors: [Alison Hill][hill-alison] and [Greg Wilson][wilson-greg].
 
-## Quality Assurance
+1.  **[Tidymodels][tidymodels] package support.**
+    This intern will work on the support and development of modeling packages, primarily [broom][broom],
+    which provides a large number of methods to turn models into tidy data frames.
+    The work will include internal refactoring,
+    revisit the testing strategy,
+    and further develop the `augment` method.
+    Candidates should understand R packages, S3 methods, and unit testing.
+    Supervisor: [Max Kuhn][kuhn-max].
 
-Few things are as frustrating as working for hours only to find that the fault lies in your tools. In this project, you will build tests and testing infrastructure to check and maintain the quality of RStudio's tools. Successful candidates will be familiar with test automation and have some experience with R and Python; familiarity with Selenium, Docker, and Jenkins will be an asset as well.
+1.  **Tree and rule-based models.**
+    The [Cubist][cubist] and [C50][c50] packages contain large amounts of C code to train ensemble models.
+    This intern will improve their sustainability and add new features
+    such as variable importance, efficiency, and cost-sensitive models.
+    Candidates should understand R packages work and have solid C skills and some experience with modeling.
+    Supervisor: [Max Kuhn][kuhn-max].
+
+[broom]: https://broom.tidyverse.org/
+[bryan-jenny]: https://jennybryan.org/
+[c50]: https://topepo.github.io/C5.0/
+[cetinkaya-rundel-mine]: https://www2.stat.duke.edu/~mc301/
+[cubist]: https://topepo.github.io/Cubist/
+[hill-alison]: https://alison.rbind.io/
+[kuhn-max]: https://resources.rstudio.com/authors/max-kuhn
+[learnr]: https://rstudio.github.io/learnr/
+[preview]: https://education.rstudio.com/blog/2019/11/rstudio-internships-2020-preview/
+[primers]: https://rstudio.cloud/learn/primers
+[reticulate]: https://rstudio.github.io/reticulate/
+[tidymodels]: https://github.com/tidymodels/tidymodels
+[wilson-greg]: https://third-bit.com
