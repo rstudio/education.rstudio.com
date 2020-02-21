@@ -62,10 +62,15 @@ and the projects will be selected from:
 
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
     based on our existing introductory [tidymodels workshop][tidymodels-intro] materials.
+    Candidates should show evidence of having used R for data analysis and/or statistical modeling
+    as well as basic competence with Git and GitHub; experience using the [learnr][learnr] package is a plus.
     Supervisor: [Alison Hill][hill-alison].
 
 1.  **Build interactive [learnr][learnr] tutorials for Python using [reticulate][reticulate].**
     These would mirror the content of our existing [tidyverse primers][primers].
+    Candidates should be comfortable using R or Python for data science
+    and have basic competence with Git and GitHub;
+    experience using the [learnr][learnr] package is a plus.
     Supervisors: [Alison Hill][hill-alison] and [Greg Wilson][wilson-greg].
 
 1.  **[Tidymodels][tidymodels] package support.**
@@ -74,14 +79,16 @@ and the projects will be selected from:
     The work will include internal refactoring,
     revisit the testing strategy,
     and further develop the `augment` method.
-    Candidates should understand R packages, S3 methods, and unit testing.
+    Candidates should understand R packages, S3 methods, and unit testing, and be comfortable using Git and GitHub.
     Supervisor: [Max Kuhn][kuhn-max].
 
 1.  **Tree and rule-based models.**
     The [Cubist][cubist] and [C50][c50] packages contain large amounts of C code to train ensemble models.
     This intern will improve their sustainability and add new features
     such as variable importance, efficiency, and cost-sensitive models.
-    Candidates should understand R packages work and have solid C skills and some experience with modeling.
+    Candidates should understand R packages work,
+    have solid C skills and some experience with modeling,
+    and be comfortable using Git and GitHub.
     Supervisor: [Max Kuhn][kuhn-max].
 
 <div class="hline-top">
