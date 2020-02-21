@@ -1,13 +1,12 @@
 ---
 title: "Applications for 2020 Intern Program Are Now Open"
-author: "greg"
+author: [greg]
 date: '2020-02-20'
-draft: yes
+draft: true
 photo:
   author: Grant Durr
   url: https://unsplash.com/photos/1N7yzqjCLes
 publishDate: '2020-02-24'
-publishdate: '2020-02-24'
 slug: applications-for-2020-intern-program-are-now-open
 tags: internship
 description: |
@@ -37,8 +36,10 @@ though you will meet with your mentor regularly online.
 The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
 and we will interview and make offers as quickly as possible thereafter.
 
-<div align="center">
-<a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+<div class="ph3 mt4 tc">
+  <a class="f6 link dim ba ph3 pv2 mb2 dib dark-blue" href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
 </div>
 
 ## Projects
