@@ -41,8 +41,8 @@ This year's internships will be divided between our open source and education te
 and the projects will be selected from:
 
 1.  **Build a portal for people working with spreadsheets in R**.
-    This site would do for spreadsheets what <https://db.rstudio.com/> and <https://environments.rstudio.com/>
-    do for databases and reproducible environments respectively.
+    This site would do for spreadsheets what [db.rstudio.com](https://db.rstudio.com/) and [environments.rstudio.com](https://environments.rstudio.com/)
+    do for databases and reproducible environments, respectively.
     Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
 
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
@@ -76,7 +76,7 @@ and the projects will be selected from:
 [broom]: https://broom.tidyverse.org/
 [bryan-jenny]: https://jennybryan.org/
 [c50]: https://topepo.github.io/C5.0/
-[cetinkaya-rundel-mine]: https://www2.stat.duke.edu/~mc301/
+[cetinkaya-rundel-mine]: http://mine-cr.com/
 [cubist]: https://topepo.github.io/Cubist/
 [hill-alison]: https://alison.rbind.io/
 [kuhn-max]: https://resources.rstudio.com/authors/max-kuhn
