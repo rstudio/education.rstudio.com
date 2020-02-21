@@ -43,7 +43,13 @@ and the projects will be selected from:
 1.  **Build a portal for people working with spreadsheets in R**.
     This site would do for spreadsheets what [db.rstudio.com](https://db.rstudio.com/) and [environments.rstudio.com](https://environments.rstudio.com/)
     do for databases and reproducible environments, respectively.
-    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
+    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine]. Primary tasks will include 
+    writing, synthesis, comparison, exposition, and exampling. This project is 
+    not explicitly about package development, although the work could easily 
+    lead to pull requests to spreadsheet reading/writing packages. Candidates 
+    should show evidence of general R experience, basic competence with 
+    Git/GitHub, previous use of R Markdown, and ability to write clearly 
+    about code.
 
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
     based on our existing introductory [tidymodels workshop][tidymodels-intro] materials.
