@@ -2,7 +2,6 @@
 title: "Applications for 2020 Intern Program Are Now Open"
 author: [greg]
 date: '2020-02-20'
-publishdate: '2020-02-24'
 draft: true
 photo:
   author: Grant Durr
@@ -20,19 +19,27 @@ and applications are now open.
 Five people will work with an RStudio mentor full-time for 10 weeks starting in May 2020.
 Everyone is welcome to apply:
 you do not need to be a a full-time student to be eligible for an internship.
+
 The compensation rate for these positions is $25/hr,
 assuming 40 hours each week;
 applicants must be residents of,
 and able to accept employment in,
 the United States.
+Since RStudio is a geographically distributed team,
+you can be based anywhere in the country:
+unless you live in Boston or Seattle,
+you will be working 100% remotely,
+though you will meet with your mentor regularly online.
 
-## How to apply
+## How to Apply
 
 The closing date for applications is midnight on Friday, March 6 AOE (Anywhere on Earth),
 and we will interview and make offers as quickly as possible thereafter.
 
-<div align="center">
-<a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
+<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+<div class="ph3 mt4 tc">
+  <a class="f6 link dim ba ph3 pv2 mb2 dib dark-blue" href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply here</a>
 </div>
 
 ## Projects
@@ -40,16 +47,19 @@ and we will interview and make offers as quickly as possible thereafter.
 This year's internships will be divided between our open source and education teams,
 and the projects will be selected from:
 
-1.  **Build a portal for people working with spreadsheets in R**.
-    This site would do for spreadsheets what [db.rstudio.com](https://db.rstudio.com/) and [environments.rstudio.com](https://environments.rstudio.com/)
+1.  **Create resources for people working with spreadsheets in R**.
+    Develop content that does for spreadsheets
+    what sites like [db.rstudio.com](https://db.rstudio.com/)
+    and [environments.rstudio.com](https://environments.rstudio.com/)
     do for databases and reproducible environments, respectively.
-    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine]. Primary tasks will include 
-    writing, synthesis, comparison, exposition, and exampling. This project is 
-    not explicitly about package development, although the work could easily 
-    lead to pull requests to spreadsheet reading/writing packages. Candidates 
-    should show evidence of general R experience, basic competence with 
-    Git/GitHub, previous use of R Markdown, and ability to write clearly 
-    about code.
+    Primary tasks will include writing, synthesis, comparison, exposition, and exampling.
+    This project is not explicitly about package development,
+    although the work could easily lead to pull requests to spreadsheet reading/writing packages.
+    Candidates should show evidence of general R experience,
+    basic competence with Git/GitHub,
+    previous use of R Markdown,
+    and ability to write clearly about code.
+    Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine].
 
 1.  **Build interactive [learnr][learnr] tutorials for [tidymodels][tidymodels]**
     based on our existing introductory [tidymodels workshop][tidymodels-intro] materials.
@@ -76,7 +86,7 @@ and the projects will be selected from:
     Supervisor: [Max Kuhn][kuhn-max].
 
 <div class="hline-top">
-<a href="https://forms.gle/Hhj5WKYp9rC43TnE7"><i class="fas fa-hand-point-right"></i>&nbsp;Apply by Friday, March 6 AOE</a>
+<a href="http://FIXME.FIXME.FIXME"><i class="fas fa-hand-point-right"></i>&nbsp;Apply by Friday, March 6 AOE</a>
 </div>
 
 [broom]: https://broom.tidyverse.org/
