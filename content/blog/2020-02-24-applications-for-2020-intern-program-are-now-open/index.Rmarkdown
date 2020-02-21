@@ -1,13 +1,13 @@
 ---
 title: "Applications for 2020 Intern Program Are Now Open"
-author: [greg]
+author: "greg"
 date: '2020-02-20'
-publishdate: '2020-02-24'
-draft: true
+draft: yes
 photo:
   author: Grant Durr
   url: https://unsplash.com/photos/1N7yzqjCLes
 publishDate: '2020-02-24'
+publishdate: '2020-02-24'
 slug: applications-for-2020-intern-program-are-now-open
 tags: internship
 description: |
@@ -40,7 +40,7 @@ and we will interview and make offers as quickly as possible thereafter.
 This year's internships will be divided between our open source and education teams,
 and the projects will be selected from:
 
-1.  **Build a portal for people working with spreadsheets in R**.
+1.  **Create resources for people working with spreadsheets in R**.
     This site would do for spreadsheets what [db.rstudio.com](https://db.rstudio.com/) and [environments.rstudio.com](https://environments.rstudio.com/)
     do for databases and reproducible environments, respectively.
     Supervisors: [Jenny Bryan][bryan-jenny] and [Mine Çetinkaya-Rundel][cetinkaya-rundel-mine]. Primary tasks will include 
