@@ -1,5 +1,7 @@
 ---
 title: (Re-)Building our online R Bootcamp
+description: |
+  Our experience (re-)building the R bootcamp and generating interactive R tutorials.
 date: '2020-03-02'
 slug: r-bootcamp
 categories:
