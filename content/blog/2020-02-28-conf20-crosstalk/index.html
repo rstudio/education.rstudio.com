@@ -1,0 +1,102 @@
+---
+title: Syncing Up an R Markdown Dashboard with Crosstalk
+author: 
+  - carl
+date: '2020-03-05'
+output: html_document
+slug: conf20-crosstalk
+categories:
+  - learn
+  - events
+tags:
+  - conf2020
+photo:
+  url: https://unsplash.com/photos/U6tYeEhEVTk
+  author: Dhahi Alsaeedi via Unsplash
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-easybutton/easy-button.js"></script>
+<script src="/rmarkdown-libs/leaflet-easybutton/EasyButton-binding.js"></script>
+<link href="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.js"></script>
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter-bindings.js"></script>
+<link href="/rmarkdown-libs/ionicons/ionicons.min.css" rel="stylesheet" />
+
+
+<pre><code></code></pre>
+<div id="the-tldr-quick-summary" class="section level2">
+<h2>The TL;DR Quick Summary</h2>
+<p>HTML widgets help you make your R Markdown dashboards interactive. The <code>crosstalk</code> package allows those HTML widgets to interact with one another without using Shiny.</p>
+<p>When Yihui Xie and I taught our R Markdown and Interactive Dashboards workshop at rstudio::conf(2020), a couple of attendees said that learning about this package was worth the entire cost of the workshop. If you are interested in seeing the <code>crosstalk</code> materials we presented during the workshop, check out the <a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf">slides (in PDF form)</a> and the [exercises] (<a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards" class="uri">https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards</a>). You can also review the <a href="https://rstd.io/RMAID">full set of workshop materials on github</a>.</p>
+<p>For reference, you can refer to the <a href="https://rstudio.github.io/crosstalk/"><code>crosstalk</code> online documentation</a></p>
+</div>
+<div id="crosstalk-adding-more-meaningful-interactivity-to-r-markdown-dashboards" class="section level2">
+<h2>Crosstalk: Adding more meaningful interactivity to R Markdown dashboards</h2>
+<p>To understand why crosstalk is important, we begin by defining who should use it and why.</p>
+<p>Crosstalk is designed for people who:</p>
+<ul>
+<li><strong>Build interactive dashboards with R Markdown</strong>. Crosstalk works with <a href="https://www.htmlwidgets.org">HTML Widgets</a> that add interactivity to R Markdown documents.</li>
+<li><strong>Want to coordinate the responses of multiple HTML widgets</strong>. Crosstalk works with <a href="https://www.htmlwidgets.org">HTML Widgets</a> that add interactivity to R Markdown documents.</li>
+</ul>
+<p>To get a sense of how this works, let’s look at the simple example code we presented in the workshop. For the purposes of this blog post, I’m leaving out the layout R Markdown elements and simply showing the outputs.</p>
+<pre class="r"><code>library(flexdashboard)
+library(crosstalk)
+library(leaflet)
+library(DT)
+shared_df &lt;- quakes[sample(nrow(quakes), 10),]
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers()
+#&gt; Assuming &quot;long&quot; and &quot;lat&quot; are longitude and latitude, respectively</code></pre>
+<div id="htmlwidget-1" style="width:700px;height:415.296px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-15.55,-18.85,-20.04,-13.64,-12.57,-21.14,-12.49,-15.34,-18.8,-23.97],[185.05,187.55,181.87,165.96,167.11,174.21,166.36,167.1,182.41,179.91],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-23.97,-12.49],"lng":[165.96,187.55]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>datatable(shared_df)</code></pre>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["33","572","584","17","891","869","325","675","692","626"],[-15.55,-18.85,-20.04,-13.64,-12.57,-21.14,-12.49,-15.34,-18.8,-23.97],[185.05,187.55,181.87,165.96,167.11,174.21,166.36,167.1,182.41,179.91],[292,44,577,50,231,40,74,128,385,518],[4.8,4.8,4.7,6,4.8,5.7,4.9,5.3,5.2,4.5],[42,35,19,83,28,78,55,18,67,23]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>All we’ve done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent – if you select a row in the datatable, it doesn’t effect the map. Similarly, while you can scale the map, the map elements themselves aren’t editable.</p>
+<p>But what if we wanted to have the two widgets synchronize with one another? For example, could we have row selections in the datatable drive which points are shown on the map?</p>
+<p>The answer, of course, is yes. But the remarkable thing about crosstalk is how easy it is to create that synchronization: We only have to change one line at the beginning of the code. We simply change this line</p>
+<pre class="r"><code>shared_df &lt;- quakes[sample(nrow(quakes), 10),]</code></pre>
+<p>to this:</p>
+<pre class="r"><code>shared_df &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])</code></pre>
+<p>Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes, only the rows for those earthquakes show up in the datatable below.</p>
+<pre class="r"><code>library(flexdashboard)
+library(crosstalk)
+library(leaflet)
+library(DT)
+## The line below is what we changed.
+shared_df &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers()
+#&gt; Assuming &quot;long&quot; and &quot;lat&quot; are longitude and latitude, respectively</code></pre>
+<div id="htmlwidget-3" style="width:700px;height:415.296px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedData41da988b"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-17.44,-20.07,-19.45,-15.85,-12.37,-19.52,-22.12,-17.64,-19.1,-19.85],[181.33,181.75,184.48,185.9,166.93,168.98,180.49,181.28,183.87,181.85],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["906","808","705","836","986","133","816","38","331","188"],"ctGroup":"SharedData41da988b"}]}],"limits":{"lat":[-22.12,-12.37],"lng":[166.93,185.9]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>datatable(shared_df)</code></pre>
+<div id="htmlwidget-4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"crosstalkOptions":{"key":["906","808","705","836","986","133","816","38","331","188"],"group":"SharedData41da988b"},"filter":"none","data":[["906","808","705","836","986","133","816","38","331","188"],[-17.44,-20.07,-19.45,-15.85,-12.37,-19.52,-22.12,-17.64,-19.1,-19.85],[181.33,181.75,184.48,185.9,166.93,168.98,180.49,181.28,183.87,181.85],[545,582,246,121,291,63,532,574,61,576],[4.2,4.7,4.3,4.1,4.2,4.5,4,4.6,5.3,4.9],[37,27,15,17,16,21,14,17,42,54]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="crosstalk-works-by-having-widgets-share-a-dynamic-dataframe" class="section level2">
+<h2><code>Crosstalk</code> works by having widgets share a dynamic dataframe</h2>
+<p>This interactivity and synchronization is made possible by the <code>shared_df</code> object we created. <code>Shared_df</code> is an <a href="https://adv-r.hadley.nz/r6.html">R6 object</a>. If you’re not familiar with R6 objects, it doesn’t matter – all you need to know is that when we called <code>SharedData$new</code>, it created a new object called <code>shared_df</code> that walks, acts, and quacks like an ordinary data frame, but can dynamically change based on interactions with HTML widgets.</p>
+<p>Now only some HTML widgets work with <code>crosstalk</code>. You can read <a href="https://rstudio.github.io/crosstalk/widgets.html">the full list of HTML widgets that work with <code>crosstalk</code> here</a>, but here are my 3 personal go-tos:</p>
+<ul>
+<li><code>leaflet</code>, the mapping widget we used in this example</li>
+<li><code>DT</code>, the datatable widget we used in the example</li>
+<li><code>plotly</code>, a general purpose plotting widget that also can make any ggplot interactive.</li>
+</ul>
+<p>With crosstalk and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However,</p>
+</div>
