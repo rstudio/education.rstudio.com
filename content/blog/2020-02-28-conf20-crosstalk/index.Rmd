@@ -15,27 +15,15 @@ photo:
   author: Dhahi Alsaeedi via Unsplash
 ---
 
-````
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE, comment = "#>", 
-  fig.width = 7, 
-  fig.align = 'center',
-  fig.asp = 0.618, # 1 / phi
-  out.width = "700px"
-)
-```
-````
+## `Crosstalk`: the quick summary
 
-## The TL;DR Quick Summary
+This post teaches you how to use the `crosstalk` package to make HTML widgets interact in an interactive dashboard without requiring all the complexity of Shiny. Specifically:
 
-HTML widgets help you make your R Markdown dashboards interactive. The `crosstalk` package allows those HTML widgets to interact with one another without using Shiny.
+- We frequently use [HTML widgets](http://www.htmlwidgets.org) to make R Markdown dashboards interactive. The `crosstalk` package allows those HTML widgets to interact with one another without using Shiny. For reference, you can refer to the [`crosstalk` online documentation](https://rstudio.github.io/crosstalk/)
+- When Yihui Xie and I taught our R Markdown and Interactive Dashboards workshop at rstudio::conf(2020), a couple of attendees said that learning about this package was worth the entire cost of the workshop.
+- If you are interested in seeing the `crosstalk` materials we presented during the workshop, check out the [slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
 
-When Yihui Xie and I taught our R Markdown and Interactive Dashboards workshop at rstudio::conf(2020), a couple of attendees said that learning about this package was worth the entire cost of the workshop. If you are interested in seeing the `crosstalk` materials we presented during the workshop, check out the [slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises]  (https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
-
-For reference, you can refer to the [`crosstalk` online documentation](https://rstudio.github.io/crosstalk/)
-
-## Crosstalk: Adding more meaningful interactivity to R Markdown dashboards
+# `Crosstalk`: Adding more meaningful interactivity to R Markdown dashboards
 
 To understand why crosstalk is important, we begin by defining who should use it and why. 
 
@@ -47,7 +35,6 @@ Crosstalk is designed for people who:
 To get a sense of how this works, let's look at the simple example code we presented in the workshop. For the purposes of this blog post, I'm leaving out the layout R Markdown elements and simply showing the outputs.
 
 ```{r warning = FALSE, echo = TRUE}
-library(flexdashboard)
 library(crosstalk)
 library(leaflet)
 library(DT)
@@ -56,9 +43,9 @@ leaflet(shared_df) %>% addTiles() %>% addMarkers()
 datatable(shared_df)
 ```
 
-All we've done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent -- if you select a row in the datatable, it doesn't effect the map. Similarly, while you can scale the map, the map elements themselves aren't editable.
+All we've done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent -- searches done in the data table don't affect the map. Similarly, while you can scale the map, the map elements themselves aren't editable.
 
-But what if we wanted to have the two widgets synchronize with one another? For example, could we have row selections in the datatable drive which points are shown on the map?
+But what if we wanted to have the two widgets synchronize with one another? For example, could we have searches and row selections in the datatable drive which earthquakes are shown on the map?
 
 The answer, of course, is yes. But the remarkable thing about crosstalk is how easy it is to create that synchronization: We only have to change one line at the beginning of the code. We simply change this line
 
@@ -75,7 +62,6 @@ shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
 Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes, only the rows for those earthquakes show up in the datatable below.
 
 ```{r warning = FALSE, echo = TRUE}
-library(flexdashboard)
 library(crosstalk)
 library(leaflet)
 library(DT)
@@ -89,13 +75,54 @@ datatable(shared_df)
 
 This interactivity and synchronization is made possible by the `shared_df` object we created. `Shared_df` is an [R6 object ](https://adv-r.hadley.nz/r6.html). If you're not familiar with R6 objects, it doesn't matter -- all you need to know is that when we called `SharedData$new`, it created a new object called `shared_df` that walks, acts, and quacks like an ordinary data frame, but can dynamically change based on interactions with HTML widgets.
 
-Now only some HTML widgets work with `crosstalk`. You can read [the full list of HTML widgets that work with `crosstalk` here](https://rstudio.github.io/crosstalk/widgets.html), but here are my 3 personal go-tos:
+Only some HTML widgets work with `crosstalk`. You can read [the full list of HTML widgets that work with `crosstalk` here](https://rstudio.github.io/crosstalk/widgets.html), but here are my 3 personal go-tos:
 
 - `leaflet`, the mapping widget we used in this example
 - `DT`, the datatable widget we used in the example
 - `plotly`, a general purpose plotting widget that also can make any ggplot interactive.
 
-With crosstalk and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However, 
+With `crosstalk` and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However, `crosstalk` really shines when we add one more feature: interactive filters.
+
+## Filter functions give the user direct control over plotting
+
+Sometimes you want to explicitly specify the data to be plotted instead of relying on the user selecting rows or brushing across a plot. `Crosstalk's` three filter operatings do exactly this with the following functions:
+
+- `filter_checkbox`: include rows in the shared dataframe whose column value equals any checked values. This is particularly useful for columns containing categorical values or factors.
+- `filter_slider`: include rows in the shared dataframe whose numeric column values fit within a range of specified values.
+- `filter_select`: include rows in the shared dataframe whose column value equals one of a list of possibilities. As with `filter_checkbox`, this is most useful for columns with categorical values or factors.
+
+Let's demonstrate all these filter functions by looking at our favorite(?) data set, `mtcars`. We'll generate a plot using the ggplotly function of the `plotly` HTML widget, and then filter that data by the number of cylinders, horsepower, and whether the car has an automatic transmission or not. Because I'm publishing this in a blogdown post, I'm not going to try to make the plot look beautiful, but will just stack the filters inline ahead of the plot. If I were building an actual dashboard, I'd put the filter widgets inside a sidebar and dedicate most of the screen to the plot.
+
+The code is shown below. Play with the filter selectors and watch the plot change in response to your selections. I find it particularly fun to set the slider filter to a small range of values and then to slide the entire selection back and forth to show sub-ranges of horsepower values.
+
+```{r warning = FALSE, eval = FALSE}
+library(crosstalk)
+library(plotly)
+new_mtcars <- mtcars %>% mutate(cyl = as.factor(cyl))
+shared_mtcars <- SharedData$new(new_mtcars)
+filter_checkbox("cyl", "Cylinders", shared_mtcars, ~cyl, inline = TRUE) ## that's a tilda in front of cyl, no a minus
+filter_slider("hp", "Horsepower", shared_mtcars, ~hp, width = "40%")
+filter_select("auto", "Automatic", shared_mtcars, ~ifelse(am == 0, "Yes", "No"))
+g <- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
+ggplotly(g)
+```
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+library(crosstalk)
+library(plotly)
+new_mtcars <- mtcars %>% mutate(cyl = as.factor(cyl))
+shared_mtcars <- SharedData$new(new_mtcars)
+filter_checkbox("cyl", "Cylinders", shared_mtcars, ~cyl, inline = TRUE) ## that's a tilda in front of cyl, no a minus
+filter_slider("hp", "Horsepower", shared_mtcars, ~hp, width = "40%")
+filter_select("auto", "Automatic", shared_mtcars, ~ifelse(am == 0, "Yes", "No"))
+g <- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
+ggplotly(g)
+```
+
+## Why not use Shiny instead of the crosstalk package?
+
+Those of you who have built R Markdown dashboards before are probably wondering, "Why bother with crosstalk when we can do all of this and more in Shiny?" `Crosstalk` has some implementation 
+
 
 
 
