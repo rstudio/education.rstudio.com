@@ -1,5 +1,5 @@
 ---
-title: Syncing Up an R Markdown Dashboard with Crosstalk
+title: Synchronize your HTML widgets with `crosstalk`
 author: 
   - carl
 date: '2020-03-05'
@@ -17,24 +17,31 @@ photo:
 
 ## `Crosstalk`: the quick summary
 
-This post teaches you how to use the `crosstalk` package to make HTML widgets interact in an interactive dashboard without requiring all the complexity of Shiny. Specifically:
+Yihui Xie's and I taught the [R Markdown and Interactive Dashboards Workshop](https://rstd.io/RMAID) at rstudio::conf(2020). Based on some feedback we received from students there, I want to introduce you to the `crosstalk` package that we used to make HTML widgets interact in our R Markdown dashboards. `Crosstalk` is interesting to learn about because it:
 
-- We frequently use [HTML widgets](http://www.htmlwidgets.org) to make R Markdown dashboards interactive. The `crosstalk` package allows those HTML widgets to interact with one another without using Shiny. For reference, you can refer to the [`crosstalk` online documentation](https://rstudio.github.io/crosstalk/)
-- When Yihui Xie and I taught our R Markdown and Interactive Dashboards workshop at rstudio::conf(2020), a couple of attendees said that learning about this package was worth the entire cost of the workshop.
-- If you are interested in seeing the `crosstalk` materials we presented during the workshop, check out the [slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
+- **Isn't widely known**. Several workshop attendees said that learning about this package was worth the entire cost of the workshop, despite the fact that it's been around since 2016.
+- **Adds simple interactivity without a lot of complexity**. We frequently use [HTML widgets](http://www.htmlwidgets.org) to make R Markdown dashboards interactive. The `crosstalk` package allows those HTML widgets to interact with one another without using Shiny. For reference, you can refer to the [`crosstalk` online documentation](https://rstudio.github.io/crosstalk/)
+- **Works with the most commonly used HTML widgets**. HTML widgets have to be explicity designed to use `crosstalk`. However, `crosstalk` works out of the box with commonly used widgets such as `plotly`, `DT`, `leaflet`. Even if you only use those three widgets, you can build some very impressive dashboards. 
 
-# `Crosstalk`: Adding more meaningful interactivity to R Markdown dashboards
+# `Crosstalk` adds meaningful interactivity to R Markdown dashboards
 
-To understand why crosstalk is important, we begin by defining who should use it and why. 
-
-Crosstalk is designed for people who:
+I want to begin by defining who should use `crosstalk` and why. Crosstalk is designed for people who:
 
 - **Build interactive dashboards with R Markdown**. Crosstalk works with [HTML Widgets](https://www.htmlwidgets.org) that add interactivity to R Markdown documents. 
 - **Want to coordinate the responses of multiple HTML widgets**. Crosstalk works with [HTML Widgets](https://www.htmlwidgets.org) that add interactivity to R Markdown documents. 
 
 To get a sense of how this works, let's look at the simple example code we presented in the workshop. For the purposes of this blog post, I'm leaving out the layout R Markdown elements and simply showing the outputs.
 
-```{r warning = FALSE, echo = TRUE}
+```{r warning = FALSE, eval = FALSE}
+library(crosstalk)
+library(leaflet)
+library(DT)
+shared_df <- quakes[sample(nrow(quakes), 10),]
+leaflet(shared_df) %>% addTiles() %>% addMarkers()
+datatable(shared_df)
+```
+
+```{r warning = FALSE, echo = FALSE}
 library(crosstalk)
 library(leaflet)
 library(DT)
@@ -121,7 +128,35 @@ ggplotly(g)
 
 ## Why not use Shiny instead of the crosstalk package?
 
-Those of you who have built R Markdown dashboards before are probably wondering, "Why bother with crosstalk when we can do all of this and more in Shiny?" `Crosstalk` has some implementation 
+Those of you who have built R Markdown dashboards before are probably wondering, "Why bother with crosstalk when we can do all of this and more in Shiny?" For some applications, R Markdown, HTML widgets, and `crosstalk` are a better choice for creating interactive applications because they:
+
+- **Don't require R once the dashboard is published**. Shiny apps require a back end R environment to interact with the user, while an R Markdown dashboard with HTML widgets and `crosstalk` don't.
+- **Generate standalone documents**. Not only do documents created using R Markdown, HTML widgets, and `crosstalk` not require an R back end -- they don't require any back end support whatsoever. Once your document has been knit, it runs entirely within the user's browser.
+- **Can be published and viewed in any environment that hosts web pages**. Interactive applications built this way can be emailed, hosted on ordinary web servers, and used by people who don't use R at all. If the person's browser supports Javascript and HTML, that person can use your interactive document.
+
+## But there are real limitations too
+
+While R Markdown, HTML widgets and `crosstalk` are wonderful tools, using them isn't all rainbows and unicorns. Documents built using these tools aren't nearly as flexible as Shiny apps, and `crosstalk` imposes significant limitations to what you can do. Should you use `crosstalk` and HTML widgets to build an interactive application, be aware that:
+
+- **The HTML widgets you use must support `crosstalk`**. While the HTML widgets we've chosen are some of the most popular, only a few others support crosstalk. Again, check with  [the full list of HTML widgets that work with `crosstalk`](https://rstudio.github.io/crosstalk/widgets.html) before committing to using `crosstalk`.
+- **Your data must be in a data frame or tibble**. The foundation of `crosstalk` is an R6 shared dataframe object, so any data you want to use with `crosstalk` must be in that format.
+- **All your data must fit in memory**. Because all your data will be loaded into the user's browser, `crosstalk` is not the tool you want if you're going to be browsing a multi-gigabyte data set.
+- **Layouts and interactivity are limited**. R Markdown and `crosstalk` typically work with grid-based layouts built from static data. If you want a document that dynamically changes in response to real-time data, you should probably be using Shiny instead.
+
+## Conclusion: try using `crosstalk` in your next interactive R Markdown project
+
+As you can see from this posting, HTML widgets and `crosstalk` aren't limited to standalone dashboards; they can be embedded in most R markdown documents that generate HTML, including blodown posts and emails. And of course, you can publish them on RStudio Connect or RPubs.com -- you don't need a Shiny server to share them.
+
+I find the best part about `crosstalk` and its associated HTML widgets is that they seem to work well with my typical workflow. I spend much of my time exploring teaching survey data, and I usually plot results using `ggplot` and also show the raw data using the `DT` datatable package. To make those plots interactive, I only have to share my survey dataframe with `SharedData$new()`, adjust my `ggplot` and `DT` code to use `ggplotly` and my shared dataframe, and voila -- I have an interactive way to explore my dataset. Learning to use `crosstalk` has saved me days of time; if you give it a try, it might do the same for you.
+
+# Resources
+
+If you are interested in seeing the `crosstalk` materials we presented during the workshop, check out the [slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
+
+
+
+
+
 
 
 
