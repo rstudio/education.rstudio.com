@@ -22,7 +22,7 @@ This article outlines the original R-Bootcamp, why we moved it to [the current p
 ## The original RBootcamp
 
 The original R-Bootcamp lived on DataCamp as a free course that
-anyone could take. We decided to move the course off of DataCamp's platform because [we did not want to support them](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup). The [R-Bootcamp](https://r-bootcamp.netlify.com/) focuses on teaching students the basics of the tidyverse with an interactive learning approach. It is not meant to be comprehensive, but it is meant to empower students who think they might be interested in data visualization, data wrangling, and simple statistical modeling. Most importantly, the R-Bootcamp is meant to be a psychologically safe and positive environment.
+anyone could take. We decided to move the course off of DataCamp's platform because [we no longer felt it was ethical to support them](https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup). The [R-Bootcamp](https://r-bootcamp.netlify.com/) focuses on teaching students the basics of the tidyverse with an interactive learning approach. It is not meant to be comprehensive, but it is meant to empower students who think they might be interested in data visualization, data wrangling, and simple statistical modeling. Most importantly, the R-Bootcamp is meant to be a psychologically safe and positive environment.
 
 ## Ines Montani's Platform
 
