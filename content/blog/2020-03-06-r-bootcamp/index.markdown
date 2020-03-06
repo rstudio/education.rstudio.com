@@ -1,5 +1,5 @@
 ---
-title: (Re-)Building our online R Bootcamp
+title: "(Re)building the R Bootcamp and generating R tutorials"
 description: |
   Our experience (re-)building the R bootcamp and generating interactive R tutorials.
 date: '2020-03-06'
