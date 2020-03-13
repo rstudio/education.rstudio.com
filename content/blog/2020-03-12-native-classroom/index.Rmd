@@ -8,8 +8,8 @@ categories:
 author:
   - "[Nic Thompson Gonzalez](http://www.nicolethompsongonzalez.com/)"
 photo:
-  url: https://unsplash.com/photos/2FPjlAyMQTA
-  author: John Schnobrich
+  url: https://unsplash.com/photos/bnx1q6oX_UI
+  author: Chris Murray
 ---
 
 <br><br>
