@@ -160,12 +160,13 @@ Where should you start, and what should you aim for?
     You can switch off video if you have to,
     but if you lose sound,
     your class is over.
-    Eight dollars will get you a Yeti or Samson Meteor microphone;
-    another thirty will get you a stand
+    You can use a headset with a microphone,
+    but this can become uncomfortable after a couple of hours
+    (particularly if you wear glasses).
+    A Yeti or Samson Meteor microphone is more comfortable,
+    but if you use one,
+    it's worth $30 to get a stand
     (because if it's on your desk, all your audience will hear is your typing).
-    You can also use a headset with a microphone,
-    but this can become uncomfortable after a couple of hours,
-    particularly if you wear glasses.
 
 1.  *Turn off notifications (theirs too).*
     It's rude to check your phone or read email during an in-person meeting,
