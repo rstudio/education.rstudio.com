@@ -6,7 +6,6 @@ date: '2020-03-16'
 slug: teaching-online-on-short-notice
 categories:
   - teach
-  - online
 tags: ["teach", "online"]
 author: [greg]
 photo:
