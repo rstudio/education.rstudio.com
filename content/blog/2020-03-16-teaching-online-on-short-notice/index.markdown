@@ -222,6 +222,8 @@ Don't be afraid to try things,
 and please share your experiences:
 we'll all learn faster if we learn together.
 
+*[Register here][webinar] to join us for a webinar on March 19, 2020 to discuss these ideas.*
+
 [breakout]: https://support.zoom.us/hc/en-us/articles/206476093-Getting-Started-with-Breakout-Rooms
 [hackmd]: https://hackmd.io/
 [keycastr]: https://github.com/keycastr/keycastr
@@ -229,6 +231,7 @@ we'll all learn faster if we learn together.
 [poll]: https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings
 [screencasting]: https://doi.org/10.1145/1943226.1943234
 [troy-meeting]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
+[webinar]: https://resources.rstudio.com/upcoming-webinars/webinar-registration
 [whiteboard]: https://support.zoom.us/hc/en-us/articles/205677665-Share-a-Whiteboard
 [wickes-quote]: https://elizabethwickes.com/2020/03/12/tips-for-live-teaching-tech-online-deeply-informed-by-the-carpentries/
 [zoom]: https://zoom.us/
