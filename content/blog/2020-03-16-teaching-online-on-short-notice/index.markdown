@@ -69,7 +69,7 @@ Where should you start, and what should you aim for?
     Many features of your video conference tool will *not* be obvious to participants. 
     Point out where they can toggle the chat,
     change their participant view,
-    answer polls,
+    answer [polls][poll],
     and so on.
     If you have time,
     join your call as a student,
@@ -209,6 +209,8 @@ Where should you start, and what should you aim for?
     it takes 15-30 seconds to get everyone into rooms,
     and in a class of forty there will be one or two who initially have problems,
     but it does a lot to keep everyone engaged and motivated.
+    (Zoom also supports [whiteboards][whiteboard],
+    but please don't try to use them until you're comfortable with its other features.)
 
 1.  *Take a break every hour,*
     because the basic unit of teaching is the bladder.
@@ -223,7 +225,9 @@ we'll all learn faster if we learn together.
 [hackmd]: https://hackmd.io/
 [keycastr]: https://github.com/keycastr/keycastr
 [peer-instruction]: https://www.youtube.com/watch?v=2LbuoxAy56o
+[poll]: https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings
 [screencasting]: https://doi.org/10.1145/1943226.1943234
 [troy-meeting]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
+[whiteboard]: https://support.zoom.us/hc/en-us/articles/205677665-Share-a-Whiteboard
 [wickes-quote]: https://elizabethwickes.com/2020/03/12/tips-for-live-teaching-tech-online-deeply-informed-by-the-carpentries/
 [zoom]: https://zoom.us/
