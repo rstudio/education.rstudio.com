@@ -8,25 +8,22 @@ categories:
 author:
   - "[Nic Thompson Gonzalez](http://www.nicolethompsongonzalez.com/)"
 photo:
-  URL: https://unsplash.com/photos/bnx1q6oX_UI
-  author: Stacy Marie
+  URL: https://unsplash.com/photos/3KEJMfoHoMY
+  author: Graeme Nicholl
 ---
 
-<br><br>
-I’m here to share some insights from a work in progress. Last year, I began teaching an introduction to data science at the Southwestern Indian Polytechnic Institute [(SIPI)](https://www.sipi.edu/), a community college in Albuquerque, New Mexico with an exclusively Native American student-body. Although my professional background is research in behavioral ecology, my teaching passion is for data analysis. Why? Because I think data literacy and analytical expertise is one freely available tool to remedy many societal ills and injustices. My course datasets are therefore usually related to these ills. The material is currently delivered in an intensive 4-day workshop. One day, I hope it can be offered as a full course.
+In this post, I'll share some insights from a work in progress. Last year, I began teaching an introduction to data science at the Southwestern Indian Polytechnic Institute [(SIPI)](https://www.sipi.edu/), a community college in Albuquerque, New Mexico with an exclusively Native American student-body. Although my professional background is research in behavioral ecology, my teaching passion is for data analysis. Why? Because I think data literacy and analytical expertise is one freely available tool to remedy many societal ills and injustices. My course datasets are therefore usually related to these ills. The material is currently delivered in an intensive 4-day workshop. One day, I hope it can be offered as a full course.
 
 From the first round of developing and teaching the workshop, I’ve learned a number of lessons (beyond how to teach mental models that underlie ggplots). I can group these into 3 general areas.
-<br><br><br>
-<center>
-  *1. Creating culturally relevant and inclusive content and structure*
-  
-  *2. The importance of logistics and technology*
-  
-  *3. A teaching attitude that’s make-or-break for beginners*
-</center>
-<br><br>
 
-#### **1.	Creating culturally relevant and inclusive content and structure**
+1. Creating culturally relevant and inclusive content and structure
+  
+2. The importance of logistics and technology
+  
+3. A teaching attitude that’s make-or-break for beginners
+
+
+# **1.	Creating culturally relevant and inclusive content and structure**
 
 In an inclusive classroom, we’re addressing two big issues. First – is the material personally relevant? Second – is the material accessible and safe to engage with?^[[Guide for Inclusive Teaching at Columbia](https://cpb-us-w2.wpmucdn.com/edblogs.columbia.edu/dist/8/1109/files/2020/02/Guide-for-Inclusive-Teaching-at-Columbia_Accessibility-Revisions_15-January-2020_FINAL.pdf)] 
 
@@ -62,7 +59,7 @@ Then concretely, I put the following principles into action.
 - *Tell me more*: I always end with a survey (I use SurveyMonkey). This gives students a clear chance to let me know what datasets spoke to them, what tripped them up, and what types of data they’d be interested to work with in the future (as well as the various technical skills they’ve gained).
 
 
-#### **2. The importance of logistics and technology**
+# **2. The importance of logistics and technology**
 
 Attitudes are vital. Unfortunately, they can't do much if technical difficulties completely hamper students' engagement with material. The students we seek to recruit and empower in STEM will often be in resource-limited institutions and this will require additional tricks and strategies from instructors.
 
@@ -80,7 +77,7 @@ For **presentations**, I have a powerful mini projector with blue tooth connecti
 
 There are two other workarounds (both Wi-Fi dependent) for students to watch **live coding** when visibility is poor. First is an institutional Zoom account that allows me to share my screen with several students. Another is the new `livecode` package from Colin Rundel that I’m excited to try. Check out the demo from Rstudioconf::2020 [here](https://resources.rstudio.com/rstudio-conf-2020/lightning-talk-colin-rundel). Essentially, your RStudio IDE is constantly creating a web page of your work, which your students can watch with the appropriate link.
 
-#### **3. Finally, a make or break attitude for teaching beginners**
+# **3. Finally, a make or break attitude for teaching beginners**
 
 We generally know, but regularly need to remember... When we first saw R or an RStudio IDE it was daunting and foreign. We may have since grown complacent and/or proud, having conquered many tasks through hours (or years) of debugging and google searches. Despite this, we can't give in to the temptation to trivialize, oversimplify, or show off skills in front of students. Our goal is to educate - not to impress and not to be lofty beacons of knowledge. In my experience, flashy shows and rapid demos often succeed at disheartening talented people. Knowledge and skills will feel unattainable to all but a very small percentage of type-A students. 
 
