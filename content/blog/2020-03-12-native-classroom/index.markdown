@@ -4,7 +4,6 @@ date: '2020-03-12'
 slug: native-classroom
 categories:
   - teach
-  - learn
 author:
   - "[Nic Thompson Gonzalez](http://www.nicolethompsongonzalez.com/)"
 photo:
@@ -25,11 +24,11 @@ From the first round of developing and teaching the workshop, I’ve learned a n
 
 # **1.	Creating culturally relevant and inclusive content and structure**
 
-In an inclusive classroom, we’re addressing two big issues. First – is the material personally relevant? Second – is the material accessible and safe to engage with?^[[Guide for Inclusive Teaching at Columbia](https://cpb-us-w2.wpmucdn.com/edblogs.columbia.edu/dist/8/1109/files/2020/02/Guide-for-Inclusive-Teaching-at-Columbia_Accessibility-Revisions_15-January-2020_FINAL.pdf)] 
+In an inclusive classroom, we’re addressing two big issues. First – is the material personally relevant? Second – is the material accessible and safe to engage with? ^[[Guide for Inclusive Teaching at Columbia](https://cpb-us-w2.wpmucdn.com/edblogs.columbia.edu/dist/8/1109/files/2020/02/Guide-for-Inclusive-Teaching-at-Columbia_Accessibility-Revisions_15-January-2020_FINAL.pdf)] 
 
 Skills in coding and statistics grow through application, which happens best when students are motivated to answer a question. If one of our goals as instructors is to increase diversity in STEM and data science, then we need to become literate on a diversity of questions that people are motivated to answer.
 
-For this workshop, I've chosen the route of letting students choose among datasets on public health and social justice issues. These topics are too widely pertinent to Native peoples, e.g. diabetes^[[Call to action: A new path for improving diabetes care for Indigenous peoples, a global review](https://www.sciencedirect.com/science/article/pii/S0168822716302467)], cancer^[[Cancer in Indigenous Populations](https://www.thelancet.com/series/cancer-in-indigenous-populations)], suicide^[[The Native American Identity Crisis and the Rise of Suicide](https://blog.nativehope.org/february-spotlight-native-american-identity)], and gun crime^[[Gun Violence Has a Major Impact on Native Communities in the United States](https://www.teenvogue.com/story/gun-violence-has-a-major-impact-on-native-communities-in-the-united-states)]. Now, no group is homogenous and it is inaccurate to think that every member of a marginalized group is interested in social justice; however, these topics do draw the interest of my students. They are also issues that the power of data literacy can help students solve in their lifetimes. In the future, I plan to incorporate datasets on other contemporary issues, such as social media usage (similar to [Girls Inc of NYC](https://www.elsevier.com/connect/teaching-data-science-through-the-lens-of-social-justice-issues)), as the current hard-hitting topics may turn-off some students. The provided datasets serve as the basis for group projects, in which students hone and analyze their research questions.
+For this workshop, I've chosen the route of letting students choose among datasets on public health and social justice issues. These topics are too widely pertinent to Native peoples, e.g. diabetes ^[[Call to action: A new path for improving diabetes care for Indigenous peoples, a global review](https://www.sciencedirect.com/science/article/pii/S0168822716302467)], cancer ^[[Cancer in Indigenous Populations](https://www.thelancet.com/series/cancer-in-indigenous-populations)], suicide ^[[The Native American Identity Crisis and the Rise of Suicide](https://blog.nativehope.org/february-spotlight-native-american-identity)], and gun crime ^[[Gun Violence Has a Major Impact on Native Communities in the United States](https://www.teenvogue.com/story/gun-violence-has-a-major-impact-on-native-communities-in-the-united-states)]. Now, no group is homogenous and it is inaccurate to think that every member of a marginalized group is interested in social justice; however, these topics do draw the interest of my students. They are also issues that the power of data literacy can help students solve in their lifetimes. In the future, I plan to incorporate datasets on other contemporary issues, such as social media usage (similar to [Girls Inc of NYC](https://www.elsevier.com/connect/teaching-data-science-through-the-lens-of-social-justice-issues)), as the current hard-hitting topics may turn-off some students. The provided datasets serve as the basis for group projects, in which students hone and analyze their research questions.
 
 To create a safe and engaging classroom structure, I take a few different abstract and concrete steps...
 
@@ -39,7 +38,7 @@ Second, I try to adjust my perspective as a teacher, understanding that
 
 - *I am operating on stolen land.*
 - *My students likely have an inseparable connection to their communities and their land.* 
-- *My students are strong and resilient in the face of intergenerational trauma.*^[(The National Native American Boarding School Healing Coalition - Impact of Historical Trauma)[https://boardingschoolhealing.org/education/impact-of-historical-trauma/]]
+- *My students are strong and resilient in the face of intergenerational trauma.*^[[The National Native American Boarding School Healing Coalition - Impact of Historical Trauma](https://boardingschoolhealing.org/education/impact-of-historical-trauma/)]
 - *My own notions of health, medicine, and justice are highly individualistic and institutional.*
 
 Then concretely, I put the following principles into action.
