@@ -1,16 +1,19 @@
 ---
-title: "Teaching online on short notice"
-description: |
-  Our experience teaching classes online may help people who have to do so on short notice.
-date: '2020-03-16'
-slug: teaching-online-on-short-notice
+title: Teaching online on short notice
+author:
+  - greg
+date: '2020-03-17'
 categories:
   - teach
-tags: ["teach", "online"]
-author: [greg]
+tags:
+  - online
+  - teach
+description: |
+  Our experience teaching classes online may help people who have to do so on short notice.
+slug: teaching-online-on-short-notice
 photo:
   url: https://unsplash.com/photos/KTEP8WKabgU
-  author: "Hello I'm Nik"
+  author: Hello I'm Nik
 ---
 
 So here you are:
