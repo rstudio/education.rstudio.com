@@ -64,3 +64,5 @@ Biomedical Sciences
 - [Modern Data Science with R](https://mdsr-book.github.io/) (some chapters are freely available online)
 
 We also have a trove of openly licenced materials for teaching [here](https://education.rstudio.com/teach/materials/). Some highlights include [Data Science in a Box](https://datasciencebox.org/), [Stat 545](https://stat545.com/), and materials from RStudio workshops.
+
+This is by no means a complete list. If you have, or know of, resources and tips for teaching R, data science, and statistics remotely, on short notice, or if you are looking for specific resources to help with your transition to online teaching, the [RStudio Community](https://community.rstudio.com/c/teaching/13) as well as [#rstats Twitter](https://twitter.com/search?q=%23rstats) are great places to share / ask.
