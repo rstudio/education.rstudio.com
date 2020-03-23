@@ -1,8 +1,8 @@
 ---
-title: "Online teaching Q&A"
+title: Online teaching Q&A
 author:
   - greg
-date: '2020-03-21'
+date: '2020-03-23'
 categories:
   - teach
 tags:
