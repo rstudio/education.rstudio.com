@@ -16,8 +16,12 @@ photo:
   author: Debby Hudson
 ---
 
-Applications for RStudio's [instructor training program][training] are open once again:
-if you would like to become certified,
+We temporarily froze applications for RStudio's [instructor training program][training] on hold in December 2019
+so that we could clear some of our backlog.
+In order to help people who are now [moving training online on short notice][webinar],
+we have decided to reopen applications
+and to put on some additional classes over the next three months.
+If you would like to become certified,
 please fill in [this form][form] and we will find a spot for you as soon as possible.
 Please note that all upcoming training sessions will be run online,
 and that we will schedule them to be as convenient as possible
@@ -28,10 +32,9 @@ or read more [here][t3].
 If you have questions or suggestions,
 please [contact us by][email].
 
-We hope you and yours are safe and well in these difficult times.
-
 [email]: mailto:greg.wilson@rstudio.com
 [form]: https://forms.gle/kRucY2joTiPYWmPr8
 [slides]: https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY
 [t3]: http://teachtogether.tech
 [training]: https://education.rstudio.com/trainers/
+[webinar]: https://education.rstudio.com/blog/2020/03/online-teaching-qa/
