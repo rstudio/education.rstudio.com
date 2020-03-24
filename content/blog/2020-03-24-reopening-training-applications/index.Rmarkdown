@@ -16,7 +16,7 @@ photo:
   author: Debby Hudson
 ---
 
-We temporarily froze applications for RStudio's [instructor training program][training] on hold in December 2019
+We temporarily put applications for RStudio's [instructor training program][training] on hold in December 2019
 so that we could clear some of our backlog.
 In order to help people who are now [moving training online on short notice][webinar],
 we have decided to reopen applications
