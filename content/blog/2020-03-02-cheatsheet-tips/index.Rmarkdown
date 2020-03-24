@@ -1,5 +1,5 @@
 ---
-title: Tips for Making a New Cheatsheet
+title: Tips for Making a New Cheat Sheet
 date: '2020-03-02'
 categories:
   - teach
@@ -10,12 +10,16 @@ author:
 photo:
   url: https://unsplash.com/photos/rPOmLGwai2w
   author: Marius Masalar
-description: Short summary here
+description: Tips for making a new cheat sheet
 ---
 
-<!--Garrett/Alison insert some text here to intro
-stats= the RStudio cheatsheets get about 10K downloads PER WEEK!
--->
+Shortly after Winston Chang and I were hired by RStudio, I was surprised to spot his name at the bottom of a [LaTeX cheat sheet](https://wch.github.io/latexsheet/latexsheet.pdf) that I had used all through grad school. His idea was too good to waste; and soon after, the [first RStudio Cheat Sheet](https://github.com/rstudio/cheatsheets/blob/master/old/pdfs/shiny-cheatsheet-old.pdf) was born! 
+
+Since then RStudio cheat sheets have appeared in classrooms as learning aids, flown off tables as marketing material, and thrilled rstudio::conf goers as a particularly cherished piece of conference swag. They're downloaded over 10,000 times a week from www.rstudio.com, and they've inspired an army of [community created cheat sheets](https://rstudio.com/resources/cheatsheets/#contributed-cheat-sheets).
+
+You can create your own cheat sheets to explain, popularize, and market your favorite R packages (and if you do I'd be happy to share them---send me a pull request at https://github.com/rstudio/cheatsheets). If you are willing to take some advice when you make your cheat sheet, I have a lot to offer. The guide below describes everything I've learned from making and honing cheat sheets.
+
+***
 
 **RStudio cheat sheets are not meant to be text or documentation!** They are scannable visual aids that use layout and visual mnemonics to help people zoom to the functions they need. Think of cheat sheets as a quick reference, with the emphasis on quick. Here's an analogy:
 
@@ -69,7 +73,7 @@ Budget more time than you expect to make the sheets. So far, I've found this pro
 
 1. **If the letters are white on a colored background**, make the font thicker - semibold or bold.
 
-1. **Save bold text** for a simple, important statements, or to draw scanning eyes to important words, such as words that identify the topic discussed. Don't make an entire paragraph bold text.
+1. **Save bold text** for simple, important statements, or to draw scanning eyes to important words, such as words that identify the topic discussed. Don't make an entire paragraph bold text.
 
 # Content
 
@@ -91,6 +95,6 @@ Budget more time than you expect to make the sheets. So far, I've found this pro
 
 # Summary
 
-Your cheat sheet has two goals. First, to help users find essential information quickly, and secondly to prevent confusion while doing the above. Your best strategy will be to limit the amount of information you put into the cheat sheet and to lay that information out intuitively and visually. This approach will make your cheat sheet equally useful as a teaching tool, programming tool, or marketing tool.
+Your cheat sheet has two goals. First, to help users find essential information quickly, and second, to prevent confusion while doing the above. Your best strategy will be to limit the amount of information you put into the cheat sheet and to lay that information out intuitively and visually. This approach will make your cheat sheet equally useful as a teaching tool, programming tool, or marketing tool.
 
 p.s. Cheat sheets fall squarely on the _human-facing side of software design_. They focus on human attention. What does that mean? When you write documentation, your job is to fill in all of the relevant details—that's a software facing job, you need to know the software to do it. You assume that interested humans will find their way to your details on their own (and understand them when they do!). When you make a cheatsheet, your job flips. You assume that the relevant details already exist in the documentation. Your job is to help interested humans find them and understand them.  Your job is to guide the human's attention. Don't just write, design.
