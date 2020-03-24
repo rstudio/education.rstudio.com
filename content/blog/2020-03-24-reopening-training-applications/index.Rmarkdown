@@ -30,7 +30,7 @@ As always,
 you can preview the training materials [here][slides]
 or read more [here][t3].
 If you have questions or suggestions,
-please [contact us by][email].
+please [contact us][email].
 
 [email]: mailto:greg.wilson@rstudio.com
 [form]: https://forms.gle/kRucY2joTiPYWmPr8
