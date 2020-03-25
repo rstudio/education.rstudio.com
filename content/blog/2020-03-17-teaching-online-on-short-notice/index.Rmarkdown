@@ -19,6 +19,7 @@ photo:
 - [Slides in English][slides-en]
 - [Slides in Spanish][slides-es]
 - [Slides in French][slides-fr]
+- [Slides in Czech][slides-cs]
 
 So here you are:
 you planned to teach your class or deliver your workshop in person,
@@ -235,6 +236,7 @@ we'll all learn faster if we learn together.
 [keycastr]: https://github.com/keycastr/keycastr
 [peer-instruction]: https://www.youtube.com/watch?v=2LbuoxAy56o
 [poll]: https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings
+[slides-cs]: https://docs.google.com/presentation/d/1vueq1bXSfh9e4j7GuRqMcg6AQd-Q-RnD0i3SJSNp3Xo/
 [slides-en]: https://docs.google.com/presentation/d/1rE5e2kSFNICNkBJ4iIIgd9eqACi62gxahknKLtw9Hzs/
 [slides-es]: https://docs.google.com/presentation/d/14rm9vdYr1tMPBrumGmFgQIe7nLlRzOVfGHiNOWomPoQ/
 [slides-fr]: https://docs.google.com/presentation/d/1W3Mz6kplceGqZ1jb-WhcxtSVPn3yCAa786jA3nbHOgI/
