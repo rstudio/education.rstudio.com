@@ -16,10 +16,11 @@ photo:
   author: Hello I'm Nik
 ---
 
+- [Recorded video][video]
 - [Slides in English][slides-en]
-- [Slides in Spanish][slides-es]
-- [Slides in French][slides-fr]
-- [Slides in Czech][slides-cs]
+- [Slides in Spanish][slides-es] (thanks to Ian Flores)
+- [Slides in French][slides-fr] (thanks to Olivier Berger)
+- [Slides in Czech][slides-cs] (thanks to Petr Simecek)
 
 So here you are:
 you planned to teach your class or deliver your workshop in person,
@@ -242,6 +243,7 @@ we'll all learn faster if we learn together.
 [slides-fr]: https://docs.google.com/presentation/d/1W3Mz6kplceGqZ1jb-WhcxtSVPn3yCAa786jA3nbHOgI/
 [screencasting]: https://doi.org/10.1145/1943226.1943234
 [troy-meeting]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
+[video]: https://resources.rstudio.com/webinars/teaching-online-at-short-notice
 [webinar]: https://resources.rstudio.com/upcoming-webinars/webinar-registration
 [whiteboard]: https://support.zoom.us/hc/en-us/articles/205677665-Share-a-Whiteboard
 [wickes-quote]: https://elizabethwickes.com/2020/03/12/tips-for-live-teaching-tech-online-deeply-informed-by-the-carpentries/
