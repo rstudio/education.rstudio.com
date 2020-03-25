@@ -18,6 +18,7 @@ photo:
 
 - [Slides in English][slides-en]
 - [Slides in Spanish][slides-es]
+- [Slides in French][slides-fr]
 
 So here you are:
 you planned to teach your class or deliver your workshop in person,
@@ -236,6 +237,7 @@ we'll all learn faster if we learn together.
 [poll]: https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings
 [slides-en]: https://docs.google.com/presentation/d/1rE5e2kSFNICNkBJ4iIIgd9eqACi62gxahknKLtw9Hzs/
 [slides-es]: https://docs.google.com/presentation/d/14rm9vdYr1tMPBrumGmFgQIe7nLlRzOVfGHiNOWomPoQ/
+[slides-fr]: https://docs.google.com/presentation/d/1W3Mz6kplceGqZ1jb-WhcxtSVPn3yCAa786jA3nbHOgI/
 [screencasting]: https://doi.org/10.1145/1943226.1943234
 [troy-meeting]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
 [webinar]: https://resources.rstudio.com/upcoming-webinars/webinar-registration

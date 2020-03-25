@@ -20,6 +20,7 @@ Thanks to everyone who took part in our webinar on [teaching online on short not
 
 - [Slides in English][slides-en]
 - [Slides in Spanish][slides-es]
+- [Slides in French][slides-fr]
 
 ## Engagement
 
@@ -126,6 +127,7 @@ Thanks to everyone who took part in our webinar on [teaching online on short not
 [rttr]: https://education.rstudio.com/blog/2020/03/resources-for-teaching-data-science-and-statistics-remotely/
 [slides-en]: https://docs.google.com/presentation/d/1rE5e2kSFNICNkBJ4iIIgd9eqACi62gxahknKLtw9Hzs/
 [slides-es]: https://docs.google.com/presentation/d/14rm9vdYr1tMPBrumGmFgQIe7nLlRzOVfGHiNOWomPoQ/
+[slides-fr]: https://docs.google.com/presentation/d/1W3Mz6kplceGqZ1jb-WhcxtSVPn3yCAa786jA3nbHOgI/
 [tosn]: https://education.rstudio.com/blog/2020/03/teaching-online-on-short-notice/
 [troy]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
 [whereby]: https://whereby.com/
