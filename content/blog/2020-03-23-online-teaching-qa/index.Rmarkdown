@@ -18,10 +18,11 @@ photo:
 
 Thanks to everyone who took part in our webinar on [teaching online on short notice][tosn] — we hope you'll be able to join us for the next in the series on [resources and tips for teaching (with) R remotely][rttr]. We weren't able to answer all of the questions that came up in the first webinar while we were online, so here are some from [the community discussion][community]; if you have others, please add them to that forum and we'll tell you what we can.
 
+- [Recorded video][video]
 - [Slides in English][slides-en]
-- [Slides in Spanish][slides-es]
-- [Slides in French][slides-fr]
-- [Slides in Czech][slides-cs]
+- [Slides in Spanish][slides-es] (thanks to Ian Flores)
+- [Slides in French][slides-fr] (thanks to Olivier Berger)
+- [Slides in Czech][slides-cs] (thanks to Petr Simecek)
 
 ## Engagement
 
@@ -132,5 +133,6 @@ Thanks to everyone who took part in our webinar on [teaching online on short not
 [slides-fr]: https://docs.google.com/presentation/d/1W3Mz6kplceGqZ1jb-WhcxtSVPn3yCAa786jA3nbHOgI/
 [tosn]: https://education.rstudio.com/blog/2020/03/teaching-online-on-short-notice/
 [troy]: https://chelseatroy.com/2018/03/29/why-do-remote-meetings-suck-so-much/
+[video]: https://resources.rstudio.com/webinars/teaching-online-at-short-notice
 [whereby]: https://whereby.com/
 [zoom-nonverbal]: https://support.zoom.us/hc/en-us/articles/115001286183-Nonverbal-Feedback-During-Meetings
