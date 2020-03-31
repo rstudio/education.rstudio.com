@@ -25,7 +25,7 @@ We are very pleased to have welcomed nine new certified instructors in March 202
 -   [Vincent Guyader](https://education.rstudio.com/trainers/people/guyader+vincent/) (Tidyverse and Shiny)
 -   [Brad Lindblad](https://education.rstudio.com/trainers/people/lindblad+brad/) (Tidyverse)
 -   [Daryn Ramsden](https://www.linkedin.com/in/daryn-ramsden/) (Tidyverse)
--   [Sebastien Rochette](https://thinkr.fr/equipe/sebastien-rochette/) (Tidyverse and Shiny)
+-   [Sebastien Rochette](https://education.rstudio.com/trainers/people/rochette+sebastien) (Tidyverse and Shiny)
 -   Gregor Thomas (Tidyverse)
 
 If you would like to speak with them or any of our other trainers,
