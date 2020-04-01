@@ -20,11 +20,11 @@ We are very pleased to have welcomed nine new certified instructors in March 202
 
 -   [María Paula Caldas Rivera](https://education.rstudio.com/trainers/people/caldas_rivera+maria_paula/) (Tidyverse and Shiny)
 -   [Colin Fay](https://education.rstudio.com/trainers/people/fay+colin/) (Tidyverse and Shiny)
--   [Cervan Girard](https://education.rstudio.com/trainers/people/girard+cervan/) (Tidyverse)
+-   [Cervan Girard](https://education.rstudio.com/trainers/people/girard+cervan/) (Tidyverse and Shiny)
 -   [Marly Gotti](https://education.rstudio.com/trainers/people/gotti+marly) (Shiny)
 -   [Vincent Guyader](https://education.rstudio.com/trainers/people/guyader+vincent/) (Tidyverse and Shiny)
 -   [Brad Lindblad](https://education.rstudio.com/trainers/people/lindblad+brad/) (Tidyverse)
--   [Daryn Ramsden](https://www.linkedin.com/in/daryn-ramsden/) (Tidyverse)
+-   [Daryn Ramsden](https://education.rstudio.com/trainers/people/ramsden+daryn/) (Tidyverse)
 -   [Sebastien Rochette](https://education.rstudio.com/trainers/people/rochette+sebastien) (Tidyverse and Shiny)
 -   [Gregor Thomas](https://www.linkedin.com/in/gregorthomas/) (Tidyverse)
 
