@@ -2,7 +2,7 @@
 title: Teaching online with RStudio Cloud
 description: |
   Q&A from the Teaching online with RStudio Cloud webinar.
-date: '2020-04-02'
+date: '2020-04-01'
 slug: teaching-with-rstudio-cloud-q-a
 categories:
   - teach
@@ -31,7 +31,9 @@ There is currently no learning management system (LMS) integration, however this
 
 One option is is to export and download the file from rstudio.cloud. In the example below, I've checked the csv file I want to download, clicked "More", then Export. If multiple files are selected, they are combined into a zip file. 
 
-<img src="file-export.jpg" width="690" />
+```{r echo=FALSE}
+knitr::include_graphics("file-export.jpg")
+```
 
 You might have other options to submit homework, for example submitting the cloud project, or if you want to get advanced, ask students to push to a Git repository. 
 
@@ -63,13 +65,17 @@ Yes, you can do this. The student will need to be enrolled in the workspace firs
 
 In the Files pane, click on upload, then browse your computer to find and upload the file.
 
-<img src="rscloud-upload-file.png" width="755" />
+```{r echo=FALSE}
+knitr::include_graphics("rscloud-upload-file.png")
+```
 
 > You said that for sharing a project with students there are two main ways. In the first way they have to make a copy of the project in order to not to lose the changes. Can you show how to do this?
 
 When a student goes to your shared project they'll see a blinking red text that says "TEMPORARY COPY" and next to it is a button to "Save a Permanent Copy".
 
-<img src="rscloud-save-permanent-copy.png" width="1358" />
+```{r echo=FALSE}
+knitr::include_graphics("rscloud-save-permanent-copy.png")
+```
 
 > How can you SET the base project?
 
