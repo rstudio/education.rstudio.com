@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets/htmlwidgets.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<link href="lib/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="lib/datatables-binding/datatables.js"></script>
+<link href="lib/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="lib/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="lib/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="lib/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="lib/crosstalk/js/crosstalk.min.js"></script>
+<link href="lib/leaflet/leaflet.css" rel="stylesheet" />
+<script src="lib/leaflet/leaflet.js"></script>
+<link href="lib/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="lib/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="lib/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="lib/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="lib/leaflet-binding/leaflet.js"></script>
+<link href="lib/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+<script src="lib/leaflet-easybutton/easy-button.js"></script>
+<script src="lib/leaflet-easybutton/EasyButton-binding.js"></script>
+<link href="lib/leaflet-locationfilter2/locationfilter.css" rel="stylesheet" />
+<script src="lib/leaflet-locationfilter2/locationfilter.js"></script>
+<script src="lib/leaflet-locationfilter2/locationfilter-bindings.js"></script>
+<link href="lib/ionicons/ionicons.min.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid crosstalk-bscols">
+  <div class="fluid-row">
+    <div class="col-xs-6">
+      <div id="htmlwidget-986123c5c2abebd5d1ff" style="width:960px;height:500px;" class="datatables html-widget"></div>
+      <script type="application/json" data-for="htmlwidget-986123c5c2abebd5d1ff">{"x":{"crosstalkOptions":{"key":["99","448","337","470","251","334","295","738","129","624"],"group":"SharedDatae44321f2"},"filter":"none","data":[["99","448","337","470","251","334","295","738","129","624"],[-13.66,-20.85,-25.8,-31.94,-10.97,-12.25,-15.24,-25.14,-27.72,-23.78],[166.54,181.59,182.1,180.57,166.26,166.6,186.21,178.42,181.7,180.31],[50,499,68,168,180,219,158,554,94,518],[5.1,5.1,4.5,4.7,4.7,5,5,4.1,4.8,5.1],[45,91,26,39,26,28,57,15,59,71]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+    </div>
+    <div class="col-xs-6">
+      <div id="htmlwidget-7bbfeef6231aa6eab361" style="width:100%;height:400px;" class="leaflet html-widget"></div>
+      <script type="application/json" data-for="htmlwidget-7bbfeef6231aa6eab361">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedDatae44321f2"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-13.66,-20.85,-25.8,-31.94,-10.97,-12.25,-15.24,-25.14,-27.72,-23.78],[166.54,181.59,182.1,180.57,166.26,166.6,186.21,178.42,181.7,180.31],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["99","448","337","470","251","334","295","738","129","624"],"ctGroup":"SharedDatae44321f2"}]}],"limits":{"lat":[-31.94,-10.97],"lng":[166.26,186.21]}},"evals":[],"jsHooks":[]}</script>
+    </div>
+  </div>
+</div>
+</body>
+</html>

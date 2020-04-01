@@ -29,24 +29,33 @@ I want to begin by defining who should use `crosstalk` and why. `Crosstalk` is d
 - **Build interactive dashboards with R Markdown and HTML widgets**. [R Markdown](https://rmarkdown.rstudio.com) allows you to create a dashboard from simple text annotations and code chunks while [HTML Widgets](https://www.htmlwidgets.org) add interactivity to what would normally be static R Markdown documents. 
 - **Want to coordinate the responses of multiple HTML widgets**. `Crosstalk` allows multiple HTML Widgets to synchronize their views of a shared dataframe and to filter what's shown. 
 
-To get a sense of how this works, let's look at the simple example code we presented in the workshop. For the purposes of this blog post, I'm leaving out the R Markdown layout elements and simply showing the outputs.
+To get a sense of how this works, let's look at the simple example code we presented in the workshop for creating two separate HTML widgets:
+
+1. A [DT](https://rstudio.github.io/DT/) interactive table, and
+
+1. A [leaflet](https://rstudio.github.io/leaflet/) interactive map.
 
 ```{r warning = FALSE, eval = FALSE}
-library(crosstalk)
-library(leaflet)
 library(DT)
+library(leaflet)
+
 shared_df <- quakes[sample(nrow(quakes), 10),]
-leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
+
+# make the widgets
 datatable(shared_df)
+leaflet(shared_df) %>% 
+  addTiles() %>% 
+  addMarkers(~long, ~lat)
 ```
 
 ```{r warning = FALSE, echo = FALSE}
-library(crosstalk)
-library(leaflet)
 library(DT)
+library(leaflet)
 shared_df <- quakes[sample(nrow(quakes), 10),]
-leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
 datatable(shared_df)
+leaflet(shared_df) %>% 
+  addTiles() %>% 
+  addMarkers(~long, ~lat)
 ```
 
 All we've done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent -- searches done in the data table don't affect the map. Similarly, while you can scale the map, the map elements themselves aren't editable.
@@ -65,28 +74,52 @@ to this:
 shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
 ```
 
-Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes (that's referred to as a *draggable selection*), only the rows for those earthquakes show up in the datatable below.
+Now if we run that chunk of code with that simple change, the two HTML widgets talk to each other. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes (that's referred to as a *draggable selection*), only the rows for those earthquakes show up in the datatable below.
 
 
 ```{r warning = FALSE, eval = FALSE}
-library(crosstalk)
-library(leaflet)
 library(DT)
-## The line below is what we changed.
+library(leaflet)
+
+# here is the change
+library(crosstalk)
 shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
-leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
-datatable(shared_df)
+
+# make the widgets
+datatable(shared_df, rownames = FALSE)
+leaflet(shared_df) %>% 
+  addTiles() %>% 
+  addMarkers(~long, ~lat)
 ```
 
-```{r warning = FALSE, echo = FALSE}
-library(crosstalk)
-library(leaflet)
+```{r include = FALSE}
+# this code chunk exports the crosstalk object
 library(DT)
-## The line below is what we changed.
+library(leaflet)
+
+# here is the change
+library(crosstalk)
 shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
-leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
-datatable(shared_df)
+
+table <- datatable(shared_df)
+map <- leaflet(shared_df) %>% 
+  addTiles() %>% 
+  addMarkers(~long, ~lat)
+
+tabmap <- bscols(table, map)
+htmltools::save_html(tabmap, 
+                     file = here::here("static/blog/2020-02-28-conf20-crosstalk/tabmap.html"))
 ```
+
+<iframe src="/blog/2020-02-28-conf20-crosstalk/tabmap.html" width=850 height=1000"></iframe>
+
+test this
+
+```{r}
+knitr::include_url("/blog/2020-02-28-conf20-crosstalk/tabmap.html",
+                   height = "1000px")
+```
+
 
 ## `Crosstalk` works by having widgets share a dynamic dataframe
 
@@ -162,13 +195,3 @@ I find the best part about `crosstalk` and its associated HTML widgets is that t
 # Resources
 
 If you are interested in seeing the `crosstalk` materials we presented during the workshop, check out the [workshop slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
-
-
-
-
-
-
-
-
-
-
