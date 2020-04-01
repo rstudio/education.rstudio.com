@@ -26,11 +26,11 @@ of the 280 people who have taken part in the training course,
 A combined 35% completion rate may seem low,
 and at first glance the completion rates seem to have dropped over time:
 
-<img src="/blog/2020-04-06-first-year-of-instructor-training/index_files/figure-html/completion-rates-1.png" width="672" />
+<img src="figs/completion-rates-1.png" width="672" />
 
 However, this is pretty clearly because most people take a while to complete their exams:
 
-<img src="/blog/2020-04-06-first-year-of-instructor-training/index_files/figure-html/competion-times-1.png" width="672" />
+<img src="figs/competion-times-1.png" width="672" />
 
 Setting aside the first class at rstudio::conf 2019
 the overall completion rate seems to be hovering around 45%,

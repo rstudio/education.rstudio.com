@@ -17,8 +17,9 @@ photo:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.path = "figs/")
 library(tidyverse)
+theme_set(theme_minimal())
 rates <- read_csv("rates.csv")
 times <- read_csv("times.csv")
 ```
@@ -35,7 +36,9 @@ and at first glance the completion rates seem to have dropped over time:
 rates %>%
   mutate(percentage_completed=fraction) %>%
   ggplot() +
-  geom_point(aes(x=start_date, y=percentage_completed))
+  geom_point(aes(x=start_date, y=percentage_completed)) +
+  coord_cartesian(ylim = c(0, 100)) +
+  theme(text = element_text(family = "Source Sans Pro"))
 ```
 
 However, this is pretty clearly because most people take a while to complete their exams:
@@ -46,7 +49,9 @@ times %>%
          elapsed_days=duration) %>%
   ggplot() +
   geom_point(aes(x=elapsed_days, y=number_completing)) +
-  scale_y_continuous(breaks=c(0.0, 2.0, 4.0, 6.0, 8.0, 10.0))
+  scale_y_continuous(breaks= scales::pretty_breaks()) +
+  expand_limits(y = 0) +
+  theme(text = element_text(family = "Source Sans Pro"))
 ```
 
 Setting aside the first class at rstudio::conf 2019
