@@ -68,7 +68,7 @@ shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
 Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes (that's referred to as a *draggable selection*), only the rows for those earthquakes show up in the datatable below.
 
 
-```{r warning = FALSE, eval = FALSE}
+```{r warning = FALSE, eval = TRUE}
 library(crosstalk)
 library(leaflet)
 library(DT)
@@ -78,15 +78,6 @@ leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
 datatable(shared_df)
 ```
 
-```{r warning = FALSE, echo = FALSE}
-library(crosstalk)
-library(leaflet)
-library(DT)
-## The line below is what we changed.
-shared_df <- SharedData$new(quakes[sample(nrow(quakes), 10),])
-leaflet(shared_df) %>% addTiles() %>% addMarkers(~long, ~lat)
-datatable(shared_df)
-```
 
 ## `Crosstalk` works by having widgets share a dynamic dataframe
 
@@ -112,7 +103,7 @@ Let's demonstrate all these filter functions by looking at our favorite(?) data 
 
 The code is shown below. Play with the filter selectors and watch the plot change in response to your selections. I find it particularly fun to set the slider filter to a small range of values and then to slide the entire selection back and forth to show sub-ranges of horsepower values.
 
-```{r warning = FALSE, eval = FALSE}
+```{r warning = FALSE, eval = TRUE, fig.show = "hold"}
 library(crosstalk)
 library(plotly)
 new_mtcars <- mtcars %>% mutate(cyl = as.factor(cyl))
@@ -124,17 +115,6 @@ g <- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
 ggplotly(g)
 ```
 
-```{r warning = FALSE, message = FALSE, echo = FALSE}
-library(crosstalk)
-library(plotly)
-new_mtcars <- mtcars %>% mutate(cyl = as.factor(cyl))
-shared_mtcars <- SharedData$new(new_mtcars)
-filter_checkbox("cyl", "Cylinders", shared_mtcars, ~cyl, inline = TRUE) ## that's a tilda in front of cyl, no a minus
-filter_slider("hp", "Horsepower", shared_mtcars, ~hp, width = "40%")
-filter_select("auto", "Automatic", shared_mtcars, ~ifelse(am == 0, "Yes", "No"))
-g <- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
-ggplotly(g)
-```
 
 ## Why not use Shiny instead of the crosstalk package?
 
