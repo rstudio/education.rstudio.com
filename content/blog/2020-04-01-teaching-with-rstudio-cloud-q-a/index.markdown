@@ -19,7 +19,7 @@ photo:
 Thanks to everyone who participated in last week's webinar on Teaching online with RStudio Cloud. We weren't able to answer all of the questions that were asked during the webinar while we were online, so here are answers to all of them. If you have any other questions, please don't hesitate to post on [RStudio Community](http://community.rstudio.com/).
 
 🖥 [Slides](https://rstd.io/rscloud-webinar)  
-📽 Video **[Link to be added when available]**
+📽 [Video](https://resources.rstudio.com/webinars/teaching-r-online-with-rstudio-cloud)
 
 ## Course administration
 
