@@ -1,0 +1,78 @@
+---
+title: Sharing on Short Notice
+description: |
+  Q&A from the 'Sharing on Short Notice' webinar.
+date: '2020-04-06'
+categories:
+  - teach
+tags:
+  - online
+  - teach
+author: 
+  - alison
+  - "[Desirée De Leon](https://desiree.rbind.io/)"
+photo:
+  url: https://www.rawpixel.com/image/429642/ballon
+  author: Raw Pixel
+---
+
+Thanks to everyone who participated in last week's webinar on how to get your teaching materials online with R Markdown. We weren't able to answer all of the questions that were asked during the webinar while we were online, so here are answers to all of them. 
+
+> <i class="far fa-images"></i> Slides at <https://rstd.io/sharing><br> 
+> <i class="fab fa-github"></i> <https://github.com/rstudio-education/sharing-short-notice><br>
+> <i class="fas fa-play-circle"></i> [Video](https://resources.rstudio.com/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown)<br>
+> <i class="fas fa-question-circle"></i> If you have any other questions, please don't hesitate to post on [RStudio Community](https://community.rstudio.com/t/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown-webinar-follow-up/59131)
+
+In the webinar, we showed four ways to make course websites using R Markdown. Because we focused on how to share your teaching materials online on short notice, we introduced [Netlify Drop](https://app.netlify.com/drop). Most questions we got centered around how to use Netlify, version control, and continuous 
+
+## R Markdown
+
+> I'm a newbie to R Markdown. I'm a writer but not really a coder. Where can I start to with all this?
+
+RStudio has some online self-faced tutorials for [getting started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). After that, I recommend [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund.
+
+For the website building tools we covered, here are some specific resources:
+
++ [R Markdown websites](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)
++ [Distill](https://rstudio.github.io/distill/)
++ [Bookdown](https://bookdown.org/yihui/bookdown/)
++ [Blogdown](https://bookdown.org/yihui/blogdown/)
+
+```{r}
+
+```
+
+![](mtsalsa.jpg)
+
+## Netlify
+
+> Can you choose a web address for Netlify?
+
+link to video for this
+
+> Can you change the name of the Netlify link (while keeping the netlify extension)?
+
+> Any preferences between using Netlify vs. travis-ci for continuous integration?
+
+> Can you make a private site using Netlify for free?
+
+## Bookdown
+
+> Can bookdown export to html as well as PDF or Word doc?
+
+> I tried the Netlify Drop and worked great. I tried afterward to link it to the respective GitHub repository, but when it tried to build it I got an error. I used the build command `npm run build`, and the directory `_book`.
+
+Netlify cannot build your book for you- your bookdown book needs to be built with the bookdown R package in RStudio. So when you use Netlify, you don’t use a build command at all, but you should change the publish directory to the `_book/` sub folder.
+
+## Blogdown
+
+> Is it waaaaaay simpler to use Blogdown? 
+
+Nooooooo. 
+
+> Why does signing up to netlify using a version control account make your life easier?
+
+
+> What should I do if I want to update the blogdown theme? 
+
+> It is possible to deploy a blogdown site, not in Netlify, but in Github?
