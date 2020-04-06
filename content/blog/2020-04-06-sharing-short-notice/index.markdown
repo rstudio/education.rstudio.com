@@ -25,29 +25,30 @@ with R Markdown. We weren't able to get to all of the questions that were asked 
 > <i class="fas fa-play-circle"></i> [Video](https://resources.rstudio.com/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown)<br>
 > <i class="fas fa-question-circle"></i> If you have any other questions, please don't hesitate to post on [RStudio Community](https://community.rstudio.com/t/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown-webinar-follow-up/59131)
 
-In the webinar, we showed four ways to make course websites using R Markdown. Because we focused on how to share your teaching materials online on short notice, we introduced [Netlify Drop](https://app.netlify.com/drop). Most questions we got centered around how to use Netlify, version control, and continuous 
 
 ## Questions about R Markdown
 
 > I'm a newbie to R Markdown. I'm a writer but not really a coder. Where can I start to with all this?
 
-RStudio has some self-paced online tutorials for [getting started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). After that, we recommend [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund.
+RStudio has some self-paced online tutorials for [getting started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). Also, the [Communicate](https://r4ds.had.co.nz/communicate-intro.html) section of the book *R for Data Science* gives a great overview of the basics of R Markdown. To learn about the different types of output formats available, we recommend [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund.
 
 For the website building tools we covered, here are some specific resources:
 
 + [R Markdown websites](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)
-+ [Distill](https://rstudio.github.io/distill/)
++ [Distill](https://rstudio.github.io/distill/website.html)
 + [Bookdown](https://bookdown.org/yihui/bookdown/)
 + [Blogdown](https://bookdown.org/yihui/blogdown/)
 
 <img src="mtsalsa.jpg" width="80%" style="display: block; margin: auto;" />
 
 
-## Questions about using Netlify
+## Questions about Netlify
+
+Because we focused on how to share your teaching materials online on short notice, we introduced [Netlify Drop](https://app.netlify.com/drop). Here are a few questions about that.
 
 > Can you change the name of the Netlify link (while keeping the Netlify subdomain)?
 
-Yes! By default, Netlify provides you a sometimes amusing, [random Netlify subdomain](https://rstudio-education.github.io/sharing-short-notice/#80). See [this slide](https://rstudio-education.github.io/sharing-short-notice/#131) for how to change your site name, keeping the Netlify domain `*___*.netlify.com`. 
+Yes! By default, Netlify provides you a sometimes amusing, [random Netlify subdomain](https://rstudio-education.github.io/sharing-short-notice/#80). See [this slide](https://rstudio-education.github.io/sharing-short-notice/#131) for how to change your site name, keeping the Netlify domain `___.netlify.com`; the video below walks you through those steps. 
 
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/images/netlify-domain.mp4" width="672" height="400px"></iframe>
 
@@ -61,9 +62,7 @@ I use Netlify mainly for [continuous deployment](https://docs.netlify.com/site-d
 
 For blogdown websites, this workflow is particularly nice because Netlify can use Hugo to build my site from my source files, but I still need to [serve the site locally](https://bookdown.org/yihui/blogdown/workflow.html) first because Netlify does not know R.
 
-Travis does know R, so we typically use that for [continuous integration](https://github.com/rstudio-education/stat545/blob/master/.travis.yml) of other R Markdown outputs like bookdown as with the [Stat545 website](https://stat545.com/). 
-
-Lately, [many users](https://ropenscilabs.github.io/actions_sandbox/) are testing out [GitHub Actions](https://github.com/features/actions) with R Markdown-based sites with success. For example, [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) wrote up some great instructions for using GitHub Actions with Netlify for a bookdown book. Similarly, here are some instructions for using GitHub Actions with a [blogdown website](https://github.com/r-lib/actions/tree/master/examples#build-blogdown-site), which is in place for the [tidyverse.org site](https://github.com/tidyverse/tidyverse.org).
+Travis does know R, so I have used that for [continuous integration](https://github.com/rstudio-education/stat545/blob/master/.travis.yml) of HTML books created wit bookdown, as with the [Stat545 website](https://stat545.com/). Lately, [many users](https://ropenscilabs.github.io/actions_sandbox/) are testing out [GitHub Actions](https://github.com/features/actions) with R Markdown-based sites with success. For example, [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) wrote up some great instructions for using GitHub Actions with Netlify for a bookdown book. Similarly, here are some instructions for using GitHub Actions with a [blogdown website](https://github.com/r-lib/actions/tree/master/examples#build-blogdown-site), which is set up for the [tidyverse.org site](https://github.com/tidyverse/tidyverse.org).
 
 
 > Can you make a private site using Netlify for free?
