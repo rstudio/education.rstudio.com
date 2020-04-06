@@ -52,9 +52,10 @@ For the website building tools we covered, here are some specific resources:
 This is a bit tricky, but possible! Desirée has done this extensively on her [Teacupes, Giraffes, and Statistics](https://bit.ly/giraffe-stats) R Markdown website. She also wrote a [blog post](https://desiree.rbind.io/post/2020/learnr-iframes/) with instructions.
 
 <div class="figure" style="text-align: center">
-<iframe src="https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif" width="100%" height="400px" style="max-width: 100%;"></iframe>
+<img src="https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif" alt="Embedding learnr in R Markdown" width="100%" style="max-width: 100%;" />
 <p class="caption">Figure 2: Embedding learnr in R Markdown</p>
 </div>
+
 
 ## Questions about Netlify
 
