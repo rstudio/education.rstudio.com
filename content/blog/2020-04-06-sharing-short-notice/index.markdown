@@ -56,6 +56,18 @@ This is a bit tricky, but possible! Desirée has done this extensively on her [T
 <p class="caption">Figure 2: Embedding learnr in R Markdown</p>
 </div>
 
+## Questions about the RStudio IDE
+
+> My RStudio IDE doesn't have Build. Could you share how to show it? 
+
+Somtimes you'll need to restart the RStudio IDE to detect the output format and show you the correct "build" button on the Build tab.
+
+<div class="figure" style="text-align: center">
+<img src="https://rstudio-education.github.io/sharing-short-notice/images/screenshots/build-site.png" alt="Build tab in the RStudio IDE" width="50%" />
+<p class="caption">Figure 3: Build tab in the RStudio IDE</p>
+</div>
+
+Here is a bit [more discussion](https://community.rstudio.com/t/no-build-pane-build-book-option-using-bookdown/36415/5) on this, and how to use the `.Rproj` file to debug (*hint:* you are looking for `BuildType: Website`!).
 
 ## Questions about Netlify
 
@@ -67,7 +79,7 @@ Yes! By default, Netlify provides you a sometimes amusing, [random Netlify subdo
 
 <div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/images/netlify-domain.mp4" width="100%" height="400px"></iframe>
-<p class="caption">Figure 3: Changing the Netlify subdomain</p>
+<p class="caption">Figure 4: Changing the Netlify subdomain</p>
 </div>
 
 > Can you choose a web address for Netlify?
@@ -113,7 +125,7 @@ First, I [do not recommend](https://rstudio-education.github.io/sharing-short-no
 
 <div class="figure" style="text-align: center">
 <img src="blogdown-advice.png" alt="Alison's blogdown advice" width="75%" />
-<p class="caption">Figure 4: Alison's blogdown advice</p>
+<p class="caption">Figure 5: Alison's blogdown advice</p>
 </div>
 
 But, if you must update an already installed theme like for example [`"gcushen/hugo-academic"`](https://github.com/gcushen/hugo-academic), use:
@@ -141,7 +153,7 @@ Desirée made the videos in the webinar using a Mac OSX app called [Kap](https:/
 
 <div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/images/deploy-button.mp4" width="100%" height="400px"></iframe>
-<p class="caption">Figure 5: Demo of the 'Deploy to Netlify' button</p>
+<p class="caption">Figure 6: Demo of the 'Deploy to Netlify' button</p>
 </div>
 
 In the Kap app preferences, we selected "Highlight clicks", which creates that circle halo around the cursor when you click on the screen (you can see it about 7 seconds in to the video above). She also [magnified the mouse pointer](https://support.apple.com/guide/mac-help/magnify-the-mouse-pointer-mchlp2920/mac) by changing an OS-specific setting before recording.
@@ -152,5 +164,5 @@ We really enjoyed making and delivering this webinar. We have so enjoyed seeing 
 
 <div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/#7" width="100%" height="400px"></iframe>
-<p class="caption">Figure 6: Bye!</p>
+<p class="caption">Figure 7: Bye!</p>
 </div>

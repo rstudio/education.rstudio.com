@@ -64,6 +64,17 @@ This is a bit tricky, but possible! Desirée has done this extensively on her [T
 knitr::include_graphics("https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif")
 ```
 
+## Questions about the RStudio IDE
+
+> My RStudio IDE doesn't have Build. Could you share how to show it? 
+
+Somtimes you'll need to restart the RStudio IDE to detect the output format and show you the correct "build" button on the Build tab.
+
+```{r echo=FALSE, out.width = '50%', fig.cap="Build tab in the RStudio IDE"}
+knitr::include_graphics("https://rstudio-education.github.io/sharing-short-notice/images/screenshots/build-site.png")
+```
+
+Here is a bit [more discussion](https://community.rstudio.com/t/no-build-pane-build-book-option-using-bookdown/36415/5) on this, and how to use the `.Rproj` file to debug (*hint:* you are looking for `BuildType: Website`!).
 
 ## Questions about Netlify
 
