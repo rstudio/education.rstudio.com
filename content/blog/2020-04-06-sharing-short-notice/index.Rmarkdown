@@ -1,0 +1,170 @@
+---
+title: Sharing on Short Notice
+description: |
+  Q&A from the 'Sharing on Short Notice' webinar.
+date: '2020-04-06'
+categories:
+  - teach
+tags:
+  - online
+  - teach
+author: 
+  - alison
+  - "[Desirée De Leon](https://desiree.rbind.io/)"
+photo:
+  url: https://www.rawpixel.com/image/429642/ballon
+  author: Raw Pixel
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(out.width = '100%', 
+                      fig.align='center')
+
+# https://github.com/yihui/knitr/issues/1145
+knitr::opts_hooks$set(out.maxwidth = function(options) {
+  if (!knitr:::is_html_output()) return(options)
+  options$out.extra <- sprintf('style="max-width: %s;"', options$out.maxwidth)
+  options
+})
+```
+
+
+Thanks to everyone who joined us for last week's webinar on how to share your teaching materials online&mdash;
+on short notice&mdash;
+with R Markdown. We weren't able to get to all of the questions that were asked during the webinar, so here are answers to all of them. 
+
+> <i class="far fa-images"></i> Slides at <https://rstd.io/sharing><br> 
+> <i class="fab fa-github"></i> <https://github.com/rstudio-education/sharing-short-notice><br>
+> <i class="fas fa-play-circle"></i> [Video](https://resources.rstudio.com/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown)<br>
+> <i class="fas fa-question-circle"></i> If you have any other questions, please don't hesitate to post on [RStudio Community](https://community.rstudio.com/t/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown-webinar-follow-up/59131)
+
+
+## Questions about R Markdown
+
+> I'm a newbie to R Markdown. I'm a writer but not really a coder. Where can I start to with all this?
+
+RStudio has some self-paced online tutorials for [getting started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html). Also, the [Communicate](https://r4ds.had.co.nz/communicate-intro.html) section of the book *R for Data Science* gives a great overview of the basics of R Markdown. To learn about the different types of output formats available, we recommend [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, and Garrett Grolemund.
+
+For the website building tools we covered, here are some specific resources:
+
++ [R Markdown websites](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)
++ [Distill](https://rstudio.github.io/distill/website.html)
++ [Bookdown](https://bookdown.org/yihui/bookdown/)
++ [Blogdown](https://bookdown.org/yihui/blogdown/)
+
+```{r echo=FALSE, out.width='80%', fig.cap="A climb up R Markdown Mountain"}
+knitr::include_graphics("mtsalsa.jpg")
+```
+
+> How can you incorporate [learnr](https://rstudio.github.io/learnr/) exercises in R Markdown HTML output?
+
+This is a bit tricky, but possible! Desirée has done this extensively on her [Teacupes, Giraffes, and Statistics](https://bit.ly/giraffe-stats) R Markdown website. She also wrote a [blog post](https://desiree.rbind.io/post/2020/learnr-iframes/) with instructions.
+
+```{r echo=FALSE, fig.cap="Embedding learnr in R Markdown", out.maxwidth='50%'}
+knitr::include_graphics("https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif")
+```
+
+## Questions about the RStudio IDE
+
+> My RStudio IDE doesn't have Build. Could you share how to show it? 
+
+Somtimes you'll need to restart the RStudio IDE to detect the output format and show you the correct "build" button on the Build tab.
+
+```{r echo=FALSE, out.width = '50%', fig.cap="Build tab in the RStudio IDE"}
+knitr::include_graphics("https://rstudio-education.github.io/sharing-short-notice/images/screenshots/build-site.png")
+```
+
+Here is a bit [more discussion](https://community.rstudio.com/t/no-build-pane-build-book-option-using-bookdown/36415/5) on this, and how to use the `.Rproj` file to debug (*hint:* you are looking for `BuildType: Website`!).
+
+## Questions about Netlify
+
+Because we focused on how to share your teaching materials online on short notice, we introduced [Netlify Drop](https://app.netlify.com/drop). Here are a few questions about that.
+
+> Can you change the name of the Netlify link (while keeping the Netlify subdomain)?
+
+Yes! By default, Netlify provides you a sometimes amusing, [random Netlify subdomain](https://rstudio-education.github.io/sharing-short-notice/#80). See [this slide](https://rstudio-education.github.io/sharing-short-notice/#131) for how to change your site name, keeping the Netlify domain `___.netlify.com`; the video below walks you through those steps. 
+
+```{r echo=FALSE, fig.cap="Changing the Netlify subdomain"}
+knitr::include_url("https://rstudio-education.github.io/sharing-short-notice/images/netlify-domain.mp4")
+```
+
+> Can you choose a web address for Netlify?
+
+Yes! The Netlify docs contain instructions for setting up [custom domains](https://docs.netlify.com/domains-https/custom-domains/).
+
+> Any preferences between using Netlify vs. Travis-ci for continuous integration?
+
+I use Netlify mainly for [continuous deployment](https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git). This means that I connect Netlify to a Git repository and the two things- my source files and my website- are kept in sync. Then every time I commit and push changes to Git, my updated website automatically deploys without me having to remember to [manually update my site](https://rstudio-education.github.io/sharing-short-notice/#83).
+
+For blogdown websites, this workflow is particularly nice because Netlify can use Hugo to build my site from my source files, but I still need to [serve the site locally](https://bookdown.org/yihui/blogdown/workflow.html) first because Netlify does not know R.
+
+Travis does know R, so I have used that for [continuous integration](https://github.com/rstudio-education/stat545/blob/master/.travis.yml) of HTML books created with bookdown, as with the [Stat545 website](https://stat545.com/). Lately, [many users](https://ropenscilabs.github.io/actions_sandbox/) are testing out [GitHub Actions](https://github.com/features/actions) with R Markdown-based sites with success. For example, [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) wrote up some great instructions for using GitHub Actions with Netlify for a bookdown book. Similarly, here are some instructions for using GitHub Actions with a [blogdown website](https://github.com/r-lib/actions/tree/master/examples#build-blogdown-site), which is set up for the [tidyverse.org site](https://github.com/tidyverse/tidyverse.org). There is a [ghactions R package](https://www.maxheld.de/ghactions/) that can also help.
+
+
+> Can you make a private site using Netlify for free?
+
+No, [site passwords](https://www.netlify.com/pricing/#teams) are not in Netlify's free tier.
+
+## Questions about bookdown
+
+> Can bookdown export to PDF or Word docs as well as HTML?
+
+Yes- the bookdown package enables several different [output formats](https://bookdown.org/yihui/bookdown/output-formats.html). We focused on only one of the HTML output formats: the [GitBook style](https://bookdown.org/yihui/bookdown/html.html#gitbook-style).
+
+> I tried the Netlify Drop and worked great. I tried afterward to link it to the respective GitHub repository, but when it tried to build it I got an error. I used the build command `npm run build`, and the directory `_book`.
+
+Netlify cannot build your book for you- your bookdown book needs to be [built](https://bookdown.org/yihui/bookdown/get-started.html) with the bookdown R package in RStudio. When you use Netlify, you don’t use a build command at all, but you should change the publish directory to the `_book/` sub folder.
+
+## Questions about blogdown
+
+> Is it waaaaaay simpler to use Blogdown? 
+
+No. This blog post by [Maëlle Salmon](https://masalmon.eu/2020/02/29/hugo-maintenance/), who has developed several Hugo websites using blogdown including [ROpenSci](https://ropensci.org/) and [R-Hub Documentation](https://docs.r-hub.io/), is a great overview of what you need to know. As we mentioned in the webinar, unless you have high HTML fluency and high degree of comfort working with websites, we don't recommend you *start here* if you are sharing on short notice and this would be your first blogdown project.
+
+> Why does signing up to Netlify using a version control account make your life easier?
+
+Wiring up your version control account (i.e., GitHub, BitBucket, GitLab) with Netlify is a good thing `r emo::ji("tm")`. This is because it enables you to [continuously deploy](https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git) your website, so that every commit/push that changes your source files triggeres the site to be re-built. 
+
+> What should I do if I want to update the blogdown theme? 
+
+First, I [do not recommend](https://rstudio-education.github.io/sharing-short-notice/#148) updating your blogdown theme while teaching a course. Ask me how I know.
+
+```{r echo=FALSE, fig.cap="Alison's blogdown advice", out.width='75%'}
+knitr::include_graphics("blogdown-advice.png")
+```
+
+But, if you must update an already installed theme like for example [`"gcushen/hugo-academic"`](https://github.com/gcushen/hugo-academic), use:
+
+```{r eval=FALSE}
+blogdown::install_theme("gcushen/hugo-academic", 
+                        force = TRUE, 
+                        update_config = FALSE,
+                        theme_example = FALSE)
+```
+
+Then, I would look at the new example site, now located in `themes/hugo-academic/exampleSite`. First, look at the site configuration files (`config.toml` plus any `.toml` files in `config/_default/`) and update manually. You'll also want to look at the YAML in the updated example site to see if that changed as well. 
+
+
+> It is possible to deploy a blogdown site, not in Netlify, but in Github?
+
+Yes it is [possible](https://bookdown.org/yihui/blogdown/github-pages.html).
+
+## Questions about "behind the scenes"
+
+> How did you make such neat screen recordings? They were great for teaching!
+
+Desirée made the videos in the webinar using a Mac OSX app called [Kap](https://getkap.co/), an [open-source screen recorder](https://github.com/wulkano/kap). Here is an example video, which shows how to use the ["Deploy to Netlify" button](https://rstudio-education.github.io/sharing-short-notice/#150) we demoed from this [GitHub `README`](https://github.com/apreshill/share-blogdown#share-blogdown):
+
+```{r echo=FALSE, fig.cap = "Demo of the 'Deploy to Netlify' button"}
+knitr::include_url("https://rstudio-education.github.io/sharing-short-notice/images/deploy-button.mp4")
+```
+
+In the Kap app preferences, we selected "Highlight clicks", which creates that circle halo around the cursor when you click on the screen (you can see it about 7 seconds in to the video above). She also [magnified the mouse pointer](https://support.apple.com/guide/mac-help/magnify-the-mouse-pointer-mchlp2920/mac) by changing an OS-specific setting before recording.
+
+## Thank you
+
+We really enjoyed making and delivering this webinar. We have so enjoyed seeing all the sites already built and shared so far!
+
+```{r echo=FALSE, fig.cap="Bye!"}
+knitr::include_url("https://rstudio-education.github.io/sharing-short-notice/#7")
+```
