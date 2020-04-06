@@ -39,8 +39,19 @@ For the website building tools we covered, here are some specific resources:
 + [Bookdown](https://bookdown.org/yihui/bookdown/)
 + [Blogdown](https://bookdown.org/yihui/blogdown/)
 
-<img src="mtsalsa.jpg" width="80%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="mtsalsa.jpg" alt="A climb up R Markdown Mountain" width="80%" />
+<p class="caption">Figure 1: A climb up R Markdown Mountain</p>
+</div>
 
+> How can you incorporate [learnr](https://rstudio.github.io/learnr/) exercises in R Markdown HTML output?
+
+This is a bit tricky, but possible! Desirée has done this extensively on her [Teacupes, Giraffes, and Statistics](https://bit.ly/giraffe-stats) R Markdown website. She also wrote a [blog post](https://desiree.rbind.io/post/2020/learnr-iframes/) with instructions.
+
+<div class="figure" style="text-align: center">
+<iframe src="https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif" width="672" height="400px"></iframe>
+<p class="caption">Figure 2: Embedding learnr in R Markdown</p>
+</div>
 
 ## Questions about Netlify
 
@@ -50,7 +61,10 @@ Because we focused on how to share your teaching materials online on short notic
 
 Yes! By default, Netlify provides you a sometimes amusing, [random Netlify subdomain](https://rstudio-education.github.io/sharing-short-notice/#80). See [this slide](https://rstudio-education.github.io/sharing-short-notice/#131) for how to change your site name, keeping the Netlify domain `___.netlify.com`; the video below walks you through those steps. 
 
+<div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/images/netlify-domain.mp4" width="672" height="400px"></iframe>
+<p class="caption">Figure 3: Changing the Netlify subdomain</p>
+</div>
 
 > Can you choose a web address for Netlify?
 
@@ -62,7 +76,7 @@ I use Netlify mainly for [continuous deployment](https://docs.netlify.com/site-d
 
 For blogdown websites, this workflow is particularly nice because Netlify can use Hugo to build my site from my source files, but I still need to [serve the site locally](https://bookdown.org/yihui/blogdown/workflow.html) first because Netlify does not know R.
 
-Travis does know R, so I have used that for [continuous integration](https://github.com/rstudio-education/stat545/blob/master/.travis.yml) of HTML books created wit bookdown, as with the [Stat545 website](https://stat545.com/). Lately, [many users](https://ropenscilabs.github.io/actions_sandbox/) are testing out [GitHub Actions](https://github.com/features/actions) with R Markdown-based sites with success. For example, [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) wrote up some great instructions for using GitHub Actions with Netlify for a bookdown book. Similarly, here are some instructions for using GitHub Actions with a [blogdown website](https://github.com/r-lib/actions/tree/master/examples#build-blogdown-site), which is set up for the [tidyverse.org site](https://github.com/tidyverse/tidyverse.org).
+Travis does know R, so I have used that for [continuous integration](https://github.com/rstudio-education/stat545/blob/master/.travis.yml) of HTML books created wit bookdown, as with the [Stat545 website](https://stat545.com/). Lately, [many users](https://ropenscilabs.github.io/actions_sandbox/) are testing out [GitHub Actions](https://github.com/features/actions) with R Markdown-based sites with success. For example, [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/) wrote up some great instructions for using GitHub Actions with Netlify for a bookdown book. Similarly, here are some instructions for using GitHub Actions with a [blogdown website](https://github.com/r-lib/actions/tree/master/examples#build-blogdown-site), which is set up for the [tidyverse.org site](https://github.com/tidyverse/tidyverse.org). There is a [ghactions R package](https://www.maxheld.de/ghactions/) that can also help.
 
 
 > Can you make a private site using Netlify for free?
@@ -92,7 +106,10 @@ No.
 
 First, I [do not recommend](https://rstudio-education.github.io/sharing-short-notice/#148) updating your blogdown theme while teaching a course. Ask me how I know.
 
+<div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/#148" width="672" height="400px"></iframe>
+<p class="caption">Figure 4: blogdown advice</p>
+</div>
 
 But, if you must update an already installed theme like for example [`"gcushen/hugo-academic"`](https://github.com/gcushen/hugo-academic), use:
 
@@ -117,6 +134,13 @@ Yes it is [possible](https://bookdown.org/yihui/blogdown/github-pages.html).
 
 Desirée made the videos in the webinar using a Mac OSX app called [Kap](https://getkap.co/), an [open-source screen recorder](https://github.com/wulkano/kap). Here is an example video, which shows how to use the ["Deploy to Netlify" button](https://rstudio-education.github.io/sharing-short-notice/#150) we demoed from this [GitHub `README`](https://github.com/apreshill/share-blogdown#share-blogdown):
 
+<div class="figure" style="text-align: center">
 <iframe src="https://rstudio-education.github.io/sharing-short-notice/images/deploy-button.mp4" width="672" height="400px"></iframe>
+<p class="caption">Figure 5: Demo of the 'Deploy to Netlify' button</p>
+</div>
 
 In the Kap app preferences, we selected "Highlight clicks", which creates that circle halo around the cursor when you click on the screen (you can see it about 7 seconds in to the video above). She also [magnified the mouse pointer](https://support.apple.com/guide/mac-help/magnify-the-mouse-pointer-mchlp2920/mac) by changing an OS-specific setting before recording.
+
+## Thank you
+
+We really enjoyed making and delivering this webinar. We have so enjoyed seeing all the sites already built and shared so far!
