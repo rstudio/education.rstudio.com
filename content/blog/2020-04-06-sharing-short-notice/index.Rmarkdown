@@ -19,6 +19,13 @@ photo:
 ```{r include = FALSE}
 knitr::opts_chunk$set(out.width = '100%', 
                       fig.align='center')
+
+# https://github.com/yihui/knitr/issues/1145
+knitr::opts_hooks$set(out.maxwidth = function(options) {
+  if (!knitr:::is_html_output()) return(options)
+  options$out.extra <- sprintf('style="max-width: %s;"', options$out.maxwidth)
+  options
+})
 ```
 
 
@@ -53,7 +60,7 @@ knitr::include_graphics("mtsalsa.jpg")
 
 This is a bit tricky, but possible! Desirée has done this extensively on her [Teacupes, Giraffes, and Statistics](https://bit.ly/giraffe-stats) R Markdown website. She also wrote a [blog post](https://desiree.rbind.io/post/2020/learnr-iframes/) with instructions.
 
-```{r echo=FALSE, fig.cap="Embedding learnr in R Markdown"}
+```{r echo=FALSE, fig.cap="Embedding learnr in R Markdown", out.maxwidth='100%'}
 knitr::include_url("https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif")
 ```
 
