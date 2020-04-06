@@ -60,7 +60,7 @@ knitr::include_graphics("mtsalsa.jpg")
 
 This is a bit tricky, but possible! Desirée has done this extensively on her [Teacupes, Giraffes, and Statistics](https://bit.ly/giraffe-stats) R Markdown website. She also wrote a [blog post](https://desiree.rbind.io/post/2020/learnr-iframes/) with instructions.
 
-```{r echo=FALSE, fig.cap="Embedding learnr in R Markdown", out.maxwidth='100%'}
+```{r echo=FALSE, fig.cap="Embedding learnr in R Markdown", out.maxwidth='50%'}
 knitr::include_graphics("https://desiree.rbind.io/post/2020/learnr-iframes/iframe-resizer.gif")
 ```
 
