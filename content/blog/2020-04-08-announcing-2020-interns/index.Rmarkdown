@@ -18,7 +18,7 @@ and while we wish we could have offered positions to everyone,
 in the end we were only able to select five:
 
 - [Simon Couch](https://simonpcouch.com/): tidymodels package support
-- [Ezgi Karaesman](https://www.ezgikaraesmen.com/): interactive tutorials for tidymodels.
+- [Ezgi Karaesmen](https://www.ezgikaraesmen.com/): interactive tutorials for tidymodels.
 - [Devin Johnson](https://www.linkedin.com/in/devinljohnson/): support for people working with spreadsheets in R.
 - [JooYoung Seo](https://jooyoungseo.com/): accessibility improvements.
 - [Nischal Shrestha](http://nischalshrestha.me/): interactive tutorials for Python.
