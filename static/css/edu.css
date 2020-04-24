@@ -1,5 +1,6 @@
 body, button, input, textarea {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
@@ -126,3 +127,15 @@ details {
   padding-top: 2em;
   border-top: .5em solid #dae8f6;
 }
+
+.listItem .itemDetails .itemDescription {
+  font-size: 16px;
+}
+
+.section .event .eventLocation {
+  font-size: 17px; }
+.section .event .eventDate {
+  font-size: 17px; }
+.section .event .eventDetails {
+  font-size: 16px;
+  }
