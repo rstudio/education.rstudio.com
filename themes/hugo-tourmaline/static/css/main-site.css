@@ -1187,8 +1187,8 @@ em {
   .section .event .eventDate {
     font-size: 17px; }
   .section .event .eventDetails {
-    font-size: 0.94rem;
-    line-height: 1.2rem; }
+    font-size: 0.975rem;
+    line-height: 1.275rem; }
 
 .hexBadges {
   position: relative;
