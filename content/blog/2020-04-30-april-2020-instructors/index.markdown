@@ -38,3 +38,31 @@ and the number certified to teach Shiny to 18.
 If you would like to speak with any of them about your training needs,
 their contact information is on the [trainers' roster](http://education.rstudio.com/trainers)
 and they would be happy to hear from you.
+
+| Country | Number of Certified Instructors |
+| :------ | ------------------------------: |
+| Algeria |                               1 |
+| Argentina |                             3 |
+| Australia |                             4 |
+| Austria |                               1 |
+| Belgium |                               2 |
+| Canada |                                7 |
+| Costa Rica |                            3 |
+| Czech Republic |                        1 |
+| France |                                7 |
+| Germany |                               3 |
+| Hungary |                               1 |
+| Indonesia |                             4 |
+| Ireland |                               1 |
+| Israel |                                1 |
+| Italy |                                 1 |
+| Kenya |                                 1 |
+| Netherlands |                           1 |
+| Puerto Rico |                           1 |
+| Senegal |                               1 |
+| South Korea |                           1 |
+| Switzerland |                           1 |
+| Thailand |                              1 |
+| Trinidad and Tobago |                   1 |
+| United Kingdom |                       14 |
+| United States of America |             46 |
