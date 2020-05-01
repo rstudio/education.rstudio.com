@@ -31,7 +31,7 @@ The following is an example of the type of classroom disaster that motivated thi
 > on your screen no longer matches the output, and your students are confused.
 
 
-Was this relatable?  Have you, too lived out this horror story?
+Was this relatable?  Have you, too, lived out this horror story?
 
 This kind of un-reproducibility of materialas, and the simple frustration of the fiddly nature of manually highlighting code text, led me to develop flair.  I wrote this package first and foremost for educators, 
 although I have found it equally useful for conference talks and workshops.  
@@ -218,9 +218,7 @@ decorate("plot") %>%
 
 
 Students learning to code in R will often quickly figure out how to *write* code
-and guess-and-check until the output matches what they wanted.  
-However, it's also important that they be able to *think ahead*, and anticipate
-what each piece of the code will influence in the output.
+and guess-and-check until the output matches what they wanted.  However, it's also important that they be able to *think ahead*, and anticipate what each piece of the code will influence in the output.
 
 Fill-in-the blank activities are a great way to practice, and masking with flair 
 makes creating these activities quick and easy!
