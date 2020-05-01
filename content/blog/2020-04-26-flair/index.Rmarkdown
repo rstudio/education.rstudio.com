@@ -9,8 +9,192 @@ categories:
 tags:
   - rmarkdown
 author:
-  - Kelly Bodwin
+  - "[Kelly Bodwin](https://www.kelly-bodwin.com/)"
 photo:
   url: https://unsplash.com/photos/RWTtztB6zT8
   author: Christina Hernández
 ---
+
+<!-- Alison, or whoever:  turns out flair doesn't play nice with .Rmarkdown, the way it does with .Rmd.  I've written a patch so this file can knit; make sure you install flair from github rather than CRAN. !-->
+
+It is my distinct pleasure today to introduce you to the flair package.
+
+Tell me if the following experience is relatable:  
+
+>You are presenting an analysis to a class or audience, and you turn to a slide 
+> where you show both source code and its output.  Because you wanted to emphasize 
+> a line of the source code, you copy-pasted the code text into the slide, and added 
+> highlighting to the relevant section.
+
+> Upon opening the slide, you realize with creeping horror that you made a change
+> in the source code, but you forgot to edit your slide.  The code text displayed
+> on your screen no longer matches the output, and your students are confused.
+
+
+This horror story, and the simple frustration of manually highlighting code text,
+led me to develop flair.  I wrote this package first and foremost for educators, 
+although I have found it equally useful for conference talks and workshops.  
+
+
+![Yes, the reference is deliberate.](https://i.imgflip.com/1hzigk.jpg)
+
+
+
+You can find the basic package documentation and vignettes at 
+[this site](https://kbodwin.github.io/flair/index.html).
+
+Today, though, I want to take the time to show you a few of my favorite examples 
+of flair in action, to give you an idea of how it might be useful in your classroom.
+
+These examples all use the `baby_names` dataset from 
+[https://www.kaggle.com/kaggle/us-baby-names](https://www.kaggle.com/kaggle/us-baby-names),
+restricted only to babies born in California with the first name "Kelly".
+
+```{r, include = FALSE}
+library(tidyverse)
+library(flair)
+baby_names <- read_delim(here::here("content/blog/2020-04-26-flair/kellys_ca.txt"), delim = " ")
+```
+
+
+--
+
+## Example 1:  Emphasize small differences in code.
+
+The most default ability of flair is quickly adding basic highlighting to code.
+
+I am particularly fond of using flair to show how small changes impact the output
+of code.
+
+For example, suppose I am teaching the concept of *geometries* in ggplot. I wish to plot the number of babies born each year with the name "Kelly" in California, colored by gender assigned at birth.
+
+I have made two different plots; one using columns, and one using lines.
+
+<!-- `r ''````{r geoms, include=FALSE} -->
+<!-- baby_names %>% -->
+<!--   ggplot(aes(x = Year, y = Count, fill = Gender)) + -->
+<!--   geom_col() -->
+
+<!-- baby_names %>% -->
+<!--   ggplot(aes(x = Year, y = Count, fill = Gender)) + -->
+<!--   geom_col() -->
+<!-- ```` -->
+
+```{r geoms, include = FALSE}
+baby_names %>%
+  ggplot(aes(x = Year, y = Count, fill = Gender)) +
+  geom_col()
+
+baby_names %>%
+  ggplot(aes(x = Year, y = Count, color = Gender)) +
+  geom_line()
+```
+
+With the `decorate` and `flair` functions, I can print the source code with specific parts highlighted, and simultaneously run and output the results:
+
+
+```{r}
+decorate("geoms") %>%
+  flair("_col") %>%
+  flair("fill = ") %>%
+  flair("_line") %>%
+  flair("color = ")
+```
+
+*Note:* If you have many pieces of code to flair, and you don't want to manually specificy everything, the `flair_rx()` function lets you input regular expressions instead of fixed strings.*
+
+
+## Example 2:  Match colors to concepts.
+
+When teaching, we often want to link concepts to code, like in this beautiful flair-created slide by [Andrew Heiss](https://twitter.com/andrewheiss):
+
+![](https://pbs.twimg.com/media/EVq7NGeXgAMhvOC?format=jpg&name=large)
+
+
+Here is a less beautiful, but very quick example of using flair to
+create a similar effect:
+
+```{r, results = "asis"}
+"This model has a response variable, two predictors, and an interaction term." %>%
+  flair("response variable", color = "indianred") %>%
+  flair("predictors", color = "cornflowerblue") %>%
+  flair("interaction term", color = "orange")
+```
+
+```{r lm, include = FALSE}
+mod <- lm(Count ~ Gender + Year + Gender:Year, data = baby_names)
+
+summary(mod)
+```
+
+```{r}
+decorate("lm") %>%
+  flair("Count", color = "indianred") %>%
+  flair("Gender:Year", color = "orange") %>%
+  flair_rx("Gender|Year", color = "cornflowerblue")
+
+```
+
+
+
+## Example 3:  Mask code for easy practice activities.
+
+Last but not least, my absolute favorite usage of flair is the `mask()` function
+for hiding segments of code.
+
+If I want students to understand the `ggplot` framework, I want them to have practice identifying a few key elements:
+
+* Which variables are being used for which aesthetic elements.
+* Which geometries are being used to make the plot.
+* Which `theme_*()` function is being applied to the plot.
+
+Thus, I can created the following challenge:  
+
+Fill in the code blanks, based on the plot output.
+
+
+```{r plot, include = FALSE}
+library(ggplot2)
+
+baby_names %>%
+  ggplot(aes(y = Count, x = Year, color = Gender)) +
+  geom_point() +
+  geom_line() +
+  theme_light()
+
+
+```
+
+
+```{r}
+decorate("plot") %>%
+  flair_rx("ggplot2?", background = "pink") %>%
+  mask("Count") %>%
+  mask("Year") %>%
+  mask("Gender") %>%
+  mask("point") %>%
+  mask("line") %>%
+  mask("light")
+  
+```
+
+
+Inferring code from output is a great way to practice, and masking with flair makes creating these activities quick and easy!
+
+--
+
+## Wrap-up
+
+You can try out the code in this blog post in [this RStudio Cloud project](https://rstudio.cloud/project/1227440).
+
+In general, flair can be used with most document types that are based on html; including slide makers like *ioslides* and *xaringan*.
+
+It is not yet possible to knit to pdf or MS Word files with flair formatting - although we hope to provide that functionality in the future.
+
+If you have any ideas for future flair abilities that would make your teaching and presenting easier, please don't hesitate to [file an issue on GitHub.](https://github.com/kbodwin/flair/issues), or to [reach out to me](mailto:kelly@bodwin.us) personally.
+
+
+**Happy flairing!!!**
+
+
+![This guy's name is Ric Flair.  If you didn't know that, now you do.](https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif)
