@@ -19,9 +19,9 @@ photo:
 
 It is my distinct pleasure today to introduce you to the flair package.
 
-Tell me if the following experience is relatable:  
+The following is an example of the type of classroom disaster that motivated this package:
 
->You are presenting an analysis to a class or audience, and you turn to a slide 
+> You are presenting an analysis to a class or audience, and you turn to a slide 
 > where you show both source code and its output.  Because you wanted to emphasize 
 > a line of the source code, you copy-pasted the code text into the slide, and added 
 > highlighting to the relevant section.
@@ -31,8 +31,9 @@ Tell me if the following experience is relatable:
 > on your screen no longer matches the output, and your students are confused.
 
 
-This horror story, and the simple frustration of manually highlighting code text,
-led me to develop flair.  I wrote this package first and foremost for educators, 
+Was this relatable?  Have you, too lived out this horror story?
+
+This kind of un-reproducibility of materialas, and the simple frustration of the fiddly nature of manually highlighting code text, led me to develop flair.  I wrote this package first and foremost for educators, 
 although I have found it equally useful for conference talks and workshops.  
 
 
@@ -41,14 +42,10 @@ although I have found it equally useful for conference talks and workshops.
 
 
 You can find the basic package documentation and vignettes at 
-[this site](https://kbodwin.github.io/flair/index.html).
-
-Today, though, I want to take the time to show you a few of my favorite examples 
-of flair in action, to give you an idea of how it might be useful in your classroom.
+[this site](https://kbodwin.github.io/flair/index.html). Today, though, I want to take the time to show you a few of my favorite examples of flair in action, to give you an idea of how it might be useful in your classroom or presentation.
 
 These examples all use the `baby_names` dataset from 
-[https://www.kaggle.com/kaggle/us-baby-names](https://www.kaggle.com/kaggle/us-baby-names),
-restricted only to babies born in California with the first name "Kelly".
+[https://www.kaggle.com/kaggle/us-baby-names](https://www.kaggle.com/kaggle/us-baby-names), which contains counts of babies born with each given name, in each state, since the 1800s. We'll restrict our data only to babies born in California with the first name "Kelly".
 
 ```{r, include = FALSE}
 library(tidyverse)
@@ -58,29 +55,29 @@ baby_names <- read_delim(here::here("content/blog/2020-04-26-flair/kellys_ca.txt
 
 
 --
-
 ## Example 1:  Emphasize small differences in code.
 
-The most default ability of flair is quickly adding basic highlighting to code.
+The most default ability of flair is quickly adding basic highlighting to code. 
 
-I am particularly fond of using flair to show how small changes impact the output
-of code.
+There are a lot of use cases of this simple functionality.  I am particularly fond of using the `flair()` function to show how small changes in code impact the output.
 
-For example, suppose I am teaching the concept of *geometries* in ggplot. I wish to plot the number of babies born each year with the name "Kelly" in California, colored by gender assigned at birth.
+For example, suppose I am teaching the concept of *geometries* in `ggplot`. I wish to plot the number of babies born each year with the name "Kelly" in California, colored by gender assigned at birth.
 
-I have made two different plots; one using columns, and one using lines.
+I have made two different plots; one using columns, and one using lines.  The code chunk for my work looks like this:
 
-<!-- `r ''````{r geoms, include=FALSE} -->
-<!-- baby_names %>% -->
-<!--   ggplot(aes(x = Year, y = Count, fill = Gender)) + -->
-<!--   geom_col() -->
+````
+```{r geoms, include=FALSE}`r ''`
+baby_names %>%
+  ggplot(aes(x = Year, y = Count, fill = Gender)) +
+  geom_col()
 
-<!-- baby_names %>% -->
-<!--   ggplot(aes(x = Year, y = Count, fill = Gender)) + -->
-<!--   geom_col() -->
-<!-- ```` -->
+baby_names %>%
+  ggplot(aes(x = Year, y = Count, color = Gender)) +
+  geom_line()
+```
+````
 
-```{r geoms, include = FALSE}
+```{r geoms2, include = FALSE}
 baby_names %>%
   ggplot(aes(x = Year, y = Count, fill = Gender)) +
   geom_col()
@@ -90,11 +87,24 @@ baby_names %>%
   geom_line()
 ```
 
-With the `decorate` and `flair` functions, I can print the source code with specific parts highlighted, and simultaneously run and output the results:
+With the `decorate` and `flair` functions, I can trigger this code chunk to be evaluated, while simultaneously adding highlighting to the chosen parts of my code.
+
+Ordinarily, we would use `echo = FALSE` on the first chunk below, so as not to see the `flair()` process.
 
 
-```{r}
+```{r, eval = FALSE}
 decorate("geoms") %>%
+  flair("_col") %>%
+  flair("fill = ") %>%
+  flair("_line") %>%
+  flair("color = ")
+```
+
+
+```{r, echo = FALSE}
+## necessary to avoid duplicate label warning
+
+decorate("geoms2") %>%
   flair("_col") %>%
   flair("fill = ") %>%
   flair("_line") %>%
@@ -103,22 +113,49 @@ decorate("geoms") %>%
 
 *Note:* If you have many pieces of code to flair, and you don't want to manually specificy everything, the `flair_rx()` function lets you input regular expressions instead of fixed strings.*
 
-
 ## Example 2:  Match colors to concepts.
 
 When teaching, we often want to link concepts to code, like in this beautiful flair-created slide by [Andrew Heiss](https://twitter.com/andrewheiss):
 
-![](https://pbs.twimg.com/media/EVq7NGeXgAMhvOC?format=jpg&name=large)
+<kbd><img src="https://pbs.twimg.com/media/EVq7NGeXgAMhvOC?format=jpg&name=large" /></kbd>
 
 
-Here is a less beautiful, but very quick example of using flair to
-create a similar effect:
+Coloring different pieces of your code different colors is straightforward with `flair()`.  For an extra shortcut, you can also pipe strings though the `flair` functions to color parts of your text, and even
+add your own special html tags if you wish.
 
-```{r, results = "asis"}
+#### Code Chunks:
+
+````
+```{r, results = "asis", echo = FALSE}`r ''`
 "This model has a response variable, two predictors, and an interaction term." %>%
   flair("response variable", color = "indianred") %>%
   flair("predictors", color = "cornflowerblue") %>%
-  flair("interaction term", color = "orange")
+  flair("interaction term", color = "orange") %>%
+  flair_all(before = "<h4>", after = "</h4>") %>%
+  cat()
+```
+````
+
+````
+
+```{r, echo = FALSE}`r ''`
+decorate("lm") %>%
+  flair("Count", color = "indianred") %>%
+  flair("Gender:Year", color = "orange") %>%
+  flair_rx("Gender |Year ", color = "cornflowerblue")
+
+```
+````
+
+#### Results:
+
+```{r, results = "asis", echo = FALSE}
+"This model has a response variable, two predictors, and an interaction term." %>%
+  flair("response variable", color = "indianred") %>%
+  flair("predictors", color = "cornflowerblue") %>%
+  flair("interaction term", color = "orange") %>%
+  flair_all(before = "<h4>", after = "</h4>") %>%
+  cat()
 ```
 
 ```{r lm, include = FALSE}
@@ -127,30 +164,31 @@ mod <- lm(Count ~ Gender + Year + Gender:Year, data = baby_names)
 summary(mod)
 ```
 
-```{r}
+```{r, echo = FALSE}
 decorate("lm") %>%
   flair("Count", color = "indianred") %>%
   flair("Gender:Year", color = "orange") %>%
-  flair_rx("Gender|Year", color = "cornflowerblue")
+  flair_rx("Gender |Year ", color = "cornflowerblue")
 
 ```
-
 
 
 ## Example 3:  Mask code for easy practice activities.
 
 Last but not least, my absolute favorite usage of flair is the `mask()` function
-for hiding segments of code.
+for hiding segments of code. This feature was originally suggested by Alison Hill,
+and it has quickly become my most-used function in the package!
 
-If I want students to understand the `ggplot` framework, I want them to have practice identifying a few key elements:
+Suppose I am teaching `ggplot`, and I want students to understand the Grammar of 
+Graphics framework.  I would like for them to have practice identifying a few key 
+elements of the plot:
 
 * Which variables are being used for which aesthetic elements.
 * Which geometries are being used to make the plot.
 * Which `theme_*()` function is being applied to the plot.
 
-Thus, I can created the following challenge:  
-
-Fill in the code blanks, based on the plot output.
+Thus, I can create the following challenge:  Fill in the code blanks, based on 
+the plot output.
 
 
 ```{r plot, include = FALSE}
@@ -166,7 +204,7 @@ baby_names %>%
 ```
 
 
-```{r}
+```{r, echo = FALSE}
 decorate("plot") %>%
   flair_rx("ggplot2?", background = "pink") %>%
   mask("Count") %>%
@@ -178,23 +216,48 @@ decorate("plot") %>%
   
 ```
 
+Here I have hidden the flair chunk, so that you can see the exercise as the students do.
+This is what it looked like:
 
-Inferring code from output is a great way to practice, and masking with flair makes creating these activities quick and easy!
+
+````
+```{r, echo = FALSE}`r ''`
+decorate("plot") %>%
+  flair_rx("ggplot2?", background = "pink") %>%
+  mask("Count") %>%
+  mask("Year") %>%
+  mask("Gender") %>%
+  mask("point") %>%
+  mask("line") %>%
+  mask("light")
+  
+```
+````
+
+
+Students learning to code in R will often quickly figure out how to *write* code
+and guess-and-check until the output matches what they wanted.  
+However, it's also important that they be able to *think ahead*, and anticipate
+what each piece of the code will influence in the output.
+
+Fill-in-the blank activities are a great way to practice, and masking with flair 
+makes creating these activities quick and easy!
 
 --
-
 ## Wrap-up
 
-You can try out the code in this blog post in [this RStudio Cloud project](https://rstudio.cloud/project/1227440).
+You can try out the code in this blog post in [this RStudio Cloud project](https://rstudio.cloud/project/1227440).  In general, flair can be used 
+with most document types that are based on html; including slide makers like 
+*ioslides* and *xaringan*. It is unfortunately not yet possible to knit to pdf or 
+MS Word files with flair formatting - although we hope to provide that functionality in the future.
 
-In general, flair can be used with most document types that are based on html; including slide makers like *ioslides* and *xaringan*.
+If you have any ideas for future flair abilities that would make your teaching and presenting easier, please don't hesitate to [file an issue on GitHub](https://github.com/kbodwin/flair/issues), or to [reach out to me](mailto:kelly@bodwin.us) personally.
 
-It is not yet possible to knit to pdf or MS Word files with flair formatting - although we hope to provide that functionality in the future.
+We hope that flair makes your code-presenting process a bit more simple, reproducible,
+and enjoyable.
 
-If you have any ideas for future flair abilities that would make your teaching and presenting easier, please don't hesitate to [file an issue on GitHub.](https://github.com/kbodwin/flair/issues), or to [reach out to me](mailto:kelly@bodwin.us) personally.
+Happy flairing!
 
-
-**Happy flairing!!!**
 
 
 ![This guy's name is Ric Flair.  If you didn't know that, now you do.](https://media.giphy.com/media/l0HU7yHIK6Nc3WcE0/giphy.gif)
