@@ -1,23 +1,26 @@
 ---
 title: Decorate your R code with flair
-date: '2020-04-26'
-description: |
-  The goal of the flair package is to is to provide tools for formatting R code in knitted R Markdown files.
-slug: flair
+author:
+  - '[Kelly Bodwin](https://www.kelly-bodwin.com/)'
+date: '2020-05-04'
 categories:
   - teach
 tags:
   - rmarkdown
-author:
-  - "[Kelly Bodwin](https://www.kelly-bodwin.com/)"
+description: |
+  The goal of the flair package is to provide tools for formatting R code in knitted R Markdown files.
+slug: flair
 photo:
   url: https://unsplash.com/photos/RWTtztB6zT8
   author: Christina Hernández
 ---
 
-<!-- Alison, or whoever:  turns out flair doesn't play nice with .Rmarkdown, the way it does with .Rmd.  I've written a patch so this file can knit; make sure you install flair from github rather than CRAN. !-->
+<!-- This post relies on the development version of flair!-->
 
-It is my distinct pleasure today to introduce you to the flair package.
+
+
+
+It is my distinct pleasure today to introduce you to the [flair package](https://kbodwin.github.io/flair/).
 
 The following is an example of the type of classroom disaster that motivated this package:
 
@@ -33,7 +36,7 @@ The following is an example of the type of classroom disaster that motivated thi
 
 Was this relatable?  Have you, too, lived out this horror story?
 
-This kind of un-reproducibility of materialas, and the simple frustration of the fiddly nature of manually highlighting code text, led me to develop flair.  I wrote this package first and foremost for educators, 
+This kind of un-reproducibility of materials, and the simple frustration of the fiddly nature of manually highlighting code text, led me to develop flair.  I wrote this package first and foremost for educators, 
 although I have found it equally useful for conference talks and workshops.  
 
 
@@ -45,12 +48,11 @@ You can find the basic package documentation and vignettes at
 [this site](https://kbodwin.github.io/flair/index.html). Today, though, I want to take the time to show you a few of my favorite examples of flair in action, to give you an idea of how it might be useful in your classroom or presentation.
 
 These examples all use the `baby_names` dataset from 
-[https://www.kaggle.com/kaggle/us-baby-names](https://www.kaggle.com/kaggle/us-baby-names), which contains counts of babies born with each given name, in each state, since the 1800s. We'll restrict our data only to babies born in California with the first name "Kelly".
+[https://www.kaggle.com/kaggle/us-baby-names](https://www.kaggle.com/kaggle/us-baby-names), which contains counts of babies born with each given name, in each state, since the 1800s. We'll restrict our data only to babies born in California with the first name "Kelly". You can download [this data](kellys_ca.txt) to follow along.
 
 
 
 
---
 ## Example 1:  Emphasize small differences in code.
 
 The most default ability of flair is quickly adding basic highlighting to code. 
@@ -94,22 +96,21 @@ decorate("geoms") %>%
 <pre><code class='language-r'><code>baby_names %>%<br>&nbsp;&nbsp;ggplot(aes(x = Year, y = Count, <span style='background-color:#ffff7f'>fill = </span>Gender)) +<br>&nbsp;&nbsp;geom<span style='background-color:#ffff7f'>_col</span>()</code></code></pre>
 
 
-<img src="/blog/2020-04-26-flair/index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="/blog/2020-05-04-flair/index_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 
 <pre><code class='language-r'><code>baby_names %>%<br>&nbsp;&nbsp;ggplot(aes(x = Year, y = Count, <span style='background-color:#ffff7f'>color = </span>Gender)) +<br>&nbsp;&nbsp;geom<span style='background-color:#ffff7f'>_line</span>()</code></code></pre>
 
 
-<img src="/blog/2020-04-26-flair/index_files/figure-html/unnamed-chunk-7-2.png" width="672" />
+<img src="/blog/2020-05-04-flair/index_files/figure-html/unnamed-chunk-8-2.png" width="672" />
 
-*Note:* If you have many pieces of code to flair, and you don't want to manually specificy everything, the `flair_rx()` function lets you input regular expressions instead of fixed strings.*
+*Note:* If you have many pieces of code to flair, and you don't want to manually specify everything, the `flair_rx()` function lets you input regular expressions instead of fixed strings.
 
 ## Example 2:  Match colors to concepts.
 
 When teaching, we often want to link concepts to code, like in this beautiful flair-created slide by [Andrew Heiss](https://twitter.com/andrewheiss):
 
-<kbd><img src="https://pbs.twimg.com/media/EVq7NGeXgAMhvOC?format=jpg&name=large" /></kbd>
-
+![an R Markdown slide with flair](heiss-slide.jpg)
 
 Coloring different pieces of your code different colors is straightforward with `flair()`.  For an extra shortcut, you can also pipe strings though the `flair` functions to color parts of your text, and even
 add your own special html tags if you wish.
@@ -119,7 +120,7 @@ add your own special html tags if you wish.
 ````
 ```{r, results = "asis", echo = FALSE}
 "This model has a response variable, two predictors, and an interaction term." %>%
-  flair("response variable", color = "indianred") %>%
+  flair("response variable", color = "deeppink") %>%
   flair("predictors", color = "cornflowerblue") %>%
   flair("interaction term", color = "orange") %>%
   flair_all(before = "<h4>", after = "</h4>") %>%
@@ -131,7 +132,7 @@ add your own special html tags if you wish.
 
 ```{r, echo = FALSE}
 decorate("lm") %>%
-  flair("Count", color = "indianred") %>%
+  flair("Count", color = "deeppink") %>%
   flair("Gender:Year", color = "orange") %>%
   flair_rx("Gender |Year ", color = "cornflowerblue")
 
@@ -140,12 +141,12 @@ decorate("lm") %>%
 
 #### Results:
 
-<h4>This model has a <span style='color:indianred'>response variable</span>, two <span style='color:cornflowerblue'>predictors</span>, and an <span style='color:orange'>interaction term</span>.</h4>
+<h4>This model has a <span style='color:deeppink'>response variable</span>, two <span style='color:cornflowerblue'>predictors</span>, and an <span style='color:orange'>interaction term</span>.</h4>
 
 
 
 
-<pre><code class='language-r'><code>mod <- lm(<span style='color:indianred'>Count</span> ~ <span style='color:cornflowerblue'>Gender </span>+ <span style='color:cornflowerblue'>Year </span>+ <span style='color:orange'>Gender:Year</span>, data = baby_names)<br><br>summary(mod)</code></code></pre>
+<pre><code class='language-r'><code>mod <- lm(<span style='color:deeppink'>Count</span> ~ <span style='color:cornflowerblue'>Gender </span>+ <span style='color:cornflowerblue'>Year </span>+ <span style='color:orange'>Gender:Year</span>, data = baby_names)<br><br>summary(mod)</code></code></pre>
 
 ```
 
@@ -196,7 +197,7 @@ the plot output.
 <pre><code class='language-r'><code>library(<span style='background-color:pink'>ggplot2</span>)<br><br>baby_names %>%<br>&nbsp;&nbsp;<span style='background-color:pink'>ggplot</span>(aes(y = <span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;&nbsp;</span>, x = <span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;</span>, color = <span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>)) +<br>&nbsp;&nbsp;geom_<span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;&nbsp;</span>() +<br>&nbsp;&nbsp;geom_<span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;</span>() +<br>&nbsp;&nbsp;theme_<span style='background-color:#ffff7f'> &nbsp;&nbsp;&nbsp;&nbsp;</span>()</code></code></pre>
 
 
-<img src="/blog/2020-04-26-flair/index_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="/blog/2020-05-04-flair/index_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
 Here I have hidden the flair chunk, so that you can see the exercise as the students do.
 This is what it looked like:
@@ -223,12 +224,12 @@ and guess-and-check until the output matches what they wanted.  However, it's al
 Fill-in-the blank activities are a great way to practice, and masking with flair 
 makes creating these activities quick and easy!
 
---
+
 ## Wrap-up
 
 You can try out the code in this blog post in [this RStudio Cloud project](https://rstudio.cloud/project/1227440).  In general, flair can be used 
-with most document types that are based on html; including slide makers like 
-*ioslides* and *xaringan*. It is unfortunately not yet possible to knit to pdf or 
+with most R Markdown HTML-based output formats, including slide makers like 
+[*ioslides*](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html) and [*xaringan*](https://github.com/yihui/xaringan). It is unfortunately not yet possible to knit to pdf or 
 MS Word files with flair formatting - although we hope to provide that functionality in the future.
 
 If you have any ideas for future flair abilities that would make your teaching and presenting easier, please don't hesitate to [file an issue on GitHub](https://github.com/kbodwin/flair/issues), or to [reach out to me](mailto:kelly@bodwin.us) personally.
