@@ -1,15 +1,15 @@
 ---
 title: 'Teach R with learnr: a powerful tool for remote teaching'
 author:
-  - '[Allison Horst](https://twitter.com/allison_horst)'
+  - '[Allison Horst](https://www.allisonhorst.com/)'
 date: '2020-05-19'
 categories:
   - teach
 tags:
-  - rmarkdown
   - learnr
+  - rmarkdown
 description: |
-  'Why and how I created a learnr tutorial on *Exploring missing data in naniar*'
+  Why and how I created a learnr tutorial on *Exploring missing data in naniar*
 slug: learnr-for-remote
 photo:
   url: https://github.com/allisonhorst/stats-illustrations
@@ -18,7 +18,7 @@ photo:
 
 
 
-The unexpected switch to remote instruction has been a challenge for teachers and learners, and has inspired - or for some, forced - the use of innovative teaching methods and tools. Coding lessons pose a unique challenge for remote instruction as teachers are unavailable for in-person troubleshooting, and beginning students are unlikely to have developed debugging or reprex-building skills. On top of coding-related challenges, students might not have access to a device on which they can install R and RStudio.
+The unexpected switch to remote instruction has been a challenge for teachers and learners, and has inspired - or for some, forced - the use of innovative teaching methods and tools. Coding lessons pose a unique challenge for remote instruction as teachers are unavailable for in-person troubleshooting, and beginning students are unlikely to have developed debugging or [reprex](https://reprex.tidyverse.org/)-building skills. On top of coding-related challenges, students might not have access to a device on which they can install R and RStudio.
 
 So, how can we create live coding lessons to include participants who... 
 
@@ -40,7 +40,7 @@ Usually, I have students fork and clone materials from a GitHub repo so that the
 
 ### learnr tutorials look and feel like a simple website 
 
-I love the RStudio IDE. If you’re reading this, you probably do, too. But try to remember what it felt like the first time you ever opened RStudio. There is a lot there, and it takes *a long time* to feel really comfortable navigating it. Eventually, most R-users will need to become good friends with the RStudio IDE. But for first-time users working remotely and without hands-on help, a learnr tutorial - which looks like a simple, easy-to-navigate website - could be a more familiar and welcoming entry. 
+I love the RStudio IDE. If you’re reading this, you probably do, too. But try to remember what it felt like the first time you opened it. There is a lot there, and it takes a long time to feel really comfortable navigating it. Eventually, most R-users will need to become good friends with the RStudio IDE. But for first-time users working remotely and without hands-on help, a learnr tutorial - which looks like a simple, easy-to-navigate website - could be a more familiar and welcoming entry. 
 
 For example, here is what my [*Exploring missing values in naniar*](https://allisonhorst.shinyapps.io/missingexplorer/) tutorial looks like: 
 
@@ -48,7 +48,7 @@ For example, here is what my [*Exploring missing values in naniar*](https://alli
 
 ### No installing or importing necessary
 
-Both [RStudio Cloud](https://rstudio.cloud/) and learnr solve this problem. No need for R, RStudio, or package installation for learners to get up-and-running. And in learnr, learners don’t even need to read in data - it can already exist as a pre-stored object (e.g. data frame) that can be directly referred to throughout the tutorial. That means that **tutorial users can immediately start exploring and playing with the data at virtually no start-up cost**. Again, reading in data and naming objects are critical skills that every user will eventually need to learn. Let them learn it later. Let the first time be just the awesome stuff with learnr.
+Both [RStudio Cloud](https://rstudio.cloud/) and learnr solve this problem. No need for R, RStudio, or package installation for learners to get up-and-running. And in learnr, learners don’t even need to read in data; it can already exist as a pre-stored object (e.g. data frame) that can be directly referred to throughout the tutorial. That means that **tutorial users can immediately start exploring and playing with the data at virtually no start-up cost**. Again, reading in data and naming objects are critical skills that every user will eventually need to learn. Let them learn it later. Let the first time be just the awesome stuff with learnr.
 
 ## 2. Customized hints and solutions
 
@@ -56,7 +56,7 @@ Another major hurdle of remote teaching is how to help students when they get st
 
 ### You decide the starting point
 
-Writing code from scratch can be intimidating for first-time users. In learnr tutorials **you decide what code already exists**, and users can build on that. 
+Writing code from scratch can be intimidating for first-time users. In learnr tutorials you decide what code already exists, and users can build on that. 
 
 For example, you can pre-populate a code example for a basic graph with `ggplot2`, and users could just add or update variables for the x- and y- aesthetic. Even better: there is no risk of them breaking it. For each code example, there is a button in the top left to “Start Over,” which will return the code to the original. 
 
@@ -191,7 +191,7 @@ I feel that learnr is a great option for coding lessons and activities, especial
 
 For me, the biggest benefits of learnr are: 
 
-- Looks & feels like a simple website (great for first-time R users, knowing that eventually they’ll need to work in RStudio IDE)
+- Looks and feels like a simple website (great for first-time R users, knowing that eventually they’ll need to work in RStudio IDE)
 - No account, login, or installations necessary
 - Pre-populated code exercises, hints and solutions ensure no one gets left behind in the absence of in-person troubleshooting
 - Data / objects already exist - no need for beginners to import data or store objects
