@@ -42,7 +42,7 @@ This course is created and taught by [Dr. Ted Laderas](http://laderast.github.io
 
 > "This course is meant to be a gentle introduction to using R/Rstudio in your daily work. It aims to teach useful skills (visualization, data loading, data filtering and manipulation, simple statistics) that students can immediately use in their work. No prerequisites or previous experience required. It is not meant to be a substitute for a full programming course or a full course in statistics."
 
-For external folks, Ted also started a mailing list that will let you know when materials are updated: <https://tinyletter.com/ready4r.> To compliment these materials, you may also want to check out Ted's self-paced R-Bootcamp course, created with Jessica Minnier: <https://r-bootcamp.netlify.com/>.
+For external folks, Ted also started a mailing list that will let you know when materials are updated: <https://ready4r.netlify.app/mailing/>. To compliment these materials, you may also want to check out Ted's self-paced R-Bootcamp course, created with Jessica Minnier: <https://r-bootcamp.netlify.com/>.
 
 ## [Robust tools](https://robust-tools.djnavarro.net/)
 
@@ -54,7 +54,7 @@ This course is created and taught by [Dr. Danielle Navarro](https://djnavarro.ne
 
 Each section in this course features links to an HTML slide deck, YouTube video, and an RStudio Cloud project.
 
-[<img src="robust-playlist.png" title="https://robust-tools.djnavarro.net/ playlist" alt="https://robust-tools.djnavarro.net/ playlist" width="500"/>](https://robust-tools.djnavarro.net/)
+[<img src="robust-playlist.png" title="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" alt="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" width="500"/>](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB)
 
 Danielle also has an online resource called ["Learning Statistics with R"](https://learningstatisticswithr.com/), originally designed to teach intro statistics to psychology undergrads.
 
