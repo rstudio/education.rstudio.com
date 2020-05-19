@@ -1,0 +1,424 @@
+---
+title: Synchronize your HTML widgets with `crosstalk`
+author: 
+  - carl
+date: '2020-03-05'
+slug: conf20-crosstalk
+categories:
+  - learn
+  - events
+tags:
+  - conf2020
+photo:
+  url: https://unsplash.com/photos/U6tYeEhEVTk
+  author: Dhahi Alsaeedi via Unsplash
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<<<<<<< HEAD
+<link href="/rmarkdown-libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-easybutton/easy-button.js"></script>
+<script src="/rmarkdown-libs/leaflet-easybutton/EasyButton-binding.js"></script>
+<link href="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.js"></script>
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter-bindings.js"></script>
+<link href="/rmarkdown-libs/ionicons/ionicons.min.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/rmarkdown-libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/bootstrap/js/bootstrap.min.js"></script>
+<link href="/rmarkdown-libs/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/rmarkdown-libs/strftime/strftime-min.js"></script>
+<link href="/rmarkdown-libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/selectize/js/selectize.min.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+||||||| 025b619
+<link href="/rmarkdown-libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-easybutton/easy-button.js"></script>
+<script src="/rmarkdown-libs/leaflet-easybutton/EasyButton-binding.js"></script>
+<link href="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.js"></script>
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter-bindings.js"></script>
+<link href="/rmarkdown-libs/ionicons/ionicons.min.css" rel="stylesheet" />
+=======
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/rmarkdown-libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/bootstrap/js/bootstrap.min.js"></script>
+<link href="/rmarkdown-libs/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/rmarkdown-libs/strftime/strftime-min.js"></script>
+<link href="/rmarkdown-libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/selectize/js/selectize.min.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+
+
+<div id="crosstalk-the-quick-summary" class="section level2">
+<h2><code>Crosstalk</code>: the quick summary</h2>
+<p>Yihui Xie and I taught the <a href="https://rstd.io/RMAID">R Markdown and Interactive Dashboards Workshop</a> at rstudio::conf(2020). Based on some feedback we received from students there, I want to introduce you to the <code>crosstalk</code> package that we used to make HTML widgets interact in our R Markdown dashboards. <code>Crosstalk</code> is interesting to learn about because it:</p>
+<ul>
+<li><strong>Isn’t widely known</strong>. Several workshop attendees said that learning about this package was worth the entire cost of the workshop, despite the fact that it’s been around since 2016.</li>
+<li><strong>Adds simple interactivity without a lot of complexity</strong>. We frequently use <a href="http://www.htmlwidgets.org">HTML widgets</a> to make R Markdown dashboards interactive. The <code>crosstalk</code> package allows those HTML widgets to interact with one another without using Shiny. For reference, you can refer to the <a href="https://rstudio.github.io/crosstalk/"><code>crosstalk</code> online documentation</a></li>
+<li><strong>Works with the most commonly used HTML widgets</strong>. HTML widgets have to be explicity designed to use <code>crosstalk</code>. However, <code>crosstalk</code> works out of the box with commonly used widgets such as <code>plotly</code>, <code>DT</code>, <code>leaflet</code>. Even if you only use those three widgets, you can build some very impressive dashboards.</li>
+</ul>
+</div>
+<div id="crosstalk-adds-meaningful-interactivity-to-r-markdown-dashboards" class="section level1">
+<h1><code>Crosstalk</code> adds meaningful interactivity to R Markdown dashboards</h1>
+<p>I want to begin by defining who should use <code>crosstalk</code> and why. <code>Crosstalk</code> is designed for people who:</p>
+<ul>
+<li><strong>Build interactive dashboards with R Markdown and HTML widgets</strong>. <a href="https://rmarkdown.rstudio.com">R Markdown</a> allows you to create a dashboard from simple text annotations and code chunks while <a href="https://www.htmlwidgets.org">HTML Widgets</a> add interactivity to what would normally be static R Markdown documents.</li>
+<li><strong>Want to coordinate the responses of multiple HTML widgets</strong>. <code>Crosstalk</code> allows multiple HTML Widgets to synchronize their views of a shared dataframe and to filter what’s shown.</li>
+</ul>
+<<<<<<< HEAD
+<p>To get a sense of how this works, let’s look at the simple example code we presented in the workshop. For the purposes of this blog post, I’m leaving out the R Markdown layout elements and simply showing the outputs.</p>
+<pre class="r"><code>library(crosstalk)
+||||||| 025b619
+<p>To get a sense of how this works, let’s look at the simple example code we presented in the workshop. For the purposes of this blog post, I’m leaving out the layout R Markdown elements and simply showing the outputs.</p>
+<pre class="r"><code>library(flexdashboard)
+library(crosstalk)
+=======
+<p>To get a sense of how this works, let’s look at the simple example code we presented in the workshop for creating two separate HTML widgets:</p>
+<ol style="list-style-type: decimal">
+<li><p>A <a href="https://rstudio.github.io/DT/">DT</a> interactive table, and</p></li>
+<li><p>A <a href="https://rstudio.github.io/leaflet/">leaflet</a> interactive map.</p></li>
+</ol>
+<pre class="r"><code>library(DT)
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+library(leaflet)
+
+shared_df &lt;- quakes[sample(nrow(quakes), 10),]
+<<<<<<< HEAD
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers(~long, ~lat)
+datatable(shared_df)</code></pre>
+<p><div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-32.14,-30.01,-27.38,-17.42,-15.36,-14.86,-20.68,-21.14,-23.91,-19.72],[180,181.15,182.39,185.16,167.51,167.32,181.41,181.06,180,169.71],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-32.14,-14.86],"lng":[167.32,185.16]}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["901","859","348","178","408","927","65","805","332","94"],[-32.14,-30.01,-27.38,-17.42,-15.36,-14.86,-20.68,-21.14,-23.91,-19.72],[180,181.15,182.39,185.16,167.51,167.32,181.41,181.06,180,169.71],[331,210,69,206,123,137,593,625,534,271],[4.5,4.3,4.5,4.5,4.7,4.9,4.9,4.5,4.5,4.2],[27,17,12,22,28,22,40,35,11,14]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script></p>
+<p>All we’ve done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent – searches done in the data table don’t affect the map. Similarly, while you can scale the map, the map elements themselves aren’t editable.</p>
+<p>But what if we wanted to have the two widgets synchronize with one another? For example, could we have searches and row selections in the datatable drive which earthquakes are shown on the map?</p>
+||||||| 025b619
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers()
+#&gt; Assuming &quot;long&quot; and &quot;lat&quot; are longitude and latitude, respectively</code></pre>
+<div id="htmlwidget-1" style="width:700px;height:415.296px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-15.55,-18.85,-20.04,-13.64,-12.57,-21.14,-12.49,-15.34,-18.8,-23.97],[185.05,187.55,181.87,165.96,167.11,174.21,166.36,167.1,182.41,179.91],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-23.97,-12.49],"lng":[165.96,187.55]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>datatable(shared_df)</code></pre>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["33","572","584","17","891","869","325","675","692","626"],[-15.55,-18.85,-20.04,-13.64,-12.57,-21.14,-12.49,-15.34,-18.8,-23.97],[185.05,187.55,181.87,165.96,167.11,174.21,166.36,167.1,182.41,179.91],[292,44,577,50,231,40,74,128,385,518],[4.8,4.8,4.7,6,4.8,5.7,4.9,5.3,5.2,4.5],[42,35,19,83,28,78,55,18,67,23]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>All we’ve done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent – if you select a row in the datatable, it doesn’t effect the map. Similarly, while you can scale the map, the map elements themselves aren’t editable.</p>
+<p>But what if we wanted to have the two widgets synchronize with one another? For example, could we have row selections in the datatable drive which points are shown on the map?</p>
+=======
+
+# make the widgets
+datatable(shared_df)
+leaflet(shared_df) %&gt;% 
+  addTiles() %&gt;% 
+  addMarkers(~long, ~lat)</code></pre>
+<p><div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["435","991","142","287","694","27","759","326","176","997"],[-21.8,-20.73,-20.65,-19.3,-20.74,-14.72,-12.34,-26.1,-32.22,-12.28],[183.2,181.42,181.4,180.6,181.53,167.51,167.43,182.3,180.2,167.06],[325,575,582,671,598,155,50,49,216,248],[4.4,4.3,4,4.2,4.5,4.6,5.1,4.4,5.7,4.7],[19,18,14,16,36,18,47,11,90,35]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-21.8,-20.73,-20.65,-19.3,-20.74,-14.72,-12.34,-26.1,-32.22,-12.28],[183.2,181.42,181.4,180.6,181.53,167.51,167.43,182.3,180.2,167.06],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-32.22,-12.28],"lng":[167.06,183.2]}},"evals":[],"jsHooks":[]}</script></p>
+<p>All we’ve done here is show 10 earthquakes near Fiji on a map and shown the same data in a data table. The two presentations of the data in the map and datatable HTML widgets are independent – searches done in the data table don’t affect the map. Similarly, while you can scale the map, the map elements themselves aren’t editable.</p>
+<p>But what if we wanted to have the two widgets synchronize with one another? For example, could we have searches and row selections in the datatable drive which earthquakes are shown on the map?</p>
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+<p>The answer, of course, is yes. But the remarkable thing about crosstalk is how easy it is to create that synchronization: We only have to change one line at the beginning of the code. We simply change this line</p>
+<pre class="r"><code>shared_df &lt;- quakes[sample(nrow(quakes), 10),]</code></pre>
+<p>to this:</p>
+<pre class="r"><code>shared_df &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])</code></pre>
+<<<<<<< HEAD
+<p>Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes (that’s referred to as a <em>draggable selection</em>), only the rows for those earthquakes show up in the datatable below.</p>
+<pre class="r"><code>library(crosstalk)
+||||||| 025b619
+<p>Now if we run that chunk of code with that simple change, the two HTML widgets interact as we want them to. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes, only the rows for those earthquakes show up in the datatable below.</p>
+<pre class="r"><code>library(flexdashboard)
+library(crosstalk)
+=======
+<p>Now if we run that chunk of code with that simple change, the two HTML widgets talk to each other. Selected rows in the datatable highlight the appropriate location indicators in the map. Similarly, if you click the selection icon below the + and - zoom controls on the map and draw a box around only a few earthquakes (that’s referred to as a <em>draggable selection</em>), only the rows for those earthquakes show up in the datatable below.</p>
+<pre class="r"><code>library(DT)
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+library(leaflet)
+
+# here is the change
+library(crosstalk)
+shared_df &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])
+<<<<<<< HEAD
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers(~long, ~lat)</code></pre>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedData7ea34ceb"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-21.11,-33.57,-21.04,-22.87,-29.09,-18.1,-32.6,-23.75,-23.44,-21.59],[181.5,180.8,181.2,172.65,183.2,181.63,180.9,184.5,184.6,170.56],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["449","530","395","629","478","880","425","972","555","1000"],"ctGroup":"SharedData7ea34ceb"}]}],"limits":{"lat":[-33.57,-18.1],"lng":[170.56,184.6]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>datatable(shared_df)</code></pre>
+<div id="htmlwidget-4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"crosstalkOptions":{"key":["449","530","395","629","478","880","425","972","555","1000"],"group":"SharedData7ea34ceb"},"filter":"none","data":[["449","530","395","629","478","880","425","972","555","1000"],[-21.11,-33.57,-21.04,-22.87,-29.09,-18.1,-32.6,-23.75,-23.44,-21.59],[181.5,180.8,181.2,172.65,183.2,181.63,180.9,184.5,184.6,170.56],[538,51,591,56,54,592,57,54,63,165],[5.5,4.7,4.9,5.1,4.6,4.4,4.7,5.2,4.8,6],[104,35,45,50,23,28,44,74,27,119]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+||||||| 025b619
+leaflet(shared_df) %&gt;% addTiles() %&gt;% addMarkers()
+#&gt; Assuming &quot;long&quot; and &quot;lat&quot; are longitude and latitude, respectively</code></pre>
+<div id="htmlwidget-3" style="width:700px;height:415.296px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedData41da988b"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-17.44,-20.07,-19.45,-15.85,-12.37,-19.52,-22.12,-17.64,-19.1,-19.85],[181.33,181.75,184.48,185.9,166.93,168.98,180.49,181.28,183.87,181.85],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["906","808","705","836","986","133","816","38","331","188"],"ctGroup":"SharedData41da988b"}]}],"limits":{"lat":[-22.12,-12.37],"lng":[166.93,185.9]}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>datatable(shared_df)</code></pre>
+<div id="htmlwidget-4" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"crosstalkOptions":{"key":["906","808","705","836","986","133","816","38","331","188"],"group":"SharedData41da988b"},"filter":"none","data":[["906","808","705","836","986","133","816","38","331","188"],[-17.44,-20.07,-19.45,-15.85,-12.37,-19.52,-22.12,-17.64,-19.1,-19.85],[181.33,181.75,184.48,185.9,166.93,168.98,180.49,181.28,183.87,181.85],[545,582,246,121,291,63,532,574,61,576],[4.2,4.7,4.3,4.1,4.2,4.5,4,4.6,5.3,4.9],[37,27,15,17,16,21,14,17,42,54]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+</div>
+=======
+
+# make the widgets
+datatable(shared_df, rownames = FALSE)
+leaflet(shared_df) %&gt;% 
+  addTiles() %&gt;% 
+  addMarkers(~long, ~lat)</code></pre>
+<iframe src="/blog/2020-02-28-conf20-crosstalk/tabmap.html" width="850" height="1000&quot;">
+</iframe>
+<p>test this</p>
+<pre class="r"><code>knitr::include_url(&quot;/blog/2020-02-28-conf20-crosstalk/tabmap.html&quot;,
+                   height = &quot;1000px&quot;)</code></pre>
+<iframe src="/blog/2020-02-28-conf20-crosstalk/tabmap.html" width="672" height="1000px">
+</iframe>
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+<div id="crosstalk-works-by-having-widgets-share-a-dynamic-dataframe" class="section level2">
+<h2><code>Crosstalk</code> works by having widgets share a dynamic dataframe</h2>
+<p>This interactivity and synchronization is made possible by the <code>shared_df</code> object we created. <code>Shared_df</code> is an <a href="https://adv-r.hadley.nz/r6.html">R6 object</a>. If you’re not familiar with R6 objects, it doesn’t matter – all you need to know is that when we called <code>SharedData$new</code>, it created a new object called <code>shared_df</code> that walks, acts, and quacks like an ordinary data frame, but can dynamically change based on interactions with HTML widgets.</p>
+<p>Only some HTML widgets work with <code>crosstalk</code>. You can read <a href="https://rstudio.github.io/crosstalk/widgets.html">the full list of HTML widgets that work with <code>crosstalk</code> here</a>, but here are my 3 personal go-tos:</p>
+<ul>
+<li><code>leaflet</code>, the mapping widget we used in this example</li>
+<li><code>DT</code>, the datatable widget we used in the example</li>
+<li><code>plotly</code>, a general purpose plotting widget that also can make any ggplot interactive.</li>
+</ul>
+<<<<<<< HEAD
+<p>With <code>crosstalk</code> and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However, <code>crosstalk</code> really shines when we add one more feature: interactive filters.</p>
+</div>
+<div id="filter-functions-give-the-user-direct-control-over-plotting" class="section level2">
+<h2>Filter functions give the user direct control over plotting</h2>
+<p>Sometimes you want to explicitly specify the data to be plotted instead of relying on the user selecting rows or brushing across a plot. Crosstalk’s three filter operatings do exactly this with the following functions:</p>
+<ul>
+<li><code>filter_checkbox</code>: include rows in the shared dataframe whose column value equals any checked values. This is particularly useful for columns containing categorical values or factors.</li>
+<li><code>filter_slider</code>: include rows in the shared dataframe whose numeric column values fit within a range of specified values.</li>
+<li><code>filter_select</code>: include rows in the shared dataframe whose column value equals one of a list of possibilities. As with <code>filter_checkbox</code>, this is most useful for columns with categorical values or factors.</li>
+</ul>
+<p>Let’s demonstrate all these filter functions by looking at our favorite(?) data set, <code>mtcars</code>. We’ll generate a plot using the <code>ggplotly</code> function of the <code>plotly</code> HTML widget, and then filter that data by the number of cylinders, horsepower, and whether the car has an automatic transmission or not. Because I’m publishing this in a blogdown post, I’m not going to try to make the plot look beautiful, but will just stack the filters inline ahead of the plot. If I were building an actual dashboard, I’d put the filter widgets inside a sidebar and dedicate most of the screen to the plot using an R Markdown layout.</p>
+<p>The code is shown below. Play with the filter selectors and watch the plot change in response to your selections. I find it particularly fun to set the slider filter to a small range of values and then to slide the entire selection back and forth to show sub-ranges of horsepower values.</p>
+<pre class="r"><code>library(crosstalk)
+library(plotly)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plotly&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     last_plot</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     layout</code></pre>
+<pre class="r"><code>new_mtcars &lt;- mtcars %&gt;% mutate(cyl = as.factor(cyl))
+shared_mtcars &lt;- SharedData$new(new_mtcars)
+filter_checkbox(&quot;cyl&quot;, &quot;Cylinders&quot;, shared_mtcars, ~cyl, inline = TRUE) ## that&#39;s a tilda in front of cyl, no a minus</code></pre>
+<div id="cyl" class="form-group crosstalk-input-checkboxgroup crosstalk-input">
+<label class="control-label" for="cyl">Cylinders</label>
+<div class="crosstalk-options-group">
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="4"/>
+<span>4</span>
+</label>
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="6"/>
+<span>6</span>
+</label>
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="8"/>
+<span>8</span>
+</label>
+</div>
+<script type="application/json" data-for="cyl">{
+  "map": {
+    "4": ["3", "8", "9", "18", "19", "20", "21", "26", "27", "28", "32"],
+    "6": ["1", "2", "4", "6", "10", "11", "30"],
+    "8": ["5", "7", "12", "13", "14", "15", "16", "17", "22", "23", "24", "25", "29", "31"]
+  },
+  "group": ["SharedData68b6151b"]
+}</script>
+</div>
+<pre class="r"><code>filter_slider(&quot;hp&quot;, &quot;Horsepower&quot;, shared_mtcars, ~hp, width = &quot;40%&quot;)</code></pre>
+<div class="form-group crosstalk-input crosstalk-input-slider js-range-slider" id="hp" style="width: 40%;">
+<label class="control-label" for="hp">Horsepower</label>
+<input data-type="double" data-min="52" data-max="335" data-from="52" data-to="335" data-step="1" data-grid="true" data-grid-num="9.75862068965517" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="0.353356890459364" data-drag-interval="true" data-data-type="number"/>
+<script type="application/json" data-for="hp">{
+  "values": [52, 62, 65, 66, 66, 91, 93, 95, 97, 105, 109, 110, 110, 110, 113, 123, 123, 150, 150, 175, 175, 175, 180, 180, 180, 205, 215, 230, 245, 245, 264, 335],
+  "keys": ["19", "8", "20", "18", "26", "27", "3", "9", "21", "6", "32", "1", "2", "4", "28", "10", "11", "22", "23", "5", "25", "30", "12", "13", "14", "15", "16", "17", "7", "24", "29", "31"],
+  "group": ["SharedData68b6151b"]
+}</script>
+</div>
+<pre class="r"><code>filter_select(&quot;auto&quot;, &quot;Automatic&quot;, shared_mtcars, ~ifelse(am == 0, &quot;Yes&quot;, &quot;No&quot;))</code></pre>
+<div id="auto" class="form-group crosstalk-input-select crosstalk-input">
+<label class="control-label" for="auto">Automatic</label>
+<div>
+<select multiple></select>
+<script type="application/json" data-for="auto">{
+  "items": {
+    "value": ["No", "Yes"],
+    "label": ["No", "Yes"]
+  },
+  "map": {
+    "No": ["1", "2", "3", "18", "19", "20", "26", "27", "28", "29", "30", "31", "32"],
+    "Yes": ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "21", "22", "23", "24", "25"]
+  },
+  "group": ["SharedData68b6151b"]
+}</script>
+</div>
+</div>
+<pre class="r"><code>g &lt;- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
+ggplotly(g)</code></pre>
+<div id="htmlwidget-5" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"data":[{"x":[2.32,3.19,3.15,2.2,1.615,1.835,2.465,1.935,2.14,1.513,2.78],"y":[22.8,24.4,22.8,32.4,30.4,33.9,21.5,27.3,26,30.4,21.4],"text":["wt: 2.320<br />mpg: 22.8<br />cyl: 4<br />.crossTalkKey: 3","wt: 3.190<br />mpg: 24.4<br />cyl: 4<br />.crossTalkKey: 8","wt: 3.150<br />mpg: 22.8<br />cyl: 4<br />.crossTalkKey: 9","wt: 2.200<br />mpg: 32.4<br />cyl: 4<br />.crossTalkKey: 18","wt: 1.615<br />mpg: 30.4<br />cyl: 4<br />.crossTalkKey: 19","wt: 1.835<br />mpg: 33.9<br />cyl: 4<br />.crossTalkKey: 20","wt: 2.465<br />mpg: 21.5<br />cyl: 4<br />.crossTalkKey: 21","wt: 1.935<br />mpg: 27.3<br />cyl: 4<br />.crossTalkKey: 26","wt: 2.140<br />mpg: 26.0<br />cyl: 4<br />.crossTalkKey: 27","wt: 1.513<br />mpg: 30.4<br />cyl: 4<br />.crossTalkKey: 28","wt: 2.780<br />mpg: 21.4<br />cyl: 4<br />.crossTalkKey: 32"],"key":["3","8","9","18","19","20","21","26","27","28","32"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","set":"SharedData68b6151b","name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null},{"x":[2.62,2.875,3.215,3.46,3.44,3.44,2.77],"y":[21,21,21.4,18.1,19.2,17.8,19.7],"text":["wt: 2.620<br />mpg: 21.0<br />cyl: 6<br />.crossTalkKey: 1","wt: 2.875<br />mpg: 21.0<br />cyl: 6<br />.crossTalkKey: 2","wt: 3.215<br />mpg: 21.4<br />cyl: 6<br />.crossTalkKey: 4","wt: 3.460<br />mpg: 18.1<br />cyl: 6<br />.crossTalkKey: 6","wt: 3.440<br />mpg: 19.2<br />cyl: 6<br />.crossTalkKey: 10","wt: 3.440<br />mpg: 17.8<br />cyl: 6<br />.crossTalkKey: 11","wt: 2.770<br />mpg: 19.7<br />cyl: 6<br />.crossTalkKey: 30"],"key":["1","2","4","6","10","11","30"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"hoveron":"points","set":"SharedData68b6151b","name":"6","legendgroup":"6","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null},{"x":[3.44,3.57,4.07,3.73,3.78,5.25,5.424,5.345,3.52,3.435,3.84,3.845,3.17,3.57],"y":[18.7,14.3,16.4,17.3,15.2,10.4,10.4,14.7,15.5,15.2,13.3,19.2,15.8,15],"text":["wt: 3.440<br />mpg: 18.7<br />cyl: 8<br />.crossTalkKey: 5","wt: 3.570<br />mpg: 14.3<br />cyl: 8<br />.crossTalkKey: 7","wt: 4.070<br />mpg: 16.4<br />cyl: 8<br />.crossTalkKey: 12","wt: 3.730<br />mpg: 17.3<br />cyl: 8<br />.crossTalkKey: 13","wt: 3.780<br />mpg: 15.2<br />cyl: 8<br />.crossTalkKey: 14","wt: 5.250<br />mpg: 10.4<br />cyl: 8<br />.crossTalkKey: 15","wt: 5.424<br />mpg: 10.4<br />cyl: 8<br />.crossTalkKey: 16","wt: 5.345<br />mpg: 14.7<br />cyl: 8<br />.crossTalkKey: 17","wt: 3.520<br />mpg: 15.5<br />cyl: 8<br />.crossTalkKey: 22","wt: 3.435<br />mpg: 15.2<br />cyl: 8<br />.crossTalkKey: 23","wt: 3.840<br />mpg: 13.3<br />cyl: 8<br />.crossTalkKey: 24","wt: 3.845<br />mpg: 19.2<br />cyl: 8<br />.crossTalkKey: 25","wt: 3.170<br />mpg: 15.8<br />cyl: 8<br />.crossTalkKey: 29","wt: 3.570<br />mpg: 15.0<br />cyl: 8<br />.crossTalkKey: 31"],"key":["5","7","12","13","14","15","16","17","22","23","24","25","29","31"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"hoveron":"points","set":"SharedData68b6151b","name":"8","legendgroup":"8","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.31745,5.61955],"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"categoryorder":"array","categoryarray":["2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"wt","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9.225,35.075],"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"categoryorder":"array","categoryarray":["10","15","20","25","30","35"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"mpg","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.913385826771654},"annotations":[{"text":"cyl","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative","dragmode":"zoom"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"4e5b70dbc24c":{"x":{},"y":{},"colour":{},"key":{},"type":"scatter"}},"cur_data":"4e5b70dbc24c","visdat":{"4e5b70dbc24c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedData68b6151b"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="why-not-use-shiny-instead-of-the-crosstalk-package" class="section level2">
+<h2>Why not use Shiny instead of the crosstalk package?</h2>
+<p>Those of you who have built R Markdown dashboards before are probably wondering, “Why bother with crosstalk when we can do all of this and more in Shiny?” For some applications, R Markdown, HTML widgets, and <code>crosstalk</code> are a better choice for creating interactive applications because they:</p>
+<ul>
+<li><strong>Don’t require R once the dashboard is published</strong>. Shiny apps require a back end R environment to interact with the user, while an R Markdown dashboard with HTML widgets and <code>crosstalk</code> don’t.</li>
+<li><strong>Generate standalone documents</strong>. Not only do documents created using R Markdown, HTML widgets, and <code>crosstalk</code> not require an R back end – they don’t require any back end support whatsoever. Once your document has been knit, it runs entirely within the user’s browser.</li>
+<li><strong>Can be published and viewed in any environment that hosts web pages</strong>. Interactive applications built this way can be emailed, hosted on ordinary web servers, and used by people who don’t use R at all. If the person’s browser supports Javascript and HTML, that person can use your interactive document.</li>
+</ul>
+</div>
+<div id="but-there-are-real-limitations-too" class="section level2">
+<h2>But there are real limitations too</h2>
+<p>While R Markdown, HTML widgets and <code>crosstalk</code> are wonderful tools, using them isn’t all rainbows and unicorns. Documents built using these tools aren’t nearly as flexible as Shiny apps, and <code>crosstalk</code> imposes significant limitations to what you can do. Should you use <code>crosstalk</code> and HTML widgets to build an interactive application, be aware that:</p>
+<ul>
+<li><strong>The HTML widgets you use must support <code>crosstalk</code></strong>. While the HTML widgets we’ve chosen are some of the most popular, only a few others support <code>crosstalk</code>. Again, check with <a href="https://rstudio.github.io/crosstalk/widgets.html">the full list of HTML widgets that work with <code>crosstalk</code></a> before committing to using <code>crosstalk</code>.</li>
+<li><strong>Your data must be in a data frame or tibble</strong>. The foundation of <code>crosstalk</code> is an R6 shared dataframe object, so any data you want to use with <code>crosstalk</code> must be in that format.</li>
+<li><strong>All your data must fit in memory</strong>. Because all your data will be loaded into the user’s browser, <code>crosstalk</code> is not the tool you want if you’re going to be browsing a multi-gigabyte data set.</li>
+<li><strong>Layouts and interactivity are limited</strong>. R Markdown and <code>crosstalk</code> typically work with grid-based layouts built from static data. If you want a document that dynamically changes in response to real-time data, you should probably be using Shiny instead.</li>
+</ul>
+</div>
+<div id="conclusion-try-using-crosstalk-in-your-next-interactive-r-markdown-project" class="section level2">
+<h2>Conclusion: try using <code>crosstalk</code> in your next interactive R Markdown project</h2>
+<p>As you can see from this posting, HTML widgets and <code>crosstalk</code> aren’t limited to standalone dashboards; they can be embedded in most R markdown documents that generate HTML, including blodown posts and emails. And of course, you can publish them on RStudio Connect or RPubs.com – you don’t need a Shiny server to share them.</p>
+<p>I find the best part about <code>crosstalk</code> and its associated HTML widgets is that they seem to work well with my typical workflow. I spend much of my time exploring teaching survey data, and I usually plot results using <code>ggplot</code> and also show the raw data using the <code>DT</code> datatable package. To make those plots interactive, I only have to share my survey dataframe with <code>SharedData$new()</code>, adjust my <code>ggplot</code> and <code>DT</code> code to use <code>ggplotly</code> and my shared dataframe, and voila – I have an interactive way to explore my dataset. Learning to use <code>crosstalk</code> has saved me days of time; if you give it a try, it might do the same for you.</p>
+</div>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<p>If you are interested in seeing the <code>crosstalk</code> materials we presented during the workshop, check out the <a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf">workshop slides (in PDF form)</a> and the <a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards">exercises</a>. You can also review the <a href="https://rstd.io/RMAID">full set of workshop materials on github</a>.</p>
+||||||| 025b619
+<p>With crosstalk and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However,</p>
+=======
+<p>With <code>crosstalk</code> and these three HTML widgets in our toolbag, we can make a lot of very impressive interactive dashboards. However, <code>crosstalk</code> really shines when we add one more feature: interactive filters.</p>
+</div>
+<div id="filter-functions-give-the-user-direct-control-over-plotting" class="section level2">
+<h2>Filter functions give the user direct control over plotting</h2>
+<p>Sometimes you want to explicitly specify the data to be plotted instead of relying on the user selecting rows or brushing across a plot. Crosstalk’s three filter operatings do exactly this with the following functions:</p>
+<ul>
+<li><code>filter_checkbox</code>: include rows in the shared dataframe whose column value equals any checked values. This is particularly useful for columns containing categorical values or factors.</li>
+<li><code>filter_slider</code>: include rows in the shared dataframe whose numeric column values fit within a range of specified values.</li>
+<li><code>filter_select</code>: include rows in the shared dataframe whose column value equals one of a list of possibilities. As with <code>filter_checkbox</code>, this is most useful for columns with categorical values or factors.</li>
+</ul>
+<p>Let’s demonstrate all these filter functions by looking at our favorite(?) data set, <code>mtcars</code>. We’ll generate a plot using the <code>ggplotly</code> function of the <code>plotly</code> HTML widget, and then filter that data by the number of cylinders, horsepower, and whether the car has an automatic transmission or not. Because I’m publishing this in a blogdown post, I’m not going to try to make the plot look beautiful, but will just stack the filters inline ahead of the plot. If I were building an actual dashboard, I’d put the filter widgets inside a sidebar and dedicate most of the screen to the plot using an R Markdown layout.</p>
+<p>The code is shown below. Play with the filter selectors and watch the plot change in response to your selections. I find it particularly fun to set the slider filter to a small range of values and then to slide the entire selection back and forth to show sub-ranges of horsepower values.</p>
+<pre class="r"><code>library(crosstalk)
+library(plotly)
+new_mtcars &lt;- mtcars %&gt;% mutate(cyl = as.factor(cyl))
+shared_mtcars &lt;- SharedData$new(new_mtcars)
+filter_checkbox(&quot;cyl&quot;, &quot;Cylinders&quot;, shared_mtcars, ~cyl, inline = TRUE) ## that&#39;s a tilda in front of cyl, no a minus
+filter_slider(&quot;hp&quot;, &quot;Horsepower&quot;, shared_mtcars, ~hp, width = &quot;40%&quot;)
+filter_select(&quot;auto&quot;, &quot;Automatic&quot;, shared_mtcars, ~ifelse(am == 0, &quot;Yes&quot;, &quot;No&quot;))
+g &lt;- ggplot(shared_mtcars) + geom_point(aes(x = wt, y = mpg, color = cyl))
+ggplotly(g)</code></pre>
+<p><div id="cyl" class="form-group crosstalk-input-checkboxgroup crosstalk-input">
+<label class="control-label" for="cyl">Cylinders</label>
+<div class="crosstalk-options-group">
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="4"/>
+<span>4</span>
+</label>
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="6"/>
+<span>6</span>
+</label>
+<label class="checkbox-inline">
+<input type="checkbox" name="cyl" value="8"/>
+<span>8</span>
+</label>
+</div>
+<script type="application/json" data-for="cyl">{
+  "map": {
+    "4": ["3", "8", "9", "18", "19", "20", "21", "26", "27", "28", "32"],
+    "6": ["1", "2", "4", "6", "10", "11", "30"],
+    "8": ["5", "7", "12", "13", "14", "15", "16", "17", "22", "23", "24", "25", "29", "31"]
+  },
+  "group": ["SharedData69dd55e4"]
+}</script>
+</div><div class="form-group crosstalk-input crosstalk-input-slider js-range-slider" id="hp" style="width: 40%;">
+<label class="control-label" for="hp">Horsepower</label>
+<input data-type="double" data-min="52" data-max="335" data-from="52" data-to="335" data-step="1" data-grid="true" data-grid-num="9.75862068965517" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="0.353356890459364" data-drag-interval="true" data-data-type="number"/>
+<script type="application/json" data-for="hp">{
+  "values": [52, 62, 65, 66, 66, 91, 93, 95, 97, 105, 109, 110, 110, 110, 113, 123, 123, 150, 150, 175, 175, 175, 180, 180, 180, 205, 215, 230, 245, 245, 264, 335],
+  "keys": ["19", "8", "20", "18", "26", "27", "3", "9", "21", "6", "32", "1", "2", "4", "28", "10", "11", "22", "23", "5", "25", "30", "12", "13", "14", "15", "16", "17", "7", "24", "29", "31"],
+  "group": ["SharedData69dd55e4"]
+}</script>
+</div><div id="auto" class="form-group crosstalk-input-select crosstalk-input">
+<label class="control-label" for="auto">Automatic</label>
+<div>
+<select multiple></select>
+<script type="application/json" data-for="auto">{
+  "items": {
+    "value": ["No", "Yes"],
+    "label": ["No", "Yes"]
+  },
+  "map": {
+    "No": ["1", "2", "3", "18", "19", "20", "26", "27", "28", "29", "30", "31", "32"],
+    "Yes": ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "21", "22", "23", "24", "25"]
+  },
+  "group": ["SharedData69dd55e4"]
+}</script>
+</div>
+</div><div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"data":[{"x":[2.32,3.19,3.15,2.2,1.615,1.835,2.465,1.935,2.14,1.513,2.78],"y":[22.8,24.4,22.8,32.4,30.4,33.9,21.5,27.3,26,30.4,21.4],"text":["wt: 2.320<br />mpg: 22.8<br />cyl: 4<br />.crossTalkKey: 3","wt: 3.190<br />mpg: 24.4<br />cyl: 4<br />.crossTalkKey: 8","wt: 3.150<br />mpg: 22.8<br />cyl: 4<br />.crossTalkKey: 9","wt: 2.200<br />mpg: 32.4<br />cyl: 4<br />.crossTalkKey: 18","wt: 1.615<br />mpg: 30.4<br />cyl: 4<br />.crossTalkKey: 19","wt: 1.835<br />mpg: 33.9<br />cyl: 4<br />.crossTalkKey: 20","wt: 2.465<br />mpg: 21.5<br />cyl: 4<br />.crossTalkKey: 21","wt: 1.935<br />mpg: 27.3<br />cyl: 4<br />.crossTalkKey: 26","wt: 2.140<br />mpg: 26.0<br />cyl: 4<br />.crossTalkKey: 27","wt: 1.513<br />mpg: 30.4<br />cyl: 4<br />.crossTalkKey: 28","wt: 2.780<br />mpg: 21.4<br />cyl: 4<br />.crossTalkKey: 32"],"key":["3","8","9","18","19","20","21","26","27","28","32"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","set":"SharedData69dd55e4","name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null},{"x":[2.62,2.875,3.215,3.46,3.44,3.44,2.77],"y":[21,21,21.4,18.1,19.2,17.8,19.7],"text":["wt: 2.620<br />mpg: 21.0<br />cyl: 6<br />.crossTalkKey: 1","wt: 2.875<br />mpg: 21.0<br />cyl: 6<br />.crossTalkKey: 2","wt: 3.215<br />mpg: 21.4<br />cyl: 6<br />.crossTalkKey: 4","wt: 3.460<br />mpg: 18.1<br />cyl: 6<br />.crossTalkKey: 6","wt: 3.440<br />mpg: 19.2<br />cyl: 6<br />.crossTalkKey: 10","wt: 3.440<br />mpg: 17.8<br />cyl: 6<br />.crossTalkKey: 11","wt: 2.770<br />mpg: 19.7<br />cyl: 6<br />.crossTalkKey: 30"],"key":["1","2","4","6","10","11","30"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"hoveron":"points","set":"SharedData69dd55e4","name":"6","legendgroup":"6","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null},{"x":[3.44,3.57,4.07,3.73,3.78,5.25,5.424,5.345,3.52,3.435,3.84,3.845,3.17,3.57],"y":[18.7,14.3,16.4,17.3,15.2,10.4,10.4,14.7,15.5,15.2,13.3,19.2,15.8,15],"text":["wt: 3.440<br />mpg: 18.7<br />cyl: 8<br />.crossTalkKey: 5","wt: 3.570<br />mpg: 14.3<br />cyl: 8<br />.crossTalkKey: 7","wt: 4.070<br />mpg: 16.4<br />cyl: 8<br />.crossTalkKey: 12","wt: 3.730<br />mpg: 17.3<br />cyl: 8<br />.crossTalkKey: 13","wt: 3.780<br />mpg: 15.2<br />cyl: 8<br />.crossTalkKey: 14","wt: 5.250<br />mpg: 10.4<br />cyl: 8<br />.crossTalkKey: 15","wt: 5.424<br />mpg: 10.4<br />cyl: 8<br />.crossTalkKey: 16","wt: 5.345<br />mpg: 14.7<br />cyl: 8<br />.crossTalkKey: 17","wt: 3.520<br />mpg: 15.5<br />cyl: 8<br />.crossTalkKey: 22","wt: 3.435<br />mpg: 15.2<br />cyl: 8<br />.crossTalkKey: 23","wt: 3.840<br />mpg: 13.3<br />cyl: 8<br />.crossTalkKey: 24","wt: 3.845<br />mpg: 19.2<br />cyl: 8<br />.crossTalkKey: 25","wt: 3.170<br />mpg: 15.8<br />cyl: 8<br />.crossTalkKey: 29","wt: 3.570<br />mpg: 15.0<br />cyl: 8<br />.crossTalkKey: 31"],"key":["5","7","12","13","14","15","16","17","22","23","24","25","29","31"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"hoveron":"points","set":"SharedData69dd55e4","name":"8","legendgroup":"8","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","_isNestedKey":false,"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.31745,5.61955],"tickmode":"array","ticktext":["2","3","4","5"],"tickvals":[2,3,4,5],"categoryorder":"array","categoryarray":["2","3","4","5"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"wt","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9.225,35.075],"tickmode":"array","ticktext":["10","15","20","25","30","35"],"tickvals":[10,15,20,25,30,35],"categoryorder":"array","categoryarray":["10","15","20","25","30","35"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"mpg","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.913385826771654},"annotations":[{"text":"cyl","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative","dragmode":"zoom"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"9fb241459ab":{"x":{},"y":{},"colour":{},"key":{},"type":"scatter"}},"cur_data":"9fb241459ab","visdat":{"9fb241459ab":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0,"ctGroups":["SharedData69dd55e4"]},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script></p>
+</div>
+<div id="why-not-use-shiny-instead-of-the-crosstalk-package" class="section level2">
+<h2>Why not use Shiny instead of the crosstalk package?</h2>
+<p>Those of you who have built R Markdown dashboards before are probably wondering, “Why bother with crosstalk when we can do all of this and more in Shiny?” For some applications, R Markdown, HTML widgets, and <code>crosstalk</code> are a better choice for creating interactive applications because they:</p>
+<ul>
+<li><strong>Don’t require R once the dashboard is published</strong>. Shiny apps require a back end R environment to interact with the user, while an R Markdown dashboard with HTML widgets and <code>crosstalk</code> don’t.</li>
+<li><strong>Generate standalone documents</strong>. Not only do documents created using R Markdown, HTML widgets, and <code>crosstalk</code> not require an R back end – they don’t require any back end support whatsoever. Once your document has been knit, it runs entirely within the user’s browser.</li>
+<li><strong>Can be published and viewed in any environment that hosts web pages</strong>. Interactive applications built this way can be emailed, hosted on ordinary web servers, and used by people who don’t use R at all. If the person’s browser supports Javascript and HTML, that person can use your interactive document.</li>
+</ul>
+</div>
+<div id="but-there-are-real-limitations-too" class="section level2">
+<h2>But there are real limitations too</h2>
+<p>While R Markdown, HTML widgets and <code>crosstalk</code> are wonderful tools, using them isn’t all rainbows and unicorns. Documents built using these tools aren’t nearly as flexible as Shiny apps, and <code>crosstalk</code> imposes significant limitations to what you can do. Should you use <code>crosstalk</code> and HTML widgets to build an interactive application, be aware that:</p>
+<ul>
+<li><strong>The HTML widgets you use must support <code>crosstalk</code></strong>. While the HTML widgets we’ve chosen are some of the most popular, only a few others support <code>crosstalk</code>. Again, check with <a href="https://rstudio.github.io/crosstalk/widgets.html">the full list of HTML widgets that work with <code>crosstalk</code></a> before committing to using <code>crosstalk</code>.</li>
+<li><strong>Your data must be in a data frame or tibble</strong>. The foundation of <code>crosstalk</code> is an R6 shared dataframe object, so any data you want to use with <code>crosstalk</code> must be in that format.</li>
+<li><strong>All your data must fit in memory</strong>. Because all your data will be loaded into the user’s browser, <code>crosstalk</code> is not the tool you want if you’re going to be browsing a multi-gigabyte data set.</li>
+<li><strong>Layouts and interactivity are limited</strong>. R Markdown and <code>crosstalk</code> typically work with grid-based layouts built from static data. If you want a document that dynamically changes in response to real-time data, you should probably be using Shiny instead.</li>
+</ul>
+</div>
+<div id="conclusion-try-using-crosstalk-in-your-next-interactive-r-markdown-project" class="section level2">
+<h2>Conclusion: try using <code>crosstalk</code> in your next interactive R Markdown project</h2>
+<p>As you can see from this posting, HTML widgets and <code>crosstalk</code> aren’t limited to standalone dashboards; they can be embedded in most R markdown documents that generate HTML, including blodown posts and emails. And of course, you can publish them on RStudio Connect or RPubs.com – you don’t need a Shiny server to share them.</p>
+<p>I find the best part about <code>crosstalk</code> and its associated HTML widgets is that they seem to work well with my typical workflow. I spend much of my time exploring teaching survey data, and I usually plot results using <code>ggplot</code> and also show the raw data using the <code>DT</code> datatable package. To make those plots interactive, I only have to share my survey dataframe with <code>SharedData$new()</code>, adjust my <code>ggplot</code> and <code>DT</code> code to use <code>ggplotly</code> and my shared dataframe, and voila – I have an interactive way to explore my dataset. Learning to use <code>crosstalk</code> has saved me days of time; if you give it a try, it might do the same for you.</p>
+</div>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<p>If you are interested in seeing the <code>crosstalk</code> materials we presented during the workshop, check out the <a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf">workshop slides (in PDF form)</a> and the <a href="https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards">exercises</a>. You can also review the <a href="https://rstd.io/RMAID">full set of workshop materials on github</a>.</p>
+>>>>>>> e28d97f29831df83e8f4b31b79d4cb8fbc8d9f67
+</div>
