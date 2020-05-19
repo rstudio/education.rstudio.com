@@ -86,7 +86,7 @@ All materials are open source and creative commons licensed, so anyone can adapt
 
 [<img src="dataviz-schedule.png" title="https://datavizm20.classes.andrewheiss.com/" alt="https://datavizm20.classes.andrewheiss.com/" width="500"/>](https://datavizm20.classes.andrewheiss.com/)
 
-A personal aside: this beautiful website is built using the Hugo Academic theme with the R blogdown package. You can see the source code for the website on [GitHub](https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com). Andrew's website is [another great example](https://share-blogdown.netlify.app/) of a course website that was [shared on short notice](rstd.io/sharing)!
+A personal aside: this beautiful website is built using the Hugo Academic theme with the R blogdown package. You can see the source code for the website on [GitHub](https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com). Andrew's website is [another great example](https://share-blogdown.netlify.app/) of a course website that was [shared on short notice](https://rstd.io/sharing)!
 
 ## [Get Started with tidymodels](https://www.tidymodels.org/start/)
 
