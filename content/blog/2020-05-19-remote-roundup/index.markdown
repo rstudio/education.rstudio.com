@@ -56,7 +56,7 @@ Each section in this course features links to an HTML slide deck, YouTube video,
 
 ## [Advanced Statistical Computing with R](https://cal-poly-advanced-r.github.io/STAT-431/)
 
-These are the materials for a Spring 2020 undergraduate course offered by [California Polytechnic State University](https://www.calpoly.edu/) professors Drs. [Kelly Bodwin](https://www.kelly-bodwin.com/) (an [RStudio certified trainer](https://education.rstudio.com/trainers/people/bodwin+kelly/)) and [Hunter Glanz](https://twitter.com/hglanz?lang=en). In their own words:
+These are the materials for a Spring 2020 undergraduate course offered by California Polytechnic State University professors Drs. [Kelly Bodwin](https://www.kelly-bodwin.com/) (an [RStudio certified trainer](https://education.rstudio.com/trainers/people/bodwin+kelly/)) and [Hunter Glanz](https://twitter.com/hglanz?lang=en). In their own words:
 
 > "Advanced techniques for efficient use of computers to perform statistical computations and to analyze large amounts of data. Includes version control systems; tools supporting reproducibility; functional programming; randomization and bootstrapping; dynamic data visualizations; and R package development."
 
