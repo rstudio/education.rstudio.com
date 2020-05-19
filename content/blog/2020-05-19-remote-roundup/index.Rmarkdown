@@ -64,7 +64,11 @@ These are the materials for a Spring 2020 undergraduate course offered by Califo
 
 > "Advanced techniques for efficient use of computers to perform statistical computations and to analyze large amounts of data. Includes version control systems; tools supporting reproducibility; functional programming; randomization and bootstrapping; dynamic data visualizations; and R package development."
 
-Follow along with their learners using this [course schedule](https://cal-poly-advanced-r.github.io/STAT-431/#section-4). Week-by-week, Kelly and Hunter provide a curated sequence of readings, videos, and small practice activities with careful time estimates so you know what you are signing up for.
+Follow along with their learners using this [course schedule](https://cal-poly-advanced-r.github.io/STAT-431/#section-4).
+
+[<img src="advr-schedule.png" title="https://cal-poly-advanced-r.github.io/STAT-431/" alt="https://cal-poly-advanced-r.github.io/STAT-431/" width="500"/>](https://cal-poly-advanced-r.github.io/STAT-431/)
+
+Week-by-week, Kelly and Hunter provide a curated sequence of readings, videos, and small practice activities with careful time estimates so you know what you are signing up for.
 
 <img src="bodwin-glanz-advr.png" title="Advanced R weekly schedule" alt="Sample of an advanced R weekly schedule" width="500"/>
 
@@ -79,6 +83,8 @@ Created by [Professor Andrew Heiss](https://www.andrewheiss.com/) at Georgia Sta
 > "Use R, ggplot2, and the principles of graphic design to create beautiful and truthful visualizations of data"
 
 All materials are open source and creative commons licensed, so anyone can adapt and improve it later.
+
+[<img src="dataviz-schedule.png" title="https://datavizm20.classes.andrewheiss.com/" alt="https://datavizm20.classes.andrewheiss.com/" width="500"/>](https://datavizm20.classes.andrewheiss.com/)
 
 A personal aside: this beautiful website is built using the Hugo Academic theme with the R blogdown package. You can see the source code for the website on [GitHub](https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com). Andrew's website is [another great example](https://share-blogdown.netlify.app/) of a course website that was [shared on short notice](rstd.io/sharing)!
 
