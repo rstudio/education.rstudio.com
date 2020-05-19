@@ -9,7 +9,7 @@ categories:
 tags:
   - online education
 description: |
-  A collection of new + free + online learning resources.
+  A collection of new + free + online learning resources for R and Python users.
 slug: remote-roundup
 photo:
   url: https://unsplash.com/photos/fFhhUff5PJ8
@@ -24,19 +24,19 @@ In March, [Desirée De Leon](https://desiree.rbind.io/) and I did a [webinar](ht
 
 While these new remote learning resources were created first and foremost to replace in-person courses, some instructors went the extra mile to openly share them for everyone. This may include class schedules/readings, slides, videotaped lectures and screencasts, and sometimes even [RStudio Cloud](https://rstudio.cloud/) projects, making it possible for us non-students to follow along from the comfort of our own homes. This post is a roundup of some of these new open learning resources.
 
-<img src="united-nations-covid-19-response-gMPsl1ez-Ts-unsplash.jpg" title="Image created by Catherine Cordasco. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Catherine Cordasco. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." style="text-align:center;" width="500"/>
+[<img src="united-nations-covid-19-response-gMPsl1ez-Ts-unsplash.jpg" title="Image created by Catherine Cordasco. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Catherine Cordasco. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." style="text-align:center;" width="500"/>](https://unsplash.com/photos/gMPsl1ez-Ts)
 
 But first, a disclaimer. Most people I know have less free time now, not more. Even if you do *technically* have free time you could devote to learning, you may not have the cognitive energy to learn anything new. If you fall into either of these two camps, bookmark this post for the future, and then promptly close this browser tab. Please do not let this post make you feel guilty or stressed. Learning will only stick if you feel good while doing it.
 
 Having said that, there are also folks who were caught by this quarantine at a time when they needed to learn new skills to either get a job or get a better job. If you fall into *this* camp, then you are in luck, because the resources below were created by some of the most engaging and thoughtful educators in data science. And because they were all created relatively recently, you can also be sure that the content is current.
 
-<img src="united-nations-covid-19-response-KKrFTC8CB1Q-unsplash.jpg" title="Image created by Sarah Goldbart. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Sarah Goldbart. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." style="text-align:center;" width="360"/>
+[<img src="united-nations-covid-19-response-KKrFTC8CB1Q-unsplash.jpg" title="Image created by Sarah Goldbart. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Sarah Goldbart. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." style="text-align:center;" width="360"/>](https://unsplash.com/photos/KKrFTC8CB1Q)
 
 Finally, please keep in mind that these resources are provided as a courtesy by the instructor---if you do decide to use them and have questions or get stuck, ask for help on a dedicated help forum like [RStudio Community](https://community.rstudio.com/); do not contact course instructors directly either in private or public (i.e., by tagging them on twitter).
 
 ## [Ready for R](https://ready4r.netlify.app/)
 
-<img src="ready4r.png" title="https://ready4r.netlify.app/" alt="https://ready4r.netlify.app/" style="text-align: center" width="500"/>
+[<img src="ready4r.png" title="https://ready4r.netlify.app/" alt="https://ready4r.netlify.app/" style="text-align: center" width="500"/>](https://ready4r.netlify.app/)
 
 This course is created and taught by [Dr. Ted Laderas](http://laderast.github.io/), an Assistant Professor at Oregon Health and Science University and an [RStudio certified trainer](https://education.rstudio.com/trainers/people/laderas+ted/). In Ted's own words:
 
@@ -46,7 +46,7 @@ For external folks, Ted also started a mailing list that will let you know when 
 
 ## [Robust tools](https://robust-tools.djnavarro.net/)
 
-<img src="robust-tools.png" title="https://robust-tools.djnavarro.net/" alt="https://robust-tools.djnavarro.net/" style="text-align: center" width="500"/>
+[<img src="robust-tools.png" title="https://robust-tools.djnavarro.net/" alt="https://robust-tools.djnavarro.net/" style="text-align: center" width="500"/>](https://robust-tools.djnavarro.net/)
 
 This course is created and taught by [Dr. Danielle Navarro](https://djnavarro.net/), an Associate Professor at the University of New South Wales and an [RStudio certified trainer](https://education.rstudio.com/trainers/people/navarro+danielle/). Danielle is also a co-author on the work-in-progress 3rd edition of the book ["ggplot2: elegant graphics for data analysis"](https://ggplot2-book.org/) and recently has started sharing her original generative [art](https://art.djnavarro.net/) created with R. This course is unique because it teaches many of the tools that researchers (and really all data scientists) need, but that too often we assume you'll learn simply through use alone. In Danielle's own words:
 
@@ -68,7 +68,7 @@ Each week also features a lab assignment and extra challenges so you can practic
 
 ## [Data Visualization](https://datavizm20.classes.andrewheiss.com/)
 
-<img src="heiss-dataviz.png" title="Data Visualization by Dr. Andrew Heiss" alt="Data Visualization by Dr. Andrew Heiss" style="text-align: center" width="500"/>
+[<img src="heiss-dataviz.png" title="Data Visualization by Dr. Andrew Heiss" alt="Data Visualization by Dr. Andrew Heiss" style="text-align: center" width="500"/>](https://datavizm20.classes.andrewheiss.com/)
 
 Created by [Professor Andrew Heiss](https://www.andrewheiss.com/) at Georgia State University, also an [RStudio certified trainer](https://education.rstudio.com/trainers/people/heiss+andrew/), this website is an asynchronous online course --- with hours of video, interactive code, code examples, and all sorts of neat stuff! From Andrew's course description:
 
@@ -80,25 +80,25 @@ A personal aside: this beautiful website is built using the Hugo Academic theme 
 
 ## [Get Started with tidymodels](https://www.tidymodels.org/start/)
 
-<img src="tidymodels.png" title="tidymodels.org" alt="tidymodels.org" style="text-align: center" width="500"/>
+[<img src="tidymodels.png" title="tidymodels.org" alt="tidymodels.org" style="text-align: center" width="500"/>](https://tidymodels.org)
 
 We recently launched the new [tidymodels.org](https://www.tidymodels.org/) website, and one of the most popular resources there is the *[Get Started](https://www.tidymodels.org/start/)* section. It features five articles, starting with how to create a model and ending with a beginning-to-end modeling case study. While there are no interactive exercises (yet!), you can copy/paste the code to work through the materials locally. Be on the lookout for integrations with [RStudio Cloud](https://rstudio.cloud) and [learnr](https://rstudio.github.io/learnr/) tutorials that will [work within the IDE](https://blog.rstudio.com/2020/02/25/rstudio-1-3-integrated-tutorials/) after our summer intern, [Ezgi Karaesman](https://education.rstudio.com/trainers/people/karaesmen+ezgi/), works her education magic 💫
 
 ## [Supervised Machine Learning Case Studies with R](https://supervised-ml-course.netlify.app/)
 
-<img src="supervised-ml-course.png" title="https://supervised-ml-course.netlify.com/" alt="https://supervised-ml-course.netlify.com/" style="text-align: center" width="500"/>
+[<img src="supervised-ml-course.png" title="https://supervised-ml-course.netlify.com/" alt="https://supervised-ml-course.netlify.com/" style="text-align: center" width="500"/>](https://supervised-ml-course.netlify.com/)
 
-This self-paced course is *newly* updated to use the tidymodels framework for predictive modeling, brought to you by [Julia Silge](https://juliasilge.com/). Julia is a member of the tidymodels software engineering team, an RStudio [certified instructor](https://education.rstudio.com/trainers/people/silge+julia/), and prolific data science blogger (don't miss her [#TidyTuesday](https://juliasilge.com/category/tidymodels/) posts with video screencasts!). When I first started my own [machine learning journey](https://alison.rbind.io/post/2019-12-23-learning-to-teach-machines-to-learn/), Julia's course was a welcome break for me from predicting home prices in [Ames, Iowa](https://cran.r-project.org/web/packages/AmesHousing/index.html)! Julia has a talent for explaining complicated things in simple terms, and the whole course is a breath of fresh air if you've been trying to learn machine learning by wading through stuffy textbooks. I was lucky enough to get a preview of this revised version, and wholeheartedly recommend---it is a great interactive compliment to [tidymodels.org](https://www.tidymodels.org/).
+This self-paced course is *newly* updated to use the tidymodels framework for predictive modeling, brought to you by [Julia Silge](https://juliasilge.com/). Julia is a member of the tidymodels software engineering team, an RStudio [certified instructor](https://education.rstudio.com/trainers/people/silge+julia/), and prolific data science blogger (don't miss her [\#TidyTuesday](https://juliasilge.com/category/tidymodels/) posts with video screencasts!). When I first started my own [machine learning journey](https://alison.rbind.io/post/2019-12-23-learning-to-teach-machines-to-learn/), Julia's course was a welcome break for me from predicting home prices in [Ames, Iowa](https://cran.r-project.org/web/packages/AmesHousing/index.html)! Julia has a talent for explaining complicated things in simple terms, and the whole course is a breath of fresh air if you've been trying to learn machine learning by wading through stuffy textbooks. I was lucky enough to get a preview of this revised version, and wholeheartedly recommend---it is a great interactive compliment to [tidymodels.org](https://www.tidymodels.org/).
 
 ## [Applied Machine Learning](https://www.cs.columbia.edu/~amueller/comsw4995s20/)
 
-<img src="aml.png" title="https://www.cs.columbia.edu/~amueller/comsw4995s20/" alt="https://www.cs.columbia.edu/~amueller/comsw4995s20/" width="500"/>
+[<img src="aml.png" title="https://www.cs.columbia.edu/~amueller/comsw4995s20/" alt="https://www.cs.columbia.edu/~amueller/comsw4995s20/" width="500"/>](https://www.cs.columbia.edu/~amueller/comsw4995s20/)
 
 [Scikit-learn](https://scikit-learn.org) developer and Columbia University Associate Research Scientist [Andreas Mueller](http://amueller.github.io/) has shared his 2020 Applied Machine Learning course. This includes a [schedule](https://www.cs.columbia.edu/~amueller/comsw4995s20/schedule/) with links to all his slides (including presenters notes!), and 21 videotaped lectures in a [YouTube playlist](https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM). Obviously, this is not an R course; it is in Python 🐍. Regardless, any data scientist can benefit from these materials, and it may give you R lovers an excuse to test out using [Python](https://rstudio.com/solutions/r-and-python/) and the [reticulate package](https://rstudio.github.io/reticulate/).
 
 ## [R-Hub for Package Developers](https://docs.r-hub.io/)
 
-[<img src="r-hub.png" title="R-Hub" alt="R-Hub" width="500"/>](https://www.cs.columbia.edu/~amueller/comsw4995s20/)
+[<img src="r-hub.png" title="R-Hub" alt="R-Hub" width="500"/>](https://blog.r-hub.io/)
 
 [Maëlle Salmon](https://masalmon.eu/), a research software engineer with [ROpenSci](https://ropensci.org/author/ma%C3%ABlle-salmon/) and member of the [RLadies Global team](https://rladies.org/about-us/team/), has been diligently cataloging a treasure trove of knowledge for package developers to ease all steps of the R package development process. This project has been [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects).
 
@@ -112,4 +112,4 @@ Finally, if you are craving some socially distant social interactions with your 
 
 I hope these resources are useful if you are able to learn now, or even if you are just daydreaming about a time in the future when you'll be able to get lost in learning something new again. Hang in there.
 
-<img src="united-nations-covid-19-response-QUJi85AKTnA-unsplash.jpg" title="Image created by Lélie Lesage. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Lélie Lesage. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." width="307"/>
+[<img src="united-nations-covid-19-response-QUJi85AKTnA-unsplash.jpg" title="Image created by Lélie Lesage. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." alt="Image created by Lélie Lesage. Submitted for United Nations Global Call Out To Creatives - help stop the spread of COVID-19." width="307"/>](https://unsplash.com/photos/QUJi85AKTnA)
