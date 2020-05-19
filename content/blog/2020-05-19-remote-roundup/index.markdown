@@ -54,7 +54,7 @@ This course is created and taught by [Dr. Danielle Navarro](https://djnavarro.ne
 
 Each section in this course features links to an HTML slide deck, YouTube video, and an RStudio Cloud project.
 
-[<img src="robust-playlist.png" title="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" alt="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" width="500"/>](https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB)
+[<img src="robust-playlist.png" title="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" alt="https://www.youtube.com/playlist?list=PLRPB0ZzEYegPHHji3tBw2U4yp-DxMrUkB" width="500"/>](http://robust-tools.djnavarro.net/)
 
 Danielle also has an online resource called ["Learning Statistics with R"](https://learningstatisticswithr.com/), originally designed to teach intro statistics to psychology undergrads.
 
@@ -76,7 +76,7 @@ Each week also features a lab assignment and extra challenges so you can practic
 
 ## [Data Visualization](https://datavizm20.classes.andrewheiss.com/)
 
-[<img src="heiss-dataviz.png" title="Data Visualization by Dr. Andrew Heiss" alt="Data Visualization by Dr. Andrew Heiss" style="text-align: center" width="500"/>](https://datavizm20.classes.andrewheiss.com/)
+[<img src="heiss-dataviz.png" title="Data Visualization by Dr. Andrew Heiss" alt="Data Visualization by Dr. Andrew Heiss" style="text-align: center" width="500"/>](https://datavizm20.classes.andrewheiss.com/)
 
 Created by [Professor Andrew Heiss](https://www.andrewheiss.com/) at Georgia State University, also an [RStudio certified trainer](https://education.rstudio.com/trainers/people/heiss+andrew/), this website is an asynchronous online course --- with hours of video, interactive code, code examples, and all sorts of neat stuff! From Andrew's course description:
 
@@ -112,7 +112,7 @@ This self-paced course is *newly* updated to use the tidymodels framework for pr
 
 [Maëlle Salmon](https://masalmon.eu/), a research software engineer with [ROpenSci](https://ropensci.org/author/ma%C3%ABlle-salmon/) and member of the [RLadies Global team](https://rladies.org/about-us/team/), has been diligently cataloging a treasure trove of knowledge for package developers to ease all steps of the R package development process. This project has been [funded by the R Consortium](https://www.r-consortium.org/projects/awarded-projects).
 
-Check our her work on the R-Hub documentation site: <https://docs.r-hub.io/>
+Check out her work on the R-Hub documentation site: <https://docs.r-hub.io/>
 
 And related series of blog posts here: <https://blog.r-hub.io/>
 
