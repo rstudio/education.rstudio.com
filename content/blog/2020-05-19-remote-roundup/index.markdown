@@ -44,9 +44,9 @@ This course is created and taught by [Dr. Ted Laderas](http://laderast.github.io
 
 For external folks, Ted also started a mailing list that will let you know when materials are updated: <https://tinyletter.com/ready4r.> To compliment these materials, you may also want to check out Ted's self-paced R-Bootcamp course, created with Jessica Minnier: <https://r-bootcamp.netlify.com/>.
 
-## [Robust tools](http://robust-tools.djnavarro.net/)
+## [Robust tools](https://robust-tools.djnavarro.net/)
 
-[<img src="robust-tools.png" title="http://robust-tools.djnavarro.net/" alt="http://robust-tools.djnavarro.net/" style="text-align: center" width="500"/>](http://robust-tools.djnavarro.net/)
+[<img src="robust-tools.png" title="https://robust-tools.djnavarro.net/" alt="https://robust-tools.djnavarro.net/" style="text-align: center" width="500"/>](https://robust-tools.djnavarro.net/)
 
 This course is created and taught by [Dr. Danielle Navarro](https://djnavarro.net/), an Associate Professor at the University of New South Wales and an [RStudio certified trainer](https://education.rstudio.com/trainers/people/navarro+danielle/). Danielle is also a co-author on the work-in-progress 3rd edition of the book ["ggplot2: elegant graphics for data analysis"](https://ggplot2-book.org/) and recently has started sharing her original generative [art](https://art.djnavarro.net/) created with R. This course is unique because it teaches many of the tools that researchers (and really all data scientists) need, but that too often we assume you'll learn simply through use alone. In Danielle's own words:
 
