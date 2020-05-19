@@ -12,7 +12,7 @@ description: |
   Why and how I created a learnr tutorial on *Exploring missing data in naniar*
 slug: learnr-for-remote
 photo:
-  url: https://github.com/allisonhorst/stats-illustrations
+  url: https://www.allisonhorst.com/
   author: Allison Horst
 ---
 
@@ -27,6 +27,7 @@ So, how can we create live coding lessons to include participants who...
 
 The [learnr](https://rstudio.github.io/learnr/) package offers a solution to both. In this post, I describe why and how I created a learnr tutorial on [*Exploring missing data in naniar*](https://allisonhorst.shinyapps.io/missingexplorer/) with both first-time and experienced R-users in mind.
 
+<a href="https://allisonhorst.shinyapps.io/missingexplorer/" target="_blank"><img src="naniar.jpg" width="90%" style="display: block; margin: auto;" /></a>
 
 ## 1. Approachable for first-time R users
 
