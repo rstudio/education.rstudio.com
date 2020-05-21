@@ -9,7 +9,7 @@ baseurl = "https://education.rstudio.com/"
 theme = "hugo-tourmaline"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-147226004-1"
+googleAnalytics = "UA-20375833-3"
 
 relativeurls = false
 languageCode = "en-us"
@@ -29,13 +29,13 @@ preserveTaxonomyNames = true
   category = "categories"
   tag = "tags"
 
-# Configure BlackFriday Markdown rendering.
-#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
-[blackfriday]
-  hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
-	angledQuotes = false
-	latexDashes = true
-  extensions = ["backslashLineBreak"]
-
-[markup.goldmark.renderer]
-  unsafe = true
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "pygments"

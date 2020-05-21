@@ -1,0 +1,20 @@
+workshop_title,instructors,short_link,blog_post
+A Practical Introduction to Data Visualization with ggplot2 Workshop,Kieran Healy,https://rstd.io/conf20-dataviz,/blog/2020/02/conf20-dataviz/
+Applied Machine Learning Workshop,Max Kuhn,https://rstd.io/conf20-applied-ml,
+Big Data with R Workshop,"Edgar Ruiz, James Blair",https://rstd.io/conf20-big-data,
+Building Tidy Tools Workshop,"Charlotte Wickham, Hadley Wickham",https://rstd.io/conf20-tidy-tools,/blog/2020/02/conf20-tidy-tools/
+Deep Learning with Keras and TensorFlow in R Workshop,Bradley Boehmke,https://rstd.io/conf20-dl,
+Designing the Data Science Classroom Workshop,Mine Cetinkaya-Rundel,https://rstd.io/conf20-design-ds-class,
+Introduction to Data Science in the Tidyverse Workshop,"Amelia McNamara, Hadley Wickham",https://rstd.io/conf20-ds-tidy,
+Introduction to Machine Learning with the Tidyverse Workshop,"Alison Hill, Garrett Grolemund",https://rstd.io/conf20-intro-ml,/blog/2020/02/conf20-intro-ml/
+JavaScript for Shiny Users Workshop,Garrick Aden-Buie,https://rstd.io/conf20-js4shiny,
+Modern Geospatial Data Analysis with R Workshop,Zev Ross,https://rstd.io/conf20-geospatial,
+My Organization's First R Package Workshop,"Rich Iannone, Malcolm Barrett",https://rstd.io/conf20-org-pkg,
+R for Excel Users Workshop,"Julia Lowndes, Allison Horst",https://rstd.io/conf20-r-excel,/blog/2020/02/conf20-r-excel/
+R Markdown and Interactive Dashboards Workshop,"Carl Howe, Yihui Xie",https://rstd.io/conf20-rmd-dash,
+RStudio Instructor Training Workshop (1-day),Greg Wilson,https://rstd.io/conf20-instructor,
+RStudio Professional Products Administration Workshop,Andrie de Vries,https://rstd.io/conf20-pro,
+Shiny From Start To Finish Workshop,Danny Kaplan,https://rstd.io/conf20-intro-shiny,
+Text Mining with Tidy Data Principles Workshop,Julia Silge,https://rstd.io/conf20-tidytext,/blog/2020/02/conf20-tidytext/
+Tidy Time Series and Forecasting in R Workshop,Rob Hyndman,https://rstd.io/conf20-ts,/blog/2020/02/conf20-ts/
+What They Forgot to Teach You about R Workshop,"Kara Woo, Jenny Bryan, Jim Hester",https://rstd.io/conf20-wtf,/blog/2020/02/conf20-wtf/

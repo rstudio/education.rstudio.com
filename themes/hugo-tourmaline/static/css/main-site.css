@@ -79,7 +79,7 @@ table {
 
 body, button, input, textarea {
   font-family: 'Muli', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
@@ -108,7 +108,8 @@ html, body {
 
 .bandContent {
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1100px;
+}
 
 .full {
   margin: 30px 0 30px 0; }
@@ -351,7 +352,7 @@ a {
 #rStudioHeader #menu {
   text-align: right;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 26px;
   white-space: nowrap; }
   #rStudioHeader #menu #menuToggler {
@@ -392,6 +393,8 @@ a {
       vertical-align: bottom; }
     #rStudioHeader #menu .menuItem.gitHubText {
       display: none; }
+    #rStudioHeader #menu .menuItem:last-of-type {
+	    padding-right: 0px; }
 
 @media screen and (max-width: 1023px) {
   #rStudioHeader #menu #menuToggler {
@@ -628,7 +631,7 @@ a {
     background-position: center center; }
   .listItem .itemDetails {
     width: 100%;
-    font-size: 13px;
+    font-size: .875rem;
     line-height: 20px; }
     .listItem .itemDetails .itemHeader {
       display: flex;
@@ -648,10 +651,10 @@ a {
         flex-shrink: 0;
         height: 30px; }
     .listItem .itemDetails .itemMeta .itemDescription {
-      margin-bottom: 5px;
+      margin-bottom: .375rem;
       white-space: pre-line; }
     .listItem .itemDetails .itemMeta .itemDate, .listItem .itemDetails .itemMeta .itemInfo {
-      font-size: 12px;
+      font-size: .875rem;
       color: #808080; }
       .listItem .itemDetails .itemMeta .itemDate .created, .listItem .itemDetails .itemMeta .itemDate .updated, .listItem .itemDetails .itemMeta .itemInfo .created, .listItem .itemDetails .itemMeta .itemInfo .updated {
         display: inline-block; }
@@ -783,17 +786,17 @@ table.contentListing {
     font-size: 24px;
     line-height: 28px; }
   .listItem .itemDetails .itemHeader .itemTag {
-    font-size: 13px;
+    font-size: .875rem;
     margin-right: 10px;
     padding-top: 8px;
     line-height: 20px; }
   .listItem .itemDetails .itemDescription {
-    font-size: 14px;
-    line-height: 22px; }
+	  font-size: .975rem;
+	  line-height: 1.5rem;}
   .listItem .itemDetails .itemMeta .author {
-    font-size: 16px;
-    line-height: 25px;
-    margin-bottom: 7px;
+    font-size: 1.0rem;
+    line-height: 1.375rem;
+    margin-bottom: .375rem;
     color: #505050; }
 
 /* pagination */
@@ -816,9 +819,13 @@ table.contentListing {
     background-image: url(images/tidyCategoryLearn.svg); }
   .articleCategory.other {
     background-image: url(images/tidyCategoryOther.svg); }
+  .articleCategory.deep-dive {
+    background-image: url(images/tidyCategoryDeepDive.svg); }
 
 .article-title {
-  margin-top: 0px; }
+  margin-top: 0px; 
+  line-height: 1.3em;
+}
 
 .article-header .photo {
   width: 100%;
@@ -854,6 +861,11 @@ table.contentListing {
     border: none; }
   .package-section .packages .package .package-info {
     margin: 20px 0 0 210px; }
+    
+.package-info h3 {
+	padding-top: 72px;
+	margin-top: -72px;
+}
 
 /* CSS for centering images in blog posts */
 
@@ -906,7 +918,7 @@ h1 {
 
 h2 {
   font-size: 2.0em;
-  margin-bottom: .5em; }
+  margin-bottom: 1.5em; }
 
 h3 {
   font-size: 1.6em;
@@ -944,7 +956,7 @@ ol {
 
 pre, code {
   font-family: "Source Code Pro", monospace;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !important;
   font-size: 14px; }
 
 pre {
@@ -969,7 +981,7 @@ pre code {
 
 /* this styles the inline code */
 code {
-  font-size: 1em;
+  font-size: 1rem;
   color: #606060;
   display: inline-block;
   margin: 1px 5px;
@@ -1009,9 +1021,20 @@ em {
   display: block;
   height: 0;
   clear: both; }
-
-.bookCover {
+  
+#homeContent .bookCover {
   width: 320px;
+  height: auto;
+  -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotate(359deg);
+  transform: rotate(359deg);
+  float: left;
+  margin: 20px 50px 40px 0; }
+
+.article-content img.bookCover {
+  width: 200px;
   height: auto;
   -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.1);
@@ -1160,12 +1183,12 @@ em {
   .section .event .eventTitle {
     margin-bottom: 10px; }
   .section .event .eventLocation {
-    font-size: 16px; }
+    font-size: 17px; }
   .section .event .eventDate {
-    font-size: 15px; }
+    font-size: 17px; }
   .section .event .eventDetails {
-    font-size: 13px;
-    line-height: 18px; }
+    font-size: 0.975rem;
+    line-height: 1.275rem; }
 
 .hexBadges {
   position: relative;
@@ -1298,6 +1321,7 @@ table tbody tr td{
 
 table tbody tr td:last-child{
   padding: 15px 0;
+}
 
 table, tbody, tfoot, thead, tr, th, td {
   margin: 0;
@@ -1310,6 +1334,7 @@ table, tbody, tfoot, thead, tr, th, td {
   float: left;
   margin-top: -10px;
   transition: transform 150ms ease-out;
+  padding-top: 10px;
 }
 
 .nav-logo:hover {

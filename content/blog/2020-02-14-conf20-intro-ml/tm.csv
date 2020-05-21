@@ -1,0 +1,10 @@
+session,slide_name,slide_url,mat_rmd
+0,Welcome & Introductions,00-welcome/,
+1,Predicting,01-predicting/,01-Prediction.Rmd
+2,Classifying,02-classifying/,02-Classification.Rmd
+3,Sampling & Resampling,03/,
+4,Ensembling,04-ensembling/,04-Ensembling.Rmd
+5,Workflows,05-workflows/,05-Workflows.Rmd
+6,Recipes,06-recipes/,06-Recipes.Rmd
+7,Cross-validation,07-cv/,07-CV.Rmd
+8,Tuning,08-tune/,08-Tune.Rmd
