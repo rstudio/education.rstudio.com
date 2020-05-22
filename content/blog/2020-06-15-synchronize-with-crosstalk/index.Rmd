@@ -23,7 +23,7 @@ Yihui Xie and I taught the [R Markdown and Interactive Dashboards Workshop](http
 - **Adds simple interactivity without a lot of complexity**. We frequently use [HTML widgets](http://www.htmlwidgets.org) to make R Markdown dashboards interactive. The crosstalk package allows those HTML widgets to interact with one another without using Shiny. For reference, you can refer to the [crosstalk online documentation](https://rstudio.github.io/crosstalk/)
 - **Works with the most commonly used HTML widgets**. HTML widgets have to be explicity designed to use crosstalk. However, crosstalk works out of the box with commonly used widgets such as `plotly`, `DT`, `leaflet`. Even if you only use those three widgets, you can build some very impressive dashboards. 
 
-# Crosstalk adds meaningful interactivity to R Markdown dashboards
+## Crosstalk adds meaningful interactivity to R Markdown dashboards
 
 I want to begin by defining who should use crosstalk and why. Crosstalk is designed for people who:
 
@@ -140,6 +140,6 @@ As you can see from this posting, HTML widgets and crosstalk aren't limited to s
 
 I find the best part about crosstalk and its associated HTML widgets is that they seem to work well with my typical workflow. I spend much of my time exploring teaching survey data, and I usually plot results using `ggplot` and also show the raw data using the `DT` datatable package. To make those plots interactive, I only have to share my survey dataframe with `SharedData$new()`, adjust my `ggplot` and `DT` code to use `ggplotly` and my shared dataframe, and voila -- I have an interactive way to explore my dataset. Learning to use crosstalk has saved me days of time; if you give it a try, it might do the same for you.
 
-# Resources
+## Resources
 
 If you are interested in seeing the crosstalk materials we presented during the workshop, check out the [workshop slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
