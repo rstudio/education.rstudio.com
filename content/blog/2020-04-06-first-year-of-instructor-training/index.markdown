@@ -1,0 +1,68 @@
+---
+title: First year of instructor training
+author:
+  - greg
+date: '2020-04-06'
+categories:
+  - teach
+tags:
+  - online
+  - teach
+description: |
+  Here's what we've learned from the first year of RStudio's instructor training and certification program.
+slug: first-year-of-instructor-training
+photo:
+  url: https://unsplash.com/photos/TAW3H-7NV5k
+  author: Alev Takil
+---
+
+
+
+RStudio's instructor training and certification program has been running for a year now,
+so it's time to take stock of what we've accomplished and what we've learned.
+The first part is easiest:
+of the 280 people who have taken part in the training course,
+95 have certified as tidyverse instructors and 17 as Shiny instructors.
+A combined 35% completion rate may seem low,
+and at first glance the completion rates seem to have dropped over time:
+
+<img src="figs/completion-rates-1.png" width="672" />
+
+However, this is pretty clearly because most people take a while to complete their exams:
+
+<img src="figs/competion-times-1.png" width="672" />
+
+Setting aside the first class at rstudio::conf 2019
+the overall completion rate seems to be hovering around 45%,
+and the average time a little over 100 days.
+We'd like to increase the first figure and lower the second one,
+but overall we're pretty happy.
+
+The more important question is what impact the training is having.
+Feedback from participants has been positive,
+but that's obviously biased in several ways.
+so we plan to launch a survey later this month to get more information.
+We will also watch what happens now that the IDE supports [integrated tutorials][integrated-tutorials]:
+I will personally mail a box full of stickers to
+the first person who puts a concept map in the new tutorial pane.
+
+The biggest question right now,
+though,
+is whether we helped prepare people for the seismic shift in teaching and training
+caused by the COVID-19 pandemic.
+Our [webinars][webinars] have summed up key points about general teaching practices,
+using rstudio.cloud for teaching,
+and sharing materials online with R Markdown;
+we hope that [our lessons][lessons] and [other material][t3] gave people more to draw on,
+but the only way to find out will be to ask them in a year
+when the dust has settled and we can see what has changed for good.
+
+*If you would like to take part in training,
+please see [this blog post][reopening]
+or read a fuller description at <https://education.rstudio.com/trainers>.*
+
+[integrated-tutorials]: https://blog.rstudio.com/2020/02/25/rstudio-1-3-integrated-tutorials/
+[lessons]: https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY
+[reopening]: https://education.rstudio.com/blog/2020/03/reopening-training-applications/
+[t3]: http://teachtogether.tech
+[webinars]: https://resources.rstudio.com/webinars
