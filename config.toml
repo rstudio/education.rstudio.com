@@ -15,7 +15,7 @@ relativeurls = false
 languageCode = "en-us"
 description = "RStudio Education helps people achieve data literacy using the R programming language."
 disqusShortname = ""
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+ignoreFiles = ['\.Rmd$', '_files$', '_cache$', '\.knit\.md$', '\.utf8\.md$']
 # below is critical for non-authors to show up in article listing
 preserveTaxonomyNames = true
 # uncomment the next line to disable listing authors
