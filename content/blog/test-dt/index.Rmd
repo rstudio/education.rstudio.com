@@ -1,0 +1,28 @@
+---
+title: 'testing dt'
+author:
+  - alison
+date: '2020-05-19'
+categories:
+  - teach
+tags:
+  - learnr
+  - rmarkdown
+photo:
+  url: https://www.allisonhorst.com/
+  author: Allison Horst
+output: hugodown::hugo_document
+---
+
++ make
++ sure
++ text
++ works
+
+```{r warning = FALSE}
+library(DT)
+shared_df <- quakes[sample(nrow(quakes), 10),]
+datatable(shared_df)
+```
+
+Is CSS broken?
