@@ -2,12 +2,11 @@
 title: Teach R with Interactive Courses
 author:
   - '[Julia Silge](https://juliasilge.com/)'
-date: '2020-05-27'
-slug: teach-interactive-course
+date: '2020-05-26'
 categories:
   - learn
   - teach
-tags: []
+slug: teach-interactive-course
 description: |
   How and why we built free online interactive courses for learning R.
 photo:
