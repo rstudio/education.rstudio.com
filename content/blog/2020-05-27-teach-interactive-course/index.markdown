@@ -29,7 +29,7 @@ The first person I knew who successfully got their interactive R course launched
 
 [![GAMS](gams-course.png)](https://noamross.github.io/gams-in-r-course/)
 
-Both Noam, I, and Ted Laderas collaborated with [Florencia D'Andrea](https://florencia.netlify.app/) in building our courses. Florencia is one of the most knowledgeable people out there when it comes to getting a course like this up and running! I've chatted informally with both Florencia and Noam about their experiences in building and maintaining interactive courses before, so I decided to ask them to gather their thoughts less casually so we could share them all together.
+All three of us (Noam, myself, and Ted Laderas) collaborated with [Florencia D'Andrea](https://florencia.netlify.app/) in building our courses. Florencia is one of the most knowledgeable people out there when it comes to getting a course like this up and running! I've chatted informally with both Florencia and Noam about their experiences in building and maintaining interactive courses before, so I decided to ask them to gather their thoughts less casually so we could share them all together.
 
 ## It's time to build
 
@@ -38,6 +38,8 @@ Everyone I know who has worked on a course like this says that it is a challenge
 Even aside from the JavaScript, this particular course framework involves a complex file structure for exercises, solutions, slides, and so forth that can be onerous to manage. I think I agree with Florencia, who says, "Perhaps the longest part is getting familiar with the file structures and exercises." Florencia wrote a [blog post outlining these details](https://florencia.netlify.app/2020/03/cooking-your-first-tutorial.en-us/), which is also [available in Spanish](https://florencia.netlify.app/es-es/2020/03/receta-para-tu-primer-tutorial.es-es/)!
 
 On the other hand, we have all been amazed at learning more about [Binder](https://mybinder.org/), what it is, and what it can do. "The degree to which the Binder back-end just works is amazing. It's astonishingly low maintenance, which is one reason I don't consider moving to something I might understand better," says Noam. The first time Florencia explained to me how you can access what you have in the repo in an RStudio IDE in a browser, I was floored! "I think it is a great tool to turn a Git repo into an executable environment in a simple way," she says. To try it out, visit the [Binder site for my course](https://mybinder.org/v2/gh/juliasilge/supervised-ML-case-studies-course/binder), wait for the container to start, then click "New" near the top right, and choose "RStudio". You will be in an RStudio Server IDE where you have access to all of the code and data from the course.
+
+[![binder](binder.png)](https://mybinder.org/v2/gh/juliasilge/supervised-ML-case-studies-course/binder)
 
 ## No free lunch
 
@@ -49,7 +51,7 @@ There are different ways to host such courses. Noam hosts his via GitHub Pages a
 
 An interactive course like this is a somewhat complicated undertaking, but seeing it finished is **so** satisfying. Florencia says, "To have a look at the course finished and running is definitely the best time of the work!" We also talked about how much we learned ourselves, about new tools and frameworks. 
 
-Seeing a course be used by actual real learners is the true test of success. "It is awesome getting messages from students who use the course," Noam shares. "I always ask graduate students me to send me their papers and dissertations." At a conference this past year, a fellow R user showed me that he had saved the supervised machine learning course as an icon on the Dock on his Mac, and said he had used it to study for getting a job! 🎉 This type of real impact is why we have invested the time and energy into making our courses free and accessible to people around the world. 
+Seeing a course be used by actual real learners is the true test of success. "It is awesome getting messages from students who use the course," Noam shares. "I always ask graduate students to send me their papers and dissertations." At a conference this past year, a fellow R user showed me that he had saved the supervised machine learning course as an icon on the Dock on his Mac, and said he had used it to study for getting a job! 🎉 This type of real impact is why we have invested the time and energy into making our courses free and accessible to people around the world. 
 
 If you are a professor or content developer, perhaps suddenly needing to create online content, we can't tell you if this exact course framework is the right option for you. However, we are happy to be able to share these experiences with our community here, so you can take from it what works for you, whether that's exploring how to use Binder, how to consider the needs of diverse folks with questions, or whether one of these specific resources we created could fit your needs.
 
