@@ -1,0 +1,31 @@
+---
+title: "Crosstalk - no bootstrap"
+author: Alison
+date: '2020-05-26'
+slug: crosstalk-test
+categories: []
+tags: []
+photo:
+  url: https://unsplash.com/photos/wEL2zPX3jDg
+  author: Fabio Ballasina
+---
+
+
+```{r}
+library(crosstalk)
+library(leaflet)
+library(DT)
+
+# Wrap data frame in SharedData
+sd <- SharedData$new(quakes[sample(nrow(quakes), 10),])
+```
+
+# No bootstrap
+
+The filtering works in only one direction: going from map -> DT, but not vice versa. And this one doesn't break my site's CSS.
+
+```{r fig.show='hold', out.width='25%'}
+leaflet(sd) %>% addTiles() %>% addMarkers(~long, ~lat)
+datatable(sd)
+```
+
