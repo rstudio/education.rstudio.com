@@ -20,7 +20,7 @@ photo:
 
 This past January I attended [rstudio::conf(2020)](https://rstd.io/conf). Seems odd to say that I attended a conference in 2020 but I did, along with over 2,000 others. This was my second rstudio::conf and if you have not attended, you definitely need to put it on your radar for future years - the people, community, resources and education are great bar none.
 
-This year I had the opportunity to teach the *[Deep Learning with Keras and TensorFlow in R](https://github.com/rstudio-conf-2020/dl-keras-tf)*[workshop](https://github.com/rstudio-conf-2020/dl-keras-tf). The workshop had max capacity attendence and was sold out within the first couple of months of opening up; showing a strong thirst for deep learning within the R community. With unbelievable support from TAs and RStudio, the workshop was a great success.
+This year I had the opportunity to teach the *[Deep Learning with Keras and TensorFlow in R](https://github.com/rstudio-conf-2020/dl-keras-tf)* [workshop](https://github.com/rstudio-conf-2020/dl-keras-tf). The workshop had max capacity attendence and was sold out within the first couple of months of opening up; showing a strong thirst for deep learning within the R community. With unbelievable support from TAs and RStudio, the workshop was a great success.
 
 ```{r echo=FALSE, out.width = '100%'}
 knitr::include_url("https://rstudio-conf-2020.github.io/dl-keras-tf/01-intro.html#1")
