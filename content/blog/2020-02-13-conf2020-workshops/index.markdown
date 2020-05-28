@@ -26,7 +26,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xxcqmyjwdi .gt_table {
+#tmmdwrkvis .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -38,23 +38,30 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_heading {
+#tmmdwrkvis .gt_heading {
   background-color: #FFFFFF;
+  text-align: center;
   border-bottom-color: #FFFFFF;
-  border-left-style: hidden;
+  border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
-  border-right-style: hidden;
+  border-right-style: none;
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_title {
+#tmmdwrkvis .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -64,7 +71,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-width: 0;
 }
 
-#xxcqmyjwdi .gt_subtitle {
+#tmmdwrkvis .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -74,13 +81,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-width: 0;
 }
 
-#xxcqmyjwdi .gt_bottom_border {
+#tmmdwrkvis .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_col_headings {
+#tmmdwrkvis .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -95,38 +102,59 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_col_heading {
+#tmmdwrkvis .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
   vertical-align: bottom;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 5px;
+  padding-bottom: 6px;
   padding-left: 5px;
   padding-right: 5px;
   overflow-x: hidden;
 }
 
-#xxcqmyjwdi .gt_column_spanner {
+#tmmdwrkvis .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
-  vertical-align: bottom;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tmmdwrkvis .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tmmdwrkvis .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tmmdwrkvis .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
   overflow-x: hidden;
   display: inline-block;
-  width: 97%;
+  width: 100%;
 }
 
-#xxcqmyjwdi .gt_group_heading {
+#tmmdwrkvis .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -148,7 +176,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#xxcqmyjwdi .gt_empty_group_heading {
+#tmmdwrkvis .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -163,19 +191,19 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   vertical-align: middle;
 }
 
-#xxcqmyjwdi .gt_striped {
+#tmmdwrkvis .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xxcqmyjwdi .gt_from_md > :first-child {
+#tmmdwrkvis .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xxcqmyjwdi .gt_from_md > :last-child {
+#tmmdwrkvis .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xxcqmyjwdi .gt_row {
+#tmmdwrkvis .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -194,9 +222,10 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   overflow-x: hidden;
 }
 
-#xxcqmyjwdi .gt_stub {
+#tmmdwrkvis .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
+  font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
   border-right-style: solid;
@@ -205,7 +234,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-left: 12px;
 }
 
-#xxcqmyjwdi .gt_summary_row {
+#tmmdwrkvis .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -215,7 +244,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#xxcqmyjwdi .gt_first_summary_row {
+#tmmdwrkvis .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -225,7 +254,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_grand_summary_row {
+#tmmdwrkvis .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -235,7 +264,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   padding-right: 5px;
 }
 
-#xxcqmyjwdi .gt_first_grand_summary_row {
+#tmmdwrkvis .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -245,7 +274,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-top-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_table_body {
+#tmmdwrkvis .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -254,7 +283,7 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-bottom-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_footnotes {
+#tmmdwrkvis .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -268,13 +297,13 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_footnote {
+#tmmdwrkvis .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xxcqmyjwdi .gt_sourcenotes {
+#tmmdwrkvis .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -288,46 +317,46 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
   border-right-color: #D3D3D3;
 }
 
-#xxcqmyjwdi .gt_sourcenote {
+#tmmdwrkvis .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xxcqmyjwdi .gt_left {
+#tmmdwrkvis .gt_left {
   text-align: left;
 }
 
-#xxcqmyjwdi .gt_center {
+#tmmdwrkvis .gt_center {
   text-align: center;
 }
 
-#xxcqmyjwdi .gt_right {
+#tmmdwrkvis .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xxcqmyjwdi .gt_font_normal {
+#tmmdwrkvis .gt_font_normal {
   font-weight: normal;
 }
 
-#xxcqmyjwdi .gt_font_bold {
+#tmmdwrkvis .gt_font_bold {
   font-weight: bold;
 }
 
-#xxcqmyjwdi .gt_font_italic {
+#tmmdwrkvis .gt_font_italic {
   font-style: italic;
 }
 
-#xxcqmyjwdi .gt_super {
+#tmmdwrkvis .gt_super {
   font-size: 65%;
 }
 
-#xxcqmyjwdi .gt_footnote_marks {
+#tmmdwrkvis .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="xxcqmyjwdi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="tmmdwrkvis" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -346,10 +375,10 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-applied-ml'>Applied Machine Learning Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-applied-ml'>Applied Machine Learning Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Max Kuhn</p>
+      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Max Kuhn</p>
 </div></td>
     </tr>
     <tr>
@@ -360,25 +389,26 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-tidy-tools'>Building Tidy Tools Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-tidy-tools'>Building Tidy Tools Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-tidy-tools/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-tidy-tools/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
 </div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Charlotte Wickham, Hadley Wickham</p>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Charlotte Wickham, Hadley Wickham</p>
 </div></td>
     </tr>
     <tr>
       <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-dl'>Deep Learning with Keras and TensorFlow in R Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/05/conf20-dl/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+</div></td>
       <td class="gt_row gt_left"><div class='gt_from_md'><p>Bradley Boehmke</p>
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-design-ds-class'>Designing the Data Science Classroom Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-design-ds-class'>Designing the Data Science Classroom Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Mine Cetinkaya-Rundel</p>
+      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Mine Cetinkaya-Rundel</p>
 </div></td>
     </tr>
     <tr>
@@ -389,11 +419,11 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-intro-ml'>Introduction to Machine Learning with the Tidyverse Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-intro-ml'>Introduction to Machine Learning with the Tidyverse Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-intro-ml/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-intro-ml/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
 </div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Alison Hill, Garrett Grolemund</p>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Alison Hill, Garrett Grolemund</p>
 </div></td>
     </tr>
     <tr>
@@ -404,10 +434,10 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-geospatial'>Modern Geospatial Data Analysis with R Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-geospatial'>Modern Geospatial Data Analysis with R Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Zev Ross</p>
+      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Zev Ross</p>
 </div></td>
     </tr>
     <tr>
@@ -418,11 +448,11 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-r-excel'>R for Excel Users Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-r-excel'>R for Excel Users Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-r-excel/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-r-excel/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
 </div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Julia Lowndes, Allison Horst</p>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Julia Lowndes, Allison Horst</p>
 </div></td>
     </tr>
     <tr>
@@ -433,10 +463,10 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-instructor'>RStudio Instructor Training Workshop (1-day)</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-instructor'>RStudio Instructor Training Workshop (1-day)</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Greg Wilson</p>
+      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Greg Wilson</p>
 </div></td>
     </tr>
     <tr>
@@ -447,10 +477,10 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-intro-shiny'>Shiny From Start To Finish Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-intro-shiny'>Shiny From Start To Finish Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'></div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Danny Kaplan</p>
+      <td class="gt_row gt_center"><div class='gt_from_md'></div></td>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Danny Kaplan</p>
 </div></td>
     </tr>
     <tr>
@@ -462,11 +492,11 @@ Thanks to all our instructors, teaching assistants, and workshop attendees this 
 </div></td>
     </tr>
     <tr>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-ts'>Tidy Time Series and Forecasting in R Workshop</a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='https://rstd.io/conf20-ts'>Tidy Time Series and Forecasting in R Workshop</a></p>
 </div></td>
-      <td class="gt_row gt_center gt_striped"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-ts/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href='/blog/2020/02/conf20-ts/'><!--html_preserve--><i class="fas  fa-paperclip "></i><!--/html_preserve--></a></p>
 </div></td>
-      <td class="gt_row gt_left gt_striped"><div class='gt_from_md'><p>Rob Hyndman</p>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Rob Hyndman</p>
 </div></td>
     </tr>
     <tr>
