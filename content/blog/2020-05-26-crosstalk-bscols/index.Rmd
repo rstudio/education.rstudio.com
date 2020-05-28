@@ -1,8 +1,8 @@
 ---
-title: "Crosstalk - plus bootstrap"
+title: "Crosstalk - plus bootstrap columns"
 author: Alison
 date: '2020-05-26'
-slug: crosstalk-test
+slug: crosstalk-bscols
 categories: []
 tags: []
 photo:
@@ -23,13 +23,13 @@ sd <- SharedData$new(quakes[sample(nrow(quakes), 10),])
 
 # Bootstrap columns
 
-This obviously breaks my CSS
+This obviously breaks my CSS because it pulls in bootstrap
 
 ```{r}
 bscols(
   leaflet(sd, width = "100%", height = 300) %>%
     addTiles() %>%
     addMarkers(),
-  datatable(sd, class="compact", width="100%")
+  datatable(sd, width="100%")
 )
 ```

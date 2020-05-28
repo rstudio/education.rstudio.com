@@ -1,8 +1,8 @@
 ---
-title: "Crosstalk - plus bootstrap"
+title: "Crosstalk - plus bootstrap columns"
 author: Alison
 date: '2020-05-26'
-slug: crosstalk-test
+slug: crosstalk-bscols
 categories: []
 tags: []
 photo:
@@ -47,23 +47,23 @@ library(DT)
 sd &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])</code></pre>
 <div id="bootstrap-columns" class="section level1">
 <h1>Bootstrap columns</h1>
-<p>This obviously breaks my CSS</p>
+<p>This obviously breaks my CSS because it pulls in bootstrap</p>
 <pre class="r"><code>bscols(
   leaflet(sd, width = &quot;100%&quot;, height = 300) %&gt;%
     addTiles() %&gt;%
     addMarkers(),
-  datatable(sd, class=&quot;compact&quot;, width=&quot;100%&quot;)
+  datatable(sd, width=&quot;100%&quot;)
 )</code></pre>
 <pre><code>## Assuming &quot;long&quot; and &quot;lat&quot; are longitude and latitude, respectively</code></pre>
 <div class="container-fluid crosstalk-bscols">
 <div class="fluid-row">
 <div class="col-xs-6">
 <div id="htmlwidget-1" style="width:100%;height:300px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedDatabaccd023"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-21.47,-24.71,-25.81,-20.32,-22,-20.42,-16.4,-21.68,-19.3,-20.76],[185.86,179.85,182.54,181.69,180.52,181.86,185.86,180.63,183.84,185.77],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["713","907","929","208","279","69","296","238","127","329"],"ctGroup":"SharedDatabaccd023"}]}],"limits":{"lat":[-25.81,-16.4],"lng":[179.85,185.86]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedDataa08d7edd"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-26.78,-29.91,-17.46,-17.7,-15.36,-24.78,-23.73,-21.55,-34.1,-17.44],[183.61,181.43,181.9,182.2,186.71,179.22,183,181.39,181.8,181.33],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["366","144","394","202","380","278","814","850","419","906"],"ctGroup":"SharedDataa08d7edd"}]}],"limits":{"lat":[-34.1,-15.36],"lng":[179.22,186.71]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="col-xs-6">
 <div id="htmlwidget-2" style="width:100%;height:500px;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"crosstalkOptions":{"key":["713","907","929","208","279","69","296","238","127","329"],"group":"SharedDatabaccd023"},"filter":"none","data":[["713","907","929","208","279","69","296","238","127","329"],[-21.47,-24.71,-25.81,-20.32,-22,-20.42,-16.4,-21.68,-19.3,-20.76],[185.86,179.85,182.54,181.69,180.52,181.86,185.86,180.63,183.84,185.77],[55,477,201,508,561,530,148,617,517,118],[4.9,4.2,4.7,4.5,4.5,4.5,5,5,4.2,4.6],[46,34,40,14,19,27,47,63,21,15]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"crosstalkOptions":{"key":["366","144","394","202","380","278","814","850","419","906"],"group":"SharedDataa08d7edd"},"filter":"none","data":[["366","144","394","202","380","278","814","850","419","906"],[-26.78,-29.91,-17.46,-17.7,-15.36,-24.78,-23.73,-21.55,-34.1,-17.44],[183.61,181.43,181.9,182.2,186.71,179.22,183,181.39,181.8,181.33],[40,205,417,445,130,492,118,513,246,545],[4.6,4.4,4.2,4,5.5,4.3,4.3,5.1,4.3,4.2],[22,34,14,12,95,16,11,81,23,37]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

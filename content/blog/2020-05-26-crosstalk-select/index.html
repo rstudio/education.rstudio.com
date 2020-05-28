@@ -1,0 +1,74 @@
+---
+title: "Crosstalk - plus select"
+author: Alison
+date: '2020-05-26'
+slug: crosstalk-select
+categories: []
+tags: []
+photo:
+  url: https://unsplash.com/photos/wEL2zPX3jDg
+  author: Fabio Ballasina
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/rmarkdown-libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/bootstrap/js/bootstrap.min.js"></script>
+<link href="/rmarkdown-libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/selectize/js/selectize.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<link href="/rmarkdown-libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-easybutton/easy-button.js"></script>
+<script src="/rmarkdown-libs/leaflet-easybutton/EasyButton-binding.js"></script>
+<link href="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter.js"></script>
+<script src="/rmarkdown-libs/leaflet-locationfilter2/locationfilter-bindings.js"></script>
+<link href="/rmarkdown-libs/ionicons/ionicons.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+
+
+<pre class="r"><code>library(crosstalk)
+library(leaflet)
+library(DT)
+
+# Wrap data frame in SharedData
+sd &lt;- SharedData$new(quakes[sample(nrow(quakes), 10),])</code></pre>
+<pre class="r"><code># Create a filter input
+filter_select(&quot;magnitude&quot;, &quot;Magnitude&quot;, sd, ~ifelse(mag &gt; 4.5, &quot;big&quot;, &quot;not big&quot;))
+
+# Use SharedData like a dataframe with Crosstalk-enabled widgets
+leaflet(sd) %&gt;% addTiles() %&gt;% addMarkers()
+datatable(sd, width=&quot;100%&quot;)</code></pre>
+<p><div id="magnitude" class="form-group crosstalk-input-select crosstalk-input">
+<label class="control-label" for="magnitude">Magnitude</label>
+<div>
+<select multiple></select>
+<script type="application/json" data-for="magnitude">{
+  "items": {
+    "value": ["big", "not big"],
+    "label": ["big", "not big"]
+  },
+  "map": {
+    "big": ["605", "531", "541", "114", "209", "692"],
+    "not big": ["202", "289", "939", "375"]
+  },
+  "group": ["SharedData938a061e"]
+}</script>
+</div>
+</div><div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addSelect","args":["SharedData938a061e"]},{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[-17.7,-19.89,-15.77,-15.9,-26.11,-18.07,-30.28,-20.77,-18.8,-20.31],[182.2,174.46,167.01,167.42,178.3,181.57,180.62,181.16,182.41,184.06],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"ctKey":["202","605","531","541","114","289","209","939","692","375"],"ctGroup":"SharedData938a061e"}]}],"limits":{"lat":[-30.28,-15.77],"lng":[167.01,184.06]}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"crosstalkOptions":{"key":["202","605","531","541","114","289","209","939","692","375"],"group":"SharedData938a061e"},"filter":"none","data":[["202","605","531","541","114","289","209","939","692","375"],[-17.7,-19.89,-15.77,-15.9,-26.11,-18.07,-30.28,-20.77,-18.8,-20.31],[182.2,174.46,167.01,167.42,178.3,181.57,180.62,181.16,182.41,184.06],[445,546,64,40,617,572,350,568,385,249],[4,5.7,5.5,5.5,4.8,4.5,4.7,4.2,5.2,4.4],[12,99,73,86,39,26,32,12,67,21]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>lat<\/th>\n      <th>long<\/th>\n      <th>depth<\/th>\n      <th>mag<\/th>\n      <th>stations<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script></p>

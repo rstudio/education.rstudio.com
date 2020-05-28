@@ -1,0 +1,37 @@
+---
+title: "Crosstalk - plus select"
+author: Alison
+date: '2020-05-26'
+slug: crosstalk-select
+categories: []
+tags: []
+photo:
+  url: https://unsplash.com/photos/wEL2zPX3jDg
+  author: Fabio Ballasina
+---
+
+
+```{r}
+library(crosstalk)
+library(leaflet)
+library(DT)
+
+# Wrap data frame in SharedData
+sd <- SharedData$new(quakes[sample(nrow(quakes), 10),])
+```
+
+
+
+```{r widget, results='hide', warning=FALSE, message=FALSE}
+# Create a filter input
+filter_select("magnitude", "Magnitude", sd, ~ifelse(mag > 4.5, "big", "not big"))
+
+# Use SharedData like a dataframe with Crosstalk-enabled widgets
+leaflet(sd) %>% addTiles() %>% addMarkers()
+datatable(sd, width="100%")
+```
+
+```{r ref.label="widget", echo=FALSE, warning=FALSE, message=FALSE}
+
+```
+

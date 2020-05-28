@@ -22,10 +22,15 @@ sd <- SharedData$new(quakes[sample(nrow(quakes), 10),])
 
 # No bootstrap
 
-The filtering works in only one direction: going from map -> DT, but not vice versa. And this one doesn't break my site's CSS.
+This one doesn't break my site's CSS.
 
-```{r fig.show='hold', out.width='25%'}
+```{r widget, results='hide'}
 leaflet(sd) %>% addTiles() %>% addMarkers(~long, ~lat)
 datatable(sd)
 ```
+
+```{r ref.label="widget", echo=FALSE}
+
+```
+
 
