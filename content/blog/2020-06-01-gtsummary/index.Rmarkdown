@@ -45,4 +45,44 @@ We are thrilled to introduce you to the [{gtsummary} package](http://www.danield
 - Easy syntax to be able to add additional information/formatting to our tables
 - Compatibility with multiple R Markdown output types (HTML, PDF, Word, RTF)
 
-## Please use level 2 markdown headers
+## Example 1: Table of descriptive statistics, comparing group demographics
+
+Throughout the post we will use an example dataset of 200 subjects treated with either Drug A or Drug B, with a mix of categorical, dichotomous, and continuous demographic and response data. The dataset has label attributes for column names. 
+
+```{r}
+sm_trial <- trial %>% select(trt, age, response, grade)
+
+head(sm_trial)
+```
+
+
+In **one line of code** we can summarize the overall demographics of the dataset!
+
+```{r}
+tbl_summary(sm_trial)
+```
+
+
+Notice some nice default behaviors:  
+  ♥ Detects variable types of input data and calculates descriptive statistics  
+  ♥ Variables coded as 0/1, TRUE/FALSE, and Yes/No are presented dichotomously  
+  ♥ Recognizes `NA` values as "missing" and lists them as unknown  
+  ♥ Label attributes automatically printed  
+  ♥ Variable levels indented and footnotes added with _({gt})_  
+
+Next you can start to customize the table by using arguments to the `tbl_summary()` function, as well as pipe the table through additional {gtsummary} functions to add more information, like p-value to compare across groups, add an overall demographic column, and bold labels.  
+
+```{r}
+sm_trial %>%
+  tbl_summary(by = trt) %>%
+  add_p() %>%
+  add_overall() %>% 
+  bold_labels()
+```
+
+
+## Example 2: Summarize regression models
+
+## Example 3: Customize tables
+
+## 
