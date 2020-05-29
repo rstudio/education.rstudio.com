@@ -1,24 +1,23 @@
 ---
-  title: Presentation-Ready Summary Tables
+title: Presentation-Ready Summary Tables
 author:
   - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
-- '[Margie Hannum](https://margarethannum.github.io/about.html)'
-- Karissa Whiting
+  - '[Margie Hannum](https://margarethannum.github.io/about.html)'
+  - Karissa Whiting
 date: '2020-06-01'
 categories:
   - learn
 tags:
   - rmarkdown
-- gt
 description: |
   The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities, and is compatible with multiple R Markdown output types.
 slug: gtsummary
 photo:
   url: https://unsplash.com/photos/hk2gSD_S5j0
-author: Daniel von Appen
+  author: Daniel von Appen
 ---
 
-  ```{r setup, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
