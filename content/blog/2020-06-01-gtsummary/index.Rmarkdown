@@ -1,27 +1,28 @@
 ---
-title: Presentation-Ready Summary Tables
+  title: Presentation-Ready Summary Tables
 author:
-  - Daniel Sjoberg
-  - Margie Hannum
-  - Karissa Whiting
+  - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
+- '[Margie Hannum](https://margarethannum.github.io/about.html)'
+- Karissa Whiting
 date: '2020-06-01'
 categories:
   - learn
 tags:
   - rmarkdown
+- gt
 description: |
-  A short sentence here as a teaser.
+  The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities, and is compatible with multiple R Markdown output types.
 slug: gtsummary
 photo:
-  url: https://unsplash.com/photos/iRnUeA04kUY
-  author: toine G
+  url: https://unsplash.com/photos/hk2gSD_S5j0
+author: Daniel von Appen
 ---
 
-```{r setup, include = FALSE}
+  ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE, 
-  comment = "#>", 
-  fig.width = 7, 
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
   fig.align = 'center',
   fig.asp = 0.618, # 1 / phi
   out.width = "700px",
@@ -31,5 +32,18 @@ library(gt)
 library(tidyverse)
 library(gtsummary)
 ```
+
+We are thrilled to introduce you to the [{gtsummary} package](http://www.danieldsjoberg.com/gtsummary/)!
+
+  The motivation behind the package stems from our work as statisticians, where every day we summarize datasets and regression models, share these results with collaborators, and eventually include them in manuscript submissions. Many people in our department had our own scripts to create the tables we needed, and even then would often need to modify the formatting in Word later, which did not lead to reproducible results!
+
+  At the time we created the package, we had several ideas in mind for our ideal summary table package. We also wanted our primary print engine to rely on the newly released RStudio package [{gt}](https://gt.rstudio.com/). So, {gtsummary} was born! Here's what you can do with {gtsummary}:
+
+- Summarize data frames or tibbles to present descriptive statistics, compare group demographics (e.g creating a Table 1 for medical journals), and more. Automatically detects continuous, categorical, and dichotomous variables in your data set, calculates appropriate descriptive statistics.
+- Summarize regression models; include reference row for categorical variables. Play nicely with many model types (lm, glm, coxph, glmer etc...), with ability to use custom functions to summarize regression models without broom tidiers.
+- Extensive customization capabilities (everything from which statistics and tests to use to how many decimal places to round to, bolding labels, indenting categories etc)
+- Sensible defaults to create publication-ready summary tables in only a few lines of code
+- Easy syntax to be able to add additional information/formatting to our tables
+- Compatibility with multiple R Markdown output types (HTML, PDF, Word, RTF)
 
 ## Please use level 2 markdown headers
