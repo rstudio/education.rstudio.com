@@ -1,8 +1,8 @@
 ---
-title: 'Lucerne Workshops'
+title: Lucerne Workshops
 author:
   - greg
-date: '2020-05-29'
+date: '2020-06-01'
 categories:
   - teach
 tags:
