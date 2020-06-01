@@ -12,8 +12,8 @@ description: |
   Welcome the latest cohort of instructors to complete certification.
 slug: march-2020-instructors
 photo:
-  url: https://unsplash.com/photos/JlWsZPqarKc
-  author: Austrian National Library
+  url: https://unsplash.com/photos/6Jw8-WZd0TM
+  author: Robert Zunikoff
 ---
 
 We are very pleased to have welcomed nine new certified instructors in March 2020:
