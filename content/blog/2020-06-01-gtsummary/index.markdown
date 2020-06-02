@@ -10,7 +10,7 @@ categories:
 tags:
   - rmarkdown
 description: |
-  The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities, and is compatible with multiple R Markdown output types.
+  The {gtsummary} package summarizes data sets, regression models, and more using sensible defaults with highly customizable capabilities, and is compatible with multiple R Markdown output types.
 slug: gtsummary
 photo:
   url: https://unsplash.com/photos/hk2gSD_S5j0
@@ -21,16 +21,19 @@ photo:
 
 We are thrilled to introduce you to the [{gtsummary} package](http://www.danieldsjoberg.com/gtsummary/)!<a href='https://github.com/ddsjoberg/gtsummary'><img src='logo.png' align="right" height="200" /></a>
 
-  The motivation behind the package stems from our work as statisticians, where every day we summarize datasets and regression models in R, share these results with collaborators, and eventually include them in manuscript submissions. Many people in our department had our own scripts to create the tables we needed, and even then would often need to modify the formatting in a document editor later, which did not lead to reproducible results.
+The {gtsummary} package provides an elegant and flexible way to create publication-ready analytical and summary tables in R.
 
-  At the time we created the package, we had several ideas in mind for our ideal table summary package. We also wanted our tables to be able to take advantage of all the features (like spanning column headers, table footnotes, stubhead label, row group labels...) in the newly released RStudio package [{gt}](https://gt.rstudio.com/). So, {gtsummary} was born! Here's what you can do with {gtsummary}:
+  The motivation behind the package stems from our work as statisticians, where every day we summarize datasets and regression models in R, share these results with collaborators, and eventually include them in published manuscripts. Many people in our department had our own scripts to create the tables we needed, and even then would often need to modify the formatting in a document editor later, which did not lead to reproducible results.
+
+  At the time we created the package, we had several ideas in mind for our ideal table summary package. We also wanted our tables to be able to take advantage of all the features in RStudio's newly released [{gt}](https://gt.rstudio.com/) package, which offers a variety of table customization options like spanning column headers, table footnotes, stubhead label, row group labels and more. So, {gtsummary} was born! 
+  
+  Here's what you can do with {gtsummary}:
 
 - [**Summarize data frames or tibbles**](http://www.danieldsjoberg.com/gtsummary/articles/tbl_summary.html) to present descriptive statistics, compare group demographics (e.g creating a Table 1 for medical journals), and more!
 - [**Summarize regression models**](http://www.danieldsjoberg.com/gtsummary/articles/tbl_regression.html). Using `broom::tidy()` in the background, {gtsummary} plays nicely with many model types (lm, glm, coxph, glmer etc.). You may also use custom functions to summarize regression models that do not currently have [{broom}](https://broom.tidymodels.org/index.html) tidiers.
 - [**Customize gtsummary tables**](http://www.danieldsjoberg.com/gtsummary/reference/index.html#section-general-formatting-styling-functions) using a growing list of formatting/styling functions: everything from which statistics and tests to use to how many decimal places to round to, bolding labels, indenting categories and more!
 - [**Report statistics inline**](http://www.danieldsjoberg.com/gtsummary/articles/tbl_summary.html#inline_text) from summary tables and regression summary tables in **R markdown**. Make your reports completely reproducible! 
-- Sensible defaults and easy syntax to create publication-ready summary tables in only a few lines of code
-- [Compatibility with multiple R Markdown output](http://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html) types (HTML, PDF, Word, RTF)
+- [**Leverage compatibility with multiple R Markdown outputs**](http://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html) to create beautiful, reproducible reports in a variety of formats (HTML, PDF, Word, RTF)
 
 
 Install {gtsummary} from CRAN with the following code: 
@@ -49,16 +52,53 @@ Throughout the post we will use an example dataset of 200 subjects treated with 
 sm_trial <- trial %>% select(trt, age, response, grade)
 
 head(sm_trial)
-#> # A tibble: 6 x 4
-#>   trt      age response grade
-#>   <chr>  <dbl>    <int> <fct>
-#> 1 Drug A    23        0 II   
-#> 2 Drug B     9        1 I    
-#> 3 Drug A    31        0 II   
-#> 4 Drug A    NA        1 III  
-#> 5 Drug A    51        1 III  
-#> 6 Drug B    39        0 I
 ```
+
+<!--html_preserve--><table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 20%; margin-left: 0%; margin-right: auto;  ">
+<col><col><col><col><tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">trt</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">age</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">response</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">grade</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">23</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">II</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug B</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">9</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">1</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">I</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">31</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">II</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug A</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;"></td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">1</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">III</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">51</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">III</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug B</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">39</td>
+<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">0</td>
+<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">I</td>
+</tr>
+</table>
+<!--/html_preserve-->
 
 
 In **one line of code** we can summarize the overall demographics of the dataset!
