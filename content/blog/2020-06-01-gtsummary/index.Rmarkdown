@@ -4,9 +4,10 @@ author:
   - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
   - '[Margie Hannum](https://margarethannum.github.io/about.html)'
   - '[Karissa Whiting](https://github.com/karissawhiting)'
-date: '2020-06-01'
+date: '2020-06-03'
 categories:
   - learn
+  - package
 tags:
   - rmarkdown
 description: |
@@ -156,6 +157,8 @@ tbl_reg_1 <- tbl_regression(m1, exponentiate = TRUE)
 
 <p align="center"><img src="tbl_regression_1.png" width=40%></p>
 
+We have a growing list of [vetted models](http://www.danieldsjoberg.com/gtsummary/reference/vetted_models.html) that can be passed to `tbl_regression()`. You may also pass a [custom tidier](http://www.danieldsjoberg.com/gtsummary/reference/vetted_models.html#custom-tidiers) for model types that are not yet officially supported!
+
 ## Join two or more tables
 
 Oftentimes we must present results for multiple outcomes of interest, and there are many other reasons you might want to join two summary tables together. We've got you covered!
@@ -275,6 +278,10 @@ If you have any questions on usage, please post to StackOverflow and use the [gt
 
 May your code be short, your tables beautiful, and your reports fully reproducible! 
 
-Happy coding!
 
 <iframe src="https://giphy.com/embed/13AcmSNW5O7WV2" width="480" height="426" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/post-how-tenorgif-13AcmSNW5O7WV2">via GIPHY</a></p>
+
+**Acknowledgements** 
+
+A big thank you to all {gtsummary} contributors:
+`r usethis::use_tidy_thanks("ddsjoberg/gtsummary", from = "1970-01-01") %>% {glue::glue("[&#x0040;{.}](https://github.com/{.})")} %>% glue::glue_collapse(sep = ", ", last = ", and ")`

@@ -4,9 +4,10 @@ author:
   - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
   - '[Margie Hannum](https://margarethannum.github.io/about.html)'
   - '[Karissa Whiting](https://github.com/karissawhiting)'
-date: '2020-06-01'
+date: '2020-06-03'
 categories:
   - learn
+  - package
 tags:
   - rmarkdown
 description: |
@@ -188,6 +189,8 @@ tbl_reg_1 <- tbl_regression(m1, exponentiate = TRUE)
 
 <p align="center"><img src="tbl_regression_1.png" width=40%></p>
 
+We have a growing list of [vetted models](http://www.danieldsjoberg.com/gtsummary/reference/vetted_models.html) that can be passed to `tbl_regression()`. You may also pass a [custom tidier](http://www.danieldsjoberg.com/gtsummary/reference/vetted_models.html#custom-tidiers) for model types that are not yet officially supported!
+
 ## Join two or more tables
 
 Oftentimes we must present results for multiple outcomes of interest, and there are many other reasons you might want to join two summary tables together. We've got you covered!
@@ -290,7 +293,7 @@ See the full list of gtsummary functions [here](http://www.danieldsjoberg.com/gt
 - Present **missing data** in various ways
 - **Sort variables** by significance (`sort_p()`); sort categorical variables by frequency  
 - Calculate **cell percents and row percents** (default is column-wide)  
-- Only report p-values for select variables (`add_p(include = ...)`); report q-values (like false discovery rate)  
+- Report p-values for select variables (`add_p(include = ...)`); report q-values (like false discovery rate)  
 - Set global **rounding options** with themes (for estimates, confidence intervals, and p-values)
 
 There is a growing [gallery of tables](http://www.danieldsjoberg.com/gtsummary/articles/gallery.html) which highlights some of the many customization options! 
@@ -303,6 +306,10 @@ If you have any questions on usage, please post to StackOverflow and use the [gt
 
 May your code be short, your tables beautiful, and your reports fully reproducible! 
 
-Happy coding!
 
 <iframe src="https://giphy.com/embed/13AcmSNW5O7WV2" width="480" height="426" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/post-how-tenorgif-13AcmSNW5O7WV2">via GIPHY</a></p>
+
+**Acknowledgements** 
+
+A big thank you to all {gtsummary} contributors:
+[&#x0040;ablack3](https://github.com/ablack3), [&#x0040;ahinton-mmc](https://github.com/ahinton-mmc), [&#x0040;barthelmes](https://github.com/barthelmes), [&#x0040;calebasaraba](https://github.com/calebasaraba), [&#x0040;davidgohel](https://github.com/davidgohel), [&#x0040;davidkane9](https://github.com/davidkane9), [&#x0040;dax44](https://github.com/dax44), [&#x0040;ddsjoberg](https://github.com/ddsjoberg), [&#x0040;emilyvertosick](https://github.com/emilyvertosick), [&#x0040;GuiMarthe](https://github.com/GuiMarthe), [&#x0040;hughjonesd](https://github.com/hughjonesd), [&#x0040;jeanmanguy](https://github.com/jeanmanguy), [&#x0040;jennybc](https://github.com/jennybc), [&#x0040;jflynn264](https://github.com/jflynn264), [&#x0040;joelgautschi](https://github.com/joelgautschi), [&#x0040;jwilliman](https://github.com/jwilliman), [&#x0040;karissawhiting](https://github.com/karissawhiting), [&#x0040;khizzr](https://github.com/khizzr), [&#x0040;larmarange](https://github.com/larmarange), [&#x0040;leejasme](https://github.com/leejasme), [&#x0040;ltin1214](https://github.com/ltin1214), [&#x0040;margarethannum](https://github.com/margarethannum), [&#x0040;michaelcurry1123](https://github.com/michaelcurry1123), [&#x0040;moleps](https://github.com/moleps), [&#x0040;MyKo101](https://github.com/MyKo101), [&#x0040;oranwutang](https://github.com/oranwutang), [&#x0040;ryzhu75](https://github.com/ryzhu75), [&#x0040;sammo3182](https://github.com/sammo3182), [&#x0040;simonpcouch](https://github.com/simonpcouch), [&#x0040;slobaugh](https://github.com/slobaugh), [&#x0040;tormodb](https://github.com/tormodb), and [&#x0040;zabore](https://github.com/zabore)
