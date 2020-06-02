@@ -177,8 +177,8 @@ This was one of my biggest concerns about running a live lesson with a learnr tu
 
 RStudio’s [Barret Schloerke](http://schloerke.com/) directed me to this [essential post](https://cran.r-project.org/web/packages/learnr/vignettes/shinyapps-publishing.html) by Angela Li (<a href="https://twitter.com/CivicAngela"><i class="fab fa-twitter"></i></a>), which answers this question exactly. Following Angela’s super helpful post, and expecting ~75 people to simultaneously start and use the app for ~30 min during the lesson, I decided to: 
 
-- Upgrade my subscription to Basic ($99/month - check with your school / university to see if they already have a shinyapps.io subscription or could get one to support teaching)
-- Max out instances (to 5 with a Basic subscription)
+- Upgrade my subscription to Standard ($99/month - check with your school / university to see if they already have a shinyapps.io subscription or could get one to support teaching)
+- Max out instances (to 5 with a Standard subscription)
 - Max out instance size (XXXL - 8 GB)
 - Set Max Worker Processes to 2
 - Set Max Connections to 17
