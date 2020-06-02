@@ -23,7 +23,7 @@ We are thrilled to introduce you to the [{gtsummary} package](http://www.danield
 
 The {gtsummary} package provides an elegant and flexible way to create publication-ready analytical and summary tables in R.
 
-  The motivation behind the package stems from our work as statisticians, where every day we summarize datasets and regression models in R, share these results with collaborators, and eventually include them in published manuscripts. Many people in our department had our own scripts to create the tables we needed, and even then would often need to modify the formatting in a document editor later, which did not lead to reproducible results.
+  The motivation behind the package stems from our work as statisticians, where every day we summarize datasets and regression models in R, share these results with collaborators, and eventually include them in published manuscripts. Many of our colleagues had our own scripts to create the tables we needed, and even then would often need to modify the formatting in a document editor later, which did not lead to **reproducible results**.
 
   At the time we created the package, we had several ideas in mind for our ideal table summary package. We also wanted our tables to be able to take advantage of all the features in RStudio's newly released [{gt}](https://gt.rstudio.com/) package, which offers a variety of table customization options like spanning column headers, table footnotes, stubhead label, row group labels and more. So, {gtsummary} was born! 
   
@@ -163,7 +163,7 @@ tbl_summary_3 <- sm_trial %>%
 
 ## Summarize regression models
 
-First create a simple logistic regression model to use in examples. 
+First, create a logistic regression model to use in examples. 
 
 
 ```r
@@ -204,7 +204,7 @@ tbl_reg_3 <-
   tbl_regression(exponentiate = TRUE)
 
 tbl_reg_4 <-
-  tbl_merge( #<<
+  tbl_merge(
     tbls = list(tbl_reg_1, tbl_reg_3), 
     tab_spanner = c("**Tumor Response**", "**Time to Death**") 
   ) 
