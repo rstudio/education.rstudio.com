@@ -1,5 +1,5 @@
 ---
-title: My Organization's First R Package Workshop at Rstudio::conf(2020)
+title: My Organization's First R Package Workshop at rstudio::conf(2020)
 author: 
   - "[Malcolm Barrett](https://malco.io/)"
   - "[Richard Iannone](https://randr.rocks/)"
@@ -8,7 +8,7 @@ categories: [learn, teach]
 tags: [conf2020]
 slug: conf20-org-first-pkg
 description: |
-  A tour of My Organization’s First R Package Workshop.
+  A tour of the rstudio::conf() workshop 'My Organization’s First R Package'
 photo:
   url: https://unsplash.com/photos/mTkXSSScrzw
   author: Leone Venter
@@ -16,7 +16,7 @@ photo:
 
 We were thrilled to deliver our workshop, “My Organization’s First R Package,” at `rstudio::conf(2020L)`. Packages are the [fundamental unit of shareable code in R](https://r-pkgs.org/), and the modern ecosystem for developing and sharing packages is efficient and user-friendly. While many R packages are distributed through CRAN, they are also useful for sharing code within your organization, [organizing](https://github.com/benmarwick/rrtools) [analysis](https://zenartofrpkgs.netlify.app) [projects](https://emilyriederer.netlify.app/post/rmarkdown-driven-development/), and [deploying data science products](https://thinkr-open.github.io/golem/).
 
-Many great resources exist for learning R package development, including the [R Packages book](https://r-pkgs.org/) and workshops like [Building Tidy Tools](https://education.rstudio.com/blog/2020/02/conf20-tidy-tools/). Our workshop was unique, however, in that it focused on developing R packages for use within your organization--whether you’re a data science team, an academic research lab, or a lone R user in a sea of [Excel users](https://education.rstudio.com/blog/2020/02/conf20-r-excel/). We taught participants how to use devtools, usethis, and other useful package development tools to develop and share R packages for internal use. We made R packages for two fictional organizations, AVALANCHE and Intendo, to learn best practices in R development and useful tricks for internal packages. 
+Many great resources exist for learning R package development, including the [R Packages book](https://r-pkgs.org/) and workshops like [Building Tidy Tools](https://education.rstudio.com/blog/2020/02/conf20-tidy-tools/). Our workshop was unique, however, in that it focused on developing R packages for use within your organization---whether you’re a data science team, an academic research lab, or a lone R user in a sea of [Excel users](https://education.rstudio.com/blog/2020/02/conf20-r-excel/). We taught participants how to use devtools, usethis, and other useful package development tools to develop and share R packages for internal use. We made R packages for two fictional organizations, AVALANCHE and Intendo, to learn best practices in R development and useful tricks for internal packages. 
 
 ## Day 1
 
@@ -28,7 +28,7 @@ We also explored how R package development tools meet the needs of internal R pa
 
 ## Day 2
 
-On Day 2, four sections moved across several themes: working with databases, writing functions that use DB data, planning package dev within the organization, and integrating standardized reporting. The goals for this day were to review and get practice with most of the concepts learned on Day 1, and, to build a complete package based that utilizes data housed in a database (which is typical of how most organizations store their data). 
+On Day 2, four sections covered several themes: working with databases, writing functions that use DB data, planning package dev within the organization, and integrating standardized reporting. The goals for this day were to review and get practice with most of the concepts learned on Day 1, and, to build a complete package based that utilizes data housed in a database (which is typical of how most organizations store their data). 
 To make package development more fun and provide an experience more akin to a real-world business scenario, we used a set of DB tables that belong to an imaginary game studio called *Intendo*. We quickly got up to speed with how to access a MySQL database and how to calculate key performance indicators that were important to *Intendo* during its brief reign in 2015 (the company had moderate success with its *Super Jetroid* game before fizzling out in early ‘16).
 The students learned how to create functions for the intendo package that: (1) facilitated data access, (2) quickly got us KPIs most relevant to the organization, and (3) were fully documented. Throughout the day, as on the first day, the package authoring workflow made great use of the easy-to-use functions available in usethis. There were five checkpoints of the intendo package that were available if any of the learners needed to get caught up.
 Throughout the day, the learners asked us questions, showed us their new package functions, and ran `R CMD check` dozens of times. They made fully-functioning packages that any organization would be lucky to have! Aside from covering everything in the instructional materials, we exchanged plenty of tips and tricks about how to solve all those little package development snafus, save time during development, and go the extra mile to make the package shine!
