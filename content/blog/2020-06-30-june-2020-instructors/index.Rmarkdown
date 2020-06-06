@@ -1,0 +1,31 @@
+---
+title: Newly certified instructors in June 2020
+author:
+  - greg
+date: '2020-06-30'
+categories:
+  - teach
+tags:
+  - online
+  - teach
+description: |
+  Welcome the latest cohort of instructors to complete certification.
+slug: june-2020-instructors
+photo:
+  url: https://unsplash.com/photos/6Jw8-WZd0TM
+  author: Robert Zunikoff
+---
+
+We are very pleased to welcome NUMBER new instructors in June 2020:
+
+-   [Mohamed El Fodil Ihaddaden](https://education.rstudio.com/trainers/people/ihaddaden+fodil/)
+-   [Leo Glowacki](https://education.rstudio.com/trainers/people/glowacki+leo/)
+-   [JooYoung Seo](https://education.rstudio.com/trainers/people/seo+jooyoung/)
+
+This brings the total number of certified Tidyverse instructors to NUMBER,
+and the number certified to teach Shiny to NUMBER.
+It was also a month of firsts,
+including our first blind instructor and our first undergraduate instructor.
+If you would like to speak with any of them about your training needs,
+their contact information is on the [trainers' roster](http://education.rstudio.com/trainers)
+and they would be happy to hear from you.
