@@ -57,7 +57,7 @@ MathJaxVersion = "2.7.1"
 [colors]
     text = "#404040"
     # Links
-    link = "#4D8DC9" # rstudio blue
+    link = "#447099" # rstudio dark blue
     link_hover = "#4D8DC9" # rstudio blue
     # Footer
     footer_primary = "#75AADB" # same as tidyverse.org
@@ -70,7 +70,7 @@ MathJaxVersion = "2.7.1"
     menu_primary = "#fff"
     menu_text = "#404040"
     menu_text_active = "#4D8DC9" # rstudio blue
-    menu_text_current = "#4D8DC9" # rstudio blue
+    menu_text_current = "#447099" # rstudio dark blue
     menu_decorate_current = "underline"
     menu_title = "#fff"
     menu_title_active = "#deef03"

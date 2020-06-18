@@ -22,7 +22,7 @@ preserveTaxonomyNames = true
 # disableKinds = ["taxonomyTerm"]
 
 [permalinks]
-  articles = "news/:year/:month/:slug/"
+  blog = "blog/:year/:month/:slug/"
 
 [taxonomies]
   author = "author"
@@ -36,3 +36,10 @@ preserveTaxonomyNames = true
 	angledQuotes = false
 	latexDashes = true
   extensions = ["backslashLineBreak"]
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "pygments"
