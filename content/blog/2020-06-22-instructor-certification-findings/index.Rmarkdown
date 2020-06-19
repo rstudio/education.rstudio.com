@@ -16,7 +16,15 @@ photo:
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(ggplot2)
 knitr::opts_chunk$set(echo=FALSE, fig.height=2)
+theme_set(
+  theme_bw() + theme(axis.title.y = element_blank(),
+  axis.text.y = element_blank(),
+  axis.ticks.y = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank())
+)
 ```
 
 ```{r data}
@@ -34,7 +42,10 @@ We recently surveyed people who have taken part in our
 data %>%
   filter(!is.na(useful)) %>%
   ggplot(aes(x = useful)) +
-  geom_histogram(binwidth = 1, color = "black", fill = "white") +
+  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
+  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
+  aes(label=..count..), position=position_stack(vjust=0.5)) +
+  labs(y = "") +
   xlim(0.5, 5.5)
 ```
 
@@ -42,7 +53,10 @@ data %>%
 data %>%
   filter(!is.na(applied)) %>%
   ggplot(aes(x = applied)) +
-  geom_histogram(binwidth = 1, color = "black", fill = "white") +
+  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
+  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
+  aes(label=..count..), position=position_stack(vjust=0.5)) +
+  labs(y = "") +
   xlim(0.5, 5.5)
 ```
 
@@ -50,7 +64,10 @@ data %>%
 data %>%
   filter(!is.na(satisfied)) %>%
   ggplot(aes(x = satisfied)) +
-  geom_histogram(binwidth = 1, color = "black", fill = "white") +
+  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
+  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
+  aes(label=..count..), position=position_stack(vjust=0.5)) +
+  labs(y = "") +
   xlim(0.5, 5.5)
 ```
 
@@ -60,7 +77,10 @@ Perhaps the most important thing is that our [net promoter score](https://en.wik
 data %>%
   filter(!is.na(recommend)) %>%
   ggplot(aes(x = recommend)) +
-  geom_histogram(binwidth = 1, color = "black", fill = "white") +
+  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
+  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
+  aes(label=..count..), position=position_stack(vjust=0.5)) +
+  labs(y = "") +
   xlim(0.5, 10.5)
 ```
 
