@@ -1,11 +1,13 @@
 ---
-title: Data Analysis for Social Justice in a Native Classroom
+title: Data analysis for social justice in a Native classroom
 author:
   - '[Nic Thompson Gonzalez](http://www.nicolethompsongonzalez.com/)'
 date: '2020-06-22'
 categories:
   - teach
 slug: native-classroom
+description: |
+  My personal experience teaching data science at an exclusively Native American community college in New Mexico.
 photo:
   URL: https://unsplash.com/photos/3KEJMfoHoMY
   author: Graeme Nicholl
