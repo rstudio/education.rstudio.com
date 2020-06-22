@@ -31,7 +31,7 @@ An inclusive class must address two big issues: is the material personally relev
 
 Skills in coding and statistics grow through application, which happens best when students are motivated to answer a question. If one of our goals as instructors is to increase diversity in STEM and data science, then we need to become literate on a diversity of questions that people are motivated to answer.
 
-For this workshop, I've chosen the route of letting students choose among datasets on public health and social justice issues. These topics are too widely pertinent to Native peoples, e.g. diabetes[^diabetes], cancer[^cancer], suicide[^suicide], and gun crime[^guns]. Now, no group is homogenous and it is inaccurate to think that every member of a marginalized group is interested in social justice; however, these topics do draw the interest of my students. They are also issues that the power of data literacy can help students solve in their lifetimes. In the future, I plan to incorporate datasets on other contemporary issues, such as social media usage (similar to [Girls Inc of NYC](https://www.elsevier.com/connect/teaching-data-science-through-the-lens-of-social-justice-issues)), as the current hard-hitting topics may turn-off some students. The provided datasets serve as the basis for group projects, in which students hone and analyze their research questions.
+For this workshop, I've chosen the route of letting students choose among datasets on public health and social justice issues. These topics are too widely pertinent to Native peoples, e.g. diabetes[^diabetes], cancer[^cancer], suicide[^suicide], and gun crime[^guns]. Now, no group is homogeneous and it is inaccurate to think that every member of a marginalized group is interested in social justice; however, these topics do draw the interest of my students. They are also issues that the power of data literacy can help students solve in their lifetimes. In the future, I plan to incorporate datasets on other contemporary issues, such as social media usage (similar to [Girls Inc of NYC](https://www.elsevier.com/connect/teaching-data-science-through-the-lens-of-social-justice-issues)), as the current hard-hitting topics may turn-off some students. The provided datasets serve as the basis for group projects, in which students hone and analyze their research questions.
 
 [^diabetes]: [Call to action: A new path for improving diabetes care for Indigenous peoples, a global review](https://www.sciencedirect.com/science/article/pii/S0168822716302467)
 
@@ -43,7 +43,7 @@ For this workshop, I've chosen the route of letting students choose among datase
 
 To create a safe and engaging classroom structure, I take a few different abstract and concrete steps...
 
-In the abstract, I first understand that for many Native Americans, and other historically marginalized populations, community and storytelling are a central part of life, playing massive roles in individual identity. The culture of many classrooms does not always value communities and their stories in the same way... Western higher education was established in a highly individualistic culture, whose Protestant Christian roots[^ethic] emphasize dutiful and successful work (not necessarily community) as a core component of individual identity. This culture has been introduced to the world too often via painful and dehumanizing experiences[^history], like colonization, conquest, genocide, and slavery. So, the elevation of the individual through hustle and perfection, which is a common ambition of higher education, does not always feel familiar to students and, if familiar, it does not always feel safe. For many students, instead, a focus on community and connections to community makes classroom material much more accessible.
+In the abstract, I first understand that for many Native Americans, and other historically marginalized populations, community and storytelling are a central part of life, playing massive roles in individual identity. The culture of many classrooms does not always value communities and their stories in the same way... Western higher education was established in a highly individualistic culture, whose Protestant Christian roots[^ethic] emphasize dutiful and successful work (not necessarily community) as a core component of individual identity. This culture has been introduced to the world too often via painful and dehumanizing experiences[^history]. So, the elevation of the individual through hustle and perfection, which is a common ambition of higher education, does not always feel familiar to students and, if familiar, it does not always feel safe. For many students, instead, a focus on community and connections to community makes classroom material much more accessible.
 
 [^ethic]: [The Protestant Ethic and Higher Education in America](https://www.jstor.org/stable/pdf/1050005.pdf?refreqid=excelsior%3A2bea6bf49df970ca4232f691609d8547)
 
@@ -62,11 +62,7 @@ Then concretely, I put the following principles into action.
 
 -   *The destination is clear*: Roadmapping is central to effective teaching in any classroom. One of the biggest barriers for students are the tacit expectations teachers place on them, including why they are taking the class and their performance and behavior in it. Students should have a clear outline about what we're doing throughout and at each stage of the course: what they will learn from it, how and when their performance will be evaluated, and how it will be useful to them outside the classroom. Yup, a good written syllabus + explicit and regular expression of expectations and learning objectives are foundational for inclusive classrooms. Doing this well takes time, practice, and planning.[^design] 
 
-[^design]: [Learning Objectives and Backward Design](https://tep.uoregon.edu/learning-objectives-and-backward-design)
-
--   *Everyone is up to speed*: At the end of any 15-20 minute lecture chunk I use low-stakes, formative assessments (e.g. ungraded quizzes^[assess]) to focus everyone's attention on the big picture of what we've just talked about and track/realign any misconceptions.
-
-[^assess]: [Formative vs. Summative Assessments: What's the Difference?](https://www.aeseducation.com/blog/formative-vs.-summative-assessments-what-do-they-mean)
+-   *Everyone is up to speed*: At the end of any 15-20 minute lecture chunk I use low-stakes, formative assessments (e.g. ungraded quizzes[^assess]) to focus everyone's attention on the big picture of what we've just talked about and track/realign any misconceptions.
 
 -   *Representation matters*: For slideshows, I aim to highlight Native people that are working to solve the problems showcased in each dataset. Whenever possible, I also choose pictures of Native people applying the skills that the students are learning. Each of these gives students role models, so they can envision themselves doing data analysis for public health and social justice.
 
@@ -77,6 +73,10 @@ Then concretely, I put the following principles into action.
 -   *We're a team*: Working in groups begins early. In teams of 3-4, students alternate roles as "lead investigator", "coder", and "reporter". The teams take time to communicate as a class via their reporters.
 
 -   *Tell me more*: I always end with a survey (I use SurveyMonkey). This gives students a clear chance to let me know what datasets spoke to them, what tripped them up, and what types of data they'd be interested to work with in the future (as well as the various technical skills they've gained).
+
+[^design]: [Learning Objectives and Backward Design](https://tep.uoregon.edu/learning-objectives-and-backward-design)
+
+[^assess]: [Formative vs. Summative Assessments: What's the Difference?](https://www.aeseducation.com/blog/formative-vs.-summative-assessments-what-do-they-mean)
 
 ## 2. The importance of logistics and technology
 
@@ -94,7 +94,7 @@ For class startup, I try to have different Wi-Fi dependent and independent optio
 
 For **presentations**, I have a powerful mini projector with blue tooth connection (an Anker Capsule, many thanks to NIH research funding). So regardless of the awkward shape or layout of the room available to me, or however weak the projector is, I know I have my own flexible little powerhouse whose ins-and-outs I'm intimately familiar with.
 
-There are two other workarounds (both Wi-Fi dependent) for students to watch **live coding** when visibility is poor. First is an institutional Zoom account that allows me to share my screen with several students. Another is the new `livecode` package from Colin Rundel that I'm excited to try. Check out the demo from Rstudioconf::2020 [here](https://resources.rstudio.com/rstudio-conf-2020/lightning-talk-colin-rundel). Essentially, your RStudio IDE is constantly creating a web page of your work, which your students can watch with the appropriate link.
+There are two other workarounds (both Wi-Fi dependent) for students to watch **live coding** when visibility is poor. First is an institutional Zoom account that allows me to share my screen with several students. Another is the new [livecode](https://github.com/rundel/livecode) package from Colin Rundel that I'm excited to try. Check out the demo from Rstudioconf::2020 [here](https://resources.rstudio.com/rstudio-conf-2020/lightning-talk-colin-rundel). Essentially, your RStudio IDE is constantly creating a web page of your work, which your students can watch with the appropriate link.
 
 ## 3. Finally, a make or break attitude for teaching beginners
 
@@ -105,7 +105,7 @@ oversimplify in front of students. In my experience, flashy demos can
 often dishearten even talented people, making knowledge and skills feel
 unattainable to all but a few type-A students.
 
-One thing I love about the #rstats community is that this reminder is rarely necessary. People I encounter whose knowledge far exceeds mine most often act with humility and respect for everyone's stage of the journey. I'm deeply grateful to the RStudio community and education department for their support and training. From my start as a conference diversity scholar, to receiving instructor certification, to this guest blog post -- RStudio has played an enormous part of my teaching journey.
+One thing I love about the #rstats community is that this reminder is rarely necessary. People I encounter whose knowledge far exceeds mine most often act with humility and respect for everyone's stage of the journey. I'm deeply grateful to the #rstats community and education department for their support and training. From my start as a conference diversity scholar, to completing the RStudio instructor certification, to this guest blog post -- RStudio has played an enormous part of my teaching journey.
 
 ## Recommended reads
 
