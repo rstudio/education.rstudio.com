@@ -68,7 +68,7 @@ Then concretely, I put the following principles into action.
 
 [^assess]: [Formative vs. Summative Assessments: What's the Difference?](https://www.aeseducation.com/blog/formative-vs.-summative-assessments-what-do-they-mean)
 
--   *Representation matters*: For slideshows, I aim to highlight Native people that are working to solve the problems showcased in each dataset. Whenever possible, I also choose pictures of native people applying the skills that the students are learning. Each of these gives students role models, so they can envision themselves doing data analysis for public health and social justice.
+-   *Representation matters*: For slideshows, I aim to highlight Native people that are working to solve the problems showcased in each dataset. Whenever possible, I also choose pictures of Native people applying the skills that the students are learning. Each of these gives students role models, so they can envision themselves doing data analysis for public health and social justice.
 
 -   *Make the connection*: Upon choosing their data set and at mileposts during their analysis, I ask students to express how the data relates to them and their communities, and how they can share insights from the data with others. Letting students tell their stories builds trust. In the future, I plan to use a talking stick as each speaker shares.
 
