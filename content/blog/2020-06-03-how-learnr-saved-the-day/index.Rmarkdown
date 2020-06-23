@@ -22,7 +22,7 @@ Before our lives were completely changed by the pandemic, however; I was fortuna
 
 I was asked to teach an introductory R session as a part of the [Data Science for Women Summer Camp](https://tdai.osu.edu/summer-camp/) in July 2019. The camp was organized by the Translational Data Analytics Institute at The Ohio State University (OSU). Admission was free and available for young women entering grades 8, 9, or 10 attending local high schools in the metro city area. 
 
-```{r img1, fig.align='center', out.width='80%', echo=FALSE}
+```{r img1, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Summer camp group picture with students"}
 knitr::include_graphics("GroupPic.jpg")
 ```
 
@@ -46,7 +46,7 @@ Well, I was certainly being naive. While there are many example teaching materia
 
 I was also worried about finding a "fun" health data set: talking about diabetes, cancer, or some other complex disease did not sound fun to me at all. Knowing about the unpopularity of the session in the previous year, I was starting to feel quite desperate. I believed my session was going to mirror the [bored to death classroom scenes](https://www.youtube.com/watch?v=Yk3-Vb7CH-o) from the infamous Ferris Bueller's Day Off movie.
 
-```{r img2, fig.align='center', out.width='80%', echo=FALSE}
+```{r img2, fig.align='center', out.width='80%', echo=FALSE, fig.cap="A scene from Ferris Bueller's Day Off movie"}
 knitr::include_graphics("bored_classroom.jpg")
 ```
 
@@ -80,7 +80,7 @@ During the session, students talked with their neighbors about physical accident
 
 Here's an example exercise chunk:
 
-```{r chink_img, fig.align='center', out.width='80%', echo=FALSE}
+```{r chunkimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Example code chunk"}
 knitr::include_graphics("chunk.png")
 ```
 
@@ -88,7 +88,7 @@ knitr::include_graphics("chunk.png")
 
 I was also able to [add hints or solutions](https://rstudio.github.io/learnr/exercises.html#Hints_and_Solutions) to every exercise, so students didn't get lost and suffer in silence if my instructions weren't clear. I think the hints were helpful, because although I was in the same room and walking around, I assumed many would be too shy to ask a question. 
 
-```{r hint_img, fig.align='center', out.width='80%', echo=FALSE}
+```{r hintimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Hint box example"}
 knitr::include_graphics("hint.png")
 ```
 
@@ -96,7 +96,7 @@ knitr::include_graphics("hint.png")
 
 I believe adding quizzes throughout the whole session kept students less distracted and more engaged, as they were busy trying to find the answers.
 
-```{r quiz_img, fig.align='center', out.width='80%', echo=FALSE}
+```{r quizimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Example quiz from the tutorial"}
 knitr::include_graphics("quiz_img.png")
 ```
 
@@ -104,7 +104,7 @@ knitr::include_graphics("quiz_img.png")
 
 While default learnr style wasn't very aesthetically appealing to me, I didn't have time to explore customization steps before the session. But it is possible to be creative by adding pictures and videos!
 
-```{r img_exp, fig.align='center', out.width='80%', echo=FALSE}
+```{r imgexp, fig.align='center', out.width='80%', echo=FALSE, fig.cap = "Embedded picture example"}
 knitr::include_graphics("img_exp.png")
 ```
 
@@ -168,7 +168,7 @@ ggplot(fb, aes(feedback, pcent)) +
 ggsave(filename =  here::here("content/blog/2020-06-01-how-learnr-saved-the-day/feedback_bar.png"), width = 14, height = 6, device = "png")
 ```
     
-```{r barpl, fig.align='center', out.width='100%', echo=FALSE}
+```{r barpl, fig.align='center', out.width='100%', echo=FALSE, fig.cap="Student feedback shown as bar graph"}
 knitr::include_graphics("feedback_bar.png")
 ```
 
@@ -249,7 +249,7 @@ wordcloud::wordcloud(learnrwrds$words, learnrwrds$n,
 
 ```
 
-```{r wcloud, fig.align='center', out.width='80%', echo=FALSE}
+```{r wcloud, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Student feedback in wordcloud"}
 knitr::include_graphics("wordcloud.png")
 ```
 
