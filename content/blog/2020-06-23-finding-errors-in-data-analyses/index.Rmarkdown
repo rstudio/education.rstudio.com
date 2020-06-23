@@ -42,7 +42,7 @@ If you are interested in taking part,
 please contact us at ian.floressiaca@rstudio.com 
 
 To support this study
-I'm collaborating on the development of the R package `templar`
+I'm collaborating on the development of the R package [templar](https://github.com/kbodwin/templar)
 created by [Prof. Kelly Bodwin](https://www.kelly-bodwin.com/) from California Polytechnic University,
 which provides tools to create variant R Markdown documents.
 Let's say you want to create an exam for students and have three different variants,
