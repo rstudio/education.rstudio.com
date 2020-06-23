@@ -20,7 +20,7 @@ In particular,
 we want to explore how the ability to catch errors varies by level of experience
 as well as familiarity to the data and type of analysis. 
 
-To do this we have developed RMarkdown documents
+To do this we have developed R Markdown documents
 that contain analyses related to domains such as sports, elections, and property sales.
 These analyses will be presented to participants who will think aloud as they go through the document and identify errors.
 Before implementing the study we wanted to test our design,
