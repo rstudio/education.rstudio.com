@@ -1,14 +1,14 @@
 ---
-title: How learnr Saved the Day
+title: Data science summer camp for high schoolers
 author: Ezgi Karaesmen
-date: '2020-06-03'
+date: '2020-06-24'
 categories:
   - teach
 tags:
   - learnr
 description: |
   My attempt at briefly introducing R to a group of teenagers and how learnr saved me from boring students to death.
-slug: learnr-saved-the-day
+slug: summer-camp-hs
 photo:
   url: https://unsplash.com/photos/VxyAJybjZ3s
   author: Ryan Cooley
@@ -22,9 +22,10 @@ Before our lives were completely changed by the pandemic, however; I was fortuna
 
 I was asked to teach an introductory R session as a part of the [Data Science for Women Summer Camp](https://tdai.osu.edu/summer-camp/) in July 2019. The camp was organized by the Translational Data Analytics Institute at The Ohio State University (OSU). Admission was free and available for young women entering grades 8, 9, or 10 attending local high schools in the metro city area. 
 
-```{r img1, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Summer camp group picture with students"}
-knitr::include_graphics("GroupPic.jpg")
-```
+<div class="figure" style="text-align: center">
+<img src="GroupPic.jpg" alt="Summer camp group picture with students" width="80%" />
+<p class="caption">Figure 1: Summer camp group picture with students</p>
+</div>
 
 At the time I was asked to teach the session, I was still a PhD student at OSU and the co-organizer of R-Ladies Columbus (I am still today). Camp organizers had seen me present several introductory R sessions in local conferences and R-Ladies meetups, and thought I would be a great instructor for the only hands on coding session of the entire data science camp. 
 
@@ -46,9 +47,10 @@ Well, I was certainly being naive. While there are many example teaching materia
 
 I was also worried about finding a "fun" health data set: talking about diabetes, cancer, or some other complex disease did not sound fun to me at all. Knowing about the unpopularity of the session in the previous year, I was starting to feel quite desperate. I believed my session was going to mirror the [bored to death classroom scenes](https://www.youtube.com/watch?v=Yk3-Vb7CH-o) from the infamous Ferris Bueller's Day Off movie.
 
-```{r img2, fig.align='center', out.width='80%', echo=FALSE, fig.cap="A scene from Ferris Bueller's Day Off movie"}
-knitr::include_graphics("bored_classroom.jpg")
-```
+<div class="figure" style="text-align: center">
+<img src="bored_classroom.jpg" alt="A scene from Ferris Bueller's Day Off movie" width="80%" />
+<p class="caption">Figure 2: A scene from Ferris Bueller's Day Off movie</p>
+</div>
 
 
 
@@ -66,9 +68,9 @@ I have to admit, at this point I was genuinely terrified and still didn't know w
 
 ### Easy setup 
 
-Beyond its pedagogical advantages, learnr is also a clean and easy way to deal with installation or subscription issues that come with dozens of laptops running Windows. In my case, the university was providing all the laptops for the session and it was up to me to set them up. Since we had an internet connection available during the session, I certainly did not want to install R locally and was planning on using RStudio Cloud. That's great in theory, but then you have to then setup separate RStudio Cloud accounts for each machine, which includes setting up different email accounts as well (which we actually did and ended up with dozens of Gmail accounts `r emo::ji("scream")`). 
+Beyond its pedagogical advantages, learnr is also a clean and easy way to deal with installation or subscription issues that come with dozens of laptops running Windows. In my case, the university was providing all the laptops for the session and it was up to me to set them up. Since we had an internet connection available during the session, I certainly did not want to install R locally and was planning on using RStudio Cloud. That's great in theory, but then you have to then setup separate RStudio Cloud accounts for each machine, which includes setting up different email accounts as well (which we actually did and ended up with dozens of Gmail accounts 😱). 
 
-Thanks to learnr and its [easy deployment with shinyapps.io](https://rstudio.github.io/learnr/publishing.html#RStudio_Connect_and_shinyappsio) I was able to simply enter the link into the browser for each laptop before the session and they were all ready to go! `r emo::ji("tada")`
+Thanks to learnr and its [easy deployment with shinyapps.io](https://rstudio.github.io/learnr/publishing.html#RStudio_Connect_and_shinyappsio) I was able to simply enter the link into the browser for each laptop before the session and they were all ready to go! 🎉
 
 ### Interactive code chunks
 
@@ -80,33 +82,37 @@ During the session, students talked with their neighbors about physical accident
 
 Here's an example exercise chunk:
 
-```{r chunkimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Example code chunk"}
-knitr::include_graphics("chunk.png")
-```
+<div class="figure" style="text-align: center">
+<img src="chunk.png" alt="Example code chunk" width="80%" />
+<p class="caption">Figure 3: Example code chunk</p>
+</div>
 
 ### Hints
 
 I was also able to [add hints or solutions](https://rstudio.github.io/learnr/exercises.html#Hints_and_Solutions) to every exercise, so students didn't get lost and suffer in silence if my instructions weren't clear. I think the hints were helpful, because although I was in the same room and walking around, I assumed many would be too shy to ask a question. 
 
-```{r hintimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Hint box example"}
-knitr::include_graphics("hint.png")
-```
+<div class="figure" style="text-align: center">
+<img src="hint.png" alt="Hint box example" width="80%" />
+<p class="caption">Figure 4: Hint box example</p>
+</div>
 
 ### Quizzes
 
 I believe adding quizzes throughout the whole session kept students less distracted and more engaged, as they were busy trying to find the answers.
 
-```{r quizimg, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Example quiz from the tutorial"}
-knitr::include_graphics("quiz_img.png")
-```
+<div class="figure" style="text-align: center">
+<img src="quiz_img.png" alt="Example quiz from the tutorial" width="80%" />
+<p class="caption">Figure 5: Example quiz from the tutorial</p>
+</div>
 
 ### Make it less dry
 
 While default learnr style wasn't very aesthetically appealing to me, I didn't have time to explore customization steps before the session. But it is possible to be creative by adding pictures and videos!
 
-```{r imgexp, fig.align='center', out.width='80%', echo=FALSE, fig.cap = "Embedded picture example"}
-knitr::include_graphics("img_exp.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img_exp.png" alt="Embedded picture example" width="80%" />
+<p class="caption">Figure 6: Embedded picture example</p>
+</div>
 
 And if you would like to go above and beyond, there are many ways to [customize it further](https://rstudio.github.io/learnr/formats.html#Tutorial_Format). Allison Horst's [Exploring missing values in naniar](https://allisonhorst.shinyapps.io/missingexplorer/) is a shining example of what next level customization can do.
 
@@ -119,145 +125,29 @@ I have to add that one student pretty much slept throughout the whole teaching s
 Naturally, I was very curious to hear what students had to say after the session. Organizers shared the survey data from first two years of the camp: in 2018 same hands-on-coding session was conducted with a pre-written, commented R script by a young professor, and it was conducted with a learnr tutorial by me in 2019. Of course, I had to compare the two sessions:
 
 
-```{r, fig.width=14, eval=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
-library(tidyverse)
-lvls <- c("Dislike a lot",
-  "Dislike",		
-  "Dislike a little",
-  "Like a little",
- "Like",		
- "Like a lot")
-cols <- c("#ffd45b",
-          "#f6b44d",
-          #"#db9671",
-          "#ba7a8d",
-          "#8d5eaa",
-          "#3940bb",
-          "#0033b0")
 
-fb <- read_csv(here::here("content/blog/2020-06-01-how-learnr-saved-the-day/student_feedback.csv")) %>%
-  mutate(feedback = factor(feedback, levels = lvls),
-         session = factor(session, 
-                          levels = c("rscript",
-                                     "learnr"),
-                          labels = c("Session with\npre-written R script",
-                                     "Session with\nlearnr tutorial")),
-         pcent = round(pcent, 0))
-
-ggplot(fb, aes(feedback, pcent)) +
-  geom_col(aes(fill=feedback)) +
-  geom_text(data=filter(fb, pcent > 0), 
-            aes(label=paste0(pcent, "%")),
-            nudge_y=-4, size=6) +
-    geom_text(data=filter(fb, pcent < 1), 
-            label="0%",nudge_y=2, size=6) +
-  scale_fill_manual(values = cols[6:1]) +
-  facet_grid(~session) +
-  guides(fill=FALSE) +
-  coord_flip() +
-  xlab(NULL) +
-  ylab(NULL) +
-  theme_bw() +
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.text.x.bottom = element_blank(),
-        axis.text.x.top = element_blank(),
-        axis.text.y = element_text(size=18),
-        strip.background = element_rect(fill = "white"),
-        strip.text = element_text(size = 20)) +
-ggsave(filename =  here::here("content/blog/2020-06-01-how-learnr-saved-the-day/feedback_bar.png"), width = 14, height = 6, device = "png")
-```
     
-```{r barpl, fig.align='center', out.width='100%', echo=FALSE, fig.cap="Student feedback shown as bar graph"}
-knitr::include_graphics("feedback_bar.png")
-```
+<div class="figure" style="text-align: center">
+<img src="feedback_bar.png" alt="Student feedback shown as bar graph" width="100%" />
+<p class="caption">Figure 7: Student feedback shown as bar graph</p>
+</div>
 
-My hands-on-coding activity wasn't as popular as other camp activities that involved going to the planetarium or flying drones. `r emo::ji("sweat_smile")` However, I was very happy to see the decrease in the dislikes compared to previous year!
+My hands-on-coding activity wasn't as popular as other camp activities that involved going to the planetarium or flying drones. 😅 However, I was very happy to see the decrease in the dislikes compared to previous year!
 
 Students were also asked to describe their experience with one word:
 
-```{r, eval=FALSE, echo=FALSE}
-wrds <- "Great
-fun
-Interested
-informative
-informative
-Engaged.
-Funkyfresh
-Exciting.
-New
-Exciting
-Fun
-Fun
-Fun
-fun
-inspired
-Wow
-Informative
-exhausting
-Wow
-Fun
-Spicy
-Different
-stress
-"
-learnrwrds <- scan(text=wrds, what = "character") %>%
-  tolower(.) %>%
-  str_remove_all("[.]") %>%
-  data.frame(words=.) %>%
-  count(words) %>%
-  arrange(n) %>%
-  mutate(cols = c(rep("#ffd45b", 10),
-                  "#D95F02",
-                  "#E7298A",
-                  "#7570B3",
-                  "#1B9E77"))
 
- 
-rscrptwrds <- scan(text = "joyful
-Cool
-Informative
-Boring
-Fun
-Excellent
-Boring
-interesting
-Interesting
-excited", what="character") %>%
-  tolower(.) %>%
-  str_remove_all("[.]") %>%
-  data.frame(words=.) %>%
-  count(words) %>%
-  arrange(n) %>%
-  mutate(cols = c(rep("#ffd45b", 6),
-                  "#E7298A",
-                  "#7570B3"))
 
-par(mfrow=c(1, 2))
-
-wordcloud::wordcloud(rscrptwrds$words, rscrptwrds$n, 
-            scale =c(3,0.4),min.freq = 0, 
-            ordered.colors = TRUE, random.order=FALSE, 
-            
-          colors=rscrptwrds$cols)
-
-wordcloud::wordcloud(learnrwrds$words, learnrwrds$n, 
-            scale =c(6,0.4),min.freq = 0, 
-            ordered.colors = TRUE, random.order=FALSE, #rot.per=0.5,
-          
-          colors=learnrwrds$cols)
-
-```
-
-```{r wcloud, fig.align='center', out.width='80%', echo=FALSE, fig.cap="Student feedback in wordcloud"}
-knitr::include_graphics("wordcloud.png")
-```
+<div class="figure" style="text-align: center">
+<img src="wordcloud.png" alt="Student feedback in wordcloud" width="80%" />
+<p class="caption">Figure 8: Student feedback in wordcloud</p>
+</div>
 
 Again it was encouraging to see words like "fun", "exciting", and "wow" frequently. (I'm not exactly sure what "funkyfresh" means, but I believe "fresh" is a positive thing?)
 
-The whole point of this summer camp is about encouraging students to select analytical fields in the future. I really hope no student was discouraged of coding because of me! `r emo::ji("upside-down")` I aimed to give them a glimpse of coding, showing that it requires some work but can also still be fun. `r emo::ji("balloon")`
+The whole point of this summer camp is about encouraging students to select analytical fields in the future. I really hope no student was discouraged of coding because of me! 🙃 I aimed to give them a glimpse of coding, showing that it requires some work but can also still be fun. 🎈
 
 ## Final words
 
-The learnr package provides a powerful framework that lets students easily interact with the code without begin overwhelmed with errors, warnings, package installations, and all other distractions. Even though learnr is mostly designed for on online self-learning setting in mind, it is highly useful for live sessions where there is limited time to introduce RStudio IDE, or for young audiences that can be easily confused and disengaged with the material. Creating content with learnr certainly takes a little more time and effort than a simple RMarkdown document. It also requires a shinyapp.io account (possibly a paid one for better performance). But in my experience, it was worth all this manageable trouble and saved me from boring students to death! `r emo::ji("hero")`
+The learnr package provides a powerful framework that lets students easily interact with the code without begin overwhelmed with errors, warnings, package installations, and all other distractions. Even though learnr is mostly designed for on online self-learning setting in mind, it is highly useful for live sessions where there is limited time to introduce RStudio IDE, or for young audiences that can be easily confused and disengaged with the material. Creating content with learnr certainly takes a little more time and effort than a simple RMarkdown document. It also requires a shinyapp.io account (possibly a paid one for better performance). But in my experience, it was worth all this manageable trouble and saved me from boring students to death! 🦸
 
