@@ -1,7 +1,7 @@
 ---
 title: "Working with Spreadsheets"
 author:
-  - "[Devin Johnson](https://www.linkedin.com/in/devinljohnson/)"
+  - "[Devin Johnson](https://twitter.com/Devin_lj)"
 date: "2020-06-29"
 tags:
   - internship
