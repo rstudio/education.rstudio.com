@@ -2,7 +2,7 @@
 title: "Tidymodels Internship"
 author: 
   - "[Simon Couch](https://education.rstudio.com/trainers/people/couch+simon/)"
-date: '2020-06-24'
+date: '2020-06-30'
 tags:
   - internship
 slug: tidymodels-internship
