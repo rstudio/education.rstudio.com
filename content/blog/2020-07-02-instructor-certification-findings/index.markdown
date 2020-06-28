@@ -2,7 +2,7 @@
 title: "Instructor Certification Findings"
 author: 
   - greg
-date: '2020-06-22'
+date: '2020-07-02'
 categories:
   - teach
 tags:
@@ -22,24 +22,24 @@ We recently surveyed people who have taken part in our
 [instructor training and certification program](http://education.rstudio.com/trainers/) during the past 18 months. 92 people responded, and as the figures below show (on a 1-5 Likert scale), most seemed to think it useful, though actual adoption lags a little behind enthusiasm:
 
 <div class="figure" style="text-align: center">
-<img src="/blog/2020-06-22-instructor-certification-findings/index_files/figure-html/useful-1.png" alt="How much of what you learned in the training class have you found useful?" width="672" />
+<img src="/blog/2020-07-02-instructor-certification-findings/index_files/figure-html/useful-1.png" alt="How much of what you learned in the training class have you found useful?" width="672" />
 <p class="caption">Figure 1: How much of what you learned in the training class have you found useful?</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="/blog/2020-06-22-instructor-certification-findings/index_files/figure-html/applied-1.png" alt="How much of what you learned in the training class have you applied in your training?" width="672" />
+<img src="/blog/2020-07-02-instructor-certification-findings/index_files/figure-html/applied-1.png" alt="How much of what you learned in the training class have you applied in your training?" width="672" />
 <p class="caption">Figure 2: How much of what you learned in the training class have you applied in your training?</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="/blog/2020-06-22-instructor-certification-findings/index_files/figure-html/satisfied-1.png" alt="How satisfied are you with the certification program overall?" width="672" />
+<img src="/blog/2020-07-02-instructor-certification-findings/index_files/figure-html/satisfied-1.png" alt="How satisfied are you with the certification program overall?" width="672" />
 <p class="caption">Figure 3: How satisfied are you with the certification program overall?</p>
 </div>
 
 Perhaps the most important thing is that our [net promoter score](https://en.wikipedia.org/wiki/Net_Promoter) is 77, which makes us pretty happy:
 
 <div class="figure" style="text-align: center">
-<img src="/blog/2020-06-22-instructor-certification-findings/index_files/figure-html/recommend-1.png" alt="How likely are you to recommend this workshop to your friends and collagues?" width="672" />
+<img src="/blog/2020-07-02-instructor-certification-findings/index_files/figure-html/recommend-1.png" alt="How likely are you to recommend this workshop to your friends and collagues?" width="672" />
 <p class="caption">Figure 4: How likely are you to recommend this workshop to your friends and collagues?</p>
 </div>
 
