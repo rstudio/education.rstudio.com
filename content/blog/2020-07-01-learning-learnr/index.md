@@ -63,7 +63,7 @@ document called `addition.Rmd` that only includes an exercise and its hint/check
 counterparts. Exercise handling is what I am most familiar with so I won't cover
 how questions are handled.
 
-![](./document.jpg)
+![](document.jpg)
 
 If you have used the base R Markdown, you will be familiar with
 components such as the YAML header, the setup code, and the knitr code
@@ -103,7 +103,7 @@ a pragmatic approach so I could make extensions to the code only where
 needed. Here is a high level view of these two parts and the
 technologies involved:
 
-![](./techstacks.png)
+![](techstacks.png)
 
 The rmarkdown and knitr packages process and render the document, relying on learnr
 to extend behavior around knitr chunks and handle question- and exercise-related information. 
@@ -125,7 +125,7 @@ the nitty-gritty details of what's *really* going on under the hood for each sid
 
 ### Tutorial creation
 
-![](./initialization.jpeg)
+![](initialization.jpeg)
 
 After you hit "Run document" in RStudio, learnr does some prep work
 and takes your `addition.Rmd` file and uses rmarkdown and knitr to process
@@ -145,7 +145,7 @@ learnr has two main jobs to do before we move on to the interaction side: apply
 custom behavior for exercises and setup up the Shiny server. Roughly this is what
 that process looks like:
 
-![](./server_initialization.jpg)
+![](server_initialization.jpg)
 
 The knitr package is used by learnr to add the magic of exercises and
 its support chunks via custom knitr hooks (`knitr-hooks.R`) that activate during rendering.
@@ -162,7 +162,7 @@ We are now ready to cross the bridge to the interaction side!
 
 Brace yourself for this next one:
 
-![](./interactionloop.jpeg)
+![](interactionloop.jpeg)
 
 Crossing the bridge over to interaction, the student can now see and
 interact with the tutorial, which is an HTML document. rmarkdown
