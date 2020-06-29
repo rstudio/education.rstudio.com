@@ -12,3 +12,39 @@ photo:
   url: http://unsplash.com/tbd
   author: TBD
 ---
+
+Hello, I am [JooYoung Seo](https://jooyoungseo.com/){target="_blank"}, one of the summer interns at RStudio. As I am about halfway through my internship now, I wanted to share my work and experience.
+
+## Internship Projects for Accessibility
+
+First of all, I would like to talk about what I have been doing for my RStudio internship.
+
+From a general viewpoint, I am interning for accessibility improvement projects to make RStudio products usable to a wider range of people with (dis)*abilities*. More specifically, I am a part of the RStudio IDE team under the mentorship of [Gary Ritchie](https://rstudio.com/speakers/gary-ritchie/){target="_blank"} where I can focus on the RStudio Desktop and Server accessibility.
+
+As a blind R user and developer myself, I found most of the existing data science IDEs inaccessible to assistive technology (e.g., [text-to-speech screen readers](https://en.wikipedia.org/wiki/Screen_reader){target="_blank"}; [refreshable braille display](https://en.wikipedia.org/wiki/Refreshable_braille_display){target="_blank"}) so it had been one of my high hopes to have a reasonably usable toolbox [^1].
+
+This unmet need became my strong motivator to apply for [the internship program](https://education.rstudio.com/blog/2020/02/applications-for-2020-intern-program-are-now-open/){target="_blank"} to turn my challenges into ways of universal design strategies in designing accessible RStudio IDE not only for myself, but also for those with varying degrees of abilities.
+
+For the past month, I worked closely with my mentor, Gary, to identify and address some critical usability issues in the RStudio Server with special focus on keyboard and screen-reader access.
+
+Due to some complex technical issues [^2], we have established the accessibility priorities for the Server version while aiming at a smooth transition towards the Desktop version.
+
+As a result, we made meaningful progress in [the latest RStudio release, version 1.3](https://blog.rstudio.com/2020/05/27/rstudio-1-3-release/){target="_blank"}, which supports some improved accessibility options for keyboard and/or assistive technology users.
+
+As a part of this project, I have documented two technical articles on [how to use RStudio Server with screen readers](https://support.rstudio.com/hc/en-us/articles/360045612413-RStudio-Screen-Reader-Support){target="_blank"} and [how to run the RStudio Server on Windows via WSL2](https://support.rstudio.com/hc/en-us/articles/360049776974-Using-RStudio-Server-in-Windows-WSL2){target="_blank"}.
+
+Besides the accessibility project for RStudio IDE, I have been also involved in Shiny team since June for my internship to make its interface more keyboard navigable and screen-reader-friendly.
+
+As current accessibility of Shiny lacks accessible components, I have been fixing each widget to meet the accessibility standard. This project is ongoing and I plan to share in detail my experiences with this project later on.
+
+## What I Have Learned and What's Next
+
+This internship opportunity has so far taught me two important things. First, at a personal level, I have learned that data science and software engineering are not far-fetched for a blind person even for collaborative work. Fortunately, most of the communication tools used at RStudio, such as Slack, GitHub, and Zoom, have been reasonably usable to assistive technology. I have been able to collaborate with other senior engineers on GitHub including pull requests, code reviews, and issue tracking without noticeable challenges. What's more, I have been enjoying chatting with other RStudio employees (with emoticons, of course :) ) via Slack and Zoom with minimal accessibility barriers. This implies a person's abilities are limited by a tool's accessibility level rather than their physical or sensory difficulties.
+
+Second, at a community level, I have also learned how beneficial my work with RStudio would be to other people with a wide range of abilities. What makes me push myself forward is that I have received a great deal of positive feedback from many people highlighting the importance of my role at RStudio this summer. I am very grateful that I can be a part of the meaningful changes towards a more inclusive data-science ecosystem. Since I learned my small movement with RStudio can improve many individuals' data-science lives across academia and the industry, I will do my utmost to maximize the public benefits until the end of my internship.
+
+Thank you to all the people at RStudio and others for supporting my most memorable internship throughout this summer---I look forward to what's next.
+
+[^1]: Due to this technical limitation, I have been using and developing R packages via the out-of-the-box `R Term` and `R CMD BATCH` without any aid from editors.
+
+[^2]: Those who wonder about the technical details of the issues can refer to [this discussion](https://github.com/nvaccess/nvda/issues/10838){target="_blank"}.
