@@ -2,13 +2,13 @@
 title: The Hippocratic License
 author:
   - greg
-date: '2020-06-26'
+date: '2020-07-07'
 categories:
   - teach
 tags:
   - teach
 description: |
-  A new open license is intended to prevent unethical use of software
+  A new open license is intended to prevent unethical use of software.
 slug: hippocratic-license
 photo:
   url: https://unsplash.com/photos/sCqkCcYmtlM
