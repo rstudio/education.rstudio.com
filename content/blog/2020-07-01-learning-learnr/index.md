@@ -125,7 +125,7 @@ the nitty-gritty details of what's *really* going on under the hood for each sid
 
 ### Tutorial creation
 
-![](./initialization.jpg)
+![](./initialization.jpeg)
 
 After you hit "Run document" in RStudio, learnr does some prep work
 and takes your `addition.Rmd` file and uses rmarkdown and knitr to process
@@ -238,10 +238,10 @@ confusing warning message about "invisible result". This PR gave me a
 good idea of the learnr package execution flow. [PR #390](https://github.com/rstudio/learnr/pull/390)
 was a much more difficult one which adds support for chaining setup chunks, which can
 alleviate the tedious process of building up setup code for incremental
-exercises as voiced by many. It was by far one of the most technical challenges I've
+exercises as voiced by many (see issue [#72](https://github.com/rstudio/learnr/issues/72)). It was by far one of the most technical challenges I've
 had to tackle so far, but I am very excited to say that this
 particular PR also paves the way for a cleaner approach on non-R
-exercises, by changing how we process exercises, but that's for another
+exercises by changing how we process exercises. But, that's for another
 post!
 
 Although we are not there yet to make Python lessons in learnr, I look
