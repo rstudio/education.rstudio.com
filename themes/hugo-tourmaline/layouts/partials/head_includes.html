@@ -37,7 +37,9 @@
 
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
 {{- if eq .Section "blog" -}}
-<link rel="alternate" type="application/atom+xml" title="Blog" href="/blog/index.xml" />
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
 {{- end }}
 
 {{ partial "head_custom" . }}
