@@ -36,7 +36,7 @@ We are very pleased to welcome 17 new instructors in June 2020:
 -   [Annemie Van Dijck](https://education.rstudio.com/trainers/people/van_dijck+annemie/)
 -   [Katherine Wilde](https://education.rstudio.com/trainers/people/wilde+katherine/)
 
-This brings the total number of certified Tidyverse instructors to 128,
+This brings the total number of certified Tidyverse instructors to 130,
 and the number certified to teach Shiny to 21.
 It was also a month of firsts,
 including our first blind instructor,
