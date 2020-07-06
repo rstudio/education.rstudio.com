@@ -1,8 +1,8 @@
 ---
-title: "Instructor Certification Findings"
-author: 
+title: Instructor Certification Findings
+author:
   - greg
-date: '2020-07-02'
+date: '2020-07-06'
 categories:
   - teach
 tags:
@@ -14,75 +14,34 @@ photo:
   author: Greg Wilson
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(ggplot2)
-knitr::opts_chunk$set(echo=FALSE, fig.height=2)
-theme_set(
-  theme_bw() + theme(axis.title.y = element_blank(),
-  axis.text.y = element_blank(),
-  axis.ticks.y = element_blank(),
-  panel.grid.major = element_blank(),
-  panel.grid.minor = element_blank())
-)
-```
 
-```{r data}
-useful <- c(4, 5, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 4, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 4, 5, 5, 4, 5, 5, 4, 5, 4, 4, 4, 5, 5, 5, 5, 3, 5, 5, 5, 4, 5, 5, 4, 5, 4, 4, 3, 5, 4, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 4, 4, 4, 5, 5, 3, 4, 5, 4, 4, 4, 5, 4, 2, 5, 5, 4, 5, 5, 4, 5, 4, 4, 5)
-applied <- c(4, 5, 3, 4, 4, 4, 5, 5, 4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 3, 5, 4, 5, 5, 4, 4, 3, 5, 4, 4, 5, 4, 3, 4, 3, 3, 4, 3, 5, 2, 4, 3, 4, 3, 3, 4, 4, 4, 3, 5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 4, 3, 4, 5, 3, 4, 3, 4, 4, 4, 5, 2, 3, 4, 3, 4, 5, 4, 2, 5, 5, 4, 4, 5, 3, 5, 3, 3, 4, NA)
-satisfied <- c(4, 5, 4, 4, 5, 5, 5, 5, 5, 5, 4, 5, 5, 4, 5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 5, 5, 5, 5, 4, 3, 5, 4, 5, 4, 5, 5, 5, 4, 5, 5, 4, 5, 5, 5, 4, 4, 5, 3, 5, 5, 5, 5, 5, 5, 4, 5, 4, 5, 5, 5, 4, 4, 4, 4, 4, 3, 5, 5, 4, 5, 5, 5, 5, 2, 5, 5, 4, 5, 5, 5, 4, 5, 4, NA, NA, NA)
-recommend <- c(8, 10, 8, 8, 10, 10, 10, 9, 10, 10, 8, 10, 10, 9, 9, 10, 10, 10, 9, 10, 10, 10, 10, 10, 10, 10, 10, 9, 10, 10, 10, 10, 9, 10, 10, 9, 10, 8, 7, 10, 7, 9, 8, 10, 10, 10, 10, 7, 10, 8, 9, 9, 10, 10, 10, 10, 8, 10, 9, 10, 8, 10, 10, 10, 10, 8, 10, 9, 10, 10, 10, 8, 7, 10, 9, 7, 6, 10, 10, 9, 8, 10, 10, 10, 4, 10, 9, 8, 10, 10, 10, 10, 8, 7, 10)
-data <- tibble(useful=useful, applied=applied, satisfied=satisfied, recommend=recommend)
-```
+
+
 
 We recently surveyed people who have taken part in our
 [instructor training and certification program](http://education.rstudio.com/trainers/) during the past 18 months. 92 people responded, and as the figures below show (on a 1-5 Likert scale), most seemed to think it useful, though actual adoption lags a little behind enthusiasm:
 
-```{r useful, fig.align="center", fig.cap="How much of what you learned in the training class have you found useful?"}
-data %>%
-  filter(!is.na(useful)) %>%
-  ggplot(aes(x = useful)) +
-  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
-  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
-  aes(label=..count..), position=position_stack(vjust=0.5)) +
-  labs(y = "") +
-  xlim(0.5, 5.5)
-```
+<div class="figure" style="text-align: center">
+<img src="/blog/2020-07-06-instructor-certification-findings/index_files/figure-html/useful-1.png" alt="How much of what you learned in the training class have you found useful?" width="672" />
+<p class="caption">Figure 1: How much of what you learned in the training class have you found useful?</p>
+</div>
 
-```{r applied, fig.align="center", fig.cap="How much of what you learned in the training class have you applied in your training?"}
-data %>%
-  filter(!is.na(applied)) %>%
-  ggplot(aes(x = applied)) +
-  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
-  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
-  aes(label=..count..), position=position_stack(vjust=0.5)) +
-  labs(y = "") +
-  xlim(0.5, 5.5)
-```
+<div class="figure" style="text-align: center">
+<img src="/blog/2020-07-06-instructor-certification-findings/index_files/figure-html/applied-1.png" alt="How much of what you learned in the training class have you applied in your training?" width="672" />
+<p class="caption">Figure 2: How much of what you learned in the training class have you applied in your training?</p>
+</div>
 
-```{r satisfied, fig.align="center", fig.cap="How satisfied are you with the certification program overall?"}
-data %>%
-  filter(!is.na(satisfied)) %>%
-  ggplot(aes(x = satisfied)) +
-  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
-  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
-  aes(label=..count..), position=position_stack(vjust=0.5)) +
-  labs(y = "") +
-  xlim(0.5, 5.5)
-```
+<div class="figure" style="text-align: center">
+<img src="/blog/2020-07-06-instructor-certification-findings/index_files/figure-html/satisfied-1.png" alt="How satisfied are you with the certification program overall?" width="672" />
+<p class="caption">Figure 3: How satisfied are you with the certification program overall?</p>
+</div>
 
 Perhaps the most important thing is that our [net promoter score](https://en.wikipedia.org/wiki/Net_Promoter) is 77, which makes us pretty happy:
 
-```{r recommend, fig.align="center", fig.cap="How likely are you to recommend this workshop to your friends and collagues?"}
-data %>%
-  filter(!is.na(recommend)) %>%
-  ggplot(aes(x = recommend)) +
-  geom_bar(aes(y = ..count..), color = NA, fill = "gray") +
-  stat_bin(binwidth=1, geom="text", colour="black", size=3.5,
-  aes(label=..count..), position=position_stack(vjust=0.5)) +
-  labs(y = "") +
-  xlim(0.5, 10.5)
-```
+<div class="figure" style="text-align: center">
+<img src="/blog/2020-07-06-instructor-certification-findings/index_files/figure-html/recommend-1.png" alt="How likely are you to recommend this workshop to your friends and collagues?" width="672" />
+<p class="caption">Figure 4: How likely are you to recommend this workshop to your friends and collagues?</p>
+</div>
 
 ## Qualitative results
 
