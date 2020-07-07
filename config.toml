@@ -39,3 +39,13 @@ preserveTaxonomyNames = true
     unsafe = true
   [markup.highlight]
     style = "pygments"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+    privacyEnhanced = true
+
