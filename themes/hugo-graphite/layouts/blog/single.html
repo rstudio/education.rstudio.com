@@ -46,7 +46,7 @@
           {{ range $i, $tags := (.GetTerms "tags") }}
             {{- if $i -}}, {{ end -}}
             {{ with $tags }}
-            <a href="{{ .Permalink }}">{{- .LinkTitle -}}</a>
+            <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
             {{- end -}}
           {{- end -}}
         </div>
