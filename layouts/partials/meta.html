@@ -36,7 +36,7 @@
     <meta name="twitter:image" content="{{ $card_image.Permalink }}" >
 
 <!--all content that is not a post-->
-{{ else }}
+{{ else if .IsHome }}
 
   <meta property="og:title" content="{{ .Site.Title }}">
   <meta property="description" content="{{ .Site.Params.description }}">
@@ -53,4 +53,7 @@
       <meta name="twitter:image" content="{{ . }}" >
   {{- end -}}
 
-{{ end }}
+{{- else -}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+{{- end -}}
