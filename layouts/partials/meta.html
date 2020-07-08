@@ -31,9 +31,7 @@
     {{ $twitter_card := "summary_large_image" }}
     <meta property="twitter:card" content="{{ $twitter_card }}">
     {{ $card_image := (.Resources.ByType "image").GetMatch "*-wd*" }}
-    {{- with $card_image -}}
-      <meta name="twitter:image" content="{{ . }}" >
-    {{- end -}}
+    <meta name="twitter:image" content="{{ $card_image.Permalink }}" >
 
 <!--all content that is not a post-->
 {{ else }}
