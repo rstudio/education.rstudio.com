@@ -10,6 +10,8 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ $og_image := "" }}
 {{ $card_image := "" }}
+{{ $twitter_card := "summary_large_image" }}
+<meta property="twitter:card" content="{{ $twitter_card }}">
 
 <!--all posts-->
 
@@ -28,8 +30,6 @@
 
     <!--find image with -wd in filename-->
     {{/* Get page wide image for sharing. */}}
-    {{ $twitter_card := "summary_large_image" }}
-    <meta property="twitter:card" content="{{ $twitter_card }}">
     {{ $card_image := (.Resources.ByType "image").GetMatch "*-wd*" }}
     <meta name="twitter:image" content="{{ $card_image.Permalink }}" >
 
@@ -45,8 +45,6 @@
       <meta property="og:image" content="{{ . }}" >
   {{- end -}}
 
-  {{ $twitter_card := "summary" }}
-  <meta property="twitter:card" content="{{ $twitter_card }}">
   {{ $card_image = printf "images/%s" .Site.Params.twitter_image | absURL }}
   {{- with $card_image -}}
       <meta name="twitter:image" content="{{ . }}" >
