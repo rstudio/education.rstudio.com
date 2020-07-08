@@ -6,7 +6,7 @@ title = "RStudio Education"
 baseurl = "https://education.rstudio.com/"
 
 # Name the theme folder in `themes/`.
-theme = "hugo-tourmaline"
+theme = "hugo-graphite"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-20375833-3"
@@ -39,3 +39,13 @@ preserveTaxonomyNames = true
     unsafe = true
   [markup.highlight]
     style = "pygments"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+    privacyEnhanced = true
+
