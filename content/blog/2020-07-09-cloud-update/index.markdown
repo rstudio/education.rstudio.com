@@ -20,45 +20,7 @@ photo:
 
 > This is a guest blog post written by the RStudio marketing and Cloud teams. The RStudio Education team knows that many of our readers use RStudio Cloud and are interested in finding out about upcoming changes to RStudio Cloud pricing. These changes will be in effect beginning on August 3rd, 2020. 
 
-
-## What is RStudio Cloud?
-
-If you are used to using the [RStudio IDE](https://rstudio.com/products/rstudio/download/) for data science, this setup should look familiar:
-
-<div class="figure">
-<img src="https://mine-cetinkaya-rundel.github.io/rstudio-cloud-webinar/img/rstudio-ide.png" alt="IDE screenshot from Dr. Mine Çetinkaya-Rundel" width="75%" />
-<p class="caption">Figure 1: IDE screenshot from Dr. Mine Çetinkaya-Rundel</p>
-</div>
-
-RStudio Cloud moves the IDE into your web browser instead:
-
-<div class="figure">
-<img src="https://mine-cetinkaya-rundel.github.io/rstudio-cloud-webinar/img/rstudio-cloud.png" alt="Cloud screenshot from Dr. Mine Çetinkaya-Rundel" width="75%" />
-<p class="caption">Figure 2: Cloud screenshot from Dr. Mine Çetinkaya-Rundel</p>
-</div>
-
-This makes [RStudio Cloud](https://rstudio.cloud) a lightweight way for anyone to do, share, teach, and learn data science online. For educators, it simplifies the process of teaching R to your students or colleagues by letting the instructor focus on the content, not the infrastructure. Students learn directly within their web browsers, with nothing to install locally, and with no infrastructure for the instructor to maintain.
-
-RStudio Cloud is designed from the ground up to make data science teaching easier for instructors and students:
-
--   Classes can be organized in workspaces
--   Members can be assigned different roles: instructor, TA, student
--   Projects can be public or private
--   Projects can be made into assignments
--   Students can make copies of projects created by the instructor, with the necessary environment automatically replicated.
--   Instructor can peek into and edit student projects
-
-In addition to teaching data science, RStudio Cloud is a great platform for doing data science as well. The ability to share projects makes it easy for researchers from different groups or institutions to collaborate, and is useful for any data science team that wants to build and share data science work, without having to maintain their own IT infrastructure.
-
-To learn more:
-
--   Visit <https://rstudio.com/products/cloud>,
--   Check out our recent webinar on [Teaching R Online with RStudio Cloud](https://rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/),
--   Sign up at <https://rstudio.cloud/> and get started for free.
-
-## What's changing with RStudio Cloud?
-
-After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. (Until then, you can still sign up for the Cloud Free plan - the usage limits are currently not enforced). While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. Learn more on our [Plans & Pricing page](https://rstudio.cloud/plans/).
+After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. 
 
 ## Why are we making this change?
 
@@ -78,7 +40,7 @@ Below is a summary of the same information; please note that all charges are on 
 
 -  [**Cloud Free Plan**](https://rstudio.cloud/plans/free): RStudio Cloud is free to start and for occasional use. The free plan provides one shared space that can be used for collaboration and instruction, with up to 5 members. You may have up to 15 total projects in the shared space. 
 
--   [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you are a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
+-   [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you're a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
 
 -   [**Custom Cloud Instructor Plan**](https://rstudio.cloud/plans/instructor): Alternatively, you can sign up for a fixed price per class for both instructors and students with no usage fees. With this plan, you will need to request a quote. Tell us how many students you will have, and for how long, and we can give you a custom quote for the entire cost.
 
@@ -87,6 +49,7 @@ Below is a summary of the same information; please note that all charges are on 
 -   [**Cloud Organization Plan**](https://rstudio.cloud/plans/organization): For other instructors, including those at commercial organizations, this plan enables multiple people in your organization to do, teach, and learn data science with R. This plan includes all Cloud Premium features, plus Single Sign On integration via SAML, and flexible pricing. This plan is also a good option if you would like a site license for your organization. 
 
 ## Q & A
+
 
 We collected questions about the pricing plans from RStudio Cloud users through [community.rstudio.com](https://community.rstudio.com/c/rstudio-cloud/14) and our [RStudio certified instructor program](/trainers/). Below are some of the most common questions, along with answers from our team:
 
@@ -127,4 +90,3 @@ Your understanding is correct - however, we do offer a fix priced plan for instr
 Visit the RStudio Cloud community page at <https://community.rstudio.com/c/rstudio-cloud> to ask questions, provide feedback and interact with other RStudio Cloud users.
 
 We sincerely thank all member of the R community who have used and provided feedback about RStudio Cloud. We are definitely aware that for many universities, budgets are very tight, particularly at this time. We will continue to do what we can to make Cloud as affordable as possible for instructional use. We will also continue to add important features and improve performance, reliability, and availability of RStudio Cloud. 
-
