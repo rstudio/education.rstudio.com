@@ -56,7 +56,7 @@ To learn more:
 
 ## What's changing with RStudio Cloud?
 
-After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. (Until then, you can still sign up for the Cloud Free plan - the usage limits are currently not enforced). While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. Learn more on our [Plans & Pricing page](https://rstudio.cloud/plans/).
+After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. 
 
 ## Why are we making this change?
 
@@ -76,7 +76,7 @@ Below is a summary of the same information; please note that all charges are on 
 
 -  [**Cloud Free Plan**](https://rstudio.cloud/plans/free): RStudio Cloud is free to start and for occasional use. The free plan provides one shared space that can be used for collaboration and instruction, with up to 5 members. You may have up to 15 total projects in the shared space. 
 
--   [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you are a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
+-   [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you're a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
 
 -   [**Custom Cloud Instructor Plan**](https://rstudio.cloud/plans/instructor): Alternatively, you can sign up for a fixed price per class for both instructors and students with no usage fees. With this plan, you will need to request a quote. Tell us how many students you will have, and for how long, and we can give you a custom quote for the entire cost.
 
@@ -125,4 +125,3 @@ Your understanding is correct - however, we do offer a fix priced plan for instr
 Visit the RStudio Cloud community page at <https://community.rstudio.com/c/rstudio-cloud> to ask questions, provide feedback and interact with other RStudio Cloud users.
 
 We sincerely thank all member of the R community who have used and provided feedback about RStudio Cloud. We are definitely aware that for many universities, budgets are very tight, particularly at this time. We will continue to do what we can to make Cloud as affordable as possible for instructional use. We will also continue to add important features and improve performance, reliability, and availability of RStudio Cloud. 
-
