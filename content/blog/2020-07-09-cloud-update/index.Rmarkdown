@@ -1,5 +1,5 @@
 ---
-title: Announcing our first RStudio Cloud Pricing Plan
+title: Upcoming changes to RStudio Cloud pricing
 author:
   - Lou Bajuk
 date: '2020-07-09'
@@ -19,18 +19,18 @@ photo:
 
   
 
-RStudio Cloud is a lightweight, cloud-based solution, allowing anyoneR Community to do, share, teach and learn data science online. It simplifies the process of teaching R to your students or colleagues, by letting the instructor focus on the content, not the infrastructure. Students learn directly from their web browsers, with nothing to install locally, and with no infrastructure for the instructor to maintain.
+RStudio Cloud is a lightweight, cloud-based solution, allowing anyone to do, share, teach and learn data science online. It simplifies the process of teaching R to your students or colleagues, by letting the instructor focus on the content, not the infrastructure. Students learn directly from their web browsers, with nothing to install locally, and with no infrastructure for the instructor to maintain.
 
   
 
-RStudio Cloud is designed from the ground up with to make data science teaching easier for instructors and students:
+RStudio Cloud is designed from the ground up to make data science teaching easier for instructors and students:
 
 -   Classes can be organized in workspaces
 -   Members can be assigned different roles: instructor, TA, student
 -   Projects can be public or private
 -   Projects can be made into assignments
 -   Students can make copies of projects created by the instructor, with the necessary environment automatically replicated.
--   Instructor can peek into student projects
+-   Instructor can peek into and edit student projects
 
   
 
@@ -50,11 +50,15 @@ After an extensive alpha/beta period, RStudio Cloud will be generally available 
 
 ## Why are we making this change?
 
-The fees help us offset the cost of operating the service, and will enable us to continue to provide a free plan for individuals to do data science.
+At RStudio, we offer our professional products ([RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/), [RStudio Connect](https://rstudio.com/products/connect/), [RStudio Package Manager](https://rstudio.com/products/package-manager/)) for free for instructional use. You can read more about these options [here](/teach/tools/#computing-infrastructure).
+
+However, with all of those pro products, it is then up to the user to shoulder any costs associated with hosting and maintaining them. This often requires quite a lot of leg work, and usually there is an organizational investment in the infrastructure needed to use the pro products. RStudio Cloud is different. We'd love to give Cloud away for instructional use as well, but we need to cover our ongoing hosting costs so that we can continue to offer the service. We've priced Cloud for instructional use as low as we can and still cover our hosting costs - and we're not looking at it as a profit generator. 
+
+In short: the fees help us offset the cost of operating the service, and will enable us to continue to provide a free plan for individuals to do data science. 
 
 ## What are my options for teaching classes and workshops?
 
-- **Cloud Free Plan:** RStudio Cloud is always free to start. If you want to explore what RStudio Cloud offers, sign up for our free plan. This provides one shared space that can be used for collaboration and instruction, with up to 5 members. [Get started free here.](https://rstudio.cloud/plans/free)
+- **Cloud Free Plan:** RStudio Cloud is always free to start and for occasional use. If you want to explore what RStudio Cloud offers, sign up for our free plan. This provides one shared space that can be used for collaboration and instruction, with up to 5 members. [Get started free here.](https://rstudio.cloud/plans/free)
 
 - **Cloud Instructor Plans**: If you are a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](https://education.rstudio.com/trainers?_ga=2.191423466.1361484613.1591894893-1574683636.1591894893)), you can sign up for this deeply discounted plan starting at \$15/month. 
 
