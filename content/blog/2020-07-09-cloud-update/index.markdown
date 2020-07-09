@@ -12,7 +12,7 @@ tags:
   - rstudio-cloud
 slug: cloud-costs
 description: |
-  Beginning August 3rd, we will offer paid premium plans - learn more about what is changing and what to expect.
+  Beginning August 3rd, we will offer paid premium plans --- learn more about what is changing and what to expect.
 photo:
   url: https://unsplash.com/photos/CG7YwmRDGvI
   author: Nacho Rochon
