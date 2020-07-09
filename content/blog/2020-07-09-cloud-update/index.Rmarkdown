@@ -2,9 +2,12 @@
 title: Upcoming changes to RStudio Cloud pricing
 author:
   - Lou Bajuk
+  - Robby Shaver
+  - Pete Knast
 date: '2020-07-09'
 categories:
   - teach
+  - online
 tags:
   - rstudio-cloud
 slug: cloud-costs
@@ -67,3 +70,17 @@ In short: the fees help us offset the cost of operating the service, and will en
 - **Cloud Premium Plan:** If you need more projects, shared spaces, or other resources than our free plan provides, and you are not a qualified instructor, this plan is the best choice. In addition to supporting individual data science work and collaboration, this plan enables you to conduct training workshops. [Learn more here](https://rstudio.cloud/plans/premium).
 
 - **Cloud Organization Plan:** For other instructors, including those at commercial organizations, this plan enables multiple people in your organization to do, teach and learn data science with R. This plan includes all Cloud Premium features, plus Single Sign On integration via SAML, and flexible pricing. This plan is also a good option if you would like a site license for your school. [Learn more and request a quote here](https://rstudio.cloud/plans/organization).
+
+## Learning resources
+
+Learn more about how to use RStudio Cloud: <https://rstudio.cloud/learn/guide#learn>
+
+The education team also has two webinars from [Dr. Mine Çetinkaya-Rundel](/author/mine) on how to use RStudio Cloud for teaching:
+
++ [Teaching R online with RStudio Cloud](https://rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/) (March 31, 2020)
++ [RStudio Cloud in the Classroom](https://rstudio.com/resources/webinars/rstudio-cloud-in-the-classroom/) (June 12, 2019)
+
+
+## Feedback
+
+We continue to add important features and improve performance, reliability and availability of RStudio Cloud. Please reach out with any questions or feedback at <https://community.rstudio.com/c/rstudio-cloud>.
