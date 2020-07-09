@@ -5,7 +5,7 @@ author:
   - Lou Bajuk
   - Robby Shaver
   - Pete Knast
-date: '2020-07-09'
+date: '2020-07-10'
 categories:
   - teach
 tags:
@@ -18,35 +18,25 @@ photo:
   author: Nacho Rochon
 ---
 
-> This is a guest blog post written by the RStudio marketing and Cloud teams. The RStudio Education team knows that many of our readers use RStudio Cloud and are interested in finding out about upcoming changes to RStudio Cloud pricing. These changes will be in effect beginning on August 3rd, 2020. 
+> RStudio Cloud spans across multiple teams at RStudio, so this is a joint post from the RStudio education, marketing, and Cloud teams.
 
-After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. 
+After an extensive alpha/beta period, [RStudio Cloud](https://rstudio.com/products/cloud/) will be generally available for use and purchase in the fall. If you are not familiar with [RStudio Cloud](https://rstudio.com/products/cloud/), it is a managed cloud instance of the RStudio IDE. This means you and your learners can use the RStudio IDE directly from your browser - there is no software to install and nothing to configure on your computer. While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students, and organizations. 
 
-## Why are we making this change?
-
-At RStudio, we offer our professional products ([RStudio Server Pro](https://rstudio.com/products/rstudio-server-pro/), [RStudio Connect](https://rstudio.com/products/connect/), [RStudio Package Manager](https://rstudio.com/products/package-manager/)) for free for instructional use. You can read more about these options [here](/teach/tools/#computing-infrastructure).
-
-However, with all of those pro products, it is then up to the user to shoulder any costs associated with hosting and maintaining them. This often requires quite a lot of leg work, and usually there is an organizational investment in the infrastructure needed to use the pro products. RStudio Cloud is different. We want to make Cloud affordable for instructional use, but we need to cover our ongoing hosting costs so that we can continue to offer the service. We've priced Cloud for instructional use as low as we can and still cover our hosting costs---and we're not looking at it as a profit generator.
-
-In short: the fees help us offset the cost of operating the service, and will enable us to continue to provide a free plan for individuals to do data science.
+At RStudio, we're committed to supporting educators using R &mdash; that is why we offer [our](https://rstudio.com/products/rstudio-server-pro/) [professional](https://rstudio.com/products/connect/) [products](https://rstudio.com/products/package-manager/) for free. We'd love to also make RStudio.cloud free for everyone, but unfortunately RStudio.cloud is fundamentally different because it's not just software, but is also computing. During the beta program, we provided 3.5 million hours of compute time for free, and unfortunately we just can't afford to keep doing that &mdash; we need to need to cover our ongoing hosting costs so that we can continue to offer the service. In short: the fees help us offset the cost of operating the service, and enable us to continue to provide a free plan for individuals.
 
 ## What are my options for teaching classes and workshops?
 
-The pricing plans are available at <https://rstudio.cloud/plans/>:
+The monthly pricing plans are available at <https://rstudio.cloud/plans/>. Below is a summary of the same information:
 
-![](cloud-screenshot.png)
+- [**Cloud Free Plan**](https://rstudio.cloud/plans/free): The free plan provides one shared space that can be used for collaboration and teaching, with up to 5 members. You may have up to 15 total projects in the shared space. 
 
-Below is a summary of the same information; please note that all charges are on a per month basis:
+- [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you're a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
 
--  [**Cloud Free Plan**](https://rstudio.cloud/plans/free): RStudio Cloud is free to start and for occasional use. The free plan provides one shared space that can be used for collaboration and instruction, with up to 5 members. You may have up to 15 total projects in the shared space. 
+- [**Custom Cloud Instructor Plan**](https://rstudio.cloud/plans/instructor): Alternatively, you can sign up for a fixed price per class for both instructors and students with no usage fees. With this plan, you will need to request a quote. Tell us how many students you will have, and for how long, and we can give you a custom quote for the entire cost.
 
--   [**Cloud Instructor Plans**](https://rstudio.cloud/plans/instructor): If you're a qualified instructor (either teaching at an accredited institution that meets certain qualifications, or you are an [RStudio Certified Instructor](/trainers)), you can sign up for this plan starting at \\$15/month.
+- [**Cloud Premium Plan**](https://rstudio.cloud/plans/premium): If you need more than 15 projects, more than one shared space, more than 5 members, and/or other resources than our free plan provides, and you are not a qualified instructor, this plan is the best choice. In addition to supporting individual data science work and collaboration, this plan enables you to conduct training workshops. 
 
--   [**Custom Cloud Instructor Plan**](https://rstudio.cloud/plans/instructor): Alternatively, you can sign up for a fixed price per class for both instructors and students with no usage fees. With this plan, you will need to request a quote. Tell us how many students you will have, and for how long, and we can give you a custom quote for the entire cost.
-
--   [**Cloud Premium Plan**](https://rstudio.cloud/plans/premium): If you need more than 15 projects, more than one shared space, more than 5 members, and/or other resources than our free plan provides, and you are not a qualified instructor, this plan is the best choice. In addition to supporting individual data science work and collaboration, this plan enables you to conduct training workshops. 
-
--   [**Cloud Organization Plan**](https://rstudio.cloud/plans/organization): For other instructors, including those at commercial organizations, this plan enables multiple people in your organization to do, teach, and learn data science with R. This plan includes all Cloud Premium features, plus Single Sign On integration via SAML, and flexible pricing. This plan is also a good option if you would like a site license for your organization. 
+- [**Cloud Organization Plan**](https://rstudio.cloud/plans/organization): For other instructors, including those at commercial organizations, this plan enables multiple people in your organization to do, teach, and learn data science with R. This plan includes all Cloud Premium features, plus Single Sign On integration via SAML, and flexible pricing. This plan is also a good option if you would like a site license for your organization. 
 
 ## Q & A
 
