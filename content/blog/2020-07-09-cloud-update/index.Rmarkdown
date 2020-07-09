@@ -56,7 +56,7 @@ To learn more:
 
 ## What's changing with RStudio Cloud?
 
-After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. (Until then, you can still sign up for the Cloud Free plan - the usage limits are currently not enforced). While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. Learn more on our [Plans & Pricing page](https://rstudio.cloud/plans/).
+After an extensive alpha/beta period, RStudio Cloud will be generally available for use and purchase in the fall. While RStudio Cloud will always offer a free plan for individuals, beginning August 3, 2020, we will also offer paid premium plans for individuals, instructors, students and organizations. 
 
 ## Why are we making this change?
 
@@ -125,4 +125,3 @@ Your understanding is correct - however, we do offer a fix priced plan for instr
 Visit the RStudio Cloud community page at <https://community.rstudio.com/c/rstudio-cloud> to ask questions, provide feedback and interact with other RStudio Cloud users.
 
 We sincerely thank all member of the R community who have used and provided feedback about RStudio Cloud. We are definitely aware that for many universities, budgets are very tight, particularly at this time. We will continue to do what we can to make Cloud as affordable as possible for instructional use. We will also continue to add important features and improve performance, reliability, and availability of RStudio Cloud. 
-
