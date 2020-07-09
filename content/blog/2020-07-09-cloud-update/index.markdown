@@ -18,7 +18,7 @@ photo:
   author: Nacho Rochon
 ---
 
-> This is a guest blog post written by the RStudio marketing and Cloud teams. The RStudio Education team knows that our readers use RStudio Cloud, and care about upcoming changes to RStudio Cloud pricing. These changes will be in effect beginning on August 3rd, 2020.
+> This is a guest blog post written by the RStudio marketing and Cloud teams. The RStudio Education team knows that many of our readers use RStudio Cloud and are interested in finding out about upcoming changes to RStudio Cloud pricing. These changes will be in effect beginning on August 3rd, 2020. 
 
 
 ## What is RStudio Cloud?
@@ -119,7 +119,7 @@ Under our fixed model, the total across one month for 1 instructor and 12 studen
 
 > So, if I create a workspace for a class that is, presumably, a "shared space," yes? Does that mean the projects I create as "assignments" are run against my project hours? I expect the 160 students in the course would burn through that allotment very quickly. (via [community.rstudio.com](https://community.rstudio.com/t/pricing-question/70270))
 
-Your understanding is correct - however, we do offer a fix priced plan for instruction without usage overage fees that you might want to explore. If you got to the Instructor plan page on Cloud (https://rstudio.cloud/plans/instructor) and click the Request a Quote button, we'll get back to you shortly with a price.
+Your understanding is correct - however, we do offer a fix priced plan for instruction without usage overage fees that you might want to explore. If you go to the Instructor plan page on Cloud (https://rstudio.cloud/plans/instructor) and click the Request a Quote button, we'll get back to you shortly with a price.
 
 
 ## Questions & Feedback
