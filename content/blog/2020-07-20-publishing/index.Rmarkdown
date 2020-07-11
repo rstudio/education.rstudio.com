@@ -7,11 +7,9 @@ date: '2020-07-20'
 slug: data-science-publishing
 draft: true
 categories:
-  - rstats
   - teaching
 tags:
-  - teaching
-  - rstats
+  - rmarkdown
 photo:
   author: Hannah Troupe
   url: https://unsplash.com/photos/X1zFUnr52yM
