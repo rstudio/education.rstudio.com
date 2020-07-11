@@ -5,7 +5,6 @@ author:
   - Nicholas Tierney
 date: '2020-07-20'
 slug: open-publishing
-draft: true
 categories:
   - teaching
 tags:
