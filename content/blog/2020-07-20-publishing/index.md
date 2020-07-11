@@ -4,7 +4,7 @@ author:
   - Julia Lowndes
   - Nicholas Tierney
 date: '2020-07-20'
-slug: data-science-publishing
+slug: open-publishing
 draft: true
 categories:
   - teaching
@@ -14,8 +14,6 @@ photo:
   author: Hannah Troupe
   url: https://unsplash.com/photos/X1zFUnr52yM
 ---
-
-
 
 *In May we presented a virtual fireside chat at the [Open Publishing Fest](https://openpublishingfest.org/) called "Data Science as an Entryway to Open Publishing". The premise was that the open source R programming language is a powerhouse for data analysis and statistics -- and it also is fueling open publishing through R Markdown and a large, engaged, and innovative community. We briefly showed community-created examples of tutorials, blogs, websites, manuscripts, books, etc, and discussed how they are an entryway to open science, preprints, and open scientific publishing. This post is some reflections from the experience and summary of our [slides](https://zenodo.org/record/3873698#.XtbQo8Z7nOQ).*
 
