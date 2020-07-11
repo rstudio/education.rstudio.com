@@ -86,7 +86,7 @@ In response to this we discussed some of the downfalls of HTML, namely the fact 
 -   "How do I change the font colour", or
 -   "How do I create two columns of text"
 
-While CSS is uniquitous, and everywhere on the web, so it can be easy to change appearances of text. It is an additional learning point for learners, and something that can tip the balance and turn people away and back to systems they know.
+While CSS is ubiquitous, and everywhere on the web, so it can be easy to change appearances of text. It is an additional learning point for learners, and something that can tip the balance and turn people away and back to systems they know.
 
 Some suggestions on addressing this were:
 
