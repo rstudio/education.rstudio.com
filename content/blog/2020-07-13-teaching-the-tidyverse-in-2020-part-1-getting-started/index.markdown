@@ -1,12 +1,12 @@
 ---
-title: 'Teaching the Tidyverse in 2020 Part 1 Getting Started'
-date: '2020-07-13'
+title: "Teaching the Tidyverse in 2020 - Part 1: Getting Started"
+date: "2020-07-13"
 slug: teaching-the-tidyverse-in-2020-part-1-getting-started
 categories:
   - teach
 tags:
   - tidyverse
-authors:
+author:
   - mine
 photo:
   url: https://unsplash.com/photos/oMpAz-DN-9I
@@ -194,6 +194,18 @@ Appending the search phrase with "tidyverse" is almost always helpful for tidyve
 <img src="img/tidyverse-google.png" alt="Search results for 'how to make a boxplot in R' with and without 'tidyverse' appended to the search phrase." width="80%" />
 <p class="caption">Figure 2: Search results for 'how to make a boxplot in R' with and without 'tidyverse' appended to the search phrase.</p>
 </div>
+
+### Make time for reprex
+
+What is a reprex? 
+It’s a **re**producible **ex**ample, as coined by Romain Francois. 
+It's also the name of the [package](https://reprex.tidyverse.org/) that creates runnable code and output based on R code on the clipboard. 
+Teaching your students how to make reprexes will have an immense payoff for them (and for you, as you try to help them). 
+However making repexes is not trivial for beginners. 
+It's especially not easy for students learning R starting with an R markdown document as opposed to an R script. 
+This means you should make time in class to teach how to make a reprex, through live coding demos (or narrated screencasts) a few times. 
+If you use an online discussion forum for questions (or if your students email their questions to you), you might need to coach them through making reprexes the first few times they try. 
+While I don't think formally introducing reprexes very early on will be very productive, it's also not productive to wait too long as mastering how to make a reprex will ultimately empower your students to ask good questions, or better yet, answer their own questions as they work on developing a reprex.
 
 <img src="img/tidy-papers.png" align="right" height="250" alt="Screenshots of the two tidyverse papers referenced in text."></a>
 
