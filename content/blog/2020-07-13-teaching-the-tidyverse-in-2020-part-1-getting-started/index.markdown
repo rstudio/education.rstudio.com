@@ -62,7 +62,7 @@ Start with the [core packages](https://www.tidyverse.org/packages/#core-tidyvers
 - **purrr**: functional programming
   
 This is the order I recommend and the order that follows the curriculum outlined in [Data Science in a Box](https://datasciencebox.org/). 
-Start with visualisation (ggplot2) and delay introducing functional programming (purrr) until later.^[More on why and how to delay introducing purrr in the last post in the series!]
+Start with visualisation (ggplot2) and delay introducing functional programming (purrr) until later. (More on why and how to delay introducing purrr in the last post in the series!)
 
 I like introducing the tidyverse with a visual showcasing the pretty hex logos. 
 I cannot say that this necessarily adds to student learning, but it sure draws students in!
@@ -120,7 +120,7 @@ At the same time, ignoring messages/warnings/errors is also not a habit I like t
 
 My suggestion is to 
 
-- suppress package loading messages on the first day activity, which is straightforward if students start off with a template R Markdown document that you prepared, where the chunk where you load tidyverse has `meesage = FALSE` set, and then
+- suppress package loading messages on the first day activity, which is straightforward if students start off with a template R Markdown document that you prepared, where the chunk where you load tidyverse has `message = FALSE` set, and then
 - starting on the second module/day of class go through what the message means in full, with assurances to students that they don't need to "worry" about it, but it's worth for them to see it. 
 
 A good point in the class to come back to this message is when introducing `dplyr::filter()`, which tends to be early on in an introductory data science or statistics course. 
@@ -195,7 +195,7 @@ The functions in each package are in the Reference tab, and this is worth pointi
 It is also worth pointing out that while the content of the function documentation on package websites mirrors the content in the help documents you can get in R with `?function`, the package website shows the output of the code in the examples. 
 It can be a lot more efficient (and pleasant) to browse the documentation pages on the web, especially for plotting functions where documentation clearly shows which function you need to use to get your plot to look a certain way.
 
-### Gooling for help
+### Googling for help
 
 Googling how to do something is obvious, but it's not always obvious how best to Google for help. 
 Appending the search phrase with "tidyverse" is almost always helpful for tidyverse specific help, but not always obvious to new learners. 

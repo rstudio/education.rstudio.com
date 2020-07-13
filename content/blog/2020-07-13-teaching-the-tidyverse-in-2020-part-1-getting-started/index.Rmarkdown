@@ -61,7 +61,7 @@ Start with the [core packages](https://www.tidyverse.org/packages/#core-tidyvers
 - **purrr**: functional programming
   
 This is the order I recommend and the order that follows the curriculum outlined in [Data Science in a Box](https://datasciencebox.org/). 
-Start with visualisation (ggplot2) and delay introducing functional programming (purrr) until later.^[More on why and how to delay introducing purrr in the last post in the series!]
+Start with visualisation (ggplot2) and delay introducing functional programming (purrr) until later. (More on why and how to delay introducing purrr in the last post in the series!)
 
 I like introducing the tidyverse with a visual showcasing the pretty hex logos. 
 I cannot say that this necessarily adds to student learning, but it sure draws students in!
