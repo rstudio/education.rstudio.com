@@ -1,0 +1,215 @@
+---
+title: 'Teaching the Tidyverse in 2020 - Part 3: Data Wrangling and Tidying'
+date: '2020-07-17'
+slug: teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying
+categories:
+  - teach
+tags:
+  - tidyverse
+authors:
+  - nine
+photo:
+  url: https://unsplash.com/photos/wEL2zPX3jDg
+  author: Fabio Ballasina
+---
+
+```{r}
+# turn everything off for now
+knitr::opts_chunk$set(eval=FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Some intro linking to older posts
+
+
+## Reshaping data with `pivot_*()`
+
+[This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the American Association of University Professors (AAUP) provides the following dataset.
+
+```{r load-data-staff, message=FALSE}
+staff <- read_csv("data/instructional-staff.csv")
+staff
+```
+
+Current data:
+
+- Rows: Faculty types 
+- Columns: Years 
+
+What do we want to do?
+
+Recreate the following visualisation:
+
+```{r echo=FALSE, fig.height=3.5, fig.width=8}
+library(scales)
+staff %>%
+  pivot_longer(cols = -faculty_type, 
+               names_to = "year", 
+               values_to = "percentage") %>%
+  mutate(
+    year = as.numeric(year),
+    part_time = if_else(faculty_type == "Part-Time Faculty", "Part-Time Faculty", "Other Faculty")
+    ) %>%
+  ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
+             color = fct_rev(part_time))) +
+  geom_line() +
+  scale_color_manual(values = c("red", "gray")) +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  theme_minimal() +
+  labs(
+    title = "Instructional staff employment trends",
+    x = "Year",
+    y = "Percentage",
+    color = ""
+  ) +
+  theme(legend.position = "bottom")
+```
+
+What do we need?
+
+- Rows: Year/faculty type combination
+- Columns: Faculty type, percentage of hires of that type of faculty for each year
+
+Previously you might have approached this with the `gather()`/`spread()` functions. 
+I recommend using the `pivot_*()` functions (from the tidyr package) for this task now.
+
+```{r echo=FALSE}
+knitr::include_graphics("img/tidyr-longer-wider.gif")
+```
+
+Before embarking in the code, it's useful to ask questions about what the expected output will look like in terms or number of rows and columns, e.g. *"If the long data will have a row for each year/faculty type combination, and there are 5 faculty types and 11 years of data, how many rows will the data have?"*. 
+Having some expectation about what the output of a function will look like is good practice to instil in students.
+
+```{r eval=FALSE}
+pivot_longer(data, cols, 
+             names_to = "name", 
+             values_to = "value")
+```
+
+- The first argument is the `data` frame, as usual
+- The second argument, `cols`, is where you specify which columns to pivot into longer format 
+- The third argument, `names_to`, is a string specifying the name of the variable to create from column names of the original data
+- The fourth argument, `values_to`, is a string specifying the name of the variable to create from the data stored in the cells of the original data
+
+```{r}
+staff %>%
+  pivot_longer(cols = -faculty_type, 
+               names_to = "year", 
+               values_to = "percentage")
+```
+
+And then we can use this to 
+
+```{r staff-plot}
+staff %>%
+  pivot_longer(cols = -faculty_type, 
+               names_to = "year", 
+               values_to = "percentage") %>%
+  mutate(
+    year = as.numeric(year),
+    part_time = if_else(faculty_type == "Part-Time Faculty", "Part-Time Faculty", "Other Faculty")
+    ) %>%
+  ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
+             color = fct_rev(part_time))) +
+  geom_line() +
+  scale_color_manual(values = c("red", "gray")) +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  theme_minimal() +
+  labs(
+    title = "Instructional staff employment trends",
+    x = "Year",
+    y = "Percentage",
+    color = ""
+  ) +
+  theme(legend.position = "bottom")
+```
+
+2. Column-wise operations:
+
+Professor evaluations, from the **openintro** package
+
+```{r mesage=FALSE}
+library(openintro)
+evals
+```
+
+So long `mutate_*()`, hello `across()`
+
+- `across()` makes it easy to apply the same transformation to multiple columns, allowing you to use `select() `semantics inside in `summarise()` and `mutate()`
+- `across()` supersedes the family of *scoped variants* like `summarise_at()`, ``summarise_if()`, and `summarise_all()`
+- This is the recommended approach in dplyr 1.0.0
+
+```{r}
+evals %>%
+  mutate(across(where(is.factor), as.character))
+```
+
+Task: Calculate means beauty score for each rank
+
+```{r}
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean))
+```
+
+Task: Rename columns as you calculate summaries
+
+```{r}
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean, .names = "{col}_mean"))
+```
+
+
+## Row-wise operations: Take the mean of repeated measurements with `rowwise()` and `c_across()`
+
+Lots of discussion around how to do these in the tidyverse, see [github.com/jennybc/row-oriented-workflows](https://github.com/jennybc/row-oriented-workflows) for in depth coverage.
+
+Sometimes you need to do a simple thing, e.g. taking average of repeated measures recorded in columns in a data frame.
+
+```{r}
+evals %>% select(score, starts_with("bty_"))
+```
+
+`rowwise()` is back, baby!
+
+```{r}
+evals %>%
+  rowwise() %>%
+  mutate(bty_avg = mean(c(bty_f1lower, bty_f1upper, bty_f2upper, bty_m1lower, bty_m1upper, bty_m2upper))) %>%
+  ungroup() %>%
+  select(starts_with("bty_"))
+```
+
+#### 4. Grouped summaries: `group_by()` and `summerise()` and the new message -- how to interpret?
+
+behaviour didn't change, just the message
+
+option to suppress message
+  
+```{r}
+# with message
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean))
+```
+
+```{r}
+# drop groups
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean), .groups = "drop")
+```
+
+```{r}
+# keep groups
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean), .groups = "keep")
+```
+
+Some outro linking for next post
