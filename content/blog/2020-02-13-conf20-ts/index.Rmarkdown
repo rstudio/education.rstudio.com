@@ -31,7 +31,7 @@ All the materials for the workshop are on [a github repository](https://github.c
 
 I was very lucky to have four awesome teaching assistants in [Mitch O'Hara-Wild](https://www.mitchelloharawild.com/), [Rhian Davies](https://trianglegirl.rbind.io/), [Phillip Lear](https://education.rstudio.com/trainers/people/lear+phillip/), and [Steven Lawrence](https://www.linkedin.com/in/steven-lawrence-bio-math/).
 
-### Day 1
+## Day 1
 
 On day 1, we looked at the `tsibble`, `lubridate` and `feasts` packages (along with the `tidyverse` of course). We introduced the `tsibble` data structure for flexibly managing collections of related time series, and explored how to do data wrangling, data visualizations and exploratory data analysis, along with some feature-based methods to explore time series data in high dimensions.
 
@@ -44,7 +44,7 @@ Links to slides for day 1 are given below.
   4. [Seasonality and trends](https://github.com/rstudio-conf-2020/time-series-forecasting/raw/master/materials/4-decompositions.pdf)
   5. [Time series features](https://github.com/rstudio-conf-2020/time-series-forecasting/raw/master/materials/5-feasts.pdf)
 
-### Day 2
+## Day 2
 
 Day 2 was about forecasting using the `fable` package. We looked at several well-known time series forecasting models and how they are automated in the `fable` package. We also discussed ensemble forecasts. Finally, we looked at forecast reconciliation, allowing millions of time series to be forecast in a relatively short time while accounting for constraints on how the series are related.
 
@@ -56,7 +56,7 @@ Links to slides for day 2 are given below.
   9. [Dynamic regression](https://github.com/rstudio-conf-2020/time-series-forecasting/raw/master/materials/9-dynamic-regression.pdf)
   10. [Hierarchical forecasting](https://github.com/rstudio-conf-2020/time-series-forecasting/raw/master/materials/10-reconciliation.pdf)
 
-### Lab Sessions
+## Lab Sessions
 
 We alternated between me presenting and lab sessions where participants worked with time series data in R. The [instructions for the lab sessions](https://github.com/rstudio-conf-2020/time-series-forecasting/blob/master/Labs.md) are available on the repo.
 
