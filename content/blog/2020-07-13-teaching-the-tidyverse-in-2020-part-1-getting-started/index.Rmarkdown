@@ -156,7 +156,7 @@ The functions in each package are in the Reference tab, and this is worth pointi
 It is also worth pointing out that while the content of the function documentation on package websites mirrors the content in the help documents you can get in R with `?function`, the package website shows the output of the code in the examples. 
 It can be a lot more efficient (and pleasant) to browse the documentation pages on the web, especially for plotting functions where documentation clearly shows which function you need to use to get your plot to look a certain way.
 
-### Gooling for help
+### Googling for help
 
 Googling how to do something is obvious, but it's not always obvious how best to Google for help. 
 Appending the search phrase with "tidyverse" is almost always helpful for tidyverse specific help, but not always obvious to new learners. 
