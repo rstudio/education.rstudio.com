@@ -41,7 +41,7 @@ The monthly pricing plans are available at <https://rstudio.cloud/plans/>. Typic
         
 1. [**Custom Cloud Instructor Plan**](https://rstudio.cloud/plans/instructor): If you are teaching multiple workshops in a month or a quarter/semester length course, you are likely looking at burning through those 160 included project hours pretty quickly and are probably worried about racking up overage charges. For example, in a typical 3-credit course, you may expect learners to log upwards of 10 hours per week. This would mean you could only have 4 learners&mdash;which is probably not a realistic scenario. If you don't want any surprises, an alternative plan is to sign up for a fixed price per class for both instructors and learners with no usage overage fees. With this plan, you will need to request a quote. Tell us how many learners you will have, and for how long, and we can give you a custom quote for the entire cost.
 
-1. [**Cloud Organization Plan**](https://rstudio.cloud/plans/organization): All of the above options are great for individual educators, but if you are a member of a larger group, an organization plan is a good option for getting Cloud access to a bunch of users within a department, university, or a commercial organization. This plan grants all organization users Cloud Premium features, plus Single Sign On integration via SAML, so that users can log into Cloud using their organization credentials. This plan is also a good option if you would like a site license for your organization. 
+1. [**Cloud Organization Plan**](https://rstudio.cloud/plans/organization): All of the above options are great for individual educators, but if you are a member of a larger group, an organization plan is a good option for getting Cloud access to a bunch of users within a department, university, or a commercial organization. This plan grants all organization users Cloud Premium features, plus Single Sign On integration via SAML, so that users can log into Cloud using their organization credentials. This plan is also a good option if you would like a site license for your organization. You will also need to request a quote for this plan. 
 
 [^1]: To view the list of qualifications, scroll down to bottom of [this page](https://rstudio.cloud/plans/instructor).
 
@@ -55,6 +55,8 @@ In most cases, your learners can rely on the [**Cloud Free Plan**](https://rstud
 
 ## Questions & feedback
 
-Visit the RStudio Cloud community page at <https://community.rstudio.com/c/rstudio-cloud> to ask questions, provide feedback and interact with other RStudio Cloud users.
+If you have any questions about RStudio Cloud pricing, please contact <a href="mailto:sales@rstudio.cloud">sales@rstudio.cloud</a>.
+
+Visit the RStudio Cloud community page at <https://community.rstudio.com/c/rstudio-cloud> to ask questions, provide feedback, and interact with other RStudio Cloud users.
 
 Thank you to all members of the R community who have used and provided feedback about RStudio Cloud. We are aware that budgets are very tight, particularly at this time. We will continue to do what we can to make Cloud as affordable as possible for instructional use. We will also continue to add important features and improve performance, reliability, and availability of RStudio Cloud. 
