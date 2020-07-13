@@ -100,7 +100,7 @@ At the same time, ignoring messages/warnings/errors is also not a habit I like t
 
 My suggestion is to 
 
-- suppress package loading messages on the first day activity, which is straightforward if students start off with a template R Markdown document that you prepared, where the chunk where you load tidyverse has `meesage = FALSE` set, and then
+- suppress package loading messages on the first day activity, which is straightforward if students start off with a template R Markdown document that you prepared, where the chunk where you load tidyverse has `message = FALSE` set, and then
 - starting on the second module/day of class go through what the message means in full, with assurances to students that they don't need to "worry" about it, but it's worth for them to see it. 
 
 A good point in the class to come back to this message is when introducing `dplyr::filter()`, which tends to be early on in an introductory data science or statistics course. 
