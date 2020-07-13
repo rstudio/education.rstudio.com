@@ -1,0 +1,103 @@
+---
+title: 'Teaching the Tidyverse in 2020 - Part 3: Data Wrangling and Tidying'
+date: '2020-07-13'
+slug: teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying
+categories:
+  - teach
+tags:
+  - tidyverse
+authors:
+  - nine
+photo:
+  url: https://unsplash.com/photos/wEL2zPX3jDg
+  author: Fabio Ballasina
+---
+
+```{r}
+# turn everything off for now
+knitr::opts_chunk$set(eval=FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Some intro linking to older posts
+
+
+### Data wrangling and tidying:
+
+#### 1. Reshaping data: `pivot_*()`
+
+```{r message=FALSE}
+staff <- read_csv("data/instructional-staff.csv")
+staff
+```
+
+```{r}
+staff %>%
+  pivot_longer(cols = -faculty_type, 
+               names_to = "year", 
+               values_to = "percentage") 
+```
+
+#### 2. Column-wise operations: `across()` with `summarise()` and `mutate()`
+  
+```{r message=FALSE}
+library(openintro)
+glimpse(evals)
+```
+
+**Task:** Convert all factors to character strings
+
+```{r}
+evals %>%
+  select(where(is.factor)) %>%
+  mutate(across(where(is.factor), as.character))
+```
+
+**Task:** Calculate means of all beauty scores
+
+```{r}
+evals %>%
+  summarise(across(starts_with("bty"), mean))
+```
+
+**Task:** Rename columns as you calculate summaries
+
+```{r}
+evals %>%
+  summarise(across(starts_with("bty"), mean, .names = "{col}_mean"))
+```
+
+#### 3. Row-wise operations: Take the mean of repeated measurements with `rowwise()` and `c_across()`
+
+#### 4. Grouped summaries: `group_by()` and `summerise()` and the new message -- how to interpret?
+
+behaviour didn't change, just the message
+
+option to suppress message
+  
+```{r}
+# with message
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean))
+```
+
+```{r}
+# drop groups
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean), .groups = "drop")
+```
+
+```{r}
+# keep groups
+evals %>%
+  group_by(rank) %>%
+  summarise(across(starts_with("bty"), mean), .groups = "keep")
+```
+
+Some outro linking for next post
