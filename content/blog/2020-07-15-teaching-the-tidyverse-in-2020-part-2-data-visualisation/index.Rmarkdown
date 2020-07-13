@@ -1,0 +1,82 @@
+---
+title: 'Teaching the Tidyverse in 2020 - Part 2: Data Visualisation'
+date: '2020-07-15'
+slug: teaching-the-tidyverse-in-2020-part-2-data-visualisation
+categories:
+  - teach
+tags:
+  - tidyverse
+author:
+  - mine
+photo:
+  url: https://unsplash.com/photos/oMpAz-DN-9I
+  author: Greg Rakozy
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+theme_set(theme_minimal())
+```
+
+Some intro, linking to first post...
+
+## Single box plot
+
+```{r}
+# used to have to
+ggplot(penguins, aes(x = body_mass_g, factor = 1)) +
+  geom_boxplot()
+```
+
+```{r}
+# now
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_boxplot()
+```
+
+## No more `coord_flip()`
+  
+```{r}
+# with coord_flip
+ggplot(penguins, aes(x = species)) +
+  geom_bar() +
+  coord_flip()
+```
+
+```{r}
+# without coord_flip
+ggplot(penguins, aes(y = species)) +
+  geom_bar()
+```
+  
+## scales & forcats 
+
+to improve visualisations -- don't think of it just as cosmetic
+
+```{r}
+library(scales)
+```
+
+```{r}
+penguins %>%
+  count(species) %>%
+  mutate(prop = n / sum(n)) %>%
+  ggplot(aes(x = prop, y = species)) +
+  geom_col()
+```
+
+```{r}
+penguins %>%
+  count(species) %>%
+  mutate(prop = n / sum(n)) %>%
+  ggplot(aes(x = prop, y = fct_reorder(species, prop))) +
+  geom_col() +
+  scale_x_continuous(labels = label_percent(accuracy = 1))
+```
+
+## legend ordering
+
+ordering the legend the same order of data in line plots
+
+Some outro, what's coming...
