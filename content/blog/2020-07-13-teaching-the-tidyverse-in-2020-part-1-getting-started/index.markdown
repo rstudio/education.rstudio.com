@@ -16,13 +16,21 @@ photo:
 The oldest package in the tidyverse (ggplot2) has now been around for [13 years](https://qz.com/1007328/all-hail-ggplot2-the-code-powering-all-those-excellent-charts-is-10-years-old/)! And we've been using the term "tidyverse" to describe the collection of these packages [since 2016](https://twitter.com/hadleywickham/status/959507805282582528?s=20).  
 
 The tidyverse continues to evolve and some of the recent updates to tidyverse packages are specifically designed to make it easier for new learners to get started with doing data science in R. 
-Whether you've been teaching the tidyverse for years or you're new to it, it's useful to catch up on what's new in the tidyverse!
+Whether you've been teaching the tidyverse for years or you're new to it, it's useful to periodically catch up with what's new in the tidyverse.
 
-This is the first of a four part series of blog posts that to be published throughout this week on "teaching the tidyverse in 2020".
-The focus of this first post is getting started with the tidyverse. 
-The remaining posts in the series will focus on recent updates to the tidyverse that educators might want to have on their radar, sprinkled with suggestions for incorporating them into your teaching. 
+This week's theme on the blog is "teaching the tidyverse in 2020" to be covered in four blog posts that will be published throughout the week:
 
-A couple housekeeping items before we get started:
+1. Getting Started
+2. Data visualisation
+3. Data wrangling and tidying
+4. When to purrr?
+
+In each of the posts we will highlight on recent updates to the tidyverse that educators might want to have on their radar, sprinkled with suggestions for incorporating them into your teaching. 
+
+A few housekeeping items before we get started:
+
+- This series of blog posts, and especially this first one, assumes that you are an educator who is teaching an R at the introductory level to students who are new to R or statistics or programming or all of the above. 
+Some of the tips in the upcoming posts will be useful for more advanced courses as well, but this first post post is, well, exactly as its name suggests, is most useful for audiences that are just getting started.
 
 - For many of the code examples I will use the `penguins` dataset from the awesome [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package. So let's go ahead and load it.
 
@@ -32,20 +40,21 @@ A couple housekeeping items before we get started:
 library(palmerpenguins)
 ```
 
-- This series of blog posts, and especially this first one, assumes you are an educator who is teaching an R at the introductory level to students who are new to R or statistics or programming or all of the above. 
-Some of the tips in the upcoming posts will be useful for more advanced courses as well, but this first post post is, well, exactly as its name suggests, is most useful for audiences that are just getting started.
+Let's get started!
+
+---
 
 So, what is the tidyverse? 
 
 > The [tidyverse](https://tidyverse.org/) is an opinionated collection of R packages designed for data science. 
-> All packages share an underlying design philosophy, grammar, and data structures.
+> All packages share an underlying design philosophy, grammar, and data structures. [[Source]](https://tidyverse.org/)
 
 If you're a tidyverse user and/or an avid reader of this blog, you probably already know this. 
 But how about your students? 
-Do these words mean anything to them the first time they hear these sentences? 
+Do these words mean anything to your students the first time they hear them? 
 How do you introduce your students to the tidyverse, especially if they are also new to R?
 
-## 1. Start with the core packages
+## Start with the core packages
 
 Briefly state the primary purpose of each, in the order that students will encounter them in your course, e.g.
 
@@ -59,9 +68,9 @@ Briefly state the primary purpose of each, in the order that students will encou
 - **purrr**: functional programming
   
 This is the order I recommend and the order that follows the curriculum outlined in [Data Science in a Box](https://datasciencebox.org/). 
-For audiences that are new to data science, R, and programming, I strongly recommend starting with visualisation (ggplot2) and delaying introducing functional programming (purrr) till later.^[More on why and how to delay introducing purrr in the last post in the series!]
+Start with visualisation (ggplot2) and delay introducing functional programming (purrr) till later.^[More on why and how to delay introducing purrr in the last post in the series!]
 
-I like doing this introduction with a visual showcasing the pretty hex package logos. 
+I like introducing the tidyverse with a visual showcasing the pretty hex package logos. 
 I couldn't say for sure that this adds to learning, but it sure draws students in!
 
 <div class="figure" style="text-align: center">
@@ -73,7 +82,7 @@ The important thing to note here is that I don't recommend bringing up the [non-
 Regardless of the level at which you're teaching, chances are you won't be using *all* of those packages in a single course. 
 I recommend introducing other packages used in your course (whether they are a part of the tidyverse or not) as they become relevant to the topic you're covering, and simply highlight that the packages from the wider tidyverse share the design philosophy, grammar, and data structures as the core packages, e.g. the [rvest](rvest.tidyverse.org) package for web scraping plays nicely with pipes.
 
-## 2. `library(tidyverse)`
+## `library(tidyverse)`
 
 Load all packages with `library(tidyverse)` instead of loading the core packages individually.
 This is especially useful if you are taking the ["let them eat cake first"](https://youtu.be/fQ4t7p6ZXDg) approach and presenting interesting and complex examples on day one of the course. 
@@ -84,7 +93,7 @@ You would, of course, want to mention the names of individual packages that make
 A useful side-effect of this is that you get access to the [few functions in the tidyverse meta package](https://tidyverse.tidyverse.org/reference/index.html). 
 The `tidyverse_sitrep()` function (which gives a situation report on the tidyverse packages, i.e. a list of all installed tidyverse packages and their versions) and the `tidyverse_update()` function (which updates all tidyverse packages) can be useful when debugging code, especially if a student is getting an output that looks different than yours after running the same lines of code.
 
-## 3. Review the package loading message
+## Review the package loading message
 
 Review what the message that is printed when the tidyverse package is loaded means.
 
@@ -94,7 +103,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ──────────────────────────────────────── tidyverse 1.3.0 ──
+## ── Attaching packages ────────────────────────────────── tidyverse 1.3.0 ──
 ```
 
 ```
@@ -105,7 +114,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Conflicts ─────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ───────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ```
@@ -170,7 +179,7 @@ penguins %>%
 
 Et voilà! This is looking much better.
 
-## 4. Help them get help
+## Help them get help
 
 ### Anatomy of R help docs
 
@@ -214,7 +223,7 @@ While I don't think formally introducing reprexes very early on will be very pro
 
 <img src="img/tidy-papers.png" align="right" height="250" alt="Screenshots of the two tidyverse papers referenced in text."></a>
 
-## 5. Provide background
+## Provide background
 
 I strongly recommend assigning (or at least suggesting) the following papers as reading early on in your course.
 
