@@ -5,9 +5,10 @@ author:
 date: '2020-03-24'
 categories:
   - teach
+  - certify
 tags:
-  - online
   - teach
+  - certify
 description: |
   Applications for RStudio's instructor training and certification program have reopened.
 slug: reopening-training-applications

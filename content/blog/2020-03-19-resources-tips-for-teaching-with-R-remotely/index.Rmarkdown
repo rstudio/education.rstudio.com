@@ -8,7 +8,7 @@ categories:
   - teach
 tags:
   - resources
-  - online education
+  - rstudio-cloud
 author: [mine]
 photo:
   url: https://unsplash.com/photos/yW-Qgw_IJXg
