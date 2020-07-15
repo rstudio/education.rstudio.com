@@ -92,7 +92,7 @@ penguins %>%
   geom_col()
 ```
 
-First, let's reorder the bars in descending order, with the penguin with the highest proportion on top. We use `fct_reorder()` function from the forcats package for this. We can read `fct_reorder(species, prop)` as "reorder the levels of `species` based on the values of `prop`".
+First, let's reorder the bars in descending order, with the penguin species with the highest proportion on top. We use `fct_reorder()` function from the forcats package for this. We can read `fct_reorder(species, prop)` as "reorder the levels of `species` based on the values of `prop`".
 
 ```{r penguins-species-props-bar-reorder}
 penguins %>%
