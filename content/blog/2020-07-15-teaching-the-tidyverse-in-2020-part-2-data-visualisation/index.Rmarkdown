@@ -61,7 +61,7 @@ ggplot(penguins, aes(x = species)) +
   coord_flip()
 ```
 
-`geom_bar()` now works in both directions, do the categorical variable can be directly mapped to the `y` aesthetic to achieve the horizontal box plot.
+`geom_bar()` now works in both directions, so the categorical variable can be directly mapped to the `y` aesthetic to achieve the horizontal box plot.
 
 ```{r penguins-species-bar}
 ggplot(penguins, aes(y = species)) +
