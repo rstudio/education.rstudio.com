@@ -57,10 +57,6 @@ ggplot(penguins, aes(y = body_mass_g, factor = 1)) +
   geom_boxplot()
 ```
 
-```
-## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
-```
-
 <img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-old-1.png" width="672" />
 
 You can now (or more like for the [last couple years](https://github.com/tidyverse/ggplot2/issues/2110)!) omit `factor = 1`!
@@ -69,10 +65,6 @@ You can now (or more like for the [last couple years](https://github.com/tidyver
 ```r
 ggplot(penguins, aes(y = body_mass_g)) +
   geom_boxplot()
-```
-
-```
-## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
 ```
 
 <img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-new-1.png" width="672" />

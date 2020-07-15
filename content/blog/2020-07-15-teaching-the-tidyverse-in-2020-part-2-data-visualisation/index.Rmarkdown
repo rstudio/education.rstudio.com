@@ -39,14 +39,14 @@ glimpse(penguins)
 
 At some point in ggplot2 history making a box plot of a single variable required adding `factor = 1` to the aesthetic mapping, which I never found to be easy to explain.
 
-```{r boxplot-old}
+```{r boxplot-old, warning=FALSE}
 ggplot(penguins, aes(y = body_mass_g, factor = 1)) +
   geom_boxplot()
 ```
 
 You can now (or more like for the [last couple years](https://github.com/tidyverse/ggplot2/issues/2110)!) omit `factor = 1`!
 
-```{r boxplot-new}
+```{r boxplot-new, warning=FALSE}
 ggplot(penguins, aes(y = body_mass_g)) +
   geom_boxplot()
 ```
