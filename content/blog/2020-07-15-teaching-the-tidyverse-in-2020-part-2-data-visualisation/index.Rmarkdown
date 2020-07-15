@@ -37,7 +37,7 @@ glimpse(penguins)
 
 ## Making a single box
 
-At some point in ggplot2 history making a box plot of a single variable required adding `factor = 1` to the aesthetic mapping, which I never found to be easy to explain.
+At some point in ggplot2 history, making a box plot of a single variable required adding `factor = 1` to the aesthetic mapping, which I never found to be easy to explain.
 
 ```{r boxplot-old}
 ggplot(penguins, aes(y = body_mass_g, factor = 1)) +
