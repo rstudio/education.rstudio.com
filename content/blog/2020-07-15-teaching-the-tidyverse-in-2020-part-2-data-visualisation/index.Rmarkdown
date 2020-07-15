@@ -147,7 +147,7 @@ ggplot2 is a vast package, and I don't think it's feasible to teach the complete
 
 ## The rest of the gg-verse
 
-There are many packages that extend ggplot2 (e.g. [gganimate](https://gganimate.com/), [ggridges](https://wilkelab.org/ggridges/), [ggrepel](https://ggrepel.slowkow.com/), [GGally](https://ggobi.github.io/ggally/)) and just like it's not possible to cover all of ggplot2 in an intro course, it's definitely not possible to cover the entire gg-verse. However it is useful to introduce your students to some of these packages just so they are aware of the existence of the larger ecosystem.
+There are many packages that extend ggplot2 (e.g. [gganimate](https://gganimate.com/), [ggridges](https://wilkelab.org/ggridges/), [ggrepel](https://ggrepel.slowkow.com/), [GGally](https://ggobi.github.io/ggally/)) and just like it's not possible to cover all of ggplot2 in an intro course, it's definitely not possible to cover the entire gg-verse. However, it is useful to introduce your students to some of these packages so they are aware of the existence of the larger ecosystem.
 
 A particularly good place to start is when you find a pain point with ggplot2 and the solution is using one of these other packages (e.g. ggrepel for labelling data points on a plot without overlapping text).
 
