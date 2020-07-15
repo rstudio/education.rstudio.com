@@ -18,7 +18,7 @@ editor_options:
 
 This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. The following is a list includes new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
 
-Let's load the tidyverse the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) packages.
+Let's start by loading the tidyverse and [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) packages.
 
 
 ```r
@@ -28,7 +28,7 @@ library(palmerpenguins)
 
 
 
-We'll use the `penguins` data from the palmerpenguins package. You can read about the variables in the data frame [here](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) and a take a quick peek is provided below.
+We'll be using the `penguins` data from the palmerpenguins package. You can read about the variables in the data frame [here](https://allisonhorst.github.io/palmerpenguins/reference/penguins.html) and a quick peek is provided below.
 
 
 ```r
@@ -150,9 +150,9 @@ penguins %>%
 
 <img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-1.png" width="672" />
 
-The forcats package contains a [variety of functions](https://forcats.tidyverse.org/reference/index.html) starting with the prefix `fct_` that operate on factor levels. Perhaps unsurprisingly, they're named pretty intuitively (at least for English speakers). (Side note: After `fct_reorder()`, my favourite function for improving visualisations of hairy survey data with factors with *many* levels is [`fct_lump()`](https://forcats.tidyverse.org/reference/fct_lump.html).)
+The forcats package contains a [variety of functions](https://forcats.tidyverse.org/reference/index.html) starting with the prefix `fct_` that operate on factor levels. Perhaps unsurprisingly, they're named pretty intuitively (at least for English speakers). (Side note: After `fct_reorder()`, my favourite function for improving visualisations of messy survey data with factors with *many* levels is [`fct_lump()`](https://forcats.tidyverse.org/reference/fct_lump.html).)
 
-Next, let's think about how we would interpret this visualisation. I would probably say something like "Adelie penguins make up over 40% of the sample, followed by Gentoo penguins roughly over 35%, and Chinstrap penguins roughly around 20%". But the x-axis is showing proportions instead of percentages.
+Next, let's think about how we would interpret this visualisation. I would probably say something like "Adelie penguins make up over 40% of the sample, followed by Gentoo penguins at roughly over 35%, and Chinstrap penguins make up the remaining 20%". But the x-axis is showing proportions instead of percentages.
 
 The scales package offers a [variety of functions](https://scales.r-lib.org/reference/index.html), starting with the prefix `label_*` that help with this sort of task.
 
