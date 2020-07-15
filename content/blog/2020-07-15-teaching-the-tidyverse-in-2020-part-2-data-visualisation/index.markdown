@@ -16,7 +16,7 @@ editor_options:
     canonical: true
 ---
 
-This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. The following is a list includes new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
+This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. In this post, I'll highlight some new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
 
 Let's start by loading the tidyverse and [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) packages.
 
@@ -49,7 +49,7 @@ glimpse(penguins)
 
 ## Making a single box
 
-At some point in ggplot2 history making a box plot of a single variable required adding `factor = 1` to the aesthetic mapping, which I never found to be easy to explain.
+At some point in ggplot2 history, making a box plot of a single variable required adding `factor = 1` to the aesthetic mapping, which I never found to be easy to explain.
 
 
 ```r
@@ -82,7 +82,7 @@ ggplot(penguins, aes(x = species)) +
 
 <img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-bar-coord-flip-1.png" width="672" />
 
-`geom_bar()` now works in both directions, do the categorical variable can be directly mapped to the `y` aesthetic to achieve the horizontal box plot.
+`geom_bar()` now works in both directions, so the categorical variable can be directly mapped to the `y` aesthetic to achieve the horizontal box plot.
 
 
 ```r
@@ -129,7 +129,7 @@ penguins %>%
 
 <img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-1.png" width="672" />
 
-First, let's reorder the bars in descending order, with the penguin with the highest proportion on top. We use `fct_reorder()` function from the forcats package for this. We can read `fct_reorder(species, prop)` as "reorder the levels of `species` based on the values of `prop`".
+First, let's reorder the bars in descending order, with the penguin species with the highest proportion on top. We use `fct_reorder()` function from the forcats package for this. We can read `fct_reorder(species, prop)` as "reorder the levels of `species` based on the values of `prop`".
 
 
 ```r
@@ -194,15 +194,15 @@ ggplot2 is a vast package, and I don't think it's feasible to teach the complete
 
 ## The rest of the gg-verse
 
-There are many packages that extend ggplot2 (e.g. [gganimate](https://gganimate.com/), [ggridges](https://wilkelab.org/ggridges/), [ggrepel](https://ggrepel.slowkow.com/), [GGally](https://ggobi.github.io/ggally/)) and just like it's not possible to cover all of ggplot2 in an intro course, it's definitely not possible to cover the entire gg-verse. However it is useful to introduce your students to some of these packages just so they are aware of the existence of the larger ecosystem.
+There are many packages that extend ggplot2 (e.g. [gganimate](https://gganimate.com/), [ggridges](https://wilkelab.org/ggridges/), [ggrepel](https://ggrepel.slowkow.com/), [GGally](https://ggobi.github.io/ggally/)) and just like it's not possible to cover all of ggplot2 in an intro course, it's definitely not possible to cover the entire gg-verse. However, it is useful to introduce your students to some of these packages so they are aware of the existence of the larger ecosystem.
 
 A particularly good place to start is when you find a pain point with ggplot2 and the solution is using one of these other packages (e.g. ggrepel for labelling data points on a plot without overlapping text).
 
 Another good approach for introducing these packages are assignments where students independently explore packages you haven't explicitly taught them. I like doing this using the following two assignments:
 
--   **You gotta pick a package or two:** Provide a list of fun and/or easy to onboard packages and ask students to read the package documentation and use the package to do "something".
+-   **You gotta pick a package or two:** Provide a list of fun and/or easy to onboard packages and ask students to read the package documentation and use the package to do something.
 
--   **Mirror, mirror on the wall, who's the ugliest of them all?** I got the idea for this assignment Give a simple plot and ask students to make the plot as ugly as possible. I like doing this with a disclaimer that says "*I realize that ugly is subjective, so we're mostly looking to see if you can figure out how to change the look of a plot using help files of functions you haven't learned before. As you do, try to make your plot as visually unappealing as possible.*"I got the idea for this assignment from Drew Steen, who shared [on Twitter](https://twitter.com/biogeobiochem/status/1172547837046820864) sample student plots that are, well, awful, in the best way possible.
+-   **Mirror, mirror on the wall, who's the ugliest of them all?** I got the idea for this assignment Give a simple plot and ask students to make the plot as ugly as possible. I like doing this with a disclaimer that says "*I realize that ugly is subjective, so we're mostly looking to see if you can figure out how to change the look of a plot using help files of functions you haven't learned before. As you do, try to make your plot as visually unappealing as possible.*"I got the idea for this assignment from Drew Steen, who shared [on Twitter](https://twitter.com/biogeobiochem/status/1172547837046820864) sample student plots that are, well, awful, in the best way possible. Alison Horst also has a lovely blog post where she shares her experience with a similar assignment [here](https://www.allisonhorst.com/post/do-your-worst/).
 
 You can find a more detailed write up of these assignments [here](https://introds.org/hw/hw-10/hw-10-wrap-up.html).
 

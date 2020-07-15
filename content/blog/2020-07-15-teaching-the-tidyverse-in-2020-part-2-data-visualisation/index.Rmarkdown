@@ -153,9 +153,9 @@ A particularly good place to start is when you find a pain point with ggplot2 an
 
 Another good approach for introducing these packages are assignments where students independently explore packages you haven't explicitly taught them. I like doing this using the following two assignments:
 
--   **You gotta pick a package or two:** Provide a list of fun and/or easy to onboard packages and ask students to read the package documentation and use the package to do "something".
+-   **You gotta pick a package or two:** Provide a list of fun and/or easy to onboard packages and ask students to read the package documentation and use the package to do something.
 
--   **Mirror, mirror on the wall, who's the ugliest of them all?** I got the idea for this assignment Give a simple plot and ask students to make the plot as ugly as possible. I like doing this with a disclaimer that says "*I realize that ugly is subjective, so we're mostly looking to see if you can figure out how to change the look of a plot using help files of functions you haven't learned before. As you do, try to make your plot as visually unappealing as possible.*"I got the idea for this assignment from Drew Steen, who shared [on Twitter](https://twitter.com/biogeobiochem/status/1172547837046820864) sample student plots that are, well, awful, in the best way possible.
+-   **Mirror, mirror on the wall, who's the ugliest of them all?** I got the idea for this assignment Give a simple plot and ask students to make the plot as ugly as possible. I like doing this with a disclaimer that says "*I realize that ugly is subjective, so we're mostly looking to see if you can figure out how to change the look of a plot using help files of functions you haven't learned before. As you do, try to make your plot as visually unappealing as possible.*"I got the idea for this assignment from Drew Steen, who shared [on Twitter](https://twitter.com/biogeobiochem/status/1172547837046820864) sample student plots that are, well, awful, in the best way possible. Alison Horst also has a lovely blog post where she shares her experience with a similar assignment [here](https://www.allisonhorst.com/post/do-your-worst/).
 
 You can find a more detailed write up of these assignments [here](https://introds.org/hw/hw-10/hw-10-wrap-up.html).
 
