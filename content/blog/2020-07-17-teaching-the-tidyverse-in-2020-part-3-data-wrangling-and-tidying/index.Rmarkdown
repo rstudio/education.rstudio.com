@@ -6,7 +6,7 @@ categories:
   - teach
 tags:
   - tidyverse
-authors:
+author:
   - mine
 photo:
   url: https://unsplash.com/photos/wEL2zPX3jDg
