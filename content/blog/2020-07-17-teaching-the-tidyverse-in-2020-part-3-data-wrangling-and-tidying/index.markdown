@@ -15,7 +15,7 @@ photo:
 
 
 
-This is the third blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), the second on [data visualisation](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-2-data-visualisation/), and today our focus is data visualisation. In this post, I'll highlight some new(ish) features of [dplyr](https://dplyr.tidyverse.org/) and [tidyr](https://tidyr.tidyverse.org/). Over the past year there has been lots of exciting updates to both of these packages and these updates are well documented in the [tidyverse blog](https://www.tidyverse.org/blog/). In this post I will focus specifically on updates that apply to introductory data science or statistics curricula.
+This is the third blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), the second on [data visualisation](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-2-data-visualisation/), and today our focus is data wrangling and tidying. In this post, I'll highlight some new(ish) features of [dplyr](https://dplyr.tidyverse.org/) and [tidyr](https://tidyr.tidyverse.org/). Over the past year there has been lots of exciting updates to both of these packages and these updates are well documented in the [tidyverse blog](https://www.tidyverse.org/blog/). My goal here is to highlight updates that apply to introductory data science or statistics curricula.
 
 Throughout this post we'll be using the tidyverse package, so let's go ahead and load it.
 
@@ -51,11 +51,11 @@ penguins_madeup_wide
 ## 4 Norma Jean female        4235        3220        4019 FALSE
 ```
 
-And suppose we want to create the following visualisation.
+Now suppose we want to create the following visualisation.
 
 <img src="/blog/2020-07-17-teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/index_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
-To make this visualisation we need to get our data frame to look like the following, where each point plotted corresponds to one row of the data frame and body mass measurements appear in a single column with a new columns (`measurement`) identifying which of the three measurements the record comes from.
+To make this visualisation we need to get our data frame to look like the output shown below, where each point plotted corresponds to one row of the data frame and body mass measurements appear in a single column with a new columns (`measurement`) identifying which of the three measurements the record comes from.
 
 
 ```
