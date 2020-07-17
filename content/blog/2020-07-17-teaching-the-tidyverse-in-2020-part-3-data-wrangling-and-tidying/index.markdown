@@ -84,11 +84,11 @@ Before embarking in the code, it's useful to ask questions about what the expect
 
 In this case we want to go from a wider data frame (with more columns) to a longer data frame (with fewer columns, and more rows), so we will use the `pivot_longer()` function. We need to tell the function, at a minimum,
 
--   which columns to pivot: any column that starts with the character string `"body_mass_g"`,
+-   which columns to pivot: any column that starts with the character string `"body_mass"`,
 
 -   what the name of the new variable where we put the *names* of the variables that are being pivoted should go to: `names_to = "measurement"`, and
 
--   what the name of the new variable where the *values* of the the variables that are being pivoted should go to: `values_to = "body_mass_g"`.
+-   what the name of the new variable where the *values* of the the variables that are being pivoted should go to: `values_to = "body_mass"`.
 
 
 ```r
@@ -116,7 +116,7 @@ penguins_madeup_wide %>%
 ## 12 Norma Jean female FALSE     body_mass_3      4019
 ```
 
-This is looking pretty good! But remember that the `measurement` variable we had mapped to the x-axis of our visualisation had the values 1, 2, and 3 (not body\_mass\_g\_1, body\_mass\_g\_2, and body\_mass\_g\_3). We could manipulate the `measurement` variable with a `mutate()` after pivoting to remove the character string `"body_mass_g_"` from its values, but the `pivot_*()` functions offer additional arguments to do this sort of manipulation task at the time of pivoting. The argument we need here is `names_prefix`, which takes a regular expression used to remove matching text from the start of each variable name. So, let's try again with this argument added to our `pivot_longer()` call.
+This is looking pretty good! But remember that the `measurement` variable we had mapped to the x-axis of our visualisation had the values 1, 2, and 3 (not body\_mass\_1, body\_mass\_2, and body\_mass\_3). We could manipulate the `measurement` variable with a `mutate()` after pivoting to remove the character string `"body_mass_"` from its values, but the `pivot_*()` functions offer additional arguments to do this sort of manipulation task at the time of pivoting. The argument we need here is `names_prefix`, which takes a regular expression used to remove matching text from the start of each variable name. So, let's try again with this argument added to our `pivot_longer()` call.
 
 
 ```r
@@ -176,7 +176,7 @@ penguins_madeup_long %>%
 
 <img src="/blog/2020-07-17-teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/index_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
-If you wanted to get really fancy, you can do direct labelling with the [ggrepel](https://ggrepel.slowkow.com/) package, using the `geom_label_repel()` function. Since we only want the third measurement to be labeled, we can filter the data for that measurement and label the points with the `names`s of penguins. Let's fix up all the other labels in the plot too while we're at it.
+If you wanted to get really fancy, you can do directly label the lines with the the `geom_label_repel()` function from the [ggrepel](https://ggrepel.slowkow.com/) package. Since we only want the third measurement to be labeled, we can filter the data for that measurement and label the points with the `name`s of penguins. While we're at it, let's fix up all the other labels in the plot as well.
 
 
 ```r
