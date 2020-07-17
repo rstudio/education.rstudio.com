@@ -127,7 +127,7 @@ penguins_madeup_long %>%
 
 If you wanted to get really fancy, you can do directly label the lines with the the `geom_label_repel()` function from the [ggrepel](https://ggrepel.slowkow.com/) package. Since we only want the third measurement to be labeled, we can filter the data for that measurement and label the points with the `name`s of penguins. While we're at it, let's fix up all the other labels in the plot as well.
 
-```{r}
+```{r fig.height=5}
 library(ggrepel)
 
 ggplot(penguins_madeup_long, aes(x = measurement, y = body_mass, 
