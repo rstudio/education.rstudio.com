@@ -7,7 +7,7 @@ categories:
 tags:
   - tidyverse
 authors:
-  - nine
+  - mine
 photo:
   url: https://unsplash.com/photos/wEL2zPX3jDg
   author: Fabio Ballasina
