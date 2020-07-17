@@ -93,9 +93,11 @@ In this case we want to go from a wider data frame (with more columns) to a long
 
 ```r
 penguins_madeup_wide %>%
-  pivot_longer(cols = starts_with("body_mass"), 
-               names_to = "measurement", 
-               values_to = "body_mass")
+  pivot_longer(
+    cols = starts_with("body_mass"),
+    names_to = "measurement",
+    values_to = "body_mass"
+  )
 ```
 
 ```
@@ -121,10 +123,12 @@ This is looking pretty good! But remember that the `measurement` variable we had
 
 ```r
 penguins_madeup_long <- penguins_madeup_wide %>%
-  pivot_longer(cols = starts_with("body_mass"), 
-               names_to = "measurement", 
-               names_prefix = "body_mass_",
-               values_to = "body_mass")
+  pivot_longer(
+    cols = starts_with("body_mass"),
+    names_to = "measurement",
+    names_prefix = "body_mass_",
+    values_to = "body_mass"
+  )
 
 penguins_madeup_long
 ```
@@ -182,8 +186,8 @@ If you wanted to get really fancy, you can do directly label the lines with the 
 ```r
 library(ggrepel)
 
-ggplot(penguins_madeup_long, aes(x = measurement, y = body_mass, 
-             group = name, color = name)) +
+ggplot(penguins_madeup_long, 
+       aes(x = measurement, y = body_mass, group = name, color = name)) +
   geom_point() +
   geom_line() +
   guides(color = FALSE) +
@@ -282,8 +286,10 @@ While the code above makes it very explicit that you're calculating two summary 
 
 ```r
 penguins_madeup_wide %>%
-  summarise(across(starts_with("body_mass"), 
-                   list(sample_mean = mean, sample_sd = sd)))
+  summarise(across(
+    starts_with("body_mass"),
+    list(sample_mean = mean, sample_sd = sd)
+  ))
 ```
 
 ```
@@ -395,7 +401,7 @@ penguins_madeup_wide %>%
 ## 3 male   TRUE       5414.
 ```
 
-There is nothing new in this code, but the message *`summarise()` ungrouping output (override with `.groups` argument)* is new, so you might have old code in your teaching materials that didn't produce this message before that now does. If you carefully look at this output you will see that the data are still grouped by `sex`. This behaviour has not changed, but previously wasn't highlighted with a message, which often caused confusion for users. If you want to turn off the message, you need to decide on grouping behaviour and explicitly state this decision in a new argument in `summarise()`: `.groups`. Your options are `"drop_last"` (drop last level of grouping, default behaviour), `"drop"` (all groups are dropped), `"keep"` (keep grouping same as the input data for the function), `"rowwise"` (make each row its own group). For example, if you don't want your data to be grouped at the end of this pipeline, you would used the `"drop"` option.
+There is nothing new in this code, but the message \"*`summarise()` regrouping output by `sex` (override with `.groups` argument)\"* is new, so you might have code in your teaching materials that didn't produce this message before that now does. If you carefully look at the output you will see that the data are still grouped by `sex`. This behaviour has not changed, but previously wasn't highlighted with a message, which often caused confusion for users. If you want to turn off the message, you need to decide on grouping behaviour and explicitly state this decision in a new argument in `summarise()`: `.groups`. Your options are `"drop_last"` (drop last level of grouping, default behaviour), `"drop"` (all groups are dropped), `"keep"` (keep grouping same as the input data for the function), `"rowwise"` (make each row its own group). For example, if you don't want your data to be grouped at the end of this pipeline, you would used the `"drop"` option.
 
 
 ```r
@@ -415,4 +421,4 @@ penguins_madeup_wide %>%
 
 To learn more about this behaviour and the reasoning behind the changes, see [here](https://www.tidyverse.org/blog/2020/05/dplyr-1-0-0-last-minute-additions/). If you are teaching new R users, I don't think there is a good reason to go into the history of the message, and hopefully this message will steer new learners to be deliberate about how they use groups, as opposed to stumble into results without intentional grouping.
 
-That's all I have on data wrangling and tidying in 2020. And we have one post left in the series: "When to purr?" 🐈.
+That's all I have on teaching data wrangling and tidying in 2020. We have one post left in the series: "When to purr?" 🐈.
