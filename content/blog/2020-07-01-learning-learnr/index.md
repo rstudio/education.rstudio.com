@@ -5,6 +5,7 @@ author:
 date: '2020-07-01'
 tags:
   - internship
+  - learnr
 slug: learning-learnr
 description: |
   Learning how to use and extend the learnr package.

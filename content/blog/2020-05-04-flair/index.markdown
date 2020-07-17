@@ -19,6 +19,12 @@ photo:
 
 
 
+<hr>
+
+> **Update:** Watch a 15 minute talk about this package: <br>
+> <i class="fas fa-link fa-fw"></i> https://kbod.win/talks/user_2020 <br>
+> <i class="fab fa-youtube fa-fw"></i> https://youtu.be/sXFJ_AZ4jeA
+<hr>
 
 It is my distinct pleasure today to introduce you to the [flair package](https://kbodwin.github.io/flair/).
 
