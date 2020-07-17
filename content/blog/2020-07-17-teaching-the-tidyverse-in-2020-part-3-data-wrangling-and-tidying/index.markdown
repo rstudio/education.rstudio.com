@@ -31,11 +31,11 @@ A common task in data analysis is going from wide data (e.g. where repeated meas
 
 ```r
 penguins_madeup_wide <- tribble(
-  ~name,        ~sex,     ~body_mass_1, ~body_mass_2, ~body_mass_3, ~tap_dance,
-  "Mumble",     "male",   4801,         5699,         5743,         TRUE,
-  "Gloria",     "female", 4785,         3092,         4220,         FALSE,
-  "Memphis",    "male",   3349,         4186,         4454,         FALSE,
-  "Norma Jean", "female", 4235,         3220,         4019,         FALSE
+  ~name,        ~sex,     ~tap_dance, ~body_mass_1, ~body_mass_2, ~body_mass_3, 
+  "Mumble",     "male",   TRUE,       4801,         5699,         5743,         
+  "Gloria",     "female", FALSE,      4785,         3092,         4220,         
+  "Memphis",    "male",   FALSE,      3349,         4186,         4454,         
+  "Norma Jean", "female", FALSE,      4235,         3220,         4019        
 )
 
 penguins_madeup_wide
@@ -43,12 +43,12 @@ penguins_madeup_wide
 
 ```
 ## # A tibble: 4 x 6
-##   name       sex    body_mass_1 body_mass_2 body_mass_3 tap_dance
-##   <chr>      <chr>        <dbl>       <dbl>       <dbl> <lgl>    
-## 1 Mumble     male          4801        5699        5743 TRUE     
-## 2 Gloria     female        4785        3092        4220 FALSE    
-## 3 Memphis    male          3349        4186        4454 FALSE    
-## 4 Norma Jean female        4235        3220        4019 FALSE
+##   name       sex    tap_dance body_mass_1 body_mass_2 body_mass_3
+##   <chr>      <chr>  <lgl>           <dbl>       <dbl>       <dbl>
+## 1 Mumble     male   TRUE             4801        5699        5743
+## 2 Gloria     female FALSE            4785        3092        4220
+## 3 Memphis    male   FALSE            3349        4186        4454
+## 4 Norma Jean female FALSE            4235        3220        4019
 ```
 
 Now suppose we want to create the following visualisation.
@@ -218,12 +218,12 @@ penguins_madeup_wide
 
 ```
 ## # A tibble: 4 x 6
-##   name       sex    body_mass_1 body_mass_2 body_mass_3 tap_dance
-##   <chr>      <chr>        <dbl>       <dbl>       <dbl> <lgl>    
-## 1 Mumble     male          4801        5699        5743 TRUE     
-## 2 Gloria     female        4785        3092        4220 FALSE    
-## 3 Memphis    male          3349        4186        4454 FALSE    
-## 4 Norma Jean female        4235        3220        4019 FALSE
+##   name       sex    tap_dance body_mass_1 body_mass_2 body_mass_3
+##   <chr>      <chr>  <lgl>           <dbl>       <dbl>       <dbl>
+## 1 Mumble     male   TRUE             4801        5699        5743
+## 2 Gloria     female FALSE            4785        3092        4220
+## 3 Memphis    male   FALSE            3349        4186        4454
+## 4 Norma Jean female FALSE            4235        3220        4019
 ```
 
 Suppose you want to find the average body mass for each measurement. You can do this with `dplyr::summarise()`, once per each measurement.
@@ -323,12 +323,12 @@ penguins_madeup_wide %>%
 
 ```
 ## # A tibble: 4 x 6
-##   name       sex    body_mass_1 body_mass_2 body_mass_3 tap_dance
-##   <fct>      <fct>        <dbl>       <dbl>       <dbl> <lgl>    
-## 1 Mumble     male          4801        5699        5743 TRUE     
-## 2 Gloria     female        4785        3092        4220 FALSE    
-## 3 Memphis    male          3349        4186        4454 FALSE    
-## 4 Norma Jean female        4235        3220        4019 FALSE
+##   name       sex    tap_dance body_mass_1 body_mass_2 body_mass_3
+##   <fct>      <fct>  <lgl>           <dbl>       <dbl>       <dbl>
+## 1 Mumble     male   TRUE             4801        5699        5743
+## 2 Gloria     female FALSE            4785        3092        4220
+## 3 Memphis    male   FALSE            3349        4186        4454
+## 4 Norma Jean female FALSE            4235        3220        4019
 ```
 
 Note that `across()` supersedes the family of *scoped variants* like `summarise_if()`, `mutate_if()`, `summarise_all()`, etc. While these functions will continue to be supported, if you are teaching data wrangling in 2020, it's best to feature `across()` instead. You can learn more about `across()` and column-wise operations with dyplyr in general in the [column-wise operations](https://dplyr.tidyverse.org/articles/colwise.html) vignette.
@@ -344,12 +344,12 @@ penguins_madeup_wide
 
 ```
 ## # A tibble: 4 x 6
-##   name       sex    body_mass_1 body_mass_2 body_mass_3 tap_dance
-##   <chr>      <chr>        <dbl>       <dbl>       <dbl> <lgl>    
-## 1 Mumble     male          4801        5699        5743 TRUE     
-## 2 Gloria     female        4785        3092        4220 FALSE    
-## 3 Memphis    male          3349        4186        4454 FALSE    
-## 4 Norma Jean female        4235        3220        4019 FALSE
+##   name       sex    tap_dance body_mass_1 body_mass_2 body_mass_3
+##   <chr>      <chr>  <lgl>           <dbl>       <dbl>       <dbl>
+## 1 Mumble     male   TRUE             4801        5699        5743
+## 2 Gloria     female FALSE            4785        3092        4220
+## 3 Memphis    male   FALSE            3349        4186        4454
+## 4 Norma Jean female FALSE            4235        3220        4019
 ```
 
 There are [many ways](http://github.com/jennybc/row-oriented-workflows) of accomplishing this task in R, but the one that I think is the most intuitive is using the `rowwise()` and `c_across()` functions in dplyr.
@@ -366,12 +366,33 @@ penguins_madeup_wide
 ```
 ## # A tibble: 4 x 7
 ## # Rowwise: 
-##   name       sex    body_mass_1 body_mass_2 body_mass_3 tap_dance body_mass_avg
-##   <chr>      <chr>        <dbl>       <dbl>       <dbl> <lgl>             <dbl>
-## 1 Mumble     male          4801        5699        5743 TRUE              5414.
-## 2 Gloria     female        4785        3092        4220 FALSE             4032.
-## 3 Memphis    male          3349        4186        4454 FALSE             3996.
-## 4 Norma Jean female        4235        3220        4019 FALSE             3825.
+##   name       sex    tap_dance body_mass_1 body_mass_2 body_mass_3 body_mass_avg
+##   <chr>      <chr>  <lgl>           <dbl>       <dbl>       <dbl>         <dbl>
+## 1 Mumble     male   TRUE             4801        5699        5743         5414.
+## 2 Gloria     female FALSE            4785        3092        4220         4032.
+## 3 Memphis    male   FALSE            3349        4186        4454         3996.
+## 4 Norma Jean female FALSE            4235        3220        4019         3825.
+```
+
+There are other ways of finding row means in R, e.g. `rowMeans()`, but one nice aspect of this approach is that it's extensible to any function, e.g. let's find row medians instead of row means.
+
+
+```r
+penguins_madeup_wide %>%
+  rowwise() %>%
+  mutate(body_mass_median = median(c_across(starts_with("body_mass"))))
+```
+
+```
+## # A tibble: 4 x 8
+## # Rowwise: 
+##   name  sex   tap_dance body_mass_1 body_mass_2 body_mass_3 body_mass_avg
+##   <chr> <chr> <lgl>           <dbl>       <dbl>       <dbl>         <dbl>
+## 1 Mumb… male  TRUE             4801        5699        5743         5414.
+## 2 Glor… fema… FALSE            4785        3092        4220         4032.
+## 3 Memp… male  FALSE            3349        4186        4454         3996.
+## 4 Norm… fema… FALSE            4235        3220        4019         3825.
+## # … with 1 more variable: body_mass_median <dbl>
 ```
 
 You can learn more about `rowwise()` and row-wise operations with dyplyr in general in the [row-wise operations](https://dplyr.tidyverse.org/articles/rowwise.html) vignette.
