@@ -4,10 +4,9 @@ author:
   - greg
 date: '2020-03-31'
 categories:
-  - teach
+  - certify
 tags:
-  - online
-  - teach
+  - certify
 description: |
   Welcome the latest cohort of instructors to complete certification.
 slug: march-2020-instructors

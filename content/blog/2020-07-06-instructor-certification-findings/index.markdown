@@ -4,9 +4,9 @@ author:
   - greg
 date: '2020-07-06'
 categories:
-  - teach
+  - certify
 tags:
-  - teach
+  - certify
 slug: instructor-certification-findings
 description: |
   What do our certified instructors think of the program?

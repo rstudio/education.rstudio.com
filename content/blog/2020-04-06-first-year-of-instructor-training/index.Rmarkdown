@@ -4,10 +4,9 @@ author:
   - greg
 date: '2020-04-06'
 categories:
-  - teach
+  - certify
 tags:
-  - online
-  - teach
+  - certify
 description: |
   Here's what we've learned from the first year of RStudio's instructor training and certification program.
 slug: first-year-of-instructor-training
