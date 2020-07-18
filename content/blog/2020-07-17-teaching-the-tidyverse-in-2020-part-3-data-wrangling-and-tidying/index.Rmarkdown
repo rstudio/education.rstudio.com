@@ -1,12 +1,12 @@
 ---
-title: 'Teaching the Tidyverse in 2020 - Part 3: Data Wrangling and tidying'
+title: 'Teaching the Tidyverse in 2020 - Part 3: Data wrangling and tidying'
 date: '2020-07-17'
 slug: teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying
 categories:
   - teach
 tags:
   - tidyverse
-authors:
+author:
   - mine
 photo:
   url: https://unsplash.com/photos/wEL2zPX3jDg
