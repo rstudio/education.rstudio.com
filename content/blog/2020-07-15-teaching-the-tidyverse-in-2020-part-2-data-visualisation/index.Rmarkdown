@@ -1,5 +1,5 @@
 ---
-title: 'Teaching the Tidyverse in 2020 - Part 2: Data Visualisation'
+title: 'Teaching the Tidyverse in 2020 - Part 2: Data visualisation'
 date: '2020-07-15'
 slug: teaching-the-tidyverse-in-2020-part-2-data-visualisation
 categories:
