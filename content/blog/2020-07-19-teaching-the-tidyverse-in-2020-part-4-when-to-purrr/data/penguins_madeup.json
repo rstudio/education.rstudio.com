@@ -1,0 +1,86 @@
+[
+  {
+    "gender": "male",
+    "first_name": "Mumble",
+    "measurements": [
+      {
+        "date": "2007-11-11",
+        "body_mass": 4801,
+        "flipper_length": 181
+      },
+      {
+        "date": "2007-11-16",
+        "body_mass": 5699,
+        "flipper_length": 182
+      },
+      {
+        "date": "2007-11-19",
+        "body_mass": 5743,
+        "flipper_length": 181
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "first_name": "Gloria",
+    "measurements": [
+      {
+        "date": "2007-11-11",
+        "body_mass": 4785,
+        "flipper_length": 186
+      },
+      {
+        "date": "2007-11-14",
+        "body_mass": 3092,
+        "flipper_length": 182
+      },
+      {
+        "date": "2007-11-19",
+        "body_mass": 4220,
+        "flipper_length": 183
+      }
+    ]
+  },
+  {
+    "gender": "male",
+    "first_name": "Memphis",
+    "measurements": [
+      {
+        "date": "2007-11-11",
+        "body_mass": 3349,
+        "flipper_length": 190
+      },
+      {
+        "date": "2007-11-15",
+        "body_mass": 4186,
+        "flipper_length": 188
+      },
+      {
+        "date": "2007-11-17",
+        "body_mass": 4454,
+        "flipper_length": 191
+      }
+    ]
+  },
+  {
+    "gender": "female",
+    "first_name": "Norma Jean",
+    "measurements": [
+      {
+        "date": "2007-11-11",
+        "body_mass": 4235,
+        "flipper_length": 193
+      },
+      {
+        "date": "2007-11-12",
+        "body_mass": 3220,
+        "flipper_length": 191
+      },
+      {
+        "date": "2007-11-18",
+        "body_mass": 4019,
+        "flipper_length": 194
+      }
+    ]
+  }
+]
