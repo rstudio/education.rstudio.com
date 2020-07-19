@@ -16,6 +16,29 @@ editor_options:
     canonical: true
 ---
 
+
+```r
+# From https://ropensci.org/technotes/2020/04/23/rmd-learnings/
+# for alt text without capton
+knitr::knit_hooks$set(
+  plot = function(x, options) {
+    hugoopts <- options$hugoopts
+    paste0(
+      "{", "{<figure src=", # the original code is simpler
+      # but here I need to escape the shortcode!
+      '"', x, '" ',
+      if (!is.null(hugoopts)) {
+        glue::glue_collapse(
+          glue::glue('{names(hugoopts)}="{hugoopts}"'),
+          sep = " "
+        )
+      },
+      ">}}\n"
+    )
+  }
+)
+```
+
 This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. In this post, I'll highlight some new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
 
 Let's start by loading the tidyverse and [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) packages.
@@ -57,7 +80,7 @@ ggplot(penguins, aes(y = body_mass_g, factor = 1)) +
   geom_boxplot()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-old-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-old-1.png" alt="Boxplot of body mass of penguins, using factor = 1 in the code.">}}
 
 You can now (or more like for the [last couple years](https://github.com/tidyverse/ggplot2/issues/2110)!) omit `factor = 1`!
 
@@ -67,7 +90,7 @@ ggplot(penguins, aes(y = body_mass_g)) +
   geom_boxplot()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-new-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/boxplot-new-1.png" alt="Boxplot of body mass of penguins, without using factor = 1 in the code. Same figure as the previous one, despite simpler code.">}}
 
 ## No more `coord_flip()`
 
@@ -80,7 +103,7 @@ ggplot(penguins, aes(x = species)) +
   coord_flip()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-bar-coord-flip-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-bar-coord-flip-1.png" alt="Barplot of species of penguins, using coord_flip in the code.">}}
 
 `geom_bar()` now works in both directions, so the categorical variable can be directly mapped to the `y` aesthetic to achieve the horizontal box plot.
 
@@ -90,7 +113,7 @@ ggplot(penguins, aes(y = species)) +
   geom_bar()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-bar-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-bar-1.png" alt="Barplot of species of penguins, without using coord_flip in the code. Same figure as the previous one, despite simpler code.">}}
 
 You can read more about what this change enables in other geoms [here](https://www.tidyverse.org/blog/2020/03/ggplot2-3-3-0/#bi-directional-geoms-and-stats).
 
@@ -127,7 +150,7 @@ penguins %>%
   geom_col()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-1.png" alt="Relative frequency bar plot of species of penguins.">}}
 
 First, let's reorder the bars in descending order, with the penguin species with the highest proportion on top. We use `fct_reorder()` function from the forcats package for this. We can read `fct_reorder(species, prop)` as "reorder the levels of `species` based on the values of `prop`".
 
@@ -140,7 +163,7 @@ penguins %>%
   geom_col()
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-1.png" alt="Relative frequency bar plot of species of penguins, with bars ordered in descending order.">}}
 
 The forcats package contains a [variety of functions](https://forcats.tidyverse.org/reference/index.html) starting with the prefix `fct_` that operate on factor levels. Perhaps unsurprisingly, they're named pretty intuitively (at least for English speakers). (Side note: After `fct_reorder()`, my favourite function for improving visualisations of messy survey data with factors with *many* levels is [`fct_lump()`](https://forcats.tidyverse.org/reference/fct_lump.html).)
 
@@ -165,7 +188,7 @@ penguins %>%
   scale_x_continuous(labels = label_percent(accuracy = 1))
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-percent-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-percent-1.png" alt="Relative frequency bar plot of species of penguins, with bars ordered in descending order, and axis tick labels are in percentages.">}}
 
 And finally, let's fix up the axis labels.
 
@@ -186,7 +209,7 @@ penguins %>%
   )
 ```
 
-<img src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-percent-labels-1.png" width="672" />
+{{<figure src="/blog/2020-07-15-teaching-the-tidyverse-in-2020-part-2-data-visualisation/index_files/figure-html/penguins-species-props-bar-reorder-percent-labels-1.png" alt="Relative frequency bar plot of species of penguins, with bars ordered in descending order, axis tick labels are in percentages, and with proper axis labels.">}}
 
 Another very attractive feature of ggplot2 is that you get legends for free. But sometimes the factor levels displayed in the legends may not be optimally ordered. In these cases `fct_reorder2()` might be helpful. See [this gist](https://gist.github.com/jennybc/847c6b43c4e35cec2e5bb30a3f38af73) from Jenny Bryan for an example using this function to reorder levels displayed on a legend of a line plot.
 
