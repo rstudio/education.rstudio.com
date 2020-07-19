@@ -47,7 +47,7 @@ dir_ls(path = "data", glob = "*csv")
 
 We can read each of these files with `read_csv()` and bind the rows to create a single data frame.
 
-```{r}
+```{r message=FALSE}
 adelie    <- read_csv("data/Adelie.csv")
 chinstrap <- read_csv("data/Chinstrap.csv")
 gentoo    <- read_csv("data/Gentoo.csv")
@@ -63,13 +63,13 @@ files
 
 The purrr solution to this problem is as follows. It seems pretty straight forward, but it requires understanding what mapping a function over each item of a given vector means.
 
-```{r}
+```{r message=FALSE}
 map_dfr(files, read_csv, .id = "species")
 ```
 
 Alternatively, this can be achieved with the `vroom()` function from the package with the same name.
 
-```{r}
+```{r message=FALSE}
 library(vroom)
 
 vroom(files, id = "species")
@@ -77,7 +77,7 @@ vroom(files, id = "species")
 
 This feels a lot more like the `read_csv()` function your students would undoubtedly be familiar with before they set out to read many csv files at once. The species variable needs to be cleaned up a bit, which we can achieve with character manipulation.
 
-```{r}
+```{r message=FALSE}
 vroom(files, id = "species") %>%
   mutate(
     species = str_remove(species, "data/"),
@@ -130,7 +130,7 @@ To confirm that the `body_mass_summary` column indeed has the summary statistics
 
 ```{r}
 penguins_madeup_list %>%
-  unnest_auto(body_mass_summary)
+  unnest_wider(body_mass_summary)
 ```
 
 What is this unnest magic, you ask? Let's look at that in a bit more detail next.
@@ -141,7 +141,7 @@ JSON is a commonly used hierarchical data type and it is especially commonly use
 
 Let's take a look at our made up penguin data, this time stored in JSON format with a few additional variables. We'll read in the data using the [jsonlite](https://jeroen.cran.dev/jsonlite/ "Link to jsonlite package website") package.
 
-```{r}
+```{r message=FALSE}
 library(jsonlite)
 
 penguins_madeup_json <- read_json("data/penguins_madeup.json")

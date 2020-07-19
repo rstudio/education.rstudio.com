@@ -57,53 +57,8 @@ We can read each of these files with `read_csv()` and bind the rows to create a 
 
 ```r
 adelie    <- read_csv("data/Adelie.csv")
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
-```
-
-```r
 chinstrap <- read_csv("data/Chinstrap.csv")
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
-```
-
-```r
 gentoo    <- read_csv("data/Gentoo.csv")
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
-```
-
-```r
 all_three <- bind_rows(adelie, chinstrap, gentoo, .id = "species")
 ```
 
@@ -124,36 +79,6 @@ The purrr solution to this problem is as follows. It seems pretty straight forwa
 
 ```r
 map_dfr(files, read_csv, .id = "species")
-```
-
-```
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
-## Parsed with column specification:
-## cols(
-##   island = col_character(),
-##   bill_length_mm = col_double(),
-##   bill_depth_mm = col_double(),
-##   flipper_length_mm = col_double(),
-##   body_mass_g = col_double(),
-##   sex = col_character()
-## )
 ```
 
 ```
@@ -183,17 +108,6 @@ vroom(files, id = "species")
 ```
 
 ```
-## Rows: 344
-## Columns: 7
-## Delimiter: ","
-## chr [2]: island, sex
-## dbl [4]: bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g
-## 
-## Use `spec()` to retrieve the guessed column specification
-## Pass a specification to the `col_types` argument to quiet this message
-```
-
-```
 ## # A tibble: 344 x 7
 ##    species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
 ##    <chr>   <chr>           <dbl>         <dbl>            <dbl>       <dbl>
@@ -219,17 +133,6 @@ vroom(files, id = "species") %>%
     species = str_remove(species, "data/"),
     species = str_remove(species, "\\.csv")
     )
-```
-
-```
-## Rows: 344
-## Columns: 7
-## Delimiter: ","
-## chr [2]: island, sex
-## dbl [4]: bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g
-## 
-## Use `spec()` to retrieve the guessed column specification
-## Pass a specification to the `col_types` argument to quiet this message
 ```
 
 ```
@@ -341,11 +244,7 @@ To confirm that the `body_mass_summary` column indeed has the summary statistics
 
 ```r
 penguins_madeup_list %>%
-  unnest_auto(body_mass_summary)
-```
-
-```
-## Using `unnest_wider(body_mass_summary)`; elements have 6 names in common
+  unnest_wider(body_mass_summary)
 ```
 
 ```
@@ -369,20 +268,7 @@ Let's take a look at our made up penguin data, this time stored in JSON format w
 
 ```r
 library(jsonlite)
-```
 
-```
-## 
-## Attaching package: 'jsonlite'
-```
-
-```
-## The following object is masked from 'package:purrr':
-## 
-##     flatten
-```
-
-```r
 penguins_madeup_json <- read_json("data/penguins_madeup.json")
 ```
 
