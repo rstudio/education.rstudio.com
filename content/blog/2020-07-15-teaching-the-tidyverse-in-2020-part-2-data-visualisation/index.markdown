@@ -17,27 +17,6 @@ editor_options:
 ---
 
 
-```r
-# From https://ropensci.org/technotes/2020/04/23/rmd-learnings/
-# for alt text without capton
-knitr::knit_hooks$set(
-  plot = function(x, options) {
-    hugoopts <- options$hugoopts
-    paste0(
-      "{", "{<figure src=", # the original code is simpler
-      # but here I need to escape the shortcode!
-      '"', x, '" ',
-      if (!is.null(hugoopts)) {
-        glue::glue_collapse(
-          glue::glue('{names(hugoopts)}="{hugoopts}"'),
-          sep = " "
-        )
-      },
-      ">}}\n"
-    )
-  }
-)
-```
 
 This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. In this post, I'll highlight some new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
 

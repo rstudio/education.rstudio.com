@@ -16,7 +16,7 @@ editor_options:
     canonical: true
 ---
 
-```{r setup}
+```{r setup, include=FALSE}
 # From https://ropensci.org/technotes/2020/04/23/rmd-learnings/
 # for alt text without capton
 knitr::knit_hooks$set(
@@ -36,6 +36,7 @@ knitr::knit_hooks$set(
     )
   }
 )
+knitr::opts_chunk$set(fig.height = 3)
 ```
 
 This is the second blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), and today our focus is data visualisation. In this post, I'll highlight some new(ish) features of [ggplot2](https://ggplot2.tidyverse.org/) as well as not-so-new features that I see rarely in introductory teaching materials that I think belong there.
@@ -147,7 +148,7 @@ penguins %>%
 
 And finally, let's fix up the axis labels.
 
-```{r penguins-species-props-bar-reorder-percent-labels, hugoopts=list(alt="Relative frequency bar plot of species of penguins, with bars ordered in descending order, axis tick labels are in percentages, and with proper axis labels.")}
+```{r penguins-species-props-bar-reorder-percent-labels, fig.height = 4, hugoopts=list(alt="Relative frequency bar plot of species of penguins, with bars ordered in descending order, axis tick labels are in percentages, and with proper axis labels.")}
 penguins %>%
   count(species) %>%
   mutate(prop = n / sum(n)) %>%
