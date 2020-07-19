@@ -18,6 +18,25 @@ library(emo)
 library(tidyverse)
 theme_set(theme_minimal(base_size = 14))
 knitr::opts_chunk$set(fig.height = 3)
+# From https://ropensci.org/technotes/2020/04/23/rmd-learnings/
+# for alt text without capton
+knitr::knit_hooks$set(
+  plot = function(x, options) {
+    hugoopts <- options$hugoopts
+    paste0(
+      "{", "{<figure src=", # the original code is simpler
+      # but here I need to escape the shortcode!
+      '"', x, '" ',
+      if (!is.null(hugoopts)) {
+        glue::glue_collapse(
+          glue::glue('{names(hugoopts)}="{hugoopts}"'),
+          sep = " "
+        )
+      },
+      ">}}\n"
+    )
+  }
+)
 ```
 
 This is the third blog post in the "Teaching the Tidyverse in 2020" series. The first post was on [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), the second on [data visualisation](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-2-data-visualisation/), and today our focus is data wrangling and tidying. In this post, I'll highlight of the some new(ish) features of [dplyr](https://dplyr.tidyverse.org/) and [tidyr](https://tidyr.tidyverse.org/). Over the past year there has been a lot of exciting updates to both of these packages and these updates are well documented in the [tidyverse blog](https://www.tidyverse.org/blog/). My goal here is to highlight updates that apply to introductory data science or statistics curricula.
@@ -46,7 +65,7 @@ penguins_madeup_wide
 
 Now suppose we want to create the following visualisation.
 
-```{r echo=FALSE}
+```{r echo=FALSE, hugoopts=list(alt="Line plot of body mass measurements, where each measurement is represented by a point, and measurements from each penguin are connected with a line.")}
 penguins_madeup_wide %>%
   pivot_longer(
     cols = starts_with("body_mass"),
@@ -73,7 +92,7 @@ penguins_madeup_wide %>%
 
 Previously you might have approached this with the `gather()`/`spread()` functions. But there is a new pair of much more intuitive functions in town (i.e. in the tidyr package): `pivot_wider()` for going from longer to wider data and `pivot_longer()` for going from wider to longer data. The following animated visualisation by [Mara Averick](https://twitter.com/dataandme/status/1175913657907253254?s=20) does a fantastic job of visually explaining what we mean by pivoting the longer (or wider).
 
-```{r echo=FALSE}
+```{r echo=FALSE, hugoopts=list(alt="GIF of data frame going from wider to longer and longer to wider.")}
 knitr::include_graphics("img/tidyr-longer-wider.gif")
 ```
 
@@ -114,7 +133,7 @@ I think the best place to get started with the `pivot_*()` functions is the [piv
 
 Now that we have the data in the shape we want, we can recreate our visualisation.
 
-```{r}
+```{r hugoopts=list(alt="Line plot of body mass measurements, where each measurement is represented by a point, and measurements from each penguin are connected with a line.")}
 penguins_madeup_long %>%
   ggplot(aes(x = measurement, y = body_mass, 
              group = name, color = name)) +
@@ -124,7 +143,7 @@ penguins_madeup_long %>%
 
 Looking good, though not ideal... Remember [the tip](https://gist.github.com/jennybc/847c6b43c4e35cec2e5bb30a3f38af73) from the previous post in the series about reordering your legend in the same order as the data appears on your plot using `fct_reorder2()`? It would be a useful addition here.
 
-```{r}
+```{r hugoopts=list(alt="Line plot of body mass measurements, where each measurement is represented by a point, and measurements from each penguin are connected with a line, and the legend is ordered according to the heights of lines in the plot.")}
 penguins_madeup_long %>%
   mutate(name = fct_reorder2(name, measurement, body_mass)) %>%
   ggplot(aes(x = measurement, y = body_mass, 
@@ -135,7 +154,7 @@ penguins_madeup_long %>%
 
 If you wanted to get really fancy, you can do directly label the lines with the the `geom_label_repel()` function from the [ggrepel](https://ggrepel.slowkow.com/) package. Since we only want the third measurement to be labeled, we can filter the data for that measurement and label the points with the `name`s of penguins. While we're at it, let's fix up all the other labels in the plot as well.
 
-```{r fig.height=5}
+```{r fig.height=5, hugoopts=list(alt="Line plot of body mass measurements, where each measurement is represented by a point, and measurements from each penguin are connected with a line, and each penguin's name is directly labelled on the plot.")}
 library(ggrepel)
 
 ggplot(penguins_madeup_long, 
