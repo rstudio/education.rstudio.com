@@ -1,12 +1,12 @@
 ---
-title: "Teaching the Tidyverse in 2020 - Part 4: When to Purrr?"
+title: "Teaching the Tidyverse in 2020 - Part 4: When to purrr?"
 date: "2020-07-19"
 slug: teaching-the-tidyverse-in-2020-part-4-when-to-purrr
 categories:
   - teach
 tags:
   - tidyverse
-authors:
+author:
   - mine
 photo:
   url: https://unsplash.com/photos/wEL2zPX3jDg
@@ -17,9 +17,7 @@ Welcome to the fourth (and final!) post in the "Teaching the Tidyverse in 2020" 
 
 In a nutshell, *purrr enhances R's functional programming toolkit by providing a complete and consistent set of tools for working with functions and vectors*. Its attractive features include informative naming of functions (even if you don't know anything about purrr or functional programming you can probably guess that `map_chr()` is about characters vs. `map_int()` is about integers) and type consistency. purrr is useful for solving iterative problems in R, and the [family of `map()` functions](https://purrr.tidyverse.org/reference/map.html "Family of map() functions") is what finally broke my habit of writing for loops to solve iterative problems in R.
 
-At rstudio::conf(2020), Hadley Wickham gave a talk titled [*State of the Tidyverse*](https://rstudio.com/resources/rstudioconf-2020/state-of-the-tidyverse/ "State of the Tidyverse video") and among the list of things he is particularly excited about for 2020, he listed "less purrr for data science".
-
-Let's take a look at a few common data science tasks that are iterative in nature that can be carried out using tools others than purrr in the tidyverse.
+At rstudio::conf(2020), Hadley Wickham gave a talk titled [*State of the Tidyverse*](https://rstudio.com/resources/rstudioconf-2020/state-of-the-tidyverse/ "State of the Tidyverse video") and among the list of things he is particularly excited about for 2020, he listed "less purrr for data science". In this post we take a look at a few common data science tasks that are iterative in nature, part of the introductory data science curriculum (or should be!), and that can be carried out using tools others than purrr in the tidyverse.
 
 
 ```r
@@ -251,7 +249,7 @@ vroom(files, id = "species") %>%
 ## # … with 334 more rows, and 1 more variable: sex <chr>
 ```
 
-## Iteration on list columns
+## Working with list columns
 
 In the [previous post](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/ "Teaching the Tidyverse in 2020: Data wrangling and tidying") on data wrangling and tidying we worked with a wide data frame of repeated observations stored across columns. We'll return back to this data frame, except this time let's store the repeated observations in a single list column called `body_mass`.
 
@@ -649,18 +647,16 @@ You can find an example of this approach in a paper I recently published with Mi
 
 Before we wrap up this post I want to expand a bit more on why I think it's worthwhile to discuss the mechanics of iteration prior to introducing statistical inference, especially if you're teaching simulation-based inference where there is lots of "resampling over and over". A few years ago I was introducing students to for loops at the same time as I was introducing them to the concept of bootstrapping, i.e. motivating the computational mechanics with statistical inference. But statistical inference is hard to wrap one's head around, and for loops aren't necessarily easy for novice programmers either. By introducing the mechanics of iteration (whether via for loops or via functional programming with purrr) I feel like I can spend more time on the *why* of simulation-based statistical inference rather than the *how*. After a few examples on bootstrapping where we explicitly write the code for how to resample, I introduce the [infer](https://infer.netlify.com/ "Link to infer package website") package and offload the computational details to its functions while keeping the focus in the class on the statistical ideas.
 
-## Summary
-
 I think I can summarise this post on "when to purrr?" in four bullet points:
 
--   There are many ways of getting to the answer.
--   Some ways likely need more scaffolding than others.
+-   There are many ways to solve iterative problems in R.
+-   Some ways need more scaffolding than others.
 -   It's worth considering how much of purrr fits into your introductory data science curriculum, especially if you're feeling like your syllabus is crammed and you need to make room for other topics or for more practice.
 -   For a more advanced data science or statistical programming course, purrr is a great introduction to functional programming.
 
 ------------------------------------------------------------------------
 
-That's the end of the "Teaching tidyverse in 2020" series! Thank you for sticking with me! Over the four posts in the series we talked a lot about tooling. Before we wrap things up I also want to give a list (in no particular order) of resources that can enhance and supplement your teaching materials:
+That's the end of the "Teaching the Tidyverse in 2020" series, thank you for sticking with me! Over the four posts in the series we talked a lot about tooling. Before we wrap things up I also want to give a list (in no particular order) of resources that can enhance and supplement your teaching materials:
 
 -   [Illustrations os statistical topics and R packages](Allison%20Horst's "Allison Horst's illustrations os statistical topics and R packages") by Allison Horst
 -   [Animations of tidyverse verbs using R, the tidyverse, and gganimate](https://www.garrickadenbuie.com/project/tidyexplain/ "Garrick Aden-Buie's animations of tidyverse verbs") by Garrick Aden-Buie
