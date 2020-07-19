@@ -13,49 +13,11 @@ photo:
   author: Fabio Ballasina
 ---
 
-
-```r
-library(tidyverse)
-```
-
-```
-## ── Attaching packages ──────────────────────────────────────── tidyverse 1.3.0 ──
-```
-
-```
-## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.3     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0
-```
-
-```
-## ── Conflicts ─────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-```
-
-```r
-library(palmerpenguins)
-library(jsonlite)
-```
-
-```
-## 
-## Attaching package: 'jsonlite'
-```
-
-```
-## The following object is masked from 'package:purrr':
-## 
-##     flatten
-```
-
 Welcome to the fourth (and final!) post in the "Teaching the Tidyverse in 2020" series. So far we have covered [getting started](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-1-getting-started/), [data visualisation](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-2-data-visualisation/), and [data wrangling and tidying](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/). Today the focus will be on when to introduce the [purrr](https://purrr.tidyverse.org/) package, or more widely, the notion of iteration and functional programming.
 
 In a nutshell, *purrr enhances R's functional programming toolkit by providing a complete and consistent set of tools for working with functions and vectors*. Its attractive features include informative naming of functions (even if you don't know anything about purrr or functional programming you can probably guess that `map_chr()` is about characters vs. `map_int()` is about integers) and type consistency. purrr is useful for solving iterative problems in R, and the [family of `map()` functions](https://purrr.tidyverse.org/reference/map.html) is what finally broke my habit of writing for loops to solve iterative problems in R.
 
-At rstudio::conf(2020), Hadley Wickham gave a talk titled *State of the Tidyverse* and among the list of things he is particularly excited about for 2020, he listed "less purr for data science". **\[to do: add remarks from hadley\]**
+At rstudio::conf(2020), Hadley Wickham gave a talk titled [*State of the Tidyverse*](https://rstudio.com/resources/rstudioconf-2020/state-of-the-tidyverse/) and among the list of things he is particularly excited about for 2020, he listed "less purrr for data science".
 
 Let's take a look at a few common data science tasks that are iterative in nature that can be carried out using tools others than purrr in the tidyverse.
 
@@ -77,6 +39,19 @@ library(palmerpenguins)
 penguins %>%
   group_by(species) %>%
   group_walk(~ write_csv(.x, paste0("data/", .y$species, ".csv")))
+```
+
+Let's inspect the `data` directory and confirm the files look as we expect them to. We'll make use of the [fs](https://fs.r-lib.org/) package for this, specifically the `dir_ls()` function to get information on the contents of a directory.
+
+
+```r
+library(fs)
+
+dir_ls(path = "data", glob = "*csv")
+```
+
+```
+## data/Adelie.csv    data/Chinstrap.csv data/Gentoo.csv
 ```
 
 We can read each of these files with `read_csv()` and bind the rows to create a single data frame.
@@ -134,12 +109,10 @@ gentoo    <- read_csv("data/Gentoo.csv")
 all_three <- bind_rows(adelie, chinstrap, gentoo, .id = "species")
 ```
 
-You can imagine this could get tedious quickly if there were a high number of files to be read in. To do this programmatically, we first need a list of the files we want to read in.
+You can imagine this could get tedious quickly if there were a large number of files to be read in. To do this programmatically, we first need a list of the files we want to read in.
 
 
 ```r
-library(fs)
-
 files <- dir_ls(path = "data", glob = "*csv")
 files
 ```
@@ -246,7 +219,7 @@ This feels a lot more like the `read_csv()` function your students would undoubt
 vroom(files, id = "species") %>%
   mutate(
     species = str_remove(species, "data/"),
-    species = str_remove(species, ".csv")
+    species = str_remove(species, "\\.csv")
     )
 ```
 
@@ -280,7 +253,7 @@ vroom(files, id = "species") %>%
 
 ## Iteration on list columns
 
-In the [previous post](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/) on data wrangling and tidying we worked with a wide data frame of repeated observations stored across columns. We'll return back to this data frame, exceot this time let's store the repeated observations in a single list column called `body_mass`.
+In the [previous post](https://education.rstudio.com/blog/2020/07/teaching-the-tidyverse-in-2020-part-3-data-wrangling-and-tidying/) on data wrangling and tidying we worked with a wide data frame of repeated observations stored across columns. We'll return back to this data frame, except this time let's store the repeated observations in a single list column called `body_mass`.
 
 
 ```r
@@ -387,18 +360,31 @@ penguins_madeup_list %>%
 ## 4 Norma Jean female <dbl [3]>  3220     3620.   4019 3825.     4127   4235
 ```
 
-What is this unnest magic you ask? Let's look at that in a bit more detail next.
+What is this unnest magic, you ask? Let's look at that in a bit more detail next.
 
 ## Data rectangling
 
-JSON is a commonly used data type, especially for hierarchical and web data. Reading in data from JSON files and turning them into rectangular (tabular) data is an important skill for most data scientists to have, and with today's tooling in the tidyverse, it's feasible to teach this skill in data science courses at any level.
+JSON is a commonly used hierarchical data type and it is especially commonly used on the web. Reading in data from JSON files and turning them into rectangular (tabular) data is an important skill for most data scientists to have, and with today's tooling in the tidyverse, it's feasible to teach this skill in data science courses at any level.
 
 Let's take a look at our made up penguin data, this time stored in JSON format with a few additional variables. We'll read in the data using the [jsonlite](https://jeroen.cran.dev/jsonlite/) package.
 
 
 ```r
 library(jsonlite)
+```
 
+```
+## 
+## Attaching package: 'jsonlite'
+```
+
+```
+## The following object is masked from 'package:purrr':
+## 
+##     flatten
+```
+
+```r
 penguins_madeup_json <- read_json("data/penguins_madeup.json")
 ```
 
@@ -435,7 +421,7 @@ toJSON(penguins_madeup_json[1], pretty = TRUE)
 ## ]
 ```
 
-purrr is a great solution for working with list columns, and hence for flattening JSON files. There are a couple ways we can solve this problem with purrr. I'll start with the less verbose approach.
+purrr is a great solution for working with lists, and hence for flattening JSON files. There are a couple ways we can solve this problem with purrr. I'll start with the less verbose approach.
 
 
 ```r
@@ -477,11 +463,11 @@ penguins_madeup_json %>%
     function(penguin) {
       
       tibble(
-        gender         <- penguin$gender,
-        first_name     <- penguin$first_name,
-        date           <- map_chr(penguin$measurements, "date"),
-        body_mass      <- map_chr(penguin$measurements, "body_mass"),
-        flipper_length <- map_chr(penguin$measurements, "flipper_length")
+        gender         = penguin$gender,
+        first_name     = penguin$first_name,
+        date           = map_chr(penguin$measurements, "date"),
+        body_mass      = map_chr(penguin$measurements, "body_mass"),
+        flipper_length = map_chr(penguin$measurements, "flipper_length")
       )
       
     }
@@ -490,22 +476,20 @@ penguins_madeup_json %>%
 
 ```
 ## # A tibble: 12 x 5
-##    `gender <- peng… `first_name <- … `date <- map_ch… `body_mass <- m…
-##    <chr>            <chr>            <chr>            <chr>           
-##  1 male             Mumble           2007-11-11       4801            
-##  2 male             Mumble           2007-11-16       5699            
-##  3 male             Mumble           2007-11-19       5743            
-##  4 female           Gloria           2007-11-11       4785            
-##  5 female           Gloria           2007-11-14       3092            
-##  6 female           Gloria           2007-11-19       4220            
-##  7 male             Memphis          2007-11-11       3349            
-##  8 male             Memphis          2007-11-15       4186            
-##  9 male             Memphis          2007-11-17       4454            
-## 10 female           Norma Jean       2007-11-11       4235            
-## 11 female           Norma Jean       2007-11-12       3220            
-## 12 female           Norma Jean       2007-11-18       4019            
-## # … with 1 more variable: `flipper_length <- map_chr(penguin$measurements,
-## #   "flipper_length")` <chr>
+##    gender first_name date       body_mass flipper_length
+##    <chr>  <chr>      <chr>      <chr>     <chr>         
+##  1 male   Mumble     2007-11-11 4801      181           
+##  2 male   Mumble     2007-11-16 5699      182           
+##  3 male   Mumble     2007-11-19 5743      181           
+##  4 female Gloria     2007-11-11 4785      186           
+##  5 female Gloria     2007-11-14 3092      182           
+##  6 female Gloria     2007-11-19 4220      183           
+##  7 male   Memphis    2007-11-11 3349      190           
+##  8 male   Memphis    2007-11-15 4186      188           
+##  9 male   Memphis    2007-11-17 4454      191           
+## 10 female Norma Jean 2007-11-11 4235      193           
+## 11 female Norma Jean 2007-11-12 3220      191           
+## 12 female Norma Jean 2007-11-18 4019      194
 ```
 
 I think this is easier to read for an introductory audience, but it still requires understanding how anonymous functions work, which is not trivial.
@@ -535,8 +519,8 @@ penguins_madeup_json %>%
 
 ```r
 penguins_madeup_json %>%
-  tibble(penguins_madeup_json = .) %>%
-  unnest_wider(penguins_madeup_json)
+  tibble(penguins_madeup = .) %>%
+  unnest_wider(penguins_madeup)
 ```
 
 ```
@@ -554,8 +538,8 @@ penguins_madeup_json %>%
 
 ```r
 penguins_madeup_json %>%
-  tibble(penguins_madeup_json = .) %>%
-  unnest_wider(penguins_madeup_json) %>%
+  tibble(penguins_madeup = .) %>%
+  unnest_wider(penguins_madeup) %>%
   unnest_longer(measurements)
 ```
 
@@ -582,8 +566,8 @@ penguins_madeup_json %>%
 
 ```r
 penguins_madeup_json %>%
-  tibble(penguins_madeup_json = .) %>%
-  unnest_wider(penguins_madeup_json) %>%
+  tibble(penguins_madeup = .) %>%
+  unnest_wider(penguins_madeup) %>%
   unnest_longer(measurements)%>%
   unnest_wider(measurements)
 ```
@@ -667,11 +651,11 @@ Before we wrap up this post I want to expand a bit more on why I think it's wort
 
 ## Summary
 
-Moral of the story
+I think I can summarise this post on "when to purrr?" in three bullet points:
 
--   There are many ways of getting to the answer
--   Some likely need more scaffolding than others
--   It's worth considering how much of `purrr` fits into your introductory data science curriculum
+-   There are many ways of getting to the answer.
+-   Some ways likely need more scaffolding than others.
+-   It's worth considering how much of `purrr` fits into your introductory data science curriculum.
 
 ------------------------------------------------------------------------
 
@@ -681,4 +665,3 @@ In no particular order...
 
 -   [Illustrations os statistical topics and R packages](Allison%20Horst's) by Allison Horst
 -   [Animations of tidyverse verbs using R, the tidyverse, and gganimate](https://www.garrickadenbuie.com/project/tidyexplain/) by Garrick Aden-Buie
-
