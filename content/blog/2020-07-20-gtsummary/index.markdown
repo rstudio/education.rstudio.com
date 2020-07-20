@@ -11,7 +11,7 @@ categories:
 tags:
   - rmarkdown
 description: |
-  The gtsummary package summarizes data sets, regression models, and more using sensible defaults with highly customizable capabilities, and is compatible with multiple R Markdown output types.
+  The gtsummary package is for making beautiful summary tables with R, in R Markdown documents. 
 slug: gtsummary
 photo:
   url: https://unsplash.com/photos/hk2gSD_S5j0
