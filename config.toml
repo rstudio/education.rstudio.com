@@ -20,6 +20,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 # uncomment the next line to disable listing authors
 # disableKinds = ["taxonomyTerm"]
+enableEmoji = true
 
 [permalinks]
   blog = "blog/:year/:month/:slug/"
