@@ -4,7 +4,7 @@ author:
   - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
   - '[Margie Hannum](https://margarethannum.github.io/about.html)'
   - '[Karissa Whiting](https://github.com/karissawhiting)'
-date: '2020-06-03'
+date: '2020-07-20'
 categories:
   - learn
   - package
@@ -53,53 +53,16 @@ Throughout the post we will use an example dataset of 200 subjects treated with 
 sm_trial <- trial %>% select(trt, age, response, grade)
 
 head(sm_trial)
+#> # A tibble: 6 x 4
+#>   trt      age response grade
+#>   <chr>  <dbl>    <int> <fct>
+#> 1 Drug A    23        0 II   
+#> 2 Drug B     9        1 I    
+#> 3 Drug A    31        0 II   
+#> 4 Drug A    NA        1 III  
+#> 5 Drug A    51        1 III  
+#> 6 Drug B    39        0 I
 ```
-
-<!--html_preserve--><table class="huxtable" style="border-collapse: collapse; margin-bottom: 2em; margin-top: 2em; width: 20%; margin-left: 0%; margin-right: auto;  ">
-<col><col><col><col><tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">trt</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">age</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">response</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt; font-weight: bold;">grade</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">23</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">II</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug B</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">9</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">I</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">31</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">0</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">II</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug A</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;"></td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt;">1</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt;">III</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">Drug A</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">51</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">1</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt; padding: 4pt 4pt 4pt 4pt; background-color: rgb(242, 242, 242);">III</td>
-</tr>
-<tr>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt; padding: 4pt 4pt 4pt 4pt;">Drug B</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">39</td>
-<td style="vertical-align: top; text-align: right; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">0</td>
-<td style="vertical-align: top; text-align: left; white-space: nowrap; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt; padding: 4pt 4pt 4pt 4pt;">I</td>
-</tr>
-</table>
-<!--/html_preserve-->
 
 
 In **one line of code** we can summarize the overall demographics of the dataset!
@@ -312,4 +275,4 @@ May your code be short, your tables beautiful, and your reports fully reproducib
 **Acknowledgements** 
 
 A big thank you to all {gtsummary} contributors:
-[&#x0040;ablack3](https://github.com/ablack3), [&#x0040;ahinton-mmc](https://github.com/ahinton-mmc), [&#x0040;barthelmes](https://github.com/barthelmes), [&#x0040;calebasaraba](https://github.com/calebasaraba), [&#x0040;davidgohel](https://github.com/davidgohel), [&#x0040;davidkane9](https://github.com/davidkane9), [&#x0040;dax44](https://github.com/dax44), [&#x0040;ddsjoberg](https://github.com/ddsjoberg), [&#x0040;emilyvertosick](https://github.com/emilyvertosick), [&#x0040;GuiMarthe](https://github.com/GuiMarthe), [&#x0040;hughjonesd](https://github.com/hughjonesd), [&#x0040;jeanmanguy](https://github.com/jeanmanguy), [&#x0040;jennybc](https://github.com/jennybc), [&#x0040;jflynn264](https://github.com/jflynn264), [&#x0040;joelgautschi](https://github.com/joelgautschi), [&#x0040;jwilliman](https://github.com/jwilliman), [&#x0040;karissawhiting](https://github.com/karissawhiting), [&#x0040;khizzr](https://github.com/khizzr), [&#x0040;larmarange](https://github.com/larmarange), [&#x0040;leejasme](https://github.com/leejasme), [&#x0040;ltin1214](https://github.com/ltin1214), [&#x0040;margarethannum](https://github.com/margarethannum), [&#x0040;michaelcurry1123](https://github.com/michaelcurry1123), [&#x0040;moleps](https://github.com/moleps), [&#x0040;MyKo101](https://github.com/MyKo101), [&#x0040;oranwutang](https://github.com/oranwutang), [&#x0040;ryzhu75](https://github.com/ryzhu75), [&#x0040;sammo3182](https://github.com/sammo3182), [&#x0040;simonpcouch](https://github.com/simonpcouch), [&#x0040;slobaugh](https://github.com/slobaugh), [&#x0040;tormodb](https://github.com/tormodb), and [&#x0040;zabore](https://github.com/zabore)
+[&#x0040;ablack3](https://github.com/ablack3), [&#x0040;ahinton-mmc](https://github.com/ahinton-mmc), [&#x0040;barthelmes](https://github.com/barthelmes), [&#x0040;calebasaraba](https://github.com/calebasaraba), [&#x0040;CodieMonster](https://github.com/CodieMonster), [&#x0040;davidgohel](https://github.com/davidgohel), [&#x0040;davidkane9](https://github.com/davidkane9), [&#x0040;dax44](https://github.com/dax44), [&#x0040;ddsjoberg](https://github.com/ddsjoberg), [&#x0040;DeFilippis](https://github.com/DeFilippis), [&#x0040;emilyvertosick](https://github.com/emilyvertosick), [&#x0040;gorkang](https://github.com/gorkang), [&#x0040;GuiMarthe](https://github.com/GuiMarthe), [&#x0040;hughjonesd](https://github.com/hughjonesd), [&#x0040;jalavery](https://github.com/jalavery), [&#x0040;jeanmanguy](https://github.com/jeanmanguy), [&#x0040;jemus42](https://github.com/jemus42), [&#x0040;jennybc](https://github.com/jennybc), [&#x0040;JesseRop](https://github.com/JesseRop), [&#x0040;jflynn264](https://github.com/jflynn264), [&#x0040;joelgautschi](https://github.com/joelgautschi), [&#x0040;jwilliman](https://github.com/jwilliman), [&#x0040;karissawhiting](https://github.com/karissawhiting), [&#x0040;khizzr](https://github.com/khizzr), [&#x0040;larmarange](https://github.com/larmarange), [&#x0040;leejasme](https://github.com/leejasme), [&#x0040;ltin1214](https://github.com/ltin1214), [&#x0040;margarethannum](https://github.com/margarethannum), [&#x0040;matthieu-faron](https://github.com/matthieu-faron), [&#x0040;michaelcurry1123](https://github.com/michaelcurry1123), [&#x0040;moleps](https://github.com/moleps), [&#x0040;MyKo101](https://github.com/MyKo101), [&#x0040;oranwutang](https://github.com/oranwutang), [&#x0040;proshano](https://github.com/proshano), [&#x0040;ryzhu75](https://github.com/ryzhu75), [&#x0040;sammo3182](https://github.com/sammo3182), [&#x0040;sbalci](https://github.com/sbalci), [&#x0040;simonpcouch](https://github.com/simonpcouch), [&#x0040;slb2240](https://github.com/slb2240), [&#x0040;slobaugh](https://github.com/slobaugh), [&#x0040;tormodb](https://github.com/tormodb), [&#x0040;UAB-BST-680](https://github.com/UAB-BST-680), [&#x0040;zabore](https://github.com/zabore), and [&#x0040;zeyunlu](https://github.com/zeyunlu)
