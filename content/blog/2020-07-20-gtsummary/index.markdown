@@ -1,5 +1,5 @@
 ---
-title: Presentation-Ready Summary Tables
+title: Presentation-Ready Summary Tables with gtsummary
 author:
   - '[Daniel Sjoberg](http://www.danieldsjoberg.com/)'
   - '[Margie Hannum](https://margarethannum.github.io/about.html)'
