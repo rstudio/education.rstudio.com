@@ -253,7 +253,7 @@ There are a few other functions we'd like you to know about!
 
 - [`tbl_uvregression()`](http://www.danieldsjoberg.com/gtsummary/reference/tbl_uvregression.html) to make tables summarizing univariable regression models (input a dataset, specify model and parameters... make a UVA regression table easily!)
 - [`tbl_survfit()`](http://www.danieldsjoberg.com/gtsummary/reference/tbl_survfit.html) function to summarize survival models
-- [`tbl_crossfit()`](http://www.danieldsjoberg.com/gtsummary/reference/tbl_cross.html) to make beautiful cross tables
+- [`tbl_cross()`](http://www.danieldsjoberg.com/gtsummary/reference/tbl_cross.html) to make beautiful cross tables
 - Use [themes](http://www.danieldsjoberg.com/gtsummary/dev/articles/themes.html) to format your table for specific journal/aesthetic requirements! 
 
 **Additional customization options**
