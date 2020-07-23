@@ -16,6 +16,4 @@ We have created three tracks to help learners navigate the R ecosystem. These tr
 
 ## Choose your learning path {#paths}
 
-\
-\
 

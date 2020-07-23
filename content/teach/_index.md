@@ -19,6 +19,4 @@ The resources below will help you tackle each of these topics independently.
 
 ## Explore our resources {#resources}
 
-\
-\
 
