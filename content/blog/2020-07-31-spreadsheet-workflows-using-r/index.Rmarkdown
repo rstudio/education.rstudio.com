@@ -1,0 +1,183 @@
+---
+title: Spreadsheets using R
+date: '2020-07-31'
+slug: spreadsheets-using-r
+categories:
+  - learn
+tags:
+  - spreadsheets
+  - tidyverse
+author:
+  - Devin Johnson
+photo:
+  url: https://unsplash.com/photos/Wpnoqo2plFA
+  author: Mika Baumeister
+---
+
+There's so much to discover and learn when working with spreadsheets, and creating a resource that speaks to both spreadsheet and R users has been an exciting challenge.  While my internship has focused on a plethora of topics from comparing numerous R package functionalities that work with spreafsheets, to writing tips and tricks on best practices for working in both spreadsheets and RStudio, what I'd like to focus on in this post is a section dedicated to the R versions of common spreadsheet workflows.
+
+To do that we'll assume the role of a data analyst in two hypothetical scenarios and walkthrough the tidyverse equivalent of some common analyes and tasks one is likely to come across when working in spreadsheets.   
+
+
+For our first story, its day one as a new data analyst and our boss has asked us to take a look at the company's finances.
+They send you a spreadsheet and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overbaord.
+
+We've decide to run our analysis in RStudio to take advatnage of data wrangling and visualization functions from the tidyverse, as well as create a reproducible workflow in case we want to revisit this analysis later.  First let's load in our data and take a look at it in RStudio 
+```{r}
+#Packages
+library(tidyverse)
+library(readxl)
+
+#Read in and look at our data
+spending <- read_excel("data/spending.xlsx")
+spending
+```
+
+We take note of the month column as well as amount spent, budget, and, expense type. We'll hold off on looking at the column `num_of_expenses`, it may prove useful down the line but not pressing for a quick look into the data.
+
+
+## Nested Logic
+One advantage of spreadsheets is we can use formulas to dictate what should be happening in a specific cell and in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or 'nested' logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statment in SQL we can set parameters for what a value should be based off conditions from other rows or columns in our data.
+
+Back to our spending data, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial dataset.  
+To do this we can create a new column in our dataset using the `mutate()` function and apply `case_when()` within that call.  
+```{r}
+spending_quarter <- spending %>%
+  mutate(quarter = case_when(month %in% c("Jan", "Feb", "Mar") ~ "Q1",
+                             month %in% c("Apr", "May", "Jun") ~ "Q2",
+                             month %in% c("Jul", "Aug", "Sep") ~ "Q3",
+                             month %in% c("Oct", "Nov", "Dec") ~ "Q4",
+                             TRUE ~ "NA"))
+
+spending_quarter
+```
+
+Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good mweasure added an NA condition in the event we've missed something. We can quality check our case_when by examining our data and seeing if any NA values show up which would indicate if a month is spelled differently or if there's an error in our code.  
+
+
+## Pivot to this section
+
+Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. Using some data wrangling functions from the tidyverse we can create summary tables as well. Let's take a look total expenses and budget by expense type and quarter.  
+```{r}
+summary_table <- spending_quarter %>%
+  group_by(expense, quarter) %>%
+  summarise(total_expenses = sum(num_of_expenses),
+            total_expense_amt = sum(amount),
+            total_budget_amt = sum(budget),
+           .groups = "drop")
+
+summary_table
+```
+
+One thing that can be tricky when working with pivot tables is calculating new variables by rows as opposed to columns, with a usual work around being to manually add in a formula in a cell adjacent to our table.  Working with our data in R we can take advantage of the `rowwise()` function from dplyr, telling R we want to compute new values and summary statistics by row and not column.  
+Let's take a look at how much money was left over in each quarter by subtracting money spent from our budget and use the `rowwise()` function to specify we want this done by each row in our summary table
+```{r}
+left_over <- summary_table %>%
+  rowwise() %>%
+  mutate(left_over = total_budget_amt - total_expense_amt) %>%
+  arrange(left_over)
+
+left_over
+```
+Great! Using the `arrange()` function we can also bring the largest instances of overspending to the top of our table to focus our attention.
+
+We can also filter our table if we're interested in a specific expense type. Let's hone in on spending for office happy hours.
+```{r}
+left_over %>%
+  filter(expense == "office happy hour")
+```
+Hmm, a lot of spending in Quarter 3, which might make sense as these are the summer months. 
+
+
+Finally, we can apply data visualsation to our workflow and look at spending across quarters and expense type. The ggplot2 package was loaded when we called the tidyverse but we'll add the scales package so we can put put a dollar format on our y axis of money left over. 
+```{r}
+library(scales)
+left_over %>%
+  ggplot(aes(quarter, left_over)) +
+  geom_point() +
+  geom_line(group = 1) +
+  facet_wrap( ~ expense) +
+  scale_y_continuous(labels = dollar) + 
+  geom_hline(yintercept=20, 
+                color = "red") + 
+  labs (title  = "Spending by Expense Type",
+         x = "Quarter",
+         y = "$ Left Over")
+```
+Voila! - We have both a sumary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with overexense on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits
+
+
+## Join the Party
+Wherever you are in your spreadsheets journey, we've all had a V-Lookup formula mess up and spent more time than we'd like to admit trying to debug it.  V-Lookups are incredibly powerful and allow us to bring in outside data to further our analysis.  
+There are caveats however, the more lookups we perform we run the risk of slowing down our spreadsheet in addition to  issues of formula errors.  Using join functions from the dplyr package allows us to quickly bring in data from other tables in a simplified way and since we're working with our data in RStudio, lowers the chances of a significant slow down regardless of the amount of joins we conduct.  
+
+For this our next scenario, we'll leave the finance world and move to something perhaps a little more exciting, supheroes!
+Below is a dataset containing information on various comic book characters.  
+Over time this dataset has been expanded on with multiple sheets including new information. 
+Before we start exploring this data we'll need to join in the relevant data so we can conduct some fun analyses. 
+```{r, include= FALSE}
+superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
+identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
+```
+
+Let's take a look at our initial sheet on superheores
+```{r}
+superheroes
+```
+
+And now another sheet lisitng the alter ego of each character
+```{r}
+identities
+```
+
+We see in each sheet there is a hero column allowing us to bring in data from one sheet to the other.   
+Using `left_join()` from the dplyr package, nearest equivalent to the vlookup, we can bring in the data from the identities sheet into our initial superheroes data  
+
+To do this we'll call `left_join()` on superheores, putting the identities dataset as our first argument and specify our common varible with the `by` argument 
+```{r}
+superhero_identities <- superheroes %>%
+  left_join(identities, by = "hero")
+
+superhero_identities
+```
+
+Great, we've run our join no problem. Of course however we'll run into instances in which we'll need to pull in data from multiple sheets and the superheroes dataset is no exception. 
+We've been informed there are an additional two sheets that have recently been added, one containing information on the main power or skill of each characrer...
+```{r,include=FALSE}
+powers <- readxl::read_excel("data/superheroes.xlsx", sheet = "powers")
+```
+
+```{r}
+powers
+```
+
+And the other containing the occupations of the each heroes alter-ego. 
+```{r}
+occupation <- readxl::read_excel("data/superheroes.xlsx", sheet = "occupation")
+```
+
+```{r}
+occupation
+```
+
+We see that the powers sheet has a hero column  allowing for another simple left join, however the occupation sheet doesn't have a common column by specific name but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We can take advantage of this relationship to bring this data in as shown in the code below.  
+```{r}
+heroes_full <- superhero_identities %>%
+  left_join(powers, by = "hero") %>%
+  left_join(occupation, by = c("alter_ego" = "name"))
+
+```
+Here we conduct a simple left join bringing in the data from the powers dataset, and then another left joing by alter ego to bring in the data from the occupation spreadsheet. 
+In the `by` argument we can specify that the column `alter_ego` should be matched onto the `name` column allowing for the join to complete. 
+
+We've expanded our dataset quite a bit. Let's take an alternative apprach to viewing it using the `glimpse()` function from dplyr
+```{r}
+glimpse(heroes_full)
+```
+There we have it, a fully combined dataset ready for analysis!  Hmmm, now that we think about it, let's hope we aren't sharing this data with any supervillains.  
+We may be an ace at working with spreadsheet data but we're also an ethical data analyst!
+
+
+I hope you've found this blog post useful and enjoyed reading through each example. It's been such a pleasure working with Jenny Bryan and Mine Çetinkaya-Rundel on this project and we're excited to share more of the Spreadsheets Using R resource with readers in the future. Until then, no matter what tools you're using to work with your data, happy analyzing! 
+
