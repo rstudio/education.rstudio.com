@@ -1,5 +1,5 @@
 ---
-title: Spreadsheets using R
+title: Spreadsheets Workflows in R
 date: '2020-07-31'
 slug: spreadsheets-using-r
 categories:
@@ -27,26 +27,6 @@ We've decide to run our analysis in RStudio to take advatnage of data wrangling 
 ```r
 #Packages
 library(tidyverse)
-```
-
-```
-## ── Attaching packages ──────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
-```
-
-```
-## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0
-```
-
-```
-## ── Conflicts ─────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-```
-
-```r
 library(readxl)
 
 #Read in and look at our data
@@ -148,6 +128,8 @@ summary_table
 ## 16 office supplies   Q4                  91              9401            14342
 ```
 
+## Row Calculations
+
 One thing that can be tricky when working with pivot tables is calculating new variables by rows as opposed to columns, with a usual work around being to manually add in a formula in a cell adjacent to our table.  Working with our data in R we can take advantage of the `rowwise()` function from dplyr, telling R we want to compute new values and summary statistics by row and not column.  
 Let's take a look at how much money was left over in each quarter by subtracting money spent from our budget and use the `rowwise()` function to specify we want this done by each row in our summary table
 
@@ -203,31 +185,12 @@ left_over %>%
 ```
 Hmm, a lot of spending in Quarter 3, which might make sense as these are the summer months. 
 
+## From tables to visualizations
 
 Finally, we can apply data visualsation to our workflow and look at spending across quarters and expense type. The ggplot2 package was loaded when we called the tidyverse but we'll add the scales package so we can put put a dollar format on our y axis of money left over. 
 
 ```r
 library(scales)
-```
-
-```
-## 
-## Attaching package: 'scales'
-```
-
-```
-## The following object is masked from 'package:purrr':
-## 
-##     discard
-```
-
-```
-## The following object is masked from 'package:readr':
-## 
-##     col_factor
-```
-
-```r
 left_over %>%
   ggplot(aes(quarter, left_over)) +
   geom_point() +
@@ -413,8 +376,7 @@ glimpse(heroes_full)
 ## $ main_power       <chr> "flight", "inexhaustable wealth", "wall-crawling", "…
 ## $ occupation       <chr> "Reporter", "CEO", "Photogragpher", "U.S. Marine", "…
 ```
-There we have it, a fully combined dataset ready for analysis!  Hmmm, now that we think about it, let's hope we aren't sharing this data with any supervillains.  
-We may be an ace at working with spreadsheet data but we're also an ethical data analyst!
+There we have it, a fully combined dataset ready for analysis!  Hmmm, now that we think about it, let's hope we aren't sharing this data with any supervillains.  We may be an ace at working with spreadsheet data but we're also an ethical data analyst!
 
 
 I hope you've found this blog post useful and enjoyed reading through each example. It's been such a pleasure working with Jenny Bryan and Mine Çetinkaya-Rundel on this project and we're excited to share more of the Spreadsheets Using R resource with readers in the future. Until then, no matter what tools you're using to work with your data, happy analyzing! 
