@@ -1,11 +1,22 @@
 ---
-layout: page
-authors: ["Ian Flores Siaca", "François Michonneau", "Zhian Kamvar", "Greg Wilson"]
-teaser: "An open source multilingual glossary of data science terms"
-title: "Announcing Glosario"
-date: 2020-07-27
-time: "09:00:00"
-tags: ["Community"]
+title: Announcing Glosario
+author:
+  - '[Ian Flores Siaca](https://ianfs.dev/)'
+  - '[François Michonneau](https://francoismichonneau.net/)'
+  - '[Zhian Kamvar](https://zkamvar.netlify.app/)'
+  - '[Greg Wilson](http://third-bit.com)'
+date: '2020-07-28'
+categories:
+  - learn
+  - package
+tags:
+  - glosario
+description: |
+  An open source multilingual glossary of data science terms
+slug: announcing-glosario
+photo:
+  url: https://unsplash.com/photos/1UDjq8s8cy0
+  author: Joshua Hoehne
 ---
 
 [`glosario`](https://github.com/carpentries/glosario) is an open source glossary of terms used in data science
@@ -16,7 +27,8 @@ Authors can add glossary keys to a lesson's metadata to indicate
 what the lesson teaches,
 what learners ought to know before they start,
 and where they can go to find that knowledge.
-Authors can also use the library's functions to insert consistent hyperlinks for terms in their lessons in any of several (human) languages,
+Authors can also use the library's functions to insert consistent hyperlinks for terms in their lessons
+in any of several (human) languages,
 and anyone who has installed the library can use it interactively to look things up while they're programming.
 
 ## Defining Terms
@@ -85,9 +97,8 @@ in alphabetical order by term according to the rules for `glossary/language`.
 
 ### Linking to definitions
 
-Amari adds an inline code block `` `r gdef('linear_model', 'modéle linéaire')` `` to her lesson.
-When she knits her document,
-the code block produces the HTML:
+Amari adds an inline code block `` `r knitr::inline_expr("gdef('linear_model', 'modéle linéaire')")` `` to her lesson.
+When she knits her document the code block produces the HTML:
 
 ```html
 <a href="http://carpentries.org/glosario/fr/#linear-model" class="glossary-definition">modéle linéaire</a>
@@ -95,7 +106,7 @@ the code block produces the HTML:
 
 ### Checking a lesson
 
-Beatriz* has made some changes to a lesson she inherited from Amari and wants to check that it is still consistent.
+Beatriz has made some changes to a lesson she inherited from Amari and wants to check that it is still consistent.
 She runs a tool provided with `glosario` that:
 
 1.  Reads the R Markdown file.
@@ -132,3 +143,5 @@ There are lots of way to contribute:
 -   **YAML is hard for people to edit---why not use something else for the glossary file?**
     Because other formats are just as hard to edit (e.g., JSON)
     or make one-to-many relationships hard to express (e.g., CSV).
+
+*This article is cross-published on [the Carpentries blog](https://carpentries.org/blog/2020/07/announcing-glosario/).*
