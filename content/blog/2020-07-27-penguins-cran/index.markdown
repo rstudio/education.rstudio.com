@@ -188,9 +188,31 @@ path_to_file()
 #> [1] "penguins_raw.csv" "penguins.csv"
 ```
 
-Credit goes to Jenny Bryan for this [function](https://github.com/tidyverse/readxl/blob/master/R/example.R), inspired by the [readxl package](https://readxl.tidyverse.org/).
+Credit goes to Jenny Bryan for this [function](https://github.com/tidyverse/readxl/blob/master/R/example.R), inspired by a similar function in the [readxl package](https://readxl.tidyverse.org/).
+
+And as a reminder, you can always read the data in from a url as well:
 
 
+```r
+peng_url <- readr::read_csv("https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv")
+peng_url
+#> # A tibble: 344 x 8
+#>    species island bill_length_mm bill_depth_mm flipper_length_… body_mass_g
+#>    <chr>   <chr>           <dbl>         <dbl>            <dbl>       <dbl>
+#>  1 Adelie  Torge…           39.1          18.7              181        3750
+#>  2 Adelie  Torge…           39.5          17.4              186        3800
+#>  3 Adelie  Torge…           40.3          18                195        3250
+#>  4 Adelie  Torge…           NA            NA                 NA          NA
+#>  5 Adelie  Torge…           36.7          19.3              193        3450
+#>  6 Adelie  Torge…           39.3          20.6              190        3650
+#>  7 Adelie  Torge…           38.9          17.8              181        3625
+#>  8 Adelie  Torge…           39.2          19.6              195        4675
+#>  9 Adelie  Torge…           34.1          18.1              193        3475
+#> 10 Adelie  Torge…           42            20.2              190        4250
+#> # … with 334 more rows, and 2 more variables: sex <chr>, year <dbl>
+```
+
+The files are located in the [package GitHub repository](https://github.com/allisonhorst/palmerpenguins) in the [`inst/extdata/`](https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata) folder.
 
 ## Penguin sightings
 

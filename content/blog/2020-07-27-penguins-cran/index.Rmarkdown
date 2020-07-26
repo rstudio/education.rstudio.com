@@ -176,9 +176,16 @@ You can see the files available by using the `path_to_file()` function without a
 path_to_file()
 ```
 
-Credit goes to Jenny Bryan for this [function](https://github.com/tidyverse/readxl/blob/master/R/example.R), inspired by the [readxl package](https://readxl.tidyverse.org/).
+Credit goes to Jenny Bryan for this [function](https://github.com/tidyverse/readxl/blob/master/R/example.R), inspired by a similar function in the [readxl package](https://readxl.tidyverse.org/).
 
+And as a reminder, you can always read the data in from a url as well:
 
+```{r}
+peng_url <- readr::read_csv("https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv")
+peng_url
+```
+
+The files are located in the [package GitHub repository](https://github.com/allisonhorst/palmerpenguins) in the [`inst/extdata/`](https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata) folder.
 
 ## Penguin sightings
 
