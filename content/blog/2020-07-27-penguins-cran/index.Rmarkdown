@@ -84,7 +84,7 @@ The `palmerpenguins` data contains size measurements, clutch observations, and b
 
 <img src="gorman-penguins.jpg" style="text-align: &apos;center&apos;" width="500"/>
 
-These data were collected from 2007 - 2009 by Dr. Kristen Gorman with the [Palmer Station Long Term Ecological Research Program](https://pal.lternet.edu/), part of the [US Long Term Ecological Research Network](https://lternet.edu/). The data were imported directly from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (EDI) Data Portal, and are available for use by CC0 license ("No Rights Reserved") in accordance with the [Palmer Station Data Policy](https://pal.lternet.edu/data/policies). We gratefully acknowledge Palmer Station LTER and the US LTER Network. Special thanks to Marty Downs (Director, LTER Network Office) for help regarding the data license & use.
+These data were collected from 2007 - 2009 by Dr. Kristen Gorman with the [Palmer Station Long Term Ecological Research Program](https://pal.lternet.edu/), part of the [US Long Term Ecological Research Network](https://lternet.edu/). The data were imported directly from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (EDI) Data Portal, and are available for use by CC0 license ("No Rights Reserved") in accordance with the [Palmer Station Data Policy](https://pal.lternet.edu/data/policies). We gratefully acknowledge Palmer Station LTER and the US LTER Network. Special thanks to Marty Downs (Director, LTER Network Office) for help regarding the data license & use. Here is our intrepid package co-author, Dr. Gorman, in action collecting data:
 
 <img src="penguin-expedition.jpg" style="text-align: &apos;center&apos;" width="500"/>
 
@@ -111,7 +111,7 @@ penguins
 
 We don't want to ruin all the fun exploration, visualization, and potential analyses, so below are just a few examples to get you quickly waddling along with *penguins*. You can check out more in ["examples" vignette](https://allisonhorst.github.io/palmerpenguins/articles/examples.html).
 
-<img src="palmerpenguins.png" width="30%" style="display:block; margin-left: auto; margin-right: auto;"/>
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png" width="40%" style="display:block; margin-left: auto; margin-right: auto;"/>
 
 If you are teaching correlation and simple linear regression, penguin flipper length and body mass show a positive association for each of the 3 species:
 
@@ -151,10 +151,10 @@ At this point, you may be also want to know how bill length and depth were actua
 
 You can download this and other palmerpenguins art (useful for teaching with the data) directly from the [package website](https://allisonhorst.github.io/palmerpenguins/articles/art.html). If you use this artwork, please cite with: "Artwork by [@allison\_horst](https://www.allisonhorst.com/)".
 
-Finally, you can get a pretty clear separation between all three species by looking at bill length versus depth:
+Finally, you can get a pretty clear separation between all three species by looking at flipper length versus bill length:
 
 ```{r}
-ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, colour = species)) +
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm, colour = species, shape = species)) +
   geom_point() +
   scale_colour_manual(values = c("darkorange","purple","cyan4"))
 ```
@@ -193,6 +193,7 @@ import seaborn as sns
 df = sns.load_dataset(‘penguins’) 
 ```
 
+
 ### Julia
 
 Julia users can access the penguins data in the [PalmerPenguins.jl](https://github.com/devmotion/PalmerPenguins.jl) package. Example code to import the penguins data through PalmerPenguins.jl:
@@ -200,6 +201,19 @@ Julia users can access the penguins data in the [PalmerPenguins.jl](https://gith
 ```{r, eval=FALSE}
 julia> using PalmerPenguins
 julia> table = PalmerPenguins.load()
+```
+
+### OpenML
+
+[openml.org](https://openml.org/) is a public repository for machine learning data and experiments. Find the penguins here:
+
+<https://www.openml.org/d/42585>
+
+You can also download the penguins from the [openml.org](https://openml.org/) repository with Python using [scikit-learn](https://scikit-learn.org/stable/datasets/index.html#openml):
+
+```{python, eval=FALSE}
+from sklearn.datasets import fetch_openml
+penguins = fetch_openml(name='penguins', version=1)
 ```
 
 ### Kaggle
@@ -236,6 +250,8 @@ Please cite the palmerpenguins R package using:
 ```{r}
 citation("palmerpenguins")
 ```
+
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/palmerpenguins.png" width="30%" style="display:block; margin-left: auto; margin-right: auto;"/>
 
 Have fun with the Palmer Archipelago penguins!
 
