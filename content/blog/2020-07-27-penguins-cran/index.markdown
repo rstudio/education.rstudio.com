@@ -1,8 +1,8 @@
 ---
 title: Release the penguins
 author:
-  - '[Allison Horst](https://www.allisonhorst.com/)'
   - '[Alison Hill](https://alison.rbind.io)'
+  - '[Allison Horst](https://www.allisonhorst.com/)'
   - '[Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)'
 date: '2020-07-27'
 categories:
@@ -43,26 +43,30 @@ library(palmerpenguins)
 
 ![](https://media.giphy.com/media/3og0IO5z8Rd30ktV6g/giphy.gif)
 
+*Note:* these are not Antarctic penguins; these are Magellanic penguins from the [Monterey Bay Aquarium](https://www.montereybayaquarium.org/visit/exhibits/splash-zone/meet-our-penguins) :penguin: But we love them anyway. And these South African penguins want to see what all the fuss about too.
+
 ## Meet the penguins
 
 The `palmerpenguins` data contains size measurements, clutch observations, and blood isotope ratios for three penguin species observed on three islands in the Palmer Archipelago, Antarctica over a study period of three years.
 
 <img src="gorman-penguins.jpg" style="text-align: &apos;center&apos;" width="500"/>
 
-These data were collected from 2007 - 2009 by Dr. Kristen Gorman with the [Palmer Station Long Term Ecological Research Program](https://pal.lternet.edu/), part of the [US Long Term Ecological Research Network](https://lternet.edu/). The data were imported directly from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (EDI) Data Portal, and are available for use by CC0 license ("No Rights Reserved") in accordance with the [Palmer Station Data Policy](https://pal.lternet.edu/data/policies). We gratefully acknowledge Palmer Station LTER and the US LTER Network. Special thanks to Marty Downs (Director, LTER Network Office) for help regarding the data license & use. Here is our intrepid package co-author, Dr. Gorman, in action collecting data:
+These data were collected from 2007 - 2009 by Dr. Kristen Gorman with the [Palmer Station Long Term Ecological Research Program](https://pal.lternet.edu/), part of the [US Long Term Ecological Research Network](https://lternet.edu/). The data were imported directly from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (EDI) Data Portal, and are available for use by CC0 license ("No Rights Reserved") in accordance with the [Palmer Station Data Policy](https://pal.lternet.edu/data/policies). We gratefully acknowledge Palmer Station LTER and the US LTER Network. Special thanks to Marty Downs (Director, LTER Network Office) for help regarding the data license & use. Here is our intrepid package co-author, Dr. Gorman, in action collecting some penguin data:
 
 <img src="penguin-expedition.jpg" style="text-align: &apos;center&apos;" width="500"/>
 
 
+Here is a map of the study site:
 
+<img src="antarctica-map.png" style="text-align: &apos;center&apos;" width="500"/>
 
 ## The **palmerpenguins** package
 
 This package contains two datasets:
 
-1.  Here, we'll focus on a curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to `datasets::iris`.
+1. The raw data is available as `penguins_raw`.
 
-2.  The raw data, accessed from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (see full data citations below), is also available as `palmerpenguins::penguins_raw`.
+1. A curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to `datasets::iris`.
 
 When you first call either of these datasets, what you see depends on whether or not you have the [tibble package](https://tibble.tidyverse.org/) installed on your local workstation. If you *do* have the tibble package installed, then you will see the first 10 rows of data print as a nice tidy tibble. If not, you'll see the full dataset print to your console, just as `iris` does. This allowed us to keep palmerpenguins as lightweight as possible for all users, and yet still user-friendly for tidyverse beginners. A big thank you to Hadley Wickham for contributing this [creative solution](https://github.com/allisonhorst/palmerpenguins/blob/master/data/penguins.R)!
 
@@ -155,6 +159,11 @@ This ends up leading to some nice results using principal components analysis, w
 
 <img src="https://allisonhorst.github.io/palmerpenguins/articles/figs/pca-loadings-plot.png" width="500"/>
 
+We are also pleased to report that the penguins enjoy clustering as well. Here is an example using [K-means clustering](https://www.tidymodels.org/learn/statistics/k-means/) with two tidymodels packages, [broom](https://broom.tidymodels.org/) and [recipes](https://recipes.tidymodels.org/).
+
+<img src="figs/unnamed-chunk-8-1.png" width="500px" style="display: block; margin: auto;" />
+
+
 One more thing! If you want to give your students experience importing and wrangling data, we made a function that allows you to access the `.csv` files from within the package. Here is an example of how you use it:
 
 
@@ -188,7 +197,7 @@ path_to_file()
 #> [1] "penguins_raw.csv" "penguins.csv"
 ```
 
-Credit goes to Jenny Bryan for this [function](https://github.com/tidyverse/readxl/blob/master/R/example.R), inspired by a similar function in the [readxl package](https://readxl.tidyverse.org/).
+Credit goes to Jenny Bryan for this [function](https://allisonhorst.github.io/palmerpenguins/reference/path_to_file.html), inspired by a similar function in the [readxl package](https://readxl.tidyverse.org/).
 
 And as a reminder, you can always read the data in from a url as well:
 
@@ -259,13 +268,11 @@ penguins = fetch_openml(name='penguins', version=1)
 
 ### Makeover Monday
 
-[Makeover Monday](https://www.makeovermonday.co.uk/) featured the penguins on 2020/07/13:
-
-<https://data.world/makeovermonday/2020w28>
+[Makeover Monday](https://www.makeovermonday.co.uk/) featured the penguins on [2020/07/13](https://data.world/makeovermonday/2020w28).
 
 ### Meetups & talks
 
-Some of recent highlights on our radar!
+Here are recent highlights on our penguin radar!
 
 -   Di Cook: [Going beyond 2D and 3D to visualise higher dimensions, for ordination, clustering and other models](https://www.dicook.org/files/visec2020/slides_tourr#1)
 
