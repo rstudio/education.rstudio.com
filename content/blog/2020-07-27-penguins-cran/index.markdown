@@ -93,7 +93,7 @@ penguins
 
 ## Highlights
 
-We don't want to ruin all the fun exploration, visualization, and potential analyses, so below are just a few examples to get you quickly waddling along with *penguins*. You can check out more in ["examples" vignette](https://allisonhorst.github.io/palmerpenguins/articles/examples.html).
+We don't want to ruin all the fun exploration, visualization, and potential analyses, so below are just a few examples to get you quickly waddling along with *penguins*. You can check out more in the ["Get started"](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) and the ["Examples" vignettes](https://allisonhorst.github.io/palmerpenguins/articles/examples.html).
 
 <img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png" width="40%" style="display:block; margin-left: auto; margin-right: auto;"/>
 
@@ -221,7 +221,7 @@ peng_url
 #> # … with 334 more rows, and 2 more variables: sex <chr>, year <dbl>
 ```
 
-The files are located in the [package GitHub repository](https://github.com/allisonhorst/palmerpenguins) in the [`inst/extdata/`](https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata) folder.
+The `.csv` files are located in the [package GitHub repository](https://github.com/allisonhorst/palmerpenguins) in the [`inst/extdata/`](https://github.com/allisonhorst/palmerpenguins/tree/master/inst/extdata) folder.
 
 ## Penguin sightings
 
@@ -261,6 +261,10 @@ You can also download the penguins from the [openml.org](https://openml.org/) re
 from sklearn.datasets import fetch_openml
 penguins = fetch_openml(name='penguins', version=1)
 ```
+
+### Tidy Tuesday
+
+The penguins are chuffed to be the dataset *this week*! Check out the announcement here: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-07-28/readme.md>
 
 ### Kaggle
 
