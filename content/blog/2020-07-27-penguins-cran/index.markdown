@@ -41,7 +41,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-![](https://media.giphy.com/media/3og0IO5z8Rd30ktV6g/giphy.gif)
+<img src="https://media.giphy.com/media/3og0IO5z8Rd30ktV6g/giphy.gif" width="50%" style="display: block; margin: auto;" />
 
 *Note:* these are not Antarctic penguins; these are Magellanic penguins from the [Monterey Bay Aquarium](https://www.montereybayaquarium.org/visit/exhibits/splash-zone/meet-our-penguins) :penguin: But we love them anyway. And these South African penguins want to see what all the fuss about too.
 
@@ -49,24 +49,23 @@ library(palmerpenguins)
 
 The `palmerpenguins` data contains size measurements, clutch observations, and blood isotope ratios for three penguin species observed on three islands in the Palmer Archipelago, Antarctica over a study period of three years.
 
-<img src="gorman-penguins.jpg" style="text-align: &apos;center&apos;" width="500"/>
+<img src="gorman-penguins.jpg" alt="The 3 Antarctic penguin species" style="text-align: &apos;center&apos;" width="500"/>
 
 These data were collected from 2007 - 2009 by Dr. Kristen Gorman with the [Palmer Station Long Term Ecological Research Program](https://pal.lternet.edu/), part of the [US Long Term Ecological Research Network](https://lternet.edu/). The data were imported directly from the [Environmental Data Initiative](https://environmentaldatainitiative.org/) (EDI) Data Portal, and are available for use by CC0 license ("No Rights Reserved") in accordance with the [Palmer Station Data Policy](https://pal.lternet.edu/data/policies). We gratefully acknowledge Palmer Station LTER and the US LTER Network. Special thanks to Marty Downs (Director, LTER Network Office) for help regarding the data license & use. Here is our intrepid package co-author, Dr. Gorman, in action collecting some penguin data:
 
-<img src="penguin-expedition.jpg" style="text-align: &apos;center&apos;" width="500"/>
-
+<img src="penguin-expedition.jpg" alt="Dr Kristen Gorman collecting penguin data" style="text-align: &apos;center&apos;" width="500"/>
 
 Here is a map of the study site:
 
-<img src="antarctica-map.png" style="text-align: &apos;center&apos;" width="500"/>
+<img src="antarctica-map.png" alt="3 study sites on a map of Antarctic Peninsula" style="text-align: &apos;center&apos;" width="500"/>
 
 ## The **palmerpenguins** package
 
 This package contains two datasets:
 
-1. The raw data is available as `penguins_raw`.
+1.  The raw data is available as `penguins_raw`.
 
-1. A curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to `datasets::iris`.
+2.  A curated subset of the raw data in the package named `penguins`, which can serve as an out-of-the-box alternative to `datasets::iris`.
 
 When you first call either of these datasets, what you see depends on whether or not you have the [tibble package](https://tibble.tidyverse.org/) installed on your local workstation. If you *do* have the tibble package installed, then you will see the first 10 rows of data print as a nice tidy tibble. If not, you'll see the full dataset print to your console, just as `iris` does. This allowed us to keep palmerpenguins as lightweight as possible for all users, and yet still user-friendly for tidyverse beginners. A big thank you to Hadley Wickham for contributing this [creative solution](https://github.com/allisonhorst/palmerpenguins/blob/master/data/penguins.R)!
 
@@ -95,7 +94,7 @@ penguins
 
 We don't want to ruin all the fun exploration, visualization, and potential analyses, so below are just a few examples to get you quickly waddling along with *penguins*. You can check out more in the ["Get started"](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) and the ["Examples" vignettes](https://allisonhorst.github.io/palmerpenguins/articles/examples.html).
 
-<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png" width="40%" style="display:block; margin-left: auto; margin-right: auto;"/>
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png" alt="Allison Horst illustration of 3 penguin species" style="display:block; margin-left: auto; margin-right: auto;" width="40%"/>
 
 If you are teaching correlation and simple linear regression, penguin flipper length and body mass show a positive association for each of the 3 species:
 
@@ -109,7 +108,7 @@ ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   scale_color_manual(values = c("darkorange","darkorchid","cyan4")) 
 ```
 
-<img src="figs/unnamed-chunk-4-1.png" width="500px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-5-1.png" width="500px" style="display: block; margin: auto;" />
 
 Penguin bill length and depth also show some interesting patterns. If you ignore species, you might think there is a negative correlation:
 
@@ -121,7 +120,7 @@ ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-<img src="figs/unnamed-chunk-5-1.png" width="500px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-6-1.png" width="500px" style="display: block; margin: auto;" />
 
 But, if you look at the correlations within species, bill length and depth are actually positive correlated. This is a nice "in the wild" example of [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox).
 
@@ -136,11 +135,11 @@ ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
 ```
 
-<img src="figs/unnamed-chunk-6-1.png" width="500px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-7-1.png" width="500px" style="display: block; margin: auto;" />
 
 At this point, you may be also want to know how bill length and depth were actually measured. Luckily, [Allison Horst](https://www.allisonhorst.com/) drew up some illustrations to help explain this. Here is one for bill measurement:
 
-<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png" width="500"/>
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/culmen_depth.png" alt="Allison Horst illustration of bill length and depth" width="500"/>
 
 You can download this and other palmerpenguins art (useful for teaching with the data) directly from the [package website](https://allisonhorst.github.io/palmerpenguins/articles/art.html). If you use this artwork, please cite with: "Artwork by [@allison\_horst](https://www.allisonhorst.com/)".
 
@@ -153,16 +152,15 @@ ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm, colour = species
   scale_colour_manual(values = c("darkorange","purple","cyan4"))
 ```
 
-<img src="figs/unnamed-chunk-7-1.png" width="500px" style="display: block; margin: auto;" />
+<img src="figs/unnamed-chunk-8-1.png" width="500px" style="display: block; margin: auto;" />
 
 This ends up leading to some nice results using principal components analysis, which is commonly done with `iris` as a "hello world" PCA example. We provide code to do a simple PCA using [tidymodels](https://www.tidymodels.org/) in the ["PCA with penguins and recipes" vignette](https://allisonhorst.github.io/palmerpenguins/articles/pca.html).
 
-<img src="https://allisonhorst.github.io/palmerpenguins/articles/figs/pca-loadings-plot.png" width="500"/>
+<img src="https://allisonhorst.github.io/palmerpenguins/articles/figs/pca-loadings-plot.png" alt="Results of principal components analysis" width="500"/>
 
 We are also pleased to report that the penguins enjoy clustering as well. Here is an example using [K-means clustering](https://www.tidymodels.org/learn/statistics/k-means/) with two tidymodels packages, [broom](https://broom.tidymodels.org/) and [recipes](https://recipes.tidymodels.org/).
 
-<img src="figs/unnamed-chunk-8-1.png" width="500px" style="display: block; margin: auto;" />
-
+<img src="figs/unnamed-chunk-9-1.png" width="500px" style="display: block; margin: auto;" />
 
 One more thing! If you want to give your students experience importing and wrangling data, we made a function that allows you to access the `.csv` files from within the package. Here is an example of how you use it:
 
@@ -237,7 +235,6 @@ import seaborn as sns
 df = sns.load_dataset(‘penguins’) 
 ```
 
-
 ### Julia
 
 Julia users can access the penguins data in the [PalmerPenguins.jl](https://github.com/devmotion/PalmerPenguins.jl) package. Example code to import the penguins data through PalmerPenguins.jl:
@@ -280,16 +277,15 @@ Here are recent highlights on our penguin radar!
 
 -   Di Cook: [Going beyond 2D and 3D to visualise higher dimensions, for ordination, clustering and other models](https://www.dicook.org/files/visec2020/slides_tourr#1)
 
-    ![](penguin-tour.gif)
+    ![Di Cook\'s tourr package gif](penguin-tour.gif)
 
 -   Samantha Toet: [Building dashboards with flexdashboard and Shiny](https://www.meetup.com/rladies-charlottesville/events/270748602/)
 
-    ![](penguin-dashboard.jpeg)
-
+    ![Sam Toet\'s penguin flexdashboard](penguin-dashboard.jpeg)
 
 ### Contribute your own examples
 
-If you use palmerpenguins, please consider sharing with us and add it to our [user-contributed examples](https://allisonhorst.github.io/palmerpenguins/articles/user_contributions.html). 
+If you use palmerpenguins, please consider sharing with us and add it to our [user-contributed examples](https://allisonhorst.github.io/palmerpenguins/articles/user_contributions.html).
 
 ## Penguin citation
 
@@ -318,7 +314,7 @@ citation("palmerpenguins")
 #>   }
 ```
 
-<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/palmerpenguins.png" width="30%" style="display:block; margin-left: auto; margin-right: auto;"/>
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/palmerpenguins.png" alt="Palmer penguins hex logo" style="display:block; margin-left: auto; margin-right: auto;" width="30%"/>
 
 Have fun with the Palmer Archipelago penguins!
 
@@ -337,8 +333,6 @@ Individual data can be accessed directly via the [Environmental Data Initiative]
 -   Palmer Station Antarctica LTER and K. Gorman, 2020. Structural size measurements and isotopic signatures of foraging among adult male and female Gentoo penguin (*Pygoscelis papua*) nesting along the Palmer Archipelago near Palmer Station, 2007-2009 ver 5. Environmental Data Initiative. <https://doi.org/10.6073/pasta/7fca67fb28d56ee2ffa3d9370ebda689> (Accessed 2020-06-08).
 
 -   Palmer Station Antarctica LTER and K. Gorman, 2020. Structural size measurements and isotopic signatures of foraging among adult male and female Chinstrap penguin (*Pygoscelis antarcticus*) nesting along the Palmer Archipelago near Palmer Station, 2007-2009 ver 6. Environmental Data Initiative. <https://doi.org/10.6073/pasta/c14dfcfada8ea13a17536e73eb6fbe9e> (Accessed 2020-06-08).
-
-
 
 ## Acknowledgements
 
