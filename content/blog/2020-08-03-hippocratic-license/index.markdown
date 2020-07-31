@@ -2,7 +2,7 @@
 title: The Hippocratic License
 author:
   - greg
-date: '2020-07-07'
+date: '2020-08-03'
 categories:
   - teach
 tags:
