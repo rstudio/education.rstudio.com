@@ -66,3 +66,500 @@ discussing it and its implications can turn an otherwise abstract lecture on eth
 into a lively debate,
 and can give students practice discussing what they *should* do
 rather than what they *could* do.
+
+Here is a list of adopters as of the time of this post, with links to their GitHub repositories:
+<!--html_preserve--><style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#pgtyqnliih .gt_table {
+  display: table;
+  border-collapse: collapse;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pgtyqnliih .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pgtyqnliih .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pgtyqnliih .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pgtyqnliih .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pgtyqnliih .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pgtyqnliih .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pgtyqnliih .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pgtyqnliih .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pgtyqnliih .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pgtyqnliih .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pgtyqnliih .gt_from_md p {
+  line-height: 1em;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+#pgtyqnliih .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pgtyqnliih .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#pgtyqnliih .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgtyqnliih .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgtyqnliih .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pgtyqnliih .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pgtyqnliih .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pgtyqnliih .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pgtyqnliih .gt_left {
+  text-align: left;
+}
+
+#pgtyqnliih .gt_center {
+  text-align: center;
+}
+
+#pgtyqnliih .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pgtyqnliih .gt_font_normal {
+  font-weight: normal;
+}
+
+#pgtyqnliih .gt_font_bold {
+  font-weight: bold;
+}
+
+#pgtyqnliih .gt_font_italic {
+  font-style: italic;
+}
+
+#pgtyqnliih .gt_super {
+  font-size: 65%;
+}
+
+#pgtyqnliih .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="pgtyqnliih" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Project</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">URL</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Animus</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/SplittyDev/Animus">https://github.com/SplittyDev/Animus</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>cachish</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/thusoy/cachish">https://github.com/thusoy/cachish</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>DCAN</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/DecentralizedCAN/CAN">https://github.com/DecentralizedCAN/CAN</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>DimeNet</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/klicperajo/dimenet">https://github.com/klicperajo/dimenet</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>FODA Card Game</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/rafaelcastrocouto/foda">https://github.com/rafaelcastrocouto/foda</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>format_parser</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://rubygems.org/gems/format_parser">https://rubygems.org/gems/format_parser</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Functional Programming for Mortals with Cats in Scala (book)</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://leanpub.com/fpmortals-cats">https://leanpub.com/fpmortals-cats</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Gryphon</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/vinivendra/Gryphon">https://github.com/vinivendra/Gryphon</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Honeycomb Serilog Sink</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/evilpilaf/HoneycombSerilogSink">https://github.com/evilpilaf/HoneycombSerilogSink</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Kommit</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/kommitapp/kom-web">https://github.com/kommitapp/kom-web</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>Launchlet</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/launchlet/launchlet">https://github.com/launchlet/launchlet</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>leisure</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://leisure.tdreyno.com">https://leisure.tdreyno.com</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>libhoney-kotlin</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/imavroukakis/libhoney-kotlin">https://github.com/imavroukakis/libhoney-kotlin</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>NLPIA-bot Chatbot</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/nlpia/nlpia-bot">https://github.com/nlpia/nlpia-bot</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>postgres-mitm</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/thusoy/postgres-mitm">https://github.com/thusoy/postgres-mitm</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>rack-read_only</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://rubygems.org/gems/rack-read_only">https://rubygems.org/gems/rack-read_only</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>suo</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/dieseltravis/suo">https://github.com/dieseltravis/suo</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>TidyBlocks</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="http://tidyblocks.tech">http://tidyblocks.tech</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>VCR</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/vcr/vcr">https://github.com/vcr/vcr</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>zip_tricks</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/wetransfer/zip_tricks">https://github.com/wetransfer/zip_tricks</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>logitechd</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/FFY00/logitechd">https://github.com/FFY00/logitechd</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>dbus-objects</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/FFY00/dbus-objects">https://github.com/FFY00/dbus-objects</a></p>
+</div></td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left"><div class='gt_from_md'><p>python-install</p>
+</div></td>
+      <td class="gt_row gt_center"><div class='gt_from_md'><p><a href="https://github.com/FFY00/python-install">https://github.com/FFY00/python-install</a></p>
+</div></td>
+    </tr>
+  </tbody>
+  
+  
+</table></div><!--/html_preserve-->
+
