@@ -2,8 +2,8 @@
 
 # education.rstudio.com
 
-This repo is the source of <https://education.rstudio.com>, and this readme tells you 
-how it all works. 
+This repo is the source of <https://education.rstudio.com>, and this readme tells 
+you how it all works. 
 
 * If you spot any small problems with the website, please feel empowered to fix 
   them directly with a PR. 

@@ -7,7 +7,7 @@ categories:
   - learn
   - teach
 tags:
-  - online education
+  - online
 description: |
   A collection of new + free + online learning resources for R and Python users.
 slug: remote-roundup

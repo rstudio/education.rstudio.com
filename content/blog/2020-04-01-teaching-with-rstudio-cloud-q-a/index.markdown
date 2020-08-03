@@ -7,7 +7,7 @@ slug: teaching-with-rstudio-cloud-q-a
 categories:
   - teach
 tags:
-  - online
+  - rstudio-cloud
   - teach
 author: 
   - mine
