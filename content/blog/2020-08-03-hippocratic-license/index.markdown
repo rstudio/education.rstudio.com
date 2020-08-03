@@ -67,12 +67,12 @@ into a lively debate,
 and can give students practice discussing what they *should* do
 rather than what they *could* do.
 
-Here is a list of adopters as of the time of this post, with links to their GitHub repositories:
+Here is a list of adopters as of the time of this post, with links to their projects:
 <!--html_preserve--><style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pgtyqnliih .gt_table {
+#csqayypsof .gt_table {
   display: table;
   border-collapse: collapse;
   max-width: 100%;
@@ -98,7 +98,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-left-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_heading {
+#csqayypsof .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -110,7 +110,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-right-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_title {
+#csqayypsof .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -120,7 +120,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-bottom-width: 0;
 }
 
-#pgtyqnliih .gt_subtitle {
+#csqayypsof .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -130,13 +130,13 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-top-width: 0;
 }
 
-#pgtyqnliih .gt_bottom_border {
+#csqayypsof .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_col_headings {
+#csqayypsof .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -151,7 +151,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-right-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_col_heading {
+#csqayypsof .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -171,7 +171,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   overflow-x: hidden;
 }
 
-#pgtyqnliih .gt_column_spanner_outer {
+#csqayypsof .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -183,15 +183,15 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   padding-right: 4px;
 }
 
-#pgtyqnliih .gt_column_spanner_outer:first-child {
+#csqayypsof .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pgtyqnliih .gt_column_spanner_outer:last-child {
+#csqayypsof .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pgtyqnliih .gt_column_spanner {
+#csqayypsof .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -203,7 +203,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   width: 100%;
 }
 
-#pgtyqnliih .gt_group_heading {
+#csqayypsof .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -225,7 +225,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   vertical-align: middle;
 }
 
-#pgtyqnliih .gt_empty_group_heading {
+#csqayypsof .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -240,21 +240,21 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   vertical-align: middle;
 }
 
-#pgtyqnliih .gt_from_md > :first-child {
+#csqayypsof .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pgtyqnliih .gt_from_md > :last-child {
+#csqayypsof .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pgtyqnliih .gt_from_md p {
+#csqayypsof .gt_from_md p {
   line-height: 1em;
   margin-bottom: 0em;
   margin-top: 0em;
 }
 
-#pgtyqnliih .gt_row {
+#csqayypsof .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -273,7 +273,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   overflow-x: hidden;
 }
 
-#pgtyqnliih .gt_stub {
+#csqayypsof .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -285,7 +285,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   padding-left: 12px;
 }
 
-#pgtyqnliih .gt_summary_row {
+#csqayypsof .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -295,7 +295,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   padding-right: 5px;
 }
 
-#pgtyqnliih .gt_first_summary_row {
+#csqayypsof .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -305,7 +305,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-top-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_grand_summary_row {
+#csqayypsof .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -315,7 +315,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   padding-right: 5px;
 }
 
-#pgtyqnliih .gt_first_grand_summary_row {
+#csqayypsof .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,11 +325,11 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-top-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_striped {
+#csqayypsof .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pgtyqnliih .gt_table_body {
+#csqayypsof .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -338,7 +338,7 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-bottom-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_footnotes {
+#csqayypsof .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -352,13 +352,13 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-right-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_footnote {
+#csqayypsof .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#pgtyqnliih .gt_sourcenotes {
+#csqayypsof .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -372,46 +372,46 @@ Here is a list of adopters as of the time of this post, with links to their GitH
   border-right-color: #D3D3D3;
 }
 
-#pgtyqnliih .gt_sourcenote {
+#csqayypsof .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#pgtyqnliih .gt_left {
+#csqayypsof .gt_left {
   text-align: left;
 }
 
-#pgtyqnliih .gt_center {
+#csqayypsof .gt_center {
   text-align: center;
 }
 
-#pgtyqnliih .gt_right {
+#csqayypsof .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pgtyqnliih .gt_font_normal {
+#csqayypsof .gt_font_normal {
   font-weight: normal;
 }
 
-#pgtyqnliih .gt_font_bold {
+#csqayypsof .gt_font_bold {
   font-weight: bold;
 }
 
-#pgtyqnliih .gt_font_italic {
+#csqayypsof .gt_font_italic {
   font-style: italic;
 }
 
-#pgtyqnliih .gt_super {
+#csqayypsof .gt_super {
   font-size: 65%;
 }
 
-#pgtyqnliih .gt_footnote_marks {
+#csqayypsof .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="pgtyqnliih" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="csqayypsof" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
