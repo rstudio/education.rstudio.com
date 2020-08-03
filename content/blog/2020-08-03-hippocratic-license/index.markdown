@@ -67,12 +67,13 @@ into a lively debate,
 and can give students practice discussing what they *should* do
 rather than what they *could* do.
 
-Here is a list of adopters as of the time of this post, with links to their projects:
+
+If you'd like to read more, [Dr. Nick Horton](https://twitter.com/askdrstats) wrote a [post](https://teachdatascience.com/oath/) about this license on the ["Teach Data Science" blog](https://teachdatascience.com/). And here is a list of adopters as of the time of this post, with links to their projects:
 <!--html_preserve--><style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#csqayypsof .gt_table {
+#wlgxzwuigd .gt_table {
   display: table;
   border-collapse: collapse;
   max-width: 100%;
@@ -98,7 +99,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-left-color: #D3D3D3;
 }
 
-#csqayypsof .gt_heading {
+#wlgxzwuigd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -110,7 +111,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-right-color: #D3D3D3;
 }
 
-#csqayypsof .gt_title {
+#wlgxzwuigd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -120,7 +121,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-bottom-width: 0;
 }
 
-#csqayypsof .gt_subtitle {
+#wlgxzwuigd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -130,13 +131,13 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-top-width: 0;
 }
 
-#csqayypsof .gt_bottom_border {
+#wlgxzwuigd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#csqayypsof .gt_col_headings {
+#wlgxzwuigd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -151,7 +152,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-right-color: #D3D3D3;
 }
 
-#csqayypsof .gt_col_heading {
+#wlgxzwuigd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -171,7 +172,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   overflow-x: hidden;
 }
 
-#csqayypsof .gt_column_spanner_outer {
+#wlgxzwuigd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -183,15 +184,15 @@ Here is a list of adopters as of the time of this post, with links to their proj
   padding-right: 4px;
 }
 
-#csqayypsof .gt_column_spanner_outer:first-child {
+#wlgxzwuigd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#csqayypsof .gt_column_spanner_outer:last-child {
+#wlgxzwuigd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#csqayypsof .gt_column_spanner {
+#wlgxzwuigd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -203,7 +204,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   width: 100%;
 }
 
-#csqayypsof .gt_group_heading {
+#wlgxzwuigd .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -225,7 +226,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   vertical-align: middle;
 }
 
-#csqayypsof .gt_empty_group_heading {
+#wlgxzwuigd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -240,21 +241,21 @@ Here is a list of adopters as of the time of this post, with links to their proj
   vertical-align: middle;
 }
 
-#csqayypsof .gt_from_md > :first-child {
+#wlgxzwuigd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#csqayypsof .gt_from_md > :last-child {
+#wlgxzwuigd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#csqayypsof .gt_from_md p {
+#wlgxzwuigd .gt_from_md p {
   line-height: 1em;
   margin-bottom: 0em;
   margin-top: 0em;
 }
 
-#csqayypsof .gt_row {
+#wlgxzwuigd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -273,7 +274,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   overflow-x: hidden;
 }
 
-#csqayypsof .gt_stub {
+#wlgxzwuigd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -285,7 +286,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   padding-left: 12px;
 }
 
-#csqayypsof .gt_summary_row {
+#wlgxzwuigd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -295,7 +296,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   padding-right: 5px;
 }
 
-#csqayypsof .gt_first_summary_row {
+#wlgxzwuigd .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -305,7 +306,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-top-color: #D3D3D3;
 }
 
-#csqayypsof .gt_grand_summary_row {
+#wlgxzwuigd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -315,7 +316,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   padding-right: 5px;
 }
 
-#csqayypsof .gt_first_grand_summary_row {
+#wlgxzwuigd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,11 +326,11 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-top-color: #D3D3D3;
 }
 
-#csqayypsof .gt_striped {
+#wlgxzwuigd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#csqayypsof .gt_table_body {
+#wlgxzwuigd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -338,7 +339,7 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-bottom-color: #D3D3D3;
 }
 
-#csqayypsof .gt_footnotes {
+#wlgxzwuigd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -352,13 +353,13 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-right-color: #D3D3D3;
 }
 
-#csqayypsof .gt_footnote {
+#wlgxzwuigd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#csqayypsof .gt_sourcenotes {
+#wlgxzwuigd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -372,46 +373,46 @@ Here is a list of adopters as of the time of this post, with links to their proj
   border-right-color: #D3D3D3;
 }
 
-#csqayypsof .gt_sourcenote {
+#wlgxzwuigd .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#csqayypsof .gt_left {
+#wlgxzwuigd .gt_left {
   text-align: left;
 }
 
-#csqayypsof .gt_center {
+#wlgxzwuigd .gt_center {
   text-align: center;
 }
 
-#csqayypsof .gt_right {
+#wlgxzwuigd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#csqayypsof .gt_font_normal {
+#wlgxzwuigd .gt_font_normal {
   font-weight: normal;
 }
 
-#csqayypsof .gt_font_bold {
+#wlgxzwuigd .gt_font_bold {
   font-weight: bold;
 }
 
-#csqayypsof .gt_font_italic {
+#wlgxzwuigd .gt_font_italic {
   font-style: italic;
 }
 
-#csqayypsof .gt_super {
+#wlgxzwuigd .gt_super {
   font-size: 65%;
 }
 
-#csqayypsof .gt_footnote_marks {
+#wlgxzwuigd .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="csqayypsof" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="wlgxzwuigd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>

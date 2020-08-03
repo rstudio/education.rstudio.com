@@ -67,7 +67,8 @@ into a lively debate,
 and can give students practice discussing what they *should* do
 rather than what they *could* do.
 
-Here is a list of adopters as of the time of this post, with links to their projects:
+
+If you'd like to read more, [Dr. Nick Horton](https://twitter.com/askdrstats) wrote a [post](https://teachdatascience.com/oath/) about this license on the ["Teach Data Science" blog](https://teachdatascience.com/). And here is a list of adopters as of the time of this post, with links to their projects:
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 adopters <- readr::read_csv("https://raw.githubusercontent.com/EthicalSource/hippocratic-license/release/static/adopters.csv") %>% 
