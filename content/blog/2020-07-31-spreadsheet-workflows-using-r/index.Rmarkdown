@@ -55,7 +55,7 @@ spending_quarter <- spending %>%
 spending_quarter
 ```
 
-Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good measure added an NA condition in the event we've missed something. We can quality check our case_when by examining our data and seeing if any NA values show up which would indicate if a month is spelled differently or if there's an error in our code. 
+Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good measure added an NA condition in the event we've missed something. We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
 
 For a direct comparison, we can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
 
