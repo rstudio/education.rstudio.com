@@ -89,7 +89,7 @@ First we'll create a separate sheet for our pivot table, specifying the range of
 
 ![pivot-set-up](screenshots/pivot-set-up.png)
 
-And then its as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying  a sum calculation.
+And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
 
 ![pivot-table](screenshots/pivot-table.png)
 
