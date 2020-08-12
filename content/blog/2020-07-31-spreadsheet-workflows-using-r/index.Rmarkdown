@@ -28,7 +28,7 @@ We've decided to run our analysis in RStudio to take advantage of data wrangling
 library(tidyverse)
 library(readxl)
 
-#Read in and look at our data
+# Read in data and take a peek at it
 spending <- read_excel("data/spending.xlsx")
 spending
 ```
