@@ -192,7 +192,7 @@ occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
 occupation
 ```
 
-We see that the powers sheet has a hero column  allowing for another simple left join, however the occupation sheet doesn't have a common column by specific name but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We see that the powers sheet has a hero column allowing for another simple left join. However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
 We can take advantage of this relationship to bring these data frames together as shown in the code below.  
 ```{r}
 heroes_full <- superhero_identities %>%
