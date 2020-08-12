@@ -118,7 +118,7 @@ We can also filter our table if we're interested in a specific expense type. Let
 left_over %>%
   filter(expense == "office happy hour")
 ```
-Hmm, a lot of spending in Quarter 3, which might make sense as these are the summer months. 
+Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are the summer months. 
 
 ## From tables to visualizations
 
