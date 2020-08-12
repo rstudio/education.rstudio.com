@@ -83,7 +83,7 @@ spending_table <- spending_quarter %>%
 
 spending_table
 
-Again as a direct comparison, let's also take a look at what this process would look like via Excel.
+Again as a direct comparison, let's also take a look at what this process would look like in Excel.
 
 First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be comprised of 
 
