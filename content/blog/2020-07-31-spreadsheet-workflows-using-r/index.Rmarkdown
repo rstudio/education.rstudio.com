@@ -131,8 +131,7 @@ left_over %>%
   geom_line(group = 1) +
   facet_wrap( ~ expense) +
   scale_y_continuous(labels = dollar) + 
-  geom_hline(yintercept=20, 
-                color = "red") + 
+  geom_hline(yintercept = 20, color = "red") + 
   labs (title  = "Spending by Expense Type",
          x = "Quarter",
          y = "$ Left Over")
