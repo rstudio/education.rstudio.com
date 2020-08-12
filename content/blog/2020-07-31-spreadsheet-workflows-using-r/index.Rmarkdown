@@ -204,7 +204,7 @@ We've expanded our dataset quite a bit. Let's take an alternative approach to vi
 glimpse(heroes_full)
 ```
 
-Conversely, if we're working in Excel we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet.  
+For doing this same task in Excel, we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet.  
 To bring in our occupation data we simply adjust the initial reference point in our formula from column A2 which houses hero name to E2 which houses alter egos which was also added via a VLOOKUP. 
 
 ![fully joined](screenshots/full-join.png)
