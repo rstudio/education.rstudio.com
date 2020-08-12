@@ -196,7 +196,7 @@ heroes_full <- superhero_identities %>%
   left_join(occupation, by = c("alter_ego" = "name"))
 
 ```
-Here we conduct a simple left join bringing in the data from the powers data set, and then another left joining by alter ego to bring in the data from the occupation spreadsheet. 
+Here we conduct a simple left join bringing in the data from the powers data set, and then another left join to bring in the data from the occupation spreadsheet.
 In the `by` argument we specify that the column `alter_ego` should be matched to the `name` column from the occupation data frame. 
 
 We've expanded our dataset quite a bit. Let's take an alternative approach to view it using the `glimpse()` function from dplyr.
