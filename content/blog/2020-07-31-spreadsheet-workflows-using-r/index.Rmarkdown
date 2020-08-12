@@ -61,7 +61,8 @@ For a direct comparison, we can see how this process works in spreadsheets, mani
 
 ![nested-logic](screenshots/nested-logic.png)
 
-We can see the formula to create our quarter column below
+It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
+
 ```{}
 =IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
 ```
