@@ -122,7 +122,7 @@ Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are t
 
 ## From tables to visualizations
 
-Finally, we can apply data visualization to our work flow and look at spending across quarters and expense type. The ggplot2 package was loaded when we called the tidyverse but we'll add the scales package so we can put put a dollar format on our y axis of money left over. 
+Finally, we can apply data visualization to our workflow and look at spending across quarters and expense type. We will use the ggplot2 package for visualisation, which already got loaded when we called `library(tidyverse)` and we'll also load the scales package so that we can display the values on the y-axis in dollar format.
 ```{r,message=FALSE}
 library(scales)
 left_over %>%
