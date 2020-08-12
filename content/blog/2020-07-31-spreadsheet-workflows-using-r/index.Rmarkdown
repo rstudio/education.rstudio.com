@@ -71,15 +71,16 @@ We can see the formula to create our quarter column below
 
 Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. Using some data wrangling functions from the tidyverse we can create summary tables as well. Let's take a look total expenses and budget by expense type and quarter.  
 ```{r}
-summary_table <- spending_quarter %>%
+spending_table <- spending_quarter %>%
   group_by(expense, quarter) %>%
-  summarise(total_expenses = sum(num_of_expenses),
-            total_expense_amt = sum(amount),
-            total_budget_amt = sum(budget),
-           .groups = "drop")
+  summarise(
+    total_expenses = sum(num_of_expenses),
+    total_expense_amt = sum(amount),
+    total_budget_amt = sum(budget),
+    .groups = "drop"
+    )
 
-summary_table
-```
+spending_table
 
 Again as a direct comparison, let's also take a look at what this process would look like via Excel.
 
