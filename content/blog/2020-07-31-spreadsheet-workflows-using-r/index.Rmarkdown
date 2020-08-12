@@ -23,7 +23,7 @@ They send you a spreadsheet, available in an Excel workbook, and ask you to anal
 
 We've decide to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse, as well as create a reproducible work flow in case we want to revisit this analysis later.  First let's load in our data and take a look at it in RStudio 
 ```{r,message=FALSE}
-#Packages
+# Load packages
 library(tidyverse)
 library(readxl)
 
