@@ -44,11 +44,13 @@ Back to our spending sheet, while data for all 12 months is useful for our summa
 To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call.  
 ```{r}
 spending_quarter <- spending %>%
-  mutate(quarter = case_when(month %in% c("Jan", "Feb", "Mar") ~ "Q1",
-                             month %in% c("Apr", "May", "Jun") ~ "Q2",
-                             month %in% c("Jul", "Aug", "Sep") ~ "Q3",
-                             month %in% c("Oct", "Nov", "Dec") ~ "Q4",
-                             TRUE ~ "NA"))
+  mutate(quarter = case_when(
+    month %in% c("Jan", "Feb", "Mar") ~ "Q1",
+    month %in% c("Apr", "May", "Jun") ~ "Q2",
+    month %in% c("Jul", "Aug", "Sep") ~ "Q3",
+    month %in% c("Oct", "Nov", "Dec") ~ "Q4",
+    TRUE ~ "NA"
+  ))
 
 spending_quarter
 ```
