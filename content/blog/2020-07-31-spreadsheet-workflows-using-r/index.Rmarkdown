@@ -37,7 +37,8 @@ We take note of the month column as well as amount spent, budget, and, expense t
 
 
 ## Nested Logic
-One advantage of spreadsheets is we can use formulas to dictate what should be happening in a specific cell and in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or 'nested' logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL we can set parameters for what a value should be based off conditions from other rows or columns in our data.
+
+One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.
 
 Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set.  
 To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call.  
