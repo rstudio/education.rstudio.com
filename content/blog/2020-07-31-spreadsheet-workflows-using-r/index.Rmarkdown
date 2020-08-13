@@ -149,7 +149,7 @@ Below is a data set containing information on various comic book characters.
 Over time this data set has been expanded on with multiple sheets including new information. 
 Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
 
-First let's load in our data. Our initial data set contains two sheets so we'll load them in separately as two distinct data frames
+First let's load our data. Our data set contains two sheets so we'll load them in separately as two distinct data frames.
 ```{r}
 superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
 identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
