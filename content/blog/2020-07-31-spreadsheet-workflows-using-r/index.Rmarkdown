@@ -142,7 +142,7 @@ Voila! - We have both a summary table and a graphic that can tell us useful info
 
 
 ## Join the Party
-Data doesn't always come to us complete and many times we need to bring in data from other sources either before we start an analysis or during one,  when we realize other data could be of use to us.   
+We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis.   
 
 For this our next scenario, we'll leave the finance world and move to something perhaps a little more exciting, superheroes!
 Below is a data set containing information on various comic book characters.  
