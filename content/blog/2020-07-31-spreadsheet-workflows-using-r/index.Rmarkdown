@@ -180,7 +180,7 @@ superhero_identities
 Great, we've run our join no problem!  Conversely, we can also take the spreadsheet approach and utilize a VLOOKUP to bring in this data.
 ![vlookup](screenshots/VLOOKUP.png)
 
-Of course however we'll run into instances in which we'll need to pull in data from multiple sheets and the superheroes data set is no exception. 
+There are, of course, instances in which we'll need to pull in data from multiple sheets, and the superheroes data set is no exception. 
 We've been informed there are an additional two sheets that have recently been added, one containing information on the main power or skill of each character...
 ```{r}
 powers <- read_excel("data/superheroes.xlsx", sheet = "powers")
