@@ -160,7 +160,7 @@ Let's take a look at the sheet with data on superheroes.
 superheroes
 ```
 
-And now another sheet lisitng the alter ego of each character
+And now let's take a look at the sheet listing the alter ego of each character.
 ```{r}
 identities
 ```
