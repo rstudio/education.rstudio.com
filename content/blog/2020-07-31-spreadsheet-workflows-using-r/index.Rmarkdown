@@ -177,7 +177,7 @@ superhero_identities <- superheroes %>%
 superhero_identities
 ```
 
-Great, we've run our join no problem!  Conversely, we can also take the spreadsheet approach and utilize a VLOOKUP to bring in this data.
+Great, we've joined the data frames with no problem!  For parity, let's also walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data.
 ![vlookup](screenshots/VLOOKUP.png)
 
 There are, of course, instances in which we'll need to pull in data from multiple sheets, and the superheroes data set is no exception. 
