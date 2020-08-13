@@ -144,7 +144,7 @@ Voila! - We have both a summary table and a graphic that can tell us useful info
 ## Join the Party
 We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis.   
 
-For this our next scenario, we'll leave the finance world and move to something perhaps a little more exciting, superheroes!
+For our second scenario, we'll leave the finance world and move on to something that is perhaps a little more exciting: superheroes!
 Below is a data set containing information on various comic book characters.  
 Over time this data set has been expanded on with multiple sheets including new information. 
 Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
