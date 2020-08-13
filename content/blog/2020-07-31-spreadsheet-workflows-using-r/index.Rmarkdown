@@ -132,9 +132,11 @@ left_over %>%
   facet_wrap( ~ expense) +
   scale_y_continuous(labels = dollar) + 
   geom_hline(yintercept = 20, color = "red") + 
-  labs (title  = "Spending by Expense Type",
-         x = "Quarter",
-         y = "$ Left Over")
+  labs (
+    title  = "Spending by Expense Type",
+    x = "Quarter",
+    y = "Amount Left Over, in dollars"
+    )
 ```
 Voila! - We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with over expense on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits
 
