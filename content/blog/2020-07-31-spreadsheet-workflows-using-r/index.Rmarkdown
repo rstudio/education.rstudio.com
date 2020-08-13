@@ -138,7 +138,7 @@ left_over %>%
     y = "Amount Left Over, in dollars"
     )
 ```
-Voila! - We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with over expense on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits
+Voila! We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with the overspending on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits.
 
 
 ## Join the Party
