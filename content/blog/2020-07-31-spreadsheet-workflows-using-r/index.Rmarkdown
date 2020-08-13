@@ -155,7 +155,7 @@ superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
 identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
 ```
 
-Let's take a look at our initial sheet on superheores
+Let's take a look at the sheet with data on superheroes.
 ```{r}
 superheroes
 ```
