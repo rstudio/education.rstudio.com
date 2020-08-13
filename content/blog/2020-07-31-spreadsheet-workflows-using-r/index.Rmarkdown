@@ -147,7 +147,7 @@ We don't always have all of the information we need in a single data file and ma
 For this our next scenario, we'll leave the finance world and move to something perhaps a little more exciting, superheroes!
 Below is a data set containing information on various comic book characters.  
 Over time this data set has been expanded on with multiple sheets including new information. 
-Before we start exploring  we'll need to join in the relevant data so we can conduct some fun analyses.
+Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
 
 First let's load in our data. Our initial data set contains two sheets so we'll load them in separately as two distinct data frames
 ```{r}
