@@ -166,7 +166,7 @@ identities
 ```
 
 In each sheet, there is a `hero` column that allows us to match data from one sheet to the other.   
-Using `left_join()` from the dplyr package, we can bring in the data from the identities sheet into our initial superheroes data  
+Using `left_join()` from the dplyr package, we can bring in the data from the identities data frame into our superheroes data frame.
 
 To do this we'll call `left_join()` on superheroes, putting the identities data set as our first argument and specify our common variable with the `by` argument 
 ```{r}
