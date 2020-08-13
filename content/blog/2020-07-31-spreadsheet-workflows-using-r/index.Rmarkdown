@@ -185,7 +185,7 @@ powers
 ```
 
 
-And the other containing the occupation of the each heroes alter-ego. 
+And the other containing the occupation of the alter-ego of each superhero. 
 ```{r}
 occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
 occupation
