@@ -21,7 +21,11 @@ In this post I'd like to share a part of this work, specifically focused on the 
 For our first story, it's day one as a new data analyst and our boss has asked us to take a look at the company's finances.
 They send you a spreadsheet, available in an Excel workbook, and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overboard.
 
-We've decided to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later.  First, let's load in our data and take a look at it in RStudio.
+We've decided to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later.  First, let's load in our data and take a look at it in RStudio. 
+
+If you would like to follow along, you can download the Excel file called `spending.xlsx` [here](https://drive.google.com/file/d/1_euqWVOt2lx79POl0upk5oQKXG_70dsS/view?usp=sharing) by clicking on the Download icon (arrow pointing down) on the top right corner. 
+Note that in the code chunk below we are reading this file from a folder called `data` so we recommend you create such a folder in your working directory and place the file you downloaded there. 
+You can also follow along with the analysis on RStudio Cloud [here](https://rstudio.cloud/project/1523407).
 
 
 ```r
@@ -235,7 +239,7 @@ left_over %>%
   scale_y_continuous(labels = dollar) +
   geom_hline(yintercept = 20, color = "red") +
   labs(
-    title = "Spending by Expense Type",
+    title = "Spending by expense type",
     x = "Quarter",
     y = "Amount jeft over, in $"
   )
@@ -255,7 +259,11 @@ Below is a data set containing information on various comic book characters.
 Over time this data set has been expanded on with multiple sheets including new information. 
 Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
 
-First let's load our data. Our data set contains two sheets so we'll load them in separately as two distinct data frames.
+First let's load our data. 
+Our data set contains two sheets so we'll load them in separately as two distinct data frames.
+
+If you would like to follow along, you can download the Excel file called `superheroes.xlsx` [here](https://drive.google.com/file/d/1KAOAMA_iRdMrl0erYd2DTm7uUKCsDuM9/view?usp=sharing) and remember that you can also follow along with the analysis on RStudio Cloud [here](https://rstudio.cloud/project/1523407). 
+
 
 ```r
 superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
@@ -263,6 +271,7 @@ identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
 ```
 
 Let's take a look at the sheet with data on superheroes.
+
 
 ```r
 superheroes
