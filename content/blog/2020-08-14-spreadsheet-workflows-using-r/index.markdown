@@ -57,11 +57,18 @@ We take note of the month column as well as amount spent, budget, and, expense t
 
 
 ## Nested logic
+One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column.  Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set, so we'll need to make our own quarter variable.  We can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
 
-One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.
+![Nested logic](screenshots/nested-logic.png)
 
-Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set.  
-To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call. 
+It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
+
+```{}
+=IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
+```
+
+
+For our tidyverse comparison, When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.  To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call. 
 
 
 ```r
@@ -94,23 +101,23 @@ spending_quarter
 ## # … with 38 more rows
 ```
 
-Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good measure added an NA condition in the event we've missed something. We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
+Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and as in our spreadsheet formula for good measure added an NA condition in the event we've missed something. We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
 
-For a direct comparison, we can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
-
-![Nested logic](screenshots/nested-logic.png)
-
-It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
-
-```{}
-=IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
-```
 
 
 ## Pivot to this section
 
-Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. Using some data wrangling functions from the tidyverse we can create summary tables as well. Let's take a look total expenses and budget by expense type and quarter.  
+Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. Let's take a look at how we create our basic Pivot table in spreadsheets and then see how we can create summary tables using functions from the `tidyverse` 
 
+First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be based on. 
+
+![pivot-set-up](screenshots/pivot-set-up.png)
+
+And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
+
+![pivot-table](screenshots/pivot-table.png)
+
+For our tidyverse comparison, we can create summary tables as well. Let's take a look total expenses and budget by expense type and quarter. 
 
 ```r
 spending_table <- spending_quarter %>%
@@ -147,20 +154,10 @@ spending_table
 ## 16 office supplies   Q4                  91              9401            14342
 ```
 
-Again as a direct comparison, let's also take a look at what this process would look like in Excel.
 
-First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be based on. 
+## Creating New Useful Variables
 
-![Pivot set up](screenshots/pivot-set-up.png)
-
-And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
-
-![Pivot table](screenshots/pivot-table.png)
-
-
-## Row calculations
-
-One thing that can be tricky when working with pivot tables is calculating new variables by rows as opposed to columns. Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent.  A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
+Sometimes we make a table and realize we can use the summary data to create new variables that can better answer our question.  Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent.  A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
 
 ![Left over](screenshots/left-over-calculation.png)
 
