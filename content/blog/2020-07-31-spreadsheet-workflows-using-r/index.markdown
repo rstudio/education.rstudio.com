@@ -14,21 +14,20 @@ photo:
   author: Mika Baumeister
 ---
 
-There's so much to discover and learn when working with spreadsheets. As a summer intern at RStudio my project has focused on creating a resource that lies at the intersection between spreadsheets and R, speaking to users who either exclusively or in some combination of the two. While this project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing tips and tricks on best practices for working in both spreadsheets and RStudio, what I'd like to focus on in this post is a section dedicated to the R versions of common spreadsheet work flows.   
+There's so much to discover and learn when working with spreadsheets. As a summer intern at RStudio my project has focused on creating a resource that lies at the intersection between spreadsheets and R, aimed at users who either exclusively use one or the other or whose work lives in the intersection of the two. This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in RStudio. 
 
-To do that we'll assume the role of a data analyst in two hypothetical scenarios and walk through the tidyverse equivalent of some common analyses and tasks one is likely to come across when working in spreadsheets.   
+In this post I'd like to share a part of this work, specifically focused on the R versions of common spreadsheet workflows. To do that we'll assume the role of a data analyst in two hypothetical scenarios and walk through the tidyverse equivalent of common analyses and tasks one is likely to come across when working with data stored in spreadsheets.   
 
-For our first story, its day one as a new data analyst and our boss has asked us to take a look at the company's finances.
+For our first story, it's day one as a new data analyst and our boss has asked us to take a look at the company's finances.
 They send you a spreadsheet, available in an Excel workbook, and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overboard.
 
-We've decide to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse, as well as create a reproducible work flow in case we want to revisit this analysis later.  First let's load in our data and take a look at it in RStudio 
+We've decided to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later.  First, let's load in our data and take a look at it in RStudio.
+
 
 ```r
-#Packages
 library(tidyverse)
 library(readxl)
 
-#Read in and look at our data
 spending <- read_excel("data/spending.xlsx")
 spending
 ```
@@ -53,19 +52,23 @@ spending
 We take note of the month column as well as amount spent, budget, and, expense type. We'll hold off on looking at the column `num_of_expenses`, it may prove useful down the line but not pressing for a quick look into the data.
 
 
-## Nested Logic
-One advantage of spreadsheets is we can use formulas to dictate what should be happening in a specific cell and in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or 'nested' logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL we can set parameters for what a value should be based off conditions from other rows or columns in our data.
+## Nested logic
+
+One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column.  When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.
 
 Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set.  
-To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call.  
+To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call. 
+
 
 ```r
 spending_quarter <- spending %>%
-  mutate(quarter = case_when(month %in% c("Jan", "Feb", "Mar") ~ "Q1",
-                             month %in% c("Apr", "May", "Jun") ~ "Q2",
-                             month %in% c("Jul", "Aug", "Sep") ~ "Q3",
-                             month %in% c("Oct", "Nov", "Dec") ~ "Q4",
-                             TRUE ~ "NA"))
+  mutate(quarter = case_when(
+    month %in% c("Jan", "Feb", "Mar") ~ "Q1",
+    month %in% c("Apr", "May", "Jun") ~ "Q2",
+    month %in% c("Jul", "Aug", "Sep") ~ "Q3",
+    month %in% c("Oct", "Nov", "Dec") ~ "Q4",
+    TRUE ~ "NA"
+  ))
 
 spending_quarter
 ```
@@ -87,13 +90,14 @@ spending_quarter
 ## # … with 38 more rows
 ```
 
-Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good measure added an NA condition in the event we've missed something. We can quality check our case_when by examining our data and seeing if any NA values show up which would indicate if a month is spelled differently or if there's an error in our code. 
+Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and for good measure added an NA condition in the event we've missed something. We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
 
 For a direct comparison, we can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
 
-![nested-logic](screenshots/nested-logic.png)
+![Nested logic](screenshots/nested-logic.png)
 
-We can see the formula to create our quarter column below
+It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
+
 ```{}
 =IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
 ```
@@ -103,15 +107,18 @@ We can see the formula to create our quarter column below
 
 Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. Using some data wrangling functions from the tidyverse we can create summary tables as well. Let's take a look total expenses and budget by expense type and quarter.  
 
-```r
-summary_table <- spending_quarter %>%
-  group_by(expense, quarter) %>%
-  summarise(total_expenses = sum(num_of_expenses),
-            total_expense_amt = sum(amount),
-            total_budget_amt = sum(budget),
-           .groups = "drop")
 
-summary_table
+```r
+spending_table <- spending_quarter %>%
+  group_by(expense, quarter) %>%
+  summarise(
+    total_expenses = sum(num_of_expenses),
+    total_expense_amt = sum(amount),
+    total_budget_amt = sum(budget),
+    .groups = "drop"
+    )
+
+spending_table
 ```
 
 ```
@@ -136,28 +143,29 @@ summary_table
 ## 16 office supplies   Q4                  91              9401            14342
 ```
 
-Again as a direct comparison, let's also take a look at what this process would look like via Excel.
+Again as a direct comparison, let's also take a look at what this process would look like in Excel.
 
-First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be comprised of 
+First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be based on. 
 
-![pivot-set-up](screenshots/pivot-set-up.png)
+![Pivot set up](screenshots/pivot-set-up.png)
 
-And then its as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying  a sum calculation.
+And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
 
-![pivot-table](screenshots/pivot-table.png)
+![Pivot table](screenshots/pivot-table.png)
 
 
-## Row Calculations
+## Row calculations
 
 One thing that can be tricky when working with pivot tables is calculating new variables by rows as opposed to columns. Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent.  A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
 
-![left-over](screenshots/left-over-calculation.png)
+![Left over](screenshots/left-over-calculation.png)
 
 Working with our data in R we can take advantage of the `rowwise()` function from dplyr, telling R we want to compute new values and summary statistics by row and not column.  
-Let's take a look at how much money was left over in each quarter by subtracting money spent from our budget and use the `rowwise()` function to specify we want this done by each row in our summary table
+Let's take a look at how much money was left over in each quarter by subtracting money spent from our budget and use the `rowwise()` function to specify we want this done by each row in our summary table.
+
 
 ```r
-left_over <- summary_table %>%
+left_over <- spending_table %>%
   rowwise() %>%
   mutate(left_over = total_budget_amt - total_expense_amt) %>%
   arrange(left_over)
@@ -187,10 +195,11 @@ left_over
 ## 15 office su… Q1                  83            13460            25251     11791
 ## 16 office su… Q3                  67             7527            21819     14292
 ```
+
 Great! Using the `arrange()` function we can also bring the largest instances of overspending to the top of our table to focus our attention.
 
-
 We can also filter our table if we're interested in a specific expense type. Let's hone in on spending for office happy hours.
+
 
 ```r
 left_over %>%
@@ -207,47 +216,53 @@ left_over %>%
 ## 3 office hap… Q4                  38            14752            18058      3306
 ## 4 office hap… Q2                  56             7879            17658      9779
 ```
-Hmm, a lot of spending in Quarter 3, which might make sense as these are the summer months. 
+
+Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are the summer months. 
 
 ## From tables to visualizations
 
-Finally, we can apply data visualization to our work flow and look at spending across quarters and expense type. The ggplot2 package was loaded when we called the tidyverse but we'll add the scales package so we can put put a dollar format on our y axis of money left over. 
+Finally, we can apply data visualization to our workflow and look at spending across quarters and expense type. We will use the ggplot2 package for visualisation, which already got loaded when we called `library(tidyverse)` and we'll also load the scales package so that we can display the values on the y-axis in dollar format.
+
 
 ```r
 library(scales)
+
 left_over %>%
   ggplot(aes(quarter, left_over)) +
   geom_point() +
   geom_line(group = 1) +
-  facet_wrap( ~ expense) +
-  scale_y_continuous(labels = dollar) + 
-  geom_hline(yintercept=20, 
-                color = "red") + 
-  labs (title  = "Spending by Expense Type",
-         x = "Quarter",
-         y = "$ Left Over")
+  facet_wrap(~expense) +
+  scale_y_continuous(labels = dollar) +
+  geom_hline(yintercept = 20, color = "red") +
+  labs(
+    title = "Spending by Expense Type",
+    x = "Quarter",
+    y = "Amount jeft over, in $"
+  )
 ```
 
 <img src="/blog/2020-07-31-spreadsheet-workflows-using-r/index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
-Voila! - We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with over expense on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits
+
+Voila! We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with the overspending on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits.
 
 
-## Join the Party
-Data doesn't always come to us complete and many times we need to bring in data from other sources either before we start an analysis or during one,  when we realize other data could be of use to us.   
+## Join the party
 
-For this our next scenario, we'll leave the finance world and move to something perhaps a little more exciting, superheroes!
+We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis.  
+
+For our second scenario, we'll leave the finance world and move on to something that is perhaps a little more exciting: superheroes!
 Below is a data set containing information on various comic book characters.  
 Over time this data set has been expanded on with multiple sheets including new information. 
-Before we start exploring  we'll need to join in the relevant data so we can conduct some fun analyses.
+Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
 
-First let's load in our data. Our initial data set contains two sheets so we'll load them in separately as two distinct data frames
+First let's load our data. Our data set contains two sheets so we'll load them in separately as two distinct data frames.
 
 ```r
 superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
 identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
 ```
 
-Let's take a look at our initial sheet on superheores
+Let's take a look at the sheet with data on superheroes.
 
 ```r
 superheroes
@@ -270,7 +285,8 @@ superheroes
 ## # … with 16 more rows
 ```
 
-And now another sheet lisitng the alter ego of each character
+And now let's take a look at the sheet listing the alter ego of each character.
+
 
 ```r
 identities
@@ -293,10 +309,11 @@ identities
 ## # … with 16 more rows
 ```
 
-We see in each sheet there is a hero column allowing us to bring in data from one sheet to the other.   
-Using `left_join()` from the dplyr package, we can bring in the data from the identities sheet into our initial superheroes data  
+In each sheet, there is a `hero` column that allows us to match data from one sheet to the other.   
+Using `left_join()` from the dplyr package, we can bring in the data from the identities data frame into our superheroes data frame.
 
-To do this we'll call `left_join()` on superheroes, putting the identities data set as our first argument and specify our common variable with the `by` argument 
+To do this we'll call `left_join()` on superheroes, putting the identities data set as our first argument and specify our common variable with the `by` argument.
+
 
 ```r
 superhero_identities <- superheroes %>%
@@ -322,11 +339,13 @@ superhero_identities
 ## # … with 16 more rows
 ```
 
-Great, we've run our join no problem!  Conversely, we can also take the spreadsheet approach and utilize a VLOOKUP to bring in this data.
-![vlookup](screenshots/VLOOKUP.png)
+Great, we've joined the data frames with no problem!  For parity, let's also walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data.
 
-Of course however we'll run into instances in which we'll need to pull in data from multiple sheets and the superheroes data set is no exception. 
-We've been informed there are an additional two sheets that have recently been added, one containing information on the main power or skill of each character...
+![VLOOKUP](screenshots/VLOOKUP.png)
+
+There are, of course, instances in which we'll need to pull in data from multiple sheets, and the superheroes data set is no exception. 
+We've been informed there are an additional two sheets that have recently been added. One containing information on the main power or skill of each character.
+
 
 ```r
 powers <- read_excel("data/superheroes.xlsx", sheet = "powers")
@@ -350,8 +369,8 @@ powers
 ## # … with 16 more rows
 ```
 
+And the other containing the occupation of the alter-ego of each superhero. 
 
-And the other containing the occupation of the each heroes alter-ego. 
 
 ```r
 occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
@@ -375,18 +394,21 @@ occupation
 ## # … with 16 more rows
 ```
 
-We see that the powers sheet has a hero column  allowing for another simple left join, however the occupation sheet doesn't have a common column by specific name but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
-We can take advantage of this relationship to bring this data in as shown in the code below.  
+We see that the powers sheet has a hero column allowing for another simple left join. However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We can take advantage of this relationship to bring these data frames together as shown in the code below. 
+
 
 ```r
 heroes_full <- superhero_identities %>%
   left_join(powers, by = "hero") %>%
   left_join(occupation, by = c("alter_ego" = "name"))
 ```
-Here we conduct a simple left join bringing in the data from the powers data set, and then another left joining by alter ego to bring in the data from the occupation spreadsheet. 
-In the `by` argument we can specify that the column `alter_ego` should be matched onto the `name` column allowing for the join to complete. 
 
-We've expanded our dataset quite a bit. Let's take an alternative approach to viewing it using the `glimpse()` function from dplyr
+Here we conduct a simple left join bringing in the data from the powers data set, and then another left join to bring in the data from the occupation spreadsheet.
+In the `by` argument we specify that the column `alter_ego` should be matched to the `name` column from the occupation data frame. 
+
+We've expanded our dataset quite a bit. Let's take an alternative approach to view it using the `glimpse()` function from dplyr. 
+
 
 ```r
 glimpse(heroes_full)
@@ -405,13 +427,11 @@ glimpse(heroes_full)
 ## $ occupation       <chr> "Reporter", "CEO", "Photogragpher", "U.S. Marine", "…
 ```
 
-Conversely, if we're working in Excel we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet.  
+For doing this same task in Excel, we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet.  
 To bring in our occupation data we simply adjust the initial reference point in our formula from column A2 which houses hero name to E2 which houses alter egos which was also added via a VLOOKUP. 
 
-![fully joined](screenshots/full-join.png)
+![Fully joined](screenshots/full-join.png)
 
 There we have it, a fully combined data set ready for analysis!  Hmmm, now that we think about it, let's hope we aren't sharing this data with any super villains.  We may be an ace at working with spreadsheet data but we're also an ethical data analyst!
 
-
 I hope you've found this blog post useful and enjoyed reading through each example. It's been such a pleasure working with Jenny Bryan and Mine Çetinkaya-Rundel on this project and we're excited to share more of the Spreadsheets Using R resource with readers in the future. Until then, no matter what tools you're using to work with your data, happy analyzing! 
-
