@@ -1,6 +1,6 @@
 ---
 title: Spreadsheet Workflows in R
-date: '2020-07-31'
+date: '2020-08-14'
 slug: spreadsheets-using-r
 categories:
   - learn
@@ -245,7 +245,7 @@ left_over %>%
   )
 ```
 
-<img src="/blog/2020-07-31-spreadsheet-workflows-using-r/index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<img src="/blog/2020-08-14-spreadsheet-workflows-using-r/index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
 Voila! We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with the overspending on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits.
 
