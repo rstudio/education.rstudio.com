@@ -61,7 +61,7 @@ We take note of the month column as well as amount spent, budget, and, expense t
 We'll hold off on looking at the column `num_of_expenses`, it may prove useful down the line but not pressing for a quick look into the data.
 
 
-## Nested logic
+## IF statements with nested logic
 
 One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column. 
 Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set, so we'll need to make our own quarter variable. 
@@ -168,7 +168,7 @@ spending_table
 ```
 
 
-## Creating new variables
+## New variables
 
 Sometimes we make a table and realize we can use the summary data to create new variables that can better answer our question. 
 Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent. 
@@ -234,7 +234,7 @@ Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are t
 Alternatively, we can take advantage of Sort and Filter in spreadsheets to accomplish the same thing. 
 
 
-## Join the party
+## VLOOKUPs and joins
 
 We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis. 
 
