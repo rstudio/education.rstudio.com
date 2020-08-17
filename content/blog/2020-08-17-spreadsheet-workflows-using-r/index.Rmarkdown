@@ -1,0 +1,267 @@
+---
+title: Spreadsheet workflows in R
+date: '2020-08-17'
+slug: spreadsheets-using-r
+categories:
+  - learn
+tags:
+  - spreadsheets
+  - tidyverse
+author:
+  - Devin Johnson
+photo:
+  url: https://unsplash.com/photos/Wpnoqo2plFA
+  author: Mika Baumeister
+---
+
+There's so much to discover and learn when working with spreadsheets. 
+As a summer intern at RStudio my project has focused on creating a resource that lies at the intersection between spreadsheets and R, aimed at users who either exclusively use one or the other or whose work lives in the intersection of the two. 
+This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in R. 
+
+In this post I'd like to share a part of this work, specifically focused on the R versions of common spreadsheet workflows. 
+To do that we'll assume the role of a data analyst in two hypothetical scenarios and walk through the tidyverse equivalent of common analyses and tasks one is likely to come across when working with data stored in spreadsheets. 
+
+For our first story, it's day one as a new data analyst and our boss has asked us to take a look at the company's finances.
+They send you a spreadsheet, available in an Excel workbook, and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overboard.
+
+We've decided to run our analysis in R to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later. 
+First, let's load in our data and take a look at it in R 
+
+If you would like to follow along, you can download the Excel file called `spending.xlsx` [here](https://drive.google.com/file/d/1_euqWVOt2lx79POl0upk5oQKXG_70dsS/view?usp=sharing) by clicking on the Download icon (arrow pointing down) on the top right corner. 
+Note that in the code chunk below we are reading this file from a folder called `data` so we recommend you create such a folder in your working directory and place the file you downloaded there. 
+You can also follow along with the analysis on RStudio Cloud [here](https://rstudio.cloud/project/1523407).
+
+```{r,message=FALSE}
+library(tidyverse)
+library(readxl)
+
+spending <- read_excel("data/spending.xlsx")
+spending
+```
+
+We take note of the month column as well as amount spent, budget, and, expense type. 
+We'll hold off on looking at the column `num_of_expenses`, it may prove useful down the line but not pressing for a quick look into the data.
+
+
+## IF statements with nested logic
+
+One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column. 
+Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set, so we'll need to make our own quarter variable. 
+We can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("screenshots/nested-logic.png")
+```
+
+It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
+
+```{}
+=IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
+```
+
+For our tidyverse comparison, When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr. 
+Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data. 
+To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call.
+
+```{r}
+spending_quarter <- spending %>%
+  mutate(quarter = case_when(
+    month %in% c("Jan", "Feb", "Mar") ~ "Q1",
+    month %in% c("Apr", "May", "Jun") ~ "Q2",
+    month %in% c("Jul", "Aug", "Sep") ~ "Q3",
+    month %in% c("Oct", "Nov", "Dec") ~ "Q4",
+    TRUE ~ "NA"
+  ))
+
+spending_quarter
+```
+
+Excellent! We've got our new quarter column set up. 
+Here we specified which months make up each quarter and as in our spreadsheet formula for good measure added an NA condition in the event we've missed something. 
+We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
+
+
+## Pivot tables 
+
+Pivot tables are a powerful tool spreadsheets offer, allowing us to generate summaries of large quantities of data. 
+Let's take a look at how we create our basic Pivot table in spreadsheets and then see how we can create summary tables using functions from the `tidyverse` 
+
+First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be based on. 
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("screenshots/pivot-set-up.png")
+```
+
+And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("screenshots/pivot-table.png")
+```
+
+For our tidyverse comparison, we can create summary tables as well. 
+Let's take a look total expenses and budget by expense type and quarter. 
+
+```{r}
+spending_table <- spending_quarter %>%
+  group_by(expense, quarter) %>%
+  summarise(
+    total_expenses = sum(num_of_expenses),
+    total_expense_amt = sum(amount),
+    total_budget_amt = sum(budget),
+    .groups = "drop"
+    )
+
+spending_table
+```
+
+
+## New variables
+
+Sometimes we make a table and realize we can use the summary data to create new variables that can better answer our question. 
+Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent. 
+A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
+
+```{r echo = FALSE, out.width = "80%"}
+knitr::include_graphics("screenshots/left-over-calculation.png")
+```
+
+Alternatively, using the `mutate()` function from dplyr, we can create a new column in our summary table and save that as a new data frame. 
+
+```{r}
+left_over <- spending_table %>%
+  mutate(left_over = total_budget_amt - total_expense_amt) %>%
+  arrange(left_over)
+
+left_over
+```
+
+Great! Using the `arrange()` function we can also bring the largest instances of overspending to the top of our table to focus our attention.
+In Excel, this is something you'd normally do via *Data > Sort*.
+
+We can also filter our table if we're interested in a specific expense type.
+In Excel, you could to this via *Data > Filter*.
+Let's hone in on spending for office happy hours.
+
+```{r}
+left_over %>%
+  filter(expense == "office happy hour")
+```
+
+Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are the summer months. 
+Alternatively, we can take advantage of Sort and Filter in spreadsheets to accomplish the same thing. 
+
+
+## VLOOKUPs and joins
+
+We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis. 
+
+For our second scenario, we'll leave the finance world and move on to something that is perhaps a little more exciting: superheroes!
+
+Below is a data set containing information on various comic book characters with our first sheet providing some basic information on each character.
+
+```{r echo = FALSE, out.width = "65%"}
+knitr::include_graphics("screenshots/heroes.png")
+```
+
+And a second sheet containing information on each character's alter ego.
+
+```{r echo = FALSE, out.width = "60%"}
+knitr::include_graphics("screenshots/alter-egos.png")
+```
+
+Over time this data set has been expanded on with multiple sheets including new information. 
+Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
+
+Let's first walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data. 
+In each sheet, we notice there is a `hero` column that allows us to match data from one sheet to the other. 
+The example below shows the process of pulling the `alter_ego` column from our alter egos sheet into our initial heroes data set. 
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("screenshots/VLOOKUP.png")
+```
+
+Starting our tidyverse comparison, we'll first load our data. 
+Our data set contains two sheets so we'll load them in separately as two distinct data frames.
+
+If you would like to follow along, you can download the Excel file called `superheroes.xlsx` [here](https://drive.google.com/file/d/1KAOAMA_iRdMrl0erYd2DTm7uUKCsDuM9/view?usp=sharing) and remember that you can also follow along with the analysis on RStudio Cloud [here](https://rstudio.cloud/project/1523407). 
+
+```{r}
+superheroes <- read_excel("data/superheroes.xlsx", sheet = "heroes")
+identities <- read_excel("data/superheroes.xlsx", sheet = "alter_egos")
+```
+
+Let's take a look at the sheet with data on superheroes.
+
+```{r}
+superheroes
+```
+
+And now let's take a look at the sheet listing the alter ego of each character.
+
+```{r}
+identities
+```
+
+Using `left_join()` from the dplyr package, we can bring in the data from the identities data frame into our superheroes data frame.
+
+To do this we'll call `left_join()` on superheroes, putting the identities data set as our first argument and specify our common variable with the `by` argument.
+
+```{r}
+superhero_identities <- superheroes %>%
+  left_join(identities, by = "hero")
+
+superhero_identities
+```
+
+Great, we've joined the data frames with no problem!
+
+There are, of course, instances in which we'll need to pull in data from multiple sheets, and the superheroes data set is no exception. 
+We've been informed there are an additional two sheets that have recently been added. 
+One containing information on the main power or skill of each character, 
+
+```{r}
+powers <- read_excel("data/superheroes.xlsx", sheet = "powers")
+powers
+```
+
+and the other containing the occupation of the alter ego of each superhero. 
+
+```{r}
+occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
+occupation
+```
+
+We see that the powers sheet has a `hero` column allowing for another simple left join. 
+However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the `name` column is the same for the `alter_ego` column from our identities spreadsheet.
+We can take advantage of this relationship to bring these data frames together as shown in the code below. 
+
+```{r}
+heroes_full <- superhero_identities %>%
+  left_join(powers, by = "hero") %>%
+  left_join(occupation, by = c("alter_ego" = "name"))
+```
+
+Here we conduct a simple left join bringing in the data from the powers data set, and then another left join to bring in the data from the occupation spreadsheet.
+In the `by` argument we specify that the column `alter_ego` should be matched to the `name` column from the occupation data frame. 
+
+We've expanded our dataset quite a bit. 
+Let's take an alternative approach to view it using the `glimpse()` function from dplyr. 
+
+```{r}
+glimpse(heroes_full)
+```
+
+For doing this same task in Excel, we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet. 
+To bring in our occupation data we simply adjust the initial reference point in our formula from column A2 which houses hero name to E2 which houses alter egos which was also added via a VLOOKUP. 
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("screenshots/full-join.png")
+```
+
+There we have it, a fully combined data set ready for analysis! 
+Hmmm, now that we think about it, let's hope we aren't sharing this data with any super villains. 
+We may be an ace at working with spreadsheet data but we're also an ethical data analyst!
+
+I hope you've found this blog post useful and enjoyed reading through each example. 
+It's been such a pleasure working with Jenny Bryan and Mine Çetinkaya-Rundel on this project and we're excited to share more of the Spreadsheets Using R resource with readers in the future. 
+Until then, no matter what tools you're using to work with your data, happy analyzing! 
