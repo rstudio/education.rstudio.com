@@ -16,7 +16,7 @@ photo:
 
 There's so much to discover and learn when working with spreadsheets. 
 As a summer intern at RStudio my project has focused on creating a resource that lies at the intersection between spreadsheets and R, aimed at users who either exclusively use one or the other or whose work lives in the intersection of the two. 
-This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in RStudio. 
+This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in R. 
 
 In this post I'd like to share a part of this work, specifically focused on the R versions of common spreadsheet workflows. 
 To do that we'll assume the role of a data analyst in two hypothetical scenarios and walk through the tidyverse equivalent of common analyses and tasks one is likely to come across when working with data stored in spreadsheets. 
@@ -24,8 +24,8 @@ To do that we'll assume the role of a data analyst in two hypothetical scenarios
 For our first story, it's day one as a new data analyst and our boss has asked us to take a look at the company's finances.
 They send you a spreadsheet, available in an Excel workbook, and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overboard.
 
-We've decided to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later. 
-First, let's load in our data and take a look at it in RStudio. 
+We've decided to run our analysis in R to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later. 
+First, let's load in our data and take a look at it in R 
 
 If you would like to follow along, you can download the Excel file called `spending.xlsx` [here](https://drive.google.com/file/d/1_euqWVOt2lx79POl0upk5oQKXG_70dsS/view?usp=sharing) by clicking on the Download icon (arrow pointing down) on the top right corner. 
 Note that in the code chunk below we are reading this file from a folder called `data` so we recommend you create such a folder in your working directory and place the file you downloaded there. 
@@ -210,8 +210,10 @@ left_over
 ```
 
 Great! Using the `arrange()` function we can also bring the largest instances of overspending to the top of our table to focus our attention.
+In Excel, this is something you'd normally do via *Data > Sort*.
 
-We can also filter our table if we're interested in a specific expense type. 
+We can also filter our table if we're interested in a specific expense type.
+In Excel, you could to this via *Data > Filter*.
 Let's hone in on spending for office happy hours.
 
 
@@ -253,7 +255,7 @@ Before we start exploring, we'll need to join the relevant data from the two she
 
 Let's first walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data. 
 In each sheet, we notice there is a `hero` column that allows us to match data from one sheet to the other. 
-The example below shows the process of pulling the alter ego column from our alter egos sheet into our initial heroes data set. 
+The example below shows the process of pulling the `alter_ego` column from our alter egos sheet into our initial heroes data set. 
 
 ![VLOOKUP](screenshots/VLOOKUP.png)
 
@@ -374,7 +376,7 @@ powers
 ## # … with 16 more rows
 ```
 
-and the other containing the occupation of the alter-ego of each superhero. 
+and the other containing the occupation of the alter ego of each superhero. 
 
 
 ```r
@@ -399,8 +401,8 @@ occupation
 ## # … with 16 more rows
 ```
 
-We see that the powers sheet has a hero column allowing for another simple left join. 
-However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We see that the powers sheet has a `hero` column allowing for another simple left join. 
+However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the `name` column is the same for the `alter_ego` column from our identities spreadsheet.
 We can take advantage of this relationship to bring these data frames together as shown in the code below. 
 
 
