@@ -95,7 +95,7 @@ spending_table
 ```
 
 
-## Creating New Useful Variables
+## Creating new variables
 
 Sometimes we make a table and realize we can use the summary data to create new variables that can better answer our question.  Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent.  A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
 
