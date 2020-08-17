@@ -162,7 +162,7 @@ Before we start exploring, we'll need to join the relevant data from the two she
 
 Let's first walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data. 
 In each sheet, we notice there is a `hero` column that allows us to match data from one sheet to the other. 
-The example below shows the process of pulling the alter ego column from our alter egos sheet into our initial heroes data set. 
+The example below shows the process of pulling the `alter_ego` column from our alter egos sheet into our initial heroes data set. 
 
 ![VLOOKUP](screenshots/VLOOKUP.png)
 
@@ -210,15 +210,15 @@ powers <- read_excel("data/superheroes.xlsx", sheet = "powers")
 powers
 ```
 
-and the other containing the occupation of the alter-ego of each superhero. 
+and the other containing the occupation of the alter ego of each superhero. 
 
 ```{r}
 occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
 occupation
 ```
 
-We see that the powers sheet has a hero column allowing for another simple left join. 
-However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We see that the powers sheet has a `hero` column allowing for another simple left join. 
+However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the `name` column is the same for the `alter_ego` column from our identities spreadsheet.
 We can take advantage of this relationship to bring these data frames together as shown in the code below. 
 
 ```{r}
