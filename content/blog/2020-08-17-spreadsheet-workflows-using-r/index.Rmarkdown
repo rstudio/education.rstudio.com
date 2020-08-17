@@ -1,6 +1,6 @@
 ---
-title: Spreadsheet Workflows in R
-date: '2020-08-14'
+title: Spreadsheet workflows in R
+date: '2020-08-17'
 slug: spreadsheets-using-r
 categories:
   - learn
@@ -39,6 +39,7 @@ We take note of the month column as well as amount spent, budget, and, expense t
 
 
 ## Nested logic
+
 One advantage of spreadsheets is that we can use formulas to dictate what should happen in a specific cell and, in a broader application of this, apply them to an entire column.  Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set, so we'll need to make our own quarter variable.  We can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
 
 ![Nested logic](screenshots/nested-logic.png)
@@ -49,8 +50,7 @@ It's a bit difficult to see the formula bar in the image above, so the formula t
 =IF(OR(A2="Jan",A2="Feb",A2="Mar"),"Q1",IF(OR(A2="Apr",A2="May",A2="Jun"),"Q2",IF(OR(A2="Jul",A2="Aug",A2="Sep"),"Q3",IF(OR(A2="Oct",A2="Nov",A2="Dec"),"Q4","NA"))))
 ```
 
-
-For our tidyverse comparison, When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.  To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call. 
+For our tidyverse comparison, When creating a column that requires multiple or *nested* logical conditions, we can take advantage of the `case_when()` function from dplyr.  Similar to a CASE statement in SQL, we can set parameters for what a given value should be based on conditions from other rows or columns in our data.  To do this we can create a new column using the `mutate()` function and apply `case_when()` within that call.
 
 ```{r}
 spending_quarter <- spending %>%
@@ -66,7 +66,6 @@ spending_quarter
 ```
 
 Excellent! We've got our new quarter column set up. Here we specified which months make up each quarter and as in our spreadsheet formula for good measure added an NA condition in the event we've missed something. We can do a quick sanity check for our `case_when()` statement by examining our data and seeing if any NA values show up in the new column we generated, which would indicate if a month is spelled differently than what's listed in our conditions or if there's an error in our code. 
-
 
 
 ## Pivot to this section
@@ -102,12 +101,10 @@ Sometimes we make a table and realize we can use the summary data to create new 
 
 ![Left over](screenshots/left-over-calculation.png)
 
-Working with our data in R we can take advantage of the `rowwise()` function from dplyr, telling R we want to compute new values and summary statistics by row and not column.  
-Let's take a look at how much money was left over in each quarter by subtracting money spent from our budget and use the `rowwise()` function to specify we want this done by each row in our summary table.
+Alternatively, using the `mutate()` function from dplyr, we can create a new column in our summary table and save that as a new data frame. 
 
 ```{r}
 left_over <- spending_table %>%
-  rowwise() %>%
   mutate(left_over = total_budget_amt - total_expense_amt) %>%
   arrange(left_over)
 
@@ -123,30 +120,7 @@ left_over %>%
   filter(expense == "office happy hour")
 ```
 
-Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are the summer months. 
-
-## From tables to visualizations
-
-Finally, we can apply data visualization to our workflow and look at spending across quarters and expense type. We will use the ggplot2 package for visualisation, which already got loaded when we called `library(tidyverse)` and we'll also load the scales package so that we can display the values on the y-axis in dollar format.
-
-```{r,message=FALSE}
-library(scales)
-
-left_over %>%
-  ggplot(aes(quarter, left_over)) +
-  geom_point() +
-  geom_line(group = 1) +
-  facet_wrap(~expense) +
-  scale_y_continuous(labels = dollar) +
-  geom_hline(yintercept = 20, color = "red") +
-  labs(
-    title = "Spending by expense type",
-    x = "Quarter",
-    y = "Amount jeft over, in $"
-  )
-```
-
-Voila! We have both a summary table and a graphic that can tell us useful information about company spending. Hmm, there might be something to the trend we see with the overspending on happy hours in Q3 after Q1 and Q2 were sunk with lawsuits.
+Hmm, a lot of *over*spending in Quarter 3, which might make sense as these are the summer months. Alternatively, we can take advantage of Sort and Filter in spreadsheets to accomplish the same thing. 
 
 
 ## Join the party
@@ -154,11 +128,23 @@ Voila! We have both a summary table and a graphic that can tell us useful inform
 We don't always have all of the information we need in a single data file and many times we need to bring in data from other sources to supplement and augment our existing data in the course of an analysis.  
 
 For our second scenario, we'll leave the finance world and move on to something that is perhaps a little more exciting: superheroes!
-Below is a data set containing information on various comic book characters.  
+
+Below is a data set containing information on various comic book characters with our first sheet providing some basic information on each character.
+
+![heroes](screenshots/heroes.png)
+
+And a second sheet containing information on each character's alter ego.
+
+![alter_ego](screenshots/alter_ego.png)
+
 Over time this data set has been expanded on with multiple sheets including new information. 
 Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
 
-First let's load our data. 
+Let's first walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data. In each sheet, we notice there is a `hero` column that allows us to match data from one sheet to the other. The example below shows the process of pulling the alter ego column from our alter egos sheet into our initial heroes data set. 
+
+![VLOOKUP](screenshots/VLOOKUP.png)
+
+Starting our tidyverse comparison, we'll first load our data. 
 Our data set contains two sheets so we'll load them in separately as two distinct data frames.
 
 If you would like to follow along, you can download the Excel file called `superheroes.xlsx` [here](https://drive.google.com/file/d/1KAOAMA_iRdMrl0erYd2DTm7uUKCsDuM9/view?usp=sharing) and remember that you can also follow along with the analysis on RStudio Cloud [here](https://rstudio.cloud/project/1523407). 
@@ -180,7 +166,6 @@ And now let's take a look at the sheet listing the alter ego of each character.
 identities
 ```
 
-In each sheet, there is a `hero` column that allows us to match data from one sheet to the other.   
 Using `left_join()` from the dplyr package, we can bring in the data from the identities data frame into our superheroes data frame.
 
 To do this we'll call `left_join()` on superheroes, putting the identities data set as our first argument and specify our common variable with the `by` argument.
@@ -192,9 +177,7 @@ superhero_identities <- superheroes %>%
 superhero_identities
 ```
 
-Great, we've joined the data frames with no problem!  For parity, let's also walk through the spreadsheet approach and utilize a VLOOKUP to bring together these data.
-
-![VLOOKUP](screenshots/VLOOKUP.png)
+Great, we've joined the data frames with no problem!
 
 There are, of course, instances in which we'll need to pull in data from multiple sheets, and the superheroes data set is no exception. 
 We've been informed there are an additional two sheets that have recently been added. One containing information on the main power or skill of each character.
@@ -211,7 +194,8 @@ occupation <- read_excel("data/superheroes.xlsx", sheet = "occupation")
 occupation
 ```
 
-We see that the powers sheet has a hero column allowing for another simple left join. However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
+We see that the powers sheet has a hero column allowing for another simple left join. 
+However, the occupation sheet doesn't have a common column by that specific name, but we do recognize that the information in the name column is the same for the alter-ego column from our identities spreadsheet.
 We can take advantage of this relationship to bring these data frames together as shown in the code below. 
 
 ```{r}
