@@ -24,8 +24,8 @@ To do that we'll assume the role of a data analyst in two hypothetical scenarios
 For our first story, it's day one as a new data analyst and our boss has asked us to take a look at the company's finances.
 They send you a spreadsheet, available in an Excel workbook, and ask you to analyze spending patterns over the current year and give your assessment into where spending is going overboard.
 
-We've decided to run our analysis in RStudio to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later. 
-First, let's load in our data and take a look at it in RStudio. 
+We've decided to run our analysis in R to take advantage of data wrangling and visualization functions from the tidyverse as well as to create a reproducible workflow in case we want to revisit this analysis later. 
+First, let's load in our data and take a look at it in R 
 
 If you would like to follow along, you can download the Excel file called `spending.xlsx` [here](https://drive.google.com/file/d/1_euqWVOt2lx79POl0upk5oQKXG_70dsS/view?usp=sharing) by clicking on the Download icon (arrow pointing down) on the top right corner. 
 Note that in the code chunk below we are reading this file from a folder called `data` so we recommend you create such a folder in your working directory and place the file you downloaded there. 
