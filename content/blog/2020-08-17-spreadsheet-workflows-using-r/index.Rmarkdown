@@ -128,8 +128,10 @@ left_over
 ```
 
 Great! Using the `arrange()` function we can also bring the largest instances of overspending to the top of our table to focus our attention.
+In Excel, this is something you'd normally do via *Data > Sort*.
 
-We can also filter our table if we're interested in a specific expense type. 
+We can also filter our table if we're interested in a specific expense type.
+In Excel, you could to this via *Data > Filter*.
 Let's hone in on spending for office happy hours.
 
 ```{r}
