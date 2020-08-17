@@ -67,7 +67,7 @@ One advantage of spreadsheets is that we can use formulas to dictate what should
 Back to our spending sheet, while data for all 12 months is useful for our summary we want to take a look at spending by quarter, something not provided in the initial data set, so we'll need to make our own quarter variable. 
 We can see how this process works in spreadsheets, manipulating our data in an Excel workbook.
 
-![Nested logic](screenshots/nested-logic.png)
+<img src="screenshots/nested-logic.png" width="100%" />
 
 It's a bit difficult to see the formula bar in the image above, so the formula to create used for creating the quarter column is provided below.
 
@@ -122,11 +122,11 @@ Let's take a look at how we create our basic Pivot table in spreadsheets and the
 
 First we'll create a separate sheet for our pivot table, specifying the range of the data we want it to be based on. 
 
-![pivot-set-up](screenshots/pivot-set-up.png)
+<img src="screenshots/pivot-set-up.png" width="100%" />
 
 And then, it's as simple as dragging and dropping our variables of interest into specific order with `expense` and `quarter` in rows and `budget` and `amount` in values, specifying a *sum* calculation.
 
-![pivot-table](screenshots/pivot-table.png)
+<img src="screenshots/pivot-table.png" width="100%" />
 
 For our tidyverse comparison, we can create summary tables as well. 
 Let's take a look total expenses and budget by expense type and quarter. 
@@ -174,7 +174,7 @@ Sometimes we make a table and realize we can use the summary data to create new 
 Coming back to our finance example, let's say we want to examine how much money is left over from each quarter based off of budget and amount spent. 
 A quick work around could be to manually add in a formula in a cell adjacent to our table and drag it down to each respective row, a process depicted below.
 
-![Left over](screenshots/left-over-calculation.png)
+<img src="screenshots/left-over-calculation.png" width="80%" />
 
 Alternatively, using the `mutate()` function from dplyr, we can create a new column in our summary table and save that as a new data frame. 
 
@@ -244,11 +244,11 @@ For our second scenario, we'll leave the finance world and move on to something 
 
 Below is a data set containing information on various comic book characters with our first sheet providing some basic information on each character.
 
-![heroes](screenshots/heroes.png)
+<img src="screenshots/heroes.png" width="65%" />
 
 And a second sheet containing information on each character's alter ego.
 
-![alter_ego](screenshots/alter_ego.png)
+<img src="screenshots/alter-egos.png" width="60%" />
 
 Over time this data set has been expanded on with multiple sheets including new information. 
 Before we start exploring, we'll need to join the relevant data from the two sheets so we can conduct some fun analyses.
@@ -257,7 +257,7 @@ Let's first walk through the spreadsheet approach and utilize a VLOOKUP to bring
 In each sheet, we notice there is a `hero` column that allows us to match data from one sheet to the other. 
 The example below shows the process of pulling the `alter_ego` column from our alter egos sheet into our initial heroes data set. 
 
-![VLOOKUP](screenshots/VLOOKUP.png)
+<img src="screenshots/VLOOKUP.png" width="100%" />
 
 Starting our tidyverse comparison, we'll first load our data. 
 Our data set contains two sheets so we'll load them in separately as two distinct data frames.
@@ -439,7 +439,7 @@ glimpse(heroes_full)
 For doing this same task in Excel, we can continue to utilize VLOOKUPS for each additional column of data we want to pull into our main sheet. 
 To bring in our occupation data we simply adjust the initial reference point in our formula from column A2 which houses hero name to E2 which houses alter egos which was also added via a VLOOKUP. 
 
-![Fully joined](screenshots/full-join.png)
+<img src="screenshots/full-join.png" width="100%" />
 
 There we have it, a fully combined data set ready for analysis! 
 Hmmm, now that we think about it, let's hope we aren't sharing this data with any super villains. 
