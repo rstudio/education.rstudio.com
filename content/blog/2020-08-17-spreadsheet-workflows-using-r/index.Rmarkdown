@@ -16,7 +16,7 @@ photo:
 
 There's so much to discover and learn when working with spreadsheets. 
 As a summer intern at RStudio my project has focused on creating a resource that lies at the intersection between spreadsheets and R, aimed at users who either exclusively use one or the other or whose work lives in the intersection of the two. 
-This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in RStudio. 
+This project has focused on a plethora of topics from comparing numerous R package functionalities that work with spreadsheets, to writing about tips and tricks on best practices for working in both a spreadsheet software and in R. 
 
 In this post I'd like to share a part of this work, specifically focused on the R versions of common spreadsheet workflows. 
 To do that we'll assume the role of a data analyst in two hypothetical scenarios and walk through the tidyverse equivalent of common analyses and tasks one is likely to come across when working with data stored in spreadsheets. 
