@@ -56,7 +56,7 @@ but may not ask another person for help, and must complete the exams in 90 minut
 
 ### Plotting
 
-1.  The code below is supposed to read the file `home-range-database.csv` to create a tibble called `hra_raw`, but contains a bug. Describe and fix the problem. (There are several ways to fix it: please use whichever you prefer.)
+1.  The code below is supposed to read the file [`home-range-database.csv`](./home-range-database.csv) to create a tibble called `hra_raw`, but contains a bug. Describe and fix the problem. (There are several ways to fix it: please use whichever you prefer.)
     ```
     hra_raw <- read_csv(here::here("data", "home-range-database.csv"))
     ```
@@ -100,7 +100,7 @@ but may not ask another person for help, and must complete the exams in 90 minut
 1.  Modify the YAML header of this file so that a table of contents is automatically created each time this document is knit, and fix any errors that are preventing the document from knitting cleanly.
     ```
     ---
-    title: "Tidyverse Exam Verson 2.0"
+    title: "Tidyverse Exam Version 2.0"
     output:
     html_document:
         theme: flatly
