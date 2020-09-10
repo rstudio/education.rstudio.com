@@ -22,6 +22,10 @@ but may not ask another person for help, and must complete the exams in 90 minut
 
 ## Tidyverse Exam
 
+*[Brendan Cullen](https://education.rstudio.com/trainers/people/cullen+brendan/)
+has posted [a solution guide](https://tidyverse-exam-v2-solutions.netlify.app/)
+with [source available on GitHub](https://github.com/brendanhcullen/tidyverse-sample-exam-v2.0).*
+
 ### Basic Operations
 
 1.  Read the file [`person.csv`](./person.csv) and store the result in a tibble called `person`.
