@@ -3,7 +3,7 @@ title: Shiny Solutions
 author:
   - '[Maya Gans](https://maya.rbind.io/)'
   - '[Marly Gotti](http://www.marlygotti.com/)'
-date: '2020-08-21'
+date: '2020-09-10'
 categories:
   - learn
   - teach
