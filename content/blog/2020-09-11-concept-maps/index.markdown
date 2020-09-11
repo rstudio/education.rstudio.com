@@ -16,8 +16,8 @@ photo:
 ---
 
 We introduce [concept maps](https://teachtogether.tech/en/index.html#s:memory-concept-maps)
-early in the [instructor training course](https://docs.google.com/presentation/d/1k45SqyM-w4DtK7dmedeX7pk_r8B9Aq0FKKCxC04pTRM/)
-as a tool to help people figure out what they're trying to teach.
+as a tool to help people figure out what they're trying to teach
+early in the [instructor training course](https://docs.google.com/presentation/d/1k45SqyM-w4DtK7dmedeX7pk_r8B9Aq0FKKCxC04pTRM/).
 Over the past few months,
 a group of certified instructors have been creating concept maps for re-use
 and to serve as examples for people who are trying to draw their own.
