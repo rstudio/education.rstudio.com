@@ -23,11 +23,11 @@ photo:
 ## A package for the learnr occasion
 
 
-Packages are not just for functions and data-- you can create a package to deliver interactive tutorials to an audience, too!
+Packages are not just for functions and data-- you can create a package to deliver interactive tutorials to an audience, too.
 
 If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one the *best* ways to get your content to your audience. Why? Because after the package has been installed and loaded, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
 
-Putting your learnr tutorial in a package is also free-- and always will be, which means you can also sidestep costs associated with hosting services! Your package doesn't have to be on CRAN, and it doesn't have to contain functions or data (but it can if you want!).
+Putting your learnr tutorial in a package is also free-- and always will be, which means you can also sidestep costs associated with hosting services! Your package doesn't have to be on CRAN, and it doesn't have to contain functions or data (but it can if you want).
 
 Never made a package before? No sweat! In this post, we'll guide you through the process.
 
