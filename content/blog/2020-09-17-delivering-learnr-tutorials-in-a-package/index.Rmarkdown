@@ -312,10 +312,9 @@ From here, there are many ways to extend what you've done. For example, you coul
 
 If you'd like to see an example of a tutorial package "in the wild", check out the [GitHub repository for the `learntidymodels` package](https://github.com/tidymodels/learntidymodels).
 
-Finally, you may also be interested in exploring mybinder.org as a platform for delivering interactive learnr tutorials to users, which you can learn more about with this [helpful post](http://laderast.github.io/2020/09/15/getting-learnr-tutorials-to-run-on-mybinder-org/) by Ted Laderas, PhD.
+Finally, you may also be interested in exploring mybinder.org as a platform for delivering interactive learnr tutorials to users, which you can learn more about with this [helpful post](http://laderast.github.io/2020/09/15/getting-learnr-tutorials-to-run-on-mybinder-org/) by [Ted Laderas, PhD.](https://education.rstudio.com/trainers/people/laderas+ted/)
 
 Happy tutorial-ing!
-
 
 
 
