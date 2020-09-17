@@ -133,6 +133,10 @@ We recommend following the tips on [Happy Git with R](https://happygitwithr.com/
 
 Now we'll create the infrastructure to turn this R project into a *package*. A handful of new files need to be created, but luckily we can outsource this heavy lifting to the `create_package()` function from the [usethis](https://usethis.r-lib.org/) package.
 
+```{r, eval = TRUE, echo = FALSE, out.width = "70%", fig.cap="Illustration by Allison Horst"}
+knitr::include_graphics("usethis.png")
+```
+
 1.  **Create the necessary package infrastructure** when you run:
 
     ```{r, eval = FALSE}
