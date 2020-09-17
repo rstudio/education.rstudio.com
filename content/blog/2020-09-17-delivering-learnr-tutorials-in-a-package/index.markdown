@@ -47,7 +47,7 @@ If a solution like this still works for your purposes, then read onwards!
 
 We assume the following:
 
-* You have a GitHub account (but you don't need to be more than a GitHub novice)
+* You have a GitHub account and are comfortable using [GitHub from within RStudio](https://happygitwithr.com/)
 * You are comfortable with the basics of using R and RStudio
 * You understand how R projects work
 * You are already familiar with creating a regular learnr tutorial
