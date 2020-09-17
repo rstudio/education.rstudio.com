@@ -33,11 +33,34 @@ Putting your learnr tutorial in a package is also free-- and always will be, whi
 
 Never made a package before? No sweat! In this post, we'll guide you through the process.
 
-## How to make a package for a learnr tutorial
+
+
+## tl;dr
+
+Here's how you put an interactive learnr tutorial in a package:
+
+1. In a GitHub-connected RStudio project, run `usethis::create_package(getwd())` to make a basic package.
+
+1. Run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")` to create the learnr tutorial. Customize with your content. Repeat for additional tutorials.
+
+1. Go to *Build* > *Install and Restart*.
+
+1. Optionally, run `usethis::use_package("gradethis")` to add packages dependencies for exercise-checking.
+
+1. Optionally, edit the `DESCRIPTION` file.
+
+1. Run `usethis::use_readme_rmd()` to add a README. Knit when you're done.
+
+1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
+
+1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.  
+
 
 ```{r, out.width = "100%", echo = FALSE}
 knitr::include_graphics("pkg-illo.jpg")
 ```
+
+## How to make a package for a learnr tutorial
 
 
 We will walk through the steps for creating the bare-minimum package that you can use to house and deliver your interactive learnr tutorials to your users.
@@ -280,28 +303,6 @@ You can include additional information in a `README.Rmd` file for your package. 
 After your package has been installed by your users, you can continue to update or add tutorials. Each time you make changes to the contents of your package, you must *Build* then *Install and Restart* the package locally before pushing your changes to GitHub.
 
 Users can then access the updated content by simply re-installing your package.
-
-
-
-## tl;dr
-
-Here's how you put an interactive learnr tutorial in a package:
-
-1. In a GitHub-connected RStudio project, run `usethis::create_package(getwd())` to make a basic package.
-
-1. Run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")` to create the learnr tutorial. Customize with your content. Repeat for additional tutorials.
-
-1. Go to *Build* > *Install and Restart*.
-
-1. Optionally, run `usethis::use_package("gradethis")` to add packages dependencies for exercise-checking.
-
-1. Optionally, edit the `DESCRIPTION` file.
-
-1. Run `usethis::use_readme_rmd()` to add a README. Knit when you're done.
-
-1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
-
-1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.
 
 
 ## That's a wrap!
