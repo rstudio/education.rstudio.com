@@ -113,7 +113,7 @@ We recommend following the tips on [Happy Git with R](https://happygitwithr.com/
     * Do this by clicking the green Clone or Download button.
     * Copy the HTTPS URL (looks like: `https://github.com/{yourname}/{yourrepo}.git`).
 
-    * **Or**, copy the SSH URL if you chose to set up SSH keys (looks like: `git@github.com:{yourname}/{yourrepo}.git`).
+    * **Or**, copy the SSH URL if you chose to set up SSH keys (looks like: `git@github.com:{yourname}/{yourrepo}.git`). (Note: we strongly recommend that you choose HTTPS over SSH if you don't know about SSH keys.)
 
 1. **Open RStudio** and [create a new RStudio Project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone).
 
@@ -320,7 +320,6 @@ If you'd like to see an example of a tutorial package "in the wild", check out t
 Finally, you may also be interested in exploring mybinder.org as a platform for delivering interactive learnr tutorials to users, which you can learn more about with this [helpful post](http://laderast.github.io/2020/09/15/getting-learnr-tutorials-to-run-on-mybinder-org/) by [Ted Laderas, PhD.](https://education.rstudio.com/trainers/people/laderas+ted/)
 
 Happy tutorial-ing!
-
 
 
 
