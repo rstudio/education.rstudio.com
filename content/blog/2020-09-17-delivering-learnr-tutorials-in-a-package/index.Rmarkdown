@@ -1,5 +1,5 @@
 ---
-title: Delivering learnr Tutorials in a Package
+title: How to deliver learnr tutorials in a package
 author: Desirée De Leon
 date: '2020-09-17'
 slug: delivering-learnr-tutorials-in-a-package
@@ -17,6 +17,11 @@ photo:
   author: Erda Estremera
 ---
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center", out.width = "50%")
+```
+
 ## A package for the learnr occasion
 
 
@@ -29,6 +34,11 @@ Putting your learnr tutorial in a package is also free-- and always will be, whi
 Never made a package before? No sweat! In this post, we'll guide you through the process.
 
 ## How to make a package for a learnr tutorial
+
+```{r, out.width = "100%", echo = FALSE}
+knitr::include_graphics("pkg-illo.jpg")
+```
+
 
 We will walk through the steps for creating the bare-minimum package that you can use to house and deliver your interactive learnr tutorials to your users.
 
@@ -78,7 +88,7 @@ We recommend following the tips on [Happy Git with R](https://happygitwithr.com/
 1. **Copy the repository URL** to your clipboard.
 
     * Do this by clicking the green Clone or Download button.
-    * Copy the HTTPS clone URL (looks like: `https://github.com/{yourname}/{yourrepo}.git`).
+    * Copy the HTTPS URL (looks like: `https://github.com/{yourname}/{yourrepo}.git`).
 
     * **Or**, copy the SSH URL if you chose to set up SSH keys (looks like: `git@github.com:{yourname}/{yourrepo}.git`).
 
@@ -108,15 +118,21 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
 
 2. The console output will ask if you’d like to overwrite the pre-existing R project. __Select *No*__.
 
-    <center> ![](pkg-overwrite.png){width=50%} </center>
+    ```{r, eval = TRUE, echo = FALSE}
+    knitr::include_graphics("pkg-overwrite.png")
+    ```
 
 3. A second session of RStudio will open – this session has a *Build* tab in the pane which also has the tabs Environment, History, etc. This tab is specific for building packages, and we will use it later. **You can close the first RStudio instance**.
 
-    <center> ![](pkg-build.png){width=50%} </center>
+    ```{r, eval = TRUE, echo = FALSE}
+    knitr::include_graphics("pkg-build.png")
+    ```
 
     * Your project directory should end up looking something like this:
 
-    <center> ![](pkg-directory.png){width=50%} </center>
+    ```{r, eval = TRUE, echo = FALSE}
+    knitr::include_graphics("pkg-directory.png")
+    ```
 
 
 
@@ -124,7 +140,7 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
 
 Now that the package structure is in place, it's time to add tutorial content. Again, the usethis package will do the dirty work for us to create the folders and files we need for a learnr tutorial within our package.
 
-1. **Create the learnr tutorial** and open it for editing when you run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")`:
+1. **Create the learnr tutorial** and open it for editing when you run `usethis::use_tutorial("<tutorial-name>", "<Tutorial Title>")`:
 
     ```{r, eval = FALSE}
     usethis::use_tutorial("lesson1", "Your First Lesson", open = interactive())
@@ -139,11 +155,12 @@ Now that the package structure is in place, it's time to add tutorial content. A
       You can open up `inst/` and its subsequent subfolders until you reach the `.Rmd` file you created:
 
       ```
-      /inst/tutorials/<name-of-learnr-file>/<name-of-learnr-file.Rmd>
+      /inst/tutorials/<tutorial-name>/<tutorial-name.Rmd>
       ```
 
-    <center> ![](pkg-inst.png){width=50%} </center>
-
+    ```{r, eval = TRUE, echo = FALSE}
+    knitr::include_graphics("pkg-inst.png")
+    ```
 
 1. **Edit the open `.Rmd` file** and customize your tutorial as you normally would.
 
@@ -189,8 +206,11 @@ If your tutorial includes [exercises that can be checked via an external package
     ```
 
     * You should see something like this in the console output:
-      <center> ![](pkg-gradethis.png){width=70%} </center>
 
+    ```{r, eval = TRUE, echo = FALSE, out.width="70%"}
+    knitr::include_graphics("pkg-gradethis.png")
+    ```
+    
 2. You can confirm the package has been added as an import when you **open the `DESCRIPTION` file** in your project root.
 
 
@@ -281,7 +301,7 @@ Here's how you put an interactive learnr tutorial in a package:
 
 1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
 
-1. Repeat steps 2,3, and 7 anytime you update your tutorial package.
+1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.
 
 
 ## That's a wrap!
