@@ -258,13 +258,13 @@ Your tutorial package has (finally!) been built, now it's time to get it out the
 
 1. **[Commit](https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit) and [push](https://happygitwithr.com/rstudio-git-github.html#push-your-local-changes-online-to-github)** to GitHub to share your tutorial package with the world.
 
-1. **Have users *install* your package** from GitHub with `remotes::install_github(“<your-repo>/<package-name>")`
+1. **Have users *install* your package** from GitHub with `remotes::install_github(“<your-repo>/<package-name>")` (They will also need to install the learnr package.)
 
     ```{r, eval = FALSE}
     remotes::install_github("dcossyleon/tutorialpackage")
     ```
 
-1. **Have users *run* your tutorial** with `learnr::run_tutorial("<tutorial-name>", "<package-name>")` (users will need to install the learnr package first).
+1. **Have users *run* your tutorial** with `learnr::run_tutorial("<tutorial-name>", "<package-name>")`
 
     ```{r, eval = FALSE}
     learnr::run_tutorial("lesson1", "tutorialpackage")
