@@ -11,7 +11,7 @@ tags:
   - teach
   - learnr
 description: |
-  A step by step guide to create a package for publishing a learnr tutorial.
+  A step by step guide to create a package for a learnr tutorial.
 photo:
   url: https://unsplash.com/photos/sxNt9g77PE0
   author: Erda Estremera
