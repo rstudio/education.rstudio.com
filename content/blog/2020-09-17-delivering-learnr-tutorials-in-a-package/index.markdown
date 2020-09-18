@@ -20,9 +20,6 @@ photo:
 
 
 
-## A package for the learnr occasion
-
-
 Packages are not just for functions and data-- you can create a package to deliver interactive tutorials to an audience, too.
 
 If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one the *best* ways to get your content to your audience. Why? Because after the package has been installed and loaded, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
@@ -31,9 +28,35 @@ Putting your learnr tutorial in a package is also free-- and always will be, whi
 
 Never made a package before? No sweat! In this post, we'll guide you through the process.
 
-## How to make a package for a learnr tutorial
 
-<img src="pkg-illo.jpg" width="100%" style="display: block; margin: auto;" />
+
+## tl;dr
+
+Here's how you put an interactive learnr tutorial in a package:
+
+1. In a GitHub-connected RStudio project, run `usethis::create_package(getwd())` to make a basic package.
+
+1. Run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")` to create the learnr tutorial. Customize with your content. Repeat for additional tutorials.
+
+1. Go to *Build* > *Install and Restart*.
+
+1. Optionally, run `usethis::use_package("gradethis")` to add packages dependencies for exercise-checking.
+
+1. Optionally, edit the `DESCRIPTION` file.
+
+1. Run `usethis::use_readme_rmd()` to add a README. Knit when you're done.
+
+1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
+
+1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.  
+
+
+<div class="figure" style="text-align: center">
+<img src="pkg-illo.jpg" alt="Creating a tutorial package in a nutshell" width="100%" />
+<p class="caption">Figure 1: Creating a tutorial package in a nutshell</p>
+</div>
+
+## How to make a package for a learnr tutorial
 
 
 We will walk through the steps for creating the bare-minimum package that you can use to house and deliver your interactive learnr tutorials to your users.
@@ -47,7 +70,7 @@ If a solution like this still works for your purposes, then read onwards!
 
 We assume the following:
 
-* You have a GitHub account and are comfortable using [GitHub from within RStudio](https://happygitwithr.com/)
+* You have a GitHub account and are comfortable [using GitHub from within RStudio](https://happygitwithr.com) (but you don't need to be more than a GitHub novice)
 * You are comfortable with the basics of using R and RStudio
 * You understand how R projects work
 * You are already familiar with creating a regular learnr tutorial
@@ -87,7 +110,7 @@ We recommend following the tips on [Happy Git with R](https://happygitwithr.com/
     * Do this by clicking the green Clone or Download button.
     * Copy the HTTPS URL (looks like: `https://github.com/{yourname}/{yourrepo}.git`).
 
-    * **Or**, copy the SSH URL if you chose to set up SSH keys (looks like: `git@github.com:{yourname}/{yourrepo}.git`).
+    * **Or**, copy the SSH URL if you chose to set up SSH keys (looks like: `git@github.com:{yourname}/{yourrepo}.git`). (Note: we strongly recommend that you choose HTTPS over SSH if you don't know about SSH keys.)
 
 1. **Open RStudio** and [create a new RStudio Project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone).
 
@@ -106,6 +129,11 @@ We recommend following the tips on [Happy Git with R](https://happygitwithr.com/
 ### Add files and directories for a package
 
 Now we'll create the infrastructure to turn this R project into a *package*. A handful of new files need to be created, but luckily we can outsource this heavy lifting to the `create_package()` function from the [usethis](https://usethis.r-lib.org/) package.
+
+<div class="figure" style="text-align: center">
+<img src="usethis.png" alt="Illustration by Allison Horst" width="70%" />
+<p class="caption">Figure 2: Illustration by Allison Horst</p>
+</div>
 
 1.  **Create the necessary package infrastructure** when you run:
 
@@ -227,14 +255,14 @@ Your tutorial package has (finally!) been built, now it's time to get it out the
 
 1. **[Commit](https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit) and [push](https://happygitwithr.com/rstudio-git-github.html#push-your-local-changes-online-to-github)** to GitHub to share your tutorial package with the world.
 
-1. **Have users *install* your package** from GitHub with `remotes::install_github(“<your-repo>/<package-name>")`
+1. **Have users *install* your package** from GitHub with: `remotes::install_github(“<your-repo>/<package-name>")`. (They will also need to install the learnr package.)
 
     
     ```r
     remotes::install_github("dcossyleon/tutorialpackage")
     ```
 
-1. **Have users *run* your tutorial** with `learnr::run_tutorial("<tutorial-name>", "<package-name>")` (users will need to install the learnr package first).
+1. **Have users *run* your tutorial** with: `learnr::run_tutorial("<tutorial-name>", "<package-name>")`
 
     
     ```r
@@ -278,41 +306,17 @@ After your package has been installed by your users, you can continue to update 
 Users can then access the updated content by simply re-installing your package.
 
 
-
-## tl;dr
-
-Here's how you put an interactive learnr tutorial in a package:
-
-1. In a GitHub-connected RStudio project, run `usethis::create_package(getwd())` to make a basic package.
-
-1. Run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")` to create the learnr tutorial. Customize with your content. Repeat for additional tutorials.
-
-1. Go to *Build* > *Install and Restart*.
-
-1. Optionally, run `usethis::use_package("gradethis")` to add packages dependencies for exercise-checking.
-
-1. Optionally, edit the `DESCRIPTION` file.
-
-1. Run `usethis::use_readme_rmd()` to add a README. Knit when you're done.
-
-1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
-
-1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.
-
-
 ## That's a wrap!
 
 Congratulations, you've created a tutorial package!
 
 From here, there are many ways to extend what you've done. For example, you could decide to bundle up custom data sets in your package, as explained in the [R Packages](https://r-pkgs.org/data.html#data-sysdata) book. And you might consider adding [package documentation](https://r-pkgs.org/man.html#man-packages).
 
-If you'd like to see an example of a tutorial package "in the wild", check out the [GitHub repository for the `learntidymodels` package](https://github.com/tidymodels/learntidymodels).
+If you'd like to see an example of a tutorial package "in the wild", check out the [GitHub repository for the learntidymodels package](https://github.com/tidymodels/learntidymodels).
 
-Finally, you may also be interested in exploring mybinder.org as a platform for delivering interactive learnr tutorials to users, which you can learn more about with this [helpful post](http://laderast.github.io/2020/09/15/getting-learnr-tutorials-to-run-on-mybinder-org/) by Ted Laderas, PhD.
+Finally, you may also be interested in exploring mybinder.org as a platform for delivering interactive learnr tutorials to users, which you can learn more about with this [helpful post](http://laderast.github.io/2020/09/15/getting-learnr-tutorials-to-run-on-mybinder-org/) by [Ted Laderas, PhD.](https://education.rstudio.com/trainers/people/laderas+ted/)
 
 Happy tutorial-ing!
-
-
 
 
 
