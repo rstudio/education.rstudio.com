@@ -1,7 +1,7 @@
 ---
 title: Synchronize your HTML Widgets with Crosstalk
 author:
-  - carl
+  - alison
 date: '2020-04-03'
 categories:
   - events
@@ -142,7 +142,6 @@ I find the best part about crosstalk and its associated HTML widgets is that the
 # Resources
 
 If you are interested in seeing the crosstalk materials we presented during the workshop, check out the [workshop slides (in PDF form)](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/blob/master/materials/slides/04-RMAID-client-side-dashboards.pdf) and the [exercises](https://github.com/rstudio-conf-2020/rmarkdown-dashboard/tree/master/materials/exercises/04-Web-based-Dashboards). You can also review the [full set of workshop materials on github](https://rstd.io/RMAID).
-
 
 
 
