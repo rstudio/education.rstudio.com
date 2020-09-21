@@ -15,7 +15,8 @@ photo:
   url: https://unsplash.com/photos/fpvUvv-VEuA
 ---
 
-When we started with the first Data Latam Podcast in May 2016 we thought that it would be a great idea to have a source of information about data science in Spanish.
+When we started with the first [Data Latam Podcast](http://www.datalatam.com/) in May 2016
+we thought that it would be a great idea to have a source of information about data science in Spanish.
 Our goal was to make available not only a source of information, but also of inspiration.
 We believe that having role models is important in a field where so many of us are self-taught,
 and all of us need to learn continuously to stay abreast of advances in each of our fields.
@@ -30,30 +31,33 @@ to date we have published 53 podcasts with more than 3000 people listening in ea
 ## Data Latam Events
 
 Soon after the podcasts we started organizing in-person training events, always followed by a lunch.
-In this way we highlighted the importance of creating an opportunity for networking in a group that shares an interest in data science with R.
+In this way we highlighted the importance of creating an opportunity for networking
+in a group that shares an interest in data science with R.
 We have also organized the following courses:
 
-* Automated tests in R (2018)
-* Data pipelines in R with dplyr (2018)
-* Deploy data products with Docker (2018)
-* Interactive Dashboards in R with Shiny (2019)
-* Visualizing data in R (2019)
+* [Automated tests in R](https://github.com/datalatam/pruebas-r) (2018)
+* [Data pipelines in R with dplyr](https://github.com/datalatam/dataductos-r) (2018)
+* [Deploy data products with Docker](https://github.com/datalatam/docker) (2018)
+* [Interactive Dashboards in R with Shiny](https://github.com/datalatam/shiny-r) (2019)
+* [Visualizing data in R](https://github.com/datalatam/visualizacion) (2019)
 
-One of the nice things that happened with the in-person events is that more people got involved in the execution of the training sessions
+One of the nice things that happened with the in-person events is that
+more people got involved in the execution of the training sessions
 and came up with their own ideas.
 This month we will do the first remote training about migrating to R from Excel. 
 
 ## Data Latam Webinars
 
-Around the same time as the training events we started the Data Latam online webinars, every last Thursday of the month.
-In fact, we inherited these events from the San Carlos R User Group,
+Around the same time as the training events we started the Data Latam online webinars on the last Thursday of every month.
+In fact, we inherited these events from the [San Carlos R User Group](https://www.meetup.com/San-Carlos-R-User-Group/),
 who were being threatened by Meetup.com with deletion from their platform if they continued posting online events.
 This brought a new group of people into the Data Latam community and for the first year we always began with a round of introductions:
 where are you, how do you use R?
 
 Starting the webinars with a full round of introductions has become more difficult with the numbers of people currently assisting.
 We regularly get 200-300 inscriptions for each webinar, and have started to max out our Zoom capacity of 100 (so get there early!).
-We publish a recording of each monthly webinar on youtube where we have more than 26.000 views of the content. 
+[We publish a recording of each monthly webinar on YouTube](https://youtube.com/c/datalatam)
+where we have more than 26,000 views of the content. 
 
 <img src="Picture2.png" />
 
