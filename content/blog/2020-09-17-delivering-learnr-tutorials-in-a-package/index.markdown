@@ -34,7 +34,7 @@ Never made a package before? No sweat! In this post, we'll guide you through the
 
 Here's how you put an interactive learnr tutorial in a package:
 
-1. In a GitHub-connected RStudio project, run `usethis::create_package(getwd())` to make a basic package.
+1. In a GitHub-connected RStudio project, run `usethis::create_package("<path_to_folder/name_of_package>")` to make a basic package.
 
 1. Run `usethis::use_tutorial("<name-of-learnr-file>", "<Title You'd Like the User to See>")` to create the learnr tutorial. Customize with your content. Repeat for additional tutorials.
 
@@ -153,14 +153,14 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
 <p class="caption">Figure 2: Illustration by Allison Horst</p>
 </div>
 
-1.  **Create the necessary package infrastructure** when you run:
+1.  **Create the necessary package infrastructure** when you run the following code to make a basic package in your current working directory:
 
     
     ```r
-    usethis::create_package(getwd())
+    usethis::create_package("<path_to_folder/name_of_package>")
     ```
     
-    * This creates a basic package and places it in your current working directory. 
+    * Not sure what your current working directory is? You can always run `getwd()` to check. 
     
 2. The console output will ask if you’d like to overwrite the pre-existing R project. __Select *No*__.
 
