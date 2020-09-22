@@ -245,23 +245,24 @@ Time to build the package and install it in your R system library.
 
 ### (Optionally) Add dependencies
 
-If your tutorial uses external packages (for example, packages for exercise-checking like [gradethis](https://rstudio-education.github.io/gradethis/)), you'll need to make sure this package gets installed along with your custom package. To do this, the external package needs to be added as an `Imports` dependency in the `DESCRIPTION` file. Once again, the usethis package will make this easier for us to do:
+If your tutorial uses external packages (for example, packages for exercise-checking like [gradethis](https://rstudio-education.github.io/gradethis/)), you'll need to make sure this package gets installed along with your custom package. If the package you want to use is not on CRAN (as gradethis currently is not), it will need to be included as a `Remotes` dependency in the `DESCRIPTION` file. (*Note:* Including external packages under `Remotes`, as opposed to `Imports`, does complicate matters if you plan on submitting your tutorial package to CRAN later.)
+
+Once again, the usethis package will make this easier for us to do:
 
 
-1. **Run** `usethis::use_package("<external-package>")`
+1. **Run** `usethis::use_dev_package("<external-package>")`
 
     
     ```r
-    usethis::use_package("gradethis")
+    usethis::use_dev_package("gradethis")
     ```
 
-    * You should see something like this in the console output:
-
-    <img src="pkg-gradethis.png" width="70%" style="display: block; margin: auto;" />
     
-2. You can confirm the package has been added under `Imports` when you **open the `DESCRIPTION` file** in your project root.
+2. You can confirm the package has been added under `Remotes` when you **open the `DESCRIPTION` file** in your project root.
 
-On the topic of dependencies, if you will make use of other packages within the tutorial itself (e.g. `library(tidyverse)`), it is probably a good idea to add the tidyverse package under `Imports` as well. This will be fine if your package plans to stay on GitHub, but it's against the recommendation for CRAN. 
+On the topic of dependencies, if you're using other packages in your tutorial that *are* on CRAN (e.g. tidyverse), you should instead run:  `usethis::use_package("<external-package>")`, which will list the package under `Imports` in the `DESCRIPTION` file.
+
+
 
 ### (Optionally) Edit your package metadata
 
