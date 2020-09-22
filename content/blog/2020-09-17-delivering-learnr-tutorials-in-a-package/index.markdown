@@ -22,7 +22,7 @@ photo:
 
 Packages are not just for functions and data -- you can create a package to deliver interactive tutorials to an audience, too.
 
-If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one the *best* ways to get your content to your audience. Why? Because after the package has been installed, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
+If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one the best ways to get your content to your audience. Why? Because after the package has been installed, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
 
 Putting your learnr tutorial in a package is also free-- and always will be, which means you can also sidestep costs associated with hosting services! Your package doesn't have to be on CRAN, and it doesn't have to contain functions or data (but it can if you want).
 
@@ -46,7 +46,7 @@ Here's how you put an interactive learnr tutorial in a package:
 
 1. Run `usethis::use_readme_rmd()` to add a README. Knit when you're done.
 
-1. Push to GitHub and have folks install with `remotes::install_github("<your-repo>/<package-name>")`
+1. Push to GitHub and have folks install with `devtools::install_github("<your-repo>/<package-name>")`
 
 1. Go to *Tutorial pane* of IDE to run the tutorial.
 
@@ -101,7 +101,7 @@ If you're already familiar with the ins and outs of connecting an R Project to a
 
 There are two workflows to choose from for getting started:
 
-#### Workflow 1
+#### Workflow 1 
 
 We recommend following the tips on [Happy Git with R](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-2) and starting in GitHub before switching to RStudio.
 
@@ -261,7 +261,7 @@ If your tutorial uses external packages (for example, packages for exercise-chec
     
 2. You can confirm the package has been added under `Imports` when you **open the `DESCRIPTION` file** in your project root.
 
-
+On the topic of dependencies, if you will make use of other packages within the tutorial itself (e.g. `library(tidyverse)`), it is probably a good idea to add the tidyverse package under `Imports` as well. This will be fine if your package plans to stay on GitHub, but it's against the recommendation for CRAN. 
 
 ### (Optionally) Edit your package metadata
 
@@ -283,11 +283,11 @@ Your tutorial package has (finally!) been built, now it's time to get it out the
 
 1. **[Commit](https://happygitwithr.com/rstudio-git-github.html#make-local-changes-save-commit) and [push](https://happygitwithr.com/rstudio-git-github.html#push-your-local-changes-online-to-github)** to GitHub to share your tutorial package with the world.
 
-1. **Have users *install* your package** from GitHub with: `remotes::install_github(“<your-repo>/<package-name>")`. (They will also need to install the learnr package.)
+1. **Have users *install* your package** from GitHub with: `devtools::install_github(“<your-repo>/<package-name>")`. (They will also need to install the learnr package.)
 
     
     ```r
-    remotes::install_github("dcossyleon/tutorialpackage")
+    devtools::install_github("dcossyleon/tutorialpackage")
     ```
 
 1. **Have users *run* your tutorial** by navigating to the *Tutorial pane* of their RStudio IDE and clicking *Start Tutorial*. 
@@ -314,7 +314,7 @@ You can include additional information in a `README.Rmd` file for your package. 
     use_readme_rmd()
     ```
 
-1. **Edit** the file to meet your needs. Need ideas of what to include? Check out [this resource](https://r-pkgs.org/whole-game.html#use_readme_rmd).
+1. **Edit** the README to meet your needs. Need ideas of what to include? Check out [this resource](https://r-pkgs.org/whole-game.html#use_readme_rmd).
 
 1. **Click Knit** so that it creates a corresponding `README.md` file.
 
