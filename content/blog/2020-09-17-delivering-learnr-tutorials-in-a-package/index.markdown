@@ -174,15 +174,15 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
 3. A second session of RStudio will open – this session has a *Build* tab in the pane which also has the tabs Environment, History, etc. This tab is specific for building packages, and we will use it later. **You can close the first RStudio instance**.
 
     <div class="figure" style="text-align: center">
-    <img src="pkg-build.png" alt="Location of the Build tab in the RStudio IDE." width="50%" />
-    <p class="caption">(\#fig:build)Location of the Build tab in the RStudio IDE.</p>
+    <img src="pkg-build.png" alt="Location of the Build tab in the RStudio IDE" width="50%" />
+    <p class="caption">(\#fig:build)Location of the Build tab in the RStudio IDE</p>
     </div>
 
     * Your project directory should end up looking something like this:
 
     <div class="figure" style="text-align: center">
-    <img src="pkg-directory.png" alt="Project directory for an empty package." width="50%" />
-    <p class="caption">(\#fig:dir)Project directory for an empty package.</p>
+    <img src="pkg-directory.png" alt="Project directory for an empty package" width="50%" />
+    <p class="caption">(\#fig:dir)Project directory for an empty package</p>
     </div>
 
 
@@ -211,8 +211,8 @@ Now that the package structure is in place, it's time to add tutorial content. A
       ```
 
     <div class="figure" style="text-align: center">
-    <img src="pkg-inst.png" alt="Example directory containing a learnr tutorial." width="50%" />
-    <p class="caption">(\#fig:path)Example directory containing a learnr tutorial.</p>
+    <img src="pkg-inst.png" alt="Example directory containing a learnr tutorial" width="50%" />
+    <p class="caption">(\#fig:path)Example directory containing a learnr tutorial</p>
     </div>
 
 1. **Edit the open `.Rmd` file** and write your tutorial as you normally would.
@@ -241,8 +241,8 @@ Time to build the package and install it in your R system library.
 1. __Navigate to the *Tutorial* pane__ of your RStudio IDE. All installed learnr tutorials in your R Library will be automatically indexed and displayed here. 
 
     <div class="figure" style="text-align: center">
-    <img src="pkg-run-tutorial.png" alt="The tutorial pane in RStudio." width="90%" />
-    <p class="caption">(\#fig:run)The tutorial pane in RStudio.</p>
+    <img src="pkg-run-tutorial.png" alt="The tutorial pane in RStudio" width="90%" />
+    <p class="caption">(\#fig:run)The tutorial pane in RStudio</p>
     </div>
     
     
