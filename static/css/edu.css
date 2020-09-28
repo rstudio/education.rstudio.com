@@ -139,4 +139,14 @@ h3 code,
   font-size: 0.9em;
 }
 
+.bandContent h3 {
+  font-size: 1.4em;
+}
+
+.bandContent h4 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
 
