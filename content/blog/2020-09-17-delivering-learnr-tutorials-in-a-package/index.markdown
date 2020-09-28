@@ -151,7 +151,7 @@ The files and directories necessary for a package are now in place, and you've c
 Now we'll create the infrastructure to turn this R project into a *package*. A handful of new files need to be created, but luckily we can outsource this heavy lifting to the `create_package()` function from the [usethis](https://usethis.r-lib.org/) package.
 
 <div class="figure" style="text-align: center">
-<img src="usethis.png" alt="Illustration by Allison Horst" width="65%" />
+<a href="https://www.allisonhorst.com/" target="_blank"><img src="usethis.png" alt="Illustration by Allison Horst" width="65%" /></a>
 <p class="caption">Figure 2: Illustration by Allison Horst</p>
 </div>
 
@@ -166,24 +166,15 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
     
 2. The console output will ask if you’d like to overwrite the pre-existing R project. __Select *No*__.
 
-    <div class="figure" style="text-align: center">
-    <img src="pkg-overwrite.png" alt="Console prompt after running create_package()" width="50%" />
-    <p class="caption">(\#fig:create)Console prompt after running create_package()</p>
-    </div>
+    <img src="pkg-overwrite.png" width="50%" style="display: block; margin: auto;" />
 
 3. A second session of RStudio will open – this session has a *Build* tab in the pane which also has the tabs Environment, History, etc. This tab is specific for building packages, and we will use it later. **You can close the first RStudio instance**.
 
-    <div class="figure" style="text-align: center">
-    <img src="pkg-build.png" alt="Location of the Build tab in the RStudio IDE" width="50%" />
-    <p class="caption">(\#fig:build)Location of the Build tab in the RStudio IDE</p>
-    </div>
+    <img src="pkg-build.png" width="50%" style="display: block; margin: auto;" />
 
     * Your project directory should end up looking something like this:
 
-    <div class="figure" style="text-align: center">
-    <img src="pkg-directory.png" alt="Project directory for an empty package" width="50%" />
-    <p class="caption">(\#fig:dir)Project directory for an empty package</p>
-    </div>
+    <img src="pkg-directory.png" width="50%" style="display: block; margin: auto;" />
 
 
 
@@ -210,10 +201,7 @@ Now that the package structure is in place, it's time to add tutorial content. A
       /inst/tutorials/<tutorial-name>/<tutorial-name.Rmd>
       ```
 
-    <div class="figure" style="text-align: center">
-    <img src="pkg-inst.png" alt="Example directory containing a learnr tutorial" width="50%" />
-    <p class="caption">(\#fig:path)Example directory containing a learnr tutorial</p>
-    </div>
+    <img src="pkg-inst.png" width="50%" style="display: block; margin: auto;" />
 
 1. **Edit the open `.Rmd` file** and write your tutorial as you normally would.
 
@@ -240,10 +228,7 @@ Time to build the package and install it in your R system library.
     
 1. __Navigate to the *Tutorial* pane__ of your RStudio IDE. All installed learnr tutorials in your R Library will be automatically indexed and displayed here. 
 
-    <div class="figure" style="text-align: center">
-    <img src="pkg-run-tutorial.png" alt="The tutorial pane in RStudio" width="90%" />
-    <p class="caption">(\#fig:run)The tutorial pane in RStudio</p>
-    </div>
+    <img src="pkg-run-tutorial.png" width="90%" style="display: block; margin: auto;" />
     
     
 1. __Click Start Tutorial__ to open the tutorial from inside the tutorial pane (which can then be made bigger or popped out to a browser window) -- 🎉 woot!
