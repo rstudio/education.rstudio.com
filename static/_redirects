@@ -4,3 +4,5 @@ http://education.rstudio.com/* https://education.rstudio.com/:splat 301!
 
 
 /quillt/* https://hardcore-shockley-db2947.netlify.app/:splat 200!
+
+/*    /index.html   200
