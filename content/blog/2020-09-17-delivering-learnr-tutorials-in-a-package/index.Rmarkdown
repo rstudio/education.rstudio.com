@@ -1,7 +1,7 @@
 ---
 title: How to deliver learnr tutorials in a package
 author: Desirée De Leon
-date: '2020-09-21'
+date: '2020-09-28'
 slug: delivering-learnr-tutorials-in-a-package
 categories:
   - package
@@ -58,7 +58,7 @@ Here's how you put an interactive learnr tutorial in a package:
 1. Repeat steps 2, 3, and 7 anytime you update your tutorial package.  
 
 
-```{r, out.width = "100%", echo = FALSE, fig.cap = "Creating a tutorial package in a nutshell"}
+```{r illo, out.width = "100%", echo = FALSE, fig.cap = "Creating a tutorial package in a nutshell"}
 knitr::include_graphics("pkg-illo.jpg")
 ```
 
@@ -89,7 +89,7 @@ Now let's get set up all to create a learnr tutorial package!
 
 Make sure you've installed and loaded the following packages:
 
-```{r, eval = FALSE}
+```{r install, eval = FALSE}
 #install.packages(c("devtools", "roxygen2", "learnr"))
 library(devtools)
 library(usethis)
@@ -138,7 +138,7 @@ It is possible to first make a package project in RStudio and then connect it to
 1. Scroll down and select *R Package*
 1. Select a package name and click *Create Project*
 1. Then run:
-    ```{r, eval = FALSE}
+    ```{r use1, eval = FALSE}
     usethis::use_git()
     usethis::use_github() # you have to have a PAT setup
     ```
@@ -150,13 +150,13 @@ The files and directories necessary for a package are now in place, and you've c
 
 Now we'll create the infrastructure to turn this R project into a *package*. A handful of new files need to be created, but luckily we can outsource this heavy lifting to the `create_package()` function from the [usethis](https://usethis.r-lib.org/) package.
 
-```{r, eval = TRUE, echo = FALSE, out.width = "65%", fig.cap="Illustration by Allison Horst"}
+```{r usethis, eval = TRUE, echo = FALSE, out.width = "65%", fig.cap="Illustration by Allison Horst"}
 knitr::include_graphics("usethis.png")
 ```
 
 1.  **Create the necessary package infrastructure** when you run the following code to make a basic package in your current working directory:
 
-    ```{r, eval = FALSE}
+    ```{r use2, eval = FALSE}
     usethis::create_package("<path_to_folder/name_of_package>")
     ```
     
@@ -164,19 +164,19 @@ knitr::include_graphics("usethis.png")
     
 2. The console output will ask if you’d like to overwrite the pre-existing R project. __Select *No*__.
 
-    ```{r eval = TRUE, echo = FALSE, fig.cap="Console prompt after running create_package()"}
+    ```{r create, eval = TRUE, echo = FALSE, fig.cap="Console prompt after running create_package()"}
     knitr::include_graphics("pkg-overwrite.png")
     ```
 
 3. A second session of RStudio will open – this session has a *Build* tab in the pane which also has the tabs Environment, History, etc. This tab is specific for building packages, and we will use it later. **You can close the first RStudio instance**.
 
-    ```{r eval = TRUE, echo = FALSE, fig.cap="Location of the Build tab in the RStudio IDE"}
+    ```{r build, eval = TRUE, echo = FALSE, fig.cap="Location of the Build tab in the RStudio IDE."}
     knitr::include_graphics("pkg-build.png")
     ```
 
     * Your project directory should end up looking something like this:
 
-    ```{r eval = TRUE, echo = FALSE, fig.cap="Project directory for an empty package"}
+    ```{r dir, eval = TRUE, echo = FALSE, fig.cap="Project directory for an empty package."}
     knitr::include_graphics("pkg-directory.png")
     ```
 
@@ -188,7 +188,7 @@ Now that the package structure is in place, it's time to add tutorial content. A
 
 1. **Create the learnr tutorial** and open it for editing when you run `usethis::use_tutorial("<tutorial-name>", "<Tutorial Title>")`:
 
-    ```{r, eval = FALSE}
+    ```{r use3, eval = FALSE}
     usethis::use_tutorial("lesson1", "Your First Lesson", open = interactive())
     ```
 
@@ -204,7 +204,7 @@ Now that the package structure is in place, it's time to add tutorial content. A
       /inst/tutorials/<tutorial-name>/<tutorial-name.Rmd>
       ```
 
-    ```{r, eval = TRUE, echo = FALSE, fig.cap="Example directory containing a learnr tutorial. Notice the path in the navigation bar of the Files pane."}
+    ```{r path, eval = TRUE, echo = FALSE, fig.cap="Example directory containing a learnr tutorial."}
     knitr::include_graphics("pkg-inst.png")
     ```
 
@@ -232,7 +232,7 @@ Time to build the package and install it in your R system library.
     
 1. __Navigate to the *Tutorial* pane__ of your RStudio IDE. All installed learnr tutorials in your R Library will be automatically indexed and displayed here. 
 
-    ```{r, echo = FALSE, out.width="90%", fig.cap="The tutorial pane in RStudio"}
+    ```{r run, echo = FALSE, out.width="90%", fig.cap="The tutorial pane in RStudio."}
     knitr::include_graphics("pkg-run-tutorial.png")
     ```
     
@@ -263,7 +263,7 @@ Once again, the usethis package will make this easier for us to do:
 
 1. **Run** `usethis::use_dev_package("<external-package>")`
 
-    ```{r, eval = FALSE}
+    ```{r use4, eval = FALSE}
     usethis::use_dev_package("gradethis")
     ```
   
@@ -277,7 +277,7 @@ If you're using other packages in your tutorial that *are* on CRAN (e.g. tidyver
 
 1. **Run** `usethis::use_package("<external-package>")`
 
-    ```{r, eval = FALSE}
+    ```{r use5, eval = FALSE}
     usethis::use_dev_package("palmerpenguins")
     ```
   
@@ -307,7 +307,7 @@ Your tutorial package has (finally!) been built, now it's time to get it out the
 
 1. **Have users *install* your package** from GitHub with: `devtools::install_github(“<your-repo>/<package-name>")`. (They will also need to install the learnr package.)
 
-    ```{r, eval = FALSE}
+    ```{r install2, eval = FALSE}
     devtools::install_github("dcossyleon/tutorialpackage")
     ```
 
@@ -329,7 +329,7 @@ You can include additional information in a `README.Rmd` file for your package. 
 
 1. **Run** `use_readme_rmd()` to create and open a README file.
 
-    ```{r, eval =  FALSE}
+    ```{r readme, eval =  FALSE}
     use_readme_rmd()
     ```
 
@@ -339,7 +339,7 @@ You can include additional information in a `README.Rmd` file for your package. 
 
     * Or, alternatively, run:
 
-    ```{r, eval = FALSE}
+    ```{r use6, eval = FALSE}
     usethis::build_readme()
     ```
 
