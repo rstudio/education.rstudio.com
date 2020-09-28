@@ -22,7 +22,7 @@ photo:
 
 Packages are not just for functions and data -- you can create a package to deliver interactive tutorials to an audience, too.
 
-If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one the best ways to get your content to your audience. Why? Because after the package has been installed, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
+If you want to share your [learnr tutorial](https://rstudio.github.io/learnr/) with a large group of users (e.g. large courses where many students will likely run the same tutorials simultaneously), putting your tutorial inside of a package may actually be one of the best ways to get your content to your audience. Why? Because after the package has been installed, users can run your tutorial *locally*-- which means that *you* don't have to worry about potential bandwidth limits and issues that might otherwise arise when learnr tutorials are hosted on external servers.
 
 Putting your learnr tutorial in a package is also free-- and always will be, which means you can also sidestep costs associated with hosting services! Your package doesn't have to be on CRAN, and it doesn't have to contain functions or data (but it can if you want).
 
@@ -40,7 +40,9 @@ Here's how you put an interactive learnr tutorial in a package:
 
 1. Go to *Build* > *Install and Restart*.
 
-1. Optionally, run `usethis::use_package("gradethis")` to add packages dependencies like exercise-checking, for example.
+1. Optionally, run `usethis::use_dev_package("gradethis")` to add package dependencies for in-development packages, like gradethis.
+
+1. Optionally, run `usethis::use_package("palmerpenguins")` to add package dependencies for packages that are on CRAN, like palmerpenguins.
 
 1. Optionally, edit the `DESCRIPTION` file.
 
@@ -149,7 +151,7 @@ The files and directories necessary for a package are now in place, and you've c
 Now we'll create the infrastructure to turn this R project into a *package*. A handful of new files need to be created, but luckily we can outsource this heavy lifting to the `create_package()` function from the [usethis](https://usethis.r-lib.org/) package.
 
 <div class="figure" style="text-align: center">
-<img src="usethis.png" alt="Illustration by Allison Horst" width="70%" />
+<img src="usethis.png" alt="Illustration by Allison Horst" width="65%" />
 <p class="caption">Figure 2: Illustration by Allison Horst</p>
 </div>
 
@@ -164,15 +166,24 @@ Now we'll create the infrastructure to turn this R project into a *package*. A h
     
 2. The console output will ask if you’d like to overwrite the pre-existing R project. __Select *No*__.
 
-    <img src="pkg-overwrite.png" width="50%" style="display: block; margin: auto;" />
+    <div class="figure" style="text-align: center">
+    <img src="pkg-overwrite.png" alt="Console prompt after running create_package()" width="50%" />
+    <p class="caption">(\#fig:unnamed-chunk-6)Console prompt after running create_package()</p>
+    </div>
 
 3. A second session of RStudio will open – this session has a *Build* tab in the pane which also has the tabs Environment, History, etc. This tab is specific for building packages, and we will use it later. **You can close the first RStudio instance**.
 
-    <img src="pkg-build.png" width="50%" style="display: block; margin: auto;" />
+    <div class="figure" style="text-align: center">
+    <img src="pkg-build.png" alt="Location of the Build tab in the RStudio IDE" width="50%" />
+    <p class="caption">(\#fig:unnamed-chunk-7)Location of the Build tab in the RStudio IDE</p>
+    </div>
 
     * Your project directory should end up looking something like this:
 
-    <img src="pkg-directory.png" width="50%" style="display: block; margin: auto;" />
+    <div class="figure" style="text-align: center">
+    <img src="pkg-directory.png" alt="Project directory for an empty package" width="50%" />
+    <p class="caption">(\#fig:unnamed-chunk-8)Project directory for an empty package</p>
+    </div>
 
 
 
@@ -199,7 +210,10 @@ Now that the package structure is in place, it's time to add tutorial content. A
       /inst/tutorials/<tutorial-name>/<tutorial-name.Rmd>
       ```
 
-    <img src="pkg-inst.png" width="50%" style="display: block; margin: auto;" />
+    <div class="figure" style="text-align: center">
+    <img src="pkg-inst.png" alt="Example directory containing a learnr tutorial. Notice the path in the navigation bar of the Files pane." width="50%" />
+    <p class="caption">(\#fig:unnamed-chunk-10)Example directory containing a learnr tutorial. Notice the path in the navigation bar of the Files pane.</p>
+    </div>
 
 1. **Edit the open `.Rmd` file** and write your tutorial as you normally would.
 
@@ -226,7 +240,10 @@ Time to build the package and install it in your R system library.
     
 1. __Navigate to the *Tutorial* pane__ of your RStudio IDE. All installed learnr tutorials in your R Library will be automatically indexed and displayed here. 
 
-    <img src="pkg-run-tutorial.png" width="90%" style="display: block; margin: auto;" />
+    <div class="figure" style="text-align: center">
+    <img src="pkg-run-tutorial.png" alt="The tutorial pane in RStudio" width="90%" />
+    <p class="caption">(\#fig:unnamed-chunk-12)The tutorial pane in RStudio</p>
+    </div>
     
     
 1. __Click Start Tutorial__ to open the tutorial from inside the tutorial pane (which can then be made bigger or popped out to a browser window) -- 🎉 woot!
@@ -245,7 +262,11 @@ Time to build the package and install it in your R system library.
 
 ### (Optionally) Add dependencies
 
-If your tutorial uses external packages (for example, packages for exercise-checking like [gradethis](https://rstudio-education.github.io/gradethis/)), you'll need to make sure this package gets installed along with your custom package. If the package you want to use is not on CRAN (as gradethis currently is not), it will need to be included as a `Remotes` dependency in the `DESCRIPTION` file. (*Note:* Including external packages under `Remotes`, as opposed to `Imports`, does complicate matters if you plan on submitting your tutorial package to CRAN later.)
+If your tutorial uses external packages (for example, packages for exercise-checking like [gradethis](https://rstudio-education.github.io/gradethis/)), or external packages that need to be made available to learners as they complete exercises (for example, data packages like palmerpenguins), you'll need to make sure this package gets installed along with your custom package. 
+
+#### External packages in development 
+
+If the package you want to use is not on CRAN (as gradethis currently is not), the development version of the package will need to be included as a `Remotes` dependency in the `DESCRIPTION` file. (*Note:* Including external packages that are still in development does complicate matters if you plan on submitting your tutorial package to CRAN.)
 
 Once again, the usethis package will make this easier for us to do:
 
@@ -256,11 +277,23 @@ Once again, the usethis package will make this easier for us to do:
     ```r
     usethis::use_dev_package("gradethis")
     ```
+  
+    This function is even smart enough to figure out the `OWNER/REPO` of the GitHub remote that the external package comes from if you have it install locally. See the [usethis pkgdown site](https://usethis.r-lib.org/reference/use_package.html) for optional arguments.
+    
+2. You can confirm the package has been added under `Remotes` when you open the `DESCRIPTION` file in your project root.
+
+#### External packages on CRAN
+
+If you're using other packages in your tutorial that *are* on CRAN (e.g. tidyverse or palmerpenguins), these must also added to the `DESCRIPTION` file, but they need only be listed under `Imports`: 
+
+1. **Run** `usethis::use_package("<external-package>")`
 
     
-2. You can confirm the package has been added under `Remotes` when you **open the `DESCRIPTION` file** in your project root.
-
-On the topic of dependencies, if you're using other packages in your tutorial that *are* on CRAN (e.g. tidyverse), you should instead run:  `usethis::use_package("<external-package>")`, which will list the package under `Imports` in the `DESCRIPTION` file.
+    ```r
+    usethis::use_dev_package("palmerpenguins")
+    ```
+  
+2. You can confirm the package has been added under `Imports` when you open the `DESCRIPTION` file in your project root.
 
 
 
