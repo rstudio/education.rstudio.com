@@ -2,7 +2,7 @@ http://education.rstudio.com/* https://education.rstudio.com/:splat             
 
 /trainers/*                    https://rstudio-trainers.netlify.com/:splat            200!
 
-/quillt/*                      https://hardcore-shockley-db2947.netlify.app/:splat    200!
+/quillt*                      https://hardcore-shockley-db2947.netlify.app/:splat    200!
 
 /quillt                        /quillt/                                               301!
 
