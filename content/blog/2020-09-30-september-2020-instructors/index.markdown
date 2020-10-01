@@ -15,12 +15,13 @@ photo:
   author: Robert Zunikoff
 ---
 
-We welcomed  new instructors to our ranks in September 2020:
+We welcomed 12 new instructors to our ranks in September 2020:
 
 -   [Selcan Aydın](https://education.rstudio.com/trainers/people/aydin+selcan/)
 -   [Solveig Bjørkholt](https://education.rstudio.com/trainers/people/bjorkholt+solveig/)
 -   [Jeroen Janssens](https://education.rstudio.com/trainers/people/janssens+jeroen/)
 -   [Brian Kiprop](https://education.rstudio.com/trainers/people/kiprop+brian/)
+-   [Corrado Lanera](https://education.rstudio.com/trainers/people/lanera+corrado/)
 -   [Karina Marks](https://education.rstudio.com/trainers/people/marks+karina/)
 -   [Thomas Michem](https://education.rstudio.com/trainers/people/michem+thomas/)
 -   [Riinu Pius](https://education.rstudio.com/trainers/people/pius+riinu/)
