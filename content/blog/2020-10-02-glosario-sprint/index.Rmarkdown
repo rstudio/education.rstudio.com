@@ -31,13 +31,14 @@ to increase the value of this resource for everyone.
 
 You don't need to know any particular programming language to contribute to Glosario:
 anyone who is familiar with the GitHub web interface can get involved.
-There is a detailed contributors' guide [on the site][glosario],
+There is a detailed contributors' guide [in the repo][glosario-repo],
 and contributions are welcome in **any** language, not only those we already have.
 To ensure that your contributions are included in Hacktoberfest
 and count towards you planting a tree or receiving a free t-shirt,
 remember to register on [the Hacktoberfest website][hacktoberfest].
 
 [glosario]: https://carpentries.github.io/glosario/
+[glosario-repo]: https://github.com/carpentries/glosario
 [hacktoberfest]: https://hacktoberfest.digitalocean.com/
 [digitalocean]: https://digitalocean.com/
 
