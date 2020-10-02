@@ -2,7 +2,7 @@
 title: Glosario Sprint
 author:
   - greg
-date: '2020-10-02'
+date: '2020-10-05'
 categories:
   - learn
   - package
