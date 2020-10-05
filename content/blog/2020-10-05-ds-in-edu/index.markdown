@@ -1,6 +1,8 @@
 ---
 title: "Writing Data Science in Education Using R in the Open"
-author: "Ryan Estrellado and Joshua Rosenberg"
+author: 
+  - Ryan Estrellado
+  - Joshua Rosenberg
 date: '2020-10-05'
 categories:
   - teach
@@ -30,7 +32,7 @@ editor_options:
 
 ## Introduction
 
-When we wrote *Data Science in Education Using R (DSIEUR)*, we knew it
+When we wrote [*Data Science in Education Using R (DSIEUR)*](https://datascienceineducation.com/), we knew it
 would be easy to assume that new learners would have more prior
 knowledge about R than they actually did--a phenomenon called "[the
 curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge)".
@@ -62,7 +64,9 @@ Having a new perspective on experiencing the chapter---particularly when
 the chapter includes lots of technical explanations---turned out to be a
 great way to discover blind spots in our work.
 
-Here were Ryan's thoughts after reviewing chapter 13: "I don't use
+Here were Ryan's thoughts after reviewing chapter 13: 
+
+> "I don't use
 multilevel models regularly in my work, so I could tell right away I was
 going to learn something new. I read through the sections to make small
 edits, but also took breaks every so often to check my comprehension of
@@ -214,8 +218,12 @@ opportunities for improvements.
 
 Finally, deadlines can help. The due date for the manuscript motivated
 us to improve how we communicated with each other. In *Change By
-Design*, Tim Brown writes, "Curse deadlines all you want, but remember
-that time can be our most creative constraint." Indeed, the frequency of
+Design*, Tim Brown writes:
+
+> "Curse deadlines all you want, but remember
+that time can be our most creative constraint." 
+
+Indeed, the frequency of
 team calls and the commitment to revising and finalizing our manuscript
 together grew as our deadline approached. Thus, our publisher's deadline
 provided a structure that encouraged organization, efficient
