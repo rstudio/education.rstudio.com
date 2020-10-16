@@ -1,6 +1,5 @@
 ---
 title: Learner Personas
-draft: true
 author: [Greg]
 date: '2020-10-07'
 slug: learner-personas
