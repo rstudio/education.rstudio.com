@@ -32,7 +32,7 @@ Read on to find out more about what events are planned, and how you can engage w
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xddqjmlmyl .gt_table {
+#btlzqaqdaq .gt_table {
   display: table;
   border-collapse: collapse;
   max-width: 100%;
@@ -58,7 +58,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-left-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_heading {
+#btlzqaqdaq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -70,7 +70,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_title {
+#btlzqaqdaq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -80,7 +80,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-width: 0;
 }
 
-#xddqjmlmyl .gt_subtitle {
+#btlzqaqdaq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -90,13 +90,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-width: 0;
 }
 
-#xddqjmlmyl .gt_bottom_border {
+#btlzqaqdaq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_col_headings {
+#btlzqaqdaq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -111,7 +111,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_col_heading {
+#btlzqaqdaq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -131,7 +131,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#xddqjmlmyl .gt_column_spanner_outer {
+#btlzqaqdaq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -143,15 +143,15 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 4px;
 }
 
-#xddqjmlmyl .gt_column_spanner_outer:first-child {
+#btlzqaqdaq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xddqjmlmyl .gt_column_spanner_outer:last-child {
+#btlzqaqdaq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xddqjmlmyl .gt_column_spanner {
+#btlzqaqdaq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -163,7 +163,7 @@ Read on to find out more about what events are planned, and how you can engage w
   width: 100%;
 }
 
-#xddqjmlmyl .gt_group_heading {
+#btlzqaqdaq .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -185,7 +185,7 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#xddqjmlmyl .gt_empty_group_heading {
+#btlzqaqdaq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -200,21 +200,21 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#xddqjmlmyl .gt_from_md > :first-child {
+#btlzqaqdaq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xddqjmlmyl .gt_from_md > :last-child {
+#btlzqaqdaq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xddqjmlmyl .gt_from_md p {
+#btlzqaqdaq .gt_from_md p {
   line-height: 1em;
   margin-bottom: 0em;
   margin-top: 0em;
 }
 
-#xddqjmlmyl .gt_row {
+#btlzqaqdaq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -233,7 +233,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#xddqjmlmyl .gt_stub {
+#btlzqaqdaq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -245,7 +245,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-left: 12px;
 }
 
-#xddqjmlmyl .gt_summary_row {
+#btlzqaqdaq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -255,7 +255,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#xddqjmlmyl .gt_first_summary_row {
+#btlzqaqdaq .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -265,7 +265,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_grand_summary_row {
+#btlzqaqdaq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -275,7 +275,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#xddqjmlmyl .gt_first_grand_summary_row {
+#btlzqaqdaq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -285,11 +285,11 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_striped {
+#btlzqaqdaq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xddqjmlmyl .gt_table_body {
+#btlzqaqdaq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -298,7 +298,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_footnotes {
+#btlzqaqdaq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -312,13 +312,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_footnote {
+#btlzqaqdaq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xddqjmlmyl .gt_sourcenotes {
+#btlzqaqdaq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -332,46 +332,46 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#xddqjmlmyl .gt_sourcenote {
+#btlzqaqdaq .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xddqjmlmyl .gt_left {
+#btlzqaqdaq .gt_left {
   text-align: left;
 }
 
-#xddqjmlmyl .gt_center {
+#btlzqaqdaq .gt_center {
   text-align: center;
 }
 
-#xddqjmlmyl .gt_right {
+#btlzqaqdaq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xddqjmlmyl .gt_font_normal {
+#btlzqaqdaq .gt_font_normal {
   font-weight: normal;
 }
 
-#xddqjmlmyl .gt_font_bold {
+#btlzqaqdaq .gt_font_bold {
   font-weight: bold;
 }
 
-#xddqjmlmyl .gt_font_italic {
+#btlzqaqdaq .gt_font_italic {
   font-style: italic;
 }
 
-#xddqjmlmyl .gt_super {
+#btlzqaqdaq .gt_super {
   font-size: 65%;
 }
 
-#xddqjmlmyl .gt_footnote_marks {
+#btlzqaqdaq .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="xddqjmlmyl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="btlzqaqdaq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -424,7 +424,7 @@ Read on to find out more about what events are planned, and how you can engage w
 
 ## How to engage in `#BlackInDataWeek`
 
-### Day 1: `#BlackInDataRollCall`
+### Day 1, Monday: `#BlackInDataRollCall`
 
 -   If you identify as Black, join in the roll call today by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
 
@@ -436,23 +436,23 @@ Read on to find out more about what events are planned, and how you can engage w
 
 <img src="mir_logo.png" title="MiR Community logo designed by Allison Horst" alt="MiR Community logo designed by Allison Horst" width="250"/>
 
-### Day 2: `#BlackInDataJourney`
+### Day 2, Tuesday: `#BlackInDataJourney`
 
 There are three events on this day, check them out [here](https://blkindata.github.io/project/blackindatajourney/). Note that there will not be a [`#TidyTuesday`](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-17/readme.md) this week in order to create space and engage with the `#BlackInDataViz` hashtag on Twitter.
 
-### Day 3: `#BlackInDataSkills`
+### Day 3, Wednesday: `#BlackInDataSkills`
 
 A great day filled with [learning-oriented events](https://blkindata.github.io/project/blackindataskills/), and don't miss the 1-hour [Introduction to R](https://blkindata.github.io/talk/intro2r2020/) with [Dr. A Nayena Blankson](https://twitter.com/DrBlankson).
 
 If you want to dive deeper into the tidyverse, the [MiR Community](https://medium.com/@doritolay/introducing-mir-a-community-for-underrepresented-users-of-r-7560def7d861) recently hosted an hour-long introduction to the [dplyr package](https://dplyr.tidyverse.org/) by [Daryn Ramsden](https://twitter.com/thisisdaryn). You can view the webinar on [YouTube](https://www.youtube.com/watch?v=rlQNyBZ03AY), and view his [slides here](https://thisisdaryn.github.io/MiR_dplyr/overview_dplyr/overview_dplyr_plus.html) ([source files here](https://github.com/MiR-Community/MiR_dplyr)).
 
-### Day 4: `#BlackInDataViz`
+### Day 4, Thursday: `#BlackInDataViz`
 
 Again, several great [events and talks](https://blkindata.github.io/project/blackindataviz/), as well as a [Black In Data Visualisation Challenge](https://blkindata.github.io/talk/datavizdaycomp2020/). The challenge, presented in collaboration with the [Data Visualization Society](https://www.datavisualizationsociety.com/), will "highlight data that shows Black people in a positive light."
 
 ![](https://blkindata.github.io/talk/datavizdaycomp2020/featured.png)
 
-### Day 5: `#BlackInDataJustice`
+### Day 5, Friday: `#BlackInDataJustice`
 
 [Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of \#BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), a researcher interested in data bias and algorithmic fairness.
 
@@ -460,9 +460,9 @@ You can access the screening here: <https://www.saltlakefilmsociety.org/comingso
 
 *(Note: tickets are not free, but you can follow along with the live tweeting without watching.)*
 
-### Day 6: `#BlackInDataMentorship`
+### Day 6, Saturday: `#BlackInDataMentorship`
 
-The final day, Saturday, is all about careers and mentorship. Read more about the events [here](https://blkindata.github.io/project/blackindatacommunity/).
+The final day is all about careers and mentorship. Read more about the events [here](https://blkindata.github.io/project/blackindatacommunity/).
 
 ------------------------------------------------------------------------
 
