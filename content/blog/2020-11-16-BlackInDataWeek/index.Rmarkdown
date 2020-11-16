@@ -7,7 +7,7 @@ date: '2020-11-16'
 categories:
   - learn
 description: |
-  Examples of the kinds of questions we ask on the Shiny exam.
+  Learn, celebrate, and amplify Black voices in informatics, data science, and coding around the world.
 slug: blackindataweek
 photo:
   author: Luana Azevedo
@@ -20,7 +20,7 @@ library(glue)
 library(gt)
 ```
 
-Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a weeke to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
+Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a week to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
 
 1.  Provide community and a support system for Black people in data across the Black diaspora.
 

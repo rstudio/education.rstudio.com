@@ -7,7 +7,7 @@ date: '2020-11-16'
 categories:
   - learn
 description: |
-  Examples of the kinds of questions we ask on the Shiny exam.
+  Learn, celebrate, and amplify Black voices in informatics, data science, and coding around the world.
 slug: blackindataweek
 photo:
   author: Luana Azevedo
@@ -16,7 +16,7 @@ photo:
 
 
 
-Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a weeke to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
+Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a week to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
 
 1.  Provide community and a support system for Black people in data across the Black diaspora.
 
@@ -32,7 +32,7 @@ Read on to find out more about what events are planned, and how you can engage w
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vivulvhpbk .gt_table {
+#yzcgzpynho .gt_table {
   display: table;
   border-collapse: collapse;
   max-width: 100%;
@@ -58,7 +58,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-left-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_heading {
+#yzcgzpynho .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -70,7 +70,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_title {
+#yzcgzpynho .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -80,7 +80,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-width: 0;
 }
 
-#vivulvhpbk .gt_subtitle {
+#yzcgzpynho .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -90,13 +90,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-width: 0;
 }
 
-#vivulvhpbk .gt_bottom_border {
+#yzcgzpynho .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_col_headings {
+#yzcgzpynho .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -111,7 +111,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_col_heading {
+#yzcgzpynho .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -131,7 +131,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#vivulvhpbk .gt_column_spanner_outer {
+#yzcgzpynho .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -143,15 +143,15 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 4px;
 }
 
-#vivulvhpbk .gt_column_spanner_outer:first-child {
+#yzcgzpynho .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vivulvhpbk .gt_column_spanner_outer:last-child {
+#yzcgzpynho .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vivulvhpbk .gt_column_spanner {
+#yzcgzpynho .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -163,7 +163,7 @@ Read on to find out more about what events are planned, and how you can engage w
   width: 100%;
 }
 
-#vivulvhpbk .gt_group_heading {
+#yzcgzpynho .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -185,7 +185,7 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#vivulvhpbk .gt_empty_group_heading {
+#yzcgzpynho .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -200,21 +200,21 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#vivulvhpbk .gt_from_md > :first-child {
+#yzcgzpynho .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vivulvhpbk .gt_from_md > :last-child {
+#yzcgzpynho .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vivulvhpbk .gt_from_md p {
+#yzcgzpynho .gt_from_md p {
   line-height: 1em;
   margin-bottom: 0em;
   margin-top: 0em;
 }
 
-#vivulvhpbk .gt_row {
+#yzcgzpynho .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -233,7 +233,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#vivulvhpbk .gt_stub {
+#yzcgzpynho .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -245,7 +245,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-left: 12px;
 }
 
-#vivulvhpbk .gt_summary_row {
+#yzcgzpynho .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -255,7 +255,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#vivulvhpbk .gt_first_summary_row {
+#yzcgzpynho .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -265,7 +265,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_grand_summary_row {
+#yzcgzpynho .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -275,7 +275,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#vivulvhpbk .gt_first_grand_summary_row {
+#yzcgzpynho .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -285,11 +285,11 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_striped {
+#yzcgzpynho .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vivulvhpbk .gt_table_body {
+#yzcgzpynho .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -298,7 +298,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_footnotes {
+#yzcgzpynho .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -312,13 +312,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_footnote {
+#yzcgzpynho .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vivulvhpbk .gt_sourcenotes {
+#yzcgzpynho .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -332,46 +332,46 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#vivulvhpbk .gt_sourcenote {
+#yzcgzpynho .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vivulvhpbk .gt_left {
+#yzcgzpynho .gt_left {
   text-align: left;
 }
 
-#vivulvhpbk .gt_center {
+#yzcgzpynho .gt_center {
   text-align: center;
 }
 
-#vivulvhpbk .gt_right {
+#yzcgzpynho .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vivulvhpbk .gt_font_normal {
+#yzcgzpynho .gt_font_normal {
   font-weight: normal;
 }
 
-#vivulvhpbk .gt_font_bold {
+#yzcgzpynho .gt_font_bold {
   font-weight: bold;
 }
 
-#vivulvhpbk .gt_font_italic {
+#yzcgzpynho .gt_font_italic {
   font-style: italic;
 }
 
-#vivulvhpbk .gt_super {
+#yzcgzpynho .gt_super {
   font-size: 65%;
 }
 
-#vivulvhpbk .gt_footnote_marks {
+#yzcgzpynho .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="vivulvhpbk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="yzcgzpynho" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
