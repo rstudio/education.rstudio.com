@@ -1,0 +1,110 @@
+---
+title: '#BlackInDataWeek 2020'
+author:
+  - alison
+  - greg
+date: '2020-11-16'
+categories:
+  - learn
+description: |
+  Examples of the kinds of questions we ask on the Shiny exam.
+slug: blackindataweek
+photo:
+  author: Luana Azevedo
+  url: https://unsplash.com/photos/AHBNGvRTm_A
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(glue)
+library(gt)
+```
+
+
+Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a weeke to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
+
+1. Provide community and a support system for Black people in data across the Black diaspora.
+
+1. Encourage growth in our professional and academic learning paths.
+
+1. Elevate the voices and experiences of Black people working in data fields.
+
+
+Read on to find out more about what events are planned, and how you can engage with [`#BlackinDataWeek`](https://blkindata.github.io/).
+
+## Events
+
+```{r echo=FALSE}
+BlackInDataWeek <- tibble::tibble(
+  date = seq(as.Date("2020-11-16"), as.Date("2020-11-21"), 1),
+  hashtag = c("#BlackInDataRollCall",
+              "#BlackInDataJourney",
+              "#BlackInDataSkills",
+              "#BlackInDataViz",
+              "#BlackInDataJustice", 
+              "#BlackInDataMentorship"),
+  purpose = c(
+    "Giving Black people in data a space to introduce themselves and their work. Introducing and valuing intersecting parts of their identities. We welcome contributions from a wide spectrum of Data Fields including but not limited to Informatics, Technology, Data Science, Coding, Social Science and Data Analytics.",
+    "Further fostering community for Black people in data, by encouraging them to share their varied journeys in data.",
+    "Discussing the skills Black people in data have learned, communal sharing of resources and advice for skills development.",
+    "Creating space for Black people in data to share their work in the form of favourite data visualisation images.",
+    "Hosting forums for learning and discussion of bias in the data field (and possible paths to address biases in data).",
+    "Join us for career development and mentorship events!"
+  ),
+  link = c(
+    "https://blkindata.github.io/project/blackindatarollcall/",
+    "https://blkindata.github.io/project/blackindatajourney/",
+    "https://blkindata.github.io/project/blackindataskills/",
+    "https://blkindata.github.io/project/blackindataviz/",
+    "https://blkindata.github.io/project/blackindatajustice/",
+    "https://blkindata.github.io/project/blackindatacommunity/"
+  )
+) 
+
+BlackInDataWeek %>% 
+  mutate(hashtag = glue::glue('[{hashtag}]({link})')) %>%
+  select(-link) %>% 
+  gt::gt() %>% 
+  fmt_markdown(columns = vars(hashtag))
+```
+
+
+## How to engage in `#BlackInDataWeek`
+
+
+### Day 1: `#BlackInDataRollCall`
+
+- If you identify as Black, TODAY join in the roll call by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
+
+- If you do not, use today to amplify the voices in the [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) hashtag. Follow + retweet! 
+
+- If you haven't already, follow the [`@WeAreRLadies`](https://twitter.com/WeAreRLadies) rotating curator account. This week, [Markia Smith](https://blkindata.github.io/author/markia-smith/) will take over (Nov 16-20th) and [Damilola](https://twitter.com/thedamialex) will be taking over next week (Nov 23-27).
+
+### Day 2: `#BlackInDataJourney`
+
+There are three events on this day, check them out [here](https://blkindata.github.io/project/blackindatajourney/). Note that there will not a [`#TidyTuesday`](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-17/readme.md) this week in order to create space and engage with the `#BlackInDataViz` hashtag on Twitter.
+
+### Day 3: `#BlackInDataSkills`
+
+A great day filled with [learning-oriented events](https://blkindata.github.io/project/blackindataskills/), and don't miss the 1-hour [Introduction to R](https://blkindata.github.io/talk/intro2r2020/) with [Dr. A Nayena Blankson](https://twitter.com/DrBlankson).
+
+### Day 4: `#BlackInDataViz`
+
+Again, several great [events and talks](https://blkindata.github.io/project/blackindataviz/), as well as a [Black In Data Visualisation Challenge](https://blkindata.github.io/talk/datavizdaycomp2020/). The challenge, presented in collaboration with the [Data Visualization Society](https://www.datavisualizationsociety.com/), will "highlight data that shows Black people in a positive light."
+
+### Day 5: `#BlackInDataJustice`
+
+[Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of #BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), an emerging researcher interested in data bias and algorithmic fairness.
+
+You can access the screening here: https://www.saltlakefilmsociety.org/comingsoon/coded-bias
+
+*(note: tickets are not free, but you can follow along with the live tweeting without watching)*
+
+### Day 6: `#BlackInDataMentorship`
+
+The final day, Saturday, is all about careers and mentorship, read more about the events [here](https://blkindata.github.io/project/blackindatacommunity/).
+
+---
+To sign up for events, click [here](https://www.eventbrite.com/e/blackindataweek-2020-tickets-127652703673)!
+
+To learn more about [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek), please see [their website](https://blkindata.github.io/), [twitter account](https://twitter.com/BlkInData), and follow along via the [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek) hashtag.
