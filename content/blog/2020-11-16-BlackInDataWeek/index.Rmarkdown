@@ -20,15 +20,13 @@ library(glue)
 library(gt)
 ```
 
-
 Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a weeke to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
 
-1. Provide community and a support system for Black people in data across the Black diaspora.
+1.  Provide community and a support system for Black people in data across the Black diaspora.
 
-1. Encourage growth in our professional and academic learning paths.
+2.  Encourage growth in our professional and academic learning paths.
 
-1. Elevate the voices and experiences of Black people working in data fields.
-
+3.  Elevate the voices and experiences of Black people working in data fields.
 
 Read on to find out more about what events are planned, and how you can engage with [`#BlackinDataWeek`](https://blkindata.github.io/).
 
@@ -68,17 +66,19 @@ BlackInDataWeek %>%
   fmt_markdown(columns = vars(hashtag))
 ```
 
-
 ## How to engage in `#BlackInDataWeek`
-
 
 ### Day 1: `#BlackInDataRollCall`
 
-- If you identify as Black, TODAY join in the roll call by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
+-   If you identify as Black, TODAY join in the roll call by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
 
-- If you do not, use today to amplify the voices in the [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) hashtag. Follow + retweet! 
+-   If you do not, use today to amplify the voices in the [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) hashtag. Follow + retweet!
 
-- If you haven't already, follow the [`@WeAreRLadies`](https://twitter.com/WeAreRLadies) rotating curator account. This week, [Markia Smith](https://blkindata.github.io/author/markia-smith/) will take over (Nov 16-20th) and [Damilola](https://twitter.com/thedamialex) will be taking over next week (Nov 23-27).
+-   If you haven't already, follow the [`@WeAreRLadies`](https://twitter.com/WeAreRLadies) rotating curator account. This week, [Markia Smith](https://blkindata.github.io/author/markia-smith/) will take over (Nov 16-20th) and [Damilola](https://twitter.com/thedamialex) will be taking over next week (Nov 23-27).
+
+-   Also if you haven't already, follow the [`@miR_community`](https://twitter.com/miR_community) account. [MiR](https://medium.com/@doritolay/introducing-mir-a-community-for-underrepresented-users-of-r-7560def7d861) is a community for underrepresented minority users of R, founded by [Dorris Scott](https://twitter.com/Dorris_Scott) and [Danielle Smalls-Perkins](https://twitter.com/smallperks).
+
+<img src="mir_logo.png" title="MiR Community logo designed by Allison Horst" alt="MiR Community logo designed by Allison Horst" width="250"/>
 
 ### Day 2: `#BlackInDataJourney`
 
@@ -88,15 +88,19 @@ There are three events on this day, check them out [here](https://blkindata.gith
 
 A great day filled with [learning-oriented events](https://blkindata.github.io/project/blackindataskills/), and don't miss the 1-hour [Introduction to R](https://blkindata.github.io/talk/intro2r2020/) with [Dr. A Nayena Blankson](https://twitter.com/DrBlankson).
 
+And, if you want to dive deeper into the tidyverse, the [MiR Community](https://medium.com/@doritolay/introducing-mir-a-community-for-underrepresented-users-of-r-7560def7d861) recently hosted an hour-long introduction to the [dplyr package](https://dplyr.tidyverse.org/) by [Daryn Ramsden](https://twitter.com/thisisdaryn). You can view the webinar on [YouTube](https://www.youtube.com/watch?v=rlQNyBZ03AY), and view his [slides here](https://thisisdaryn.github.io/MiR_dplyr/overview_dplyr/overview_dplyr_plus.html) ([source files here](https://github.com/MiR-Community/MiR_dplyr)).
+
 ### Day 4: `#BlackInDataViz`
 
 Again, several great [events and talks](https://blkindata.github.io/project/blackindataviz/), as well as a [Black In Data Visualisation Challenge](https://blkindata.github.io/talk/datavizdaycomp2020/). The challenge, presented in collaboration with the [Data Visualization Society](https://www.datavisualizationsociety.com/), will "highlight data that shows Black people in a positive light."
 
+![](https://blkindata.github.io/talk/datavizdaycomp2020/featured.png)
+
 ### Day 5: `#BlackInDataJustice`
 
-[Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of #BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), an emerging researcher interested in data bias and algorithmic fairness.
+[Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of \#BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), an emerging researcher interested in data bias and algorithmic fairness.
 
-You can access the screening here: https://www.saltlakefilmsociety.org/comingsoon/coded-bias
+You can access the screening here: <https://www.saltlakefilmsociety.org/comingsoon/coded-bias>
 
 *(note: tickets are not free, but you can follow along with the live tweeting without watching)*
 
@@ -104,7 +108,8 @@ You can access the screening here: https://www.saltlakefilmsociety.org/comingsoo
 
 The final day, Saturday, is all about careers and mentorship, read more about the events [here](https://blkindata.github.io/project/blackindatacommunity/).
 
----
+------------------------------------------------------------------------
+
 To sign up for events, click [here](https://www.eventbrite.com/e/blackindataweek-2020-tickets-127652703673)!
 
 To learn more about [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek), please see [their website](https://blkindata.github.io/), [twitter account](https://twitter.com/BlkInData), and follow along via the [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek) hashtag.

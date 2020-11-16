@@ -16,15 +16,13 @@ photo:
 
 
 
-
 Today marks the first day of a week-long celebration called [`#BlackinDataWeek`](https://blkindata.github.io/). It is a weeke to amplify Black voices in `#informatics`, `#datascience`, & `#coding` around the world. The goals are to:
 
-1. Provide community and a support system for Black people in data across the Black diaspora.
+1.  Provide community and a support system for Black people in data across the Black diaspora.
 
-1. Encourage growth in our professional and academic learning paths.
+2.  Encourage growth in our professional and academic learning paths.
 
-1. Elevate the voices and experiences of Black people working in data fields.
-
+3.  Elevate the voices and experiences of Black people working in data fields.
 
 Read on to find out more about what events are planned, and how you can engage with [`#BlackinDataWeek`](https://blkindata.github.io/).
 
@@ -34,7 +32,7 @@ Read on to find out more about what events are planned, and how you can engage w
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#aqjiditvxj .gt_table {
+#vivulvhpbk .gt_table {
   display: table;
   border-collapse: collapse;
   max-width: 100%;
@@ -60,7 +58,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-left-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_heading {
+#vivulvhpbk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -72,7 +70,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_title {
+#vivulvhpbk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -82,7 +80,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-width: 0;
 }
 
-#aqjiditvxj .gt_subtitle {
+#vivulvhpbk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -92,13 +90,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-width: 0;
 }
 
-#aqjiditvxj .gt_bottom_border {
+#vivulvhpbk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_col_headings {
+#vivulvhpbk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -113,7 +111,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_col_heading {
+#vivulvhpbk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -133,7 +131,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#aqjiditvxj .gt_column_spanner_outer {
+#vivulvhpbk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -145,15 +143,15 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 4px;
 }
 
-#aqjiditvxj .gt_column_spanner_outer:first-child {
+#vivulvhpbk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aqjiditvxj .gt_column_spanner_outer:last-child {
+#vivulvhpbk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aqjiditvxj .gt_column_spanner {
+#vivulvhpbk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -165,7 +163,7 @@ Read on to find out more about what events are planned, and how you can engage w
   width: 100%;
 }
 
-#aqjiditvxj .gt_group_heading {
+#vivulvhpbk .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -187,7 +185,7 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#aqjiditvxj .gt_empty_group_heading {
+#vivulvhpbk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -202,21 +200,21 @@ Read on to find out more about what events are planned, and how you can engage w
   vertical-align: middle;
 }
 
-#aqjiditvxj .gt_from_md > :first-child {
+#vivulvhpbk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aqjiditvxj .gt_from_md > :last-child {
+#vivulvhpbk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aqjiditvxj .gt_from_md p {
+#vivulvhpbk .gt_from_md p {
   line-height: 1em;
   margin-bottom: 0em;
   margin-top: 0em;
 }
 
-#aqjiditvxj .gt_row {
+#vivulvhpbk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -235,7 +233,7 @@ Read on to find out more about what events are planned, and how you can engage w
   overflow-x: hidden;
 }
 
-#aqjiditvxj .gt_stub {
+#vivulvhpbk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -247,7 +245,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-left: 12px;
 }
 
-#aqjiditvxj .gt_summary_row {
+#vivulvhpbk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -257,7 +255,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#aqjiditvxj .gt_first_summary_row {
+#vivulvhpbk .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -267,7 +265,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_grand_summary_row {
+#vivulvhpbk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -277,7 +275,7 @@ Read on to find out more about what events are planned, and how you can engage w
   padding-right: 5px;
 }
 
-#aqjiditvxj .gt_first_grand_summary_row {
+#vivulvhpbk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -287,11 +285,11 @@ Read on to find out more about what events are planned, and how you can engage w
   border-top-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_striped {
+#vivulvhpbk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aqjiditvxj .gt_table_body {
+#vivulvhpbk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -300,7 +298,7 @@ Read on to find out more about what events are planned, and how you can engage w
   border-bottom-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_footnotes {
+#vivulvhpbk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -314,13 +312,13 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_footnote {
+#vivulvhpbk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#aqjiditvxj .gt_sourcenotes {
+#vivulvhpbk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -334,46 +332,46 @@ Read on to find out more about what events are planned, and how you can engage w
   border-right-color: #D3D3D3;
 }
 
-#aqjiditvxj .gt_sourcenote {
+#vivulvhpbk .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#aqjiditvxj .gt_left {
+#vivulvhpbk .gt_left {
   text-align: left;
 }
 
-#aqjiditvxj .gt_center {
+#vivulvhpbk .gt_center {
   text-align: center;
 }
 
-#aqjiditvxj .gt_right {
+#vivulvhpbk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aqjiditvxj .gt_font_normal {
+#vivulvhpbk .gt_font_normal {
   font-weight: normal;
 }
 
-#aqjiditvxj .gt_font_bold {
+#vivulvhpbk .gt_font_bold {
   font-weight: bold;
 }
 
-#aqjiditvxj .gt_font_italic {
+#vivulvhpbk .gt_font_italic {
   font-style: italic;
 }
 
-#aqjiditvxj .gt_super {
+#vivulvhpbk .gt_super {
   font-size: 65%;
 }
 
-#aqjiditvxj .gt_footnote_marks {
+#vivulvhpbk .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="aqjiditvxj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="vivulvhpbk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -424,17 +422,19 @@ Read on to find out more about what events are planned, and how you can engage w
   
 </table></div>
 
-
 ## How to engage in `#BlackInDataWeek`
-
 
 ### Day 1: `#BlackInDataRollCall`
 
-- If you identify as Black, TODAY join in the roll call by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
+-   If you identify as Black, TODAY join in the roll call by introducing yourself and sharing what you do in data. Include the hashtag [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) and tag [`@BlkInData`](https://twitter.com/BlkInData).
 
-- If you do not, use today to amplify the voices in the [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) hashtag. Follow + retweet! 
+-   If you do not, use today to amplify the voices in the [`#BlackInDataRollCall`](https://twitter.com/hashtag/BlackInDataRollCall) hashtag. Follow + retweet!
 
-- If you haven't already, follow the [`@WeAreRLadies`](https://twitter.com/WeAreRLadies) rotating curator account. This week, [Markia Smith](https://blkindata.github.io/author/markia-smith/) will take over (Nov 16-20th) and [Damilola](https://twitter.com/thedamialex) will be taking over next week (Nov 23-27).
+-   If you haven't already, follow the [`@WeAreRLadies`](https://twitter.com/WeAreRLadies) rotating curator account. This week, [Markia Smith](https://blkindata.github.io/author/markia-smith/) will take over (Nov 16-20th) and [Damilola](https://twitter.com/thedamialex) will be taking over next week (Nov 23-27).
+
+-   Also if you haven't already, follow the [`@miR_community`](https://twitter.com/miR_community) account. [MiR](https://medium.com/@doritolay/introducing-mir-a-community-for-underrepresented-users-of-r-7560def7d861) is a community for underrepresented minority users of R, founded by [Dorris Scott](https://twitter.com/Dorris_Scott) and [Danielle Smalls-Perkins](https://twitter.com/smallperks).
+
+<img src="mir_logo.png" title="MiR Community logo designed by Allison Horst" alt="MiR Community logo designed by Allison Horst" width="250"/>
 
 ### Day 2: `#BlackInDataJourney`
 
@@ -444,15 +444,19 @@ There are three events on this day, check them out [here](https://blkindata.gith
 
 A great day filled with [learning-oriented events](https://blkindata.github.io/project/blackindataskills/), and don't miss the 1-hour [Introduction to R](https://blkindata.github.io/talk/intro2r2020/) with [Dr. A Nayena Blankson](https://twitter.com/DrBlankson).
 
+And, if you want to dive deeper into the tidyverse, the [MiR Community](https://medium.com/@doritolay/introducing-mir-a-community-for-underrepresented-users-of-r-7560def7d861) recently hosted an hour-long introduction to the [dplyr package](https://dplyr.tidyverse.org/) by [Daryn Ramsden](https://twitter.com/thisisdaryn). You can view the webinar on [YouTube](https://www.youtube.com/watch?v=rlQNyBZ03AY), and view his [slides here](https://thisisdaryn.github.io/MiR_dplyr/overview_dplyr/overview_dplyr_plus.html) ([source files here](https://github.com/MiR-Community/MiR_dplyr)).
+
 ### Day 4: `#BlackInDataViz`
 
 Again, several great [events and talks](https://blkindata.github.io/project/blackindataviz/), as well as a [Black In Data Visualisation Challenge](https://blkindata.github.io/talk/datavizdaycomp2020/). The challenge, presented in collaboration with the [Data Visualization Society](https://www.datavisualizationsociety.com/), will "highlight data that shows Black people in a positive light."
 
+![](https://blkindata.github.io/talk/datavizdaycomp2020/featured.png)
+
 ### Day 5: `#BlackInDataJustice`
 
-[Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of #BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), an emerging researcher interested in data bias and algorithmic fairness.
+[Webinars](https://blkindata.github.io/project/blackindatajustice/) feature timely topics around algorithmic fairness and bias. The [last event](https://blkindata.github.io/talk/codedbias-2020/) is a live viewing/tweeting of [`#CodedBias`](https://www.saltlakefilmsociety.org/comingsoon/coded-bias) in honour of \#BlackinDataJustice hosted by Anna Gifty, [`@itsafronomics`](https://twitter.com/itsafronomics), an emerging researcher interested in data bias and algorithmic fairness.
 
-You can access the screening here: https://www.saltlakefilmsociety.org/comingsoon/coded-bias
+You can access the screening here: <https://www.saltlakefilmsociety.org/comingsoon/coded-bias>
 
 *(note: tickets are not free, but you can follow along with the live tweeting without watching)*
 
@@ -460,7 +464,8 @@ You can access the screening here: https://www.saltlakefilmsociety.org/comingsoo
 
 The final day, Saturday, is all about careers and mentorship, read more about the events [here](https://blkindata.github.io/project/blackindatacommunity/).
 
----
+------------------------------------------------------------------------
+
 To sign up for events, click [here](https://www.eventbrite.com/e/blackindataweek-2020-tickets-127652703673)!
 
 To learn more about [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek), please see [their website](https://blkindata.github.io/), [twitter account](https://twitter.com/BlkInData), and follow along via the [`#BlackInDataWeek`](https://twitter.com/search?q=%23BlackInDataWeek) hashtag.
