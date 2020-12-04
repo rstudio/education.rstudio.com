@@ -15,7 +15,7 @@ photo:
   author: Robert Zunikoff
 ---
 
-We welcomed 17 new instructors to our ranks in September 2020:
+We welcomed 17 new instructors to our ranks in October 2020:
 
 -   [Bilikisu Wunmi Aderinto](https://education.rstudio.com/trainers/people/aderinto+bilikisu_wunmi)
 -   [Silvia Canelón](https://education.rstudio.com/trainers/people/canelon+silvia)
