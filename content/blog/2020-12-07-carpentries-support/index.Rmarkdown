@@ -2,7 +2,7 @@
 title: Supporting the Carpentries
 author:
   - greg
-date: '2020-12-04'
+date: '2020-12-07'
 categories:
   - community
 tags:
