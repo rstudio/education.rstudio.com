@@ -13,9 +13,9 @@ photo:
   url: https://unsplash.com/photos/AHBNGvRTm_A
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(glue)
-library(gt)
-```
+## Please use h2 level headers 
+
+### And h3 level headers
+
+#### Use h4 sparingly
 
