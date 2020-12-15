@@ -9,8 +9,8 @@ description: |
   Populate this here
 slug: rmarkdown-tips
 photo:
-  author: Luana Azevedo
-  url: https://unsplash.com/photos/AHBNGvRTm_A
+  author: Jonatan Pie
+  url: https://unsplash.com/photos/-3h8OXvt4-0
 ---
 
 ## Please use h2 level headers 
