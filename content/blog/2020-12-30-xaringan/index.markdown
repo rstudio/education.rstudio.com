@@ -1,0 +1,20 @@
+---
+title: 'Sharing your work with xaringan'
+author:
+  - '[Silvia P. Canelón](https://silvia.rbind.io/)'
+date: '2020-12-30'
+categories:
+  - learn
+description: |
+  The basics and beyond.
+slug: xaringan-beyond
+photo:
+  author: Wilbur Wong
+  url: https://unsplash.com/photos/w6n_GLhIzG4
+---
+
+## Please use h2 level headers 
+
+### And h3 level headers
+
+#### Use h4 sparingly
