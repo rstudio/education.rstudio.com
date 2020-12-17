@@ -1,0 +1,206 @@
+---
+title: "Introduction to gganimate"
+subtitle: "Unemployment in Europe"
+author: "Luca Picci"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, hygge, ninjutsu]
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+
+```{r, include = F}
+# This is the recommended set up for flipbooks
+# you might think about setting cache to TRUE as you gain practice --- building flipbooks from scratch can be time consuming
+#knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = TRUE, fig.retina = 3)
+library(flipbookr)
+library(tidyverse)
+library(gganimate)
+library(ggplot2)
+library(readxl)
+```
+
+
+```{r, Unempplot, include=FALSE}
+#2005 - 2017
+unemployment <- read_excel("C:\\Users\\lpicc\\OneDrive\\Documents\\python work\\unemp.xlsx")
+
+```
+
+
+# Getting Started
+Showing the steps to create an animated bar chart can be tricky.
+In order to demonstrate the steps required to build this annimated plot we will:
+- Build the skeleton of the plot (declare aesthetics and build the theme and annotations)
+- Then use facet_wrap() and declare the geoms to show the different bar lengths at each time period
+- Finally we will combine the plots and add the animation
+
+
+---
+`r chunk_reveal("plotdata", title = "Data Manipulation")`
+
+```{r, plotdata, include=FALSE}
+unemployment %>% 
+  filter(SUBJECT == "TOT") %>% 
+  filter(TIME>=2007) %>% 
+  filter(Country!= "Estonia")%>% 
+  select(-LOCATION) %>% 
+  select(-SUBJECT) ->
+  plotdata
+```
+
+
+---
+`r chunk_reveal("plot1", title = "Building the Plot")`
+
+```{r, plot1, include=FALSE}
+ggplot(data = plotdata) +
+  aes(y = reorder(Country, Value))+
+  aes(x = Value)+
+  geom_segment(aes(x = 0, xend = 65, 
+                   yend = Country),
+               size = 7.5, 
+               color = "azure3")+
+  scale_x_continuous(position = "top", 
+                     breaks = c(0, 25, 50), 
+                     labels=
+                       function(x) paste0(x,"%"))+
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+
+  labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")+
+  labs(y = NULL)+
+  labs(caption = "*excl. Malta, Cyprus, Estonia\nSource:OECD (2020), Youth unemployment rate (indicator)")->
+  plot
+ 
+```
+
+
+
+
+---
+
+`r chunk_reveal("plot2", title = "Building the Theme")`
+
+```{r, plot2, include=FALSE}
+plot+
+  theme(panel.background = 
+      element_rect(fill = "grey99"))+
+  theme(plot.background = 
+      element_rect(fill = "grey99"))+
+  theme(panel.grid = element_blank())+
+  theme(plot.title = 
+      element_text(size = 18, hjust = 0, 
+                   color = "steelblue4", 
+                   face = "bold"))+
+  theme(plot.subtitle = 
+      element_text(size = 12, 
+                   color = "darkgoldenrod2", 
+                   hjust = 0, face = "bold"))+
+  theme(plot.caption = 
+      element_text(color = "steelblue4", 
+                   hjust = 0.94))+
+  theme(axis.title.x = 
+      element_text(size = 12, hjust = 0, 
+                   color = "steelblue4", 
+                   face = "bold"))+
+  theme(axis.text.x = 
+      element_text(size = 10, 
+                   color = "steelblue4", 
+                   hjust = 0.5))+
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y= element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.line.x = element_blank())->
+  plot2
+```
+
+---
+# Faceting 
+This intermediate step is not necessary, but in order to demostrate clearly how the plot will be built, we will facet by year using facet_wrap() to create an individual plot for each year.
+This will allow us to see how the bar lengths vary and add annotations before adding animations
+---
+
+
+`r chunk_reveal("plot3", title = "Faceting")`
+
+
+```{r, plot3, include=FALSE}
+plot2+
+  facet_wrap(~ TIME, nrow=3)+
+  geom_col(fill = "steelblue4", 
+           width = 0.75, 
+           alpha = 0.9)+
+  annotate(x=0, xend=65, 
+           y=15, yend=15, 
+           colour="steelblue4", 
+           geom="segment", 
+           size = 2)+
+  annotate(x = 25, xend = 25, 
+           y = 14.9, yend = 0.5, 
+           size = 1, geom="segment", 
+           color = "darkgoldenrod2", 
+           linetype = "dashed")+
+  annotate(x = 50, xend = 50, 
+           y = 14.9, yend = 0.5, 
+           size = 1, geom="segment", 
+           color = "darkgoldenrod2", 
+           linetype = "dashed")->
+  plot3
+```
+
+
+
+
+
+---
+`r chunk_reveal("plot4", break_type = "user", title="Adding the Animation", widths = c(22, 25), display_type = c("code", "output"))`
+
+
+```{r, plot4, include=FALSE}
+plot3+ #BREAK
+  facet_null()+
+  gganimate::transition_time(TIME)+ #BREAK
+  ease_aes('linear')+#BREAK
+  labs(x = 'Year: {format(round(frame_time, digits = 0))}')+
+  geom_text(aes(label = reorder(Country, Value)), 
+            x = 0.1, hjust = 0, color = "grey99", 
+            fontface = "bold")+ #BREAK
+  geom_text(aes(label = 
+                  format(round(Value, digits = 0))),
+            x = 63, color = "steelblue4", 
+            fontface = "bold", hjust = 1)+ #BREAK
+  geom_text(x=63.5, label = "%", color = "steelblue4", 
+            fontface = "bold", hjust = 0)-> #BREAK
+  finalplot
+
+```
+
+---
+`r chunk_reveal("finplot", display_type = "output")`
+
+```{r, finplot, include=FALSE}
+finalplot
+
+```
+
+
+
+
+
+```{css, eval = TRUE, echo = FALSE}
+.remark-code{line-height: 1.2; font-size: 73%}
+
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+```

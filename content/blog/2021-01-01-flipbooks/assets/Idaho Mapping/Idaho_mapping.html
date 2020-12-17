@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Mapping Political Change in Idaho</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Rachel Goodman, September 2020" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Mapping Political Change in Idaho
+## With flipbookr and xaringan
+### Rachel Goodman, September 2020
+
+---
+
+
+
+
+
+
+
+
+
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+*members02_11
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 14
+   name  chamber party district committees positions partialsession
+   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;         
+ 1 John~ House   R            1 Environme~ &lt;NA&gt;      &lt;NA&gt;          
+ 2 Geor~ House   R            1 Local Gov~ &lt;NA&gt;      &lt;NA&gt;          
+ 3 Hild~ House   R            2 Business;~ &lt;NA&gt;      Temporary Abs~
+ 4 Free~ House   R            2 &lt;NA&gt;       &lt;NA&gt;      Acting Repres~
+ 5 Wayn~ House   R            2 Appropria~ &lt;NA&gt;      &lt;NA&gt;          
+ 6 Jim ~ House   R            3 Appropria~ &lt;NA&gt;      &lt;NA&gt;          
+ 7 Kris~ House   R            3 Business;~ &lt;NA&gt;      &lt;NA&gt;          
+ 8 Mary~ House   D            4 State Aff~ &lt;NA&gt;      &lt;NA&gt;          
+ 9 Don ~ House   R            4 Appropria~ &lt;NA&gt;      &lt;NA&gt;          
+10 Tom ~ House   R            5 Agricultu~ &lt;NA&gt;      &lt;NA&gt;          
+# ... with 1,121 more rows, and 7 more variables: startdate &lt;dttm&gt;,
+#   enddate &lt;dttm&gt;, startdate2 &lt;dttm&gt;, enddate2 &lt;dttm&gt;, startdate3 &lt;lgl&gt;,
+#   enddate3 &lt;lgl&gt;, year &lt;chr&gt;
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+* arrange(year, district)
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 14
+   name  chamber party district committees positions partialsession
+   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;         
+ 1 John~ House   R            1 Environme~ &lt;NA&gt;      &lt;NA&gt;          
+ 2 Geor~ House   R            1 Local Gov~ &lt;NA&gt;      &lt;NA&gt;          
+ 3 Shaw~ Senate  R            1 Transport~ &lt;NA&gt;      &lt;NA&gt;          
+ 4 Hild~ House   R            2 Business;~ &lt;NA&gt;      Temporary Abs~
+ 5 Free~ House   R            2 &lt;NA&gt;       &lt;NA&gt;      Acting Repres~
+ 6 Wayn~ House   R            2 Appropria~ &lt;NA&gt;      &lt;NA&gt;          
+ 7 Clyd~ Senate  R            2 Finance; ~ &lt;NA&gt;      &lt;NA&gt;          
+ 8 Jim ~ House   R            3 Appropria~ &lt;NA&gt;      &lt;NA&gt;          
+ 9 Kris~ House   R            3 Business;~ &lt;NA&gt;      &lt;NA&gt;          
+10 John~ Senate  R            3 Commerce ~ &lt;NA&gt;      &lt;NA&gt;          
+# ... with 1,121 more rows, and 7 more variables: startdate &lt;dttm&gt;,
+#   enddate &lt;dttm&gt;, startdate2 &lt;dttm&gt;, enddate2 &lt;dttm&gt;, startdate3 &lt;lgl&gt;,
+#   enddate3 &lt;lgl&gt;, year &lt;chr&gt;
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+* select(name, chamber, party, district, year)
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 5
+   name               chamber party district year 
+   &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;
+ 1 John L. Campbell   House   R            1 2002 
+ 2 George E. Eskridge House   R            1 2002 
+ 3 Shawn Keough       Senate  R            1 2002 
+ 4 Hilde Kellogg      House   R            2 2002 
+ 5 Freeman B. Duncan  House   R            2 2002 
+ 6 Wayne R. Meyer     House   R            2 2002 
+ 7 Clyde Boatright    Senate  R            2 2002 
+ 8 Jim Clark          House   R            3 2002 
+ 9 Kris Ellis         House   R            3 2002 
+10 John W. Goedde     Senate  R            3 2002 
+# ... with 1,121 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+* group_by(year, district)
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 5
+# Groups:   year, district [350]
+   name               chamber party district year 
+   &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;
+ 1 John L. Campbell   House   R            1 2002 
+ 2 George E. Eskridge House   R            1 2002 
+ 3 Shawn Keough       Senate  R            1 2002 
+ 4 Hilde Kellogg      House   R            2 2002 
+ 5 Freeman B. Duncan  House   R            2 2002 
+ 6 Wayne R. Meyer     House   R            2 2002 
+ 7 Clyde Boatright    Senate  R            2 2002 
+ 8 Jim Clark          House   R            3 2002 
+ 9 Kris Ellis         House   R            3 2002 
+10 John W. Goedde     Senate  R            3 2002 
+# ... with 1,121 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+* mutate(party_total = case_when(
+*   !str_detect(paste0(party, collapse = ""), "D") ~"R",
+*   !str_detect(paste0(party, collapse = ""), "R") ~"D",
+*   TRUE ~"M"))
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 6
+# Groups:   year, district [350]
+   name               chamber party district year  party_total
+   &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;      
+ 1 John L. Campbell   House   R            1 2002  R          
+ 2 George E. Eskridge House   R            1 2002  R          
+ 3 Shawn Keough       Senate  R            1 2002  R          
+ 4 Hilde Kellogg      House   R            2 2002  R          
+ 5 Freeman B. Duncan  House   R            2 2002  R          
+ 6 Wayne R. Meyer     House   R            2 2002  R          
+ 7 Clyde Boatright    Senate  R            2 2002  R          
+ 8 Jim Clark          House   R            3 2002  R          
+ 9 Kris Ellis         House   R            3 2002  R          
+10 John W. Goedde     Senate  R            3 2002  R          
+# ... with 1,121 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %&gt;%
+* ungroup()
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 6
+   name               chamber party district year  party_total
+   &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;      
+ 1 John L. Campbell   House   R            1 2002  R          
+ 2 George E. Eskridge House   R            1 2002  R          
+ 3 Shawn Keough       Senate  R            1 2002  R          
+ 4 Hilde Kellogg      House   R            2 2002  R          
+ 5 Freeman B. Duncan  House   R            2 2002  R          
+ 6 Wayne R. Meyer     House   R            2 2002  R          
+ 7 Clyde Boatright    Senate  R            2 2002  R          
+ 8 Jim Clark          House   R            3 2002  R          
+ 9 Kris Ellis         House   R            3 2002  R          
+10 John W. Goedde     Senate  R            3 2002  R          
+# ... with 1,121 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %&gt;%
+  ungroup() %&gt;%
+* select(year, district, party_total)
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 1,131 x 3
+   year  district party_total
+   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;      
+ 1 2002         1 R          
+ 2 2002         1 R          
+ 3 2002         1 R          
+ 4 2002         2 R          
+ 5 2002         2 R          
+ 6 2002         2 R          
+ 7 2002         2 R          
+ 8 2002         3 R          
+ 9 2002         3 R          
+10 2002         3 R          
+# ... with 1,121 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %&gt;%
+  ungroup() %&gt;%
+  select(year, district, party_total) %&gt;%
+* unique()
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 350 x 3
+   year  district party_total
+   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;      
+ 1 2002         1 R          
+ 2 2002         2 R          
+ 3 2002         3 R          
+ 4 2002         4 M          
+ 5 2002         5 R          
+ 6 2002         6 R          
+ 7 2002         7 M          
+ 8 2002         8 R          
+ 9 2002         9 R          
+10 2002        10 R          
+# ... with 340 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %&gt;%
+  ungroup() %&gt;%
+  select(year, district, party_total) %&gt;%
+  unique() %&gt;%
+* mutate(NDISTRICT=district)
+```
+]
+ 
+.panel2-data_prep-auto[
+
+```
+# A tibble: 350 x 4
+   year  district party_total NDISTRICT
+   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
+ 1 2002         1 R                   1
+ 2 2002         2 R                   2
+ 3 2002         3 R                   3
+ 4 2002         4 M                   4
+ 5 2002         5 R                   5
+ 6 2002         6 R                   6
+ 7 2002         7 M                   7
+ 8 2002         8 R                   8
+ 9 2002         9 R                   9
+10 2002        10 R                  10
+# ... with 340 more rows
+```
+]
+
+---
+count: false
+ 
+## Prepping the Data
+.panel1-data_prep-auto[
+
+```r
+members02_11 %&gt;%
+  arrange(year, district) %&gt;%
+  select(name, chamber, party, district, year) %&gt;%
+  group_by(year, district) %&gt;%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %&gt;%
+  ungroup() %&gt;%
+  select(year, district, party_total) %&gt;%
+  unique() %&gt;%
+  mutate(NDISTRICT=district) -&gt;
+* members02_11
+```
+]
+ 
+.panel2-data_prep-auto[
+
+]
+
+&lt;style&gt;
+.panel1-data_prep-auto {
+  color: black;
+  width: 49.4949494949495%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-data_prep-auto {
+  color: black;
+  width: 48.5050505050505%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-data_prep-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+count: false
+ 
+## Prepping the Mapping Data
+.panel1-map_data_prep-auto[
+
+```r
+*map_02
+```
+]
+ 
+.panel2-map_data_prep-auto[
+
+```
+Simple feature collection with 35 features and 2 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: 241777.2 ymin: 98685.15 xmax: 744660 ymax: 882019.6
+projected CRS:  IDTM
+First 10 features:
+   DISTRICT NDISTRICT                       geometry
+1        01         1 MULTIPOLYGON (((333701.4 78...
+2        02         2 MULTIPOLYGON (((280658.3 71...
+3        03         3 MULTIPOLYGON (((287396.8 76...
+4        04         4 MULTIPOLYGON (((289829.2 73...
+5        05         5 MULTIPOLYGON (((287081.9 74...
+6        06         6 MULTIPOLYGON (((293149.7 61...
+7        07         7 MULTIPOLYGON (((269846.9 58...
+8        08         8 MULTIPOLYGON (((329227.9 44...
+9        09         9 MULTIPOLYGON (((303757.8 33...
+10       10        10 MULTIPOLYGON (((264272.6 28...
+```
+]
+
+---
+count: false
+ 
+## Prepping the Mapping Data
+.panel1-map_data_prep-auto[
+
+```r
+map_02 %&gt;%
+* merge(., members02_11, by="NDISTRICT")
+```
+]
+ 
+.panel2-map_data_prep-auto[
+
+```
+Simple feature collection with 350 features and 5 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: 241777.2 ymin: 98685.15 xmax: 744660 ymax: 882019.6
+projected CRS:  IDTM
+First 10 features:
+   NDISTRICT DISTRICT year district party_total                       geometry
+1          1       01 2002        1           R MULTIPOLYGON (((333701.4 78...
+2          1       01 2010        1           R MULTIPOLYGON (((333701.4 78...
+3          1       01 2007        1           R MULTIPOLYGON (((333701.4 78...
+4          1       01 2006        1           R MULTIPOLYGON (((333701.4 78...
+5          1       01 2004        1           R MULTIPOLYGON (((333701.4 78...
+6          1       01 2009        1           R MULTIPOLYGON (((333701.4 78...
+7          1       01 2008        1           R MULTIPOLYGON (((333701.4 78...
+8          1       01 2011        1           R MULTIPOLYGON (((333701.4 78...
+9          1       01 2005        1           R MULTIPOLYGON (((333701.4 78...
+10         1       01 2003        1           R MULTIPOLYGON (((333701.4 78...
+```
+]
+
+---
+count: false
+ 
+## Prepping the Mapping Data
+.panel1-map_data_prep-auto[
+
+```r
+map_02 %&gt;%
+  merge(., members02_11, by="NDISTRICT") -&gt;
+* merged_data
+```
+]
+ 
+.panel2-map_data_prep-auto[
+
+]
+
+&lt;style&gt;
+.panel1-map_data_prep-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-map_data_prep-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-map_data_prep-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+*ggplot(data=merged_data)
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_01_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+* geom_sf(color="#534D41", size=.7)
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_02_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+* aes(fill=party_total)
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_03_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+* facet_wrap(~year,nrow=2)
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_04_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+* scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+*                   breaks=c("R", "D", "M"),
+*                   labels=c("All Republican", "All Democrat", "Both"))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_05_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+* labs(title="Is Idaho as Red as It Seems?",
+*      subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+*      caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+*      fill=NULL)
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_06_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+* theme(legend.position = 'top')
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_07_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+* theme(plot.background = element_rect(fill="#fafafa",color="#fafafa"))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_08_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+* theme(panel.background = element_rect(fill="#fafafa"))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_09_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+  theme(panel.background = element_rect(fill="#fafafa")) +
+* theme(text=element_text(family="Bahnschrift", size=12))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_10_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+  theme(panel.background = element_rect(fill="#fafafa")) +
+  theme(text=element_text(family="Bahnschrift", size=12)) +
+* theme(plot.title.position = "plot")
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_11_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+  theme(panel.background = element_rect(fill="#fafafa")) +
+  theme(text=element_text(family="Bahnschrift", size=12)) +
+  theme(plot.title.position = "plot") +
+* theme(plot.title=element_text(color="#534D41",
+*                               size=16,
+*                               margin=margin(t=3,b=5,unit="pt")))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_12_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+  theme(panel.background = element_rect(fill="#fafafa")) +
+  theme(text=element_text(family="Bahnschrift", size=12)) +
+  theme(plot.title.position = "plot") +
+  theme(plot.title=element_text(color="#534D41",
+                                size=16,
+                                margin=margin(t=3,b=5,unit="pt"))) +
+* theme(plot.subtitle=element_text(color="#534D41",
+*                                  size=12,
+*                                  margin=margin(b=5,unit="pt")))
+```
+]
+ 
+.panel2-map_construction-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction_user_13_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Constructing the Map
+.panel1-map_construction-user[
+
+```r
+ggplot(data=merged_data) +
+  geom_sf(color="#534D41", size=.7) +
+  aes(fill=party_total) +
+  facet_wrap(~year,nrow=2) +
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) +
+  labs(title="Is Idaho as Red as It Seems?",
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) +
+  theme(legend.position = 'top') +
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) +
+  theme(panel.background = element_rect(fill="#fafafa")) +
+  theme(text=element_text(family="Bahnschrift", size=12)) +
+  theme(plot.title.position = "plot") +
+  theme(plot.title=element_text(color="#534D41",
+                                size=16,
+                                margin=margin(t=3,b=5,unit="pt"))) +
+  theme(plot.subtitle=element_text(color="#534D41",
+                                   size=12,
+                                   margin=margin(b=5,unit="pt"))) -&gt;
+* idaho_map
+```
+]
+ 
+.panel2-map_construction-user[
+
+]
+
+&lt;style&gt;
+.panel1-map_construction-user {
+  color: black;
+  width: 48.5050505050505%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-map_construction-user {
+  color: black;
+  width: 49.4949494949495%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-map_construction-user {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+*idaho_map
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_01_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+* theme(axis.title=element_blank())
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_02_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+* theme(axis.text = element_blank())
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_03_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+* theme(axis.line=element_blank())
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_04_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+* theme(axis.ticks=element_blank())
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_05_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+* theme(panel.grid = element_blank())
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_06_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+* theme(legend.background = element_rect(fill="#fafafa"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_07_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+* theme(legend.text = element_text(color="#534D41", size=10))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_08_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+* theme(legend.key = element_rect(fill="#fafafa"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_09_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+* theme(legend.key.size = unit(15, "points"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_10_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+  theme(legend.key.size = unit(15, "points")) +
+* theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_11_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+  theme(legend.key.size = unit(15, "points")) +
+  theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt")) +
+* theme(plot.caption = element_text(color="#534D41"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_12_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+  theme(legend.key.size = unit(15, "points")) +
+  theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt")) +
+  theme(plot.caption = element_text(color="#534D41")) +
+* theme(plot.caption.position = "plot")
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_13_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+  theme(legend.key.size = unit(15, "points")) +
+  theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt")) +
+  theme(plot.caption = element_text(color="#534D41")) +
+  theme(plot.caption.position = "plot") +
+* theme(strip.background =element_rect(fill="#534D41"))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_14_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Designing the Map
+.panel1-map_construction2-user[
+
+```r
+idaho_map +
+  theme(axis.title=element_blank()) +
+  theme(axis.text = element_blank()) +
+  theme(axis.line=element_blank()) +
+  theme(axis.ticks=element_blank()) +
+  theme(panel.grid = element_blank()) +
+  theme(legend.background = element_rect(fill="#fafafa")) +
+  theme(legend.text = element_text(color="#534D41", size=10)) +
+  theme(legend.key = element_rect(fill="#fafafa")) +
+  theme(legend.key.size = unit(15, "points")) +
+  theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt")) +
+  theme(plot.caption = element_text(color="#534D41")) +
+  theme(plot.caption.position = "plot") +
+  theme(strip.background =element_rect(fill="#534D41")) +
+* theme(strip.text = element_text(colour = '#edfff4'))
+```
+]
+ 
+.panel2-map_construction2-user[
+&lt;img src="Idaho_mapping_files/figure-html/map_construction2_user_15_output-1.png" width="432" /&gt;
+]
+
+&lt;style&gt;
+.panel1-map_construction2-user {
+  color: black;
+  width: 48.5050505050505%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-map_construction2-user {
+  color: black;
+  width: 49.4949494949495%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-map_construction2-user {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.remark-code{line-height: 1.5; font-size: 80%}
+
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+&lt;/style&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:10",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

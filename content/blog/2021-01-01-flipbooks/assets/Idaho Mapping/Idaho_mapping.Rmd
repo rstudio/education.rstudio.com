@@ -1,0 +1,155 @@
+---
+title: "Mapping Political Change in Idaho"
+subtitle: "With flipbookr and xaringan"
+author: "Rachel Goodman, September 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r, include = F}
+# This is the recommended set up for flipbooks
+# you might think about setting cache to TRUE as you gain practice --- building flipbooks from scratch can be time consuming
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = FALSE, fig.retina = 3)
+library(flipbookr)
+library(tidyverse)
+library(sf)
+library(rgdal)
+library(tidyverse)
+library(broom)
+library(readxl)
+library(gganimate)
+library(extrafont)
+```
+
+
+```{r, include=FALSE}
+map_02 <- st_read("./districtmap_2002", layer="legdist2000_id_ilso")
+
+member_file <- excel_sheets("./all_members.xlsx")
+
+member_file <- member_file[member_file < 2012 & member_file > 2001]
+
+for (sheet in member_file){
+  if (sheet == member_file[1]){
+    members02_11 <- read_xlsx("./all_members.xlsx", sheet=sheet) %>%
+      mutate(year = sheet)
+  }
+  if (sheet != member_file[1]){
+    new_year <- read_xlsx("./all_members.xlsx", sheet=sheet) %>%
+      mutate(year=sheet)
+    members02_11 <- bind_rows(members02_11, new_year)
+  }
+}
+
+colnames(members02_11) <- tolower(colnames(members02_11))
+
+```
+
+`r chunk_reveal("data_prep", widths=c(50,49), title="## Prepping the Data")`
+
+```{r data_prep, include=FALSE}
+members02_11 %>%
+  arrange(year, district) %>%
+  select(name, chamber, party, district, year) %>%
+  group_by(year, district) %>%
+  mutate(party_total = case_when(
+    !str_detect(paste0(party, collapse = ""), "D") ~"R",
+    !str_detect(paste0(party, collapse = ""), "R") ~"D",
+    TRUE ~"M")) %>%
+  ungroup() %>%
+  select(year, district, party_total) %>%
+  unique() %>%
+  mutate(NDISTRICT=district) ->
+  members02_11
+```
+
+---
+`r chunk_reveal("map_data_prep", title="## Prepping the Mapping Data")`
+
+```{r map_data_prep, include=FALSE}
+map_02 %>%
+  merge(., members02_11, by="NDISTRICT") ->
+  merged_data
+```
+
+---
+
+`r chunk_reveal("map_construction", break_type="user", title="## Constructing the Map", widths=c(49,50))`
+
+```{r map_construction, include=FALSE, fig.height=6, fig.width=8}
+ggplot(data=merged_data) + #BREAK
+  geom_sf(color="#534D41", size=.7) + #BREAK
+  aes(fill=party_total) + #BREAK
+  facet_wrap(~year,nrow=2) + #BREAK
+  scale_fill_manual(values=c("#CC2936", "#08415C", "#edfff4"),
+                    breaks=c("R", "D", "M"),
+                    labels=c("All Republican", "All Democrat", "Both")) + #BREAK
+  labs(title="Is Idaho as Red as It Seems?", 
+       subtitle="A Breakdown of State Legislators' Party Affiliations by District",
+       caption="Idaho District Shapefile Source:\nBruce Godfrey, GIS Librarian, University of Idaho",
+       fill=NULL) + #BREAK
+  theme(legend.position = 'top') + #BREAK
+  theme(plot.background = element_rect(fill="#fafafa",color="#fafafa")) + #BREAK
+  theme(panel.background = element_rect(fill="#fafafa")) + #BREAK
+  theme(text=element_text(family="Bahnschrift", size=12)) + #BREAK
+  theme(plot.title.position = "plot") + #BREAK
+  theme(plot.title=element_text(color="#534D41",
+                                size=16,
+                                margin=margin(t=3,b=5,unit="pt"))) + #BREAK
+  theme(plot.subtitle=element_text(color="#534D41",
+                                   size=12,
+                                   margin=margin(b=5,unit="pt"))) -> #BREAK
+  idaho_map
+```
+
+---
+
+`r chunk_reveal("map_construction2", break_type="user", title="## Designing the Map", widths=c(49,50))`
+
+```{r map_construction2, include=FALSE, fig.height=5.5, fig.width=7}
+idaho_map + #BREAK
+  theme(axis.title=element_blank()) + #BREAK
+  theme(axis.text = element_blank()) + #BREAK
+  theme(axis.line=element_blank()) + #BREAK
+  theme(axis.ticks=element_blank()) + #BREAK
+  theme(panel.grid = element_blank()) + #BREAK
+  theme(legend.background = element_rect(fill="#fafafa")) + #BREAK
+  theme(legend.text = element_text(color="#534D41", size=10)) + #BREAK
+  theme(legend.key = element_rect(fill="#fafafa")) + #BREAK
+  theme(legend.key.size = unit(15, "points")) + #BREAK
+  theme(plot.margin = margin(t=5,r=10,b=5,l=10,unit="pt")) + #BREAK
+  theme(plot.caption = element_text(color="#534D41")) + #BREAK
+  theme(plot.caption.position = "plot") + #BREAK
+  theme(strip.background =element_rect(fill="#534D41")) + #BREAK
+  theme(strip.text = element_text(colour = '#edfff4')) #BREAK
+```
+
+
+
+
+```{css, eval = TRUE, echo = FALSE}
+.remark-code{line-height: 1.5; font-size: 80%}
+
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+```

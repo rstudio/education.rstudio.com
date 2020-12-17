@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to gganimate</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Luca Picci" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to gganimate
+## Unemployment in Europe
+### Luca Picci
+
+---
+
+
+
+
+
+
+
+
+
+
+
+# Getting Started
+Showing the steps to create an animated bar chart can be tricky.
+In order to demonstrate the steps required to build this annimated plot we will:
+- Build the skeleton of the plot (declare aesthetics and build the theme and annotations)
+- Then use facet_wrap() and declare the geoms to show the different bar lengths at each time period
+- Finally we will combine the plots and add the animation
+
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+*unemployment
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 810 x 5
+##    LOCATION Country SUBJECT  TIME Value
+##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 AUT      Austria TOT      1999  4.97
+##  2 AUT      Austria TOT      2000  5.15
+##  3 AUT      Austria TOT      2001  5.7 
+##  4 AUT      Austria TOT      2002  6.18
+##  5 AUT      Austria TOT      2003  7.05
+##  6 AUT      Austria TOT      2004 10.5 
+##  7 AUT      Austria TOT      2005 11.0 
+##  8 AUT      Austria TOT      2006  9.8 
+##  9 AUT      Austria TOT      2007  9.38
+## 10 AUT      Austria TOT      2008  8.48
+## # ... with 800 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+* filter(SUBJECT == "TOT")
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 271 x 5
+##    LOCATION Country SUBJECT  TIME Value
+##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 AUT      Austria TOT      1999  4.97
+##  2 AUT      Austria TOT      2000  5.15
+##  3 AUT      Austria TOT      2001  5.7 
+##  4 AUT      Austria TOT      2002  6.18
+##  5 AUT      Austria TOT      2003  7.05
+##  6 AUT      Austria TOT      2004 10.5 
+##  7 AUT      Austria TOT      2005 11.0 
+##  8 AUT      Austria TOT      2006  9.8 
+##  9 AUT      Austria TOT      2007  9.38
+## 10 AUT      Austria TOT      2008  8.48
+## # ... with 261 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+  filter(SUBJECT == "TOT") %&gt;%  
+* filter(TIME&gt;=2007)
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 164 x 5
+##    LOCATION Country SUBJECT  TIME Value
+##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 AUT      Austria TOT      2007  9.38
+##  2 AUT      Austria TOT      2008  8.48
+##  3 AUT      Austria TOT      2009 10.6 
+##  4 AUT      Austria TOT      2010  9.48
+##  5 AUT      Austria TOT      2011  8.95
+##  6 AUT      Austria TOT      2012  9.4 
+##  7 AUT      Austria TOT      2013  9.68
+##  8 AUT      Austria TOT      2014 10.3 
+##  9 AUT      Austria TOT      2015 10.6 
+## 10 AUT      Austria TOT      2016 11.2 
+## # ... with 154 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+  filter(SUBJECT == "TOT") %&gt;%  
+  filter(TIME&gt;=2007) %&gt;%  
+* filter(Country!= "Estonia")
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 154 x 5
+##    LOCATION Country SUBJECT  TIME Value
+##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 AUT      Austria TOT      2007  9.38
+##  2 AUT      Austria TOT      2008  8.48
+##  3 AUT      Austria TOT      2009 10.6 
+##  4 AUT      Austria TOT      2010  9.48
+##  5 AUT      Austria TOT      2011  8.95
+##  6 AUT      Austria TOT      2012  9.4 
+##  7 AUT      Austria TOT      2013  9.68
+##  8 AUT      Austria TOT      2014 10.3 
+##  9 AUT      Austria TOT      2015 10.6 
+## 10 AUT      Austria TOT      2016 11.2 
+## # ... with 144 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+  filter(SUBJECT == "TOT") %&gt;%  
+  filter(TIME&gt;=2007) %&gt;%  
+  filter(Country!= "Estonia")%&gt;%  
+* select(-LOCATION)
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 154 x 4
+##    Country SUBJECT  TIME Value
+##    &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 Austria TOT      2007  9.38
+##  2 Austria TOT      2008  8.48
+##  3 Austria TOT      2009 10.6 
+##  4 Austria TOT      2010  9.48
+##  5 Austria TOT      2011  8.95
+##  6 Austria TOT      2012  9.4 
+##  7 Austria TOT      2013  9.68
+##  8 Austria TOT      2014 10.3 
+##  9 Austria TOT      2015 10.6 
+## 10 Austria TOT      2016 11.2 
+## # ... with 144 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+  filter(SUBJECT == "TOT") %&gt;%  
+  filter(TIME&gt;=2007) %&gt;%  
+  filter(Country!= "Estonia")%&gt;%  
+  select(-LOCATION) %&gt;%  
+* select(-SUBJECT)
+```
+]
+ 
+.panel2-plotdata-auto[
+
+```
+## # A tibble: 154 x 3
+##    Country  TIME Value
+##    &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1 Austria  2007  9.38
+##  2 Austria  2008  8.48
+##  3 Austria  2009 10.6 
+##  4 Austria  2010  9.48
+##  5 Austria  2011  8.95
+##  6 Austria  2012  9.4 
+##  7 Austria  2013  9.68
+##  8 Austria  2014 10.3 
+##  9 Austria  2015 10.6 
+## 10 Austria  2016 11.2 
+## # ... with 144 more rows
+```
+]
+
+---
+count: false
+ 
+Data Manipulation
+.panel1-plotdata-auto[
+
+```r
+unemployment %&gt;%  
+  filter(SUBJECT == "TOT") %&gt;%  
+  filter(TIME&gt;=2007) %&gt;%  
+  filter(Country!= "Estonia")%&gt;%  
+  select(-LOCATION) %&gt;%  
+  select(-SUBJECT) -&gt;  
+* plotdata
+```
+]
+ 
+.panel2-plotdata-auto[
+
+]
+
+&lt;style&gt;
+.panel1-plotdata-auto {
+  color: black;
+  width: 38.6060606060606%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plotdata-auto {
+  color: black;
+  width: 59.3939393939394%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plotdata-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+*ggplot(data = plotdata)
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_1_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+* aes(y = reorder(Country, Value))
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_2_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+* aes(x = Value)
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_3_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+* geom_segment(aes(x = 0, xend = 65,
+*                  yend = Country),
+*              size = 7.5,
+*              color = "azure3")
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_4_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+* scale_x_continuous(position = "top",
+*                    breaks = c(0, 25, 50),
+*                    labels=
+*                      function(x) paste0(x,"%"))
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_5_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+* labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_6_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+  
+* labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_7_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+  
+  labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")+  
+* labs(y = NULL)
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_8_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+  
+  labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")+  
+  labs(y = NULL)+  
+* labs(caption = "*excl. Malta, Cyprus, Estonia\nSource:OECD (2020), Youth unemployment rate (indicator)")
+```
+]
+ 
+.panel2-plot1-auto[
+![](unemployment_files/figure-html/plot1_auto_9_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+  
+  labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")+  
+  labs(y = NULL)+  
+  labs(caption = "*excl. Malta, Cyprus, Estonia\nSource:OECD (2020), Youth unemployment rate (indicator)")-&gt;  
+* plot
+```
+]
+ 
+.panel2-plot1-auto[
+
+]
+
+---
+count: false
+ 
+Building the Plot
+.panel1-plot1-auto[
+
+```r
+ggplot(data = plotdata) +  
+  aes(y = reorder(Country, Value))+  
+  aes(x = Value)+  
+  geom_segment(aes(x = 0, xend = 65,  
+                   yend = Country),  
+               size = 7.5,  
+               color = "azure3")+  
+  scale_x_continuous(position = "top",  
+                     breaks = c(0, 25, 50),  
+                     labels=  
+                       function(x) paste0(x,"%"))+  
+  labs(title = "Euro Area Youth Unemployment Rate 2007 - 2017")+  
+  labs(subtitle = "Youth unemployment (15-24 years) expressed as a percent of the youth labour force")+  
+  labs(y = NULL)+  
+  labs(caption = "*excl. Malta, Cyprus, Estonia\nSource:OECD (2020), Youth unemployment rate (indicator)")-&gt;  
+  plot  
+```
+]
+ 
+.panel2-plot1-auto[
+
+]
+
+&lt;style&gt;
+.panel1-plot1-auto {
+  color: black;
+  width: 38.6060606060606%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plot1-auto {
+  color: black;
+  width: 59.3939393939394%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plot1-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+---
+
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+*plot
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_1_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+* theme(panel.background =
+*     element_rect(fill = "grey99"))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_2_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+* theme(plot.background =
+*     element_rect(fill = "grey99"))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_3_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+* theme(panel.grid = element_blank())
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_4_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+* theme(plot.title =
+*     element_text(size = 18, hjust = 0,
+*                  color = "steelblue4",
+*                  face = "bold"))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_5_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+* theme(plot.subtitle =
+*     element_text(size = 12,
+*                  color = "darkgoldenrod2",
+*                  hjust = 0, face = "bold"))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_6_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(plot.subtitle =  
+      element_text(size = 12,  
+                   color = "darkgoldenrod2",  
+                   hjust = 0, face = "bold"))+  
+* theme(plot.caption =
+*     element_text(color = "steelblue4",
+*                  hjust = 0.94))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_7_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(plot.subtitle =  
+      element_text(size = 12,  
+                   color = "darkgoldenrod2",  
+                   hjust = 0, face = "bold"))+  
+  theme(plot.caption =  
+      element_text(color = "steelblue4",  
+                   hjust = 0.94))+  
+* theme(axis.title.x =
+*     element_text(size = 12, hjust = 0,
+*                  color = "steelblue4",
+*                  face = "bold"))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_8_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(plot.subtitle =  
+      element_text(size = 12,  
+                   color = "darkgoldenrod2",  
+                   hjust = 0, face = "bold"))+  
+  theme(plot.caption =  
+      element_text(color = "steelblue4",  
+                   hjust = 0.94))+  
+  theme(axis.title.x =  
+      element_text(size = 12, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+* theme(axis.text.x =
+*     element_text(size = 10,
+*                  color = "steelblue4",
+*                  hjust = 0.5))
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_9_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(plot.subtitle =  
+      element_text(size = 12,  
+                   color = "darkgoldenrod2",  
+                   hjust = 0, face = "bold"))+  
+  theme(plot.caption =  
+      element_text(color = "steelblue4",  
+                   hjust = 0.94))+  
+  theme(axis.title.x =  
+      element_text(size = 12, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(axis.text.x =  
+      element_text(size = 10,  
+                   color = "steelblue4",  
+                   hjust = 0.5))+  
+* theme(
+*   axis.line.y = element_blank(),
+*   axis.text.y = element_blank(),
+*   axis.ticks.y= element_blank(),
+*   axis.ticks.x = element_blank(),
+*   axis.line.x = element_blank())
+```
+]
+ 
+.panel2-plot2-auto[
+![](unemployment_files/figure-html/plot2_auto_10_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Building the Theme
+.panel1-plot2-auto[
+
+```r
+plot+  
+  theme(panel.background =  
+      element_rect(fill = "grey99"))+  
+  theme(plot.background =  
+      element_rect(fill = "grey99"))+  
+  theme(panel.grid = element_blank())+  
+  theme(plot.title =  
+      element_text(size = 18, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(plot.subtitle =  
+      element_text(size = 12,  
+                   color = "darkgoldenrod2",  
+                   hjust = 0, face = "bold"))+  
+  theme(plot.caption =  
+      element_text(color = "steelblue4",  
+                   hjust = 0.94))+  
+  theme(axis.title.x =  
+      element_text(size = 12, hjust = 0,  
+                   color = "steelblue4",  
+                   face = "bold"))+  
+  theme(axis.text.x =  
+      element_text(size = 10,  
+                   color = "steelblue4",  
+                   hjust = 0.5))+  
+  theme(  
+    axis.line.y = element_blank(),  
+    axis.text.y = element_blank(),  
+    axis.ticks.y= element_blank(),  
+    axis.ticks.x = element_blank(),  
+    axis.line.x = element_blank())-&gt;  
+* plot2
+```
+]
+ 
+.panel2-plot2-auto[
+
+]
+
+&lt;style&gt;
+.panel1-plot2-auto {
+  color: black;
+  width: 38.6060606060606%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plot2-auto {
+  color: black;
+  width: 59.3939393939394%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plot2-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+# Faceting 
+This intermediate step is not necessary, but in order to demostrate clearly how the plot will be built, we will facet by year using facet_wrap() to create an individual plot for each year.
+This will allow us to see how the bar lengths vary and add annotations before adding animations
+---
+
+
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+*plot2
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_1_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+* facet_wrap(~ TIME, nrow=3)
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_2_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+  facet_wrap(~ TIME, nrow=3)+  
+* geom_col(fill = "steelblue4",
+*          width = 0.75,
+*          alpha = 0.9)
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_3_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+  facet_wrap(~ TIME, nrow=3)+  
+  geom_col(fill = "steelblue4",  
+           width = 0.75,  
+           alpha = 0.9)+  
+* annotate(x=0, xend=65,
+*          y=15, yend=15,
+*          colour="steelblue4",
+*          geom="segment",
+*          size = 2)
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_4_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+  facet_wrap(~ TIME, nrow=3)+  
+  geom_col(fill = "steelblue4",  
+           width = 0.75,  
+           alpha = 0.9)+  
+  annotate(x=0, xend=65,  
+           y=15, yend=15,  
+           colour="steelblue4",  
+           geom="segment",  
+           size = 2)+  
+* annotate(x = 25, xend = 25,
+*          y = 14.9, yend = 0.5,
+*          size = 1, geom="segment",
+*          color = "darkgoldenrod2",
+*          linetype = "dashed")
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_5_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+  facet_wrap(~ TIME, nrow=3)+  
+  geom_col(fill = "steelblue4",  
+           width = 0.75,  
+           alpha = 0.9)+  
+  annotate(x=0, xend=65,  
+           y=15, yend=15,  
+           colour="steelblue4",  
+           geom="segment",  
+           size = 2)+  
+  annotate(x = 25, xend = 25,  
+           y = 14.9, yend = 0.5,  
+           size = 1, geom="segment",  
+           color = "darkgoldenrod2",  
+           linetype = "dashed")+  
+* annotate(x = 50, xend = 50,
+*          y = 14.9, yend = 0.5,
+*          size = 1, geom="segment",
+*          color = "darkgoldenrod2",
+*          linetype = "dashed")
+```
+]
+ 
+.panel2-plot3-auto[
+![](unemployment_files/figure-html/plot3_auto_6_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Faceting
+.panel1-plot3-auto[
+
+```r
+plot2+  
+  facet_wrap(~ TIME, nrow=3)+  
+  geom_col(fill = "steelblue4",  
+           width = 0.75,  
+           alpha = 0.9)+  
+  annotate(x=0, xend=65,  
+           y=15, yend=15,  
+           colour="steelblue4",  
+           geom="segment",  
+           size = 2)+  
+  annotate(x = 25, xend = 25,  
+           y = 14.9, yend = 0.5,  
+           size = 1, geom="segment",  
+           color = "darkgoldenrod2",  
+           linetype = "dashed")+  
+  annotate(x = 50, xend = 50,  
+           y = 14.9, yend = 0.5,  
+           size = 1, geom="segment",  
+           color = "darkgoldenrod2",  
+           linetype = "dashed")-&gt;  
+* plot3
+```
+]
+ 
+.panel2-plot3-auto[
+
+]
+
+&lt;style&gt;
+.panel1-plot3-auto {
+  color: black;
+  width: 38.6060606060606%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plot3-auto {
+  color: black;
+  width: 59.3939393939394%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plot3-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+*plot3
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_1_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+* facet_null()+
+* gganimate::transition_time(TIME)
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_2_output-1.gif)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+  facet_null()+  
+  gganimate::transition_time(TIME)+  
+* ease_aes('linear')
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_3_output-1.gif)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+  facet_null()+  
+  gganimate::transition_time(TIME)+  
+  ease_aes('linear')+  
+* labs(x = 'Year: {format(round(frame_time, digits = 0))}')+
+* geom_text(aes(label = reorder(Country, Value)),
+*           x = 0.1, hjust = 0, color = "grey99",
+*           fontface = "bold")
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_4_output-1.gif)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+  facet_null()+  
+  gganimate::transition_time(TIME)+  
+  ease_aes('linear')+  
+  labs(x = 'Year: {format(round(frame_time, digits = 0))}')+  
+  geom_text(aes(label = reorder(Country, Value)),  
+            x = 0.1, hjust = 0, color = "grey99",  
+            fontface = "bold")+  
+* geom_text(aes(label =
+*                 format(round(Value, digits = 0))),
+*           x = 63, color = "steelblue4",
+*           fontface = "bold", hjust = 1)
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_5_output-1.gif)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+  facet_null()+  
+  gganimate::transition_time(TIME)+  
+  ease_aes('linear')+  
+  labs(x = 'Year: {format(round(frame_time, digits = 0))}')+  
+  geom_text(aes(label = reorder(Country, Value)),  
+            x = 0.1, hjust = 0, color = "grey99",  
+            fontface = "bold")+  
+  geom_text(aes(label =  
+                  format(round(Value, digits = 0))),  
+            x = 63, color = "steelblue4",  
+            fontface = "bold", hjust = 1)+  
+* geom_text(x=63.5, label = "%", color = "steelblue4",
+*           fontface = "bold", hjust = 0)
+```
+]
+ 
+.panel2-plot4-user[
+![](unemployment_files/figure-html/plot4_user_6_output-1.gif)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+Adding the Animation
+.panel1-plot4-user[
+
+```r
+plot3+  
+  facet_null()+  
+  gganimate::transition_time(TIME)+  
+  ease_aes('linear')+  
+  labs(x = 'Year: {format(round(frame_time, digits = 0))}')+  
+  geom_text(aes(label = reorder(Country, Value)),  
+            x = 0.1, hjust = 0, color = "grey99",  
+            fontface = "bold")+  
+  geom_text(aes(label =  
+                  format(round(Value, digits = 0))),  
+            x = 63, color = "steelblue4",  
+            fontface = "bold", hjust = 1)+  
+  geom_text(x=63.5, label = "%", color = "steelblue4",  
+            fontface = "bold", hjust = 0)-&gt;  
+* finalplot
+```
+]
+ 
+.panel2-plot4-user[
+
+]
+
+&lt;style&gt;
+.panel1-plot4-user {
+  color: black;
+  width: 45.8723404255319%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plot4-user {
+  color: black;
+  width: 52.1276595744681%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plot4-user {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+---
+count: false
+
+![](unemployment_files/figure-html/finplot_auto_1_output-1.gif)&lt;!-- --&gt;
+
+---
+count: false
+
+![](unemployment_files/figure-html/finplot_auto_2_output-1.gif)&lt;!-- --&gt;
+
+&lt;style&gt;
+.panel1-finplot-auto {
+  color: black;
+  width: 99%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-finplot-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-finplot-auto {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.remark-code{line-height: 1.2; font-size: 73%}
+
+@media print {
+  .has-continuation {
+    display: block;
+  }
+}
+&lt;/style&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:10",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

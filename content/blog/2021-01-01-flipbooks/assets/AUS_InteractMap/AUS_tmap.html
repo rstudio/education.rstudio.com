@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Creating an Interactive Map</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Conner Surrency, July 2020" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/tamu.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/tamu-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+    <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+    <script src="libs/leaflet-providers-plugin-2.0.3/leaflet-providers-plugin.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Creating an Interactive Map
+## Getting Started with tmap
+### Conner Surrency, July 2020
+
+---
+
+
+
+
+
+
+
+# What Are We Doing?
+--
+
+- We are going to walk through the process of creating a simple interactive map using tmap.
+--
+
+- We will start by walking through the steps of creating a simple standard map. After that, we'll transform it into an interactive one.
+--
+
+- In this case, we will narrow the data down to only information related to Australia, and then display each city in the nation based on its population. 
+
+---
+
+## Set-Up
+--
+
+We will need the following packages (and data from them) installed:  
+--
+
+- tidyverse
+--
+
+- tmap
+
+---
+
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+*library(tidyverse)
+*library(tmap)
+
+## We will be using data from "world" and "Metro"
+*data(World, metro)
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+*metro
+```
+]
+ 
+.panel2-standard-user[
+
+```
+Simple feature collection with 436 features and 12 fields
+geometry type:  POINT
+dimension:      XY
+bbox:           xmin: -123.1193 ymin: -37.814 xmax: 174.7667 ymax: 60.16925
+geographic CRS: WGS 84
+First 10 features:
+           name             name_long iso_a3 pop1950 pop1960 pop1970 pop1980
+2         Kabul                 Kabul    AFG  170784  285352  471891  977824
+8       Algiers El Djazair  (Algiers)    DZA  516450  871636 1281127 1621442
+13       Luanda                Luanda    AGO  138413  219427  459225  771349
+16 Buenos Aires          Buenos Aires    ARG 5097612 6597634 8104621 9422362
+17      Cordoba               Cordoba    ARG  429249  605309  809794 1009521
+25      Rosario               Rosario    ARG  554483  671349  816230  953491
+32      Yerevan               Yerevan    ARM  341432  537759  778158 1041587
+33     Adelaide              Adelaide    AUS  429277  571822  850168  971856
+34     Brisbane              Brisbane    AUS  441718  602999  904777 1134833
+37    Melbourne             Melbourne    AUS 1331966 1851220 2499109 2839019
+    pop1990  pop2000  pop2010  pop2020  pop2030                    geometry
+2   1549320  2401109  3722320  5721697  8279607   POINT (69.17246 34.52889)
+8   1797068  2140577  2432023  2835218  3404575     POINT (3.04197 36.7525)
+13  1390240  2591388  4508434  6836849 10428756   POINT (13.23432 -8.83682)
+16 10513284 12406780 14245871 15894307 16956491 POINT (-58.40037 -34.60508)
+17  1200168  1347561  1459268  1562509  1718192  POINT (-64.18105 -31.4135)
+25  1083819  1152387  1298073  1453814  1606993 POINT (-60.63932 -32.94682)
+32  1174524  1111301  1065597  1023703  1057459     POINT (44.51462 40.182)
+33  1081618  1141623  1217990  1320783  1505422  POINT (138.5986 -34.92866)
+34  1381306  1666203  2033617  2388517  2721325  POINT (153.0281 -27.46794)
+37  3154314  3460541  3951216  4500501  5070873    POINT (144.9633 -37.814)
+```
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+* filter(iso_a3 == "AUS")
+```
+]
+ 
+.panel2-standard-user[
+
+```
+Simple feature collection with 5 features and 12 fields
+geometry type:  POINT
+dimension:      XY
+bbox:           xmin: 115.8525 ymin: -37.814 xmax: 153.0281 ymax: -27.46794
+geographic CRS: WGS 84
+       name name_long iso_a3 pop1950 pop1960 pop1970 pop1980 pop1990 pop2000
+1  Adelaide  Adelaide    AUS  429277  571822  850168  971856 1081618 1141623
+2  Brisbane  Brisbane    AUS  441718  602999  904777 1134833 1381306 1666203
+3 Melbourne Melbourne    AUS 1331966 1851220 2499109 2839019 3154314 3460541
+4     Perth     Perth    AUS  310759  409131  687856  921623 1194665 1432387
+5    Sydney    Sydney    AUS 1689935 2134673 2892477 3252111 3631940 4052499
+  pop2010 pop2020 pop2030                   geometry
+1 1217990 1320783 1505422 POINT (138.5986 -34.92866)
+2 2033617 2388517 2721325 POINT (153.0281 -27.46794)
+3 3951216 4500501 5070873   POINT (144.9633 -37.814)
+4 1697517 2036118 2329184 POINT (115.8525 -31.94784)
+5 4364380 4729406 5300933 POINT (151.2073 -33.86785)
+```
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+  filter(iso_a3 == "AUS") -&gt;  
+* metro_australia
+```
+]
+ 
+.panel2-standard-user[
+
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+  filter(iso_a3 == "AUS") -&gt;  
+  metro_australia  
+
+## Setting the mode as "Plot" will allow us to create a static map
+*tmap_mode("plot")
+
+*World
+```
+]
+ 
+.panel2-standard-user[
+
+```
+Simple feature collection with 177 features and 15 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: -16656120 ymin: -8460601 xmax: 16656120 ymax: 8375779
+CRS:            +proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs
+First 10 features:
+   iso_a3                   name           sovereignt               continent
+1     AFG            Afghanistan          Afghanistan                    Asia
+2     AGO                 Angola               Angola                  Africa
+3     ALB                Albania              Albania                  Europe
+4     ARE   United Arab Emirates United Arab Emirates                    Asia
+5     ARG              Argentina            Argentina           South America
+6     ARM                Armenia              Armenia                    Asia
+7     ATA             Antarctica           Antarctica              Antarctica
+8     ATF Fr. S. Antarctic Lands               France Seven seas (open ocean)
+9     AUS              Australia            Australia                 Oceania
+10    AUT                Austria              Austria                  Europe
+                  area  pop_est pop_est_dens                    economy
+1    652860.000 [km^2] 28400000 4.350090e+01  7. Least developed region
+2   1246700.000 [km^2] 12799293 1.026654e+01  7. Least developed region
+3     27400.000 [km^2]  3639453 1.328268e+02       6. Developing region
+4     71252.172 [km^2]  4798491 6.734519e+01       6. Developing region
+5   2736690.000 [km^2] 40913584 1.495003e+01    5. Emerging region: G20
+6     28470.000 [km^2]  2967004 1.042151e+02       6. Developing region
+7  12259213.973 [km^2]     3802 3.101341e-04       6. Developing region
+8      7257.455 [km^2]      140 1.929051e-02       6. Developing region
+9   7682300.000 [km^2] 21262641 2.767744e+00 2. Developed region: nonG7
+10    82523.000 [km^2]  8210281 9.949082e+01 2. Developed region: nonG7
+                income_grp gdp_cap_est life_exp well_being footprint inequality
+1            5. Low income    784.1549   59.668        3.8      0.79 0.42655744
+2   3. Upper middle income   8617.6635       NA         NA        NA         NA
+3   4. Lower middle income   5992.6588   77.347        5.5      2.21 0.16513372
+4  2. High income: nonOECD  38407.9078       NA         NA        NA         NA
+5   3. Upper middle income  14027.1261   75.927        6.5      3.14 0.16423830
+6   4. Lower middle income   6326.2469   74.446        4.3      2.23 0.21664810
+7  2. High income: nonOECD 200000.0000       NA         NA        NA         NA
+8  2. High income: nonOECD 114285.7143       NA         NA        NA         NA
+9     1. High income: OECD  37634.0832   82.052        7.2      9.31 0.08067825
+10    1. High income: OECD  40132.6093   81.004        7.4      6.06 0.07129351
+        HPI                       geometry
+1  20.22535 MULTIPOLYGON (((5310471 451...
+2        NA MULTIPOLYGON (((1531585 -77...
+3  36.76687 MULTIPOLYGON (((1729835 521...
+4        NA MULTIPOLYGON (((4675864 313...
+5  35.19024 MULTIPOLYGON (((-5017766 -6...
+6  25.66642 MULTIPOLYGON (((3677241 513...
+7        NA MULTIPOLYGON (((-3403793 -8...
+8        NA MULTIPOLYGON (((5550200 -59...
+9  21.22897 MULTIPOLYGON (((12288137 -5...
+10 30.47822 MULTIPOLYGON (((1371802 588...
+```
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+  filter(iso_a3 == "AUS") -&gt;  
+  metro_australia  
+
+## Setting the mode as "Plot" will allow us to create a static map
+tmap_mode("plot")  
+
+World %&gt;%  
+## Here we will filter the "World" set down to just Australia as well
+* filter(name == "Australia")
+```
+]
+ 
+.panel2-standard-user[
+
+```
+Simple feature collection with 1 feature and 15 fields
+geometry type:  MULTIPOLYGON
+dimension:      XY
+bbox:           xmin: 10046010 ymin: -5409508 xmax: 13812740 ymax: -1401394
+CRS:            +proj=eck4 +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs
+  iso_a3      name sovereignt continent           area  pop_est pop_est_dens
+1    AUS Australia  Australia   Oceania 7682300 [km^2] 21262641     2.767744
+                     economy           income_grp gdp_cap_est life_exp
+1 2. Developed region: nonG7 1. High income: OECD    37634.08   82.052
+  well_being footprint inequality      HPI                       geometry
+1        7.2      9.31 0.08067825 21.22897 MULTIPOLYGON (((12288137 -5...
+```
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+  filter(iso_a3 == "AUS") -&gt;  
+  metro_australia  
+
+## Setting the mode as "Plot" will allow us to create a static map
+tmap_mode("plot")  
+
+World %&gt;%  
+## Here we will filter the "World" set down to just Australia as well
+  filter(name == "Australia") %&gt;%  
+## Here we decide the projection type and create polygon shape to
+## represent the country
+* tm_shape(shp = .,
+*          projection = "+proj=merc") +
+*   tm_polygons("name",
+*               legend.show = F)
+```
+]
+ 
+.panel2-standard-user[
+&lt;img src="AUS_tmap_files/figure-html/standard_user_06_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Building a Simple Map
+.panel1-standard-user[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+## We will be using data from "world" and "Metro"
+data(World, metro)  
+
+## We will filter the metro datasets down so that we only have
+## incidences within Australia
+metro %&gt;%  
+  filter(iso_a3 == "AUS") -&gt;  
+  metro_australia  
+
+## Setting the mode as "Plot" will allow us to create a static map
+tmap_mode("plot")  
+
+World %&gt;%  
+## Here we will filter the "World" set down to just Australia as well
+  filter(name == "Australia") %&gt;%  
+## Here we decide the projection type and create polygon shape to
+## represent the country
+  tm_shape(shp = .,  
+           projection = "+proj=merc") +  
+    tm_polygons("name",  
+                legend.show = F) +  
+## Finally we add the datapoints representing cities in Australia
+* tm_shape(metro_australia) +
+*   tm_symbols(col = "orange",
+*              size = "pop2020",
+*              scale = 1,
+*              legend.size.show = T)
+```
+]
+ 
+.panel2-standard-user[
+&lt;img src="AUS_tmap_files/figure-html/standard_user_07_output-1.png" width="432" /&gt;
+]
+
+&lt;style&gt;
+.panel1-standard-user {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-standard-user {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-standard-user {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+## Transforming into an Interactive Map
+--
+
+- Turning a static map into an interactive one is extremely easy with tmap.
+--
+
+- Simply change the tmap_mode() from "plot" to "view", that's all there is to it.
+--
+
+- After we've changed the map mode, you can go ahead and explore the new interactive map. Click-and-drag, scroll in-or-out, toggle layers, and click on data points for more information.
+
+---
+
+count: false
+ 
+## Transforming to Interactive
+.panel1-interactive-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, metro)  
+
+metro_australia &lt;- metro %&gt;% filter(iso_a3 == "AUS")  
+
+## Swapping "plot" for "view" transforms the map from static
+## to interactive
+*tmap_mode("plot")
+
+## Simple as that. Try exploring the map now, drag, scroll, click
+
+World %&gt;%  
+  filter(name == "Australia") %&gt;%  
+  tm_shape(shp = .,  
+           projection = "+proj=merc") +  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(metro_australia) +  
+    tm_symbols(col = "orange",  
+               size = "pop2020",  
+               scale = 1,  
+               legend.size.show = T)  
+```
+]
+ 
+.panel2-interactive-rotate[
+&lt;img src="AUS_tmap_files/figure-html/interactive_rotate_01_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Transforming to Interactive
+.panel1-interactive-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, metro)  
+
+metro_australia &lt;- metro %&gt;% filter(iso_a3 == "AUS")  
+
+## Swapping "plot" for "view" transforms the map from static
+## to interactive
+*tmap_mode("view")
+
+## Simple as that. Try exploring the map now, drag, scroll, click
+
+World %&gt;%  
+  filter(name == "Australia") %&gt;%  
+  tm_shape(shp = .,  
+           projection = "+proj=merc") +  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(metro_australia) +  
+    tm_symbols(col = "orange",  
+               size = "pop2020",  
+               scale = 1,  
+               legend.size.show = T)  
+```
+]
+ 
+.panel2-interactive-rotate[
+<div id="htmlwidget-5a258b1688c20b93dfcc" style="width:432px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5a258b1688c20b93dfcc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"createMapPane","args":["tmap402",402]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addPolygons","args":[[[[{"lng":[145.397978143495,146.364120721624,146.908583612251,147.689259474884,148.289067824496,148.359864536736,148.017301467073,147.914051955354,147.564564243764,146.870343052355,146.663327264594,146.04837772032,145.431929559511,145.295090366802,144.718071323831,144.74375451068,145.397978143495],"lat":[-40.7925485166059,-41.1376954078834,-41.0005461565807,-40.8082581520227,-40.8754375140021,-42.0624451637465,-42.4070236142686,-43.2115223121885,-42.9376888974739,-43.6345972633621,-43.5808537737785,-43.5497445615389,-42.6937761370563,-42.0336097145276,-41.1625517718157,-40.7039751116577,-40.7925485166059]}],[{"lng":[143.5618111513,143.922099237239,144.563713820575,144.894908075134,145.374723748964,145.271991001567,145.485259637636,145.637033319277,145.888904250268,146.160308872665,146.063673944279,146.38747846902,147.471081577748,148.177601760043,148.848413527623,148.717465448196,149.289420200802,149.678337030231,150.077382440389,150.482939081015,150.727265252891,150.899554478152,151.609175246384,152.073539666959,152.855197381806,153.136162144177,153.16194868389,153.092908970349,153.569469028944,153.5121081891,153.339095493787,153.069241164359,153.089601678682,152.891577590139,152.450002476205,151.709117466437,151.343971795862,151.010555454715,150.714139439089,150.328219842733,150.075212030232,149.946124302367,149.997283970336,149.423882277626,148.304622430616,147.381733026315,146.922122837511,146.317921991155,145.489652134381,144.876976353128,145.032212355733,144.485682407814,143.609973586196,142.745426873953,142.178329705982,141.606581659105,140.638578729413,139.992158237874,139.806588169514,139.574147577065,139.082808058834,138.120747918856,138.449461704665,138.207564325107,137.719170363516,136.829405552315,137.352371047109,137.503886346588,137.890116001538,137.810327590079,136.99683719294,136.372069126532,135.989043410384,135.208212518454,135.239218377829,134.613416782775,134.085903761939,134.273902622617,132.99077680881,132.288080682505,131.326330601121,129.53579389864,128.240937534702,127.102867466338,126.148713820501,125.088623488466,124.221647983905,124.028946567889,123.659666782731,122.811036411634,122.183064406423,121.299190708503,120.580268182458,119.893695103028,119.298899367349,119.007340936358,118.505717808101,118.02497195849,117.295507440257,116.625109084135,115.56434695848,115.02680870978,115.048616164207,115.545123325667,115.714673700017,115.679378696761,115.801645135564,115.689610630355,115.160909051577,114.997043084779,115.040037876446,114.641974318502,114.616497837382,114.173579136208,114.048883905088,113.477497593237,113.338953078263,113.77835778204,113.440962355607,113.936901076312,114.232852004047,114.216160516417,113.721255324358,113.625343866024,113.393523390763,113.502043898576,113.706992629045,113.843418410296,113.736551548316,114.149756300922,114.225307244933,114.647762078919,115.460167270979,115.947372674627,116.711615431792,117.166316359528,117.441545037914,118.229558953933,118.836085239743,118.987807244952,119.252493931151,119.805225050945,120.856220330897,121.399856398607,121.655137974129,122.241665480642,122.286623976736,122.312772251475,123.012574497572,123.433789097183,123.859344517107,123.503242222183,123.817073195492,124.2582865744,124.379726190286,124.92615278534,125.167275018414,125.670086704614,125.685796340031,126.125149367376,126.14282270722,126.582589146024,127.065867140817,127.804633416862,128.359689976109,128.985543247596,129.62147342338,129.409600050983,129.888640578329,130.339465773643,130.183506300986,130.617795037967,131.22349450086,131.73509118055,132.575298293183,132.557211541881,131.824698114144,132.357223748911,133.019560581596,133.550845981989,134.393068475482,134.678632440327,135.298491245668,135.882693312728,136.258380975489,136.492475213772,136.951620314685,136.685124953356,136.305406528875,135.961758254134,136.077616815333,135.783836297753,135.428664178611,135.500184360903,136.295174595281,137.06536014216,137.580470819245,138.303217401279,138.585164015863,139.108542922116,139.260574985918,140.215245396078,140.875463495039,141.071110467696,141.274095493739,141.398222284104,141.702183058845,141.563380161709,141.635520461188,141.519868605719,141.650920038011,141.842691278246,141.686990187751,141.928629185148,142.118488397388,142.143706496346,142.515260044525,142.797310011974,142.866763136974,143.115946893486,143.158631626559,143.5221236513,143.597157830988,143.5618111513],"lat":[-13.7636556942322,-14.548310642152,-14.1711760392859,-14.5944576961886,-14.9849764950183,-15.4282052547857,-16.2856722958047,-16.7849183081766,-16.9069263648176,-17.7616545549252,-18.2800725236772,-18.9582740210758,-19.4807227515466,-19.9559392229027,-20.3912098120972,-20.6334689266814,-21.260510756111,-22.3425118954383,-22.1227837053332,-22.5561422665329,-22.4024048804645,-23.4622368303385,-24.0762561988306,-24.457886651306,-25.2675013160228,-26.071173191026,-26.6413192685023,-27.2602995744943,-28.110066827102,-28.9950774065326,-29.4582015927323,-30.3502401669547,-30.9236418596654,-31.6404456519859,-32.5500025367552,-33.0413420549863,-33.8160234514738,-34.3103602027779,-35.1734599749168,-35.6718791643719,-36.4202055803905,-37.1090524228412,-37.4252605120352,-37.7726811663335,-37.8090613746669,-38.2192172177675,-38.6065320777951,-39.0357565244114,-38.5937679990191,-38.4174480120391,-37.896187839511,-38.0853235816993,-38.8094654274053,-38.5382675107375,-38.3800342750598,-38.3085140927679,-38.0193327776626,-37.4029362932851,-36.6436027971883,-36.1383623186707,-35.7327540016118,-35.6122962379394,-35.1272612444479,-34.3847225888459,-35.076825046531,-35.2605347633286,-34.7073385556441,-34.1302678362407,-33.6404786109783,-32.9000070126681,-33.7527714983486,-34.0947661272562,-34.8901180966605,-34.4786703427526,-33.9479533831149,-33.2227780087631,-32.8480721982147,-32.6172335751669,-32.0112240536801,-31.9826469866227,-31.495803318001,-31.5904228655274,-31.9484888648778,-32.282266941051,-32.2159660784205,-32.7287513160528,-32.959486586236,-33.4838473447017,-33.8901791318127,-33.9144670549898,-34.0034021949642,-33.8210360654061,-33.9301766904066,-33.9760653622818,-34.5093661435339,-34.4641492652785,-34.7468193499151,-35.0647327613747,-35.0254586728329,-35.0250969378068,-34.3864279111115,-34.1965170224389,-33.623425388322,-33.4872579892329,-33.2595716285549,-32.9003687476941,-32.2050623512069,-31.6124370256837,-30.6015943336223,-30.030724786094,-29.4610954729407,-28.8102308082246,-28.5163986142129,-28.1180766741072,-27.334765313427,-26.5431340471477,-26.1165450985783,-26.549025160429,-25.621278171493,-25.9112346330827,-26.2984461402457,-25.7862810198009,-24.998938897402,-24.683971042583,-24.3847644996131,-23.8063501929701,-23.5602153459639,-23.0599874813786,-22.4754753557252,-21.7558810360609,-22.5174882951785,-21.8295199520768,-21.4951734351484,-21.0686878394436,-20.7016818173067,-20.6235987281137,-20.7468986955621,-20.3742082658731,-20.2633106421747,-20.0442025692572,-19.9529419898297,-19.9765064429549,-19.6837077775891,-19.2397555477696,-18.7053178850071,-18.1976486141717,-17.7986032040139,-17.2549671363034,-16.4051998836958,-17.2685580379962,-17.0690353329172,-16.5965060360403,-16.111316013252,-16.3279436174195,-15.567059828354,-15.0751001929353,-14.68039560309,-14.510070082256,-14.2306556128538,-14.3473409969689,-14.0959868303012,-13.9527914364204,-13.8179676245709,-14.276906019755,-14.8691696102522,-14.8759908993147,-14.9697836239245,-14.420669854391,-13.6187033016535,-13.3573755835535,-13.1075200334223,-12.5363921037325,-12.1836487769081,-12.3024528947472,-12.114040622611,-11.6030123836767,-11.2737818335451,-11.1285193823726,-11.3764112280768,-11.7865153947451,-12.0423654110222,-11.9411829565947,-12.248606052299,-11.9622669409698,-12.0493417293816,-11.8572087541204,-12.3519589168827,-12.887223402562,-13.2912297502199,-13.3245093726159,-13.7242782528258,-14.2239893530882,-14.7154322241839,-14.9977405737944,-15.5502649878591,-15.8707622209333,-16.215082289294,-16.8076042619526,-16.8066224097391,-17.0626791317453,-17.3716008439861,-17.71080494555,-17.3690686988039,-16.8320472144267,-16.3888701310916,-15.8405315080426,-15.0449211564769,-14.5613331030895,-14.2703947892863,-13.6980783016538,-12.9446875952706,-12.7415475399312,-12.4076144344611,-11.8774659155788,-11.3280420874516,-11.0427365047681,-10.6681857235166,-11.1573548315915,-11.7847067196149,-11.9056295711779,-12.3256556128462,-12.8343584123274,-13.4004220516526,-13.7636556942322]}]]],"AUS",".",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":1,"fill":true,"fillColor":"#B8E3BF","fillOpacity":1,"dashArray":"none","smoothFactor":1,"noClip":false},"<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>AUS<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>name<\/nobr><\/td><td align=\"right\"><nobr>Australia<\/nobr><\/td><\/tr><\/table><\/div>",null,"AUS",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircles","args":[[-33.86785,-37.814,-27.46794,-31.947841,-34.92866],[151.20732,144.96332,153.02809,115.852514,138.59863],[60891.0013475845,59399.1524661222,43272.6991567378,39953.1741833402,32178.4819692794],["Sydney","Melbourne","Brisbane","Perth","Adelaide"],"metro_australia",{"interactive":true,"className":"","pane":"tmap402","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#FFA500","#FFA500","#FFA500","#FFA500","#FFA500"],"fillOpacity":[1,1,1,1,1]},["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Sydney<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>pop2020<\/nobr><\/td><td align=\"right\"><nobr>4,729,406<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Melbourne<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>pop2020<\/nobr><\/td><td align=\"right\"><nobr>4,500,501<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Brisbane<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>pop2020<\/nobr><\/td><td align=\"right\"><nobr>2,388,517<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Perth<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>pop2020<\/nobr><\/td><td align=\"right\"><nobr>2,036,118<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Adelaide<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>pop2020<\/nobr><\/td><td align=\"right\"><nobr>1,320,783<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Sydney","Melbourne","Brisbane","Perth","Adelaide"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],[".","metro_australia"],{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[-43.6345972633621,-10.6681857235166],"lng":[113.338953078263,153.569469028944]},"fitBounds":[-43.6345972633621,113.338953078263,-10.6681857235166,153.569469028944,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+&lt;style&gt;
+.panel1-interactive-rotate {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-interactive-rotate {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-interactive-rotate {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+## Bonus Content: Map Projections
+--
+
+- By default, the projection type will be defined by the projection used by the shp object itself. However, its easy to manually switch out projections in tmap as an argument of tm_shape.
+--
+
+- We will rotate through a few good projection types on our first static map.
+
+---
+
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+*          projection = "+proj=merc") +
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_01_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+*          projection = "+proj=robin") +  #ROTATE
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_02_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+*          projection = "+proj=wag1") +  #ROTATE
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_03_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+*          projection = "+proj=igh") +    #ROTATE
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_04_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+*          projection = "+proj=nicol") +   #ROTATE
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_05_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+*          projection = "+proj=lagrng") +  #ROTATE
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_06_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+*          projection = "+proj=vandg") +    #ROTATE
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_07_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+*          projection = "+proj=tobmerc") +  #ROTATE
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_08_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+*          projection = "+proj=poly") +   #ROTATE
+## Orthographic  
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_09_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+*          projection = "+proj=ortho") +  #ROTATE
+## Lambert Equal Area Conic  
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_10_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+## Projections
+.panel1-worldmap-rotate[
+
+```r
+library(tidyverse)  
+library(tmap)  
+
+data(World, rivers)  
+
+tmap_mode("plot")  
+
+World %&gt;%  
+  tm_shape(shp = .,  
+## Mercator
+## Robinson
+## Wagner I  
+## Interrupted Goode Homolosine  
+## Nicolosi Globular  
+## Lagrange  
+## Van Der Grinten I  
+## Tobler-Mercator  
+## American Polyconic  
+## Orthographic  
+## Lambert Equal Area Conic  
+*          projection = "+proj=leac") +     #ROTATE
+    tm_polygons("name",  
+                legend.show = F) +  
+  tm_shape(rivers) +  
+    tm_lines("lightblue",  
+             lwd = "strokelwd",  
+             scale = 3,  
+             legend.lwd.show = F)  
+```
+]
+ 
+.panel2-worldmap-rotate[
+&lt;img src="AUS_tmap_files/figure-html/worldmap_rotate_11_output-1.png" width="432" /&gt;
+]
+
+&lt;style&gt;
+.panel1-worldmap-rotate {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-worldmap-rotate {
+  color: black;
+  width: 49%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-worldmap-rotate {
+  color: black;
+  width: NA%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+---
+
+## Additional Information &amp; Options
+--
+
+- Different projections are better suited to different maps. 
+--
+
+- For example, if producing a map of Alaska then the "Alaska Grid" or "Alaska Series E" projection type would be typical. 
+--
+
+- When presenting a large region or the world at large, however, "Mercator" or "Robinson" are more reliable. 
+--
+
+- Find more projection types at: https://proj.org/operations/projections/index.html
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:10",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

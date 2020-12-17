@@ -1,0 +1,203 @@
+---
+title: "Creating an Interactive Map"
+subtitle: "Getting Started with tmap"
+author: "Conner Surrency, July 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, tamu, tamu-fonts]
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+
+```{r setup, echo=F}
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = FALSE, fig.retina = 3)
+
+library(flipbookr)
+```
+
+
+# What Are We Doing?
+--
+
+- We are going to walk through the process of creating a simple interactive map using tmap.
+--
+
+- We will start by walking through the steps of creating a simple standard map. After that, we'll transform it into an interactive one.
+--
+
+- In this case, we will narrow the data down to only information related to Australia, and then display each city in the nation based on its population. 
+
+---
+
+## Set-Up
+--
+
+We will need the following packages (and data from them) installed:  
+--
+
+- tidyverse
+--
+
+- tmap
+
+---
+
+`r chunk_reveal(chunk_name = "standard", break_type = "user", widths = c(50,50), title="## Building a Simple Map")`
+
+```{r standard,include=F}
+library(tidyverse) 
+library(tmap) 
+
+## We will be using data from "world" and "Metro"
+data(World, metro) 
+
+## We will filter the metro datasets down so that we only have 
+## incidences within Australia
+metro %>% #BREAK
+  filter(iso_a3 == "AUS") -> #BREAK
+  metro_australia #BREAK
+
+## Setting the mode as "Plot" will allow us to create a static map
+tmap_mode("plot") 
+
+World %>%    #BREAK
+## Here we will filter the "World" set down to just Australia as well
+  filter(name == "Australia") %>%  #BREAK
+## Here we decide the projection type and create polygon shape to 
+## represent the country
+  tm_shape(shp = .,  
+           projection = "+proj=merc") + 
+    tm_polygons("name", 
+                legend.show = F) +   #BREAK
+## Finally we add the datapoints representing cities in Australia
+  tm_shape(metro_australia) +
+    tm_symbols(col = "orange", 
+               size = "pop2020", 
+               scale = 1, 
+               legend.size.show = T) #BREAK
+```
+
+---
+
+## Transforming into an Interactive Map
+--
+
+- Turning a static map into an interactive one is extremely easy with tmap.
+--
+
+- Simply change the tmap_mode() from "plot" to "view", that's all there is to it.
+--
+
+- After we've changed the map mode, you can go ahead and explore the new interactive map. Click-and-drag, scroll in-or-out, toggle layers, and click on data points for more information.
+
+---
+
+`r chunk_reveal(chunk_name = "interactive", break_type = "rotate", widths = c(50,50), title="## Transforming to Interactive")`
+
+```{r interactive,include=F}
+library(tidyverse) 
+library(tmap) 
+
+data(World, metro) 
+
+metro_australia <- metro %>% filter(iso_a3 == "AUS") 
+
+## Swapping "plot" for "view" transforms the map from static 
+## to interactive
+tmap_mode("plot") #ROTATE
+tmap_mode("view") #ROTATE
+
+## Simple as that. Try exploring the map now, drag, scroll, click
+
+World %>%   
+  filter(name == "Australia") %>%  
+  tm_shape(shp = .,  
+           projection = "+proj=merc") + 
+    tm_polygons("name",  
+                legend.show = F) +   
+  tm_shape(metro_australia) +
+    tm_symbols(col = "orange", 
+               size = "pop2020", 
+               scale = 1, 
+               legend.size.show = T) 
+```
+---
+## Bonus Content: Map Projections
+--
+
+- By default, the projection type will be defined by the projection used by the shp object itself. However, its easy to manually switch out projections in tmap as an argument of tm_shape.
+--
+
+- We will rotate through a few good projection types on our first static map.
+
+---
+
+`r chunk_reveal(chunk_name = "worldmap", break_type = "rotate", widths = c(50,50), title="## Projections")`
+
+```{r worldmap, eval = F, echo = F}
+library(tidyverse) 
+library(tmap) 
+
+data(World, rivers) 
+
+tmap_mode("plot") 
+
+World %>%   
+  tm_shape(shp = .,  
+## Mercator
+           projection = "+proj=merc") + #ROTATE 
+## Robinson
+           projection = "+proj=robin") +  #ROTATE 
+## Wagner I
+           projection = "+proj=wag1") +  #ROTATE 
+## Interrupted Goode Homolosine
+           projection = "+proj=igh") +    #ROTATE 
+## Nicolosi Globular
+           projection = "+proj=nicol") +   #ROTATE 
+## Lagrange
+           projection = "+proj=lagrng") +  #ROTATE
+## Van Der Grinten I
+           projection = "+proj=vandg") +    #ROTATE 
+## Tobler-Mercator
+           projection = "+proj=tobmerc") +  #ROTATE 
+## American Polyconic
+           projection = "+proj=poly") +   #ROTATE 
+## Orthographic
+           projection = "+proj=ortho") +  #ROTATE 
+## Lambert Equal Area Conic
+           projection = "+proj=leac") +     #ROTATE 
+    tm_polygons("name",  
+                legend.show = F) +   
+  tm_shape(rivers) +
+    tm_lines("lightblue", 
+             lwd = "strokelwd", 
+             scale = 3, 
+             legend.lwd.show = F) 
+
+```
+
+
+
+---
+
+## Additional Information & Options
+--
+
+- Different projections are better suited to different maps. 
+--
+
+- For example, if producing a map of Alaska then the "Alaska Grid" or "Alaska Series E" projection type would be typical. 
+--
+
+- When presenting a large region or the world at large, however, "Mercator" or "Robinson" are more reliable. 
+--
+
+- Find more projection types at: https://proj.org/operations/projections/index.html
+
+
