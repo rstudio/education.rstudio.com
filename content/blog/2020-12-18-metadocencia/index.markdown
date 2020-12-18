@@ -7,8 +7,9 @@ author:
 date: '2020-12-18'
 categories:
   - learn
+  - teach
 description: |
-  The birth and growth of Metadocencia in Latin America
+  The birth and growth of MetaDocencia in Latin America
   to nurture a community of Spanish-speaking educators in 2020 and beyond.
 slug: metadocencia
 photo:
