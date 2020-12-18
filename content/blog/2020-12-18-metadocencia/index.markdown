@@ -4,7 +4,7 @@ author:
   - Yanina Bellini Saibene
   - Paola Corrales
   - Patricia Loto
-date: '2020-12-17'
+date: '2020-12-18'
 categories:
   - learn
 description: |
@@ -18,11 +18,15 @@ photo:
 
 ## What?
 
-On March 16th, 2020, all the in-person classes and training opportunities were canceled in Argentina due to the pandemic with no clear indication on when they will resume. Hence a group of academics, researchers, and teachers with deep ties to the Latin American research and teaching community that have been working in the R community together co-founded [MetaDocencia](https://www.metadocencia.org/).
+On March 16th, 2020, all the in-person classes and training opportunities were canceled in Argentina due to the pandemic with no clear indication on when they will resume. Hence a group of academics, researchers, and teachers with deep ties to the Latin American research and teaching community that have been working in the R community together co-founded [MetaDocencia](https://www.metadocencia.org/). 
 
 MetaDocencia means *MetaTeaching* in Spanish. Our mission *is to nurture a community of Spanish-speaking educators by teaching concrete, evidence-based, and student-centered educational methods.*
 
 *We collaboratively develop open, reusable, and accessible resources to foster effective training practices.*
+
+You can read more about our mission and materials (in both Spanish and English) on our website <https://www.metadocencia.org/>:
+<a href="https://www.metadocencia.org/" target="_blank"><img src="es-en.png" width="100%" /></a>
+
 
 ## Why?
 
