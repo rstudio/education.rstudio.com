@@ -20,7 +20,7 @@ We welcomed 10 new instructors to our community in December 2020:
 -   [Jordan Creed](https://education.rstudio.com/trainers/people/creed+jordan)
 -   [Mandip Mistry](https://education.rstudio.com/trainers/people/mistry+mandip)
 -   [Vebashini Naidoo](https://education.rstudio.com/trainers/people/naidoo+vebashini)
--   [Turkuler Ozgumus](https://education.rstudio.com/trainers/people/ozgumus+turkuler)
+-   [Türküler Özgümüş](https://education.rstudio.com/trainers/people/ozgumus+turkuler)
 -   [Astrid Radermacher](https://education.rstudio.com/trainers/people/radermacher+astrid)
 -   [Amanyiraho Robinson](https://education.rstudio.com/trainers/people/robinson+amanyiraho)
 -   [Barret Schloerke](https://education.rstudio.com/trainers/people/schloerke+barret)
