@@ -40,3 +40,5 @@ and as it ends,
 many of us will be thinking of family, friends, and colleagues who are no longer with us.
 We hope you and yours are safe and well,
 and we wish you the best for 2021.
+
+![](./flags.png)
