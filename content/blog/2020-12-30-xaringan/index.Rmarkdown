@@ -1,5 +1,5 @@
 ---
-title: 'Sharing your work with xaringan'
+title: 'Teaching to share your work with xaringan'
 author:
   - '[Silvia P. Canelón](https://silvia.rbind.io/)'
 date: '2020-12-30'
@@ -13,10 +13,70 @@ photo:
   url: https://unsplash.com/photos/w6n_GLhIzG4
 ---
 
-## Please use h2 level headers 
+## Components to teach xaringan
 
-### And h3 level headers
+### Must-haves (~1 hr)
+- remark.js = JavaScript + Markdown
+- xaringan = remark.js + Rmd
+- YAML
+  - How is the output different from a more common one like `html_document`?
+- Slide structure
+  - `{r setup}` chunk
+  - `---` to start first slide and separate new ones
+  - `class:`
+- Slide preview
+  - With Knit button or `xaringan::infinite_moon_reader()` (or `xaringan::inf_mr()`)
+- What's familiar from Markdown vs. new from remark.js
+  - Headings are familiar
+  - `![]` is familiar
+  - Making bullet points is familiar (`*`, `-`, `+`)
+  - `---` is not familiar
+  - `--` is not familiar
+  - `???` is not familiar
+- Placement of content
+  - Align entire slide
+  - Align some content
+  - `.pull-left[]` and `.pull-right[]`
+  - `.left-column[]` and `.right-column[]`
+  - `.footnote[]`, particularly for academic audience
+- Adding pictures
+  - Markdown `![]`
+  - `knitr::include_graphics()`
+  - Recommended image path
+  - Examples of background size (e.g. cover, contain)
+- R content
+  - Tables (e.g. direct output, HTML, DT, gt)
+  - Plots (e.g issue with sizing and how to fix)
+- Presenting
+  - Presenter view
+  - Presenter notes (i.e. `???`)
+  - Full-screen (F key)
+  - Clone screen (C key) (in the context of a dual-monitor setup)
 
-#### Use h4 sparingly
+### Nice-to-haves (~1.5 hrs)
+- CSS styles the slides
+  - I would maybe consider this a must-have if you're explicitly using a template and need to let the audience briefly know what it is and what it's doing
+- Adding pictures
+  - HTML
+  - Examples of background position (e.g. 90% 50%)
+- R content
+  - plots (e.g. side-by-side)
+- Sharing slides
+  - `self_contained: TRUE` in YAML + Knit
 
-can't spell, silly add to trigger new netlify deploy link!
+### If there's extra time (2 hrs)
+- Slide structure
+  - `name:`
+  - `template:`
+  - the hiding slides feature that I'm forgetting
+- Icons
+  - emojis from `emo::ji()`
+  - icons from Fontawesome
+  - icons from Academicons
+- Presenting
+  - Presentation timer
+- Sharing slides
+  - GitHub pages
+  - Netlify
+- [Tricks from xaringan Wiki for CSS]( https://github.com/yihui/xaringan/wiki#welcome)
+- [CSS/JS examples from remark.js](https://github.com/gnab/remark/wiki/HTML-CSS-JS-samples)
