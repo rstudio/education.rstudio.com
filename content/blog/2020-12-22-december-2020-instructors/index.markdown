@@ -9,7 +9,7 @@ tags:
   - certify
 description: |
   Welcome the latest cohort of instructors to complete certification.
-slug: november-2020-instructors
+slug: december-2020-instructors
 photo:
   url: https://unsplash.com/photos/6Jw8-WZd0TM
   author: Robert Zunikoff
