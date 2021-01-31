@@ -103,8 +103,9 @@ Watch the video embedded below and list feedback you would give the presenter ab
 4.  You may do your work in an R script or an R Markdown file, and may use one for the whole exam or one for each question as your prefer. Whichever you choose, you must send your final work to the examiner by email upon completion of the examination.
 5.  Please let the examiner know when you finish each part of each question so that they can check your work.
 
-### Question 1
+> August 2020: [Marly Gotti](http://www.marlygotti.com/) has created [a solution guide](https://github.com/marlycormar/tidyverse_sample_exam) for this exam.
 
+### Question 1
 
 The file [`at_health_facilities.csv`](./at_health_facilities.csv) contains a tidy dataset with four columns:
 -   The ISO3 code of the country that reported data.

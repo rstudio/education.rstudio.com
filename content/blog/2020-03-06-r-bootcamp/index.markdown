@@ -7,7 +7,7 @@ slug: r-bootcamp
 categories:
   - teach
   - learn
-tags: []
+tags: [online]
 author:
   - "[Ted Laderas](https://laderast.github.io/)"
   - "[Jessica Minnier](http://jessicaminnier.com/)"

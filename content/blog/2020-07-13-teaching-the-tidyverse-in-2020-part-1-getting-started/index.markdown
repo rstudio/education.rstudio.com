@@ -1,5 +1,5 @@
 ---
-title: "Teaching the Tidyverse in 2020 - Part 1: Getting Started"
+title: "Teaching the Tidyverse in 2020 - Part 1: Getting started"
 date: "2020-07-13"
 slug: teaching-the-tidyverse-in-2020-part-1-getting-started
 categories:
@@ -97,7 +97,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+## ── Attaching packages ──────────────────────────────────────── tidyverse 1.3.0 ──
 ```
 
 ```
@@ -108,7 +108,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ─────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ```

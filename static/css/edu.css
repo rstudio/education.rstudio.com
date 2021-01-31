@@ -131,3 +131,22 @@ sup {
   vertical-align: super;
   font-size: smaller;
 }
+
+h1 code,
+h2 code,
+h3 code,
+#TableOfContents ul li code{
+  font-size: 0.9em;
+}
+
+.bandContent h3 {
+  font-size: 1.4em;
+}
+
+.bandContent h4 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+
