@@ -5,7 +5,7 @@ author:
 date: '2021-02-08'
 categories:
 description: |
-  something here
+  My experiences with building webpages and websites using R Studio tools.
 photo:
   author: Raw Pixel
   url: https://www.rawpixel.com/image/2476061/free-illustration-image-pattern-william-morris-bird
@@ -31,13 +31,13 @@ I just looked back at my attempt and it's not as terrible as I initially thought
 
 ## Hello R Markdown and Netlify!
 
-Around that same time, I saw an advertisement for an R Studio webinar by Alison Hill and Desirée De Leon titled [Sharing on Short Notice: : How to Get Your Materials Online With R Markdown](https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/). Wow! The description sounded like just what I needed both for getting my personal website up and running and to help put R-related materials on the web in an easy way for my students. At the time, I was feeling overwhelmed with life (who wasn't?), so I didn't watch the webinar right away. Instead, I kept it open on a tab and tweeted out a reminder to myself:
+Around that same time, I saw an advertisement for an R Studio webinar by Alison Hill and Desirée De Leon titled [Sharing on Short Notice: How to Get Your Materials Online With R Markdown](https://rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/). Wow! The description sounded like just what I needed both for getting my personal website up and running and to help put R-related materials on the web in an easy way for my students. At the time, I was feeling overwhelmed with life (who wasn't?), so I didn't watch the webinar right away. Instead, I kept it open on a tab and tweeted out a reminder to myself:
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I want to use this now but just can&#39;t find the time. But thanks for sharing. I&#39;ve added it to the summer to-do list. <a href="https://t.co/aDfLkivOkr">https://t.co/aDfLkivOkr</a></p>&mdash; Dr. Lisa Lendway (@lisalendway) <a href="https://twitter.com/lisalendway/status/1245139228113227776?ref_src=twsrc%5Etfw">April 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
-Fast forward to mid-May 2020. My summer break had started, and one of the first things I did was finally watch the *Sharing on Short Notice* webinar. I loved their analogy of "Climbing R Markdown Mountain" and was surprised to learn that the two tools I had heard of, bookdown and blogdown, were two of the more complex tools. This webinar was also where I heard of [Netlify](https://www.netlify.com/) for the first time, and was excited about its ability to easily deploy a website.
+Fast forward to mid-May 2020. My summer break had started, and one of the first things I did was finally watch the *Sharing on Short Notice* webinar. I loved their analogy of "Climbing R Markdown Mountain" and was surprised to learn that the two tools I had heard of, bookdown and blogdown, were two of the more complex tools. This webinar was also where I heard of [Netlify](https://www.netlify.com/) (a platform for easily deploying a website) for the first time.
 
 <center>
 
@@ -68,7 +68,7 @@ By the end of my first quarter of teaching, I was happy with the material I had 
 
 Although I was again tempted by some of the other options, I decided against them for the following reasons:
 
-* Both blogdown and distill were going to require more thought than I had time for,  including potentially making changes to the R Markdown file. I also wanted to keep the same theme (albeit a bit plain) for anyone who was already using the webpages, especially my students, which might require changing some CSS - I wasn't ready to delve into that yet, either.   
+* Both blogdown and distill were going to require more thought than I had time for, including potentially making changes to the R Markdown file. I also wanted to keep the same theme (albeit a bit plain) for anyone who was already using the webpages, especially my students, which might require changing some CSS - I wasn't ready to delve into that yet, either.   
 
 * Using the bookdown package seemed like a good option, but it would also require some changes to the R Markdown files and I could not figure out how to nicely add the code download button at the top of each chapter so students (and others) could download the R Markdown file for each topic. 
 
@@ -110,7 +110,7 @@ After making the decision to go with distill to build my website, it was time to
 
 With these resources at hand and open in my web browser, I was able to get started on buildng the site. The first time I tried, I got stuck on the CSS theming (hence the recommendation to only modify the easy-to-modify selectors at first). Then, I re-read the [Create theme documentation](https://rstudio.github.io/distill/website.html#create-theme) (remember when I said to read that carefully the first time?), got a little help from [`@spcanelon`](https://twitter.com/spcanelon/status/1336320295129534464?s=20) on Twitter, and made a step-by-step guide for myself. The next day, I tried again, and had the website up and running within an hour! I documented this in detail on my first [blog post](https://lisalendway.netlify.app/posts/2020-12-09-buildingdistill/) on my distill website. The post also has embedded screencasts of me creating the site. 
 
-I took some time after the video to further play around with customization, especially colors, most of which are inspired by William Morris's [Strawberry Thief](https://en.wikipedia.org/wiki/Strawberry_Thief_(William_Morris)) textile. I'm happy with the website's unique look combined with the simplicity. Each blog post has its own folder of files, so it is easy to stay organized. I also like that blog posts are not re-rendered when the website is built. This means that I need to knit each blog post and build the site in order for that blog to be updated. This makes it easy to move on from an old blog post, and I don't have to worry about code in an old blog post breaking the website. I am starting to think that distill may be the tool I use for future course websites for all these reasons. 
+I took some time after the video to further play around with customization, especially colors, most of which are inspired by William Morris's [Strawberry Thief](https://en.wikipedia.org/wiki/Strawberry_Thief_(William_Morris)) textile. I'm happy with the website's unique look combined with the simplicity. Each blog post has its own folder of files, so it is easy to stay organized. I like that blog posts are not re-rendered when the website is built. So, you need to knit each blog post and build the site in order for that blog to be updated, but you don't have to worry about code in an old blog post breaking the website. I am starting to think that distill may be the tool I use for future course websites for all these reasons. 
 
 In conclusion, I hope I have given you some reason to check out distill for creating a website. Or maybe I've even helped you decide to use some of the simpler tools available. Either way, I wish you luck on your journey.
 
