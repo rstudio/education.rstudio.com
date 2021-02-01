@@ -5,7 +5,7 @@ author:
 date: '2021-02-08'
 categories:
 description: |
-  My experiences with building webpages and websites using R Studio tools.
+  My experiences with building webpages and websites using some of the simpler R Studio tools.
 photo:
   author: Raw Pixel
   url: https://www.rawpixel.com/image/2476061/free-illustration-image-pattern-william-morris-bird
