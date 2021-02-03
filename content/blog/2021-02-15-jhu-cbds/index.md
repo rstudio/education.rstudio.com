@@ -2,7 +2,7 @@
 title: "Online Educational Content Development: Pain Points & the Future"
 author: 
   - "Shannon Ellis"
-date: '2021-02-01'
+date: '2021-02-15'
 tags:
   - teach
   - online
