@@ -22,7 +22,7 @@ Then, like many in the US and other parts of the world experienced, the news cam
 
 <center>
 
-![My blogdown attempt](images/blogdown_start.png){ width=70% }
+![My blogdown attempt](images/blogdown_start.png)
 
 </center>
 
@@ -40,7 +40,7 @@ Fast forward to mid-May 2020. My summer break had started, and one of the first 
 
 <center>
 
-![Illustration from Sharing on Short Notice, A. Hill & D. De Leon](images/rmarkdown_mountain.png){ width=50% }
+![Illustration from Sharing on Short Notice, A. Hill & D. De Leon](images/rmarkdown_mountain.png)
 
 </center>
 
