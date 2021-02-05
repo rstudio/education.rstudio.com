@@ -1,9 +1,8 @@
 ---
-title: 'Distill it down'
-author:
-  - Lisa Lendway
+title: "Distill it down"
+author: "Lisa Lendway"
 date: '2021-02-08'
-categories:
+categories: null
 description: |
   My experiences with building webpages and websites using some of the simpler R Studio tools.
 photo:
@@ -23,7 +22,7 @@ Then, like many in the US and other parts of the world experienced, the news cam
 
 <center>
 
-![My blogdown attempt](images/blogdown_start.png){width=70%}
+![My blogdown attempt](images/blogdown_start.png){ width=70% }
 
 </center>
 
@@ -41,7 +40,7 @@ Fast forward to mid-May 2020. My summer break had started, and one of the first 
 
 <center>
 
-![Illustration from Sharing on Short Notice, A. Hill & D. De Leon](images/rmarkdown_mountain.png){width="50%"}
+![Illustration from Sharing on Short Notice, A. Hill & D. De Leon](images/rmarkdown_mountain.png){ width=50% }
 
 </center>
 
