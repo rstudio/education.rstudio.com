@@ -5,7 +5,7 @@ date_end: "2020-03-12"
 publishDate: "2020-02-15"
 announce: false
 description: >
-  This workshop is the first step in becoming a certified RStudio instructor. It is run online for four hours on each of two days at a time suitable for participants in the Americas. Please [contact us](mailto:greg.wilson@rstudio.com) if you wish to take part.
+  This workshop is the first step in becoming a certified RStudio instructor. It is run online for four hours on each of two days at a time suitable for participants in the Americas. Please [contact us](mailto:traininginstructor@rstudio.com) if you wish to take part.
 event_url: "https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY"
 location: "online"
 educators:
