@@ -42,7 +42,7 @@ If you would like to speak with any of them about your training needs,
 their contact information is on the [trainers' roster](http://education.rstudio.com/trainers)
 and they would be happy to hear from you.
 
-*Our classes are now full through the end of March 2021,
+*Our classes are now full for the time being,
 but if you would like to join our waiting list,
 please fill in [this form](https://forms.gle/kRucY2joTiPYWmPr8).*
 
