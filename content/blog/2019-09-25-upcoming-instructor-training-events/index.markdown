@@ -46,7 +46,7 @@ participants must do one exam on teaching
 and one each on the technical topics (tidyverse and/or Shiny).
 If you would like to take part,
 please fill in [this form][form] to tell us about yourself
-or mail [Greg Wilson](mailto:greg.wilson@rstudio.com) if you have questions.
+or mail [us](mailto:traininginstructor@rstudio.com) if you have questions.
 
 For more about RStudio's instructor training program, please see:
 

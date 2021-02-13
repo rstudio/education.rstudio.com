@@ -33,7 +33,7 @@ or read more [here][t3].
 If you have questions or suggestions,
 please [contact us][email].
 
-[email]: mailto:greg.wilson@rstudio.com
+[email]: mailto:traininginstructor@rstudio.com
 [form]: https://forms.gle/kRucY2joTiPYWmPr8
 [slides]: https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY
 [t3]: http://teachtogether.tech
