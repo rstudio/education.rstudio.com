@@ -17,7 +17,7 @@ I'm really excited to share some "behind the scenes" with you of the making of B
 
 ## The back-story
 
-So what is Big Book of R? It's basically a massive library of R-related books. As far as I can tell, it's the biggest single repo of its kind. I apply some light curation to it, including categorization to help people find topics of interest.
+So what is [Big Book of R](https://www.bigbookofr.com/?ref=rstudio_blog)? It's basically a massive library of R-related books. As far as I can tell, it's the biggest single repo of its kind. I apply some light curation to it, including categorization to help people find topics of interest.
 
 Way back in \~September of 2018, I was just getting into R and bookmarked my very first R programming book: [R for Data Science (R4DS)](https://www.bigbookofr.com/data-science.html#r-for-data-science) by Hadley Wickham and Garrett Grolemund. I recall at the time it was [Jesse Mostipak](https://twitter.com/kierisi) tweeting about R and R4DS that made me curious to try it. I had just been struggling to plot something in Python and when I reached the section in R4DS covering *facet_wrap*, I was hooked!
 
@@ -49,7 +49,7 @@ Since then, I've added authors and descriptions, and of course a whole lot of pe
 
 It wasn't until much later that I created the banner and social media preview images, which I think have a really fun and eye catching design to them.
 
-[![bright pink backgroudn with line drawing icons of books and owls, many different colours](images/big_book_social.png)](https://www.bigbookofr.com/)
+[![bright pink backgroudn with line drawing icons of books and owls, many different colours](images/big_book_social.png)](https://www.bigbookofr.com?ref=Newsletter)
 
 ## Big Gaps
 
