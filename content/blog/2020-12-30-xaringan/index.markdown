@@ -1,20 +1,120 @@
 ---
-title: 'Sharing your work with xaringan'
+title: 'Teaching to create slides with xaringan'
 author:
-  - '[Silvia P. Canelón](https://silvia.rbind.io/)'
+  - '[Silvia Canelón](https://silvia.rbind.io/)'
 date: '2020-12-30'
 categories:
   - learn
-description: |
-  The basics and beyond.
-slug: xaringan-beyond
+description: 'A practical guide to teaching xaringan'
+slug: teaching-xaringan
 photo:
   author: Wilbur Wong
   url: https://unsplash.com/photos/w6n_GLhIzG4
 ---
 
-## Please use h2 level headers 
+Creating slide decks with the [xaringan package](https://github.com/yihui/xaringan#xaringan) can be a lot of fun, and teaching others how to get started can be too! I've had the pleasure of teaching xaringan to a variety of learners in three different formats: [2-hour workshop session](https://silvia.rbind.io/talk/2020-11-03-xaringan-basics-and-beyond/), [1 hour webinar tutorial](https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/), and [30 minute live package demo](https://silvia.rbind.io/talk/2021-03-16-xaringan-deploy-demo/). In this post I'll lean on what I've learned from these experiences (sometimes the hard way 🤦🏽) to offer guidelines for teaching xaringan according to how much time you have at your disposal.
 
-### And h3 level headers
+## 1 hour: The essentials
 
-#### Use h4 sparingly
+- remark.js = JavaScript + Markdown
+- xaringan = remark.js + Rmd
+- YAML
+  - How is the output different from a more common one like `html_document`?
+- Slide structure
+  - `{r setup}` chunk
+  - `---` to start first slide and separate new ones
+  - `class:`
+- Slide preview
+  - With Knit button or `xaringan::infinite_moon_reader()` (or `xaringan::inf_mr()`)
+- What's familiar from Markdown vs. new from remark.js
+  - Headings are familiar
+  - `![]` is familiar
+  - Making bullet points is familiar (`*`, `-`, `+`)
+  - `---` may not be familiar, except to create horizontal rules
+  - `----` to create horizontal rules
+  - `--` is not familiar
+  - `???` is not familiar
+- Placement of content
+  - Align entire slide
+  - Align some content
+  - `.pull-left[]` and `.pull-right[]`
+  - `.left-column[]` and `.right-column[]`
+  - `.footnote[]`, particularly for academic audience
+
+- Adding pictures
+  - Markdown `![]`
+  - `knitr::include_graphics()`
+  - Recommended image path
+  - Examples of `background-size:` (e.g. cover, contain)
+- R content
+  - Tables (e.g. direct output, HTML, DT, gt)
+  - Plots (e.g issue with sizing and how to fix)
+- Presenting
+  - Presenter view (P key)
+  - Presenter notes (i.e. `???`)
+  - Full-screen (F key)
+  - Clone screen (C key) (in the context of a dual-monitor setup)
+  
+## 1.5 hours: The complementary
+
+- CSS styles the slides
+  - I would maybe consider this a must-have if you're explicitly using a template and need to let the audience briefly know what it is and what it's doing
+- Along with `.footnote[]`
+  - Superscripts (e.g. `<sup/>1<sup>`)
+  - Numbering in the footnote `1\.`
+- Adding pictures
+  - HTML
+  - Examples of background position (e.g. 90% 50%)
+- R content
+  - plots (e.g. side-by-side)
+- Sharing slides
+  - `self_contained: TRUE` in YAML + Knit
+
+## 2 hours: The bonus features
+- Slide structure
+  - `name:` and `template:`
+  - `layout:`
+  - `exclude: true` for hiding slides
+- Icons
+  - emojis from `emo::ji()`
+  - icons from Fontawesome: `icon::fontawesome()`
+  - icons from Academicons: `icon::academicons()`
+- Presenting
+  - Presentation timer
+- Sharing slides
+  - GitHub pages via `usethis`
+  - Netlify
+
+## 30 mins: The package demo & summary
+
+- Slide structure
+  - `{r setup}` chunk
+  - `---` to start first slide and separate new ones
+  - `class:`
+- Slide preview
+  - With Knit button or `xaringan::infinite_moon_reader()` (or `xaringan::inf_mr()`)
+- Placement of content
+  - Align entire slide
+  - Align some content
+  - `.pull-left[]` and `.pull-right[]`
+  - `.left-column[]` and `.right-column[]`
+  - `.footnote[]`, particularly for academic audience
+
+- Adding pictures
+  - Markdown `![]`
+  - `knitr::include_graphics()`
+- R content
+  - Tables (e.g. direct output, HTML, DT, gt)
+  - Plots (e.g sizing examples)
+- Presenting
+  - Presenter view (P key)
+  - Presenter notes (i.e. `???`)
+  - Full-screen (F key)
+
+## Additional resources
+- [Chapter 7 xaringan Presentations | R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+- [Tricks from xaringan Wiki for CSS]( https://github.com/yihui/xaringan/wiki#welcome)
+- [CSS/JS examples from remark.js](https://github.com/gnab/remark/wiki/HTML-CSS-JS-samples)
+- [gadenbuie/xaringanExtra: A playground of enhancements and extensions for xaringan slides.](https://github.com/gadenbuie/xaringanExtra#xaringanextra)
+- [gadenbuie/xaringanthemer: 😎 Give your xaringan slides some style](https://github.com/gadenbuie/xaringanthemer#xaringanthemer-)
+- [EmilHvitfeldt/xaringancolor: Uniform Colors in Xaringan Presentations](https://github.com/EmilHvitfeldt/xaringancolor#xaringancolor-)
