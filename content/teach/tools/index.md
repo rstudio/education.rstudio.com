@@ -23,7 +23,7 @@ A common friction point for getting students (and faculty) started with computin
 
 # Packages
 
-After you get your tech stack set up, you'll want to think about packages that can help you create and deliver your content better. Several of RStudio's open source R packages can be very helpful when creating, organizing, and delivering your educational content.
+After you get your tech stack set up, you'll want to think about packages that can help you create and deliver your content better. Several of Posit's open source R packages can be very helpful when creating, organizing, and delivering your educational content.
 
 - __Create interactive tutorials with the [learnr package](https://rstudio.github.io/learnr/).__ The [learnr package](https://rstudio.github.io/learnr/) is designed to turn any [R Markdown document](https://rmarkdown.rstudio.com) into an interactive tutorial. The final product can be published all of the same ways that Shiny applications can, including running locally on an end-user’s machine or running on a Shiny Server or hosting service like [shinyapps.io](https://www.shinyapps.io/). All of the [Posit Cloud Primers](https://posit.cloud/learn/primers) are written with learnr &mdash; you can see the source code in this [GitHub repository](https://github.com/rstudio-education/primers).
 
