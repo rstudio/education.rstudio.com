@@ -20,7 +20,7 @@ you do not need to link from or to specific slides and do not need to include ou
 
 # Courses
 
-Most teachers enjoy developing their own instruction materials, but the need for exercises, homework, exams, slides, and other supporting materials make this a big job. Below are some open source materials developed at Posit and elsewhere that you can freely adapt and use for your R teaching.
+Most teachers enjoy developing their own instruction materials, but the need for exercises, homework, exams, slides, and other supporting materials makes this a big job. Below are some open-source materials developed at Posit and elsewhere that you can freely adapt and use for your R teaching.
 
 - **Get a complete [data science course in a box](https://datasciencebox.org).** [Data Science in a Box](https://datasciencebox.org) contains the complete materials for teaching a semester-long introductory data science course. The "box" contains materials for an undergraduate level introductory data science course, such as slide decks, homework assignments, guided labs, sample exams, a final project assignment, as well as materials for instructors such as pedagogical tips, information on computing infrastructure, technology stack, and course logistics. The [website](https://datasciencebox.org) exposes the source materials that live in a [GitHub repository](https://github.com/rstudio-education/datascience-box) and use datasets from the [dsbox package](https://github.com/rstudio-education/dsbox).
 
