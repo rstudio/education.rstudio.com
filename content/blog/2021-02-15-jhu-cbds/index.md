@@ -128,7 +128,7 @@ The pain point was tracking all the pieces. John addressed that with `didactr`. 
 
 ### Pain Point #4 - Delivering on non-negotiable #1
 
-Remember that theme of using new things? Well, what made CBDS possible at all, was RStudio's release of [RStudio Cloud](https://posit.cloud/), which was in alpha when we started CBDS development. Like Leanpub, the RStudio Cloud team was _amazing_. They were totally on board when we pitched CBDS to them, in which we said something along the lines of: "Well, we don't really have any idea of how many users we'll have. Could be 10. Could be 10,000."
+Remember that theme of using new things? Well, what made CBDS possible at all was RStudio's release of [RStudio Cloud](https://posit.cloud/), which was in alpha when we started CBDS development. Like Leanpub, the RStudio Cloud team was _amazing_. They were totally on board when we pitched CBDS to them, in which we said something along the lines of: "Well, we don't really have any idea of how many users we'll have. Could be 10. Could be 10,000."
 
 RStudio Cloud was not a pain point in and of itself. I think RStudio Cloud is a _game changer_. But, while cloud-based products get rid of the need to deal with software installations and general [command line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm), you're at the mercy of the application. When RStudio Cloud is down, it's _down_. There's no getting around it. This happens less and less over time as the product gains stability, but early on, this was a pain point.
 
